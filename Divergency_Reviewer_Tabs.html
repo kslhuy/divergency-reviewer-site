@@ -612,6 +612,17 @@
       line-height: 1.35;
     }
 
+    .inline-markdown-image {
+      display: block;
+      width: 100%;
+      min-width: 160px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #0f0f0f;
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+    }
+
     .table-wrap {
       max-width: 100%;
       margin: 22px 0;
@@ -809,9 +820,9 @@
         
     <dl class="hero-stats" aria-label="Packet statistics">
       <div><dt>Docs</dt><dd>5</dd></div>
-      <div><dt>Read</dt><dd>164 min</dd></div>
-      <div><dt>Sections</dt><dd>84</dd></div>
-      <div><dt>Tables</dt><dd>9</dd></div>
+      <div><dt>Read</dt><dd>168 min</dd></div>
+      <div><dt>Sections</dt><dd>83</dd></div>
+      <div><dt>Tables</dt><dd>10</dd></div>
     </dl>
       </div>
     </header>
@@ -858,9 +869,9 @@
           <p>Reviewer-ready campaign copy: hook, gameplay, story, funding, timeline, rewards, shipping, and risks.</p>
         </div>
         <dl class="doc-stats" aria-label="Kickstarter Page statistics">
-          <div><dt>Read</dt><dd>15 min</dd></div>
-          <div><dt>Sections</dt><dd>17</dd></div>
-          <div><dt>Tables</dt><dd>3</dd></div>
+          <div><dt>Read</dt><dd>19 min</dd></div>
+          <div><dt>Sections</dt><dd>16</dd></div>
+          <div><dt>Tables</dt><dd>4</dd></div>
         </dl>
       </div>
 
@@ -892,6 +903,9 @@
         <a class="toc-link toc-level-2" href="#kickstarter-what-is-divergency">
           What Is Divergency?
         </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-inspiration-games">
+          Inspiration Games
+        </a>
         <a class="toc-link toc-level-2" href="#kickstarter-why-kickstarter">
           Why Kickstarter?
         </a>
@@ -907,6 +921,9 @@
         <a class="toc-link toc-level-3" href="#kickstarter-squad-command-system">
           Squad Command System
         </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-distinct-playable-characters">
+          Distinct Playable Characters
+        </a>
         <a class="toc-link toc-level-3" href="#kickstarter-enemies-that-force-decisions">
           Enemies That Force Decisions
         </a>
@@ -916,14 +933,20 @@
         <a class="toc-link toc-level-2" href="#kickstarter-story">
           Story
         </a>
-        <a class="toc-link toc-level-2" href="#kickstarter-act-1-the-marseille-hunt">
-          Act 1: The Marseille Hunt
+        <a class="toc-link toc-level-2" href="#kickstarter-campaign-story">
+          Campaign Story
+        </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-prologue-and-stage-1-marseille-unstable">
+          Prologue And Stage 1: Marseille Unstable
+        </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-the-full-campaign">
+          The Full Campaign
         </a>
         <a class="toc-link toc-level-2" href="#kickstarter-characters">
           Characters
         </a>
-        <a class="toc-link toc-level-3" href="#kickstarter-the-stranger">
-          The Stranger
+        <a class="toc-link toc-level-3" href="#kickstarter-stranger-ghost">
+          Stranger / Ghost
         </a>
         <a class="toc-link toc-level-3" href="#kickstarter-deep">
           Deep
@@ -931,11 +954,23 @@
         <a class="toc-link toc-level-3" href="#kickstarter-solei">
           Solei
         </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-henry">
+          Henry
+        </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-tulas">
+          Tulas
+        </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-block">
+          Block
+        </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-heni">
+          Heni
+        </a>
         <a class="toc-link toc-level-3" href="#kickstarter-jamerson-obsworth">
           Jamerson Obsworth
         </a>
-        <a class="toc-link toc-level-3" href="#kickstarter-the-eye">
-          The Eye
+        <a class="toc-link toc-level-3" href="#kickstarter-the-relic-fragments">
+          The Relic Fragments
         </a>
         <a class="toc-link toc-level-3" href="#kickstarter-the-perfect-failure">
           The Perfect Failure
@@ -952,8 +987,8 @@
         <a class="toc-link toc-level-2" href="#kickstarter-base-goal-and-stretch-goals">
           Base Goal And Stretch Goals
         </a>
-        <a class="toc-link toc-level-3" href="#kickstarter-20-000-act-1-campaign-experience">
-          $20,000 - Act 1 Campaign Experience
+        <a class="toc-link toc-level-3" href="#kickstarter-20-000-full-story-campaign-foundation">
+          $20,000 - Full Story Campaign Foundation
         </a>
         <a class="toc-link toc-level-3" href="#kickstarter-25-000-combat-expansion">
           $25,000 - Combat Expansion
@@ -1011,43 +1046,59 @@
         </a>
         <a class="toc-link toc-level-2" href="#kickstarter-join-us">
           Join Us
-        </a>
-        <a class="toc-link toc-level-2" href="#kickstarter-pre-launch-asset-checklist">
-          Pre-Launch Asset Checklist
         </a></nav>
           </div>
         </aside>
         <article class="markdown-body" data-search-root="kickstarter">
           <h1 id="kickstarter-divergency-a-dark-fantasy-pixel-art-beat-em-up"><a class="heading-link" href="#kickstarter-divergency-a-dark-fantasy-pixel-art-beat-em-up" aria-label="Link to section">#</a>Divergency: A Dark Fantasy Pixel-Art Beat 'Em Up</h1>
-<p>Marseille is humanity's last city. Beneath it, a grieving warlord is building a body for an ancient power to save his daughter.</p>
-<p>Divergency is a 2D/2.5D old-school beat 'em up adventure with fast combat, character growth, tactical skill selection, commandable allies, and hand-crafted pixel art. It is built for players who miss the energy of arcade brawlers, but want a darker world, deeper combat choices, and a story with weight.</p>
-<p>Your support funds the complete Act 1 campaign experience: The Marseille Hunt.</p>
-<p>Image caption: Work-in-progress gameplay/world capture from the Marseille sewers. Final campaign images will use clean captures without debug text or black bars.</p>
+<p>Divergency is a 2D/2.5D pixel-art beat 'em up adventure with fast combat, skill loadouts, commandable allies, handcrafted stages, and a full dark fantasy campaign.</p>
+<p>Lead a small team through a dark fantasy adventure across many stages: prison breaks, street fights, hidden routes, corrupted wildlands, ancient relic sites, and brutal boss battles, all tied to a story about stopping a father who is sacrificing others for one impossible miracle.</p>
+<p>Back Divergency to help finish the full game: core combat, playable fighters, enemies, bosses, story stages, music, sound, UI polish, QA, and digital release.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/UI/K_baner.png" alt="Divergency key art banner" loading="lazy">
+  <figcaption>Divergency key art banner</figcaption>
+</figure>
+<p><em>Work-in-progress key art showing Divergency's dark fantasy tone, main cast, and relic-driven conflict.</em></p>
 <h2 id="kickstarter-what-is-divergency"><a class="heading-link" href="#kickstarter-what-is-divergency" aria-label="Link to section">#</a>What Is Divergency?</h2>
 <p>Divergency is a dark fantasy action game inspired by 90s beat 'em ups, arcade brawlers, platform-action pacing, and modern skill-based combat.</p>
 <p>The strongest references are Little Fighter 2 and Hero Fighter for readable chaos, team fights, special moves, and ally command energy; M.U.G.E.N for character variety and experimental matchups; arcade classics like Final Fight, Streets of Rage, Cadillacs and Dinosaurs, and The Punisher for 2.5D lane-based brawling; and modern brawlers/action RPGs like Dragon's Crown, Dungeon Fighter Online, Castle Crashers, and Teenage Mutant Ninja Turtles: Shredder's Revenge for character identity, co-op energy, and replayable combat.</p>
+<h3 id="kickstarter-inspiration-games"><a class="heading-link" href="#kickstarter-inspiration-games" aria-label="Link to section">#</a>Inspiration Games</h3>
+<p>These references help explain the combat feeling, not the final art direction. Divergency uses them to show the kind of readable action, party chaos, and character variety we want, while keeping its own dark fantasy world.</p>
+<div class="table-wrap"><table><thead><tr><th>Little Fighter 2</th><th>Hero Fighter X</th><th>M.U.G.E.N</th></tr></thead><tbody><tr><td><img class="inline-markdown-image" src="imgs/others/play_now_poster_lf2.webp" alt="Little Fighter 2 inspiration poster" loading="lazy"></td><td><img class="inline-markdown-image" src="imgs/others/Hero_figterX.jpg" alt="Hero Fighter X inspiration poster" loading="lazy"></td><td><img class="inline-markdown-image" src="imgs/others/mugen_engine.jpg" alt="M.U.G.E.N inspiration collage" loading="lazy"></td></tr>
+<tr><td>Fast brawler readability, team fights, and simple controls that still create memorable chaos.</td><td>Clear special moves, squad combat energy, and large fights that remain easy to read.</td><td>Character variety, match-up experimentation, and a roster-first fighting-game imagination.</td></tr></tbody></table></div>
 <p>Divergency is not trying to clone one of those games. The goal is to take the fast readability of classic brawlers, the freedom of character-driven fighting games, and the darker campaign structure of an action adventure.</p>
 <p>You control a small cast of fighters, each with their own rhythm, weapons, movement, and combat style. Between stages, you select a limited skill loadout and passive setup to prepare for the next map. In battle, you read enemy formations, chain combos, manage spacing, command allies, and survive encounters where every enemy type asks for a different answer.</p>
-<p>The first campaign release focuses on Act 1: a journey through Marseille, the last industrial city of the known world, and the hidden laboratory beneath its waters.</p>
+<p>The campaign is a full adventure across many stages. Each chapter adds new enemies, bosses, environments, traversal problems, party moments, and story turns while keeping the focus on fast brawler combat and team-based decisions.</p>
 <h2 id="kickstarter-why-kickstarter"><a class="heading-link" href="#kickstarter-why-kickstarter" aria-label="Link to section">#</a>Why Kickstarter?</h2>
-<p>Divergency is being built by a small team with a clear goal: finish a polished Act 1 campaign that proves the combat, world, characters, and production pipeline.</p>
+<p>Divergency is being built by a small team with a clear goal: finish a polished full game, starting with the Marseille opening arc and expanding into the rest of the adventure.</p>
 <p>The Kickstarter goal will help us:</p>
 <ul>
 <li>Finish the core combat system, skill selection, and squad command system.</li>
-<li>Build the full Act 1 campaign, including Marseille, Bastonne, and the submarine laboratory.</li>
+<li>Build the full main campaign, from the opening prison break to the final confrontation.</li>
 <li>Complete pixel-art backgrounds, character animations, enemies, bosses, and VFX.</li>
 <li>Produce music, sound effects, UI polish, QA, and release preparation.</li>
 <li>Fulfill digital rewards and EU-only physical rewards without overextending production.</li>
 </ul>
-<p>This campaign is not asking backers to fund an abstract idea. It is asking for support to turn a work-in-progress action prototype and world into a complete first campaign experience.</p>
+<p>This campaign is asking for support to turn a work-in-progress action prototype and world into a complete game, with the campaign content, combat polish, audio, UI, QA, and rewards finished properly.</p>
 <h2 id="kickstarter-gameplay"><a class="heading-link" href="#kickstarter-gameplay" aria-label="Link to section">#</a>Gameplay</h2>
 <h3 id="kickstarter-fast-beat-em-up-combat"><a class="heading-link" href="#kickstarter-fast-beat-em-up-combat" aria-label="Link to section">#</a>Fast Beat 'Em Up Combat</h3>
 <p>Combat is built around movement, impact, and mastery. You push through enemy groups, chain attacks, dodge pressure, and use each fighter's strengths to control the fight.</p>
-<p>Image caption: Work-in-progress combat capture showing combo flow and enemy pressure.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage4/blood_lari_bos.png" alt="Boss encounter in Akam Meskul" loading="lazy">
+  <figcaption>Boss encounter in Akam Meskul</figcaption>
+</figure>
+<p><em>Work-in-progress boss encounter capture showing a dark fantasy battle space, enemy pressure, and stage atmosphere.</em></p>
 <h3 id="kickstarter-skill-selection"><a class="heading-link" href="#kickstarter-skill-selection" aria-label="Link to section">#</a>Skill Selection</h3>
 <p>Characters can learn a larger skill pool over time, but they cannot bring everything into a mission. A fighter may have around 10 available skills, while only 4 active skills can be equipped and performed during a stage.</p>
 <p>Before each map, you choose the 4 skills and passive upgrades that fit the situation: crowd control for enemy waves, mobility for platform-heavy routes, guard break tools for shield formations, burst damage for bosses, or defensive options for dangerous zones. The goal is preparation, not menu complexity: players should look at the mission, choose a plan, and feel the difference in combat.</p>
-<p>Image caption: Work-in-progress skill selection UI mockup.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/UI/character-select-wip.png" alt="Skill selection work in progress" loading="lazy">
+  <figcaption>Skill selection work in progress</figcaption>
+</figure>
+<p><em>Work-in-progress skill selection UI showing loadout planning before a mission.</em></p>
 <h3 id="kickstarter-squad-command-system"><a class="heading-link" href="#kickstarter-squad-command-system" aria-label="Link to section">#</a>Squad Command System</h3>
 <p>Some battles are not won by one fighter alone. Divergency includes a player-to-AI command system that lets you direct commandable allies during combat.</p>
 <p>You can select a nearby General, give quick directional orders, change formation, and trigger assist actions:</p>
@@ -1059,56 +1110,111 @@
 <li>Assist commands: call the selected General to perform attack, movement, or defense support.</li>
 </ul>
 <p>This gives fights a tactical layer without turning the game into a strategy game. The player still brawls in real time, but can shape the battlefield by pulling allies back, holding space, or calling a decisive assist at the right moment.</p>
+<h3 id="kickstarter-distinct-playable-characters"><a class="heading-link" href="#kickstarter-distinct-playable-characters" aria-label="Link to section">#</a>Distinct Playable Characters</h3>
+
+<figure class="markdown-image">
+  <img src="imgs/chars/Poster.png" alt="Divergency main character lineup" loading="lazy">
+  <figcaption>Divergency main character lineup</figcaption>
+</figure>
+<p>Each playable character has a different combat identity.</p>
+<ul>
+<li>The Stranger: a survivor pulled into the conflict, adaptable and dangerous.</li>
+<li>Deep: a former hero and crusader who became a symbol in old wars, then paid for it with scars, guilt, and exhaustion.</li>
+<li>Solei: Deep's niece, a young fighter of mixed Asian heritage whose speed, discipline, and temper make her dangerous before enemies understand what happened.</li>
+</ul>
+<p>More playable characters can join the roster as the story expands, but the base goal focuses on making the core cast feel complete.</p>
 <h3 id="kickstarter-enemies-that-force-decisions"><a class="heading-link" href="#kickstarter-enemies-that-force-decisions" aria-label="Link to section">#</a>Enemies That Force Decisions</h3>
 <p>Human enemies fight with structure: shield units protect gunners, ambushers try to flank, and stronger enemies force you to break formations before committing to long combos. When allies are present, your command choices matter: regroup before a trap, hold a flank to control space, or call an assist to break pressure.</p>
 <p>Demonic enemies fight differently. They are less afraid of death, more direct, and often harder to interrupt. Their role is to make the player adapt instead of repeating one combo forever.</p>
-<p>Image caption: Work-in-progress enemy encounter capture. Final GIF should show coordinated enemies, not an empty environment.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage3/Ruined boss.png" alt="Ruined boss arena" loading="lazy">
+  <figcaption>Ruined boss arena</figcaption>
+</figure>
+<p><em>Work-in-progress boss arena showing the darker monster design and encounter scale.</em></p>
 <h3 id="kickstarter-exploration-secrets-and-environmental-storytelling"><a class="heading-link" href="#kickstarter-exploration-secrets-and-environmental-storytelling" aria-label="Link to section">#</a>Exploration, Secrets, And Environmental Storytelling</h3>
 <p>Divergency is not only arena combat. Stages contain hidden routes, quiet environmental details, puzzle moments, and optional secrets that reveal what happened to this world before the Calamity.</p>
-<p>Image caption: Work-in-progress Marseille environment capture showing exploration space.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/Sewer2.png" alt="Marseille sewer route" loading="lazy">
+  <figcaption>Marseille sewer route</figcaption>
+</figure>
+<p><em>Work-in-progress Marseille sewer route built for side-scrolling exploration and hidden paths.</em></p>
 <p>Example scene: Deep stops at a tunnel wall covered in graffiti and old symbols, trying to understand whether it is a warning, a memory, or something left behind by people who knew the Calamity was coming.</p>
 <h2 id="kickstarter-story"><a class="heading-link" href="#kickstarter-story" aria-label="Link to section">#</a>Story</h2>
-<p>The known world is dying.</p>
-<p>For centuries, the Great Calamity has consumed civilization wave after wave. To the east, only ruins remain. To the west stands Marseille, an industrial empire and humanity's final stronghold.</p>
+<p>The known world is breaking.</p>
+<p>For centuries, the Great Calamity has consumed civilization wave after wave. Marseille presents itself as the last clean stronghold of order, but its survival is built on prisons, missing people, and experiments hidden below the city.</p>
 <p>Inside the city, survival has a price. Outside it, survival is almost impossible.</p>
 <p>Jamerson Obsworth was once a decorated officer. Now he rules the city's underworld from the shadows. To most people, he is a tyrant. To himself, he is a father trying to save his daughter, Heniana, who lies trapped between life and death.</p>
 <p>Jamerson believes he has found the answer: The Eye, a living fragment of a forgotten god. It offers knowledge beyond human limits. In exchange, it wants a body.</p>
-<h2 id="kickstarter-act-1-the-marseille-hunt"><a class="heading-link" href="#kickstarter-act-1-the-marseille-hunt" aria-label="Link to section">#</a>Act 1: The Marseille Hunt</h2>
-<p>You are the Stranger, a nameless survivor pulled from Jamerson's prison by Henry, a man haunted by his own past. Alongside Deep and Solei, you escape Bastonne and enter the rotten heart of Marseille.</p>
-<p>Your mission is simple: find Jamerson and stop him.</p>
-<p>The trail leads beneath the city, through black markets, drowned corridors, and a submarine laboratory where prisoners are no longer treated as human. Some experiments fail and become horror. Others succeed and become something worse.</p>
-<p>As the laboratory collapses, Jamerson's voice follows you through the dark:</p>
-<blockquote><p>&quot;You destroy the only thing that can save her. What are you fighting for?&quot;</p></blockquote>
-<p>For a moment, the question lands.</p>
-<p>Because Jamerson believes it. Every crime, every sacrifice, every life broken in that laboratory was committed for one child.</p>
-<p>You destroy the facility, but Jamerson escapes. In the ruins, you face a perfect failure: a living preview of what he is trying to create. It leaves behind a symbol from the east, older than Marseille and older than the Calamity.</p>
-<p>You did not stop Jamerson. You only slowed him down.</p>
-<p>He is not building weapons. He is building a body.</p>
+<h2 id="kickstarter-campaign-story"><a class="heading-link" href="#kickstarter-campaign-story" aria-label="Link to section">#</a>Campaign Story</h2>
+<h3 id="kickstarter-prologue-and-stage-1-marseille-unstable"><a class="heading-link" href="#kickstarter-prologue-and-stage-1-marseille-unstable" aria-label="Link to section">#</a>Prologue And Stage 1: Marseille Unstable</h3>
+<p>The game begins with Deep's team trying to rescue Block from Bastonne, one of Jamerson's prison facilities. During the lockdown, a nameless prisoner wakes when he should be unconscious. The team later calls him Ghost, because Jamerson's systems cannot fully read him and because no one knows who he used to be.</p>
+<p>After Bastonne, the team does not plan to attack the laboratory. They plan to cut the trail, hide the vehicle, rest at Armorlite, and leave Marseille before dawn.</p>
+<p>Jamerson moves faster.</p>
+<p>The safe route is burned. Police and underworld gangs close the surface roads. Armorlite is attacked. Henry changes the escape plan: the team must go below Marseille, through old maintenance tunnels, abandoned metro lines, the black-market undercity of Laundel, and the sewer routes used by people the city refuses to see.</p>
+<p>At the port, the promised escape boat is empty. Marius Vane, Jamerson's right hand in the secret police, springs the trap. After the fight, the team learns that prisoners, evidence, and experiments have been moved to a research submarine offshore.</p>
+<p>Running away would let Jamerson erase everything.</p>
+<p>The escape becomes a sabotage mission. In the submarine laboratory, the team finds prisoners connected to machines, hybrid bodies, cell samples tied to Heniana, and experiments using the biological structure of the Primordial God's fragments. The boss of Stage 1 is Jamerson's perfect failure: not the final vessel The Eye wants, but close enough to prove the ritual is no longer theory.</p>
+<p>The submarine collapses. Jamerson survives through a substitute body and escapes with data pointing east toward Sakuri. By the end of Stage 1, the team understands the truth: Jamerson is not building weapons.</p>
+<p>He is building a body.</p>
+<h3 id="kickstarter-the-full-campaign"><a class="heading-link" href="#kickstarter-the-full-campaign" aria-label="Link to section">#</a>The Full Campaign</h3>
+<p>Stage 1 is only the first major step. Divergency continues through five main stages, each built around a fragment of the Primordial God and a different way people justify cruelty.</p>
+<ul>
+<li>Stage 2: Sakuri, where The Ear hears voices, thoughts, sickness, and secrets from far away. Solei confronts identity, belonging, and the danger of turning a child into a sacred tool.</li>
+<li>Stage 3: Calvaria, where The Tongue can speak with the voices of the dead. Deep and Henry face the cost of old wars, false comfort, and the temptation to let the dead command the living.</li>
+<li>Stage 4: Akam Meskul, where The Heart amplifies emotion into violence. Tulas and Block face the line between protection, body horror, loyalty, and survival.</li>
+<li>Stage 5: The Cradle, where every previous stage returns as memory, temptation, and final test. The team must stop Jamerson without repeating his logic: no one should become material for a miracle.</li>
+</ul>
+<p>The full campaign is about refusing the easy lie that love, grief, faith, history, or survival can make sacrifice clean.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/chars/SlashArt_2.png" alt="The Cradle concept art" loading="lazy">
+  <figcaption>The Cradle concept art</figcaption>
+</figure>
+<p><em>Early concept art for the mythic side of Divergency, connecting the team's journey to the Primordial God fragments.</em></p>
 <h2 id="kickstarter-characters"><a class="heading-link" href="#kickstarter-characters" aria-label="Link to section">#</a>Characters</h2>
-<h3 id="kickstarter-the-stranger"><a class="heading-link" href="#kickstarter-the-stranger" aria-label="Link to section">#</a>The Stranger</h3>
-<p>A nameless survivor pulled out of Jamerson's prison. The Stranger is the player's doorway into Marseille, its violence, and the truth hidden beneath the city.</p>
+<h3 id="kickstarter-stranger-ghost"><a class="heading-link" href="#kickstarter-stranger-ghost" aria-label="Link to section">#</a>Stranger / Ghost</h3>
+<p>A nameless survivor pulled out of Jamerson's prison. The team calls him Ghost after Bastonne because the system cannot fully identify him. He is not a chosen one. He is a survivor of a mistake, and that mistake may be why the relic fragments cannot control him like everyone else.</p>
 <h3 id="kickstarter-deep"><a class="heading-link" href="#kickstarter-deep" aria-label="Link to section">#</a>Deep</h3>
 <p>Deep was once treated like a hero: a crusader sent into impossible wars, a defender people pointed to when they wanted to believe humanity could still survive. The legend cost him everything. Now older, wounded, and tired of being used as a symbol, Deep wants peace, but Marseille and the Calamity keep pulling him back into violence.</p>
 <h3 id="kickstarter-solei"><a class="heading-link" href="#kickstarter-solei" aria-label="Link to section">#</a>Solei</h3>
 <p>Deep's niece, born between cultures and raised in a world that rarely gave her a safe place to belong. Solei carries an Asian heritage in her visual identity and discipline, but she is not written as an exotic stereotype. She is quick, sharp, impatient, and fearless: a speed fighter who strikes before enemies can read her.</p>
+<h3 id="kickstarter-henry"><a class="heading-link" href="#kickstarter-henry" aria-label="Link to section">#</a>Henry</h3>
+<p>A former war hero who chose the shadows after learning how easily heroism becomes permission to control other people. Henry gathers information, commands under pressure, and keeps asking whether fighting can still protect people without becoming another excuse for violence.</p>
+<h3 id="kickstarter-tulas"><a class="heading-link" href="#kickstarter-tulas" aria-label="Link to section">#</a>Tulas</h3>
+<p>A mage who controls blood and liquid. Tulas can create shields, platforms, filters, and temporary paths, but his power always touches the boundary of the body. His arc asks whether a frightening ability can be used to save people without turning him into what they fear.</p>
+<h3 id="kickstarter-block"><a class="heading-link" href="#kickstarter-block" aria-label="Link to section">#</a>Block</h3>
+<p>A loyal ally captured before the story begins. Saving Block in Bastonne is not only a rescue objective; it is the first proof that command and teamwork in Divergency are about trust, not treating allies as tools.</p>
+<h3 id="kickstarter-heni"><a class="heading-link" href="#kickstarter-heni" aria-label="Link to section">#</a>Heni</h3>
+<p>A child found in Sakuri with the same face as Heniana. Heni is not written as a key, replacement, or copy. Her role pushes the story's central question: no person should be reduced to material for someone else's miracle.</p>
 <h3 id="kickstarter-jamerson-obsworth"><a class="heading-link" href="#kickstarter-jamerson-obsworth" aria-label="Link to section">#</a>Jamerson Obsworth</h3>
 <p>A decorated officer turned underworld ruler. Jamerson is cruel, brilliant, and convinced that every horror he creates is justified if it brings his daughter back.</p>
-<h3 id="kickstarter-the-eye"><a class="heading-link" href="#kickstarter-the-eye" aria-label="Link to section">#</a>The Eye</h3>
-<p>A living fragment of a forgotten god. It whispers, watches, and offers impossible knowledge. It does not want money, land, or worship. It wants a body.</p>
+<h3 id="kickstarter-the-relic-fragments"><a class="heading-link" href="#kickstarter-the-relic-fragments" aria-label="Link to section">#</a>The Relic Fragments</h3>
+<p>The Eye, The Ear, The Tongue, The Heart, and The Umbilical Cord are living fragments of a Primordial God killed and divided in ancient times. They do not behave like simple artifacts. They see, hear, speak, beat, call, and try to return to one another.</p>
 <h3 id="kickstarter-the-perfect-failure"><a class="heading-link" href="#kickstarter-the-perfect-failure" aria-label="Link to section">#</a>The Perfect Failure</h3>
-<p>Jamerson's &quot;perfect failure&quot;: an escaped experiment that proves resurrection is becoming real. It is not the final body The Eye wants, but it is close enough to show that Jamerson's work is no longer only theory.</p>
+<p>Jamerson's perfect failure is an escaped experiment that proves resurrection is becoming real. It is not the final body The Eye wants, but it is close enough to show that Jamerson's work is no longer only theory.</p>
 <h2 id="kickstarter-art-and-world"><a class="heading-link" href="#kickstarter-art-and-world" aria-label="Link to section">#</a>Art And World</h2>
-<p>Every frame of Divergency is built around pixel-art craft: ruined industry, cursed wilderness, hand-animated fighters, grotesque experiments, and small environmental details that reward players who look closely.</p>
-<p>The world mixes traditional beauty with technological decay. Marseille is not a shining capital. It is a machine that survived by feeding on refugees, prisoners, and anyone too weak to resist.</p>
-<p>Recommended public visual set for this section:</p>
-<ul>
-<li>One clean Marseille environment image.</li>
-<li>One character group image or sprite lineup.</li>
-<li>One enemy or boss image.</li>
-<li>One strong combat GIF.</li>
-<li>One atmospheric world detail image.</li>
-</ul>
-<p>Image caption: Work-in-progress pixel art. Final campaign page will use the strongest finished captures and GIFs.</p>
+<p>Every frame of Divergency is built around pixel-art craft: ruined industry, cursed wilderness, hand-animated fighters, grotesque experiments, sacred ruins, and small environmental details that reward players who look closely.</p>
+<p>The world mixes traditional beauty with technological decay. Marseille is not a shining capital. It is a machine that survived by feeding on refugees, prisoners, and anyone too weak to resist. Later stages push the same contrast into Sakuri's sacred peninsula, Calvaria's city of graves, Akam Meskul's cursed mountain war zone, and the dreamlike final space of The Cradle.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/lab_3.png" alt="Submarine laboratory environment" loading="lazy">
+  <figcaption>Submarine laboratory environment</figcaption>
+</figure>
+<p><em>Work-in-progress laboratory environment from the Marseille arc.</em></p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage2/J start sakuri.png" alt="Sakuri stage environment" loading="lazy">
+  <figcaption>Sakuri stage environment</figcaption>
+</figure>
+<p><em>Work-in-progress Sakuri environment showing the campaign expanding beyond Marseille.</em></p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage4/view_final.gif" alt="Akam Meskul world capture" loading="lazy">
+  <figcaption>Akam Meskul world capture</figcaption>
+</figure>
+<p><em>Work-in-progress world capture from a later campaign region.</em></p>
 <h2 id="kickstarter-current-development-status"><a class="heading-link" href="#kickstarter-current-development-status" aria-label="Link to section">#</a>Current Development Status</h2>
 <p>Divergency is currently in active development.</p>
 <p>What exists now:</p>
@@ -1117,6 +1223,8 @@
 <li>Early playable character work for Deep and Solei.</li>
 <li>Prototype enemy behavior, encounter systems, and player-to-AI squad commands.</li>
 <li>Marseille sewer and industrial environment art.</li>
+<li>Stage 1 story structure covering Armorlite, Laundel, the port ambush, and the research submarine.</li>
+<li>Full-campaign story outline for Sakuri, Calvaria, Akam Meskul, and The Cradle.</li>
 <li>Internal debug captures used for testing movement, states, and stage layout.</li>
 <li>Early UI direction for combat HUD, skill selection, command controls, and character selection.</li>
 </ul>
@@ -1125,32 +1233,33 @@
 <li>Public gameplay trailer.</li>
 <li>Final UI art and menu flow.</li>
 <li>Final balancing and boss tuning.</li>
-<li>Full Act 1 content lock.</li>
+<li>Full campaign content lock.</li>
 <li>Final music, SFX mix, localization pass, and QA.</li>
 <li>Online co-op, PvP, survival, tower, and custom stage features, which depend on stretch goals and testing.</li>
 </ul>
 <p>We will keep backers updated with development posts, clean work-in-progress captures, and milestone reports. The next major proof target is a short gameplay capture that shows movement, combat, enemy behavior, and the current UI without debug overlays.</p>
 <h2 id="kickstarter-funding-goal-20-000"><a class="heading-link" href="#kickstarter-funding-goal-20-000" aria-label="Link to section">#</a>Funding Goal: $20,000</h2>
-<p>The base goal funds the complete Act 1 campaign experience.</p>
+<p>The base goal supports production of the full Divergency story campaign: a polished Marseille opening arc, the remaining chapters, core combat, party systems, bosses, and release work.</p>
 <p>Budget breakdown:</p>
 <div class="table-wrap"><table><thead><tr><th>Use of funds</th><th>Share</th><th>Purpose</th></tr></thead><tbody><tr><td>Gameplay programming and production</td><td>45%</td><td>Core combat, skill selection, squad commands, enemies, stage flow, tools, and release work</td></tr>
-<tr><td>Pixel art, animation, backgrounds, VFX</td><td>25%</td><td>Characters, enemies, bosses, Marseille environments, and polish</td></tr>
-<tr><td>Music and sound effects</td><td>10%</td><td>Combat impact, ambience, UI sound, and Act 1 music</td></tr>
+<tr><td>Pixel art, animation, backgrounds, VFX</td><td>25%</td><td>Characters, enemies, bosses, stage environments, and polish across the campaign</td></tr>
+<tr><td>Music and sound effects</td><td>10%</td><td>Combat impact, ambience, UI sound, and campaign music</td></tr>
 <tr><td>QA, community, and launch materials</td><td>8%</td><td>Testing, feedback passes, store assets, and campaign updates</td></tr>
 <tr><td>Kickstarter/payment fees and contingency</td><td>7%</td><td>Platform fees, payment processing, and production buffer</td></tr>
 <tr><td>EU physical reward reserve</td><td>5%</td><td>Poster/bracelet samples, packing material, and fulfillment preparation</td></tr></tbody></table></div>
 <h2 id="kickstarter-base-goal-and-stretch-goals"><a class="heading-link" href="#kickstarter-base-goal-and-stretch-goals" aria-label="Link to section">#</a>Base Goal And Stretch Goals</h2>
-<h3 id="kickstarter-20-000-act-1-campaign-experience"><a class="heading-link" href="#kickstarter-20-000-act-1-campaign-experience" aria-label="Link to section">#</a>$20,000 - Act 1 Campaign Experience</h3>
-<p>Funds the focused first release:</p>
+<h3 id="kickstarter-20-000-full-story-campaign-foundation"><a class="heading-link" href="#kickstarter-20-000-full-story-campaign-foundation" aria-label="Link to section">#</a>$20,000 - Full Story Campaign Foundation</h3>
+<p>Supports the focused full-game release target:</p>
 <ul>
-<li>Full Act 1 campaign: The Marseille Hunt.</li>
+<li>Complete main campaign structure from the opening prison break through the final chapter.</li>
+<li>A polished Marseille opening arc covering the prison escape, undercity route, port ambush, research submarine, and first major boss.</li>
 <li>Core combat system, skill selection, and squad command system.</li>
-<li>Playable characters: Stranger, Deep, and Solei.</li>
-<li>Handcrafted Marseille environments.</li>
-<li>Main enemies, bosses, and narrative foundation.</li>
-<li>Digital game delivery for eligible reward tiers.</li>
+<li>Core cast, party systems, and companion moments for the main campaign.</li>
+<li>Handcrafted environments for Marseille, Sakuri, Calvaria, Akam Meskul, and The Cradle.</li>
+<li>Main enemies, bosses, relic-fragment mechanics, and narrative foundation.</li>
+<li>Full digital game delivery for eligible reward tiers.</li>
 </ul>
-<p>This is the complete Act 1 experience, not the entire long-term vision of Divergency.</p>
+<p>This is not a one-stage campaign. The deliverable is the complete Divergency story campaign. Stretch goals expand combat depth, optional content, modes, and features beyond the core campaign.</p>
 <h3 id="kickstarter-25-000-combat-expansion"><a class="heading-link" href="#kickstarter-25-000-combat-expansion" aria-label="Link to section">#</a>$25,000 - Combat Expansion</h3>
 <ul>
 <li>Expanded skill pools for the playable cast.</li>
@@ -1159,7 +1268,7 @@
 </ul>
 <h3 id="kickstarter-30-000-world-expansion"><a class="heading-link" href="#kickstarter-30-000-world-expansion" aria-label="Link to section">#</a>$30,000 - World Expansion</h3>
 <ul>
-<li>Hidden side quests and lore events.</li>
+<li>Hidden side quests and lore events across multiple stages.</li>
 <li>Secret areas.</li>
 <li>Optional mini-bosses and hidden bosses.</li>
 </ul>
@@ -1196,27 +1305,28 @@
 <li>Share challenges with the community, subject to moderation and platform constraints.</li>
 </ul>
 <h2 id="kickstarter-production-timeline"><a class="heading-link" href="#kickstarter-production-timeline" aria-label="Link to section">#</a>Production Timeline</h2>
-<p>This is an 18-month production plan from the end of the Kickstarter campaign.</p>
+<p>This is a 24-month production plan from the end of the Kickstarter campaign.</p>
 <div class="table-wrap"><table><thead><tr><th>Window</th><th>Milestone</th></tr></thead><tbody><tr><td>Month 0-1</td><td>Campaign wrap, backer survey preparation, production planning, reward validation</td></tr>
 <tr><td>Month 1-3</td><td>Prototype polish, clean gameplay capture, combat feel pass, HUD direction</td></tr>
-<tr><td>Month 4-6</td><td>Act 1 vertical slice: Marseille stage flow, enemies, first boss structure</td></tr>
-<tr><td>Month 7-9</td><td>Alpha content build: main Act 1 stages, character skill selection pass, enemy variety</td></tr>
-<tr><td>Month 10-12</td><td>Beta content build: full Act 1 playable, balancing, bug fixing, backer feedback</td></tr>
-<tr><td>Month 13-15</td><td>Polish: UI, audio, VFX, accessibility checks, localization pass, release prep</td></tr>
-<tr><td>Month 16-18</td><td>Act 1 release candidate, digital rewards, final QA, launch update</td></tr>
-<tr><td>Month 18-20</td><td>EU physical reward production and shipping window for poster/bracelet tiers</td></tr></tbody></table></div>
+<tr><td>Month 4-6</td><td>Stage 1 vertical slice: Bastonne, Marseille stage flow, enemies, and first boss structure</td></tr>
+<tr><td>Month 7-10</td><td>Stage 1 content build: Armorlite, Laundel, port ambush, submarine laboratory, and the first major experiment</td></tr>
+<tr><td>Month 11-14</td><td>Stage 2 Sakuri and Stage 3 Calvaria content pass, relic mechanics, bosses, and story events</td></tr>
+<tr><td>Month 15-18</td><td>Stage 4 Akam Meskul and Stage 5 The Cradle content pass, final systems, and campaign arc lock</td></tr>
+<tr><td>Month 19-21</td><td>Full campaign alpha/beta: balancing, bug fixing, boss tuning, backer feedback</td></tr>
+<tr><td>Month 22-24</td><td>Polish: UI, audio, VFX, accessibility checks, localization pass, PC release candidate, digital rewards</td></tr>
+<tr><td>Month 24-26</td><td>EU physical reward production and shipping window for poster/bracelet tiers</td></tr></tbody></table></div>
 <p>Dates may shift if testing shows that a feature needs more work. If that happens, backers will receive clear updates explaining what changed and why.</p>
 <h2 id="kickstarter-rewards"><a class="heading-link" href="#kickstarter-rewards" aria-label="Link to section">#</a>Rewards</h2>
 <p>All physical rewards are EU only at launch to keep fulfillment manageable.</p>
-<div class="table-wrap"><table><thead><tr><th>Pledge</th><th>Reward</th><th>Estimated delivery</th></tr></thead><tbody><tr><td>$5</td><td>Signal Spark: thank-you update access and name on digital supporter wall</td><td>Campaign + Month 18</td></tr>
-<tr><td>$15</td><td>Digital Supporter Pack: wallpapers, backer update archive, name in digital thanks</td><td>Month 6 + Month 18</td></tr>
-<tr><td>$25</td><td>Act 1 Digital Key: digital copy of Divergency Act 1 at release</td><td>Month 18</td></tr>
-<tr><td>$40</td><td>Sound And Art Pack: digital game, soundtrack, mini artbook, wallpapers</td><td>Month 18</td></tr>
-<tr><td>$60</td><td>Beta Fighter: previous rewards plus beta access and private feedback form</td><td>Month 10-12</td></tr>
-<tr><td>$90</td><td>Marseille Poster Pack, EU only: previous digital rewards plus A3 poster</td><td>Month 18-20</td></tr>
-<tr><td>$130</td><td>Beacon Of Hope Bracelet, EU only: previous digital rewards plus bracelet and poster</td><td>Month 18-20</td></tr>
-<tr><td>$250</td><td>Design Council: previous digital rewards plus credit listing and one feedback session</td><td>Month 10-18</td></tr>
-<tr><td>$600</td><td>Create Your Own NPC + Short Questline, limited quantity: scoped custom content reward</td><td>Month 18 or later if content needs final approval</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>Pledge</th><th>Reward</th><th>Estimated delivery</th></tr></thead><tbody><tr><td>$5</td><td>Signal Spark: thank-you update access and name on digital supporter wall</td><td>Campaign + Month 24</td></tr>
+<tr><td>$15</td><td>Digital Supporter Pack: wallpapers, backer update archive, name in digital thanks</td><td>Month 6 + Month 24</td></tr>
+<tr><td>$25</td><td>Full Game Digital Key: digital copy of Divergency at release</td><td>Month 24</td></tr>
+<tr><td>$40</td><td>Sound And Art Pack: digital game, soundtrack, mini artbook, wallpapers</td><td>Month 24</td></tr>
+<tr><td>$60</td><td>Beta Fighter: previous rewards plus beta access and private feedback form</td><td>Month 19-21</td></tr>
+<tr><td>$90</td><td>Marseille Poster Pack, EU only: previous digital rewards plus A3 poster</td><td>Month 24-26</td></tr>
+<tr><td>$130</td><td>Beacon Of Hope Bracelet, EU only: previous digital rewards plus bracelet and poster</td><td>Month 24-26</td></tr>
+<tr><td>$250</td><td>Design Council: previous digital rewards plus credit listing and one feedback session</td><td>Month 10-24</td></tr>
+<tr><td>$600</td><td>Create Your Own NPC + Short Questline, limited quantity: scoped custom content reward</td><td>Month 24 or later if content needs final approval</td></tr></tbody></table></div>
 <h3 id="kickstarter-custom-npc-short-questline-scope"><a class="heading-link" href="#kickstarter-custom-npc-short-questline-scope" aria-label="Link to section">#</a>Custom NPC + Short Questline Scope</h3>
 <p>This reward includes:</p>
 <ul>
@@ -1248,36 +1358,21 @@
 <h2 id="kickstarter-risks-and-challenges"><a class="heading-link" href="#kickstarter-risks-and-challenges" aria-label="Link to section">#</a>Risks And Challenges</h2>
 <p>Divergency is an ambitious action game made by a small team. The main risks are schedule, scope, technical stability, and fulfillment.</p>
 <h3 id="kickstarter-development-delays"><a class="heading-link" href="#kickstarter-development-delays" aria-label="Link to section">#</a>Development Delays</h3>
-<p>Combat-heavy games need iteration. Animation timing, hitboxes, enemy behavior, UI clarity, and difficulty balance can all take longer than expected. To reduce risk, the base goal focuses on Act 1 instead of promising the entire long-term game at once.</p>
+<p>Combat-heavy games need iteration. Animation timing, hitboxes, enemy behavior, UI clarity, and difficulty balance can all take longer than expected. To reduce risk, the base goal focuses on the core story campaign first: the main stages, core cast, main bosses, and systems needed to finish the game.</p>
 <h3 id="kickstarter-scope-control"><a class="heading-link" href="#kickstarter-scope-control" aria-label="Link to section">#</a>Scope Control</h3>
-<p>The full world of Divergency is larger than the first release. The campaign is structured around a focused Act 1 release, with stretch goals clearly separated. If a stretch feature threatens the main release, we will prioritize the Act 1 campaign first.</p>
+<p>The full world of Divergency has room for more modes, side content, and playable variations than a small team should promise all at once. The campaign is structured around the complete main story first, with stretch goals clearly separated. If a stretch feature threatens the main release, we will prioritize the full core campaign.</p>
 <h3 id="kickstarter-online-features"><a class="heading-link" href="#kickstarter-online-features" aria-label="Link to section">#</a>Online Features</h3>
 <p>Online co-op and PvP are harder to deliver than local or single-player content. These features are stretch goals and will be tested before being locked for launch. If stability requires more time, we will update backers instead of hiding the problem.</p>
 <h3 id="kickstarter-platform-and-release-approvals"><a class="heading-link" href="#kickstarter-platform-and-release-approvals" aria-label="Link to section">#</a>Platform And Release Approvals</h3>
-<p>Any release platform can require technical checks, store page review, or certification. The current plan is PC-first for the Act 1 release, with additional platforms considered after the base experience is stable.</p>
+<p>Any release platform can require technical checks, store page review, or certification. The current plan is PC-first for the full game release, with additional platforms considered after the base experience is stable.</p>
 <h3 id="kickstarter-physical-reward-fulfillment"><a class="heading-link" href="#kickstarter-physical-reward-fulfillment" aria-label="Link to section">#</a>Physical Reward Fulfillment</h3>
 <p>Posters and bracelets require production, packing, address collection, and shipping. To keep this manageable, physical rewards are EU only at launch, with estimated shipping ranges shown before backers pledge.</p>
 <h3 id="kickstarter-communication"><a class="heading-link" href="#kickstarter-communication" aria-label="Link to section">#</a>Communication</h3>
 <p>If the project hits delays or roadblocks, we will post clear updates explaining what happened, what is being fixed, and how it affects delivery estimates.</p>
 <h2 id="kickstarter-join-us"><a class="heading-link" href="#kickstarter-join-us" aria-label="Link to section">#</a>Join Us</h2>
 <p>Divergency is for players who remember the joy of side-scrolling action, the tension of mastering a fighter, and the feeling of stepping into a world built pixel by pixel.</p>
-<p>Your support helps us finish the first campaign chapter, prove the combat, and bring Marseille's dark story to life.</p>
+<p>Your support helps us finish the full story campaign, prove the combat, and bring Divergency's dark world to life beyond Marseille.</p>
 <p>Back Divergency and help us build the soul of a new 2D action game.</p>
-<h2 id="kickstarter-pre-launch-asset-checklist"><a class="heading-link" href="#kickstarter-pre-launch-asset-checklist" aria-label="Link to section">#</a>Pre-Launch Asset Checklist</h2>
-<p>Use these assets before resubmitting the page:</p>
-<ul>
-<li>Project image that reads clearly at small size and behind Kickstarter's play button.</li>
-<li>Short video or clean WIP gameplay capture if possible.</li>
-<li>Clean combat GIF with no debug text.</li>
-<li>Clean exploration screenshot with no black bars.</li>
-<li>Character lineup or playable character cards.</li>
-<li>Enemy/boss image or GIF.</li>
-<li>Skill selection UI mockup.</li>
-<li>Combat HUD UI mockup.</li>
-<li>Character select UI mockup.</li>
-<li>Budget graphic based on the budget table above.</li>
-<li>Timeline graphic based on the 18-month plan above.</li>
-</ul>
         </article>
       </div>
     </section>
@@ -3562,14 +3657,29 @@
             "caption": "chars - Model Chapter 1 New 2t1"
       },
       {
-            "src": "imgs/chars/pic - Copy.png",
-            "alt": "chars - Pic Copy",
-            "caption": "chars - Pic Copy"
-      },
-      {
             "src": "imgs/chars/Poster.png",
             "alt": "chars - Poster",
             "caption": "chars - Poster"
+      },
+      {
+            "src": "imgs/chars/SlashArt_2.png",
+            "alt": "chars - SlashArt 2",
+            "caption": "chars - SlashArt 2"
+      },
+      {
+            "src": "imgs/others/Hero_figterX.jpg",
+            "alt": "others - Hero FigterX",
+            "caption": "others - Hero FigterX"
+      },
+      {
+            "src": "imgs/others/mugen_engine.jpg",
+            "alt": "others - Mugen Engine",
+            "caption": "others - Mugen Engine"
+      },
+      {
+            "src": "imgs/others/play_now_poster_lf2.webp",
+            "alt": "others - Play Now Poster Lf2",
+            "caption": "others - Play Now Poster Lf2"
       },
       {
             "src": "imgs/Stage1/bar.png",

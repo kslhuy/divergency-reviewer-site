@@ -234,6 +234,7 @@ function stripMarkdown(value) {
     .replace(/`([^`]+)`/g, "$1")
     .replace(/\*\*([^*]+)\*\*/g, "$1")
     .replace(/\*([^*]+)\*/g, "$1")
+    .replace(/!\[([^\]]*)\]\((?:<[^>]+>|[^)]+)\)/g, "$1")
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
     .replace(/<[^>]+>/g, "")
     .trim();
@@ -251,6 +252,14 @@ function inlineMarkdown(value) {
 
   html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   html = html.replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  html = html.replace(
+    /!\[([^\]]*)\]\((?:&lt;([^&]+)&gt;|([^)]+))\)/g,
+    (_, alt, bracketedSrc, plainSrc) => {
+      const src = (bracketedSrc || plainSrc || "").trim();
+      const cleanAlt = stripMarkdown(alt || "Divergency image");
+      return `<img class="inline-markdown-image" src="${escapeAttribute(src)}" alt="${escapeAttribute(cleanAlt)}" loading="lazy">`;
+    },
+  );
   html = html.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
     '<a href="$2">$1</a>',
@@ -1197,6 +1206,17 @@ function buildPage(docs) {
       color: var(--soft);
       font-size: 0.88rem;
       line-height: 1.35;
+    }
+
+    .inline-markdown-image {
+      display: block;
+      width: 100%;
+      min-width: 160px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #0f0f0f;
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
     }
 
     .table-wrap {
