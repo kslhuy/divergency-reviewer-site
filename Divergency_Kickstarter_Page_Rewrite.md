@@ -45,13 +45,17 @@ Characters can learn a larger skill pool over time, but they cannot bring everyt
 
 Before each map, you choose the 4 skills and passive upgrades that fit the situation: crowd control for enemy waves, mobility for platform-heavy routes, guard break tools for shield formations, burst damage for bosses, or defensive options for dangerous zones. The goal is preparation, not menu complexity: players should look at the mission, choose a plan, and feel the difference in combat.
 
-![Skill selection work in progress](<imgs/UI/character-select-wip.png>)
+![Skill selection work in progress](<imgs/UI/Character_selcted_story.png>)
 
 *Work-in-progress skill selection UI showing loadout planning before a mission.*
 
 ### Squad Command System
 
 Some battles are not won by one fighter alone. Divergency includes a player-to-AI command system that lets you direct commandable allies during combat.
+
+![Skill selection work in progress](<imgs/UI/In_game_generated.png>)
+
+*Work-in-progress skill selection UI showing loadout planning before a mission.*
 
 You can select a nearby General, give quick directional orders, change formation, and trigger assist actions:
 
@@ -86,6 +90,9 @@ Divergency is not only arena combat. Stages contain hidden routes, quiet environ
 ![Sakuri bridge route](<imgs/Stage2/Bridge_1.png>)
 
 *Work-in-progress bridge route from Sakuri, built around travel, height, and environmental mood.*
+
+![bamboo_forest_HUD_AI](<imgs/Stage2/bamboo_forest_HUD_AI.png>)
+*Work-in-progress bambo.*
 
 ![Old room in Sakuri](<imgs/Stage2/old room_sakuri.png>)
 
@@ -145,6 +152,9 @@ The Eye, The Ear, The Tongue, The Heart, and The Umbilical Cord are living fragm
 Jamerson's perfect failure is an escaped experiment that proves resurrection is becoming real. It is not the final body The Eye wants, but it is close enough to show that Jamerson's work is no longer only theory.
 
 ## Story
+![Skill selection work in progress](<imgs/Stage1/Marseille_Metropolis_Splash_Day.png>)
+
+*Work-in-progress Marseille.*
 
 The story begins with the Stranger, a nameless prisoner who wakes during the Bastonne lockdown when he should be unconscious. Deep's team came to rescue Block from Jamerson's prison facility, but the Stranger's impossible survival changes the escape. The team later calls him Ghost, because Jamerson's systems cannot fully read him and no one knows who he used to be.
 
@@ -212,7 +222,7 @@ Divergency is currently in active development.
 What exists now:
 
 - Work-in-progress 2D movement and beat 'em up combat.
-- Early playable character work for Deep and Solei.
+- Full playable 5 main characters.
 - Prototype enemy behavior, encounter systems, and player-to-AI squad commands.
 - Marseille sewer and industrial environment art.
 - Stage 1 story structure covering Armorlite, Laundel, the port ambush, and the research submarine.
@@ -222,10 +232,8 @@ What exists now:
 
 What is not final yet:
 
-- Public gameplay trailer.
 - Final UI art and menu flow.
 - Final balancing and boss tuning.
-- Full campaign content lock.
 - Final music, SFX mix, localization pass, and QA.
 - Online co-op, PvP, survival, tower, and custom stage features, which depend on stretch goals and testing.
 
@@ -245,9 +253,11 @@ The Kickstarter goal will help us:
 
 This campaign is asking for support to turn a work-in-progress action prototype and world into a complete game, with the campaign content, combat polish, audio, UI, QA, and rewards finished properly.
 
-## Funding Goal: $20,000
+## Funding Goal: $20,000 - Full Story Campaign Foundation
 
-The base goal supports production of the full Divergency story campaign: a polished Marseille opening arc, the remaining chapters, core combat, party systems, bosses, and release work.
+![Solei scouting the layered $20,000 money goal](<imgs/others/goal-money-solei-20000-v2.png>)
+
+The $20,000 base goal funds the complete Divergency story campaign: the Marseille opening arc, remaining chapters, core combat and squad commands, party moments, bosses, QA, release work, and digital game delivery.
 
 Budget breakdown:
 
@@ -262,64 +272,20 @@ Budget breakdown:
 
 ## Base Goal And Stretch Goals
 
-### $20,000 - Full Story Campaign Foundation
+![Divergency funding goals and work unlocked roadmap](<imgs/UI/base-goal-stretch-goals.png>)
 
-Supports the focused full-game release target:
+The base goal is the full story campaign, not a one-stage demo. Stretch goals expand combat depth, optional content, modes, and features beyond the core release.
 
-- Complete main campaign structure from the opening prison break through the final chapter.
-- A polished Marseille opening arc covering the prison escape, undercity route, port ambush, research submarine, and first major boss.
-- Core combat system, skill selection, and squad command system.
-- Core cast, party systems, and companion moments for the main campaign.
-- Handcrafted environments for Marseille, Sakuri, Calvaria, Akam Meskul, and The Cradle.
-- Main enemies, bosses, relic-fragment mechanics, and narrative foundation.
-- Full digital game delivery for eligible reward tiers.
-
-This is not a one-stage campaign. The deliverable is the complete Divergency story campaign. Stretch goals expand combat depth, optional content, modes, and features beyond the core campaign.
-
-### $25,000 - Combat Expansion
-
-- Expanded skill pools for the playable cast.
-- More active skills, passive upgrades, and loadout choices.
-- Additional weapons and combat variations.
-
-### $30,000 - World Expansion
-
-- Hidden side quests and lore events across multiple stages.
-- Secret areas.
-- Optional mini-bosses and hidden bosses.
-
-### $35,000 - Co-op And PvP At Launch
-
-- Local co-op.
-- Online co-op, if testing proves stable.
-- Competitive PvP mode.
-- Team combo and synergy mechanics.
-
-Online features carry more technical risk than single-player content. If this stretch goal is reached, we will show progress updates and adjust timing honestly if stability requires more testing.
-
-### $40,000 - Expert Mode
-
-- Smarter and stronger enemies.
-- Reworked encounters.
-- Boss-focused challenge content.
-
-### $50,000 - Survival Mode
-
-- Permadeath mode.
-- Limited resources.
-- Boss Rush challenge.
-
-### $60,000 - Infinity Tower
-
-- Scaling challenge mode.
-- Unique enemy combinations.
-- Leaderboards and progression rewards, if platform support is ready.
-
-### $88,000 - Custom Stage Mode
-
-- Build combat stages.
-- Customize enemies, layouts, and difficulty.
-- Share challenges with the community, subject to moderation and platform constraints.
+| Goal | Unlock | What it adds |
+| ---: | --- | --- |
+| $20,000 | Full Story Campaign Foundation | Complete story campaign, Marseille opening arc, core combat and squad commands, party moments, bosses, QA, release work, and digital game delivery |
+| $25,000 | Combat Expansion | Expanded skill pools, more active and passive upgrades, loadout choices, and additional weapon variations |
+| $30,000 | World Expansion | Hidden side quests, lore events, secret areas, optional mini-bosses, and hidden bosses |
+| $35,000 | Co-op And PvP At Launch | Local co-op, online co-op if testing proves stable, competitive PvP, and team synergy mechanics |
+| $40,000 | Expert Mode | Smarter enemies, reworked encounters, stronger bosses, and challenge-focused content |
+| $50,000 | Survival Mode | Permadeath mode, limited resources, and Boss Rush challenge |
+| $60,000 | Infinity Tower | Scaling challenge mode, unique enemy combinations, and leaderboards if platform support is ready |
+| $88,000 | Custom Stage Mode | Combat stage builder with enemy, layout, and difficulty customization, plus community sharing if moderation support is ready |
 
 ## Production Timeline
 

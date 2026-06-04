@@ -89,7 +89,7 @@ const imageSlots = {
       caption: "The Cradle / divine encounter preview",
     },
     {
-      src: "imgs/Stage3/Pain fotress.png",
+      src: "imgs/Stage3/Pain_fotress.png",
       alt: "Calvaria fortress environment",
       caption: "Calvaria fortress atmosphere",
     },
@@ -1012,12 +1012,32 @@ function buildPage(docs) {
       scroll-snap-align: start;
     }
 
+    .media-image-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media-image-button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+
     .media-slot img {
       display: block;
       width: 100%;
       height: 160px;
       object-fit: cover;
       background: #0f0f0f;
+      transition: transform 180ms ease, filter 180ms ease;
+    }
+
+    .media-image-button:hover img {
+      filter: brightness(1.08);
+      transform: scale(1.025);
     }
 
     .media-placeholder {
@@ -1217,6 +1237,76 @@ function buildPage(docs) {
       background: #0f0f0f;
       border: 1px solid var(--line-soft);
       border-radius: 8px;
+    }
+
+    body.lightbox-open {
+      overflow: hidden;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: rgba(5, 5, 5, 0.86);
+      backdrop-filter: blur(8px);
+    }
+
+    .lightbox[hidden] {
+      display: none;
+    }
+
+    .lightbox-panel {
+      position: relative;
+      display: grid;
+      gap: 12px;
+      width: min(1120px, 100%);
+      max-height: calc(100vh - 48px);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 50%;
+      background: rgba(16, 15, 13, 0.86);
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .lightbox-close:hover,
+    .lightbox-close:focus-visible {
+      background: rgba(208, 90, 70, 0.95);
+      outline: none;
+    }
+
+    .lightbox-image {
+      display: block;
+      width: 100%;
+      max-height: calc(100vh - 116px);
+      object-fit: contain;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      background: #080808;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.58);
+    }
+
+    .lightbox-caption {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.94rem;
+      line-height: 1.4;
+      text-align: center;
     }
 
     .table-wrap {
@@ -1433,6 +1523,14 @@ function buildPage(docs) {
     ${panes}
   </main>
 
+  <div class="lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-label="Expanded image viewer" hidden>
+    <div class="lightbox-panel">
+      <button class="lightbox-close" type="button" id="lightbox-close" aria-label="Close image viewer" title="Close image viewer">&times;</button>
+      <img class="lightbox-image" id="lightbox-image" src="" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
   <!--
     EASY IMAGE EDIT:
     1. This page automatically includes supported image files under Campaign/Kickstarter/imgs.
@@ -1449,6 +1547,11 @@ function buildPage(docs) {
     const searchInput = document.getElementById("doc-search");
     const searchCount = document.getElementById("search-count");
     const progress = document.getElementById("read-progress");
+    const lightbox = document.getElementById("image-lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const lightboxClose = document.getElementById("lightbox-close");
+    let lastFocusedElement = null;
 
     function mergedImageSlots(docSlots) {
       const seen = new Set();
@@ -1473,7 +1576,8 @@ function buildPage(docs) {
       const caption = escapeHtml(slot.caption || "Add image");
       const alt = escapeHtml(slot.alt || slot.caption || "Divergency image");
       if (slot.src) {
-        return '<figure class="media-slot"><img src="' + escapeHtml(slot.src) + '" alt="' + alt + '" loading="lazy"><figcaption>' + caption + '</figcaption></figure>';
+        const src = escapeHtml(slot.src);
+        return '<figure class="media-slot"><button class="media-image-button" type="button" data-lightbox-src="' + src + '" data-lightbox-alt="' + alt + '" data-lightbox-caption="' + caption + '" aria-label="View larger image: ' + caption + '"><img src="' + src + '" alt="' + alt + '" loading="lazy"></button><figcaption>' + caption + '</figcaption></figure>';
       }
       return '<figure class="media-slot"><div class="media-placeholder"><span>Image slot<br>Add path in IMAGE_SLOTS</span></div><figcaption>' + caption + '</figcaption></figure>';
     }
@@ -1521,6 +1625,30 @@ function buildPage(docs) {
       const amount = Math.max(240, grid.clientWidth * 0.86);
       grid.scrollBy({ left: amount * direction, behavior: "smooth" });
       window.setTimeout(() => updateMediaControls(docId), 360);
+    }
+
+    function openLightbox(button) {
+      if (!button || !button.dataset.lightboxSrc) return;
+      lastFocusedElement = document.activeElement;
+      lightboxImage.src = button.dataset.lightboxSrc;
+      lightboxImage.alt = button.dataset.lightboxAlt || "";
+      lightboxCaption.textContent = button.dataset.lightboxCaption || "";
+      lightbox.hidden = false;
+      document.body.classList.add("lightbox-open");
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      if (lightbox.hidden) return;
+      lightbox.hidden = true;
+      document.body.classList.remove("lightbox-open");
+      lightboxImage.removeAttribute("src");
+      lightboxImage.alt = "";
+      lightboxCaption.textContent = "";
+      if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+        lastFocusedElement.focus();
+      }
+      lastFocusedElement = null;
     }
 
     function escapeHtml(value) {
@@ -1609,6 +1737,18 @@ function buildPage(docs) {
 
     document.querySelectorAll(".media-grid").forEach((grid) => {
       grid.addEventListener("scroll", () => updateMediaControls(grid.dataset.mediaGrid), { passive: true });
+      grid.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-lightbox-src]");
+        if (button) openLightbox(button);
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeLightbox();
     });
 
     searchInput.addEventListener("input", runSearch);

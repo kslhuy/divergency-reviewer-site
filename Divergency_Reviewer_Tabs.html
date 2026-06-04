@@ -416,12 +416,32 @@
       scroll-snap-align: start;
     }
 
+    .media-image-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media-image-button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+
     .media-slot img {
       display: block;
       width: 100%;
       height: 160px;
       object-fit: cover;
       background: #0f0f0f;
+      transition: transform 180ms ease, filter 180ms ease;
+    }
+
+    .media-image-button:hover img {
+      filter: brightness(1.08);
+      transform: scale(1.025);
     }
 
     .media-placeholder {
@@ -623,6 +643,76 @@
       border-radius: 8px;
     }
 
+    body.lightbox-open {
+      overflow: hidden;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: rgba(5, 5, 5, 0.86);
+      backdrop-filter: blur(8px);
+    }
+
+    .lightbox[hidden] {
+      display: none;
+    }
+
+    .lightbox-panel {
+      position: relative;
+      display: grid;
+      gap: 12px;
+      width: min(1120px, 100%);
+      max-height: calc(100vh - 48px);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 50%;
+      background: rgba(16, 15, 13, 0.86);
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .lightbox-close:hover,
+    .lightbox-close:focus-visible {
+      background: rgba(208, 90, 70, 0.95);
+      outline: none;
+    }
+
+    .lightbox-image {
+      display: block;
+      width: 100%;
+      max-height: calc(100vh - 116px);
+      object-fit: contain;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      background: #080808;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.58);
+    }
+
+    .lightbox-caption {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.94rem;
+      line-height: 1.4;
+      text-align: center;
+    }
+
     .table-wrap {
       max-width: 100%;
       margin: 22px 0;
@@ -820,8 +910,8 @@
         
     <dl class="hero-stats" aria-label="Packet statistics">
       <div><dt>Docs</dt><dd>5</dd></div>
-      <div><dt>Read</dt><dd>168 min</dd></div>
-      <div><dt>Sections</dt><dd>83</dd></div>
+      <div><dt>Read</dt><dd>169 min</dd></div>
+      <div><dt>Sections</dt><dd>82</dd></div>
       <div><dt>Tables</dt><dd>10</dd></div>
     </dl>
       </div>
@@ -869,8 +959,8 @@
           <p>Reviewer-ready campaign copy: hook, gameplay, story, funding, timeline, rewards, shipping, and risks.</p>
         </div>
         <dl class="doc-stats" aria-label="Kickstarter Page statistics">
-          <div><dt>Read</dt><dd>19 min</dd></div>
-          <div><dt>Sections</dt><dd>16</dd></div>
+          <div><dt>Read</dt><dd>18 min</dd></div>
+          <div><dt>Sections</dt><dd>15</dd></div>
           <div><dt>Tables</dt><dd>4</dd></div>
         </dl>
       </div>
@@ -900,14 +990,11 @@
         <a class="toc-link toc-level-1" href="#kickstarter-divergency-a-dark-fantasy-pixel-art-beat-em-up">
           Divergency: A Dark Fantasy Pixel-Art Beat 'Em Up
         </a>
-        <a class="toc-link toc-level-2" href="#kickstarter-what-is-divergency">
-          What Is Divergency?
+        <a class="toc-link toc-level-2" href="#kickstarter-the-game">
+          The Game
         </a>
         <a class="toc-link toc-level-3" href="#kickstarter-inspiration-games">
           Inspiration Games
-        </a>
-        <a class="toc-link toc-level-2" href="#kickstarter-why-kickstarter">
-          Why Kickstarter?
         </a>
         <a class="toc-link toc-level-2" href="#kickstarter-gameplay">
           Gameplay
@@ -921,26 +1008,11 @@
         <a class="toc-link toc-level-3" href="#kickstarter-squad-command-system">
           Squad Command System
         </a>
-        <a class="toc-link toc-level-3" href="#kickstarter-distinct-playable-characters">
-          Distinct Playable Characters
+        <a class="toc-link toc-level-3" href="#kickstarter-enemy-variety">
+          Enemy Variety
         </a>
-        <a class="toc-link toc-level-3" href="#kickstarter-enemies-that-force-decisions">
-          Enemies That Force Decisions
-        </a>
-        <a class="toc-link toc-level-3" href="#kickstarter-exploration-secrets-and-environmental-storytelling">
-          Exploration, Secrets, And Environmental Storytelling
-        </a>
-        <a class="toc-link toc-level-2" href="#kickstarter-story">
-          Story
-        </a>
-        <a class="toc-link toc-level-2" href="#kickstarter-campaign-story">
-          Campaign Story
-        </a>
-        <a class="toc-link toc-level-3" href="#kickstarter-prologue-and-stage-1-marseille-unstable">
-          Prologue And Stage 1: Marseille Unstable
-        </a>
-        <a class="toc-link toc-level-3" href="#kickstarter-the-full-campaign">
-          The Full Campaign
+        <a class="toc-link toc-level-3" href="#kickstarter-exploration-and-stage-secrets">
+          Exploration And Stage Secrets
         </a>
         <a class="toc-link toc-level-2" href="#kickstarter-characters">
           Characters
@@ -975,11 +1047,23 @@
         <a class="toc-link toc-level-3" href="#kickstarter-the-perfect-failure">
           The Perfect Failure
         </a>
+        <a class="toc-link toc-level-2" href="#kickstarter-story">
+          Story
+        </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-stage-1-marseille-unstable">
+          Stage 1: Marseille Unstable
+        </a>
+        <a class="toc-link toc-level-3" href="#kickstarter-the-full-campaign">
+          The Full Campaign
+        </a>
         <a class="toc-link toc-level-2" href="#kickstarter-art-and-world">
           Art And World
         </a>
         <a class="toc-link toc-level-2" href="#kickstarter-current-development-status">
           Current Development Status
+        </a>
+        <a class="toc-link toc-level-2" href="#kickstarter-why-kickstarter">
+          Why Kickstarter?
         </a>
         <a class="toc-link toc-level-2" href="#kickstarter-funding-goal-20-000">
           Funding Goal: $20,000
@@ -1060,27 +1144,15 @@
   <figcaption>Divergency key art banner</figcaption>
 </figure>
 <p><em>Work-in-progress key art showing Divergency's dark fantasy tone, main cast, and relic-driven conflict.</em></p>
-<h2 id="kickstarter-what-is-divergency"><a class="heading-link" href="#kickstarter-what-is-divergency" aria-label="Link to section">#</a>What Is Divergency?</h2>
-<p>Divergency is a dark fantasy action game inspired by 90s beat 'em ups, arcade brawlers, platform-action pacing, and modern skill-based combat.</p>
-<p>The strongest references are Little Fighter 2 and Hero Fighter for readable chaos, team fights, special moves, and ally command energy; M.U.G.E.N for character variety and experimental matchups; arcade classics like Final Fight, Streets of Rage, Cadillacs and Dinosaurs, and The Punisher for 2.5D lane-based brawling; and modern brawlers/action RPGs like Dragon's Crown, Dungeon Fighter Online, Castle Crashers, and Teenage Mutant Ninja Turtles: Shredder's Revenge for character identity, co-op energy, and replayable combat.</p>
+<h2 id="kickstarter-the-game"><a class="heading-link" href="#kickstarter-the-game" aria-label="Link to section">#</a>The Game</h2>
+<p>Divergency is a dark fantasy action brawler built around readable 2D/2.5D combat, limited skill loadouts, commandable allies, and handcrafted pixel-art stages.</p>
 <h3 id="kickstarter-inspiration-games"><a class="heading-link" href="#kickstarter-inspiration-games" aria-label="Link to section">#</a>Inspiration Games</h3>
-<p>These references help explain the combat feeling, not the final art direction. Divergency uses them to show the kind of readable action, party chaos, and character variety we want, while keeping its own dark fantasy world.</p>
+<p>Divergency is inspired by games that made 2D action feel fast, readable, chaotic, and character-driven. These references explain the combat feeling, not the final art direction or story identity. Divergency still has its own dark fantasy world, relic-fragment campaign, and party-based systems.</p>
 <div class="table-wrap"><table><thead><tr><th>Little Fighter 2</th><th>Hero Fighter X</th><th>M.U.G.E.N</th></tr></thead><tbody><tr><td><img class="inline-markdown-image" src="imgs/others/play_now_poster_lf2.webp" alt="Little Fighter 2 inspiration poster" loading="lazy"></td><td><img class="inline-markdown-image" src="imgs/others/Hero_figterX.jpg" alt="Hero Fighter X inspiration poster" loading="lazy"></td><td><img class="inline-markdown-image" src="imgs/others/mugen_engine.jpg" alt="M.U.G.E.N inspiration collage" loading="lazy"></td></tr>
-<tr><td>Fast brawler readability, team fights, and simple controls that still create memorable chaos.</td><td>Clear special moves, squad combat energy, and large fights that remain easy to read.</td><td>Character variety, match-up experimentation, and a roster-first fighting-game imagination.</td></tr></tbody></table></div>
-<p>Divergency is not trying to clone one of those games. The goal is to take the fast readability of classic brawlers, the freedom of character-driven fighting games, and the darker campaign structure of an action adventure.</p>
-<p>You control a small cast of fighters, each with their own rhythm, weapons, movement, and combat style. Between stages, you select a limited skill loadout and passive setup to prepare for the next map. In battle, you read enemy formations, chain combos, manage spacing, command allies, and survive encounters where every enemy type asks for a different answer.</p>
-<p>The campaign is a full adventure across many stages. Each chapter adds new enemies, bosses, environments, traversal problems, party moments, and story turns while keeping the focus on fast brawler combat and team-based decisions.</p>
-<h2 id="kickstarter-why-kickstarter"><a class="heading-link" href="#kickstarter-why-kickstarter" aria-label="Link to section">#</a>Why Kickstarter?</h2>
-<p>Divergency is being built by a small team with a clear goal: finish a polished full game, starting with the Marseille opening arc and expanding into the rest of the adventure.</p>
-<p>The Kickstarter goal will help us:</p>
-<ul>
-<li>Finish the core combat system, skill selection, and squad command system.</li>
-<li>Build the full main campaign, from the opening prison break to the final confrontation.</li>
-<li>Complete pixel-art backgrounds, character animations, enemies, bosses, and VFX.</li>
-<li>Produce music, sound effects, UI polish, QA, and release preparation.</li>
-<li>Fulfill digital rewards and EU-only physical rewards without overextending production.</li>
-</ul>
-<p>This campaign is asking for support to turn a work-in-progress action prototype and world into a complete game, with the campaign content, combat polish, audio, UI, QA, and rewards finished properly.</p>
+<tr><td>Fast brawler readability, team fights, simple controls, and special moves that create memorable chaos.</td><td>Large fights, ally energy, clear attacks, and character actions that stay readable even when the screen gets busy.</td><td>Character variety, match-up experimentation, and the feeling that every fighter can have a different rhythm.</td></tr></tbody></table></div>
+<p>Classic arcade brawlers like Final Fight and Streets of Rage also guide the 2.5D lane pressure, enemy waves, and stage pacing. Modern brawlers and action RPGs guide replayability, character identity, and loadout depth.</p>
+<p>You control a small cast of fighters, each with their own rhythm, weapons, movement, and combat style. Between stages, you choose a limited skill loadout and passive setup for the next map. In battle, you chain attacks, manage spacing, command allies, and adapt when enemy groups change the pressure.</p>
+<p>The campaign is a full adventure across many stages. Each chapter adds new enemies, bosses, environments, traversal problems, party moments, and story turns while keeping the focus on fast brawler combat.</p>
 <h2 id="kickstarter-gameplay"><a class="heading-link" href="#kickstarter-gameplay" aria-label="Link to section">#</a>Gameplay</h2>
 <h3 id="kickstarter-fast-beat-em-up-combat"><a class="heading-link" href="#kickstarter-fast-beat-em-up-combat" aria-label="Link to section">#</a>Fast Beat 'Em Up Combat</h3>
 <p>Combat is built around movement, impact, and mastery. You push through enemy groups, chain attacks, dodge pressure, and use each fighter's strengths to control the fight.</p>
@@ -1095,12 +1167,18 @@
 <p>Before each map, you choose the 4 skills and passive upgrades that fit the situation: crowd control for enemy waves, mobility for platform-heavy routes, guard break tools for shield formations, burst damage for bosses, or defensive options for dangerous zones. The goal is preparation, not menu complexity: players should look at the mission, choose a plan, and feel the difference in combat.</p>
 
 <figure class="markdown-image">
-  <img src="imgs/UI/character-select-wip.png" alt="Skill selection work in progress" loading="lazy">
+  <img src="imgs/UI/Character_selcted_story.png" alt="Skill selection work in progress" loading="lazy">
   <figcaption>Skill selection work in progress</figcaption>
 </figure>
 <p><em>Work-in-progress skill selection UI showing loadout planning before a mission.</em></p>
 <h3 id="kickstarter-squad-command-system"><a class="heading-link" href="#kickstarter-squad-command-system" aria-label="Link to section">#</a>Squad Command System</h3>
 <p>Some battles are not won by one fighter alone. Divergency includes a player-to-AI command system that lets you direct commandable allies during combat.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/UI/In_game_generated.png" alt="Skill selection work in progress" loading="lazy">
+  <figcaption>Skill selection work in progress</figcaption>
+</figure>
+<p><em>Work-in-progress skill selection UI showing loadout planning before a mission.</em></p>
 <p>You can select a nearby General, give quick directional orders, change formation, and trigger assist actions:</p>
 <ul>
 <li>Free: release the squad back into normal behavior.</li>
@@ -1110,29 +1188,17 @@
 <li>Assist commands: call the selected General to perform attack, movement, or defense support.</li>
 </ul>
 <p>This gives fights a tactical layer without turning the game into a strategy game. The player still brawls in real time, but can shape the battlefield by pulling allies back, holding space, or calling a decisive assist at the right moment.</p>
-<h3 id="kickstarter-distinct-playable-characters"><a class="heading-link" href="#kickstarter-distinct-playable-characters" aria-label="Link to section">#</a>Distinct Playable Characters</h3>
-
-<figure class="markdown-image">
-  <img src="imgs/chars/Poster.png" alt="Divergency main character lineup" loading="lazy">
-  <figcaption>Divergency main character lineup</figcaption>
-</figure>
-<p>Each playable character has a different combat identity.</p>
-<ul>
-<li>The Stranger: a survivor pulled into the conflict, adaptable and dangerous.</li>
-<li>Deep: a former hero and crusader who became a symbol in old wars, then paid for it with scars, guilt, and exhaustion.</li>
-<li>Solei: Deep's niece, a young fighter of mixed Asian heritage whose speed, discipline, and temper make her dangerous before enemies understand what happened.</li>
-</ul>
-<p>More playable characters can join the roster as the story expands, but the base goal focuses on making the core cast feel complete.</p>
-<h3 id="kickstarter-enemies-that-force-decisions"><a class="heading-link" href="#kickstarter-enemies-that-force-decisions" aria-label="Link to section">#</a>Enemies That Force Decisions</h3>
-<p>Human enemies fight with structure: shield units protect gunners, ambushers try to flank, and stronger enemies force you to break formations before committing to long combos. When allies are present, your command choices matter: regroup before a trap, hold a flank to control space, or call an assist to break pressure.</p>
-<p>Demonic enemies fight differently. They are less afraid of death, more direct, and often harder to interrupt. Their role is to make the player adapt instead of repeating one combo forever.</p>
+<h3 id="kickstarter-enemy-variety"><a class="heading-link" href="#kickstarter-enemy-variety" aria-label="Link to section">#</a>Enemy Variety</h3>
+<p>Enemies are built to change how you fight, not only to add more bodies on screen.</p>
+<p>Human groups use shields, guns, ambushes, and flanks. You may need to break a formation before committing to a long combo. Demonic enemies are less defensive and more direct: they push through damage, hit harder, and force cleaner movement.</p>
+<p>When allies are present, squad commands become part of the answer: regroup before a trap, hold a flank, or call an assist to break pressure.</p>
 
 <figure class="markdown-image">
   <img src="imgs/Stage3/Ruined boss.png" alt="Ruined boss arena" loading="lazy">
   <figcaption>Ruined boss arena</figcaption>
 </figure>
 <p><em>Work-in-progress boss arena showing the darker monster design and encounter scale.</em></p>
-<h3 id="kickstarter-exploration-secrets-and-environmental-storytelling"><a class="heading-link" href="#kickstarter-exploration-secrets-and-environmental-storytelling" aria-label="Link to section">#</a>Exploration, Secrets, And Environmental Storytelling</h3>
+<h3 id="kickstarter-exploration-and-stage-secrets"><a class="heading-link" href="#kickstarter-exploration-and-stage-secrets" aria-label="Link to section">#</a>Exploration And Stage Secrets</h3>
 <p>Divergency is not only arena combat. Stages contain hidden routes, quiet environmental details, puzzle moments, and optional secrets that reveal what happened to this world before the Calamity.</p>
 
 <figure class="markdown-image">
@@ -1140,16 +1206,74 @@
   <figcaption>Marseille sewer route</figcaption>
 </figure>
 <p><em>Work-in-progress Marseille sewer route built for side-scrolling exploration and hidden paths.</em></p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage2/Bridge_1.png" alt="Sakuri bridge route" loading="lazy">
+  <figcaption>Sakuri bridge route</figcaption>
+</figure>
+<p><em>Work-in-progress bridge route from Sakuri, built around travel, height, and environmental mood.</em></p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage2/bamboo_forest_HUD_AI.png" alt="bamboo_forest_HUD_AI" loading="lazy">
+  <figcaption>bamboo_forest_HUD_AI</figcaption>
+</figure>
+<p><em>Work-in-progress bambo.</em></p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage2/old room_sakuri.png" alt="Old room in Sakuri" loading="lazy">
+  <figcaption>Old room in Sakuri</figcaption>
+</figure>
+<p><em>Work-in-progress interior scene from Sakuri, used for quieter story and exploration beats.</em></p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage3/dusk_haeven.png" alt="Dusk Heaven route" loading="lazy">
+  <figcaption>Dusk Heaven route</figcaption>
+</figure>
+<p><em>Work-in-progress Calvaria route showing the campaign's grave-city atmosphere.</em></p>
 <p>Example scene: Deep stops at a tunnel wall covered in graffiti and old symbols, trying to understand whether it is a warning, a memory, or something left behind by people who knew the Calamity was coming.</p>
+<h2 id="kickstarter-characters"><a class="heading-link" href="#kickstarter-characters" aria-label="Link to section">#</a>Characters</h2>
+
+<figure class="markdown-image">
+  <img src="imgs/chars/Poster.png" alt="Divergency main character lineup" loading="lazy">
+  <figcaption>Divergency main character lineup</figcaption>
+</figure>
+<h3 id="kickstarter-stranger-ghost"><a class="heading-link" href="#kickstarter-stranger-ghost" aria-label="Link to section">#</a>Stranger / Ghost</h3>
+<p>A nameless survivor pulled out of Jamerson's prison. The team calls him Ghost after Bastonne because the system cannot fully identify him. He is not a chosen one. He is a survivor of a mistake, and that mistake may be why the relic fragments cannot control him like everyone else.</p>
+<h3 id="kickstarter-deep"><a class="heading-link" href="#kickstarter-deep" aria-label="Link to section">#</a>Deep</h3>
+
+<figure class="markdown-image">
+  <img src="imgs/chars/Deep.png" alt="Deep character art" loading="lazy">
+  <figcaption>Deep character art</figcaption>
+</figure>
+<p>Deep was once treated like a hero: a crusader sent into impossible wars, a defender people pointed to when they wanted to believe humanity could still survive. The legend cost him everything. Now older, wounded, and tired of being used as a symbol, Deep wants peace, but Marseille and the Calamity keep pulling him back into violence.</p>
+<h3 id="kickstarter-solei"><a class="heading-link" href="#kickstarter-solei" aria-label="Link to section">#</a>Solei</h3>
+<p>Deep's niece, born between cultures and raised in a world that rarely gave her a safe place to belong. Solei carries an Asian heritage in her visual identity and discipline, but she is not written as an exotic stereotype. She is quick, sharp, impatient, and fearless: a speed fighter who strikes before enemies can read her.</p>
+<h3 id="kickstarter-henry"><a class="heading-link" href="#kickstarter-henry" aria-label="Link to section">#</a>Henry</h3>
+<p>A former war hero who chose the shadows after learning how easily heroism becomes permission to control other people. Henry gathers information, commands under pressure, and keeps asking whether fighting can still protect people without becoming another excuse for violence.</p>
+<h3 id="kickstarter-tulas"><a class="heading-link" href="#kickstarter-tulas" aria-label="Link to section">#</a>Tulas</h3>
+<p>A mage who controls blood and liquid. Tulas can create shields, platforms, filters, and temporary paths, but his power always touches the boundary of the body. His arc asks whether a frightening ability can be used to save people without turning him into what they fear.</p>
+<h3 id="kickstarter-block"><a class="heading-link" href="#kickstarter-block" aria-label="Link to section">#</a>Block</h3>
+<p>A loyal ally captured before the story begins. Saving Block in Bastonne is not only a rescue objective; it is the first proof that command and teamwork in Divergency are about trust, not treating allies as tools.</p>
+<h3 id="kickstarter-heni"><a class="heading-link" href="#kickstarter-heni" aria-label="Link to section">#</a>Heni</h3>
+<p>A child found in Sakuri with the same face as Heniana. Heni is not written as a key, replacement, or copy. Her role pushes the story's central question: no person should be reduced to material for someone else's miracle.</p>
+<h3 id="kickstarter-jamerson-obsworth"><a class="heading-link" href="#kickstarter-jamerson-obsworth" aria-label="Link to section">#</a>Jamerson Obsworth</h3>
+<p>A decorated officer turned underworld ruler. Jamerson is cruel, brilliant, and convinced that every horror he creates is justified if it brings his daughter back.</p>
+<h3 id="kickstarter-the-relic-fragments"><a class="heading-link" href="#kickstarter-the-relic-fragments" aria-label="Link to section">#</a>The Relic Fragments</h3>
+<p>The Eye, The Ear, The Tongue, The Heart, and The Umbilical Cord are living fragments of a Primordial God killed and divided in ancient times. They do not behave like simple artifacts. They see, hear, speak, beat, call, and try to return to one another.</p>
+<h3 id="kickstarter-the-perfect-failure"><a class="heading-link" href="#kickstarter-the-perfect-failure" aria-label="Link to section">#</a>The Perfect Failure</h3>
+<p>Jamerson's perfect failure is an escaped experiment that proves resurrection is becoming real. It is not the final body The Eye wants, but it is close enough to show that Jamerson's work is no longer only theory.</p>
 <h2 id="kickstarter-story"><a class="heading-link" href="#kickstarter-story" aria-label="Link to section">#</a>Story</h2>
-<p>The known world is breaking.</p>
-<p>For centuries, the Great Calamity has consumed civilization wave after wave. Marseille presents itself as the last clean stronghold of order, but its survival is built on prisons, missing people, and experiments hidden below the city.</p>
-<p>Inside the city, survival has a price. Outside it, survival is almost impossible.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/Marseille_Metropolis_Splash_Day.png" alt="Skill selection work in progress" loading="lazy">
+  <figcaption>Skill selection work in progress</figcaption>
+</figure>
+<p><em>Work-in-progress Marseille.</em></p>
+<p>The story begins with the Stranger, a nameless prisoner who wakes during the Bastonne lockdown when he should be unconscious. Deep's team came to rescue Block from Jamerson's prison facility, but the Stranger's impossible survival changes the escape. The team later calls him Ghost, because Jamerson's systems cannot fully read him and no one knows who he used to be.</p>
+<p>The known world is breaking. For centuries, the Great Calamity has consumed civilization wave after wave. Marseille presents itself as the last clean stronghold of order, but its survival is built on prisons, missing people, and experiments hidden below the city.</p>
 <p>Jamerson Obsworth was once a decorated officer. Now he rules the city's underworld from the shadows. To most people, he is a tyrant. To himself, he is a father trying to save his daughter, Heniana, who lies trapped between life and death.</p>
 <p>Jamerson believes he has found the answer: The Eye, a living fragment of a forgotten god. It offers knowledge beyond human limits. In exchange, it wants a body.</p>
-<h2 id="kickstarter-campaign-story"><a class="heading-link" href="#kickstarter-campaign-story" aria-label="Link to section">#</a>Campaign Story</h2>
-<h3 id="kickstarter-prologue-and-stage-1-marseille-unstable"><a class="heading-link" href="#kickstarter-prologue-and-stage-1-marseille-unstable" aria-label="Link to section">#</a>Prologue And Stage 1: Marseille Unstable</h3>
-<p>The game begins with Deep's team trying to rescue Block from Bastonne, one of Jamerson's prison facilities. During the lockdown, a nameless prisoner wakes when he should be unconscious. The team later calls him Ghost, because Jamerson's systems cannot fully read him and because no one knows who he used to be.</p>
+<h3 id="kickstarter-stage-1-marseille-unstable"><a class="heading-link" href="#kickstarter-stage-1-marseille-unstable" aria-label="Link to section">#</a>Stage 1: Marseille Unstable</h3>
 <p>After Bastonne, the team does not plan to attack the laboratory. They plan to cut the trail, hide the vehicle, rest at Armorlite, and leave Marseille before dawn.</p>
 <p>Jamerson moves faster.</p>
 <p>The safe route is burned. Police and underworld gangs close the surface roads. Armorlite is attacked. Henry changes the escape plan: the team must go below Marseille, through old maintenance tunnels, abandoned metro lines, the black-market undercity of Laundel, and the sewer routes used by people the city refuses to see.</p>
@@ -1173,27 +1297,6 @@
   <figcaption>The Cradle concept art</figcaption>
 </figure>
 <p><em>Early concept art for the mythic side of Divergency, connecting the team's journey to the Primordial God fragments.</em></p>
-<h2 id="kickstarter-characters"><a class="heading-link" href="#kickstarter-characters" aria-label="Link to section">#</a>Characters</h2>
-<h3 id="kickstarter-stranger-ghost"><a class="heading-link" href="#kickstarter-stranger-ghost" aria-label="Link to section">#</a>Stranger / Ghost</h3>
-<p>A nameless survivor pulled out of Jamerson's prison. The team calls him Ghost after Bastonne because the system cannot fully identify him. He is not a chosen one. He is a survivor of a mistake, and that mistake may be why the relic fragments cannot control him like everyone else.</p>
-<h3 id="kickstarter-deep"><a class="heading-link" href="#kickstarter-deep" aria-label="Link to section">#</a>Deep</h3>
-<p>Deep was once treated like a hero: a crusader sent into impossible wars, a defender people pointed to when they wanted to believe humanity could still survive. The legend cost him everything. Now older, wounded, and tired of being used as a symbol, Deep wants peace, but Marseille and the Calamity keep pulling him back into violence.</p>
-<h3 id="kickstarter-solei"><a class="heading-link" href="#kickstarter-solei" aria-label="Link to section">#</a>Solei</h3>
-<p>Deep's niece, born between cultures and raised in a world that rarely gave her a safe place to belong. Solei carries an Asian heritage in her visual identity and discipline, but she is not written as an exotic stereotype. She is quick, sharp, impatient, and fearless: a speed fighter who strikes before enemies can read her.</p>
-<h3 id="kickstarter-henry"><a class="heading-link" href="#kickstarter-henry" aria-label="Link to section">#</a>Henry</h3>
-<p>A former war hero who chose the shadows after learning how easily heroism becomes permission to control other people. Henry gathers information, commands under pressure, and keeps asking whether fighting can still protect people without becoming another excuse for violence.</p>
-<h3 id="kickstarter-tulas"><a class="heading-link" href="#kickstarter-tulas" aria-label="Link to section">#</a>Tulas</h3>
-<p>A mage who controls blood and liquid. Tulas can create shields, platforms, filters, and temporary paths, but his power always touches the boundary of the body. His arc asks whether a frightening ability can be used to save people without turning him into what they fear.</p>
-<h3 id="kickstarter-block"><a class="heading-link" href="#kickstarter-block" aria-label="Link to section">#</a>Block</h3>
-<p>A loyal ally captured before the story begins. Saving Block in Bastonne is not only a rescue objective; it is the first proof that command and teamwork in Divergency are about trust, not treating allies as tools.</p>
-<h3 id="kickstarter-heni"><a class="heading-link" href="#kickstarter-heni" aria-label="Link to section">#</a>Heni</h3>
-<p>A child found in Sakuri with the same face as Heniana. Heni is not written as a key, replacement, or copy. Her role pushes the story's central question: no person should be reduced to material for someone else's miracle.</p>
-<h3 id="kickstarter-jamerson-obsworth"><a class="heading-link" href="#kickstarter-jamerson-obsworth" aria-label="Link to section">#</a>Jamerson Obsworth</h3>
-<p>A decorated officer turned underworld ruler. Jamerson is cruel, brilliant, and convinced that every horror he creates is justified if it brings his daughter back.</p>
-<h3 id="kickstarter-the-relic-fragments"><a class="heading-link" href="#kickstarter-the-relic-fragments" aria-label="Link to section">#</a>The Relic Fragments</h3>
-<p>The Eye, The Ear, The Tongue, The Heart, and The Umbilical Cord are living fragments of a Primordial God killed and divided in ancient times. They do not behave like simple artifacts. They see, hear, speak, beat, call, and try to return to one another.</p>
-<h3 id="kickstarter-the-perfect-failure"><a class="heading-link" href="#kickstarter-the-perfect-failure" aria-label="Link to section">#</a>The Perfect Failure</h3>
-<p>Jamerson's perfect failure is an escaped experiment that proves resurrection is becoming real. It is not the final body The Eye wants, but it is close enough to show that Jamerson's work is no longer only theory.</p>
 <h2 id="kickstarter-art-and-world"><a class="heading-link" href="#kickstarter-art-and-world" aria-label="Link to section">#</a>Art And World</h2>
 <p>Every frame of Divergency is built around pixel-art craft: ruined industry, cursed wilderness, hand-animated fighters, grotesque experiments, sacred ruins, and small environmental details that reward players who look closely.</p>
 <p>The world mixes traditional beauty with technological decay. Marseille is not a shining capital. It is a machine that survived by feeding on refugees, prisoners, and anyone too weak to resist. Later stages push the same contrast into Sakuri's sacred peninsula, Calvaria's city of graves, Akam Meskul's cursed mountain war zone, and the dreamlike final space of The Cradle.</p>
@@ -1238,7 +1341,23 @@
 <li>Online co-op, PvP, survival, tower, and custom stage features, which depend on stretch goals and testing.</li>
 </ul>
 <p>We will keep backers updated with development posts, clean work-in-progress captures, and milestone reports. The next major proof target is a short gameplay capture that shows movement, combat, enemy behavior, and the current UI without debug overlays.</p>
+<h2 id="kickstarter-why-kickstarter"><a class="heading-link" href="#kickstarter-why-kickstarter" aria-label="Link to section">#</a>Why Kickstarter?</h2>
+<p>Divergency is being built by a small team with a clear goal: finish a polished full game, starting with the Marseille opening arc and expanding into the rest of the adventure.</p>
+<p>The Kickstarter goal will help us:</p>
+<ul>
+<li>Finish the core combat system, skill selection, and squad command system.</li>
+<li>Build the full main campaign, from the opening prison break to the final confrontation.</li>
+<li>Complete pixel-art backgrounds, character animations, enemies, bosses, and VFX.</li>
+<li>Produce music, sound effects, UI polish, QA, and release preparation.</li>
+<li>Fulfill digital rewards and EU-only physical rewards without overextending production.</li>
+</ul>
+<p>This campaign is asking for support to turn a work-in-progress action prototype and world into a complete game, with the campaign content, combat polish, audio, UI, QA, and rewards finished properly.</p>
 <h2 id="kickstarter-funding-goal-20-000"><a class="heading-link" href="#kickstarter-funding-goal-20-000" aria-label="Link to section">#</a>Funding Goal: $20,000</h2>
+
+<figure class="markdown-image">
+  <img src="imgs/others/goal-money-solei-20000-v2.png" alt="Solei scouting the layered $20,000 money goal" loading="lazy">
+  <figcaption>Solei scouting the layered $20,000 money goal</figcaption>
+</figure>
 <p>The base goal supports production of the full Divergency story campaign: a polished Marseille opening arc, the remaining chapters, core combat, party systems, bosses, and release work.</p>
 <p>Budget breakdown:</p>
 <div class="table-wrap"><table><thead><tr><th>Use of funds</th><th>Share</th><th>Purpose</th></tr></thead><tbody><tr><td>Gameplay programming and production</td><td>45%</td><td>Core combat, skill selection, squad commands, enemies, stage flow, tools, and release work</td></tr>
@@ -1248,6 +1367,11 @@
 <tr><td>Kickstarter/payment fees and contingency</td><td>7%</td><td>Platform fees, payment processing, and production buffer</td></tr>
 <tr><td>EU physical reward reserve</td><td>5%</td><td>Poster/bracelet samples, packing material, and fulfillment preparation</td></tr></tbody></table></div>
 <h2 id="kickstarter-base-goal-and-stretch-goals"><a class="heading-link" href="#kickstarter-base-goal-and-stretch-goals" aria-label="Link to section">#</a>Base Goal And Stretch Goals</h2>
+
+<figure class="markdown-image">
+  <img src="imgs/UI/base-goal-stretch-goals.png" alt="Divergency funding goals and work unlocked roadmap" loading="lazy">
+  <figcaption>Divergency funding goals and work unlocked roadmap</figcaption>
+</figure>
 <h3 id="kickstarter-20-000-full-story-campaign-foundation"><a class="heading-link" href="#kickstarter-20-000-full-story-campaign-foundation" aria-label="Link to section">#</a>$20,000 - Full Story Campaign Foundation</h3>
 <p>Supports the focused full-game release target:</p>
 <ul>
@@ -1539,7 +1663,7 @@
           <p>Full Divergency story structure with premise, themes, central cast, five major stages, ending, and gameplay notes.</p>
         </div>
         <dl class="doc-stats" aria-label="Complete Story statistics">
-          <div><dt>Read</dt><dd>71 min</dd></div>
+          <div><dt>Read</dt><dd>73 min</dd></div>
           <div><dt>Sections</dt><dd>14</dd></div>
           <div><dt>Tables</dt><dd>0</dd></div>
         </dl>
@@ -1609,8 +1733,8 @@
         <a class="toc-link toc-level-2" href="#story-prologue-vinh-quang-va-vet-nut-cua-marseille">
           Prologue - Vinh quang và vết nứt của Marseille
         </a>
-        <a class="toc-link toc-level-2" href="#story-stage-0-can-cu-deep-team-va-bastonne-prison">
-          Stage 0 - Căn cứ Deep Team và Bastonne Prison
+        <a class="toc-link toc-level-2" href="#story-stage-0-can-cu-oi-cua-deep-va-nha-tu-bastonne">
+          Stage 0 - Căn cứ đội của Deep và nhà tù Bastonne
         </a>
         <a class="toc-link toc-level-2" href="#story-stage-1-marseille-bat-on">
           Stage 1 - Marseille bất ổn
@@ -1632,6 +1756,9 @@
         </a>
         <a class="toc-link toc-level-3" href="#story-boi-canh">
           Bối cảnh
+        </a>
+        <a class="toc-link toc-level-3" href="#story-note-khai-thac-sau-sakura-iem-am-va-nguoi-tien-nhiem-hoa-ien">
+          Note khai thác sau: Sakura điềm đạm và người tiền nhiệm hóa điên
         </a>
         <a class="toc-link toc-level-3" href="#story-2-1-lang-chai-va-be-gai-ban-hang-rong">
           2-1. Làng chài và bé gái bán hàng rong
@@ -1696,8 +1823,8 @@
         <a class="toc-link toc-level-3" href="#story-5-3-jamerson-va-heniana">
           5-3. Jamerson và Heniana
         </a>
-        <a class="toc-link toc-level-3" href="#story-lua-chon-ket-thuc-canon">
-          Lựa chọn kết thúc canon
+        <a class="toc-link toc-level-3" href="#story-lua-chon-ket-thuc-chinh-tuyen">
+          Lựa chọn kết thúc chính tuyến
         </a>
         <a class="toc-link toc-level-3" href="#story-epilogue">
           Epilogue
@@ -1714,10 +1841,10 @@
           <h1 id="story-divergency-cot-truyen-hoan-chinh"><a class="heading-link" href="#story-divergency-cot-truyen-hoan-chinh" aria-label="Link to section">#</a>Divergency - Cốt truyện hoàn chỉnh</h1>
 <p>Bản này viết lại cốt truyện tổng thể của <strong>Divergency</strong> theo hướng liền mạch hơn, có đủ 5 Stage lớn, động lực nhân vật, đường dẫn giữa các địa điểm, và một cái kết để lại dư âm. Tài liệu tập trung vào câu chuyện, chủ đề, và logic hành trình; level script chi tiết, thoại từng câu, và cân bằng gameplay có thể tách ra thành tài liệu riêng.</p>
 <h2 id="story-premise"><a class="heading-link" href="#story-premise" aria-label="Link to section">#</a>Premise</h2>
-<p>Thế giới đã đi qua nhiều đợt <strong>Đại Họa</strong>: một căn bệnh lạ đi kèm những lời đồn về một lời nguyền bắt nguồn từ miền viễn đông. Nó không hủy diệt tất cả trong một lần, nhưng để lại quá nhiều vùng bất ổn: thị trấn mất người, tuyến đường bị bỏ hoang, biên giới đóng mở thất thường, và những nơi không còn ai muốn nhắc tên. Giữa bức tranh rạn nứt đó, <strong>Marseille Autonomous Metropolis</strong>, thường được gọi ngắn là <strong>Marseille</strong>, nổi lên như một siêu đô thị tự trị giàu có và được canh phòng nghiêm ngặt.</p>
+<p>Thế giới đã đi qua nhiều đợt <strong>Đại Họa</strong>: một căn bệnh lạ đi kèm những lời đồn về một lời nguyền bắt nguồn từ vùng Viễn Đông. Nó không hủy diệt tất cả trong một lần, nhưng để lại quá nhiều vùng bất ổn: thị trấn mất người, tuyến đường bị bỏ hoang, biên giới đóng mở thất thường, và những nơi không còn ai muốn nhắc tên. Giữa bức tranh rạn nứt đó, <strong>Marseille Autonomous Metropolis</strong>, thường được gọi ngắn là <strong>Marseille</strong>, nổi lên như một siêu đô thị tự trị giàu có và được canh phòng nghiêm ngặt.</p>
 <p>Marseille không phải thành trì cuối cùng của văn minh, nhưng nó muốn mọi người tin như vậy. Nó có quân đội, cảnh sát, tiền tệ, nhà máy, nông trại nhân tạo, nhiên liệu, nhà tù, và một bộ máy hành chính gần như không cần bất kỳ quốc gia nào bên ngoài. Trên bề mặt, thành phố vẫn sáng, vẫn đông, vẫn vận hành như một cỗ máy hoàn hảo. Nhưng càng nhìn xuống vùng ven, càng thấy có điều gì đó đang âm thầm bào mòn nó: của cải dồn về trung tâm, người nhập cư bị coi như vật liệu lao động, các vụ mất tích bị xếp vào hồ sơ bệnh dịch, và một mạng lưới quyền lực ngầm đang dùng nỗi sợ để kiểm soát thành phố.</p>
 <p>Ở phía dưới thành phố ấy, <strong>Jamerson Obsworth</strong>, một cựu sĩ quan từng được kính trọng, đang làm điều khủng khiếp nhất đời mình: biến tù nhân, người tị nạn, và chính lương tâm của mình thành vật liệu nghiên cứu để cứu con gái <strong>Heniana</strong>.</p>
-<p>Nhưng thứ giúp Jamerson không chỉ là khoa học. Ông đang nắm giữ <strong>Con Mắt</strong>, một phần thân thể còn sống của một vị <strong>Thần Sơ Sinh</strong> từng bị giết và phân xác từ thời cổ đại. Con Mắt hứa cho Jamerson tri thức để cứu con. Đổi lại, nó muốn một cơ thể mới.</p>
+<p>Nhưng Jamerson không chỉ dựa vào khoa học. Ông đang nắm giữ <strong>Con Mắt</strong>, một phần thân thể còn sống của một vị <strong>Thần Sơ Sinh</strong> từng bị giết và phân xác từ thời cổ đại. Con Mắt trao cho Jamerson tri thức để cứu con. Đổi lại, nó muốn một cơ thể mới.</p>
 <p>Từ đó, câu chuyện của Divergency không còn là hành trình đánh bại một kẻ xấu đơn giản. Đây là hành trình đi qua những xã hội đang tự thuyết phục mình rằng tội ác của họ là cần thiết: một người cha vì con, một thánh nữ vì tự do, một giáo hội vì niềm an ủi, một dân tộc vì phục thù, một liên minh vì sự sống còn. Nhóm nhân vật chính phải tìm cách ngăn tất cả, nhưng không được để mình trở thành một dạng bạo lực khác.</p>
 <h2 id="story-chu-e-chinh"><a class="heading-link" href="#story-chu-e-chinh" aria-label="Link to section">#</a>Chủ đề chính</h2>
 <ul>
@@ -1733,7 +1860,7 @@
 <p>Cuối cùng, con người giết nó khi nó vẫn là một cá thể chưa hoàn thiện. Thân xác bị cắt thành nhiều phần và phân tán khắp thế giới để nó không bao giờ có thể trở lại. Nhưng niềm tin đó sai. Mỗi bộ phận vẫn sống, vẫn mang một mảnh linh hồn của Thần Sơ Sinh, và vẫn muốn được trở về với nhau.</p>
 <p>Năm mảnh có vai trò trong cốt truyện chính:</p>
 <ul>
-<li><strong>Con Mắt</strong>: thấy được ký ức, ham muốn, sợ hãi, và những thứ con người cố tình che giấu. Jamerson sở hữu nó.</li>
+<li><strong>Con Mắt</strong>: thấy được ký ức, ham muốn, sợ hãi, và những thứ con người cố tình che giấu. Jamerson là người đang giữ nó.</li>
 <li><strong>Cái Tai</strong>: nghe được tiếng nói, âm thanh, ý nghĩ, và lời nói thầm kín từ rất xa. Sakuri bị biến thành thánh nữ vì có thể chịu đựng nó.</li>
 <li><strong>Cái Lưỡi</strong>: nói bằng giọng của người chết, dịch mọi ngôn ngữ, và biến niềm tin thành mệnh lệnh. Một giáo hội tử thần giữ nó.</li>
 <li><strong>Trái Tim</strong>: khuếch đại cảm xúc sống, lòng thù hận, tình thương, và ý chí tập thể. Nó nằm trong vùng núi bị nguyền, nơi hai phe người suýt diệt nhau vì &quot;chính nghĩa&quot; riêng.</li>
@@ -1755,13 +1882,14 @@
 <p>Khi nhận nuôi Solei, anh đưa cô đến Marseille để có một đời sống ít nhất trông giống bình thường: làm việc lặt vặt, sửa đồ, tránh chính quyền, đôi khi va vào băng nhóm địa phương nhưng không để rắc rối lớn tới gia đình nhỏ. Anh không giả vờ mình là dân thường hoàn toàn; anh chỉ cố để Solei lớn lên với nhiều thứ hơn là chiến trận, xung đột.</p>
 <p>Hành trình của Deep không phải là đánh bại kẻ mạnh hơn. Đó là học cách dùng sức mạnh mà không để người khác dùng tên mình để hợp thức hóa chiến tranh.</p>
 <h3 id="story-solei"><a class="heading-link" href="#story-solei" aria-label="Link to section">#</a>Solei</h3>
-<p>Solei là cháu của Deep, có dòng máu Asian từ mẹ. Ở Marseille, cô là người nhanh nhẹn , nhiệt huyết , có sự nổi loạn bừng bừng tuổi trẻ , nhưng cũng có sự lạc lõng. Khi bước chân lên hành trình của câu truyện Solei dần trưởng thành hơn , hiểu về mình , dòng máu của mình. Stage 2 là nơi Solei đối diện nhiều câu hỏi mà trong lòng đã căn cắn từ lâu: nếu mình thuộc về đâu , nơi nào, liệu có nơi nào thật sự chứa mình không , về nơi gọi là nhà?</p>
+<p>Solei là cháu của Deep, mang dòng máu gốc Á từ mẹ. Ở Marseille, cô nhanh nhẹn, nhiệt huyết, nổi loạn theo kiểu tuổi trẻ, nhưng vẫn luôn có cảm giác lạc lõng.</p>
+<p>Khi bước vào hành trình của câu chuyện, Solei dần trưởng thành hơn và bắt đầu hiểu rõ hơn về bản thân, về dòng máu của mình. Stage 2 là nơi cô đối diện những câu hỏi đã canh cánh từ lâu: mình thật sự thuộc về đâu, liệu có nơi nào chứa mình như một mái nhà hay không?</p>
 <p>Qua hành trình, Solei không tìm thấy một &quot;quê hương đúng nghĩa&quot; để gắn mình vào. Cô tìm thấy một điều khác: mình có thể đứng giữa nhiều nền văn hóa mà không cần xin phép ai để được tồn tại.</p>
 <h3 id="story-henry"><a class="heading-link" href="#story-henry" aria-label="Link to section">#</a>Henry</h3>
 <p>Trước Marseille rất lâu, Henry, Deep và vài đồng đội từng được gọi là anh hùng ở một vùng đất xa. Họ đã cứu nơi đó khỏi một thế lực hắc ám, và cuộc chiến ấy thật sự kết thúc bằng chiến thắng. Nhưng chiến thắng không trả lại người đã chết, không xóa được những quyết định bẩn, và không cho Henry cảm giác mình có quyền nghỉ ngơi. Vì vậy khi Deep cố sống bình thường ở Marseille, Henry chọn con đường ẩn danh hơn: đi trong các mạng lưới tin tức, bảo vệ những ai tình cờ rơi vào tầm tay mình, và cố giữ phần &quot;anh hùng&quot; còn lại không biến thành quyền lực.</p>
 <h3 id="story-tulas"><a class="heading-link" href="#story-tulas" aria-label="Link to section">#</a>Tulas</h3>
-<p><strong>Tulas</strong> là một pháp sư , ít nhất là một người bạn của Solei ở Marseille. Anh không giống kiểu pháp sư đứng sau đọc chú. Năng lực của Tulas là điều khiển máu và chất lỏng: kéo dòng nước, làm đông chất lỏng thành hình, mở cánh mỏng để bay/ngã chậm, tạo khiên, tạo bệ đỡ, hoặc biến một vệt máu trên sàn thành lưỡi móc kéo kẻ địch.</p>
-<p>Ở đời thường, Tulas giúp nhóm sống kín đáo hơn: lọc nước bẩn, che dấu vết máu, vá đường ống, giữ một quán nhỏ hoặc garage không bị băng nhóm ép quá sâu. Trong chiến đấu, anh là nhân vật phối hợp mạnh hơn là người gánh sát thương chính. Deep có thể bám vào khối chất lỏng của Tulas để lao lên không trung; Solei có thể nhảy qua bệ tạm; Henry có thể bắn xuyên một màn nước làm lệch hướng đạn; Block có thể dùng khiên chất lỏng để giữ tuyến lâu hơn.</p>
+<p><strong>Tulas</strong> là một pháp sư trẻ và là bạn của Solei ở Marseille. Anh không giống kiểu pháp sư chỉ đứng sau lẩm nhẩm đọc chú. Năng lực của Tulas là điều khiển máu và chất lỏng: kéo dòng nước, làm đông chất lỏng thành hình, mở cánh mỏng để bay/ngã chậm, tạo khiên, tạo bệ đỡ, hoặc biến một vệt máu trên sàn thành lưỡi móc kéo kẻ địch.</p>
+<p>Ở đời thường, Tulas giúp nhóm sống kín đáo hơn: lọc nước bẩn, che dấu vết máu, vá đường ống, giữ một quán nhỏ hoặc gara không bị băng nhóm ép quá sâu. Trong chiến đấu, anh là nhân vật phối hợp mạnh hơn là người gánh sát thương chính. Deep có thể bám vào khối chất lỏng của Tulas để lao lên không trung; Tạo khiên để che chở mọi người.</p>
 <p>Điểm nguy hiểm của Tulas là năng lực của anh luôn chạm vào ranh giới thân thể. Điều khiển máu có thể cứu người, khóa vết thương, hoặc tạo đường sống, nhưng cũng rất dễ bị hiểu như cấm thuật. Câu hỏi cá nhân của Tulas là liệu một sức mạnh đáng sợ có thể được dùng mà không biến người dùng thành thứ người khác sợ nhất hay không.</p>
 <h3 id="story-stranger-ghost"><a class="heading-link" href="#story-stranger-ghost" aria-label="Link to section">#</a>Stranger / Ghost</h3>
 <p>Anh không có tên, bị bắt, bị tra tấn, bị tiêm thuốc, và lẽ ra phải bất tỉnh khi Jamerson ra lệnh gây mê toàn khu. Nhưng anh tỉnh lại.</p>
@@ -1784,23 +1912,28 @@
 <p>Marseille được xây từ nhiều thành phố nhỏ sáp nhập lại sau các đợt Đại Họa. Vùng trung tâm có tháp năng lượng, vườn trồng nhân tạo, nhà máy nuôi cá, hệ thống tái chế nước, và những khu phố sáng đến mức người ngoài thành phố tưởng đó là thiên đường. Nhưng càng ra xa trung tâm, mọi thứ càng thấp, tối, và chật chội. Ở vùng ven, người nhập cư làm việc để trả nợ nhập thành, người bệnh bị đẩy vào khu cách ly, trẻ em lớn lên bên cạnh cổng nhà máy và doanh trại.</p>
 <p>Jamerson sinh ra trong một gia đình trung lưu có gốc lâu đời tại Marseille, sau đó kết hôn với một phụ nữ từ gia đình giàu có sa cơ. Cuộc hôn nhân ban đầu là thỏa thuận giữa hai gia đình, nhưng theo thời gian, Jamerson thật sự gắn bó với vợ và hai con: <strong>Jemerny</strong> và <strong>Heniana</strong>.</p>
 <p>Khi Heniana 12 tuổi, cô và mẹ dừng chân tại một quán cà phê gần rìa quận trung tâm. Một vụ truy đuổi giữa cảnh sát và ba người tị nạn xảy ra. Một kẻ bị bệnh bắt Heniana làm con tin, đặt con dao đầy máu vào cổ cô bé. Cảnh sát bắn trượt phát đầu. Hai kẻ còn lại bị hạ, kẻ giữ Heniana hoảng loạn và đâm dao vào cô bé trước khi bị bắn chết.</p>
-<p>Vết thương không sâu, nhưng máu trên dao mang căn bệnh từ phương đông. Heniana rơi vào cơn nguy kịch. Bệnh viện đưa ra lựa chọn: để cô bé chết trong vài ngày, hoặc đưa vào ngủ đông cho đến khi y học có câu trả lời.</p>
+<p>Vết thương không sâu, nhưng máu trên dao mang căn bệnh từ phương Đông. Heniana rơi vào cơn nguy kịch. Bệnh viện đưa ra lựa chọn: để cô bé chết trong vài ngày, hoặc đưa vào ngủ đông cho đến khi y học có câu trả lời.</p>
 <p>Gia đình Obsworth mua một buồng ngủ đông đặc biệt đặt trong dinh thự. Người mẹ gần như sống bên buồng đó. Bà ít nói chuyện với Jemerny, ít rời khỏi phòng, và mỗi khi máy móc phát ra tiếng cảnh báo, bà lại như vỡ từng mảng ký ức.</p>
-<p>Sau một vụ khủng bố vào hệ thống năng lượng, dinh thự mất điện trong 10 giây. Máy phát dự phòng khởi động lại ngay, Heniana không sao. Nhưng khi Jamerson chạy đến, ông thấy vợ mình cào lên lớp kính và kim loại của buồng ngủ đông đến bật móng tay, máu dây trắng, miệng gọi tên con gái như người đã mất trí.</p>
+<p>Sau một vụ khủng bố vào hệ thống năng lượng, dinh thự mất điện trong 10 giây. Máy phát dự phòng khởi động lại ngay, Heniana không sao. Nhưng khi Jamerson chạy đến, ông thấy vợ mình cào lên lớp kính và kim loại của buồng ngủ đông đến bật móng tay, máu dây thành vệt trên mặt kính trắng, miệng gọi tên con gái như người đã mất trí.</p>
 <p>Từ khoảnh khắc đó, Jamerson không còn tìm cách sống với nỗi đau. Ông quyết định đánh bại nó.</p>
 <p>Ở Bastonne, một pháo đài cũ ngoại ô, Jamerson và đồng minh biến nhà tù thành cơ sở nghiên cứu riêng. Ban đầu là thử nghiệm máu, thuốc, tế bào bệnh. Sau đó là giải phẫu. Sau nữa là tái tạo cơ thể. Nhưng khi Con Mắt rơi vào tay ông trong một chiến dịch chống khủng bố, mọi ranh giới cuối cùng biến mất.</p>
 <p>Con Mắt làm tất cả người trong phòng phát điên hoặc chết. Jamerson là người sống sót duy nhất vì ham muốn của ông quá hẹp, quá sâu, quá đơn độc: cứu con gái. Con Mắt nhìn thấy điều đó và đưa ra giao kèo. Nó cho ông tri thức. Ông cho nó một cơ thể.</p>
 <p>Jamerson cắt bỏ phần còn lại của cánh tay phải đã hư hỏng để nuôi Con Mắt bằng máu, thần kinh, và máy móc. Từ đó, bàn tay giả và găng tay không còn là để che giấu tai nạn nữa. Nó che giấu một thứ đang nhìn lại thế giới.</p>
-<h2 id="story-stage-0-can-cu-deep-team-va-bastonne-prison"><a class="heading-link" href="#story-stage-0-can-cu-deep-team-va-bastonne-prison" aria-label="Link to section">#</a>Stage 0 - Căn cứ Deep Team và Bastonne Prison</h2>
-<p>Câu chuyện chơi nên bắt đầu ở căn cứ tạm của đội Deep, không phải ngay trong phòng giam của Stranger. Deep yêu cầu Solei khởi động trước nhiệm vụ:</p>
+<h2 id="story-stage-0-can-cu-oi-cua-deep-va-nha-tu-bastonne"><a class="heading-link" href="#story-stage-0-can-cu-oi-cua-deep-va-nha-tu-bastonne" aria-label="Link to section">#</a>Stage 0 - Căn cứ đội của Deep và nhà tù Bastonne</h2>
+<p>Phần chơi nên bắt đầu ở căn cứ tạm của đội Deep, không phải ngay trong phòng giam của Stranger. Trước nhiệm vụ, Deep yêu cầu Solei khởi động:</p>
 <blockquote><p>&quot;Ta muốn cháu chứng minh cháu có thể tham gia nhiệm vụ giải cứu lần này.&quot;</p></blockquote>
-<p>Đây là phần tutorial tự nhiên. Người chơi điều khiển Solei để học di chuyển, né, đánh thường, combo, chưởng, counter, cầm/nhặt/ném vật thể, và phối hợp cơ bản với đồng đội. Nếu Tulas có mặt trong đội từ đầu, anh có thể tạo bệ chất lỏng cho Solei nhảy qua vật cản, dựng khiên nước để chặn đạn tập, hoặc kéo một thùng kim loại đến vị trí cần ném vào công tắc. Qua lời thoại, người chơi biết <strong>Block</strong> là người của đội hoặc đồng minh thân thiết đã bị Jamerson bắt. Nhiệm vụ tới Bastonne vì vậy có hai mục tiêu: cứu Block và lấy bằng chứng về thí nghiệm của Jamerson.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/Team_Deep_Solei_Tutorial_Map.png" alt="Bastonne" loading="lazy">
+  <figcaption>Bastonne</figcaption>
+</figure>
+<p>Đây là phần hướng dẫn tự nhiên. Người chơi điều khiển Solei để học di chuyển, né, đánh thường, combo, chưởng, phản đòn, cầm/nhặt/ném vật thể, và phối hợp cơ bản với đồng đội. Nếu Tulas có mặt trong đội từ đầu, anh có thể tạo bệ chất lỏng cho Solei nhảy qua vật cản, dựng khiên nước để chặn đạn tập, hoặc kéo một thùng kim loại đến vị trí cần ném vào công tắc. Qua lời thoại, người chơi biết <strong>Block</strong> là người của đội hoặc đồng minh thân thiết đã bị Jamerson bắt. Nhiệm vụ tới Bastonne vì vậy có hai mục tiêu: cứu Block và lấy bằng chứng về thí nghiệm của Jamerson.</p>
 
 <figure class="markdown-image">
   <img src="imgs/Stage1/Bastonne.png" alt="Bastonne" loading="lazy">
   <figcaption>Bastonne</figcaption>
 </figure>
-<p>Henry, Deep, Solei và một nhóm nhỏ đột nhập Bastonne. Tulas có thể đi cùng như support hoặc ở ngoài giữ tuyến rút lui, tùy phạm vi party mà game chọn. Trước đó, Henry chỉ mua được thông tin về <strong>dãy giam đặc biệt</strong> của Block, không mua được số phòng. Block biết điều này: nếu đêm giải cứu xảy ra và lính gác ngoài cửa gục xuống vì khí mê, anh phải gây tiếng động lớn để đội tìm đúng phòng.</p>
+<p>Henry, Deep, Solei và một nhóm nhỏ đột nhập Bastonne. Tulas có thể đi cùng để hỗ trợ, hoặc ở ngoài giữ tuyến rút lui, tùy quy mô đội hình mà thiết kế chọn. Trước đó, Henry chỉ mua được thông tin về <strong>dãy giam đặc biệt</strong> của Block, không mua được số phòng. Block biết điều này: nếu đêm giải cứu xảy ra và lính gác ngoài cửa gục xuống vì khí mê, anh phải gây tiếng động lớn để đội tìm đúng phòng.</p>
 <p>Jamerson đoán được sẽ có người đến, nhưng không biết chính xác đêm nào. Hắn cho đổi phòng tù nhân mỗi ngày, rồi ra lệnh đánh Block trước ngày hành động để anh không còn sức đập cửa. Stranger bị lôi vào trận đòn chỉ vì cai ngục thấy hai người nói chuyện với nhau. Trước khi bị kéo về hai phòng biệt giam khác nhau, Block chỉ kịp thì thầm với Stranger rằng nếu thấy lính gác ngủ gục, hãy làm ồn thật lớn. Stranger không biết người này là ai, nhưng đó là lời nhờ vả đầu tiên trong Bastonne không giống mệnh lệnh.</p>
 <p>Kế hoạch của đội vỡ trận khi nhà tù bị khóa khẩn cấp, khí mê tràn vào hành lang, cửa sắt tự động đóng, và hệ thống đọc mã số tù nhân qua loa.</p>
 
@@ -1808,81 +1941,102 @@
   <img src="imgs/Stage1/In_thecity_Fix.png" alt="Outside_Marseille_city" loading="lazy">
   <figcaption>Outside_Marseille_city</figcaption>
 </figure>
-<p>Lúc đó game cắt sang Stranger. Anh tỉnh dậy trong phòng biệt giam của mình sau vài giờ bất tỉnh. Mùi máu khô vẫn nghẹn ở sống mũi, hơi thở bị kéo qua cổ họng đau rát, và ngoài khe cửa có khói trắng đặc tràn qua hành lang. Đây không phải lý do duy nhất anh kháng khí mê, nhưng nó là chi tiết đầu tiên người chơi hiểu được: cơ thể Stranger đã bị tra tấn và thí nghiệm đến mức phản ứng khác người thường.</p>
-<p>Trong phòng có vài vật thể nhỏ để tương tác: đèn treo thấp, hai cốc sứ, một bàn kim loại nhẹ, giường sắt, và bình vệ sinh đêm. Người chơi phải đánh, nhặt hoặc ném chúng để tạo đủ tiếng động. Đánh vào giường có thể làm bật mảnh kim loại dùng như vũ khí tạm; ném vỡ bình vệ sinh có thể rơi ra một Stimpack cũ được tự động đưa vào phím tắt đầu tiên. Khi thanh máu hiện lên lần đầu, người chơi hiểu đây không còn là cutscene: Stranger đang tự giành một cơ hội sống.</p>
+<p>Ở đây, góc nhìn chuyển sang Stranger. Anh tỉnh dậy trong phòng biệt giam của mình sau vài giờ bất tỉnh. Mùi máu khô vẫn nghẹn ở sống mũi, hơi thở bị kéo qua cổ họng đau rát, và ngoài khe cửa có khói trắng đặc tràn qua hành lang. Đây không phải lý do duy nhất anh kháng khí mê, nhưng nó là chi tiết đầu tiên người chơi hiểu được: cơ thể Stranger đã bị tra tấn và thí nghiệm đến mức phản ứng khác người thường.</p>
+<p>Trong phòng có vài vật thể nhỏ để tương tác: đèn treo thấp, hai cốc sứ, một bàn kim loại nhẹ, giường sắt, và bình vệ sinh đêm. Người chơi phải đánh, nhặt hoặc ném chúng để tạo đủ tiếng động. Đánh vào giường có thể làm bật mảnh kim loại dùng như vũ khí tạm; ném vỡ bình vệ sinh có thể rơi ra một Stimpack cũ được tự động đưa vào phím tắt đầu tiên. Khi thanh máu hiện lên lần đầu, người chơi hiểu đây không còn là cảnh cắt: Stranger đang tự giành một cơ hội sống.</p>
 <p>Loa thông báo đọc mã số tù nhân, cửa sắt tự động khóa lại, khí trắng tràn vào hành lang. Nhưng Stranger vẫn thở được. Anh không nhớ tên mình, chỉ nhớ những đoạn ánh sáng trắng, mùi sắt, và một giọng nói hỏi: &quot;Nếu không ai gọi tên ngươi, ngươi có còn là người không?&quot;</p>
-<p>Tiếng động kéo Henry đến phá khóa. Cánh cửa mở ra, nhưng người đứng trước mặt ông không phải Block mà là một tù nhân lạ vẫn còn tỉnh. hành lang có tiếng giày dồn dập. Henry hỏi gấp Stranger đang lướt qua có biết ai tên Block không. Stranger có thể chỉ về phòng bên cạnh, hoặc im lặng chạy theo đội.</p>
-<p>Trong lúc tìm đường thoát, Stranger có thể nhìn thấy Block bị kẹt sau một cửa thủy lực hoặc trong một buồng đang bị bơm khí. Lựa chọn chỉ là: giúp Block trong cơn hỗn loạn, hay để đội tự tìm anh trong lúc bị bao vây.</p>
+<p>Tiếng động kéo Henry đến phá khóa. Cánh cửa mở ra, nhưng người đứng trước mặt ông không phải Block mà là một tù nhân lạ vẫn còn tỉnh. Hành lang vang lên tiếng giày dồn dập. Henry vội hỏi Stranger có biết ai tên Block không. Stranger có thể chỉ về phòng bên cạnh, hoặc im lặng chạy theo đội.</p>
+<p>Trong lúc tìm đường thoát, Stranger có thể nhìn thấy Block bị kẹt sau một cửa thủy lực hoặc trong một buồng đang bị bơm khí. Lựa chọn lúc này rất đơn giản nhưng nặng tay: giúp Block trong cơn hỗn loạn, hay để đội tự tìm anh trong lúc bị bao vây.</p>
 
 <figure class="markdown-image">
   <img src="imgs/Stage1/Start.png" alt="Stranger_prison" loading="lazy">
   <figcaption>Stranger_prison</figcaption>
 </figure>
-<p>Nếu Stranger giúp Block, anh mở restraint, làm chậm khí, hoặc phá một chốt cửa đủ để Block sống sót lâu hơn. Khi Solei và đội tới nơi, Block vẫn cần được kéo ra, nhưng thương tích nhẹ hơn. Block nhớ rằng Stranger đã không bỏ mặc mình.</p>
-<p>Nếu Stranger không giúp Block, Solei và đội vẫn cứu được Block, nhưng phải đánh thêm một encounter trong khu khí mê. Block bị thương nặng hơn, Stage 1 có thể bắt đầu với Max HP thấp hơn hoặc một debuff tạm thời. Henry và Solei cũng có lý do nghi Stranger hơn.</p>
+<p>Nếu Stranger giúp Block, anh mở khóa cố định, làm chậm khí, hoặc phá một chốt cửa đủ để Block sống sót lâu hơn. Khi Solei và đội tới nơi, Block vẫn cần được kéo ra, nhưng thương tích nhẹ hơn. Block nhớ rằng Stranger đã không bỏ mặc mình.</p>
+<p>Nếu Stranger không giúp Block, Solei và đội vẫn cứu được Block, nhưng phải đánh thêm một trận trong khu khí mê. Block bị thương nặng hơn, Stage 1 có thể bắt đầu với máu tối đa thấp hơn hoặc một bất lợi tạm thời. Henry và Solei cũng có lý do nghi Stranger hơn.</p>
 <p>Stranger gặp đội Deep trong lúc cả hai bên đều tìm lối thoát. Henry để ý Stranger không bị thuốc mê ảnh hưởng, không bị máy đo sinh học nhận diện như tù nhân thông thường, và có phản xạ kỳ lạ trước các thiết bị của Jamerson. Henry không tin Stranger, nhưng anh cần Stranger.</p>
 <p>Cả nhóm đụng đơn vị khóa khẩn cấp của Bastonne: khiên lớn, súng điện, drone khóa mục tiêu và một quản ngục trung thành với nhà Obsworth. Sau khi chiến thắng, cả nhóm thoát khỏi Bastonne, nhưng Jamerson đã biết có một người sống sót ngoài dữ liệu. Con Mắt trong cánh tay ông mở ra và thì thầm: &quot;Kẻ không có tên có thể đi qua những cánh cửa mà người có tên không đi được.&quot;</p>
 <h2 id="story-stage-1-marseille-bat-on"><a class="heading-link" href="#story-stage-1-marseille-bat-on" aria-label="Link to section">#</a>Stage 1 - Marseille bất ổn</h2>
-<p>Stage 1 dùng một số trạng thái nhỏ để nối truyện với gameplay, không tạo nhánh canon khổng lồ. <code>BlockHelped</code> ghi việc Ghost/Stranger có giúp Block trong Bastonne hay không. <code>BlockInjuryState</code> quyết định Block ổn định, bị thương, hay cần bảo vệ thêm ở đầu Stage 1. <code>Heat</code> là mức truy đuổi đô thị. <code>LaundelTrust</code> là lòng tin của chợ ngầm. <code>GrogerClues</code> ghi số dấu vết về GROGER. <code>SubmarinePowerRoute</code> ghi việc nhóm giữ điện ổn định hay phá máy phát để vào tuyến tàu ngầm nguy hiểm hơn.</p>
+<p>Stage 1 dùng một số trạng thái nhỏ để nối truyện với gameplay, không tạo nhánh chính tuyến khổng lồ. <code>BlockHelped</code> ghi việc Ghost/Stranger có giúp Block trong Bastonne hay không. <code>BlockInjuryState</code> quyết định Block ổn định, bị thương, hay cần bảo vệ thêm ở đầu Stage 1. <code>Heat</code> là mức truy đuổi đô thị. <code>LaundelTrust</code> là lòng tin của chợ ngầm. <code>GrogerClues</code> ghi số dấu vết về GROGER. <code>SubmarinePowerRoute</code> ghi việc nhóm giữ điện ổn định hay phá máy phát để vào tuyến tàu ngầm nguy hiểm hơn.</p>
 <h3 id="story-1-1-quan-bar-armorlite"><a class="heading-link" href="#story-1-1-quan-bar-armorlite" aria-label="Link to section">#</a>1-1. Quán bar Armorlite</h3>
 
 <figure class="markdown-image">
   <img src="imgs/Stage1/bar.png" alt="Armorlite bar concept" loading="lazy">
   <figcaption>Armorlite bar concept</figcaption>
 </figure>
-<p>Sau Bastonne, cả nhóm cắt đuôi xe truy đuổi bằng cách giấu xe trong một garage đã chuẩn bị trước ở rìa khu công nghiệp cũ (hoặc quay về cơ sở nhỏ của đội Deep lúc đầu). Nơi này nằm trên tuyến đường phụ nối các kho hàng cảng với những khu phố hẹp kiểu Noailles/Capucins: đủ gần trung tâm để có người qua lại, đủ tối để biến mất nếu biết đúng cửa sau. Henry kiểm tra radio, Deep nhìn lại vết thương của Block, và Solei cố hiểu vì sao họ phải giữ Ghost ở lại dù chưa thể tin anh hoàn toàn.</p>
-<p>Từ garage, Henry dẫn cả nhóm đi bộ qua lối sau đến <strong>Armorlite</strong> để tìm hiểu thông tin. Armorlite là một quán rượu nhỏ trong mạng lưới các điểm nghỉ của thế giới ngầm: đèn tím thấp, nhạc jazz cũ, quầy gỗ hẹp, một bộ sofa sát tường cho người bị thương, và <strong>Jacques</strong>, bartender đứng tuổi có đôi mắt xanh gần như phát sáng trong bóng tối. Jacques ít nói nhưng nhớ mọi tuyến cống, bến cảng, cửa kiểm soát và tên người gác nào đã bị Jamerson mua. Vì vậy Henry tin ông hơn nhiều người có quân hàm.</p>
-<p>Tại đây, nhóm bàn kế hoạch ra bến cảng: nghỉ chưa đến hai giờ, dùng xe đổi biển số ở garage B, men theo tuyến kho hàng xuống cảng, rồi lên phà trước bình minh để rời Marseille. Block bị thương nên nếu được chơi, Max HP của anh chỉ còn 75% khi <code>BlockInjuryState</code> chưa ổn định. Jacques đưa Stimpack và cảnh báo rằng tất cả trạm kiểm soát đang tìm &quot;một tù nhân không ngủ&quot;.</p>
-<p>Solei cứ tiếp tục càm ràm Ghost vì sao phải lo ông ta , vì ông ta đang bị truy nã. Deep không kết luận, nhưng đặt câu hỏi đúng hơn: nếu Ghost không có gì đặc biệt, tại sao Jamerson lại tìm kiếm, nhốt anh, rồi vẫn không có hồ sơ nào khớp với anh? Nếu <code>BlockHelped</code> đúng, Block là người đầu tiên cắt ngang sự nghi ngờ: người lạ này có cơ hội chạy một mình nhưng vẫn quay lại. Nếu không, không khí ở Armorlite lạnh hơn; không ai kết án Ghost/Stranger, nhưng không ai đứng ra bảo vệ anh rõ ràng. Nếu Ko cải thiện được tin tưởng Stranger/Ghost, và Stranger/Ghost cũng ko tin team , thì lúc chơi game , Stranger collect vật phẩm , sẽ trộm hoặc làm mất , giảm hiệu xuất nhặt.</p>
-<p>Bạo lực ở Armorlite không phải ngẫu nhiên. Băng đua xe, băng thuốc phiện và băng cái bang đã có thù với đội Deep từ trước vì nhóm từng phá một tuyến vận chuyển người, thuốc và xăng của chúng. Sau Bastonne, cảnh sát mật treo thưởng trong thế giới ngầm và lệnh cho chúng canh các lối ra thành phố. Một nhóm đánh hơi được garage cũ, lần đến Armorlite, rồi bước vào quán như thể đến thu nợ Jacques.</p>
-<p>Trận chiến bắt đầu khi tay chân của chúng đập cửa, dọa Jacques, rồi dùng chai rượu, ghế gỗ và bàn bi-da làm vũ khí. Nhân vật người chơi xin lỗi Jacques trước khi ném chiếc cốc/chai đang cầm thẳng vào kẻ đầu tiên. Ba tên bị văng ra phố; một tên gục, hai tên còn nửa máu. Từ đây combat kéo ra con phố hẹp và khu cảng dịch vụ phía sau quán. Kẻ địch chạy moto từ ngoài màn hình vào, có mũi tên cảnh báo hướng lao, tăng tốc từ chậm đến nhanh, có thể bị đánh ngã bằng nhảy đánh, vũ khí ném, hoặc phản đòn đúng nhịp.</p>
-<p>Boss là thủ lĩnh băng đua xe, cưỡi moto lớn. Phase đầu dùng những cú lao ngang, quay xe, vạch lửa và hai đàn em chở người cầm vũ khí sau lưng. Khi bị đánh ngã, hắn chỉ nằm mở cửa sổ sát thương ngắn rồi lại leo xe. Dưới 50% máu, hắn rút thanh kiếm gia truyền của băng, không còn dễ bị hất khỏi xe, gọi đàn em chạy cắt màn hình, và tạo đường lửa bằng mũi kiếm kéo trên mặt đường. Khi phải đi bộ, hắn dùng chém dọc, chém ngang, chém hất để chống spam nhảy đánh, rồi lao nhanh áp sát.</p>
-<p>Cuối màn, cả nhóm phát hiện garage an toàn đã bị lộ. Henry chuyển sang phương án B: đi xuống cống ngầm.</p>
+<p>Sau Bastonne, cả nhóm cắt đuôi xe truy đuổi bằng cách giấu xe trong một gara đã chuẩn bị trước ở rìa khu công nghiệp cũ (hoặc quay về cơ sở nhỏ của đội Deep lúc đầu). Nơi này nằm trên tuyến đường phụ nối các kho hàng cảng với những khu phố hẹp kiểu Noailles/Capucins: đủ gần trung tâm để có người qua lại, đủ tối để biến mất nếu biết đúng cửa sau. Henry kiểm tra radio, Deep nhìn lại vết thương của Block, và Solei cố hiểu vì sao họ phải giữ Ghost ở lại dù chưa thể tin anh hoàn toàn.</p>
+<p>Từ gara, Henry dẫn cả nhóm đi bộ qua lối sau đến <strong>Armorlite</strong> để tìm hiểu thông tin. Armorlite là một quán rượu nhỏ trong mạng lưới các điểm nghỉ của thế giới ngầm: đèn tím thấp, nhạc jazz cũ, quầy gỗ hẹp, một bộ sofa sát tường cho người bị thương, và <strong>Jacques</strong>, bartender đứng tuổi có đôi mắt xanh gần như phát sáng trong bóng tối. Jacques ít nói nhưng nhớ mọi tuyến cống, bến cảng, cửa kiểm soát và tên người gác nào đã bị Jamerson mua. Vì vậy Henry tin ông hơn nhiều người có quân hàm.</p>
+<p>Tại đây, nhóm bàn kế hoạch ra bến cảng: nghỉ chưa đến hai giờ, dùng xe đổi biển số ở gara B, men theo tuyến kho hàng xuống cảng, rồi lên phà trước bình minh để rời Marseille. Block bị thương nên nếu được chơi, máu tối đa của anh chỉ còn 75% khi <code>BlockInjuryState</code> chưa ổn định. Jacques đưa Stimpack và cảnh báo rằng tất cả trạm kiểm soát đang tìm &quot;một tù nhân không ngủ&quot;.</p>
+<p>Solei vẫn bực vì cả nhóm phải kéo Ghost theo trong khi anh đang bị truy nã. Deep không kết luận, nhưng đặt câu hỏi đúng hơn: nếu Ghost không có gì đặc biệt, tại sao Jamerson lại tìm kiếm, nhốt anh, rồi vẫn không có hồ sơ nào khớp với anh? Nếu <code>BlockHelped</code> đúng, Block là người đầu tiên cắt ngang sự nghi ngờ: người lạ này có cơ hội chạy một mình nhưng vẫn quay lại. Nếu không, không khí ở Armorlite lạnh hơn; không ai kết án Ghost/Stranger, nhưng cũng chưa ai đứng ra bảo vệ anh rõ ràng.</p>
+<p>Nếu lòng tin giữa Ghost và đội không được cải thiện, điều đó có thể thành một biến gameplay nhỏ: khi Ghost nhặt vật phẩm, anh có khả năng giấu bớt, làm rơi, hoặc giảm hiệu suất thu nhặt của cả nhóm.</p>
+<p>Bạo lực ở Armorlite không phải ngẫu nhiên. Băng đua xe, băng thuốc phiện và các nhóm giang hồ đường phố đã có thù với đội Deep từ trước vì nhóm từng phá một tuyến vận chuyển người, thuốc và xăng của chúng. Sau Bastonne, cảnh sát mật treo thưởng trong thế giới ngầm và ra lệnh cho chúng canh các lối ra thành phố. Một nhóm đánh hơi được gara cũ, lần đến Armorlite, rồi bước vào quán như thể đến thu nợ Jacques.</p>
+<p>Trận chiến bắt đầu khi tay chân của chúng đập cửa, dọa Jacques, rồi dùng chai rượu, ghế gỗ và bàn bi-da làm vũ khí. Nhân vật do người chơi điều khiển có thể kịp xin lỗi Jacques trước khi ném chiếc cốc hoặc chai đang cầm thẳng vào kẻ đầu tiên. Ba tên bị văng ra phố; một tên gục, hai tên còn nửa máu. Từ đây, trận đánh kéo ra con phố hẹp và khu cảng dịch vụ phía sau quán. Kẻ địch chạy xe máy từ ngoài màn hình vào, có mũi tên cảnh báo hướng lao, tăng tốc từ chậm đến nhanh, và có thể bị đánh ngã bằng đòn nhảy, vũ khí ném, hoặc phản đòn đúng nhịp.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/marsile background.png" alt="marsile_background_driver" loading="lazy">
+  <figcaption>marsile_background_driver</figcaption>
+</figure>
+<p>Boss là thủ lĩnh băng đua xe, cưỡi một chiếc xe máy lớn. Pha đầu dùng những cú lao ngang, quay xe, vạch lửa và hai đàn em chở người cầm vũ khí sau lưng. Khi bị đánh ngã, hắn chỉ nằm mở một cửa sổ sát thương ngắn rồi lại leo lên xe. Dưới 50% máu, hắn rút thanh kiếm gia truyền của băng, không còn dễ bị hất khỏi xe, gọi đàn em chạy cắt màn hình, và tạo đường lửa bằng mũi kiếm kéo trên mặt đường. Khi phải đi bộ, hắn dùng chém dọc, chém ngang, chém hất để chống lặp đòn nhảy đánh, rồi lao nhanh áp sát.</p>
+<p>Cuối màn, cả nhóm phát hiện gara an toàn đã bị lộ. Henry chuyển sang phương án B: đi xuống cống ngầm.</p>
 <h3 id="story-1-2-uong-cong-va-cho-ngam-laundel"><a class="heading-link" href="#story-1-2-uong-cong-va-cho-ngam-laundel" aria-label="Link to section">#</a>1-2. Đường cống và chợ ngầm Laundel</h3>
 
 <figure class="markdown-image">
-  <img src="imgs/Stage1/Sewer1.png" alt="Swer" loading="lazy">
-  <figcaption>Swer</figcaption>
+  <img src="imgs/Stage1/Sewer1.png" alt="Sewer" loading="lazy">
+  <figcaption>Sewer</figcaption>
 </figure>
-<p>Đường cống dưới Marseille không chỉ dẫn nước thải. Nó là tầng ruột của thành phố, nơi những dự án metro, đường hầm bảo trì và kênh vận chuyển bị bỏ dở trở thành nhà cửa, chợ đen, kho hàng, và trạm trung chuyển người nhập cư. Đoạn đầu hẹp, lát gạch và tối; khoảng một phần ba lối đi bị nước che, làm nhân vật chậm lại nhưng cũng khiến quái dưới nước dễ bị stun nặng nếu bị đánh trúng khi còn đang bơi.</p>
+<p>Đường cống dưới Marseille không chỉ dẫn nước thải. Nó là tầng ruột của thành phố, nơi những dự án metro, đường hầm bảo trì và kênh vận chuyển bị bỏ dở trở thành nhà cửa, chợ đen, kho hàng, và trạm trung chuyển người nhập cư. Đoạn đầu hẹp, lát gạch và tối; khoảng một phần ba lối đi bị nước che, làm nhân vật chậm lại nhưng cũng khiến quái dưới nước dễ bị choáng nặng nếu bị đánh trúng khi còn đang bơi.</p>
 <p>Sau đoạn bảo trì chỉ đủ rộng cho hai người đi ngang, không gian mở ra thành <strong>Laundel</strong>, một thành phố ngầm dựng trong ga metro đầu tiên chưa từng hoàn thành. Biểu tượng của nó là sư tử đuôi cá: nửa của Marseille trên mặt đất, nửa của những người bị đẩy xuống nước bẩn. Nền thấp là đường ray cũ; nền cao là bến ga, kiosk, quầy thuốc, quầy vũ khí, tiệm đồ ăn và những phòng ngủ dựng bằng tôn. Ở đây có ba lực lượng chính:</p>
 <ul>
 <li><strong>Áo Đen</strong>: bán vũ khí cận chiến, thuốc tăng sức, và làm việc ngầm cho người của Jamerson.</li>
 <li><strong>Xanh Dương</strong>: bán hồi máu, vũ khí tầm xa, và che chở nhiều người nhập cư.</li>
 <li><strong>Áo Ghi</strong>: buôn tin, đưa đường, đổi token, không đủ mạnh để giữ chợ nhưng đủ lâu đời để biết mọi cửa bí mật.</li>
 </ul>
-<p>Người chơi có thể mua bằng Token hoặc phá shop để lấy nhiều đồ hơn. Nhưng lựa chọn này không chỉ là kinh tế. Nếu mua và tôn trọng luật chợ, nhóm được dẫn đường, có thể mở vật phẩm độc quyền, Skill Point, hoặc vũ khí hiếm từ người tin mình. Nếu phá, nhóm có lợi tức thì nhưng <code>LaundelTrust</code> giảm, shop xung quanh gọi thêm quân, dân khóa cửa, và về sau nhóm bị đưa vào tuyến đường nguy hiểm hơn. Kẻ địch cũng có thể chạy vào shop để mua buff, buộc người chơi quyết định đánh chúng trước hay giữ vị trí.</p>
-<p>Áo Đen đến &quot;mời&quot; nhóm gặp thủ lĩnh ngay khi họ bước vào Laundel, nhưng số người được cử đi quá đông cho một lời mời. Cuộc nói chuyện chuyển thành đánh nhau ở rìa chợ, rơi ra những Token đầu tiên và dạy luật mua/bán. Sau đó một chủ shop Xanh Dương gọi nhóm lại, bán vật phẩm hồi máu hoặc vũ khí tầm xa, và giải thích luật không rút vũ khí trong khu chợ nếu không muốn biến cả màn thành combat zone.</p>
-<p>Nếu người chơi giữ quan hệ tốt và nói chuyện đủ, Áo Ghi kể về graffiti hình quái vật trong cống: <strong>GROGER</strong>, một thứ ăn thịt người được cả hai phe dùng làm câu chuyện dọa trẻ con. <code>GrogerClues</code> tăng khi người chơi tìm thấy các hình vẽ nằm ở ngõ phụ, phòng ẩn hoặc sau kiosk cũ. Nếu tìm đủ dấu vết và hỏi ông già trong chòi nhỏ trước cửa cống cuối, người chơi có thể mở boss ẩn GROGER. Nếu <code>LaundelTrust</code> thấp vì cướp shop, GROGER không còn là điều tra tự nguyện mà có thể trở thành cái bẫy người khác chỉ vào để lấy lòng chính quyền.</p>
+<p>Người chơi có thể mua bằng Token hoặc phá cửa hàng để lấy nhiều đồ hơn. Nhưng lựa chọn này không chỉ là kinh tế. Nếu mua và tôn trọng luật chợ, nhóm được dẫn đường, có thể mở vật phẩm độc quyền, điểm kỹ năng, hoặc vũ khí hiếm từ người tin mình. Nếu phá, nhóm có lợi tức thì nhưng <code>LaundelTrust</code> giảm, cửa hàng xung quanh gọi thêm quân, dân khóa cửa, và về sau nhóm bị đưa vào tuyến đường nguy hiểm hơn. Kẻ địch cũng có thể chạy vào cửa hàng để mua hiệu ứng tăng sức, buộc người chơi quyết định đánh chúng trước hay giữ vị trí.</p>
+<p>Áo Đen đến &quot;mời&quot; nhóm gặp thủ lĩnh ngay khi họ bước vào Laundel, nhưng số người được cử đi quá đông cho một lời mời. Cuộc nói chuyện chuyển thành đánh nhau ở rìa chợ, rơi ra những Token đầu tiên và dạy luật mua/bán. Sau đó một chủ cửa hàng Xanh Dương gọi nhóm lại, bán vật phẩm hồi máu hoặc vũ khí tầm xa, và giải thích luật không rút vũ khí trong khu chợ nếu không muốn biến cả màn thành vùng giao chiến.</p>
+<p>Nếu người chơi giữ quan hệ tốt và nói chuyện đủ, Áo Ghi kể về graffiti hình quái vật trong cống: <strong>GROGER</strong>, một thứ ăn thịt người được cả hai phe dùng làm câu chuyện dọa trẻ con. <code>GrogerClues</code> tăng khi người chơi tìm thấy các hình vẽ nằm ở ngõ phụ, phòng ẩn hoặc sau kiosk cũ. Nếu tìm đủ dấu vết và hỏi ông già trong chòi nhỏ trước cửa cống cuối, người chơi có thể mở boss ẩn GROGER. Nếu <code>LaundelTrust</code> thấp vì cướp cửa hàng, GROGER không còn là một cuộc điều tra tự nguyện nữa, mà có thể thành cái bẫy người khác chỉ cho nhóm để lấy lòng chính quyền.</p>
 <p>Ở tầng 0 của Laundel, quán bar giải trí biến thành đấu trường. Boss phụ thuộc vào quan hệ với các phe. Nếu giữ lời hứa với Xanh Dương, cả nhóm đánh thủ lĩnh Áo Đen. Nếu phản bội họ, người nhập cư sợ hãi chính quyền sẽ dẫn nhóm vào bẫy, và GROGER có thể trở thành hình phạt.</p>
-<p>Kết thúc màn, phe còn tin cả nhóm chỉ một đường hầm ra bến cảng. Henry nhận ra một điều đáng lo: Jamerson không chỉ có cảnh sát. Ông có mắt ở cả chợ đen, cống ngầm, và những nơi thành phố giả vờ không nhìn thấy.</p>
+<p>Kết thúc màn, phe còn tin nhóm chỉ cho họ một đường hầm ra bến cảng. Henry nhận ra một điều đáng lo: Jamerson không chỉ có cảnh sát. Ông có mắt ở cả chợ đen, cống ngầm, và những nơi thành phố giả vờ không nhìn thấy.</p>
 <h3 id="story-1-3-uong-cong-chinh-va-hoang-hon-ben-cang"><a class="heading-link" href="#story-1-3-uong-cong-chinh-va-hoang-hon-ben-cang" aria-label="Link to section">#</a>1-3. Đường cống chính và hoàng hôn bến cảng</h3>
-<p>Cống chính dẫn ra biển rộng hơn, nước sâu hơn, và quái vật nhiều hơn. Nó là tuyến gom của nhiều đường nhỏ, nên càng đi sâu thì phần nền khô càng ít, dòng chảy càng mạnh, và những bóng dưới nước càng khó đọc. Quái spawn ở trạng thái bơi sẽ không tấn công ngay; nếu người chơi chủ động đánh lúc chúng còn dưới nước, chúng nhận sát thương lớn và bị stun lâu hơn, nhưng nếu để chúng nhảy lên bờ thì chúng mất debuff và bắt đầu phối hợp theo đàn.</p>
-<p>Một số con đầu đàn buff đàn nhỏ; khi bị hạ, đàn nhỏ bị chậm và dễ stun. Những phòng ẩn cho thấy Marseille đã từng có những đợt sơ tán thất bại: vali mốc meo, giấy tờ nhập thành, đồ chơi trẻ em, bản đồ cũ ghi những lối đi đã bị bít kín, và vài căn phòng trú chân của người từng cố vào Laundel mà không bao giờ đến nơi. Ở một số phòng, tàn dư Áo Đen hoặc người tuyệt vọng có thể phục kích nhóm; phần còn lại là quái cống và các dấu vết GROGER.</p>
-<p>Sau khi ra khỏi cống, người chơi có một đoạn đi bộ khoảng 30 giây không combat. Hoàng hôn trải dài trên bến cảng. Nhạc nhẹ hơn. Cả nhóm nói về việc nếu thoát được Marseille, họ có thể đến phía đông lánh nạn, sống một thời gian không bị gọi là tội phạm. Solei đùa nửa câu, Deep nói rằng tự do không phải một nơi trên bản đồ, Henry im lặng lâu hơn bình thường, còn Ghost chỉ nhìn mặt trời.</p>
-<p>Tại điểm hẹn, chiếc thuyền trống rỗng. Khi cả nhóm đi đến giữa màn, cảnh sát mật phục kích. Bến cảng mở rộng thành một chiến trường nhiều điểm: cầu nâng, container, bảng điều khiển thuyền, lính bắn tỉa trên cao, và quái cống còn đuổi theo từ phía sau. Đây là nơi COMMAND bắt đầu có cảm giác gần RTS thu nhỏ: Block giữ tuyến cầu, Deep phá khóa container hoặc giáp máy, Henry đánh dấu sniper/pack leader, Solei chạy cắt mục tiêu yếu, hoặc nhảy xuống nước phá vòng vây đằng sau. Người chơi vẫn đánh trực tiếp, nhưng phải chia việc để không bị bao vây.</p>
-<p>Có lính bắn tỉa với laser sight, buộc người chơi di chuyển liên tục và không đứng yên build combo quá lâu. Lính cận chiến dùng dao và súng ngắn; mỗi lần chuyển sang bắn đều có tín hiệu hình ảnh và âm thanh trước khi rút súng. <code>Heat</code> càng cao từ Armorlite/Laundel thì reinforcement ở bến cảng càng đến sớm.</p>
-<p>Boss là <strong>Marius Vane</strong>, cánh tay phải của Jamerson trong bộ máy mật. Marius không tin vào Thần Sơ Sinh, cũng không yêu mến Jamerson. Gã chỉ phục vụ vì Marseille cần những kẻ như Jamerson để giữ thành phố không vỡ tung. Với Marius, người nhập cư, tù nhân, và những kẻ bị bệnh đều là chi phí vận hành.</p>
-<p>Sau trận chiến, nhóm tra hỏi tên lính cuối cùng. Họ biết một đồng minh của Henry đã bị bắt đưa xuống cơ sở bí mật ngoài khơi: một tàu ngầm nghiên cứu. Chiếc thuyền của cảnh sát mật có autopilot đến đó. Kế hoạch trốn khỏi Marseille bị thay bằng một quyết định khác: nếu bỏ đi bây giờ, những bằng chứng và người bị bắt sẽ chìm xuống biển.</p>
-<p>Henry chọn quay lại vào bóng tối.</p>
-<h3 id="story-1-4-tau-ngam-nghien-cuu-va-shemal"><a class="heading-link" href="#story-1-4-tau-ngam-nghien-cuu-va-shemal" aria-label="Link to section">#</a>1-4. Tàu ngầm nghiên cứu và SheMal</h3>
+<p>Cống chính dẫn ra biển rộng hơn, nước sâu hơn, và quái vật nhiều hơn. Nó là tuyến gom của nhiều đường nhỏ, nên càng đi sâu thì phần nền khô càng ít, dòng chảy càng mạnh, và những bóng dưới nước càng khó đọc. Quái xuất hiện khi còn đang bơi sẽ không tấn công ngay; nếu người chơi chủ động đánh lúc chúng còn dưới nước, chúng nhận sát thương lớn và bị choáng lâu hơn, nhưng nếu để chúng nhảy lên bờ thì chúng mất bất lợi đó và bắt đầu phối hợp theo đàn.</p>
+<p>Một số con đầu đàn có thể tăng sức cho đàn nhỏ; khi bị hạ, đàn nhỏ bị chậm và dễ choáng. Những phòng ẩn cho thấy Marseille đã từng có những đợt sơ tán thất bại: vali mốc meo, giấy tờ nhập thành, đồ chơi trẻ em, bản đồ cũ ghi những lối đi đã bị bít kín, và vài căn phòng trú chân của người từng cố vào Laundel mà không bao giờ đến nơi. Ở một số phòng, tàn dư Áo Đen hoặc người tuyệt vọng có thể phục kích nhóm; phần còn lại là quái cống và các dấu vết GROGER.</p>
+<p>Sau khi ra khỏi cống, người chơi có một đoạn đi bộ khoảng 30 giây không giao chiến. Hoàng hôn trải dài trên bến cảng. Nhạc nhẹ hơn. Cả nhóm nói về việc nếu thoát được Marseille, họ có thể đến phía đông lánh nạn, sống một thời gian không bị gọi là tội phạm. Solei đùa nửa câu, Deep nói rằng tự do không phải một nơi trên bản đồ, Henry im lặng lâu hơn bình thường, còn Ghost chỉ nhìn mặt trời.</p>
 
 <figure class="markdown-image">
-  <img src="imgs/Stage1/lab_3.png" alt="Marseille city concept" loading="lazy">
-  <figcaption>Marseille city concept</figcaption>
+  <img src="imgs/Stage1/Harbor_Sunset_Battle_Map.png" alt="Harbor_Sunset_Battle_Map" loading="lazy">
+  <figcaption>Harbor_Sunset_Battle_Map</figcaption>
 </figure>
+<p>Tại điểm hẹn, chiếc thuyền trống rỗng. Khi cả nhóm đi đến giữa màn, cảnh sát mật phục kích. Bến cảng mở rộng thành một chiến trường nhiều điểm: cầu nâng, container, bảng điều khiển thuyền, lính bắn tỉa trên cao, và quái cống còn đuổi theo từ phía sau. Đây là nơi COMMAND bắt đầu có cảm giác gần một trận chiến thuật thời gian thực thu nhỏ: Block giữ tuyến cầu, Deep phá khóa container hoặc giáp máy, Henry đánh dấu lính bắn tỉa/thủ lĩnh đàn, Solei chạy cắt mục tiêu yếu, hoặc nhảy xuống nước phá vòng vây đằng sau. Người chơi vẫn đánh trực tiếp, nhưng phải chia việc để không bị bao vây.</p>
+<p>Có lính bắn tỉa với tia ngắm laser, buộc người chơi di chuyển liên tục và không đứng yên dồn combo quá lâu. Lính cận chiến dùng dao và súng ngắn; mỗi lần chuyển sang bắn đều có tín hiệu hình ảnh và âm thanh trước khi rút súng. <code>Heat</code> càng cao từ Armorlite/Laundel thì viện binh ở bến cảng càng đến sớm.</p>
+<p>Boss là <strong>Marius Vane</strong>, cánh tay phải của Jamerson trong bộ máy mật. Marius không tin vào Thần Sơ Sinh, cũng không yêu mến Jamerson. Gã chỉ phục vụ vì Marseille cần những kẻ như Jamerson để giữ thành phố không vỡ tung. Với Marius, người nhập cư, tù nhân, và những kẻ bị bệnh đều là chi phí vận hành.</p>
+<p>Sau trận chiến, nhóm tra hỏi tên lính cuối cùng. Họ biết một đồng minh của Henry đã bị bắt đưa xuống cơ sở bí mật ngoài khơi: một tàu ngầm nghiên cứu. Chiếc thuyền của cảnh sát mật có chế độ tự lái đến đó. Kế hoạch trốn khỏi Marseille bị thay bằng một quyết định khác: nếu bỏ đi bây giờ, những bằng chứng và người bị bắt sẽ chìm xuống biển.</p>
+<p>Henry chọn quay lại vào bóng tối.</p>
+<h3 id="story-1-4-tau-ngam-nghien-cuu-va-shemal"><a class="heading-link" href="#story-1-4-tau-ngam-nghien-cuu-va-shemal" aria-label="Link to section">#</a>1-4. Tàu ngầm nghiên cứu và SheMal</h3>
 <p>Tàu ngầm nằm dưới một vùng nước đen gần bến cảng, được ngụy trang như trạm đo áp lực. Bên trong là phòng thí nghiệm nổi, nơi Jamerson đưa những thí nghiệm quá nguy hiểm ra khỏi đất liền.</p>
 <p>Người chơi thấy những bình chứa cơ thể lai, tù nhân bị nối vào máy móc, và những mẫu tế bào mang ký hiệu Heniana. Jamerson không chỉ tìm thuốc. Ông đang thử ghép cấu trúc sinh học của Thần Sơ Sinh vào cơ thể con người để tạo ra một bình chứa có thể sống sót qua căn bệnh.</p>
-<p>Tuyến tàu ngầm có hai cách tiến. Cách thường là dùng ba terminal nằm ở phòng trưởng lính gác, kho dữ liệu thí nghiệm và phòng kiểm soát áp suất để mở lò phản ứng trung tâm. Cách khó là phá hai máy phát phụ. Khi máy phát bị phá, một phần tàu chuyển sang ánh sáng đỏ khẩn cấp; guard ở những khu mất điện bị vật thí nghiệm thất bại giết sạch, còn quái được buff tốc độ và sát thương vì chúng sợ ánh sáng thường nhưng điên loạn trong bóng tối. <code>SubmarinePowerRoute</code> không đổi ending chính, nhưng đổi độ khó, loot, bằng chứng còn lại và giọng kể về cái giá của sabotage.</p>
-<p>Địa hình tàu ngầm cũng trở thành vũ khí. Nhiều phòng có đường ống khí và vách kim loại cong; kẻ địch bị đánh bay mạnh vào tường có thể bật lại thành projectile gây sát thương cho mục tiêu đầu tiên va phải. Hiệu ứng này chỉ xảy ra có cooldown để tránh biến arena thành pinball hỗn loạn, nhưng đủ để người chơi chủ động dùng Deep/Block hoặc vật ném mạnh trong không gian hẹp.</p>
+<p>Tuyến tàu ngầm có hai cách tiến. Cách thường là dùng ba trạm điều khiển nằm ở phòng trưởng lính gác, kho dữ liệu thí nghiệm và phòng kiểm soát áp suất để mở lò phản ứng trung tâm. Cách khó là phá hai máy phát phụ. Khi máy phát bị phá, một phần tàu chuyển sang ánh sáng đỏ khẩn cấp; lính gác ở những khu mất điện bị vật thí nghiệm thất bại giết sạch, còn quái được tăng tốc độ và sát thương vì chúng sợ ánh sáng thường nhưng điên loạn trong bóng tối. <code>SubmarinePowerRoute</code> không đổi kết thúc chính, nhưng đổi độ khó, vật phẩm rơi, bằng chứng còn lại và giọng kể về cái giá của hành động phá hoại.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/lab_3.png" alt="shemale_chamber" loading="lazy">
+  <figcaption>shemale_chamber</figcaption>
+</figure>
+<p>Địa hình tàu ngầm cũng trở thành vũ khí. Nhiều phòng có đường ống khí và vách kim loại cong; kẻ địch bị đánh bay mạnh vào tường có thể bật lại như một vật thể va chạm, gây sát thương cho mục tiêu đầu tiên va phải. Hiệu ứng này chỉ xảy ra theo nhịp giới hạn để tránh biến đấu trường thành hỗn loạn, nhưng đủ để người chơi chủ động dùng Deep/Block hoặc vật ném mạnh trong không gian hẹp.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/submarine_shemal_containment_chamber.png" alt="shemale_chamber_AI" loading="lazy">
+  <figcaption>shemale_chamber_AI</figcaption>
+</figure>
 <p>Boss chính là <strong>SheMal</strong>, một &quot;thất bại hoàn hảo&quot;. SheMal từng là một tù nhân nữ vô danh, bị sử dụng làm nền cho cơ thể nhân tạo. Cô không phải thần, không phải người theo nghĩa cũ, nhưng cũng không phải quái vật vô tri. Trong những khoảnh khắc ngắn, cô lặp lại những câu của Heniana mà Jamerson bắt máy móc phát bên cạnh buồng ngủ đông: &quot;Cha ơi, đừng đóng cửa.&quot;</p>
-<p>SheMal chiến đấu thiên về cận chiến hơn là một quái vật đứng xa phóng ảo giác. Cô cao và nặng ngang Deep, di chuyển như một fighter bị ép vào cơ thể sai, hai tay mọc móng vuốt dài đủ để cào rách kim loại mỏng. Những lúc Con Mắt chưa chiếm trọn, cô đánh bằng bản năng: áp sát, khóa tay, đập vào tường, phản đòn khi người chơi tham combo. Khi Con Mắt mở ra, các ảo ảnh Heniana/Jamerson mới trộn vào nhịp đánh, khiến người chơi khó biết cú chém nào là thật.</p>
-<p>SheMal liên kết trực tiếp với Con Mắt. Trên cơ thể cô có dấu vết của một nghi thức phương đông: bản đồ đến bán đảo Sakuri, ký hiệu Cái Tai, và ghi chú về khả năng &quot;nghe tiếng bệnh trong máu ngủ đông&quot;.</p>
-<p>Nếu <code>SubmarinePowerRoute = Sabotage</code>, tàu ngầm rơi vào Hard Mode. Quái và SheMal nguy hiểm hơn, nhưng rơi vật phẩm và Skill có phẩm chất cao hơn. Về mặt truyện, điều này thể hiện nhóm chọn phá hủy hạ tầng để ngăn thí nghiệm, chấp nhận tự đẩy mình vào nguy cơ lớn hơn.</p>
+<p>SheMal chiến đấu thiên về cận chiến hơn là một quái vật đứng xa phóng ảo giác. Cô cao và nặng ngang Deep, di chuyển như một võ sĩ bị ép vào cơ thể sai, hai tay mọc móng vuốt dài đủ để cào rách kim loại mỏng. Những lúc Con Mắt chưa chiếm trọn, cô đánh bằng bản năng: áp sát, khóa tay, đập vào tường, phản đòn khi người chơi tham combo. Khi Con Mắt mở ra, các ảo ảnh Heniana/Jamerson mới trộn vào nhịp đánh, khiến người chơi khó biết cú chém nào là thật.</p>
+<p>SheMal liên kết trực tiếp với Con Mắt. Trên cơ thể cô có dấu vết của một nghi thức phương Đông: bản đồ đến bán đảo Sakuri, ký hiệu Cái Tai, và ghi chú về khả năng &quot;nghe tiếng bệnh trong dòng máu của Heniana khi cô đang ngủ đông&quot;.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/submarine_backup_generator_b_engine_heat_room.png" alt="submarine_backup_generator_b_engine_heat_room" loading="lazy">
+  <figcaption>submarine_backup_generator_b_engine_heat_room</figcaption>
+</figure>
+<p>Nếu <code>SubmarinePowerRoute = Sabotage</code>, tàu ngầm chuyển sang tuyến khó hơn. Quái và SheMal nguy hiểm hơn, nhưng rơi vật phẩm và kỹ năng có phẩm chất cao hơn. Về mặt truyện, điều này thể hiện nhóm chọn phá hủy hạ tầng để ngăn thí nghiệm, chấp nhận tự đẩy mình vào nguy cơ lớn hơn.</p>
 <p>Khi tàu ngầm sắp nổ, Jamerson nói qua loa:</p>
 <blockquote><p>&quot;Các ngươi phá hủy thứ duy nhất có thể cứu con bé. Các ngươi gọi ta là quái vật, nhưng ta ít nhất còn biết mình đang chiến đấu vì ai.&quot;</p></blockquote>
 <p>Cả nhóm thấy bóng Jamerson sau lớp kính trước khi vụ nổ nuốt phòng điều khiển. Họ tin ông đã chết.</p>
-<p>Nhưng Con Mắt đã cảnh báo Jamerson sớm hơn vài giây. Thứ bị thiêu trong phòng là một thân xác thế mạng được nuôi từ mô thí nghiệm. Jamerson thật thoát bằng ống phóng khẩn cấp, mang theo máu SheMal và bản đồ đến Sakuri. Khi biển bốc cháy phía sau, ông ôm hộp dữ liệu vào ngực và thì thầm với Con Mắt: &quot;Nếu Con Mắt không đủ, ta sẽ tìm Cái Tai.&quot;</p>
+<p>Nhưng Con Mắt đã cảnh báo Jamerson sớm hơn vài giây. Thứ bị thiêu trong phòng là một thân xác thế mạng được nuôi từ mô thí nghiệm. Jamerson thật sự thoát bằng ống phóng khẩn cấp, mang theo máu SheMal và bản đồ đến Sakuri. Khi biển bốc cháy phía sau, ông ôm hộp dữ liệu vào ngực và thì thầm với Con Mắt: &quot;Nếu Con Mắt không đủ, ta sẽ tìm Cái Tai.&quot;</p>
 <p>Kết thúc Stage 1, nhóm tìm thấy ảnh chân dung Heniana, hồ sơ ngủ đông, và bằng chứng rằng có một đứa trẻ vô tội đang nằm giữa mọi tội ác của Jamerson. Deep muốn truy đuổi Jamerson. Henry muốn đưa bằng chứng ra ngoài. Solei nói nếu Heniana còn sống, cô bé không đáng bị bỏ lại trong tay cha mình.</p>
 <p>Họ lên đường về phía đông.</p>
 <h2 id="story-stage-2-sakuri-noi-niem-tin-nghe-thay-moi-loi-noi-doi"><a class="heading-link" href="#story-stage-2-sakuri-noi-niem-tin-nghe-thay-moi-loi-noi-doi" aria-label="Link to section">#</a>Stage 2 - Sakuri: nơi niềm tin nghe thấy mọi lời nói dối</h2>
@@ -1892,11 +2046,16 @@
   <img src="imgs/Stage2/J start sakuri.png" alt="start_sakuri" loading="lazy">
   <figcaption>start_sakuri</figcaption>
 </figure>
-<p>Nhóm cập bến một làng chài nghèo trên bán đảo phía đông. Nơi này từng giàu nhờ buôn lậu và đưa người di cư đến Marseille, nhưng bệnh dịch làm đường người cạn. Bến cảng hoang phế, nhà gỗ mục, thuyền nằm im như xương cá.</p>
+<p>Nhóm cập bến một làng chài nghèo trên bán đảo phía đông. Nơi này từng giàu nhờ buôn lậu và đưa người di cư đến Marseille, nhưng bệnh dịch làm dòng người cạn dần. Bến cảng hoang phế, nhà gỗ mục, thuyền nằm im như xương cá.</p>
 <p>Làng thuộc quyền một lãnh chúa cực giàu ở thủ phủ nội địa. Quyền lực vùng này nằm trong tay nhiều gia tộc, nhưng tất cả đều phải cúi đầu trước <strong>Thánh Nữ Sakuri</strong>, người duy nhất có thể sử dụng Cái Tai mà không chết hoặc phát điên.</p>
-<p>Cái Tai nghe được tâm tư, âm mưu, tiếng động từ xa, và cả những âm thanh từ thời viễn cổ. Người dân tin Sakuri là thánh nhân, còn Sakuri thì bị nhốt từ nhỏ dưới tầng hầm sâu cùng của cung điện, bị ép ghé tai vào đất để &quot;nghe tiếng của thần&quot;.</p>
+<p>Cái Tai nghe được tâm tư, âm mưu, tiếng động từ xa, và cả những âm thanh từ thời viễn cổ. Người dân tin Sakuri là thánh nhân, còn Sakuri thì bị nhốt từ nhỏ dưới tầng hầm sâu nhất của cung điện, bị ép ghé tai vào đất để &quot;nghe tiếng của thần&quot;.</p>
 <p>Sakuri không sinh ra để làm hại người khác. Cô là một đứa trẻ bị biến thành công cụ, rồi lớn lên trong tiếng nói dối của người lớn và tiếng cầu cứu không bao giờ dứt. Càng về sau, cơ thể cô càng lệch khỏi con người bình thường: Cái Tai bắt cô nghe nhịp máu, mùi bệnh, lời thề trong huyết thống, và những dòng máu bị trộn lẫn quanh Heniana/Heni. Vì vậy Sakuri có những cơn khát máu giống một lời nguyền ma cà rồng hơn là thói tàn bạo. Cô không luôn kiểm soát được mình.</p>
-<p>Solei bắt đầu nghe những ngôn ngữ, phong tục, và bài hát mẹ cô từng hát. Nhưng thay vì thấy mình trở về nhà, cô thấy một xã hội cũng biết chia tầng, loại trừ, và dùng máu dòng để quyết định ai được sống sang hơn.</p>
+<p>Solei bắt đầu nghe những ngôn ngữ, phong tục, và bài hát mẹ cô từng hát. Nhưng thay vì thấy mình trở về nhà, cô thấy một xã hội cũng biết chia tầng, loại trừ, và dùng dòng máu để quyết định ai được sống sang hơn.</p>
+<h3 id="story-note-khai-thac-sau-sakura-iem-am-va-nguoi-tien-nhiem-hoa-ien"><a class="heading-link" href="#story-note-khai-thac-sau-sakura-iem-am-va-nguoi-tien-nhiem-hoa-ien" aria-label="Link to section">#</a>Note khai thác sau: Sakura điềm đạm và người tiền nhiệm hóa điên</h3>
+<p>Nếu đổi Sakura theo concept mới điềm đạm hơn, có thể tách hình ảnh Sakuri/Sakura hiện tại thành hai lớp nhân vật thay vì dồn toàn bộ vào một boss. Sakura hiện tại vẫn là người đang giữ Cái Tai, nhưng cô chịu đựng nó bằng sự tĩnh lặng, kỷ luật và khả năng lắng nghe rất sâu. Cô không còn là trung tâm của một trận đánh máu lửa. Khi nhóm gặp cô, nhịp chơi nên nghiêng về đối thoại, đọc cảm xúc, phá hiểu lầm, né những đợt cộng hưởng âm thanh, hoặc giúp cô tạm khóa bớt tiếng nói trong đầu.</p>
+<p>Phần animation Sakura đang có, với chất sexy, dữ dội, khát máu và ma cà rồng, có thể chuyển sang <strong>chị em của Sakura</strong> hoặc <strong>người tiền nhiệm từng giữ Cái Tai trước cô</strong>. Người này là bằng chứng sống cho việc không ai thật sự chịu nổi Cái Tai quá lâu: nghe quá nhiều lời nói dối, âm mưu, tiếng bệnh, lời cầu cứu và ký ức cổ đại đến mức phát điên. Các gia tộc có thể đã giấu sự tồn tại của người tiền nhiệm, gọi đó là &quot;thánh nữ thất bại&quot;, rồi nhốt hoặc yểm cô dưới đền ngầm để bảo vệ hình tượng Sakura hiện tại.</p>
+<p>Nếu dùng hướng này, boss chính của Stage 2 nên là người tiền nhiệm/chị em hóa điên, không phải Sakura hiện tại. Trận đánh vẫn giữ được năng lượng hung bạo, áp sát, móng vuốt, khát máu và motif ma cà rồng, nhưng ý nghĩa đổi thành: người chơi không đánh bại &quot;Sakura&quot;, mà đánh bại một tương lai mà Sakura có thể trở thành nếu tiếp tục bị dùng như công cụ. Điều này làm Sakura hiện tại dễ đồng cảm hơn với Solei: cả hai đều bị dòng máu, quê hương và kỳ vọng của người khác định nghĩa, nhưng vẫn muốn tự chọn mình là ai.</p>
+<p>Sau trận, Sakura có thể nói chuyện với Solei thay vì gục xuống như một boss bị hạ. Cô nghe được nỗi lạc lõng của Solei mà không phán xét, còn Solei lần đầu thấy một người ở Sakuri không cố hỏi cô thuộc về phe nào. Đây có thể là mấu chốt cảm xúc của Stage 2: Solei không tìm được một quê hương hoàn hảo, nhưng gặp một người hiểu cảm giác bị biến thành biểu tượng cho thứ mình không chọn.</p>
 <h3 id="story-2-1-lang-chai-va-be-gai-ban-hang-rong"><a class="heading-link" href="#story-2-1-lang-chai-va-be-gai-ban-hang-rong" aria-label="Link to section">#</a>2-1. Làng chài và bé gái bán hàng rong</h3>
 
 <figure class="markdown-image">
@@ -1906,7 +2065,7 @@
 <p>Trong làng, nhóm gặp một bé gái bán thuốc, bán cá khô, và những vật nhỏ cho người đi đường. Mặt cô bé giống Heniana đến mức Ghost nhận ra trước cả khi Henry lấy ảnh đối chiếu.</p>
 <p>Người dân gọi cô bé là <strong>Heni</strong>. Cha cô, một người đàn ông hiền lành, thật ra là điệp viên của Jamerson. Ông ghi chép sức khỏe của Heni mỗi ngày, gửi mẫu máu qua các thương nhân, và cho cô sống giữa bệnh dịch để xem cơ thể nhân bản chịu đựng được đến đâu.</p>
 <p>Heni không biết mình là thí nghiệm. Cô chỉ biết mình hay mơ thấy một căn phòng trắng, một người phụ nữ khóc sau lớp kính, và một người cha mà cô chưa từng gặp.</p>
-<p>Màn này cho người chơi thấy mặt người của bệnh dịch: trẻ em bán đồ để mua thuốc cho cha mẹ, ngư dân mất việc, người bệnh bị cưỡng bức ở lại ngoài rìa làng để không làm xấu mặt cảng.</p>
+<p>Màn này cho người chơi thấy mặt người của bệnh dịch: trẻ em bán đồ để mua thuốc cho cha mẹ, ngư dân mất việc, người bệnh bị buộc phải ở lại ngoài rìa làng để không làm xấu mặt cảng.</p>
 <h3 id="story-2-2-khu-cach-ly-va-con-uong-len-thu-phu"><a class="heading-link" href="#story-2-2-khu-cach-ly-va-con-uong-len-thu-phu" aria-label="Link to section">#</a>2-2. Khu cách ly và con đường lên thủ phủ</h3>
 <p>Nhóm đưa Heni ra khỏi làng sau khi điệp viên bị lộ. Trên đường, họ đi qua các trại cách ly, nơi người bệnh bị đánh dấu bằng dây vải và phân loại theo &quot;giá trị lao động&quot;. Những người còn làm việc được bị đưa vào kho, người quá yếu bị bỏ lại gần đền thiêng.</p>
 <p>Họ phát hiện lý do Heniana được đưa đến Sakuri: Jamerson tin Cái Tai có thể &quot;nghe&quot; âm thanh của căn bệnh trong máu Heniana và tìm ra tần số để vô hiệu hóa nó. Cái Tai cũng là mảnh tiếp theo mà Con Mắt muốn. Với Jamerson, hai mục tiêu này đã nhập làm một.</p>
@@ -1922,7 +2081,7 @@
   <img src="imgs/Stage2/bamboo forest 2.png" alt="bambooforest2" loading="lazy">
   <figcaption>bambooforest2</figcaption>
 </figure>
-<p>Con đường lên thủ phủ không đi thẳng qua cổng chính. Nhóm phải băng qua một rừng tre trúc trên sườn núi, nơi gió làm thân tre va vào nhau như tiếng thì thầm. Phía xa là một thác nước trắng, đổ xuống vực sâu, che mọi tiếng bước chân nhưng cũng làm command của Henry khó nghe. Những mỏm đá ướt, cầu dây cũ, và mép núi khiến mỗi cuộc đánh nhau đều có nguy cơ rơi xuống vực.</p>
+<p>Con đường lên thủ phủ không đi thẳng qua cổng chính. Nhóm phải băng qua một rừng tre trên sườn núi, nơi gió làm thân tre va vào nhau như tiếng thì thầm. Phía xa là một thác nước trắng, đổ xuống vực sâu, che mọi tiếng bước chân nhưng cũng làm mệnh lệnh của Henry khó nghe. Những mỏm đá ướt, cầu dây cũ, và mép núi khiến mỗi cuộc đánh nhau đều có nguy cơ rơi xuống vực.</p>
 <p>Ở cây cầu đá dẫn qua thác, nhóm gặp <strong>Ryozan</strong>. Ban đầu ông không hiện ra như một tướng quân. Thứ trườn dưới mặt nước giống một con nòng nọc đen khổng lồ, nửa linh hồn nửa lời thề, kéo lê cái đuôi dài quanh chân cầu. Nó tấn công bất cứ ai cố bước qua, như một bản năng bảo vệ đã bị bẻ cong.</p>
 <p>Khi ba mũi yểm dưới cầu bị phá, hình dạng thật hiện lại: một chiến binh mặc giáp đỏ, cầm đao dài, đứng chắn giữa tiếng thác. Ryozan không phải tay sai của Sakuri theo nghĩa đơn giản. Ông từng được giao bảo vệ cô, và trong thời gian đó ông là một trong rất ít người nhìn thấy Sakuri như một đứa trẻ bị nhốt chứ không phải thánh nữ. Ông đã từng muốn đưa cô khỏi cung điện, hoặc ít nhất chấm dứt việc các gia tộc dùng cô như cái máy nghe trộm.</p>
 
@@ -1942,22 +2101,27 @@
   <img src="imgs/Stage2/old room_sakuri.png" alt="J_room_sakuri" loading="lazy">
   <figcaption>J_room_sakuri</figcaption>
 </figure>
-<p>Trong cung điện, nhóm gặp <strong>DeceptiveDoorPuzzle</strong>: một dãy cửa được sơn bằng những màu tưởng như rất rõ ràng với người bình thường, nhưng thật ra màu là mồi nhử. Đáp án đúng phải chọn theo cách một người mù màu hoặc người nhìn lệch màu phân biệt: độ sáng, biểu tượng phụ, vân gỗ, vết mòn dưới ngưỡng cửa, và thứ tự họa tiết. Cung điện dùng puzzle này để loại người ngoài và người hầu &quot;không đủ huyết thống&quot;, nhưng chính logic đó cũng cho thấy Solei cách nhìn khác để phá khóa.</p>
+<p>Trong cung điện, nhóm gặp <strong>DeceptiveDoorPuzzle</strong>: một dãy cửa được sơn bằng những màu tưởng như rất rõ ràng với người bình thường, nhưng thật ra màu là mồi nhử. Đáp án đúng phải chọn theo cách một người mù màu hoặc người nhìn lệch màu phân biệt: độ sáng, biểu tượng phụ, vân gỗ, vết mòn dưới ngưỡng cửa, và thứ tự họa tiết. Cung điện dùng puzzle này để loại người ngoài và người hầu &quot;không đủ huyết thống&quot;, nhưng chính logic đó cũng cho Solei một cách nhìn khác để phá khóa.</p>
 <h3 id="story-2-4-en-ngam-inh-nui-va-sakuri"><a class="heading-link" href="#story-2-4-en-ngam-inh-nui-va-sakuri" aria-label="Link to section">#</a>2-4. Đền ngầm, đỉnh núi và Sakuri</h3>
 <p>Cả nhóm đột nhập cung điện, vượt qua những cửa lừa và đi xuống đền ngầm bằng thang máy cũ cùng những cầu thang đá. Càng xuống sâu, âm thanh càng biến dạng. Người chơi nghe tiếng sóng biển từ rất xa, tiếng người chết trong hầm, tiếng ý nghĩ của đồng đội bị lặp lại như lời nói ngoài miệng.</p>
 <p>Nhưng đền ngầm không phải nơi cuối cùng. Nó là rễ của ngọn núi. Khi Cái Tai thức dậy, sàn đá nứt ra và những bậc thang cổ kéo cả nhóm lên một đỉnh núi bị tách khỏi mặt đất. Ở đó có nhiều cành sakura mọc xuyên qua đá, những mảng đất lơ lửng quanh miệng vực, và gió mang theo tiếng chuông từ mọi hướng.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage2/sakuri final_1_concept.png" alt="sakuri final_concept" loading="lazy">
+  <figcaption>sakuri final_concept</figcaption>
+</figure>
 
 <figure class="markdown-image">
   <img src="imgs/Stage2/sakuri final_1_phase_3.png" alt="sakuri final_1_phase_3" loading="lazy">
   <figcaption>sakuri final_1_phase_3</figcaption>
 </figure>
 <p>Sakuri ngồi trong một phòng đá lớn mở ra giữa đỉnh núi, mắt bị bịt bằng vải trắng. Cô không mù, nhưng đôi mắt bị niêm phong từ nhỏ để cô &quot;nhìn&quot; bằng tai. Cái Tai được đặt trong một khung vàng, nối với mặt đất bằng những sợi kim loại mỏng như dây thần kinh.</p>
-<p>Sakuri không phải ác vì sinh ra ác. Cô là một đứa trẻ bị biến thành công cụ, nghe mọi lời nói dối của người lớn, mọi âm mưu của gia tộc, mọi tiếng cầu cứu từ bên ngoài tường. Cuối cùng, cô quyết định nếu thế giới chỉ biết nhốt cô và dùng cô, cô sẽ phá hủy tất cả để không còn phải nghe nữa.</p>
-<p>Boss fight có ba trục:</p>
+<p>Sakuri không ác vì sinh ra đã ác. Cô là một đứa trẻ bị biến thành công cụ, nghe mọi lời nói dối của người lớn, mọi âm mưu của gia tộc, mọi tiếng cầu cứu từ bên ngoài tường. Cuối cùng, cô quyết định nếu thế giới chỉ biết nhốt cô và dùng cô, cô sẽ phá hủy tất cả để không còn phải nghe nữa.</p>
+<p>Trận boss có ba trục:</p>
 <ul>
 <li>Sakuri tấn công bằng âm thanh, ảo giác, và việc đọc ý định của người chơi.</li>
 <li>Cơn khát máu làm cô có những đoạn áp sát bất ngờ, đánh bằng móng tay, dây kim loại và các nhịp âm sắc như vết cắn. Đây là lúc cô đáng sợ nhất nhưng cũng mất kiểm soát nhất.</li>
-<li>Dư âm lời thề của Ryozan có thể xuất hiện như một khoảng ngắt. Nếu người chơi đã giải yểm ở cây cầu, ký ức của ông làm Sakuri dao động và tạo cửa sổ để nói chuyện/đánh ngắt nhịp. Nếu không, giáp đỏ chỉ còn là tiếng kim loại rỗng trong arena, biến thành pattern phụ lạnh lùng hơn.</li>
+<li>Dư âm lời thề của Ryozan có thể xuất hiện như một khoảng ngắt. Nếu người chơi đã giải yểm ở cây cầu, ký ức của ông làm Sakuri dao động và tạo cửa sổ để nói chuyện/đánh ngắt nhịp. Nếu không, giáp đỏ chỉ còn là tiếng kim loại rỗng trong đấu trường, biến thành một nhịp tấn công phụ lạnh lùng hơn.</li>
 </ul>
 <p>Trong trận, Sakuri phơi bày nỗi sợ của từng người. Henry sợ mình sẽ lặp lại tội ác của những kẻ anh từng chống. Deep sợ mình chỉ là vũ khí cũ được đặt tên &quot;anh hùng&quot;. Solei sợ không nơi nào chấp nhận mình. Ghost gần như không có tiếng nói nội tâm để Sakuri nghe, chỉ có một khoảng trống làm cô sợ hãi.</p>
 <p>Khi bị đánh bại, Sakuri không xin tha, không phải vì kiêu ngạo mà vì cô không còn biết phải xin ai. Cô cười vì lần đầu tiên quanh mình im lặng. Trước khi chết hoặc rơi vào trạng thái vô thức, cô nói: &quot;Mắt đã thấy. Tai đã nghe. Lưỡi sẽ nói điều các ngươi không muốn tin.&quot;</p>
@@ -1967,14 +2131,14 @@
 <h3 id="story-boi-canh-2"><a class="heading-link" href="#story-boi-canh-2" aria-label="Link to section">#</a>Bối cảnh</h3>
 
 <figure class="markdown-image">
-  <img src="imgs/Stage3/Pain fotress.png" alt="Pain fotress" loading="lazy">
+  <img src="imgs/Stage3/Pain_fotress.png" alt="Pain fotress" loading="lazy">
   <figcaption>Pain fotress</figcaption>
 </figure>
 <p><strong>Calvaria</strong> là một thành phố mộ xây quanh những hầm xương không thấy đáy. Từ xa xưa, người dân mang xác người thân đến đây để được đặt tên trong <strong>Sổ Thở Cuối</strong>. Khi Đại Họa lan rộng, Calvaria trở thành nơi hành hương của cả thế giới. Ai cũng muốn nghe lại giọng người đã mất một lần cuối.</p>
-<p>Giáo hội <strong>Hơi Thở Cuối</strong> nắm giữ Cái Lưỡi. Nó có thể nói bằng giọng người chết, đọc ngôn ngữ đã thất truyền, và biến câu nói thành mệnh lệnh nếu người nghe đủ yếu lòng. Ban đầu, giáo hội dùng nó để an ủi người mất thân. Về sau, sự an ủi thành dịch vụ, dịch vụ thành quyền lực, quyền lực thành nhà tù.</p>
+<p>Giáo hội <strong>Hơi Thở Cuối</strong> nắm giữ Cái Lưỡi. Nó có thể nói bằng giọng người chết, đọc ngôn ngữ đã thất truyền, và biến câu nói thành mệnh lệnh nếu người nghe đủ yếu lòng. Ban đầu, giáo hội dùng nó để an ủi những người vừa mất thân nhân. Về sau, sự an ủi thành dịch vụ, dịch vụ thành quyền lực, quyền lực thành nhà tù.</p>
 <p>Ở Calvaria, cái chết cũng có giá. Người giàu mua quan tài bằng bạc, mua lễ cầu siêu riêng, mua &quot;lời nhắn từ người chết&quot;. Người nghèo bán xương của người thân làm thánh tích, bán tên trong sổ, hoặc làm phu mộ cho đến ngày chính họ rơi xuống hầm.</p>
-<p>Stage 3 là nơi Cái Lưỡi đào sâu nhất vào <strong>Deep</strong> và <strong>Henry</strong>. Nó không chỉ nói bằng giọng người chết; nó nói vào tim gan ruột của người nghe, dùng một phần sự thật để buộc họ quỳ xuống. Với Deep, Calvaria kéo lại những cuộc chiến xưa, những đồng đội đã chết, và nỗi mệt mỏi của một người từng bị biến thành biểu tượng. Với Henry, nó moi lại các quyết định bẩn, những người anh không cứu được, và nỗi sợ rằng anh tiếp tục chiến đấu không phải vì còn hy vọng, mà vì anh không biết cách nghỉ ngơi.</p>
-<p>Vì vậy Calvaria không chỉ là stage về tang lễ. Nó là stage về sự kiệt sức sau chiến tranh, về câu hỏi đời người còn ý nghĩa gì khi mọi chiến thắng đều để lại xác chết. Cái Lưỡi thắng nếu nó khiến Deep tin rằng anh phải trở lại làm vũ khí cho người chết, hoặc khiến Henry tin rằng tội lỗi cũ cho anh quyền ra lệnh giết thêm người.</p>
+<p>Stage 3 là nơi Cái Lưỡi đào sâu nhất vào <strong>Deep</strong> và <strong>Henry</strong>. Nó không chỉ nói bằng giọng người chết; nó đánh thẳng vào ruột gan người nghe, dùng một phần sự thật để buộc họ quỳ xuống. Với Deep, Calvaria kéo lại những cuộc chiến xưa, những đồng đội đã chết, và nỗi mệt mỏi của một người từng bị biến thành biểu tượng. Với Henry, nó moi lại các quyết định bẩn, những người anh không cứu được, và nỗi sợ rằng anh tiếp tục chiến đấu không phải vì còn hy vọng, mà vì anh không biết cách nghỉ ngơi.</p>
+<p>Vì vậy Calvaria không chỉ là giai đoạn kể về tang lễ. Nó là giai đoạn kể về sự kiệt sức sau chiến tranh, về câu hỏi đời người còn ý nghĩa gì khi mọi chiến thắng đều để lại xác chết. Cái Lưỡi thắng nếu nó khiến Deep tin rằng anh phải trở lại làm vũ khí cho người chết, hoặc khiến Henry tin rằng tội lỗi cũ cho anh quyền ra lệnh giết thêm người.</p>
 <h3 id="story-3-1-uong-hanh-huong"><a class="heading-link" href="#story-3-1-uong-hanh-huong" aria-label="Link to section">#</a>3-1. Đường hành hương</h3>
 
 <figure class="markdown-image">
@@ -1982,12 +2146,17 @@
   <figcaption>dusk_haeven</figcaption>
 </figure>
 <p>Nhóm đến Calvaria để tìm Cái Lưỡi, nhưng mỗi người đến đây với một lý do riêng. Henry muốn biết liệu những giọng nói trong quá khứ có thật là người chết hay chỉ là ký ức bị lợi dụng. Deep thấy dấu vết của những đội viễn chinh cũ. Heni nghe tin giáo hội có thể &quot;cho người chết nói&quot;, nên âm thầm tự hỏi nếu mình nói bằng giọng Heniana, mình có còn là mình không.</p>
-<p>Trên đường, người chơi gặp dân hành hương, kẻ trộm mộ, lính đánh thuê của giáo hội, và những &quot;người ghi tên&quot; chuyên thu phí từ từng cái chết. Đây là stage về mặt trái của niềm an ủi: khi đau khổ quá lớn, con người sẵn sàng trả bất cứ giá nào để nghe một lời nói dối dịu dàng.</p>
+<p>Trên đường, người chơi gặp dân hành hương, kẻ trộm mộ, lính đánh thuê của giáo hội, và những &quot;người ghi tên&quot; chuyên thu phí từ từng cái chết. Đây là giai đoạn kể về mặt trái của niềm an ủi: khi đau khổ quá lớn, con người sẵn sàng trả bất cứ giá nào để nghe một lời nói dối dịu dàng.</p>
 <h3 id="story-3-2-cho-xuong-va-ham-mo-song"><a class="heading-link" href="#story-3-2-cho-xuong-va-ham-mo-song" aria-label="Link to section">#</a>3-2. Chợ xương và hầm mộ sống</h3>
 
 <figure class="markdown-image">
-  <img src="imgs/Stage3/xuong_skull.png" alt="xuong_skull" loading="lazy">
-  <figcaption>xuong_skull</figcaption>
+  <img src="imgs/Stage3/xuong_skull_market_wide_v2.png" alt="Calvaria bone market wide" loading="lazy">
+  <figcaption>Calvaria bone market wide</figcaption>
+</figure>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage3/xuong_skull_catacomb_market_v2.png" alt="Calvaria living catacomb market" loading="lazy">
+  <figcaption>Calvaria living catacomb market</figcaption>
 </figure>
 <p>Calvaria không chỉ có mộ. Nó là một hệ sinh thái. Xương được rửa, phân loại, khắc tên, bán làm bùa hộ, vật liệu xây dựng, hoặc linh kiện cho những cơ thể cầu nguyện. Giáo hội tạo ra những chiến binh xương bằng cách gắn mảnh ý chí của Cái Lưỡi vào hài cốt.</p>
 <p>Ghost bắt đầu nghe những đoạn tên cũ của mình. Cái Lưỡi có thể biết, hoặc chỉ đang đoán theo nỗi sợ. Khi nó gọi một cái tên, Ghost suýt quay lại. Nhưng Heni hỏi: &quot;Nếu cái tên đó thuộc về người đã chết, anh có bắt buộc phải làm người đó nữa không?&quot;</p>
@@ -2005,11 +2174,11 @@
   <figcaption>Ruined boss</figcaption>
 </figure>
 <p>Boss cuối Stage 3 là một hợp xướng xương khổng lồ được gọi là <strong>Dàn Hợp Xướng</strong>, gồm những hài cốt, giọng nói, và lời cầu nguyện bị giáo hội khâu lại thành một &quot;thánh thân&quot;. Cái Lưỡi nằm trong miệng của nó. Nó không chỉ nhại âm thanh; nó chọn những giọng từng có quyền làm người sống nghe lời, rồi biến chúng thành mệnh lệnh.</p>
-<p>Với Henry, nó dùng giọng mẹ anh và những người anh từng không cứu được. Họ không mắng anh là hèn. Họ nói điều tàn nhẫn hơn: nếu Henry dừng lại, cái chết của họ sẽ vô nghĩa; nếu anh không giết tiếp, anh đã phản bội họ. Trong phase này, command của Henry có thể bị nhiễu, biến lệnh bảo vệ thành lệnh truy sát nếu người chơi không phá các chuông xương quanh đấu trường. Henry vượt qua khi hiểu rằng người chết có thể được tưởng nhớ, nhưng không được dùng làm giấy phép để giết thêm người.</p>
+<p>Với Henry, nó dùng giọng mẹ anh và những người anh từng không cứu được. Họ không mắng anh là hèn. Họ nói điều tàn nhẫn hơn: nếu Henry dừng lại, cái chết của họ sẽ vô nghĩa; nếu anh không giết tiếp, anh đã phản bội họ. Trong pha này, COMMAND của Henry có thể bị nhiễu, biến lệnh bảo vệ thành lệnh truy sát nếu người chơi không phá các chuông xương quanh đấu trường. Henry vượt qua khi hiểu rằng người chết có thể được tưởng nhớ, nhưng không được dùng làm giấy phép để giết thêm người.</p>
 <p>Với Deep, Dàn Hợp Xướng dùng giọng những đồng đội cũ và những bài ca về các anh hùng trong quá khứ. Họ gọi anh bằng danh hiệu cũ, bảo anh cầm cờ, đứng trước quân lính, và trở lại làm biểu tượng để người khác tiếp tục chiến tranh. Điều làm Deep đau không phải vì đó hoàn toàn là lời nói dối, mà vì nó đúng một phần: đã có lúc anh để người khác dùng tên mình như một thứ vũ khí. Deep không kết luận rằng mọi anh hùng đều giả dối. Anh chấp nhận điều khó hơn: ngay cả những người từng cứu thế giới cũng có thể sai, có thể bị quyền lực viết lại, và ký ức về họ không được phép trở thành mệnh lệnh.</p>
 <p>Với Solei, Cái Lưỡi dùng giọng người thân phía mẹ. Khi mềm, họ gọi cô là máu của quê nhà. Khi lạnh, họ gọi cô là đứa trẻ Marseille, là kẻ trở về chỉ khi cần một nơi trú. Nó ép Solei chọn một bên để được coi là &quot;thật&quot;. Solei phá vòng này khi từ chối để huyết thống quyết định căn nhà của mình: cô có thể mang nhiều nguồn gốc mà không cần biến một phần của mình thành tội lỗi.</p>
 <p>Với Heni, nó dùng giọng Heniana. Có lúc giọng ấy xin được cứu. Có lúc nó bảo Heni trả lại khuôn mặt, trả lại cơ thể, trả lại cuộc đời mà Jamerson đã đánh cắp để tạo ra cô. Đây là lời nói dối nguy hiểm nhất, vì Heni không biết Heniana thật sự sẽ nghĩ gì nếu tỉnh dậy. Heni không cố chứng minh mình &quot;thật hơn&quot; Heniana. Cô chỉ nói rằng nếu Heniana còn sống, cô sẽ giúp Heniana sống như một con người, nhưng cô sẽ không biến mất để làm vật liệu cho kế hoạch của người lớn.</p>
-<p>Cuối cùng, Cái Lưỡi gọi Ghost bằng một cái tên cũ mà ngay cả anh cũng không chắc còn thuộc về mình. Nó nhắc đến một phòng trắng, một mã hồ sơ bị xóa, và một câu hỏi anh từng nghe trước khi mất ký ức. Stage này chưa giải thích hết Ghost là ai; nó chỉ mở một khe hở để người chơi biết quá khứ của anh có thật, và có người từng cố tình chôn nó đi. Ghost không phủ nhận quá khứ. Anh chỉ từ chối để một cái tên chưa được hiểu rõ trói mình lại. Anh chọn cái tên đồng đội đã gọi trong hiện tại: Ghost.</p>
+<p>Cuối cùng, Cái Lưỡi gọi Ghost bằng một cái tên cũ mà ngay cả anh cũng không chắc còn thuộc về mình. Nó nhắc đến một phòng trắng, một mã hồ sơ bị xóa, và một câu hỏi anh từng nghe trước khi mất ký ức. Đoạn này chưa giải thích hết Ghost là ai; nó chỉ mở một khe hở để người chơi biết quá khứ của anh có thật, và có người từng cố tình chôn nó đi. Ghost không phủ nhận quá khứ. Anh chỉ từ chối để một cái tên chưa được hiểu rõ trói mình lại. Anh chọn cái tên đồng đội đã gọi trong hiện tại: Ghost.</p>
 <p>Chiến thắng không đến từ việc bắt Dàn Hợp Xướng im lặng hoàn toàn, mà từ việc phá từng lời nói dối đang buộc người sống phải phục tùng người chết. Sau trận này, cả nhóm hiểu rõ hơn luật của Cái Lưỡi: nó không tạo ra nỗi đau từ hư không; nó lấy một phần sự thật, đặt nó vào cái miệng sai, rồi bắt con người quỳ xuống trước nó.</p>
 <p>Khi Dàn Hợp Xướng sụp đổ, phần lõi của Cái Lưỡi lộ ra trong một khối xương đen như than. Jamerson đã chờ đúng khoảnh khắc đó. Con Mắt trong tay ông mở ra, kéo phần lõi sống nhất về phía mình trước khi nhóm kịp phá hủy hoàn toàn. Ông không lấy được tất cả. Một mảnh nhỏ bị cháy văng khỏi lõi, mất gần hết quyền năng nhưng vẫn còn giữ ký ức cuối cùng của Cái Lưỡi.</p>
 <blockquote><p>&quot;Nó không nguyền rủa các ngươi. Nó đang gọi mẹ. Tiếng gọi của nó quá lớn đối với thế giới này, nên các ngươi gọi đó là Đại Họa.&quot;</p></blockquote>
@@ -2019,7 +2188,7 @@
 <h2 id="story-stage-4-akam-meskul-bo-toc-an-rong-chet-titan-va-trai-tim-chien-tranh"><a class="heading-link" href="#story-stage-4-akam-meskul-bo-toc-an-rong-chet-titan-va-trai-tim-chien-tranh" aria-label="Link to section">#</a>Stage 4 - Akam Meskul: bộ tộc ẩn, rồng chết, titan, và trái tim chiến tranh</h2>
 <h3 id="story-boi-canh-3"><a class="heading-link" href="#story-boi-canh-3" aria-label="Link to section">#</a>Bối cảnh</h3>
 <p><strong>Akam Meskul</strong> là vùng đất bị nguyền nằm giữa những dãy núi nham nhở như răng quái vật. Nơi đây từng là trung tâm của nghi lễ giết Thần Sơ Sinh. Sau nghi lễ, lời nguyền lan ra, khí độc và ảo giác khiến sinh vật bình thường phát điên hoặc chết. Những thứ mà các mảnh thần từng chạm vào trong hàng nghìn năm bắt đầu hiện thực hóa trong giấc mơ của vùng đất: công trình lạ, quái vật lạ, ký ức của thành phố đã mất, và những con đường không nên tồn tại.</p>
-<p>Nhiều thế kỷ trước, liên minh 6 vương quốc gửi anh hùng <strong>Aramut</strong> cưỡi thánh long <strong>Akam Meskul</strong> vào vùng núi để chấm dứt lời nguyền. Chiến dịch thất bại. Aramut và rồng hi sinh để tàn quân rút lui. Xác thánh long đâm xuyên một ngọn núi. Sau nhiều năm, lục phủ ngũ tạng phân hủy, nhưng da và xương cứng lại thành một đường hầm không bị lời nguyền ăn mòn.</p>
+<p>Nhiều thế kỷ trước, liên minh sáu vương quốc gửi anh hùng <strong>Aramut</strong> cưỡi thánh long <strong>Akam Meskul</strong> vào vùng núi để chấm dứt lời nguyền. Chiến dịch thất bại. Aramut và rồng hy sinh để tàn quân rút lui. Xác thánh long đâm xuyên một ngọn núi. Sau nhiều năm, lục phủ ngũ tạng phân hủy, nhưng da và xương cứng lại thành một đường hầm không bị lời nguyền ăn mòn.</p>
 <p>Về sau, con người dùng chính xác rồng làm lối đi vào sâu vùng đất cấm.</p>
 <p>Ở Akam Meskul có hai phe lớn:</p>
 <ul>
@@ -2037,9 +2206,9 @@
 </ul>
 <p>Boss cuối màn là <strong>Crusader Band</strong>, một đội tiên phong của Con Cháu Chiếc Nôi. Họ bắt người để thử xem ai sống sót được trong lời nguyền, rồi biến người sống sót thành bằng chứng rằng &quot;thần đã chọn&quot;.</p>
 <h3 id="story-4-2-uong-ham-trong-xac-akam-meskul"><a class="heading-link" href="#story-4-2-uong-ham-trong-xac-akam-meskul" aria-label="Link to section">#</a>4-2. Đường hầm trong xác Akam Meskul</h3>
-<p>Người chơi đi vào trong xác rồng. Đây là một màn choáng ngợp: xương sườn như cột đền, da rồng đóng cứng thành tường, những khoang nội tạng rỗng biến thành hang động. Thỉnh thoảng, lời nguyền chiếu lại những ký ức cũ: Aramut cưỡi rồng bay qua bầu trời, quân đội 6 vương quốc tranh cãi, và khoảnh khắc thánh long quay đầu giữ chân thứ không ai thấy rõ.</p>
+<p>Người chơi đi vào trong xác rồng. Đây là một màn choáng ngợp: xương sườn như cột đền, da rồng đóng cứng thành tường, những khoang nội tạng rỗng biến thành hang động. Thỉnh thoảng, lời nguyền chiếu lại những ký ức cũ: Aramut cưỡi rồng bay qua bầu trời, quân đội sáu vương quốc tranh cãi, và khoảnh khắc thánh long quay đầu giữ chân thứ không ai thấy rõ.</p>
 <p>Deep nhận ra những bài ca về Aramut mà anh từng nghe đã bị cắt bỏ phần quan trọng: Aramut không chết vì vinh quang. Ông chết vì các vua không chịu rút lui sớm, không chịu thừa nhận kế hoạch sai, và cần một biểu tượng để che đi thất bại.</p>
-<p>Đây là gương của Deep. Nếu anh tiếp tục để người khác dùng mình làm biểu tượng, anh sẽ chỉ lặp lại lịch sử.</p>
+<p>Đây là tấm gương soi lại Deep. Nếu anh tiếp tục để người khác dùng mình làm biểu tượng, anh sẽ chỉ lặp lại lịch sử.</p>
 <h3 id="story-4-3-thanh-pho-nhan-tao-va-bo-toc-an"><a class="heading-link" href="#story-4-3-thanh-pho-nhan-tao-va-bo-toc-an" aria-label="Link to section">#</a>4-3. Thành phố nhân tạo và bộ tộc ẩn</h3>
 
 <figure class="markdown-image">
@@ -2049,7 +2218,7 @@
 <p>Tàn Dư Sáu Vương Quốc sống trong một thành phố kín bằng kim loại và kính, nơi không khí được lọc liên tục. Họ lịch sự, có học thức, và nói năng như những người văn minh. Nhưng dưới tầng hầm là những phòng thử nghiệm với tù nhân Con Cháu Chiếc Nôi, mẫu máu, và trẻ em được kiểm tra khả năng chịu lời nguyền.</p>
 <p>Con Cháu Chiếc Nôi sống ngoài vùng độc theo cách người khác không hiểu, có những bài hát, hình xăm, và nghi lễ bảo vệ họ trước ảo giác. Nhưng họ cũng dạy trẻ em rằng tất cả người ngoài đều là hậu duệ của kẻ giết thần, và một ngày nào đó phải quỳ gối hoặc biến mất.</p>
 <p>Solei là người thấy rõ sự nguy hiểm của &quot;dòng máu&quot;. Cả hai phe đều muốn biết máu của cô thuộc về đâu. Solei từ chối. Cô nói mình không phải câu trả lời cho lịch sử của họ.</p>
-<p>Nhưng trọng tâm cảm xúc của Stage 4 nên chuyển nhiều hơn sang <strong>Tulas</strong> và <strong>Block</strong>.</p>
+<p>Từ đây, trọng tâm cảm xúc của Stage 4 chuyển nhiều hơn sang <strong>Tulas</strong> và <strong>Block</strong>.</p>
 <p>Với Tulas, Akam Meskul không cần phải là quê hương hay tín ngưỡng trực tiếp của anh. Nó liên quan đến anh qua máu, huyết thống, độc tố và cơ thể sống. Trong vùng này, năng lực điều khiển máu/chất lỏng của Tulas vừa hữu ích vừa đáng sợ: anh có thể khóa vết thương, kéo máu độc ra khỏi người bị nhiễm, dựng màng lọc tạm qua khí độc, tạo khiên từ chất lỏng ô nhiễm, hoặc dùng vệt máu trên chiến trường làm điểm neo kéo người bị thương về. Nhưng mỗi lần làm vậy, anh phải chạm vào ranh giới giữa cứu chữa và xâm phạm thân thể. Câu hỏi của Tulas trở nên rõ hơn: một sức mạnh khiến người khác sợ có thể được dùng để bảo vệ họ mà không biến anh thành thứ họ ghê tởm hay không.</p>
 <p>Với Block, Akam Meskul là nơi các bộ lạc và phe phái nói rất nhiều về anh hùng, sức mạnh, thân thể, tốc độ, huyết thống và chiến công. Block không nhanh nhất, không hào nhoáng nhất, và không giống kiểu anh hùng được hát trong sử thi. Nhưng chính ở đây anh thấy mình có ích theo cách bền hơn: giữ cầu cho dân chạy, che khiên cho người bị thương, vác người qua vùng độc, giữ cửa đủ lâu để cả nhóm thoát, hoặc đứng yên giữa hỗn loạn để người khác có chỗ bám. Sự trưởng thành của Block không phải là trở thành biểu tượng chiến tranh, mà là hiểu rằng sức mạnh có thể là một nơi trú tạm cho người khác.</p>
 <h3 id="story-4-4-trai-tim-va-titan-rong"><a class="heading-link" href="#story-4-4-trai-tim-va-titan-rong" aria-label="Link to section">#</a>4-4. Trái Tim và Titan Rồng</h3>
@@ -2062,7 +2231,7 @@
 <p>Nhưng Trái Tim không phải pin năng lượng. Nó khuếch đại tất cả cảm xúc xung quanh. Thù hận của Con Cháu Chiếc Nôi thành bạo động. Nỗi sợ của Tàn Dư Sáu Vương Quốc thành chính sách diệt trừ. Lòng yêu con của Jamerson thành quyền sở hữu.</p>
 <p>Jamerson đến đây cùng lúc hai phe giao chiến. Con Mắt, Cái Tai, và Cái Lưỡi mà ông đã hấp thu đủ thông tin để ông hiểu cách làm Trái Tim đập theo nhịp Heniana. Trong khoảnh khắc, cả vùng núi nghe một nhịp tim nhỏ trong buồng ngủ đông.</p>
 <p>Jamerson khóc. Rồi ông ra lệnh kích hoạt.</p>
-<p>Boss Stage 4 là <strong>Titan Trái Tim</strong>, một cỗ máy chiến tranh nối với xác rồng và Trái Tim thần. Trong trận, người chơi vừa đánh boss vừa ngăn hai phe giết dân thường. Deep phá hủy các loa tuyên truyền thay vì truy sát lính rút lui. Solei cứu những đứa trẻ bị cả hai phe đánh dấu. Henry buộc phải ra lệnh không giết những kẻ đã đầu hàng, dù điều đó làm trận chiến khó hơn. Tulas phải dùng năng lực máu/chất lỏng để khóa vết thương, lọc độc, mở đường qua vùng nhiễm và kéo người còn sống khỏi chiến trường. Block giữ tuyến rút lui, che chắn, vác người bị thương, và chứng minh rằng sức mạnh không chỉ để đánh bại ai đó mà còn để giữ người khác còn đứng được.</p>
+<p>Boss của Stage 4 là <strong>Titan Trái Tim</strong>, một cỗ máy chiến tranh nối với xác rồng và Trái Tim thần. Trong trận, người chơi vừa đánh boss vừa ngăn hai phe giết dân thường. Deep phá hủy các loa tuyên truyền thay vì truy sát lính rút lui. Solei cứu những đứa trẻ bị cả hai phe đánh dấu. Henry buộc phải ra lệnh không giết những kẻ đã đầu hàng, dù điều đó làm trận chiến khó hơn. Tulas phải dùng năng lực máu/chất lỏng để khóa vết thương, lọc độc, mở đường qua vùng nhiễm và kéo người còn sống khỏi chiến trường. Block giữ tuyến rút lui, che chắn, vác người bị thương, và chứng minh rằng sức mạnh không chỉ để đánh bại ai đó mà còn để giữ người khác còn đứng được.</p>
 <p>Sau khi Titan sụp đổ, Trái Tim rơi vào tay Jamerson trong một màn đánh đổi tàn khốc: ông bỏ lại hàng trăm người đang chết, chỉ để mang buồng ngủ đông của Heniana tiếp tục đi sâu vào vùng cấm. Cú đánh này chạm mạnh vào Tulas và Block: Jamerson dùng cơ thể người khác làm nguyên liệu để cứu một người, còn họ phải dùng chính những năng lực bị xem là thô bạo nhất để giữ càng nhiều cơ thể sống càng tốt.</p>
 <p>Trước khi biến mất, ông nói với Ghost: &quot;Nếu ngươi từng có một cái tên, ngươi sẽ hiểu. Ta chỉ cần một người gọi ta là cha thêm một lần nữa.&quot;</p>
 <p>Mảnh Cái Lưỡi trong tay nhóm trả lời: &quot;Người chết có thể gọi. Người sống phải được chọn có gọi hay không.&quot;</p>
@@ -2083,13 +2252,13 @@
 <p>Con Cháu Chiếc Nôi và Tàn Dư Sáu Vương Quốc cùng kéo đến tế đàn. Một phe muốn hồi sinh thần để thanh tẩy nhân loại. Phe kia muốn hồi sinh thần để tống khứ nó khỏi thế giới. Jamerson muốn dùng thần để cứu Heniana. Mỗi bên đều có lý do nghe đủ mạnh nếu chỉ nghe từ phía họ.</p>
 <p>Ba thế lực này cũng là ba kết thúc sai đã được gieo từ trước. Con Cháu Chiếc Nôi chọn phục thù và gọi nó là thanh tẩy. Tàn Dư Sáu Vương Quốc chọn kiểm soát và gọi nó là sinh tồn. Jamerson chọn sở hữu và gọi nó là tình yêu. Nếu nhóm chỉ đánh bại một phe rồi dùng Dây Rốn theo cách của phe khác, họ vẫn chưa thoát khỏi vòng lặp cũ.</p>
 <p>Người chơi không chọn phe nào làm chân lý cuối. Mục tiêu của nhóm là mở lối đến Dây Rốn, bảo vệ những người không muốn chiến đấu, và ngăn cả ba phe biến thế giới thành vật tế.</p>
-<p>Henry cuối cùng nói với Ghost: &quot;Lệnh duy nhất của tôi cho cậu là đừng để bất kỳ ai nói rằng cái chết của người khác là phí phải trả.&quot;</p>
+<p>Henry cuối cùng nói với Ghost: &quot;Lệnh duy nhất của tôi cho cậu là đừng để bất kỳ ai nói rằng cái chết của người khác là cái giá phải trả.&quot;</p>
 <h3 id="story-5-3-jamerson-va-heniana"><a class="heading-link" href="#story-5-3-jamerson-va-heniana" aria-label="Link to section">#</a>5-3. Jamerson và Heniana</h3>
 <p>Ở trung tâm The Cradle, Dây Rốn của Thần Sơ Sinh vẫn còn sống. Nó không phải một sợi dây đơn giản mà là một mạng mạch máu khổng lồ nối vào khoảng tối trên bầu trời, nơi có thứ gì đó ngoài thế giới đang lắng nghe.</p>
 <p>Jamerson đặt buồng ngủ đông của Heniana vào vòng mạch. Con Mắt mở trong cánh tay ông. Cái Tai nghe nhịp máu con gái. Cái Lưỡi nói bằng giọng Heniana. Trái Tim đập theo mong muốn của ông. Mọi thứ ông cần đều ở đó.</p>
 <p>Nhưng sự thật lộ ra: nếu nghi lễ thành công, Heniana sẽ tỉnh dậy trong một cơ thể thần, nhưng ký ức, ý chí, và nhân tính của cô sẽ bị nhấn chìm bởi Thần Sơ Sinh đang tìm đường trở lại. Jamerson sẽ không cứu con gái. Ông sẽ dùng hình ảnh con gái làm cửa vào cho một thứ khác.</p>
-<p>Jamerson không chấp nhận. Ông gọi nhóm là kẻ sát nhân, gọi thế giới là vô ơn, gọi tất cả tù nhân đã chết là cái giá phải trả. Final boss bắt đầu với Jamerson trong bộ giáp gắn các mảnh thần, vừa là người cha, vừa là tế tư, vừa là vật chứa sắp vỡ.</p>
-<p>Trong các phase, mỗi mảnh thần dùng một dạng tấn công:</p>
+<p>Jamerson không chấp nhận. Ông gọi nhóm là kẻ sát nhân, gọi thế giới là vô ơn, gọi tất cả tù nhân đã chết là cái giá phải trả. Trận boss cuối bắt đầu với Jamerson trong bộ giáp gắn các mảnh thần, vừa là người cha, vừa là tế tư, vừa là vật chứa sắp vỡ.</p>
+<p>Trong các pha, mỗi mảnh thần dùng một dạng tấn công:</p>
 <ul>
 <li>Mắt tạo ảo giác từ ham muốn.</li>
 <li>Tai phản đòn theo lệnh người chơi và tiếng động.</li>
@@ -2102,18 +2271,18 @@
 <p>Khoảnh khắc đó làm Heniana hiểu điều Jamerson không chịu nhìn: cô không chỉ được cứu, cô đã bị biến thành lý do để người khác bị bắt, bị cắt mở, bị quên tên. Còn Heni hiểu điều ngược lại: cô không cần biến mất để trả lại chỗ cho Heniana. Hai đứa trẻ nhìn nhau như hai con người riêng, không phải bản gốc và bản sao.</p>
 <p>Heniana nói nhỏ:</p>
 <blockquote><p>&quot;Cha ơi, nếu con phải tỉnh dậy bằng cách làm mọi người ngủ mãi, con không muốn.&quot;</p></blockquote>
-<p>Jamerson vỡ tung. Trong một khoảnh khắc, người cha trở lại. Nhưng Con Mắt không cần người cha nữa. Nó chỉ cần cơ thể và Dây Rốn. Nó mở rộng, chiếm lấy Jamerson, và biến ông thành phase cuối: <strong>The Father-Eye</strong>, một cơ thể bị điều khiển bởi mong muốn đã quá mức con người.</p>
+<p>Jamerson vỡ tung. Trong một khoảnh khắc, người cha trở lại. Nhưng Con Mắt không cần người cha nữa. Nó chỉ cần cơ thể và Dây Rốn. Nó mở rộng, chiếm lấy Jamerson, và biến ông thành pha cuối: <strong>The Father-Eye</strong>, một cơ thể bị điều khiển bởi mong muốn đã quá mức con người.</p>
 <p>Trận cuối kết thúc khi Ghost cắt liên kết giữa các mảnh thần và cơ thể Jamerson. Jamerson rơi xuống bên buồng ngủ đông, không được tha thứ, nhưng lần đầu tiên không còn ra lệnh. Ông đặt bàn tay trái lên kính và nói với Heniana: &quot;Cha đã không để con được sợ cha. Cha chỉ sợ mất con.&quot;</p>
 <p>Không ai trong nhóm đáp lại bằng lời tha thứ. Henry hạ súng nhưng không cúi đầu. Deep chỉ kéo những người bị thương ra xa khỏi Dây Rốn. Solei đứng cạnh Heni. Tulas kiểm tra nhịp thở của những nạn nhân còn sống. Block giữ cánh cổng đang sụp. Điều đúng cuối cùng của Jamerson không xóa Bastonne, Marseille, tàu ngầm hay tất cả những cái tên đã mất.</p>
-<h3 id="story-lua-chon-ket-thuc-canon"><a class="heading-link" href="#story-lua-chon-ket-thuc-canon" aria-label="Link to section">#</a>Lựa chọn kết thúc canon</h3>
+<h3 id="story-lua-chon-ket-thuc-chinh-tuyen"><a class="heading-link" href="#story-lua-chon-ket-thuc-chinh-tuyen" aria-label="Link to section">#</a>Lựa chọn kết thúc chính tuyến</h3>
 <p>Nhóm hiểu rằng có ba cách kết thúc, nhưng đây không nên là một lựa chọn xuất hiện trống rỗng ở phút cuối. Ba cách này là kết quả tự nhiên của toàn bộ hành trình:</p>
 <ol>
 <li>Giết lại Thần Sơ Sinh bằng cách phá hủy các mảnh thần. Cách này chỉ lặp lại tội ác cũ và có thể khiến lời nguyền bùng nổ mạnh hơn.</li>
 <li>Hồi sinh Thần Sơ Sinh. Cách này có thể chấm dứt bệnh dịch, nhưng đổi lại thế giới sẽ trở thành giấc mơ của một sinh thể ngoài nhân tính.</li>
 <li>Trả các mảnh thần về qua Dây Rốn, không phải để hồi sinh nó trên thế giới này, mà để gửi nó về nơi nó thuộc về.</li>
 </ol>
-<p>Canon ending là cách thứ ba. Đó không phải là thỏa hiệp mềm yếu, mà là hành động khó nhất: từ chối cả quyền phá hủy lẫn quyền sở hữu.</p>
-<p>Heni là người bước lên đầu tiên. Vì cô mang tế bào Heniana, từng là bản sao, từng là vật thí nghiệm, nhưng bây giờ cô tự chọn hành động của mình. Cô đặt tay lên Dây Rốn và nói: &quot;Em không phải chỉ là phần còn lại của chị ấy. Nhưng nếu em được sinh ra từ sai lầm, em vẫn có thể dùng sai lầm đó để kết thúc nó.&quot;</p>
+<p>Kết thúc chính tuyến là cách thứ ba. Đó không phải là thỏa hiệp mềm yếu, mà là hành động khó nhất: từ chối cả quyền phá hủy lẫn quyền sở hữu.</p>
+<p>Heni là người bước lên đầu tiên, vì cô mang tế bào Heniana, từng là bản sao, từng là vật thí nghiệm, nhưng bây giờ cô tự chọn hành động của mình. Cô đặt tay lên Dây Rốn và nói: &quot;Em không phải chỉ là phần còn lại của chị ấy. Nhưng nếu em được sinh ra từ sai lầm, em vẫn có thể dùng sai lầm đó để kết thúc nó.&quot;</p>
 <p>Đoạn cuối hoạt động như một nghi lễ ngược. Thay vì ghép các mảnh thần vào một cơ thể mới, nhóm tháo từng mảnh ra khỏi ham muốn của con người.</p>
 <ul>
 <li><strong>Ghost</strong> cắt Con Mắt vì anh là lỗi sai mà hệ thống không đọc được. Anh không cần tên cũ để chứng minh mình có quyền tồn tại.</li>
@@ -2129,7 +2298,7 @@
 <h3 id="story-epilogue"><a class="heading-link" href="#story-epilogue" aria-label="Link to section">#</a>Epilogue</h3>
 <p>Đại Họa không biến mất trong một ngày. Nhưng ở các vùng đất phía đông, người ta bắt đầu thấy những con sông bớt đen, những cơn sốt đến chậm hơn, những đứa trẻ sinh ra không mang vết bệnh. Marseille mất đi bí mật lớn nhất của Jamerson và phải đối diện với bằng chứng về nhà tù Bastonne. Laundel không thành thiên đường, nhưng người ở đó có thêm một câu chuyện để kể: đã có lần những kẻ bị đẩy xuống dưới thành phố làm cả thành phố phải nhìn xuống.</p>
 <p>Sakuri trở thành cảnh báo về việc biến trẻ em thành thánh nhân. Calvaria mất đi quyền năng giả mạo giọng người chết, nhưng những người sống lần đầu phải tự nói lời tạm biệt bằng giọng của mình. Akam Meskul vẫn là vùng đất nguy hiểm, nhưng hai phe không còn bảo vật để biến chiến tranh thành định mệnh.</p>
-<p>Heniana còn sống hay không có thể để mở theo hướng bittersweet. Bản canon để lại cơ hội: cô bé thở được một mình trong thời gian ngắn, được Heni nắm tay, và được nghe lần đầu tiên không phải tiếng máy móc. Heni không thay thế Heniana. Heni sống tiếp như một con người riêng.</p>
+<p>Heniana còn sống hay không có thể để mở theo hướng vừa buồn vừa có hy vọng. Bản chính tuyến để lại cơ hội: cô bé thở được một mình trong thời gian ngắn, được Heni nắm tay, và được nghe lần đầu tiên không phải tiếng máy móc. Heni không thay thế Heniana. Heni sống tiếp như một con người riêng.</p>
 <p>Ghost rời The Cradle cùng đồng đội. Khi Henry hỏi liệu anh có muốn tìm lại tên cũ không, Ghost đáp: &quot;Nếu ngày nào đó tôi cần, tôi sẽ tìm. Hôm nay, tôi đã có người gọi.&quot;</p>
 <p>Cảnh cuối là cả nhóm đi qua bộ xương rồng Akam Meskul lúc bình minh. Bên dưới, những người sống sót của hai phe đang cùng nhau mở đường cho trẻ em và người bị thương. Không ai chiến thắng trọn vẹn. Không có vị thần nào hiện xuống ban phước. Nhưng lần đầu tiên sau rất lâu, thế giới im lặng đủ để con người nghe thấy nhau.</p>
 <h2 id="story-y-nghia-cai-ket"><a class="heading-link" href="#story-y-nghia-cai-ket" aria-label="Link to section">#</a>Ý nghĩa cái kết</h2>
@@ -2139,15 +2308,15 @@
 <p>Thông điệp đọng lại cho người chơi: cứu thế giới không phải lúc nào cũng là làm điều vĩ đại. Đôi khi, đó là đứng đúng lúc để nói &quot;không&quot; với một phép màu cần quá nhiều xác người.</p>
 <h2 id="story-ghi-chu-gan-voi-gameplay"><a class="heading-link" href="#story-ghi-chu-gan-voi-gameplay" aria-label="Link to section">#</a>Ghi chú gắn với gameplay</h2>
 <ul>
-<li><strong>Map ngủ mơ khi chết</strong>: đây có thể là không gian giữa giấc mơ của Thần Sơ Sinh và ý thức Ghost. Người chơi hồi sinh tại đây, đổi Skill, reset loadout, hoặc trả tiền để đổi kỹ năng. Về truyện, mỗi lần chết là mỗi lần Ghost nghe tiếng gọi của Dây Rốn rõ hơn.</li>
-<li><strong>Mở đầu bằng Solei</strong>: tutorial nên diễn ra ở căn cứ của đội Deep. Deep kiểm tra Solei trước nhiệm vụ giải cứu Block, từ đó dạy di chuyển, combo, chưởng, né, counter, cầm-ném vật thể, và phối hợp đồng đội.</li>
-<li><strong>Tulas và synergy</strong>: Tulas có thể là party member hoặc assist support từ sớm. Năng lực máu/chất lỏng của anh nên dùng để tạo bệ, khiên, cầu tạm, màn chắn projectile, hoặc khóa dòng nước/bẫy; hiệu quả nhất khi phối hợp với Deep, Solei, Henry, Block hoặc Ghost thay vì giải mọi thứ một mình.</li>
-<li><strong>Vật thể cầm-ném</strong>: dùng cho cả combat và puzzle. Người chơi có thể ném vật vào công tắc, khóa, chuông, bánh răng, pressure plate, hoặc dùng vật thể làm nguồn chất lỏng/điểm neo cho Tulas.</li>
-<li><strong>Block trong Bastonne</strong>: Block luôn được đội cứu theo canon, nhưng Stranger có thể giúp hoặc bỏ qua anh trong lúc nhà tù náo loạn. Lựa chọn này không quyết định Block sống chết, mà quyết định mức thương tích, lòng tin của Block, và mức nghi ngờ của Henry/Solei với Stranger.</li>
+<li><strong>Bản đồ ngủ mơ khi chết</strong>: đây có thể là không gian giữa giấc mơ của Thần Sơ Sinh và ý thức Ghost. Người chơi hồi sinh tại đây, đổi kỹ năng, đặt lại bộ trang bị, hoặc trả tiền để đổi kỹ năng. Về truyện, mỗi lần chết là mỗi lần Ghost nghe tiếng gọi của Dây Rốn rõ hơn.</li>
+<li><strong>Mở đầu bằng Solei</strong>: phần hướng dẫn nên diễn ra ở căn cứ của đội Deep. Deep kiểm tra Solei trước nhiệm vụ giải cứu Block, từ đó dạy di chuyển, combo, chưởng, né, phản đòn, cầm-ném vật thể, và phối hợp đồng đội.</li>
+<li><strong>Tulas và phối hợp đội hình</strong>: Tulas có thể là thành viên đội hoặc nhân vật hỗ trợ từ sớm. Năng lực máu/chất lỏng của anh nên dùng để tạo bệ, khiên, cầu tạm, màn chắn vật thể bay, hoặc khóa dòng nước/bẫy; hiệu quả nhất khi phối hợp với Deep, Solei, Henry, Block hoặc Ghost thay vì giải mọi thứ một mình.</li>
+<li><strong>Vật thể cầm-ném</strong>: dùng cho cả chiến đấu và giải đố. Người chơi có thể ném vật vào công tắc, khóa, chuông, bánh răng, bàn ép, hoặc dùng vật thể làm nguồn chất lỏng/điểm neo cho Tulas.</li>
+<li><strong>Block trong Bastonne</strong>: Block luôn được đội cứu theo chính tuyến, nhưng Stranger có thể giúp hoặc bỏ qua anh trong lúc nhà tù náo loạn. Lựa chọn này không quyết định Block sống chết, mà quyết định mức thương tích, lòng tin của Block, và mức nghi ngờ của Henry/Solei với Stranger.</li>
 <li><strong>COMMAND sau khi Block trở lại đội</strong>: không nên bắt Stranger ra lệnh cho Block ngay lần đầu gặp. COMMAND nên mở khi Block đã được cứu và người chơi dùng anh như một đồng đội thật sự.</li>
 <li><strong>Lựa chọn mua/phá ở Laundel</strong>: dùng để tạo câu hỏi đạo đức nhỏ trước khi vào các lựa chọn lớn hơn. Lợi trước mắt có thể làm hành trình về sau độc hơn.</li>
 <li><strong>GROGER</strong>: boss ẩn nên là sản phẩm phụ của Laundel và lời nguyền, không chỉ là quái vật. Nó có thể là một người nhập cư bị bỏ lại trong cống, ăn token, rác thải, và xác chết đến khi thành truyền thuyết.</li>
-<li><strong>Route mất điện tàu ngầm</strong>: route khó hơn và thưởng tốt hơn, đồng thời cho người chơi cảm giác mình chủ động phá cơ sở Jamerson thay vì chỉ trốn chạy.</li>
+<li><strong>Tuyến mất điện tàu ngầm</strong>: tuyến này khó hơn và thưởng tốt hơn, đồng thời cho người chơi cảm giác mình chủ động phá cơ sở Jamerson thay vì chỉ trốn chạy.</li>
 <li><strong>Mỗi nhân vật có một câu hỏi riêng</strong>: Ghost là &quot;tôi là ai nếu quá khứ bị xóa?&quot;, Solei là &quot;tôi thuộc về đâu?&quot;, Deep là &quot;sức mạnh của tôi có phải chỉ để người khác dùng?&quot;, Henry là &quot;tôi có thể chiến đấu mà không biến thành kẻ mình ghét?&quot;, Tulas là &quot;sức mạnh đáng sợ có thể cứu người mà không biến tôi thành quái vật không?&quot;, Block là &quot;lòng trung thành khác gì phục tùng?&quot;</li>
 </ul>
         </article>
@@ -3530,6 +3699,14 @@
     </section>
   </main>
 
+  <div class="lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-label="Expanded image viewer" hidden>
+    <div class="lightbox-panel">
+      <button class="lightbox-close" type="button" id="lightbox-close" aria-label="Close image viewer" title="Close image viewer">&times;</button>
+      <img class="lightbox-image" id="lightbox-image" src="" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
   <!--
     EASY IMAGE EDIT:
     1. This page automatically includes supported image files under Campaign/Kickstarter/imgs.
@@ -3578,7 +3755,7 @@
                   "caption": "The Cradle / divine encounter preview"
             },
             {
-                  "src": "imgs/Stage3/Pain fotress.png",
+                  "src": "imgs/Stage3/Pain_fotress.png",
                   "alt": "Calvaria fortress environment",
                   "caption": "Calvaria fortress atmosphere"
             }
@@ -3667,6 +3844,26 @@
             "caption": "chars - SlashArt 2"
       },
       {
+            "src": "imgs/others/chua-mot-cot-ha-noi.jpg",
+            "alt": "others - Chua Mot Cot Ha Noi",
+            "caption": "others - Chua Mot Cot Ha Noi"
+      },
+      {
+            "src": "imgs/others/Goal_unfinsih.png",
+            "alt": "others - Goal Unfinsih",
+            "caption": "others - Goal Unfinsih"
+      },
+      {
+            "src": "imgs/others/goal-money-solei-20000-v2.png",
+            "alt": "others - Goal Money Solei 20000 V2",
+            "caption": "others - Goal Money Solei 20000 V2"
+      },
+      {
+            "src": "imgs/others/goal-money-solei-20000.png",
+            "alt": "others - Goal Money Solei 20000",
+            "caption": "others - Goal Money Solei 20000"
+      },
+      {
             "src": "imgs/others/Hero_figterX.jpg",
             "alt": "others - Hero FigterX",
             "caption": "others - Hero FigterX"
@@ -3682,9 +3879,19 @@
             "caption": "others - Play Now Poster Lf2"
       },
       {
+            "src": "imgs/others/Slash_art_Stage.png",
+            "alt": "others - Slash Art Stage",
+            "caption": "others - Slash Art Stage"
+      },
+      {
             "src": "imgs/Stage1/bar.png",
             "alt": "Stage1 - Bar",
             "caption": "Stage1 - Bar"
+      },
+      {
+            "src": "imgs/Stage1/base_deep.png",
+            "alt": "Stage1 - Base Deep",
+            "caption": "Stage1 - Base Deep"
       },
       {
             "src": "imgs/Stage1/Bastonne.png",
@@ -3695,6 +3902,11 @@
             "src": "imgs/Stage1/GROGER_boss.png",
             "alt": "Stage1 - GROGER Boss",
             "caption": "Stage1 - GROGER Boss"
+      },
+      {
+            "src": "imgs/Stage1/Harbor_Sunset_Battle_Map.png",
+            "alt": "Stage1 - Harbor Sunset Battle Map",
+            "caption": "Stage1 - Harbor Sunset Battle Map"
       },
       {
             "src": "imgs/Stage1/In_the_city_2.png",
@@ -3712,14 +3924,64 @@
             "caption": "Stage1 - Lab 3"
       },
       {
-            "src": "imgs/Stage1/model chapter 1 new 2t1.png",
-            "alt": "Stage1 - Model Chapter 1 New 2t1",
-            "caption": "Stage1 - Model Chapter 1 New 2t1"
+            "src": "imgs/Stage1/lab_under_mechanical_surveillance_room.png",
+            "alt": "Stage1 - Lab Under Mechanical Surveillance Room",
+            "caption": "Stage1 - Lab Under Mechanical Surveillance Room"
       },
       {
-            "src": "imgs/Stage1/Murts - fix.png",
-            "alt": "Stage1 - Murts Fix",
-            "caption": "Stage1 - Murts Fix"
+            "src": "imgs/Stage1/Marseille_Art.png",
+            "alt": "Stage1 - Marseille Art",
+            "caption": "Stage1 - Marseille Art"
+      },
+      {
+            "src": "imgs/Stage1/Marseille_Metropolis_Splash_Day.png",
+            "alt": "Stage1 - Marseille Metropolis Splash Day",
+            "caption": "Stage1 - Marseille Metropolis Splash Day"
+      },
+      {
+            "src": "imgs/Stage1/Marseille_Metropolis_Splash.png",
+            "alt": "Stage1 - Marseille Metropolis Splash",
+            "caption": "Stage1 - Marseille Metropolis Splash"
+      },
+      {
+            "src": "imgs/Stage1/marsile background before finish.png",
+            "alt": "Stage1 - Marsile Background Before Finish",
+            "caption": "Stage1 - Marsile Background Before Finish"
+      },
+      {
+            "src": "imgs/Stage1/marsile background dark generated.png",
+            "alt": "Stage1 - Marsile Background Dark Generated",
+            "caption": "Stage1 - Marsile Background Dark Generated"
+      },
+      {
+            "src": "imgs/Stage1/marsile background.png",
+            "alt": "Stage1 - Marsile Background",
+            "caption": "Stage1 - Marsile Background"
+      },
+      {
+            "src": "imgs/Stage1/model_chars_chapter.png",
+            "alt": "Stage1 - Model Chars Chapter",
+            "caption": "Stage1 - Model Chars Chapter"
+      },
+      {
+            "src": "imgs/Stage1/ref/ChatGPT_Image_25_mai_2026_19_46_25.png",
+            "alt": "ref - ChatGPT Image 25 Mai 2026 19 46 25",
+            "caption": "ref - ChatGPT Image 25 Mai 2026 19 46 25"
+      },
+      {
+            "src": "imgs/Stage1/ref/courjulien.png",
+            "alt": "ref - Courjulien",
+            "caption": "ref - Courjulien"
+      },
+      {
+            "src": "imgs/Stage1/ref/marseille view.png",
+            "alt": "ref - Marseille View",
+            "caption": "ref - Marseille View"
+      },
+      {
+            "src": "imgs/Stage1/ref/panier.png",
+            "alt": "ref - Panier",
+            "caption": "ref - Panier"
       },
       {
             "src": "imgs/Stage1/Sewer1.png",
@@ -3737,6 +3999,11 @@
             "caption": "Stage1 - Sewer3"
       },
       {
+            "src": "imgs/Stage1/Shemal.png",
+            "alt": "Stage1 - Shemal",
+            "caption": "Stage1 - Shemal"
+      },
+      {
             "src": "imgs/Stage1/Start.png",
             "alt": "Stage1 - Start",
             "caption": "Stage1 - Start"
@@ -3745,6 +4012,31 @@
             "src": "imgs/Stage1/stranger.png",
             "alt": "Stage1 - Stranger",
             "caption": "Stage1 - Stranger"
+      },
+      {
+            "src": "imgs/Stage1/structure_Lab_underground.png",
+            "alt": "Stage1 - Structure Lab Underground",
+            "caption": "Stage1 - Structure Lab Underground"
+      },
+      {
+            "src": "imgs/Stage1/submarine_backup_generator_b_engine_heat_room.png",
+            "alt": "Stage1 - Submarine Backup Generator B Engine Heat Room",
+            "caption": "Stage1 - Submarine Backup Generator B Engine Heat Room"
+      },
+      {
+            "src": "imgs/Stage1/submarine_central_reactor_access.png",
+            "alt": "Stage1 - Submarine Central Reactor Access",
+            "caption": "Stage1 - Submarine Central Reactor Access"
+      },
+      {
+            "src": "imgs/Stage1/submarine_shemal_containment_chamber.png",
+            "alt": "Stage1 - Submarine Shemal Containment Chamber",
+            "caption": "Stage1 - Submarine Shemal Containment Chamber"
+      },
+      {
+            "src": "imgs/Stage1/Team_Deep_Solei_Tutorial_Map.png",
+            "alt": "Stage1 - Team Deep Solei Tutorial Map",
+            "caption": "Stage1 - Team Deep Solei Tutorial Map"
       },
       {
             "src": "imgs/Stage1/Torture_room_1.png",
@@ -3760,6 +4052,11 @@
             "src": "imgs/Stage2/bamboo forest 2.png",
             "alt": "Stage2 - Bamboo Forest 2",
             "caption": "Stage2 - Bamboo Forest 2"
+      },
+      {
+            "src": "imgs/Stage2/bamboo_forest_HUD_AI.png",
+            "alt": "Stage2 - Bamboo Forest HUD AI",
+            "caption": "Stage2 - Bamboo Forest HUD AI"
       },
       {
             "src": "imgs/Stage2/bridge 2 r 1.png",
@@ -3792,14 +4089,34 @@
             "caption": "Stage2 - J 2 Road To Temple2"
       },
       {
+            "src": "imgs/Stage2/Noh_theattre.png",
+            "alt": "Stage2 - Noh Theattre",
+            "caption": "Stage2 - Noh Theattre"
+      },
+      {
             "src": "imgs/Stage2/old room_sakuri.png",
             "alt": "Stage2 - Old Room Sakuri",
             "caption": "Stage2 - Old Room Sakuri"
       },
       {
+            "src": "imgs/Stage2/sakuri final_1_concept.png",
+            "alt": "Stage2 - Sakuri Final 1 Concept",
+            "caption": "Stage2 - Sakuri Final 1 Concept"
+      },
+      {
             "src": "imgs/Stage2/sakuri final_1_phase_3.png",
             "alt": "Stage2 - Sakuri Final 1 Phase 3",
             "caption": "Stage2 - Sakuri Final 1 Phase 3"
+      },
+      {
+            "src": "imgs/Stage2/sakuri_deceptive_door_puzzle_concept.png",
+            "alt": "Stage2 - Sakuri Deceptive Door Puzzle Concept",
+            "caption": "Stage2 - Sakuri Deceptive Door Puzzle Concept"
+      },
+      {
+            "src": "imgs/Stage2/Sakuri.png",
+            "alt": "Stage2 - Sakuri",
+            "caption": "Stage2 - Sakuri"
       },
       {
             "src": "imgs/Stage2/Temple.png",
@@ -3817,12 +4134,12 @@
             "caption": "Stage3 - Dusk Haeven"
       },
       {
-            "src": "imgs/Stage3/image.png",
-            "alt": "Stage3 - Image",
-            "caption": "Stage3 - Image"
+            "src": "imgs/Stage3/eye_area.png",
+            "alt": "Stage3 - Eye Area",
+            "caption": "Stage3 - Eye Area"
       },
       {
-            "src": "imgs/Stage3/Pain fotress.png",
+            "src": "imgs/Stage3/Pain_fotress.png",
             "alt": "Stage3 - Pain Fotress",
             "caption": "Stage3 - Pain Fotress"
       },
@@ -3830,6 +4147,26 @@
             "src": "imgs/Stage3/Ruined boss.png",
             "alt": "Stage3 - Ruined Boss",
             "caption": "Stage3 - Ruined Boss"
+      },
+      {
+            "src": "imgs/Stage3/xuong_skull_catacomb_market_v2.png",
+            "alt": "Stage3 - Xuong Skull Catacomb Market V2",
+            "caption": "Stage3 - Xuong Skull Catacomb Market V2"
+      },
+      {
+            "src": "imgs/Stage3/xuong_skull_catacomb_market.png",
+            "alt": "Stage3 - Xuong Skull Catacomb Market",
+            "caption": "Stage3 - Xuong Skull Catacomb Market"
+      },
+      {
+            "src": "imgs/Stage3/xuong_skull_market_wide_v2.png",
+            "alt": "Stage3 - Xuong Skull Market Wide V2",
+            "caption": "Stage3 - Xuong Skull Market Wide V2"
+      },
+      {
+            "src": "imgs/Stage3/xuong_skull_market_wide.png",
+            "alt": "Stage3 - Xuong Skull Market Wide",
+            "caption": "Stage3 - Xuong Skull Market Wide"
       },
       {
             "src": "imgs/Stage3/xuong_skull.png",
@@ -3857,19 +4194,39 @@
             "caption": "Stage5 - Meet The God Trailer"
       },
       {
+            "src": "imgs/UI/base-goal-stretch-goals.png",
+            "alt": "UI - Base Goal Stretch Goals",
+            "caption": "UI - Base Goal Stretch Goals"
+      },
+      {
+            "src": "imgs/UI/Character_selcted_story.png",
+            "alt": "UI - Character Selcted Story",
+            "caption": "UI - Character Selcted Story"
+      },
+      {
             "src": "imgs/UI/character-select-wip.png",
             "alt": "UI - Character Select Wip",
             "caption": "UI - Character Select Wip"
       },
       {
-            "src": "imgs/UI/character-select-wip1.png",
-            "alt": "UI - Character Select Wip1",
-            "caption": "UI - Character Select Wip1"
+            "src": "imgs/UI/In_game_generated.png",
+            "alt": "UI - In Game Generated",
+            "caption": "UI - In Game Generated"
       },
       {
             "src": "imgs/UI/K_baner.png",
             "alt": "UI - K Baner",
             "caption": "UI - K Baner"
+      },
+      {
+            "src": "imgs/UI/Pause_menu_genereed.png",
+            "alt": "UI - Pause Menu Genereed",
+            "caption": "UI - Pause Menu Genereed"
+      },
+      {
+            "src": "imgs/UI/stretch-goals-deep-sword-roadmap.png",
+            "alt": "UI - Stretch Goals Deep Sword Roadmap",
+            "caption": "UI - Stretch Goals Deep Sword Roadmap"
       }
 ];
 
@@ -3878,6 +4235,11 @@
     const searchInput = document.getElementById("doc-search");
     const searchCount = document.getElementById("search-count");
     const progress = document.getElementById("read-progress");
+    const lightbox = document.getElementById("image-lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const lightboxClose = document.getElementById("lightbox-close");
+    let lastFocusedElement = null;
 
     function mergedImageSlots(docSlots) {
       const seen = new Set();
@@ -3902,7 +4264,8 @@
       const caption = escapeHtml(slot.caption || "Add image");
       const alt = escapeHtml(slot.alt || slot.caption || "Divergency image");
       if (slot.src) {
-        return '<figure class="media-slot"><img src="' + escapeHtml(slot.src) + '" alt="' + alt + '" loading="lazy"><figcaption>' + caption + '</figcaption></figure>';
+        const src = escapeHtml(slot.src);
+        return '<figure class="media-slot"><button class="media-image-button" type="button" data-lightbox-src="' + src + '" data-lightbox-alt="' + alt + '" data-lightbox-caption="' + caption + '" aria-label="View larger image: ' + caption + '"><img src="' + src + '" alt="' + alt + '" loading="lazy"></button><figcaption>' + caption + '</figcaption></figure>';
       }
       return '<figure class="media-slot"><div class="media-placeholder"><span>Image slot<br>Add path in IMAGE_SLOTS</span></div><figcaption>' + caption + '</figcaption></figure>';
     }
@@ -3950,6 +4313,30 @@
       const amount = Math.max(240, grid.clientWidth * 0.86);
       grid.scrollBy({ left: amount * direction, behavior: "smooth" });
       window.setTimeout(() => updateMediaControls(docId), 360);
+    }
+
+    function openLightbox(button) {
+      if (!button || !button.dataset.lightboxSrc) return;
+      lastFocusedElement = document.activeElement;
+      lightboxImage.src = button.dataset.lightboxSrc;
+      lightboxImage.alt = button.dataset.lightboxAlt || "";
+      lightboxCaption.textContent = button.dataset.lightboxCaption || "";
+      lightbox.hidden = false;
+      document.body.classList.add("lightbox-open");
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      if (lightbox.hidden) return;
+      lightbox.hidden = true;
+      document.body.classList.remove("lightbox-open");
+      lightboxImage.removeAttribute("src");
+      lightboxImage.alt = "";
+      lightboxCaption.textContent = "";
+      if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+        lastFocusedElement.focus();
+      }
+      lastFocusedElement = null;
     }
 
     function escapeHtml(value) {
@@ -4038,6 +4425,18 @@
 
     document.querySelectorAll(".media-grid").forEach((grid) => {
       grid.addEventListener("scroll", () => updateMediaControls(grid.dataset.mediaGrid), { passive: true });
+      grid.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-lightbox-src]");
+        if (button) openLightbox(button);
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeLightbox();
     });
 
     searchInput.addEventListener("input", runSearch);

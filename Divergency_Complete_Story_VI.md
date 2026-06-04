@@ -134,6 +134,9 @@ Phần chơi nên bắt đầu ở căn cứ tạm của đội Deep, không ph�
 
 > "Ta muốn cháu chứng minh cháu có thể tham gia nhiệm vụ giải cứu lần này."
 
+![Bastonne](<imgs/Stage1/Team_Deep_Solei_Tutorial_Map.png>)
+
+
 Đây là phần hướng dẫn tự nhiên. Người chơi điều khiển Solei để học di chuyển, né, đánh thường, combo, chưởng, phản đòn, cầm/nhặt/ném vật thể, và phối hợp cơ bản với đồng đội. Nếu Tulas có mặt trong đội từ đầu, anh có thể tạo bệ chất lỏng cho Solei nhảy qua vật cản, dựng khiên nước để chặn đạn tập, hoặc kéo một thùng kim loại đến vị trí cần ném vào công tắc. Qua lời thoại, người chơi biết **Block** là người của đội hoặc đồng minh thân thiết đã bị Jamerson bắt. Nhiệm vụ tới Bastonne vì vậy có hai mục tiêu: cứu Block và lấy bằng chứng về thí nghiệm của Jamerson.
 
 ![Bastonne](<imgs/Stage1/Bastonne.png>)
@@ -190,6 +193,7 @@ Nếu lòng tin giữa Ghost và đội không được cải thiện, điều �
 Bạo lực ở Armorlite không phải ngẫu nhiên. Băng đua xe, băng thuốc phiện và các nhóm giang hồ đường phố đã có thù với đội Deep từ trước vì nhóm từng phá một tuyến vận chuyển người, thuốc và xăng của chúng. Sau Bastonne, cảnh sát mật treo thưởng trong thế giới ngầm và ra lệnh cho chúng canh các lối ra thành phố. Một nhóm đánh hơi được gara cũ, lần đến Armorlite, rồi bước vào quán như thể đến thu nợ Jacques.
 
 Trận chiến bắt đầu khi tay chân của chúng đập cửa, dọa Jacques, rồi dùng chai rượu, ghế gỗ và bàn bi-da làm vũ khí. Nhân vật do người chơi điều khiển có thể kịp xin lỗi Jacques trước khi ném chiếc cốc hoặc chai đang cầm thẳng vào kẻ đầu tiên. Ba tên bị văng ra phố; một tên gục, hai tên còn nửa máu. Từ đây, trận đánh kéo ra con phố hẹp và khu cảng dịch vụ phía sau quán. Kẻ địch chạy xe máy từ ngoài màn hình vào, có mũi tên cảnh báo hướng lao, tăng tốc từ chậm đến nhanh, và có thể bị đánh ngã bằng đòn nhảy, vũ khí ném, hoặc phản đòn đúng nhịp.
+![marsile_background_driver](<imgs/Stage1/marsile background.png>)
 
 Boss là thủ lĩnh băng đua xe, cưỡi một chiếc xe máy lớn. Pha đầu dùng những cú lao ngang, quay xe, vạch lửa và hai đàn em chở người cầm vũ khí sau lưng. Khi bị đánh ngã, hắn chỉ nằm mở một cửa sổ sát thương ngắn rồi lại leo lên xe. Dưới 50% máu, hắn rút thanh kiếm gia truyền của băng, không còn dễ bị hất khỏi xe, gọi đàn em chạy cắt màn hình, và tạo đường lửa bằng mũi kiếm kéo trên mặt đường. Khi phải đi bộ, hắn dùng chém dọc, chém ngang, chém hất để chống lặp đòn nhảy đánh, rồi lao nhanh áp sát.
 
@@ -224,6 +228,8 @@ Một số con đầu đàn có thể tăng sức cho đàn nhỏ; khi bị hạ
 
 Sau khi ra khỏi cống, người chơi có một đoạn đi bộ khoảng 30 giây không giao chiến. Hoàng hôn trải dài trên bến cảng. Nhạc nhẹ hơn. Cả nhóm nói về việc nếu thoát được Marseille, họ có thể đến phía đông lánh nạn, sống một thời gian không bị gọi là tội phạm. Solei đùa nửa câu, Deep nói rằng tự do không phải một nơi trên bản đồ, Henry im lặng lâu hơn bình thường, còn Ghost chỉ nhìn mặt trời.
 
+![Harbor_Sunset_Battle_Map](<imgs/Stage1/Harbor_Sunset_Battle_Map.png>)
+
 Tại điểm hẹn, chiếc thuyền trống rỗng. Khi cả nhóm đi đến giữa màn, cảnh sát mật phục kích. Bến cảng mở rộng thành một chiến trường nhiều điểm: cầu nâng, container, bảng điều khiển thuyền, lính bắn tỉa trên cao, và quái cống còn đuổi theo từ phía sau. Đây là nơi COMMAND bắt đầu có cảm giác gần một trận chiến thuật thời gian thực thu nhỏ: Block giữ tuyến cầu, Deep phá khóa container hoặc giáp máy, Henry đánh dấu lính bắn tỉa/thủ lĩnh đàn, Solei chạy cắt mục tiêu yếu, hoặc nhảy xuống nước phá vòng vây đằng sau. Người chơi vẫn đánh trực tiếp, nhưng phải chia việc để không bị bao vây.
 
 Có lính bắn tỉa với tia ngắm laser, buộc người chơi di chuyển liên tục và không đứng yên dồn combo quá lâu. Lính cận chiến dùng dao và súng ngắn; mỗi lần chuyển sang bắn đều có tín hiệu hình ảnh và âm thanh trước khi rút súng. `Heat` càng cao từ Armorlite/Laundel thì viện binh ở bến cảng càng đến sớm.
@@ -235,7 +241,6 @@ Sau trận chiến, nhóm tra hỏi tên lính cuối cùng. Họ biết một �
 Henry chọn quay lại vào bóng tối.
 
 ### 1-4. Tàu ngầm nghiên cứu và SheMal
-![Marseille city concept](<imgs/Stage1/lab_3.png>)
 
 Tàu ngầm nằm dưới một vùng nước đen gần bến cảng, được ngụy trang như trạm đo áp lực. Bên trong là phòng thí nghiệm nổi, nơi Jamerson đưa những thí nghiệm quá nguy hiểm ra khỏi đất liền.
 
@@ -243,13 +248,20 @@ Người chơi thấy những bình chứa cơ thể lai, tù nhân bị nối v
 
 Tuyến tàu ngầm có hai cách tiến. Cách thường là dùng ba trạm điều khiển nằm ở phòng trưởng lính gác, kho dữ liệu thí nghiệm và phòng kiểm soát áp suất để mở lò phản ứng trung tâm. Cách khó là phá hai máy phát phụ. Khi máy phát bị phá, một phần tàu chuyển sang ánh sáng đỏ khẩn cấp; lính gác ở những khu mất điện bị vật thí nghiệm thất bại giết sạch, còn quái được tăng tốc độ và sát thương vì chúng sợ ánh sáng thường nhưng điên loạn trong bóng tối. `SubmarinePowerRoute` không đổi kết thúc chính, nhưng đổi độ khó, vật phẩm rơi, bằng chứng còn lại và giọng kể về cái giá của hành động phá hoại.
 
+
+
+![shemale_chamber](<imgs/Stage1/lab_3.png>)
+
 Địa hình tàu ngầm cũng trở thành vũ khí. Nhiều phòng có đường ống khí và vách kim loại cong; kẻ địch bị đánh bay mạnh vào tường có thể bật lại như một vật thể va chạm, gây sát thương cho mục tiêu đầu tiên va phải. Hiệu ứng này chỉ xảy ra theo nhịp giới hạn để tránh biến đấu trường thành hỗn loạn, nhưng đủ để người chơi chủ động dùng Deep/Block hoặc vật ném mạnh trong không gian hẹp.
+
+![shemale_chamber_AI](<imgs/Stage1/submarine_shemal_containment_chamber.png>)
 
 Boss chính là **SheMal**, một "thất bại hoàn hảo". SheMal từng là một tù nhân nữ vô danh, bị sử dụng làm nền cho cơ thể nhân tạo. Cô không phải thần, không phải người theo nghĩa cũ, nhưng cũng không phải quái vật vô tri. Trong những khoảnh khắc ngắn, cô lặp lại những câu của Heniana mà Jamerson bắt máy móc phát bên cạnh buồng ngủ đông: "Cha ơi, đừng đóng cửa."
 
 SheMal chiến đấu thiên về cận chiến hơn là một quái vật đứng xa phóng ảo giác. Cô cao và nặng ngang Deep, di chuyển như một võ sĩ bị ép vào cơ thể sai, hai tay mọc móng vuốt dài đủ để cào rách kim loại mỏng. Những lúc Con Mắt chưa chiếm trọn, cô đánh bằng bản năng: áp sát, khóa tay, đập vào tường, phản đòn khi người chơi tham combo. Khi Con Mắt mở ra, các ảo ảnh Heniana/Jamerson mới trộn vào nhịp đánh, khiến người chơi khó biết cú chém nào là thật.
 
 SheMal liên kết trực tiếp với Con Mắt. Trên cơ thể cô có dấu vết của một nghi thức phương Đông: bản đồ đến bán đảo Sakuri, ký hiệu Cái Tai, và ghi chú về khả năng "nghe tiếng bệnh trong dòng máu của Heniana khi cô đang ngủ đông".
+![submarine_backup_generator_b_engine_heat_room](<imgs/Stage1/submarine_backup_generator_b_engine_heat_room.png>)
 
 Nếu `SubmarinePowerRoute = Sabotage`, tàu ngầm chuyển sang tuyến khó hơn. Quái và SheMal nguy hiểm hơn, nhưng rơi vật phẩm và kỹ năng có phẩm chất cao hơn. Về mặt truyện, điều này thể hiện nhóm chọn phá hủy hạ tầng để ngăn thí nghiệm, chấp nhận tự đẩy mình vào nguy cơ lớn hơn.
 
@@ -280,6 +292,16 @@ Cái Tai nghe được tâm tư, âm mưu, tiếng động từ xa, và cả nh�
 Sakuri không sinh ra để làm hại người khác. Cô là một đứa trẻ bị biến thành công cụ, rồi lớn lên trong tiếng nói dối của người lớn và tiếng cầu cứu không bao giờ dứt. Càng về sau, cơ thể cô càng lệch khỏi con người bình thường: Cái Tai bắt cô nghe nhịp máu, mùi bệnh, lời thề trong huyết thống, và những dòng máu bị trộn lẫn quanh Heniana/Heni. Vì vậy Sakuri có những cơn khát máu giống một lời nguyền ma cà rồng hơn là thói tàn bạo. Cô không luôn kiểm soát được mình.
 
 Solei bắt đầu nghe những ngôn ngữ, phong tục, và bài hát mẹ cô từng hát. Nhưng thay vì thấy mình trở về nhà, cô thấy một xã hội cũng biết chia tầng, loại trừ, và dùng dòng máu để quyết định ai được sống sang hơn.
+
+### Note khai thác sau: Sakura điềm đạm và người tiền nhiệm hóa điên
+
+Nếu đổi Sakura theo concept mới điềm đạm hơn, có thể tách hình ảnh Sakuri/Sakura hiện tại thành hai lớp nhân vật thay vì dồn toàn bộ vào một boss. Sakura hiện tại vẫn là người đang giữ Cái Tai, nhưng cô chịu đựng nó bằng sự tĩnh lặng, kỷ luật và khả năng lắng nghe rất sâu. Cô không còn là trung tâm của một trận đánh máu lửa. Khi nhóm gặp cô, nhịp chơi nên nghiêng về đối thoại, đọc cảm xúc, phá hiểu lầm, né những đợt cộng hưởng âm thanh, hoặc giúp cô tạm khóa bớt tiếng nói trong đầu.
+
+Phần animation Sakura đang có, với chất sexy, dữ dội, khát máu và ma cà rồng, có thể chuyển sang **chị em của Sakura** hoặc **người tiền nhiệm từng giữ Cái Tai trước cô**. Người này là bằng chứng sống cho việc không ai thật sự chịu nổi Cái Tai quá lâu: nghe quá nhiều lời nói dối, âm mưu, tiếng bệnh, lời cầu cứu và ký ức cổ đại đến mức phát điên. Các gia tộc có thể đã giấu sự tồn tại của người tiền nhiệm, gọi đó là "thánh nữ thất bại", rồi nhốt hoặc yểm cô dưới đền ngầm để bảo vệ hình tượng Sakura hiện tại.
+
+Nếu dùng hướng này, boss chính của Stage 2 nên là người tiền nhiệm/chị em hóa điên, không phải Sakura hiện tại. Trận đánh vẫn giữ được năng lượng hung bạo, áp sát, móng vuốt, khát máu và motif ma cà rồng, nhưng ý nghĩa đổi thành: người chơi không đánh bại "Sakura", mà đánh bại một tương lai mà Sakura có thể trở thành nếu tiếp tục bị dùng như công cụ. Điều này làm Sakura hiện tại dễ đồng cảm hơn với Solei: cả hai đều bị dòng máu, quê hương và kỳ vọng của người khác định nghĩa, nhưng vẫn muốn tự chọn mình là ai.
+
+Sau trận, Sakura có thể nói chuyện với Solei thay vì gục xuống như một boss bị hạ. Cô nghe được nỗi lạc lõng của Solei mà không phán xét, còn Solei lần đầu thấy một người ở Sakuri không cố hỏi cô thuộc về phe nào. Đây có thể là mấu chốt cảm xúc của Stage 2: Solei không tìm được một quê hương hoàn hảo, nhưng gặp một người hiểu cảm giác bị biến thành biểu tượng cho thứ mình không chọn.
 
 ### 2-1. Làng chài và bé gái bán hàng rong
 ![J_1_sakuri](<imgs/Stage2/J_1_sakuri.png>)
@@ -330,6 +352,9 @@ Trong chợ, Heni nhìn thấy trẻ em nhà giàu chơi với búp bê có mặ
 
 
 Trong cung điện, nhóm gặp **DeceptiveDoorPuzzle**: một dãy cửa được sơn bằng những màu tưởng như rất rõ ràng với người bình thường, nhưng thật ra màu là mồi nhử. Đáp án đúng phải chọn theo cách một người mù màu hoặc người nhìn lệch màu phân biệt: độ sáng, biểu tượng phụ, vân gỗ, vết mòn dưới ngưỡng cửa, và thứ tự họa tiết. Cung điện dùng puzzle này để loại người ngoài và người hầu "không đủ huyết thống", nhưng chính logic đó cũng cho Solei một cách nhìn khác để phá khóa.
+![sakuri_deceptive_door_puzzle_concept](<imgs/Stage2/sakuri_deceptive_door_puzzle_concept.png>)
+
+
 
 ### 2-4. Đền ngầm, đỉnh núi và Sakuri
 
@@ -337,6 +362,7 @@ Cả nhóm đột nhập cung điện, vượt qua những cửa lừa và đi x
 
 Nhưng đền ngầm không phải nơi cuối cùng. Nó là rễ của ngọn núi. Khi Cái Tai thức dậy, sàn đá nứt ra và những bậc thang cổ kéo cả nhóm lên một đỉnh núi bị tách khỏi mặt đất. Ở đó có nhiều cành sakura mọc xuyên qua đá, những mảng đất lơ lửng quanh miệng vực, và gió mang theo tiếng chuông từ mọi hướng.
 
+![sakuri final_concept](<imgs/Stage2/sakuri final_1_concept.png>)
 ![sakuri final_1_phase_3](<imgs/Stage2/sakuri final_1_phase_3.png>)
 
 
@@ -361,7 +387,7 @@ Kết thúc Stage 2, Heni quyết định đi cùng nhóm. Cô không muốn b�
 ## Stage 3 - Calvaria: xương, mộ, tôn giáo, và cái chết bị rao bán
 
 ### Bối cảnh
-![Pain fotress](<imgs/Stage3/Pain fotress.png>)
+![Pain fotress](<imgs/Stage3/Pain_fotress.png>)
 
 
 **Calvaria** là một thành phố mộ xây quanh những hầm xương không thấy đáy. Từ xa xưa, người dân mang xác người thân đến đây để được đặt tên trong **Sổ Thở Cuối**. Khi Đại Họa lan rộng, Calvaria trở thành nơi hành hương của cả thế giới. Ai cũng muốn nghe lại giọng người đã mất một lần cuối.
@@ -382,7 +408,9 @@ Nhóm đến Calvaria để tìm Cái Lưỡi, nhưng mỗi người đến đâ
 Trên đường, người chơi gặp dân hành hương, kẻ trộm mộ, lính đánh thuê của giáo hội, và những "người ghi tên" chuyên thu phí từ từng cái chết. Đây là giai đoạn kể về mặt trái của niềm an ủi: khi đau khổ quá lớn, con người sẵn sàng trả bất cứ giá nào để nghe một lời nói dối dịu dàng.
 
 ### 3-2. Chợ xương và hầm mộ sống
-![xuong_skull](<imgs/Stage3/xuong_skull.png>)
+![Calvaria bone market wide](<imgs/Stage3/xuong_skull_market_wide_v2.png>)
+
+![Calvaria living catacomb market](<imgs/Stage3/xuong_skull_catacomb_market_v2.png>)
 
 Calvaria không chỉ có mộ. Nó là một hệ sinh thái. Xương được rửa, phân loại, khắc tên, bán làm bùa hộ, vật liệu xây dựng, hoặc linh kiện cho những cơ thể cầu nguyện. Giáo hội tạo ra những chiến binh xương bằng cách gắn mảnh ý chí của Cái Lưỡi vào hài cốt.
 
