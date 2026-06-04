@@ -106,9 +106,11 @@ Sang Stage 2, nhóm gặp một bé gái bán hàng rong trong làng chài, gi�
 
 Nhóm tạm gọi cô bé là **Heni**. Ban đầu đây chỉ là cách gọi để phân biệt với Heniana. Về sau, Heni tự giữ cái tên đó như một lời khẳng định: cô không phải bản sao của ai nữa.
 
-## Prologue - Vinh quang và vết nứt của Marseille
+## Prologue - Marseille dưới nắng và những vết nứt
 
-Marseille được xây từ nhiều thành phố nhỏ sáp nhập lại sau các đợt Đại Họa. Vùng trung tâm có tháp năng lượng, vườn trồng nhân tạo, nhà máy nuôi cá, hệ thống tái chế nước, và những khu phố sáng đến mức người ngoài thành phố tưởng đó là thiên đường. Nhưng càng ra xa trung tâm, mọi thứ càng thấp, tối, và chật chội. Ở vùng ven, người nhập cư làm việc để trả nợ nhập thành, người bệnh bị đẩy vào khu cách ly, trẻ em lớn lên bên cạnh cổng nhà máy và doanh trại.
+![Marseille ban ngày](<imgs/Stage1/Marseille_Metropolis_Splash_Day.png>)
+
+Nhìn từ đồi cao, Marseille vẫn là thành phố cảng Địa Trung Hải quen thuộc của đầu thập niên 2000: nắng xanh, biển rộng, mái ngói đỏ, những con đường dốc men theo triền đá, cầu cạn nối các khu dân cư với bến cảng, và nhà thờ trên đỉnh đồi nhìn xuống cả vịnh. Sau các đợt Đại Họa, thành phố được sửa sang và quản lý chặt hơn: cảng sạch hơn, phố xá sáng hơn, bệnh viện và khu dân cư mới mọc lên, khiến người mới đến dễ tin rằng đây là một nơi có thể sống yên ổn. Nhưng càng rời những quảng trường, bến du thuyền và các khu phố sáng sủa, mặt sau của Marseille càng lộ ra: khu cách ly , kho hàng , nhiều bến cảng , ngõ ngách , khu ổ chuột chui bẩn thỉu , dân nhập cư , trẻ em lớn lên cạnh các nhà máy và những doanh trại luôn sáng đèn , và nhiều lúc nghe thấy tiếng hét , xì xào khó chịu.
 
 Jamerson sinh ra trong một gia đình trung lưu có gốc lâu đời tại Marseille, sau đó kết hôn với một phụ nữ từ gia đình giàu có sa cơ. Cuộc hôn nhân ban đầu là thỏa thuận giữa hai gia đình, nhưng theo thời gian, Jamerson thật sự gắn bó với vợ và hai con: **Jemerny** và **Heniana**.
 

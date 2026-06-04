@@ -62,9 +62,9 @@ const imageSlots = {
       caption: "Stage 1 sewer exploration",
     },
     {
-      src: "imgs/UI/character-select-wip.png",
-      alt: "Work-in-progress character select UI",
-      caption: "Character select direction",
+      src: "imgs/UI/Character_selcted_story.png",
+      alt: "Character and mission selection UI",
+      caption: "Mission and loadout selection",
     },
     {
       src: "imgs/Stage4/view_final.gif",
@@ -152,12 +152,15 @@ const imageSlots = {
     {
       src: "",
       alt: "Timeline graphic",
-      caption: "Add 18-month timeline visual",
+      caption: "Add 24-month timeline visual",
     },
   ],
 };
 
 const supportedImageExtensions = new Set([".gif", ".jpg", ".jpeg", ".png", ".webp"]);
+const excludedAutoImageSlots = new Set([
+  "imgs/UI/base-goal-stretch-goals.png",
+]);
 
 function toBrowserPath(value) {
   return value.split(path.sep).join("/");
@@ -204,6 +207,9 @@ function collectImageSlots() {
         }
 
         const src = toBrowserPath(path.relative(here, absolute));
+        if (excludedAutoImageSlots.has(src)) {
+          return;
+        }
         const caption = captionFromImagePath(src);
         slots.push({
           src,
