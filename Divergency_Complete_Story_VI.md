@@ -326,20 +326,41 @@ Solei gặp những người từ dòng tộc mẹ mình, nhưng họ không đ�
 
 ### 2-2B. Rừng tre, thác nước, và cây cầu đá
 ![Bridge_1](<imgs/Stage2/Bridge_1.png>)
-![bambooforest2](<imgs/Stage2/bamboo forest 2.png>)
 
-Con đường lên thủ phủ không đi thẳng qua cổng chính. Nhóm phải băng qua một rừng tre trên sườn núi, nơi gió làm thân tre va vào nhau như tiếng thì thầm. Phía xa là một thác nước trắng, đổ xuống vực sâu, che mọi tiếng bước chân nhưng cũng làm mệnh lệnh của Henry khó nghe. Những mỏm đá ướt, cầu dây cũ, và mép núi khiến mỗi cuộc đánh nhau đều có nguy cơ rơi xuống vực.
+Để tiếp cận thủ phủ mà không bị phát hiện bởi lực lượng tuần tra ở cổng chính, nhóm phải lựa chọn con đường vòng đầy hiểm trở xuyên qua địa hình tự nhiên của bán đảo. Hành trình leo núi mở ra những cảnh sắc thiên nhiên phương Đông vừa hùng vĩ vừa u tịch: những dãy núi trập trùng ẩn hiện trong sương sớm, các rặng sakura cổ thụ rụng cánh hoa hồng nhạt xuống dòng nước xiết, và những lối đi men theo vách đá dựng đứng. Phía xa là một thác nước trắng xóa đổ thẳng xuống vực sâu. Mép đá ẩm ướt trơn trượt cùng những cây cầu dây cũ kỹ bắc qua sông khiến mỗi trận chiến đều mang tính sinh tử, nơi kẻ địch có thể đẩy ngã nhân vật xuống vực sâu trong chớp mắt.
 
-Ở cây cầu đá dẫn qua thác, nhóm gặp **Ryozan**. Ban đầu ông không hiện ra như một tướng quân. Thứ trườn dưới mặt nước giống một con nòng nọc đen khổng lồ, nửa linh hồn nửa lời thề, kéo lê cái đuôi dài quanh chân cầu. Nó tấn công bất cứ ai cố bước qua, như một bản năng bảo vệ đã bị bẻ cong.
+Tại cây cầu đá dẫn qua dòng sông xiết ngay sát chân thác nước lớn, nhóm đối mặt với **Ryozan**. 
 
-Khi ba mũi yểm dưới cầu bị phá, hình dạng thật hiện lại: một chiến binh mặc giáp đỏ, cầm đao dài, đứng chắn giữa tiếng thác. Ryozan không phải tay sai của Sakuri theo nghĩa đơn giản. Ông từng được giao bảo vệ cô, và trong thời gian đó ông là một trong rất ít người nhìn thấy Sakuri như một đứa trẻ bị nhốt chứ không phải thánh nữ. Ông đã từng muốn đưa cô khỏi cung điện, hoặc ít nhất chấm dứt việc các gia tộc dùng cô như cái máy nghe trộm.
+Ban đầu, Ryozan không xuất hiện dưới dạng một chiến binh. Thứ trườn dưới mặt nước cuồn cuộn giống như một thực thể bóng tối khổng lồ có hình dáng của một con nòng nọc đen, đại diện cho lời thề bảo hộ đã bị bẻ cong thành một lời nguyền giam giữ. Nó điên cuồng tấn công bất cứ ai bước lên cầu. Để đánh bại nó, người chơi phải tìm cách phá hủy ba cột yểm phong ấn nằm ở các mỏm đá xung quanh dòng thác.
+
+Khi các cột yểm dưới cầu bị phá, hình dạng thật của Ryozan được giải phóng: một vị tướng quân uy nghiêm trong bộ giáp đỏ rực, tay cầm đại đao chắn ngang giữa tiếng thác gầm. Ryozan không phải là kẻ phản diện phục tùng Sakuri. Trong quá khứ, ông từng được giao trọng trách bảo vệ cô từ khi còn nhỏ. Khác với những kẻ cầm quyền xem cô như một công cụ tiên tri, Ryozan nhìn thấy ở Sakuri một đứa trẻ đáng thương bị giam lỏng. Khi ông cố gắng lên kế hoạch đưa cô trốn thoát khỏi cung điện để chấm dứt sự hành hạ của Cái Tai, các gia tộc đã hãm hại ông, vu khống ông tội mưu phản.
+
 ![bridge_2_r_4](<imgs/Stage2/bridge_2_r_4.png>)
 
-Chính vì vậy Ryozan bị hãm hại. Các gia tộc và lãnh chúa biến nỗ lực bảo vệ Sakuri thành tội phản nghịch. Sakuri, trong một cơn khát máu và tiếng nói chồng chéo, chỉ nghe được những mảnh vụn: "đưa cô đi", "lật đổ", "không để cô nghe nữa". Cô không hiểu ông đang cứu mình hay phản bội mình. Ryozan bị xử tử, còn lời thề bảo vệ Sakuri bị yểm vào cây cầu, biến ông thành người canh cửa cho chính cái lồng mà ông từng muốn phá.
+Đau đớn hơn, Sakuri – khi đó đang quay cuồng trong những tiếng nói hỗn loạn của Cái Tai – chỉ nghe thấy những mảnh ký ức vụn vặt bị bóp méo, khiến cô tin rằng Ryozan muốn phản bội mình. Ryozan bị hành quyết, còn lời thề trung thành của ông bị các pháp sư yểm vào cây cầu đá, biến linh hồn ông thành kẻ canh giữ chiếc lồng giam cầm Sakuri mãi mãi.
 
-Sau trận, nếu người chơi phá yểm thay vì chỉ giết nhanh, Ryozan để lại một ký ức: Sakuri từng hỏi ông bầu trời ngoài cung điện có tiếng gì. Ông trả lời rằng trên núi, khi tuyết rơi, thế giới im đến mức một người có thể nghe chính mình thở. Ký ức đó trở thành chìa khóa cảm xúc cho trận Sakuri.
+Sau trận đấu, nếu người chơi chọn cách phá giải phong ấn (purify) thay vì tiêu diệt Ryozan một cách tàn nhẫn, vong hồn vị tướng quân sẽ để lại một mảnh ký ức dịu êm: ngày nhỏ Sakuri từng hỏi ông bầu trời ngoài cung điện có âm thanh thế nào. Ryozan đã trả lời rằng: *"Trên đỉnh núi tuyết, khi vạn vật chìm vào im lặng, cháu có thể nghe thấy cả tiếng thở của chính mình."* Ký ức này chính là chiếc chìa khóa cảm xúc quan trọng để người chơi xoa dịu tâm trí Sakuri trong trận chiến cuối cùng ở Stage 2.
+
+![bridge 4 complete](<imgs/Stage2/bridge 4 complete.png>)
+
+
+Sau khi vượt qua cây cầu đá, con đường dẫn nhóm vào một rừng tre bạt ngàn trải dài trên sườn núi dốc.
+
+![bambooforest2](<imgs/Stage2/bamboo forest 2.png>)
+
+
+![bambooforest3](<imgs/Stage2/Black bamboo forest complete.png>)
+
+
+
+Tại đây, gió thổi mạnh làm những thân tre va vào nhau vang lên âm thanh xào xạc như những tiếng thì thầm cấm kỵ. Rừng tre này là nơi cư ngụ của một bộ tộc thổ dân lâu đời với các phong tục cổ xưa và những chiếc mặt nạ gỗ truyền thống đầy bí ẩn. Nhóm của Deep phải trải qua một trận chiến du kích khốc liệt giữa những hàng tre dày đặc, tận dụng địa hình để ẩn nấp và đối phó với những đòn tấn công bất ngờ từ các chiến binh bộ tộc ẩn mình trong bóng lá.
+ 
+
+
 
 ### 2-3. Quốc lộ, chợ trung tâm, và cung điện
+
+![outside_kinhdo](<imgs/Stage2/outside_complete_open.png>)
 
 Thủ phủ đối lập hoàn toàn với làng chài. Chợ trung tâm đầy lụa, gia vị, vàng, rượu, và những món ăn xa xỉ. Lãnh chúa béo phì, thích tiệc tùng, tin hoàn toàn vào những gì Sakuri "nghe" được. Mỗi gia tộc cúng tiền cho đền thờ dưới cung điện để đổi lại lời tiên tri có lợi cho mình.
 
@@ -360,23 +381,35 @@ Trong cung điện, nhóm gặp **DeceptiveDoorPuzzle**: một dãy cửa đư�
 
 ### 2-4. Đền ngầm, đỉnh núi và Sakuri
 
-Cả nhóm đột nhập cung điện, vượt qua những cửa lừa và đi xuống đền ngầm bằng thang máy cũ cùng những cầu thang đá. Càng xuống sâu, âm thanh càng biến dạng. Người chơi nghe tiếng sóng biển từ rất xa, tiếng người chết trong hầm, tiếng ý nghĩ của đồng đội bị lặp lại như lời nói ngoài miệng.
+Cả nhóm đột nhập cung điện, vượt qua những cạm bẫy cửa lừa và đi xuống ngôi đền cổ nằm sâu dưới lòng đất bằng một hệ thống thang máy cũ kỹ cùng những bậc thang đá rêu phong. Càng xuống sâu, âm thanh xung quanh càng biến dạng kỳ dị dưới tác động từ sức mạnh của Cái Tai: người chơi sẽ nghe thấy tiếng sóng biển rì rào vọng lại từ khoảng không vô định, tiếng thì thầm rùng rợn của những vong hồn đã khuất trong hầm mộ, và cả tiếng ý nghĩ của các đồng đội bị lặp lại vang vọng bên tai như những lời chế giễu.
 
-Nhưng đền ngầm không phải nơi cuối cùng. Nó là rễ của ngọn núi. Khi Cái Tai thức dậy, sàn đá nứt ra và những bậc thang cổ kéo cả nhóm lên một đỉnh núi bị tách khỏi mặt đất. Ở đó có nhiều cành sakura mọc xuyên qua đá, những mảng đất lơ lửng quanh miệng vực, và gió mang theo tiếng chuông từ mọi hướng.
+Tuy nhiên, đền ngầm không phải là điểm kết thúc, mà là một lối đi ẩn giấu dẫn xuyên qua lòng núi. Khi đi hết hành lang sâu nhất của đền thờ, một cánh cổng đá mở ra phía sau dẫn thẳng tới chân của ngọn núi thiêng được bao bọc bởi kết giới cổ xưa. Nơi đây mở ra một thế giới biệt lập, huyền ảo và tách biệt hoàn toàn với thế giới bên ngoài.
+
+![start_moutain](<imgs/Stage2/sakuri_roadupmoutain_complete.png>)
+
+Hành trình leo núi bắt đầu từ đây. Ở những sườn núi thấp dưới chân ngọn núi, cảnh sắc tràn ngập vẻ thanh bình với cỏ cây tươi xanh và hoa anh đào nở rộ tựa chốn bồng lai. Nhưng càng lên cao, màu sắc xanh lục bảo lại càng chuyển dần sang sắc lam đậm cô tịch và lạnh lẽo; không gian huyền ảo ban đầu giờ bao trùm một màu sắc huyền bí, âm u.
+
+
+Nhóm phải liên tục leo lên đỉnh núi thiêng cao vút – nơi Sakuri ngự trị – bằng cách vượt qua các chướng ngại vật địa hình hiểm trở và những chiếc cổng Torii cổ kính, đổ nát chắn ngang các lối đi hẹp.
+
+![gate](<imgs/Stage2/gate_complete.png>)
+
+![platform](<imgs/Stage2/sakuri final 1 phase 1 environment complete.png>)
+
+Điểm đến cuối cùng là một thánh địa nằm chênh vênh giữa đỉnh núi tuyết. Tại đây, những cành sakura khẳng khiu mọc xuyên qua các khe đá nứt nẻ, các mảng đất lơ lửng giữa không trung quanh miệng vực sâu thẳm dưới tác động của một nguồn năng lượng vô hình, và gió mang theo tiếng chuông ngân vọng từ mọi hướng tạo nên bầu không khí vừa thiêng liêng vừa áp bách.
 
 ![sakuri final_concept](<imgs/Stage2/sakuri final_1_concept.png>)
 ![sakuri final_1_phase_3](<imgs/Stage2/sakuri final_1_phase_3.png>)
 
+Sakuri ngồi cô độc trong một điện thờ đá lớn mở toang ra bốn phía giữa đỉnh núi, đôi mắt bịt bằng dải vải trắng truyền thống. Cô không mù, nhưng đôi mắt bị niêm phong từ nhỏ để cô tập trung mọi giác quan và "nhìn" thế giới bằng đôi tai. Mảnh bảo vật **Cái Tai** được đặt trên chiếc khung vàng tinh xảo ngay phía sau cô, kết nối trực tiếp với mặt đất và hệ thần kinh của cô qua các sợi kim loại mỏng mảnh như dây thần kinh.
 
-Sakuri ngồi trong một phòng đá lớn mở ra giữa đỉnh núi, mắt bị bịt bằng vải trắng. Cô không mù, nhưng đôi mắt bị niêm phong từ nhỏ để cô "nhìn" bằng tai. Cái Tai được đặt trong một khung vàng, nối với mặt đất bằng những sợi kim loại mỏng như dây thần kinh.
+Sakuri không ác vì sinh ra đã ác. Cô chỉ là một đứa trẻ tội nghiệp bị tước đoạt tuổi thơ, bị biến thành công cụ chính trị cho các gia tộc. Hàng ngày, cô phải nghe mọi lời dối trá, mưu đồ ám hại và tiếng khóc than oán hận từ khắp nơi truyền về. Sự cộng hưởng liên tục của những âm thanh tiêu cực ấy đã đẩy tâm trí cô đến bờ vực điên loạn. Khi không thể chịu đựng thêm nữa, Sakuri quyết định phá hủy tất cả để thế giới xung quanh cô được trả lại sự im lặng tuyệt đối.
 
-Sakuri không ác vì sinh ra đã ác. Cô là một đứa trẻ bị biến thành công cụ, nghe mọi lời nói dối của người lớn, mọi âm mưu của gia tộc, mọi tiếng cầu cứu từ bên ngoài tường. Cuối cùng, cô quyết định nếu thế giới chỉ biết nhốt cô và dùng cô, cô sẽ phá hủy tất cả để không còn phải nghe nữa.
+Trận chiến với boss Sakuri diễn ra theo ba trục chính:
 
-Trận boss có ba trục:
-
-- Sakuri tấn công bằng âm thanh, ảo giác, và việc đọc ý định của người chơi.
-- Cơn khát máu làm cô có những đoạn áp sát bất ngờ, đánh bằng móng tay, dây kim loại và các nhịp âm sắc như vết cắn. Đây là lúc cô đáng sợ nhất nhưng cũng mất kiểm soát nhất.
-- Dư âm lời thề của Ryozan có thể xuất hiện như một khoảng ngắt. Nếu người chơi đã giải yểm ở cây cầu, ký ức của ông làm Sakuri dao động và tạo cửa sổ để nói chuyện/đánh ngắt nhịp. Nếu không, giáp đỏ chỉ còn là tiếng kim loại rỗng trong đấu trường, biến thành một nhịp tấn công phụ lạnh lùng hơn.
+- **Tấn công sóng âm và ảo giác**: Sakuri phát ra các đợt sóng âm gây choáng và tạo ra các ảo ảnh âm thanh đánh lừa hướng tấn công của người chơi. Nhờ Cái Tai, cô có khả năng đoán trước hướng di chuyển và các đòn đánh trực diện.
+- **Trạng thái cuồng loạn (Frenzy Phase)**: Cơn khát máu bộc phát khiến Sakuri tháo dải băng bịt mắt, lao vào tấn công áp sát chớp nhoáng bằng móng vuốt sắc nhọn, dây kim loại mảnh và những nhịp tấn công tàn bạo mang phong cách của một "ma cà rồng". Đây là lúc sát thương của cô cực kỳ lớn nhưng bù lại cô cũng dễ bị sơ hở nhất.
+- **Dư âm lời thề Ryozan**: Đây là cơ chế giải quyết cuộc chiến giàu cảm xúc. Nếu ở cây cầu đá, người chơi đã chọn phá yểm để giải phóng cho tướng quân Ryozan, ký ức thiêng liêng giữa ông và cô bé Sakuri ngày xưa sẽ hiện về dưới dạng một khúc ca thanh bình. Giai điệu yên ả này sẽ làm dịu đi những tiếng thì thầm điên loạn trong đầu Sakuri, khiến cô dao động và mở ra cơ hội để người chơi nói chuyện, làm gián đoạn nhịp tấn công hoặc vô hiệu hóa các ảo ảnh của cô. Ngược lại, nếu Ryozan bị tiêu diệt trước đó, bộ giáp đỏ của ông chỉ còn là một cỗ máy chiến đấu rỗng tuếch bị Cái Tai điều khiển để tấn công phụ trợ cho Sakuri một cách lạnh lùng.
 
 Trong trận, Sakuri phơi bày nỗi sợ của từng người. Henry sợ mình sẽ lặp lại tội ác của những kẻ anh từng chống. Deep sợ mình chỉ là vũ khí cũ được đặt tên "anh hùng". Solei sợ không nơi nào chấp nhận mình. Ghost gần như không có tiếng nói nội tâm để Sakuri nghe, chỉ có một khoảng trống làm cô sợ hãi.
 

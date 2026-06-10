@@ -1,0 +1,907 @@
+{
+  "image": "In_game_HUD_UI_Skill_Set_spritesheet.png",
+  "source": "imgs/UI/In_game_generated.png",
+  "source_size": {
+    "w": 1625,
+    "h": 968
+  },
+  "size": {
+    "w": 2039,
+    "h": 859
+  },
+  "padding": 4,
+  "sprite_count": 52,
+  "packing": "Shelf pack, non-rotated, transparent RGBA atlas",
+  "sprites": {
+    "top_player_hud_full": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 735,
+        "y": 278,
+        "w": 672,
+        "h": 199
+      },
+      "source_rect": {
+        "x": 14,
+        "y": 16,
+        "w": 672,
+        "h": 199
+      },
+      "rotated": false,
+      "trimmed": false,
+      "mask": "top_player_full"
+    },
+    "top_portrait_panel": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 1411,
+        "y": 278,
+        "w": 170,
+        "h": 196
+      },
+      "source_rect": {
+        "x": 15,
+        "y": 17,
+        "w": 170,
+        "h": 196
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_portrait_deep": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 503,
+        "y": 481,
+        "w": 129,
+        "h": 122
+      },
+      "source_rect": {
+        "x": 31,
+        "y": 32,
+        "w": 129,
+        "h": 122
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_level_plate_lv18": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 827,
+        "y": 481,
+        "w": 108,
+        "h": 45
+      },
+      "source_rect": {
+        "x": 43,
+        "y": 153,
+        "w": 108,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_status_stats_panel": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 4,
+        "y": 481,
+        "w": 495,
+        "h": 143
+      },
+      "source_rect": {
+        "x": 185,
+        "y": 21,
+        "w": 495,
+        "h": 143
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_name_deep": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 939,
+        "y": 481,
+        "w": 135,
+        "h": 43
+      },
+      "source_rect": {
+        "x": 202,
+        "y": 31,
+        "w": 135,
+        "h": 43
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_hp_meter_full": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 1581,
+        "y": 481,
+        "w": 454,
+        "h": 35
+      },
+      "source_rect": {
+        "x": 201,
+        "y": 82,
+        "w": 454,
+        "h": 35
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_hp_meter_fill": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 233,
+        "y": 628,
+        "w": 376,
+        "h": 22
+      },
+      "source_rect": {
+        "x": 272,
+        "y": 86,
+        "w": 376,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_mana_meter_full": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 1122,
+        "y": 481,
+        "w": 455,
+        "h": 35
+      },
+      "source_rect": {
+        "x": 201,
+        "y": 124,
+        "w": 455,
+        "h": 35
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_mana_meter_fill": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 613,
+        "y": 628,
+        "w": 370,
+        "h": 22
+      },
+      "source_rect": {
+        "x": 279,
+        "y": 128,
+        "w": 370,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_status_icon_guard": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 43,
+        "y": 628,
+        "w": 35,
+        "h": 35
+      },
+      "source_rect": {
+        "x": 466,
+        "y": 34,
+        "w": 35,
+        "h": 35
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_status_icon_fire": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 4,
+        "y": 628,
+        "w": 35,
+        "h": 35
+      },
+      "source_rect": {
+        "x": 512,
+        "y": 34,
+        "w": 35,
+        "h": 35
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_status_icon_heal": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 82,
+        "y": 628,
+        "w": 35,
+        "h": 35
+      },
+      "source_rect": {
+        "x": 558,
+        "y": 34,
+        "w": 35,
+        "h": 35
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_skill_counter_full": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 636,
+        "y": 481,
+        "w": 187,
+        "h": 50
+      },
+      "source_rect": {
+        "x": 201,
+        "y": 164,
+        "w": 187,
+        "h": 50
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_skill_label": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 158,
+        "y": 628,
+        "w": 71,
+        "h": 29
+      },
+      "source_rect": {
+        "x": 213,
+        "y": 174,
+        "w": 71,
+        "h": 29
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_skill_icon_slash": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 1078,
+        "y": 481,
+        "w": 40,
+        "h": 42
+      },
+      "source_rect": {
+        "x": 294,
+        "y": 169,
+        "w": 40,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_skill_count_1": {
+      "group": "hud_top_left",
+      "frame": {
+        "x": 121,
+        "y": 628,
+        "w": 33,
+        "h": 31
+      },
+      "source_rect": {
+        "x": 341,
+        "y": 174,
+        "w": 33,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_right_objective_full": {
+      "group": "hud_top_right",
+      "frame": {
+        "x": 987,
+        "y": 628,
+        "w": 251,
+        "h": 78
+      },
+      "source_rect": {
+        "x": 1362,
+        "y": 12,
+        "w": 251,
+        "h": 78
+      },
+      "rotated": false,
+      "trimmed": false,
+      "mask": "top_right_full"
+    },
+    "top_right_skull_panel": {
+      "group": "hud_top_right",
+      "frame": {
+        "x": 1322,
+        "y": 628,
+        "w": 166,
+        "h": 58
+      },
+      "source_rect": {
+        "x": 1363,
+        "y": 28,
+        "w": 166,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_right_skull_red": {
+      "group": "hud_top_right",
+      "frame": {
+        "x": 1492,
+        "y": 628,
+        "w": 31,
+        "h": 31
+      },
+      "source_rect": {
+        "x": 1385,
+        "y": 42,
+        "w": 31,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_right_skull_gray_1": {
+      "group": "hud_top_right",
+      "frame": {
+        "x": 1527,
+        "y": 628,
+        "w": 31,
+        "h": 30
+      },
+      "source_rect": {
+        "x": 1434,
+        "y": 43,
+        "w": 31,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_right_skull_gray_2": {
+      "group": "hud_top_right",
+      "frame": {
+        "x": 1562,
+        "y": 628,
+        "w": 31,
+        "h": 30
+      },
+      "source_rect": {
+        "x": 1484,
+        "y": 43,
+        "w": 31,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_right_star_panel": {
+      "group": "hud_top_right",
+      "frame": {
+        "x": 1242,
+        "y": 628,
+        "w": 76,
+        "h": 76
+      },
+      "source_rect": {
+        "x": 1535,
+        "y": 13,
+        "w": 76,
+        "h": 76
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "bottom_command_ui_full": {
+      "group": "command_ui",
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 599,
+        "h": 270
+      },
+      "source_rect": {
+        "x": 53,
+        "y": 598,
+        "w": 599,
+        "h": 270
+      },
+      "rotated": false,
+      "trimmed": false,
+      "mask": "command_full"
+    },
+    "command_wheel_full": {
+      "group": "command_ui",
+      "frame": {
+        "x": 607,
+        "y": 4,
+        "w": 269,
+        "h": 270
+      },
+      "source_rect": {
+        "x": 53,
+        "y": 598,
+        "w": 269,
+        "h": 270
+      },
+      "rotated": false,
+      "trimmed": false,
+      "mask": "ellipse"
+    },
+    "command_wheel_center_line": {
+      "group": "command_ui",
+      "frame": {
+        "x": 1416,
+        "y": 4,
+        "w": 101,
+        "h": 101
+      },
+      "source_rect": {
+        "x": 144,
+        "y": 687,
+        "w": 101,
+        "h": 101
+      },
+      "rotated": false,
+      "trimmed": false,
+      "mask": "ellipse"
+    },
+    "command_wheel_free_segment": {
+      "group": "command_ui",
+      "frame": {
+        "x": 1521,
+        "y": 4,
+        "w": 144,
+        "h": 91
+      },
+      "source_rect": {
+        "x": 119,
+        "y": 604,
+        "w": 144,
+        "h": 91
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "command_wheel_hold_left_segment": {
+      "group": "command_ui",
+      "frame": {
+        "x": 1202,
+        "y": 4,
+        "w": 103,
+        "h": 111
+      },
+      "source_rect": {
+        "x": 62,
+        "y": 675,
+        "w": 103,
+        "h": 111
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "command_wheel_hold_right_segment": {
+      "group": "command_ui",
+      "frame": {
+        "x": 1309,
+        "y": 4,
+        "w": 103,
+        "h": 111
+      },
+      "source_rect": {
+        "x": 211,
+        "y": 675,
+        "w": 103,
+        "h": 111
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "command_wheel_come_segment": {
+      "group": "command_ui",
+      "frame": {
+        "x": 1669,
+        "y": 4,
+        "w": 144,
+        "h": 82
+      },
+      "source_rect": {
+        "x": 119,
+        "y": 778,
+        "w": 144,
+        "h": 82
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "ally_formation_panel_full": {
+      "group": "command_ui",
+      "frame": {
+        "x": 880,
+        "y": 4,
+        "w": 318,
+        "h": 170
+      },
+      "source_rect": {
+        "x": 333,
+        "y": 687,
+        "w": 318,
+        "h": 170
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "ally_portrait_solei": {
+      "group": "command_ui",
+      "frame": {
+        "x": 1817,
+        "y": 4,
+        "w": 77,
+        "h": 75
+      },
+      "source_rect": {
+        "x": 338,
+        "y": 701,
+        "w": 77,
+        "h": 75
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "ally_name_row_solei": {
+      "group": "command_ui",
+      "frame": {
+        "x": 543,
+        "y": 278,
+        "w": 188,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 429,
+        "y": 705,
+        "w": 188,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "formation_name_row_line": {
+      "group": "command_ui",
+      "frame": {
+        "x": 341,
+        "y": 278,
+        "w": 198,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 429,
+        "y": 747,
+        "w": 198,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "formation_slots_panel": {
+      "group": "command_ui",
+      "frame": {
+        "x": 4,
+        "y": 278,
+        "w": 296,
+        "h": 68
+      },
+      "source_rect": {
+        "x": 334,
+        "y": 785,
+        "w": 296,
+        "h": 68
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "formation_slot_active_solei": {
+      "group": "command_ui",
+      "frame": {
+        "x": 304,
+        "y": 278,
+        "w": 33,
+        "h": 47
+      },
+      "source_rect": {
+        "x": 467,
+        "y": 795,
+        "w": 33,
+        "h": 47
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_hotbar_full": {
+      "group": "skill_set",
+      "frame": {
+        "x": 4,
+        "y": 710,
+        "w": 428,
+        "h": 145
+      },
+      "source_rect": {
+        "x": 1168,
+        "y": 761,
+        "w": 428,
+        "h": 145
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_1_full": {
+      "group": "skill_set",
+      "frame": {
+        "x": 742,
+        "y": 710,
+        "w": 97,
+        "h": 130
+      },
+      "source_rect": {
+        "x": 1178,
+        "y": 774,
+        "w": 97,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_1_icon_slash": {
+      "group": "skill_set",
+      "frame": {
+        "x": 924,
+        "y": 710,
+        "w": 76,
+        "h": 78
+      },
+      "source_rect": {
+        "x": 1187,
+        "y": 783,
+        "w": 76,
+        "h": 78
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_1_key": {
+      "group": "skill_set",
+      "frame": {
+        "x": 1164,
+        "y": 710,
+        "w": 40,
+        "h": 31
+      },
+      "source_rect": {
+        "x": 1213,
+        "y": 873,
+        "w": 40,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_2_full": {
+      "group": "skill_set",
+      "frame": {
+        "x": 436,
+        "y": 710,
+        "w": 98,
+        "h": 130
+      },
+      "source_rect": {
+        "x": 1284,
+        "y": 774,
+        "w": 98,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_2_icon_arc": {
+      "group": "skill_set",
+      "frame": {
+        "x": 1004,
+        "y": 710,
+        "w": 76,
+        "h": 78
+      },
+      "source_rect": {
+        "x": 1294,
+        "y": 783,
+        "w": 76,
+        "h": 78
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_2_key": {
+      "group": "skill_set",
+      "frame": {
+        "x": 1208,
+        "y": 710,
+        "w": 40,
+        "h": 31
+      },
+      "source_rect": {
+        "x": 1320,
+        "y": 873,
+        "w": 40,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_3_full": {
+      "group": "skill_set",
+      "frame": {
+        "x": 538,
+        "y": 710,
+        "w": 98,
+        "h": 130
+      },
+      "source_rect": {
+        "x": 1391,
+        "y": 774,
+        "w": 98,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_3_icon_impact": {
+      "group": "skill_set",
+      "frame": {
+        "x": 1084,
+        "y": 710,
+        "w": 76,
+        "h": 78
+      },
+      "source_rect": {
+        "x": 1402,
+        "y": 783,
+        "w": 76,
+        "h": 78
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_3_key": {
+      "group": "skill_set",
+      "frame": {
+        "x": 1252,
+        "y": 710,
+        "w": 40,
+        "h": 31
+      },
+      "source_rect": {
+        "x": 1427,
+        "y": 873,
+        "w": 40,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_4_full": {
+      "group": "skill_set",
+      "frame": {
+        "x": 640,
+        "y": 710,
+        "w": 98,
+        "h": 130
+      },
+      "source_rect": {
+        "x": 1499,
+        "y": 774,
+        "w": 98,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_4_icon_rock": {
+      "group": "skill_set",
+      "frame": {
+        "x": 843,
+        "y": 710,
+        "w": 77,
+        "h": 78
+      },
+      "source_rect": {
+        "x": 1508,
+        "y": 783,
+        "w": 77,
+        "h": 78
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "skill_slot_4_key": {
+      "group": "skill_set",
+      "frame": {
+        "x": 1296,
+        "y": 710,
+        "w": 40,
+        "h": 31
+      },
+      "source_rect": {
+        "x": 1534,
+        "y": 873,
+        "w": 40,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "ally_nameplate_solei": {
+      "group": "scene_markers",
+      "frame": {
+        "x": 1639,
+        "y": 628,
+        "w": 61,
+        "h": 22
+      },
+      "source_rect": {
+        "x": 593,
+        "y": 541,
+        "w": 61,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "enemy_guard_hp_bar": {
+      "group": "scene_markers",
+      "frame": {
+        "x": 1704,
+        "y": 628,
+        "w": 115,
+        "h": 8
+      },
+      "source_rect": {
+        "x": 1121,
+        "y": 413,
+        "w": 115,
+        "h": 8
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "enemy_guard_shield_marker": {
+      "group": "scene_markers",
+      "frame": {
+        "x": 1597,
+        "y": 628,
+        "w": 38,
+        "h": 38
+      },
+      "source_rect": {
+        "x": 937,
+        "y": 415,
+        "w": 38,
+        "h": 38
+      },
+      "rotated": false,
+      "trimmed": false
+    }
+  },
+  "notes": "Standalone in-game HUD, command UI, and skill-set crops from the flattened gameplay concept image. Individual PNGs are grouped under sprites/."
+}

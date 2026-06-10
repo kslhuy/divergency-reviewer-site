@@ -1,0 +1,1973 @@
+{
+  "image": "Settings_menu_spritesheet.png",
+  "sources": {
+    "video": {
+      "path": "imgs/UI/settings_menu_sections/Settings_section_video.png",
+      "size": {
+        "w": 1620,
+        "h": 912
+      }
+    },
+    "audio": {
+      "path": "imgs/UI/settings_menu_sections/Settings_section_audio.png",
+      "size": {
+        "w": 1620,
+        "h": 912
+      }
+    },
+    "controls": {
+      "path": "imgs/UI/settings_menu_sections/Settings_section_controls.png",
+      "size": {
+        "w": 1620,
+        "h": 912
+      }
+    },
+    "gameplay": {
+      "path": "imgs/UI/settings_menu_sections/Settings_section_gameplay.png",
+      "size": {
+        "w": 1620,
+        "h": 912
+      }
+    },
+    "misc": {
+      "path": "imgs/UI/settings_menu_sections/Settings_section_misc.png",
+      "size": {
+        "w": 1620,
+        "h": 912
+      }
+    }
+  },
+  "size": {
+    "w": 2024,
+    "h": 6050
+  },
+  "padding": 4,
+  "sprite_count": 95,
+  "packing": "Shelf pack, non-rotated, transparent RGBA atlas",
+  "sprites": {
+    "settings_overlay_video": {
+      "group": "page_states",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 3671,
+        "w": 1179,
+        "h": 780
+      },
+      "source_rect": {
+        "x": 219,
+        "y": 122,
+        "w": 1179,
+        "h": 780
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "settings_overlay_audio": {
+      "group": "page_states",
+      "source": "audio",
+      "frame": {
+        "x": 4,
+        "y": 535,
+        "w": 1179,
+        "h": 780
+      },
+      "source_rect": {
+        "x": 219,
+        "y": 122,
+        "w": 1179,
+        "h": 780
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "settings_overlay_controls": {
+      "group": "page_states",
+      "source": "controls",
+      "frame": {
+        "x": 4,
+        "y": 1319,
+        "w": 1179,
+        "h": 780
+      },
+      "source_rect": {
+        "x": 219,
+        "y": 122,
+        "w": 1179,
+        "h": 780
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "settings_overlay_gameplay": {
+      "group": "page_states",
+      "source": "gameplay",
+      "frame": {
+        "x": 4,
+        "y": 2103,
+        "w": 1179,
+        "h": 780
+      },
+      "source_rect": {
+        "x": 219,
+        "y": 122,
+        "w": 1179,
+        "h": 780
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "settings_overlay_misc": {
+      "group": "page_states",
+      "source": "misc",
+      "frame": {
+        "x": 4,
+        "y": 2887,
+        "w": 1179,
+        "h": 780
+      },
+      "source_rect": {
+        "x": 219,
+        "y": 122,
+        "w": 1179,
+        "h": 780
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "top_frame_bar_with_corners": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 341,
+        "w": 1048,
+        "h": 66
+      },
+      "source_rect": {
+        "x": 285,
+        "y": 122,
+        "w": 1048,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "top_left_corner_ornament": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 1280,
+        "y": 341,
+        "w": 75,
+        "h": 66
+      },
+      "source_rect": {
+        "x": 285,
+        "y": 122,
+        "w": 75,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "top_right_corner_ornament": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 1359,
+        "y": 341,
+        "w": 65,
+        "h": 66
+      },
+      "source_rect": {
+        "x": 1268,
+        "y": 122,
+        "w": 65,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "left_purple_banner_full": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 1507,
+        "y": 88,
+        "w": 112,
+        "h": 249
+      },
+      "source_rect": {
+        "x": 220,
+        "y": 291,
+        "w": 112,
+        "h": 249
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "right_purple_banner_full": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 1623,
+        "y": 88,
+        "w": 112,
+        "h": 249
+      },
+      "source_rect": {
+        "x": 1288,
+        "y": 291,
+        "w": 112,
+        "h": 249
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "left_chain_hanger": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 1056,
+        "y": 341,
+        "w": 108,
+        "h": 66
+      },
+      "source_rect": {
+        "x": 220,
+        "y": 291,
+        "w": 108,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "right_chain_hanger": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 1168,
+        "y": 341,
+        "w": 108,
+        "h": 66
+      },
+      "source_rect": {
+        "x": 1292,
+        "y": 291,
+        "w": 108,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "bottom_chain_with_gears": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 411,
+        "w": 890,
+        "h": 64
+      },
+      "source_rect": {
+        "x": 366,
+        "y": 721,
+        "w": 890,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "bottom_center_gears": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 1739,
+        "y": 88,
+        "w": 180,
+        "h": 76
+      },
+      "source_rect": {
+        "x": 719,
+        "y": 721,
+        "w": 180,
+        "h": 76
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "bottom_chain": {
+      "group": "frame",
+      "source": "video",
+      "frame": {
+        "x": 898,
+        "y": 411,
+        "w": 890,
+        "h": 31
+      },
+      "source_rect": {
+        "x": 366,
+        "y": 753,
+        "w": 890,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "title_settings": {
+      "group": "header",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 479,
+        "w": 300,
+        "h": 52
+      },
+      "source_rect": {
+        "x": 660,
+        "y": 170,
+        "w": 300,
+        "h": 52
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "title_divider_full": {
+      "group": "header",
+      "source": "video",
+      "frame": {
+        "x": 308,
+        "y": 479,
+        "w": 452,
+        "h": 11
+      },
+      "source_rect": {
+        "x": 587,
+        "y": 225,
+        "w": 452,
+        "h": 11
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "title_divider_left": {
+      "group": "header",
+      "source": "video",
+      "frame": {
+        "x": 935,
+        "y": 479,
+        "w": 166,
+        "h": 11
+      },
+      "source_rect": {
+        "x": 587,
+        "y": 225,
+        "w": 166,
+        "h": 11
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "title_divider_right": {
+      "group": "header",
+      "source": "video",
+      "frame": {
+        "x": 764,
+        "y": 479,
+        "w": 167,
+        "h": 11
+      },
+      "source_rect": {
+        "x": 872,
+        "y": 225,
+        "w": 167,
+        "h": 11
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "top_right_settings_button": {
+      "group": "window_controls",
+      "source": "video",
+      "frame": {
+        "x": 805,
+        "y": 5988,
+        "w": 66,
+        "h": 58
+      },
+      "source_rect": {
+        "x": 1454,
+        "y": 18,
+        "w": 66,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "top_right_close_button": {
+      "group": "window_controls",
+      "source": "video",
+      "frame": {
+        "x": 728,
+        "y": 5988,
+        "w": 73,
+        "h": 58
+      },
+      "source_rect": {
+        "x": 1527,
+        "y": 18,
+        "w": 73,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_video_normal": {
+      "group": "tabs",
+      "source": "audio",
+      "frame": {
+        "x": 1100,
+        "y": 5853,
+        "w": 170,
+        "h": 45
+      },
+      "source_rect": {
+        "x": 360,
+        "y": 250,
+        "w": 170,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_audio_normal": {
+      "group": "tabs",
+      "source": "video",
+      "frame": {
+        "x": 404,
+        "y": 5853,
+        "w": 170,
+        "h": 45
+      },
+      "source_rect": {
+        "x": 540,
+        "y": 250,
+        "w": 170,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_controls_normal": {
+      "group": "tabs",
+      "source": "video",
+      "frame": {
+        "x": 578,
+        "y": 5853,
+        "w": 170,
+        "h": 45
+      },
+      "source_rect": {
+        "x": 720,
+        "y": 250,
+        "w": 170,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_gameplay_normal": {
+      "group": "tabs",
+      "source": "video",
+      "frame": {
+        "x": 752,
+        "y": 5853,
+        "w": 170,
+        "h": 45
+      },
+      "source_rect": {
+        "x": 900,
+        "y": 250,
+        "w": 170,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_misc_normal": {
+      "group": "tabs",
+      "source": "video",
+      "frame": {
+        "x": 926,
+        "y": 5853,
+        "w": 170,
+        "h": 45
+      },
+      "source_rect": {
+        "x": 1080,
+        "y": 250,
+        "w": 170,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_video_active": {
+      "group": "tabs",
+      "source": "video",
+      "frame": {
+        "x": 204,
+        "y": 5853,
+        "w": 196,
+        "h": 72
+      },
+      "source_rect": {
+        "x": 346,
+        "y": 237,
+        "w": 196,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_audio_active": {
+      "group": "tabs",
+      "source": "audio",
+      "frame": {
+        "x": 1285,
+        "y": 5777,
+        "w": 196,
+        "h": 72
+      },
+      "source_rect": {
+        "x": 527,
+        "y": 237,
+        "w": 196,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_controls_active": {
+      "group": "tabs",
+      "source": "controls",
+      "frame": {
+        "x": 1485,
+        "y": 5777,
+        "w": 196,
+        "h": 72
+      },
+      "source_rect": {
+        "x": 707,
+        "y": 237,
+        "w": 196,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_gameplay_active": {
+      "group": "tabs",
+      "source": "gameplay",
+      "frame": {
+        "x": 1685,
+        "y": 5777,
+        "w": 196,
+        "h": 72
+      },
+      "source_rect": {
+        "x": 887,
+        "y": 237,
+        "w": 196,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_misc_active": {
+      "group": "tabs",
+      "source": "misc",
+      "frame": {
+        "x": 4,
+        "y": 5853,
+        "w": 196,
+        "h": 72
+      },
+      "source_rect": {
+        "x": 1067,
+        "y": 237,
+        "w": 196,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "tab_active_diamond": {
+      "group": "tabs",
+      "source": "video",
+      "frame": {
+        "x": 1274,
+        "y": 5853,
+        "w": 29,
+        "h": 29
+      },
+      "source_rect": {
+        "x": 430,
+        "y": 286,
+        "w": 29,
+        "h": 29
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "template_tab_normal_blank": {
+      "group": "templates",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 5988,
+        "w": 170,
+        "h": 45
+      },
+      "source_rect": {
+        "x": 540,
+        "y": 250,
+        "w": 170,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 28,
+          "y": 9,
+          "w": 116,
+          "h": 27
+        }
+      ],
+      "note": "Normal tab with label cleared."
+    },
+    "template_tab_active_blank": {
+      "group": "templates",
+      "source": "video",
+      "frame": {
+        "x": 1307,
+        "y": 5853,
+        "w": 196,
+        "h": 72
+      },
+      "source_rect": {
+        "x": 346,
+        "y": 237,
+        "w": 196,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 48,
+          "y": 24,
+          "w": 100,
+          "h": 28
+        }
+      ],
+      "note": "Active tab frame and diamond with label cleared."
+    },
+    "template_section_header_blank": {
+      "group": "templates",
+      "source": "video",
+      "frame": {
+        "x": 178,
+        "y": 5988,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 361,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 82,
+          "y": 7,
+          "w": 260,
+          "h": 29
+        }
+      ],
+      "note": "Panel section header with title cleared."
+    },
+    "template_row_choice_blank": {
+      "group": "templates",
+      "source": "video",
+      "frame": {
+        "x": 408,
+        "y": 5929,
+        "w": 400,
+        "h": 47
+      },
+      "source_rect": {
+        "x": 373,
+        "y": 454,
+        "w": 400,
+        "h": 47
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 11,
+          "y": 9,
+          "w": 178,
+          "h": 29
+        },
+        {
+          "x": 202,
+          "y": 8,
+          "w": 166,
+          "h": 30
+        }
+      ],
+      "note": "Choice row with label/value cleared but arrows kept."
+    },
+    "template_row_selected_choice_blank": {
+      "group": "templates",
+      "source": "video",
+      "frame": {
+        "x": 1507,
+        "y": 5853,
+        "w": 418,
+        "h": 70
+      },
+      "source_rect": {
+        "x": 362,
+        "y": 382,
+        "w": 418,
+        "h": 70
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 24,
+          "y": 25,
+          "w": 210,
+          "h": 31
+        },
+        {
+          "x": 252,
+          "y": 24,
+          "w": 124,
+          "h": 31
+        }
+      ],
+      "note": "Selected choice row with label/value cleared but arrows kept."
+    },
+    "template_row_toggle_on_blank": {
+      "group": "templates",
+      "source": "video",
+      "frame": {
+        "x": 1620,
+        "y": 5929,
+        "w": 400,
+        "h": 47
+      },
+      "source_rect": {
+        "x": 373,
+        "y": 634,
+        "w": 400,
+        "h": 47
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 12,
+          "y": 9,
+          "w": 225,
+          "h": 30
+        }
+      ],
+      "note": "Toggle row with label cleared and ON switch kept."
+    },
+    "template_row_toggle_off_blank": {
+      "group": "templates",
+      "source": "gameplay",
+      "frame": {
+        "x": 1216,
+        "y": 5929,
+        "w": 400,
+        "h": 47
+      },
+      "source_rect": {
+        "x": 373,
+        "y": 514,
+        "w": 400,
+        "h": 47
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 12,
+          "y": 9,
+          "w": 225,
+          "h": 30
+        }
+      ],
+      "note": "Toggle row with label cleared and OFF switch kept."
+    },
+    "template_row_slider_yellow_blank": {
+      "group": "templates",
+      "source": "video",
+      "frame": {
+        "x": 812,
+        "y": 5929,
+        "w": 400,
+        "h": 47
+      },
+      "source_rect": {
+        "x": 373,
+        "y": 701,
+        "w": 400,
+        "h": 47
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 12,
+          "y": 9,
+          "w": 140,
+          "h": 30
+        },
+        {
+          "x": 350,
+          "y": 10,
+          "w": 38,
+          "h": 27
+        }
+      ],
+      "note": "Yellow slider row with label/value cleared."
+    },
+    "template_row_slider_cyan_blank": {
+      "group": "templates",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 5929,
+        "w": 400,
+        "h": 55
+      },
+      "source_rect": {
+        "x": 847,
+        "y": 634,
+        "w": 400,
+        "h": 55
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 12,
+          "y": 10,
+          "w": 145,
+          "h": 31
+        },
+        {
+          "x": 350,
+          "y": 10,
+          "w": 38,
+          "h": 30
+        }
+      ],
+      "note": "Cyan slider row with label/value cleared."
+    },
+    "template_keycap_small_blank": {
+      "group": "templates",
+      "source": "controls",
+      "frame": {
+        "x": 685,
+        "y": 5988,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 711,
+        "y": 462,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 6,
+          "y": 5,
+          "w": 28,
+          "h": 25
+        }
+      ],
+      "note": "Small keycap with glyph cleared."
+    },
+    "template_keycap_wide_blank": {
+      "group": "templates",
+      "source": "controls",
+      "frame": {
+        "x": 605,
+        "y": 5988,
+        "w": 76,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 673,
+        "y": 581,
+        "w": 76,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120,
+      "clear_regions": [
+        {
+          "x": 5,
+          "y": 5,
+          "w": 66,
+          "h": 25
+        }
+      ],
+      "note": "Wide keycap with glyph cleared."
+    },
+    "panel_video_display": {
+      "group": "panels",
+      "source": "video",
+      "frame": {
+        "x": 1348,
+        "y": 4881,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 350,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "panel_video_render": {
+      "group": "panels",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 5307,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 824,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "panel_audio_volume": {
+      "group": "panels",
+      "source": "audio",
+      "frame": {
+        "x": 4,
+        "y": 4455,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 350,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "panel_audio_output": {
+      "group": "panels",
+      "source": "audio",
+      "frame": {
+        "x": 1187,
+        "y": 3671,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 824,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "panel_controls_keyboard": {
+      "group": "panels",
+      "source": "controls",
+      "frame": {
+        "x": 900,
+        "y": 4455,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 350,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "panel_controls_gamepad": {
+      "group": "panels",
+      "source": "controls",
+      "frame": {
+        "x": 452,
+        "y": 4455,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 824,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "panel_gameplay_combat": {
+      "group": "panels",
+      "source": "gameplay",
+      "frame": {
+        "x": 4,
+        "y": 4881,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 350,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "panel_gameplay_assist": {
+      "group": "panels",
+      "source": "gameplay",
+      "frame": {
+        "x": 1348,
+        "y": 4455,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 824,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "panel_misc_system": {
+      "group": "panels",
+      "source": "misc",
+      "frame": {
+        "x": 900,
+        "y": 4881,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 350,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "panel_misc_data": {
+      "group": "panels",
+      "source": "misc",
+      "frame": {
+        "x": 452,
+        "y": 4881,
+        "w": 444,
+        "h": 422
+      },
+      "source_rect": {
+        "x": 824,
+        "y": 326,
+        "w": 444,
+        "h": 422
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_display": {
+      "group": "section_headers",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 5733,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 361,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_render": {
+      "group": "section_headers",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 5777,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 835,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_volume": {
+      "group": "section_headers",
+      "source": "audio",
+      "frame": {
+        "x": 858,
+        "y": 5777,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 361,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_output": {
+      "group": "section_headers",
+      "source": "audio",
+      "frame": {
+        "x": 1285,
+        "y": 5733,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 835,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_keyboard": {
+      "group": "section_headers",
+      "source": "controls",
+      "frame": {
+        "x": 858,
+        "y": 5733,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 361,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_gamepad": {
+      "group": "section_headers",
+      "source": "controls",
+      "frame": {
+        "x": 431,
+        "y": 5733,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 835,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_combat": {
+      "group": "section_headers",
+      "source": "gameplay",
+      "frame": {
+        "x": 879,
+        "y": 5307,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 361,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_assist": {
+      "group": "section_headers",
+      "source": "gameplay",
+      "frame": {
+        "x": 452,
+        "y": 5307,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 835,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_system": {
+      "group": "section_headers",
+      "source": "misc",
+      "frame": {
+        "x": 431,
+        "y": 5777,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 361,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "header_data": {
+      "group": "section_headers",
+      "source": "misc",
+      "frame": {
+        "x": 1306,
+        "y": 5307,
+        "w": 423,
+        "h": 40
+      },
+      "source_rect": {
+        "x": 835,
+        "y": 337,
+        "w": 423,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "toggle_on": {
+      "group": "controls",
+      "source": "video",
+      "frame": {
+        "x": 1392,
+        "y": 4,
+        "w": 70,
+        "h": 29
+      },
+      "source_rect": {
+        "x": 678,
+        "y": 644,
+        "w": 70,
+        "h": 29
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "toggle_off": {
+      "group": "controls",
+      "source": "gameplay",
+      "frame": {
+        "x": 1318,
+        "y": 4,
+        "w": 70,
+        "h": 29
+      },
+      "source_rect": {
+        "x": 678,
+        "y": 524,
+        "w": 70,
+        "h": 29
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "choice_arrow_left": {
+      "group": "controls",
+      "source": "video",
+      "frame": {
+        "x": 1461,
+        "y": 88,
+        "w": 19,
+        "h": 22
+      },
+      "source_rect": {
+        "x": 600,
+        "y": 406,
+        "w": 19,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "choice_arrow_right": {
+      "group": "controls",
+      "source": "video",
+      "frame": {
+        "x": 1484,
+        "y": 88,
+        "w": 19,
+        "h": 22
+      },
+      "source_rect": {
+        "x": 745,
+        "y": 406,
+        "w": 19,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "slider_master_lime_82": {
+      "group": "controls",
+      "source": "audio",
+      "frame": {
+        "x": 215,
+        "y": 88,
+        "w": 207,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 525,
+        "y": 410,
+        "w": 207,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "slider_music_purple_64": {
+      "group": "controls",
+      "source": "audio",
+      "frame": {
+        "x": 426,
+        "y": 88,
+        "w": 207,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 525,
+        "y": 472,
+        "w": 207,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "slider_sfx_orange_76": {
+      "group": "controls",
+      "source": "audio",
+      "frame": {
+        "x": 637,
+        "y": 88,
+        "w": 207,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 525,
+        "y": 535,
+        "w": 207,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "slider_voice_blue_70": {
+      "group": "controls",
+      "source": "audio",
+      "frame": {
+        "x": 1059,
+        "y": 88,
+        "w": 207,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 525,
+        "y": 598,
+        "w": 207,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "slider_ambient_cyan_57": {
+      "group": "controls",
+      "source": "audio",
+      "frame": {
+        "x": 1466,
+        "y": 4,
+        "w": 207,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 525,
+        "y": 660,
+        "w": 207,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "slider_bright_yellow_72": {
+      "group": "controls",
+      "source": "video",
+      "frame": {
+        "x": 1677,
+        "y": 4,
+        "w": 207,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 525,
+        "y": 713,
+        "w": 207,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "slider_ui_scale_cyan_90": {
+      "group": "controls",
+      "source": "video",
+      "frame": {
+        "x": 1270,
+        "y": 88,
+        "w": 187,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 997,
+        "y": 653,
+        "w": 187,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "slider_shake_yellow_40": {
+      "group": "controls",
+      "source": "gameplay",
+      "frame": {
+        "x": 848,
+        "y": 88,
+        "w": 207,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 525,
+        "y": 653,
+        "w": 207,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "slider_input_buffer_cyan_68": {
+      "group": "controls",
+      "source": "gameplay",
+      "frame": {
+        "x": 4,
+        "y": 88,
+        "w": 207,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 525,
+        "y": 715,
+        "w": 207,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "key_w": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1838,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 561,
+        "y": 403,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "key_a": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1580,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 611,
+        "y": 403,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "key_s": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1795,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 661,
+        "y": 403,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "key_d": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1623,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 711,
+        "y": 403,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "key_j": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1709,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 711,
+        "y": 462,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "key_k": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1752,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 711,
+        "y": 521,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "key_space": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1105,
+        "y": 479,
+        "w": 76,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 673,
+        "y": 581,
+        "w": 76,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "key_shift": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1331,
+        "y": 479,
+        "w": 62,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 687,
+        "y": 639,
+        "w": 62,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "key_e": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1666,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 711,
+        "y": 698,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "gamepad_dpad": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1185,
+        "y": 479,
+        "w": 74,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 1148,
+        "y": 403,
+        "w": 74,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "gamepad_x": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1494,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 1184,
+        "y": 462,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "gamepad_y": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1537,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 1184,
+        "y": 521,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "gamepad_a": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1451,
+        "y": 479,
+        "w": 39,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 1184,
+        "y": 581,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "gamepad_rb": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1397,
+        "y": 479,
+        "w": 50,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 1175,
+        "y": 639,
+        "w": 50,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "gamepad_start": {
+      "group": "input_buttons",
+      "source": "controls",
+      "frame": {
+        "x": 1263,
+        "y": 479,
+        "w": 64,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 1161,
+        "y": 698,
+        "w": 64,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "bottom_controls_panel": {
+      "group": "bottom_controls",
+      "source": "video",
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 795,
+        "h": 80
+      },
+      "source_rect": {
+        "x": 410,
+        "y": 823,
+        "w": 795,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "bottom_dpad_select": {
+      "group": "bottom_controls",
+      "source": "video",
+      "frame": {
+        "x": 803,
+        "y": 4,
+        "w": 178,
+        "h": 61
+      },
+      "source_rect": {
+        "x": 468,
+        "y": 833,
+        "w": 178,
+        "h": 61
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "bottom_b_back": {
+      "group": "bottom_controls",
+      "source": "video",
+      "frame": {
+        "x": 1174,
+        "y": 4,
+        "w": 140,
+        "h": 57
+      },
+      "source_rect": {
+        "x": 737,
+        "y": 835,
+        "w": 140,
+        "h": 57
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    },
+    "bottom_a_confirm": {
+      "group": "bottom_controls",
+      "source": "video",
+      "frame": {
+        "x": 985,
+        "y": 4,
+        "w": 185,
+        "h": 57
+      },
+      "source_rect": {
+        "x": 939,
+        "y": 835,
+        "w": 185,
+        "h": 57
+      },
+      "rotated": false,
+      "trimmed": false,
+      "alpha_cutoff": 120
+    }
+  },
+  "notes": "Cropped from the flattened settings-section PNGs. Component crops use alpha_cutoff=120 to remove the dimmed game backdrop around standalone UI pieces. Complete page-state crops keep their original alpha."
+}

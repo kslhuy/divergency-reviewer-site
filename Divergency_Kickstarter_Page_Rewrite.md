@@ -296,34 +296,105 @@ Dates may shift if testing shows that a feature needs more work. If that happens
 
 Campaign currency is shown in USD in this draft. Physical rewards are EU-only at launch to keep fulfillment manageable.
 
-| Pledge | Reward | Estimated delivery |
-| ---: | --- | --- |
-| $5 | Supporter Wall: thank-you update access and name on digital supporter wall | Campaign updates + Month 24 |
-| $15 | Digital Supporter Pack: wallpapers, backer update archive, and name in digital thanks | Month 6 + Month 24 |
-| $25 | Full Game Digital Key: digital copy of Divergency at release | Month 24 |
-| $40 | Sound And Art Pack: digital game, soundtrack, mini artbook, and wallpapers | Month 24 |
-| $60 | Beta Fighter: previous digital rewards plus beta access and private feedback form | Month 19-21 |
-| $90 | Marseille Poster Pack, EU only: previous digital rewards plus A3 poster | Month 24-26 |
-| $130 | Beacon Of Hope Bracelet, EU only: previous digital rewards plus bracelet and poster | Month 24-26 |
-| $250 | Design Council: previous digital rewards plus credit listing and one scoped feedback session | Month 10-24 |
-| $600 | Create Your Own NPC + Short Questline, limited quantity: scoped custom content reward | Month 24 or later if final approval needs more time |
+Backer rewards should feel like a fair thank-you, not like random merchandise or a hidden store page. The reward ladder for Divergency is built around five kinds of supporter value:
 
-### Custom NPC + Short Questline Scope
+- Recognition: names in the digital supporter wall, credits, and backer thanks.
+- Digital gifts: wallpapers, avatar icons, a small lore dossier, soundtrack, and mini artbook.
+- Game access: the full PC digital key, an early-backer key tier, and beta access for feedback-focused backers.
+- Collector objects: one poster and one bracelet, both tied to the world of Divergency and limited to EU shipping.
+- Creative participation: limited higher tiers where backers can leave their mark, name NPCs, or help shape custom visual elements and enemy concepts.
 
-This reward includes:
+The rewards avoid pay-to-win items, exclusive combat power, or exclusive playable characters. Backers can receive access, recognition, development participation, and collector gifts, but the final game should remain fair for players who discover Divergency after Kickstarter.
 
+| Pledge | Reward | Supporter value | Estimated delivery |
+| ---: | --- | --- | --- |
+| $5 | Signal Supporter | Campaign updates, one backer wallpaper, and name on the digital supporter wall | Month 6 + Month 24 |
+| $15 | Field Dossier Pack | Wallpapers, avatar/icon pack, printable mini lore dossier, and supporter wall name | Month 6 |
+| $20 | Early Recruit, limited quantity | Full PC digital game key at a lower early-backer price, plus Field Dossier Pack | Month 24 |
+| $25 | Full Game Digital Key | Full PC digital game key, Field Dossier Pack, and supporter wall name | Month 24 |
+| $40 | Digital Deluxe Pack | Game key, soundtrack, mini artbook, wallpapers, avatar/icon pack, and mini lore dossier | Month 24 |
+| $55 | Duo Fighter Pack | Two PC digital game keys, plus the Digital Deluxe Pack for the main backer | Month 24 |
+| $70 | Beta Fighter | Digital Deluxe Pack, beta access, private feedback form, and beta tester credit listing | Month 19-24 |
+| $100 | Marseille Poster Pack, EU only | Beta Fighter digital rewards plus one A3 Marseille/Divergency poster | Month 24-26 |
+| $120 | Prisoner's Scratchings, limited | Beta Fighter digital rewards plus write an approved short message/graffiti on a Bastonne prison cell wall | Month 24 |
+| $140 | Beacon Of Hope Bracelet, EU only | Beta Fighter digital rewards plus A3 poster and bracelet inspired by an in-world resistance symbol | Month 24-26 |
+| $175 | Laundel Resident, limited | Beta Fighter digital rewards plus name a minor non-interactive background NPC in Laundel undercity | Month 24 |
+| $250 | Design Council, limited | Digital Deluxe Pack, beta access, credit listing, and one scoped feedback session | Month 10-24 |
+| $350 | Vanguard Weapon Artisan, limited | Beta Fighter digital rewards plus collaborate to design a custom weapon skin cosmetic or passive skill badge icon | Month 24 |
+| $500 | Marseille Citizen, limited | Digital Deluxe Pack, beta access, credit listing, and collaborate to create a custom NPC + short questline | Month 24 |
+| $800 | Calamity Elite Creator, limited | Digital Deluxe Pack, beta access, credit listing, and collaborate to design a unique corrupted elite enemy or miniboss | Month 24 |
+
+### Why These Rewards Feel Fair
+
+The $5 and $15 tiers give low-risk symbolic gifts to people who mainly want to help. They should not require heavy production work, but they still give supporters something with Divergency identity.
+
+The $20 early-backer key gives the first supporters a clear reason to pledge early without lowering the normal game-key value for the whole campaign. The $25 tier remains the standard digital copy. The $55 duo pack is useful for friends, families, streamers, and players who want to gift a copy.
+
+The $40 and $70 tiers are the strongest digital-value tiers. They reward serious supporters with music, art, lore, beta access, and a feedback path while keeping fulfillment mostly digital.
+
+The physical tiers ($100 and $140) are priced above the digital tiers because they add manufacturing, packing, shipping, damaged-package support, and address management. They should be treated as collector gifts, not as the core reason to back the campaign.
+
+The creative backing tiers allow supporters to leave their mark on the game in a tiered, logical format that matches the world's dark fantasy identity:
+- At **$120 (Prisoner's Scratchings)** and **$175 (Laundel Resident)**, backers gain small, immersive storytelling opportunities (graffiti on cell walls, naming a background refugee or merchant) that add flavor to the game without requiring design meetings or complex asset creation.
+- At **$350 (Vanguard Weapon Artisan)**, **$500 (Marseille Citizen)**, and **$800 (Calamity Elite Creator)**, backers collaborate directly with the development team on visual assets, NPC narratives, or combat variants. These tiers are strictly capped to ensure they do not cause scope creep or development delays.
+
+### Optional Add-Ons
+
+Add-ons can increase pledge value without creating too many reward tiers.
+
+| Add-on | Suggested price | Notes |
+| --- | ---: | --- |
+| Extra PC digital key | $20-25 | Best low-risk add-on because it has no shipping cost |
+| Soundtrack + mini artbook | $15 | Useful for backers who choose the standard game key but later want the deluxe digital pack |
+| A3 poster, EU only | $25 plus shipping | Keep to one poster size and one print vendor if possible |
+| Beacon bracelet, EU only | $35 plus shipping | Only launch after a sample photo and unit cost are confirmed |
+| Final credits name upgrade | $10 | Optional upgrade for standard digital tiers; use one approved name or alias |
+
+Final quantities should be locked before launch. Recommended limits: Early Recruit around 200-300 backers, Prisoner's Scratchings around 50 slots, Laundel Resident around 20 slots, Design Council around 10 backers, Vanguard Weapon Artisan around 10 backers, Marseille Citizen around 5 backers, and Calamity Elite Creator around 3 backers unless the team is certain it can absorb more design work.
+
+### Reward Fulfillment Rules
+
+- Prepare visible sample images before launch for the wallpaper pack, lore dossier, poster, and bracelet concept.
+- Do not promise more than one poster size, one bracelet design, or multiple physical variants unless production quotes are already confirmed.
+- Keep all supporter names subject to approval, character limits, and a final survey deadline.
+- Lock digital reward file formats before launch: JPG/PNG wallpapers, PDF dossier/artbook, MP3/WAV soundtrack, and Steam or platform key delivery where available.
+- Reserve 5-10% extra physical items for damaged parcels, lost mail, and replacement handling.
+- Treat beta access as feedback participation, not as a guaranteed polished early version of the final game.
+- All in-game text, names, visual assets, and gameplay designs submitted by backers are subject to developer approval, editing, and revision to maintain appropriate tone, balance, and quality.
+
+### Creative Collaboration Scope & Guidelines
+
+To ensure smooth development and fair play, creative tiers are governed by the following guidelines:
+
+#### Prisoner's Scratchings ($120)
+- Up to 40 characters of text to be placed as background graffiti on the stone/iron walls of Bastonne prison.
+- Must read like it was carved by an inmate, resistance fighter, or jailer (e.g., cryptic warnings, names, dates, or desperate messages).
+
+#### Laundel Resident ($175)
+- Name an NPC who appears in the background of Laundel (the undercity station).
+- The NPC will have a basic idle animation and may be a trader, refugee, or mercenary, but will not have custom dialogue trees or impact the main questline.
+
+#### Vanguard Weapon Artisan ($350)
+- Collaborate to design a custom weapon cosmetic skin or passive skill badge icon.
+- Backers submit visual themes, color schemes, or basic concepts.
+- To protect game balance, this cosmetic or icon does not alter weapon stats, active skill hitboxes, or gameplay parameters.
+
+#### Marseille Citizen ($500)
 - One NPC concept inspired by the backer's submitted idea.
 - One short side quest or encounter beat connected to that NPC.
 - Up to 12 short dialogue lines total.
 - Up to two revision rounds.
 - Backer name or alias in credits, subject to approval.
 
-Limits:
+#### Calamity Elite Creator ($800)
+- Collaborate on the design of a unique corrupted elite enemy variant or an optional miniboss.
+- Backers help shape the visual design (e.g., weapon type, corruption level, outfit) and a basic signature attack mechanic.
+- The development team retains full control over final coding, hitbox tuning, difficulty scaling, and placement within stages to ensure game balance.
 
-- No licensed characters, copyrighted characters, hate content, explicit sexual content, real-world political targeting, or material that does not fit Divergency's tone.
-- The team keeps final approval on the name, design, dialogue, quest role, and implementation.
-- The NPC may be adapted to fit art, animation, gameplay, schedule, and rating constraints.
-- If an idea cannot be used, the backer can submit a replacement concept within the same scope.
+#### Creative Limits (All Tiers)
+- No copyrighted or licensed characters, hate speech, explicit sexual content, real-world political targeting, or content that breaks immersion or Divergency's dark fantasy tone.
+- The development team keeps final approval on all names, designs, texts, dialogue lines, and mechanics.
+- If a submission does not meet guidelines, the backer will be asked to submit a revised proposal within a designated time window.
 
 ## Shipping And Fulfillment
 
@@ -332,8 +403,8 @@ Physical rewards are limited to EU shipping for the campaign launch.
 Planned shipping approach:
 
 - Ship-from region: France/EU.
-- Poster tier estimated shipping: EUR 8-15 depending on EU destination.
-- Bracelet/poster tier estimated shipping: EUR 10-18 depending on EU destination.
+- Marseille Poster Pack estimated shipping: EUR 8-15 depending on EU destination.
+- Beacon Of Hope Bracelet pack estimated shipping: EUR 10-18 depending on EU destination.
 - Final country-by-country shipping prices should be entered before launch or confirmed through Kickstarter Pledge Manager before fulfillment.
 - Backer addresses and reward preferences will be collected through Kickstarter surveys or Pledge Manager.
 - Digital rewards will be delivered through Kickstarter digital rewards, game keys, or secure download links.
@@ -383,7 +454,11 @@ Back Divergency and help us build a new 2D action game with skill loadouts, ally
 - Add at least one clean combat GIF with no debug text.
 - Add one clean ally-command GIF if available.
 - Confirm all screenshots are final enough to show publicly.
+- Confirm campaign currency before launch: USD draft vs final Kickstarter currency.
 - Confirm all reward item names match Kickstarter reward/item setup.
+- Confirm Early Recruit, Prisoner's Scratchings, Laundel Resident, Design Council, Vanguard Weapon Artisan, Marseille Citizen, and Calamity Elite Creator quantity limits.
+- Confirm add-on availability and prices.
+- Prepare sample/mockup images for wallpapers, lore dossier, poster, and bracelet.
 - Confirm shipping prices for every physical tier before launch.
 - Add creator/studio public links, Steam page, Discord, and press/social links when ready.
 -->

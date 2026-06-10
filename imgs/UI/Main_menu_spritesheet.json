@@ -1,0 +1,504 @@
+{
+  "image": "Main_menu_spritesheet.png",
+  "source": "imgs/UI/main_menu_illustration_base.png",
+  "source_size": {
+    "w": 805,
+    "h": 456
+  },
+  "size": {
+    "w": 813,
+    "h": 622
+  },
+  "padding": 1,
+  "sprite_count": 18,
+  "packing": "MaxRects best-short-side-fit, non-rotated, exact non-power-of-two atlas chosen for smallest area",
+  "preview": "imgs/UI/main_menu_sprites/main_menu_preview_805x456.png",
+  "sprites": {
+    "main_menu_background_805x456": {
+      "group": "background",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 805,
+        "h": 456
+      },
+      "source_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 805,
+        "h": 456
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 805,
+        "h": 456
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 805,
+        "h": 456
+      }
+    },
+    "logo_divergency": {
+      "group": "branding",
+      "frame": {
+        "x": 0,
+        "y": 457,
+        "w": 367,
+        "h": 75
+      },
+      "source_rect": {
+        "x": 204,
+        "y": 43,
+        "w": 367,
+        "h": 75
+      },
+      "rotated": false,
+      "trimmed": true,
+      "original_size": {
+        "w": 395,
+        "h": 114
+      },
+      "trim_rect": {
+        "x": 14,
+        "y": 19,
+        "w": 367,
+        "h": 75
+      }
+    },
+    "label_heroes_red": {
+      "group": "labels",
+      "frame": {
+        "x": 669,
+        "y": 547,
+        "w": 78,
+        "h": 27
+      },
+      "source_rect": {
+        "x": 57,
+        "y": 393,
+        "w": 78,
+        "h": 27
+      },
+      "rotated": false,
+      "trimmed": true,
+      "original_size": {
+        "w": 144,
+        "h": 44
+      },
+      "trim_rect": {
+        "x": 33,
+        "y": 8,
+        "w": 78,
+        "h": 27
+      }
+    },
+    "corner_settings_button": {
+      "group": "corner_buttons",
+      "frame": {
+        "x": 748,
+        "y": 547,
+        "w": 42,
+        "h": 42
+      },
+      "source_rect": {
+        "x": 755,
+        "y": 8,
+        "w": 42,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 42,
+        "h": 42
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 42,
+        "h": 42
+      }
+    },
+    "button_blank_normal": {
+      "group": "button_states",
+      "frame": {
+        "x": 368,
+        "y": 457,
+        "w": 222,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 568,
+        "y": 194,
+        "w": 222,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 222,
+        "h": 44
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 222,
+        "h": 44
+      }
+    },
+    "button_blank_selected": {
+      "group": "button_states",
+      "frame": {
+        "x": 591,
+        "y": 457,
+        "w": 222,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 568,
+        "y": 142,
+        "w": 222,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 222,
+        "h": 44
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 222,
+        "h": 44
+      }
+    },
+    "button_start_story_selected": {
+      "group": "buttons",
+      "frame": {
+        "x": 368,
+        "y": 502,
+        "w": 222,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 568,
+        "y": 142,
+        "w": 222,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 222,
+        "h": 44
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 222,
+        "h": 44
+      }
+    },
+    "button_continue": {
+      "group": "buttons",
+      "frame": {
+        "x": 591,
+        "y": 502,
+        "w": 222,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 568,
+        "y": 194,
+        "w": 222,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 222,
+        "h": 44
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 222,
+        "h": 44
+      }
+    },
+    "button_heroes": {
+      "group": "buttons",
+      "frame": {
+        "x": 0,
+        "y": 533,
+        "w": 222,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 568,
+        "y": 246,
+        "w": 222,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 222,
+        "h": 44
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 222,
+        "h": 44
+      }
+    },
+    "button_pvp": {
+      "group": "buttons",
+      "frame": {
+        "x": 223,
+        "y": 547,
+        "w": 222,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 568,
+        "y": 298,
+        "w": 222,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 222,
+        "h": 44
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 222,
+        "h": 44
+      }
+    },
+    "button_settings": {
+      "group": "buttons",
+      "frame": {
+        "x": 0,
+        "y": 578,
+        "w": 222,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 568,
+        "y": 350,
+        "w": 222,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 222,
+        "h": 44
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 222,
+        "h": 44
+      }
+    },
+    "button_quit": {
+      "group": "buttons",
+      "frame": {
+        "x": 446,
+        "y": 547,
+        "w": 222,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 568,
+        "y": 402,
+        "w": 222,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "original_size": {
+        "w": 222,
+        "h": 44
+      },
+      "trim_rect": {
+        "x": 0,
+        "y": 0,
+        "w": 222,
+        "h": 44
+      }
+    },
+    "icon_play": {
+      "group": "icons",
+      "frame": {
+        "x": 788,
+        "y": 590,
+        "w": 25,
+        "h": 28
+      },
+      "source_rect": {
+        "x": 598,
+        "y": 150,
+        "w": 25,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": true,
+      "original_size": {
+        "w": 34,
+        "h": 34
+      },
+      "trim_rect": {
+        "x": 6,
+        "y": 3,
+        "w": 25,
+        "h": 28
+      }
+    },
+    "icon_continue": {
+      "group": "icons",
+      "frame": {
+        "x": 730,
+        "y": 590,
+        "w": 28,
+        "h": 30
+      },
+      "source_rect": {
+        "x": 595,
+        "y": 149,
+        "w": 28,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": true,
+      "original_size": {
+        "w": 34,
+        "h": 34
+      },
+      "trim_rect": {
+        "x": 3,
+        "y": 2,
+        "w": 28,
+        "h": 30
+      }
+    },
+    "icon_heroes": {
+      "group": "icons",
+      "frame": {
+        "x": 703,
+        "y": 575,
+        "w": 26,
+        "h": 31
+      },
+      "source_rect": {
+        "x": 596,
+        "y": 148,
+        "w": 26,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": true,
+      "original_size": {
+        "w": 34,
+        "h": 34
+      },
+      "trim_rect": {
+        "x": 4,
+        "y": 1,
+        "w": 26,
+        "h": 31
+      }
+    },
+    "icon_pvp": {
+      "group": "icons",
+      "frame": {
+        "x": 759,
+        "y": 590,
+        "w": 28,
+        "h": 30
+      },
+      "source_rect": {
+        "x": 595,
+        "y": 149,
+        "w": 28,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": true,
+      "original_size": {
+        "w": 34,
+        "h": 34
+      },
+      "trim_rect": {
+        "x": 3,
+        "y": 2,
+        "w": 28,
+        "h": 30
+      }
+    },
+    "icon_settings": {
+      "group": "icons",
+      "frame": {
+        "x": 669,
+        "y": 575,
+        "w": 33,
+        "h": 33
+      },
+      "source_rect": {
+        "x": 593,
+        "y": 148,
+        "w": 33,
+        "h": 33
+      },
+      "rotated": false,
+      "trimmed": true,
+      "original_size": {
+        "w": 34,
+        "h": 34
+      },
+      "trim_rect": {
+        "x": 1,
+        "y": 1,
+        "w": 33,
+        "h": 33
+      }
+    },
+    "icon_quit": {
+      "group": "icons",
+      "frame": {
+        "x": 223,
+        "y": 592,
+        "w": 28,
+        "h": 29
+      },
+      "source_rect": {
+        "x": 597,
+        "y": 150,
+        "w": 28,
+        "h": 29
+      },
+      "rotated": false,
+      "trimmed": true,
+      "original_size": {
+        "w": 34,
+        "h": 34
+      },
+      "trim_rect": {
+        "x": 5,
+        "y": 3,
+        "w": 28,
+        "h": 29
+      }
+    }
+  }
+}

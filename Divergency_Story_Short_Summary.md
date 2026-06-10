@@ -141,3 +141,62 @@ Ghost rời The Cradle cùng đồng đội. Khi Henry hỏi anh có muốn tìm
 Divergency không nói rằng đánh bại boss cuối sẽ xóa sạch đau khổ. Câu chuyện nói điều khó hơn: có những mất mát không thể đảo ngược, và chính việc chấp nhận điều đó mới ngăn con người biến tình yêu, niềm tin, an ủi, lịch sử hoặc sinh tồn thành giấy phép để hi sinh người khác.
 
 Nhóm nhân vật chính thắng vì họ từ chối suy nghĩ như kẻ thù: không biến Heniana thành lý do, không biến Heni thành bản sao, không biến Ghost thành người được chọn, không biến người chết thành mệnh lệnh cho người sống, và không biến bất kỳ ai thành vật liệu cho một phép màu.
+
+## Hệ thống tên gọi và ý nghĩa (Name & Meaning Tables)
+
+Dưới đây là bảng tra cứu chi tiết tên gọi của các nhân vật, môi trường, màn chơi (Stage) và các thực thể quan trọng trong *Divergency*, kèm theo ý nghĩa biểu tượng và động lực sáng tạo đằng sau mỗi cái tên.
+
+### 1. Nhân vật chơi được (Playable Characters / Players)
+
+| Tên Nhân Vật | Ý Nghĩa Chữ Viết & Biểu Tượng | Vai Trò & Động Lực Sáng Tạo |
+| :--- | :--- | :--- |
+| **Deep** | "Sâu thẳm" / "Trầm lặng" | Phản ánh nội tâm sâu sắc, sự chịu đựng và quá khứ đầy vết thương chiến tranh. Anh muốn chôn vùi danh vọng anh hùng cũ để sống một cuộc đời bình dị, bảo vệ Solei. |
+| **Solei** | Gốc từ *"Soleil"* (tiếng Pháp nghĩa là Mặt Trời) | Tượng trưng cho ánh sáng mặt trời rực rỡ, nhiệt huyết tuổi trẻ và hy vọng ấm áp chiếu rọi vào cuộc đời u tối của Deep. Cô tìm kiếm căn tính độc lập của mình. |
+| **Henry** | Gốc Đức cổ (*Heimeric* - "Người bảo hộ gia quyến") | Thể hiện vai trò là người dẫn dắt, lập kế hoạch, giữ sự tỉnh táo và gánh vác trách nhiệm bảo vệ sự an toàn cho cả nhóm. |
+| **Tulas** | Gốc từ *"Tulasi"* (cây Hương Nhu / Thánh Thảo chữa lành) | Đại diện cho sự thanh lọc và cứu chữa. Năng lực điều khiển chất lỏng/máu của anh vừa hữu ích vừa đáng sợ, đặt ra câu hỏi về ranh giới giữa cứu người và cấm thuật. |
+| **Block** | "Khối chắn" / "Tấm khiên" | Đúng như tên gọi, anh là người cản hậu kiên cường, tấm khiên bảo vệ đồng đội bằng cơ thể vững chãi, tượng trưng cho lòng tin vững chắc trong đội. |
+| **Ghost / Sarrasin** | *Ghost*: Bóng ma vô hình<br>*Sarrasin*: Kiên cường như lúa mạch đen | **Ghost** là biệt danh do đội đặt vì hệ thống không nhận diện được anh. Tên thật của anh là **Sarrasin** (loại lúa mạch đen hoang dã, có thể sinh trưởng kiên cường ở những vùng đất sỏi đá khắc nghiệt nhất) – tượng trưng cho việc anh là "lỗi sai hệ thống" sống sót qua các thí nghiệm tàn bạo nhất của Jamerson. |
+
+---
+
+### 2. Nhân vật phụ & Trùm (NPCs & Bosses)
+
+| Tên Nhân Vật | Ý Nghĩa Chữ Viết & Biểu Tượng | Vai Trò & Động Lực Sáng Tạo |
+| :--- | :--- | :--- |
+| **Jamerson Obsworth** | *James*: Kẻ chiếm đoạt / *Obsworth*: Giá trị ngoan cố | Phản diện chính của câu chuyện. Ông sẵn sàng chiếm đoạt mạng sống của người khác để hồi sinh con gái mình, bám víu vào tình cha con ích kỷ đến mức mù quáng. |
+| **Heniana** | Kết hợp từ *Hana* (đóa hoa) và *Hen* (cô độc) | Con gái của Jamerson, đóa hoa cô độc bị giam cầm trong buồng ngủ đông, nguồn cơn gián tiếp dẫn đến mọi thí nghiệm tàn độc của cha mình. |
+| **Heni** | Bản thể rút gọn từ tên Heniana | Cô bé nhân bản từ Heniana ở làng chài. Cái tên thể hiện sự độc lập: cô không phải là bản sao hay công cụ thay thế cho bất kỳ ai mà là một con người tự do riêng biệt. |
+| **Jacques** | "Kẻ nâng đỡ" / "Người dẫn đường" | Bartender đứng tuổi ở quán bar Armorlite, người âm thầm chỉ lối và hỗ trợ nhóm đi qua cống ngầm Marseille khi bị dồn vào ngõ cụt. |
+| **Marius Vane** | *Marius*: Chiến tranh lạnh lùng / *Vane*: Chong chóng đón gió | Cảnh sát mật của Marseille. Hắn xem con người như những con số chi phí vận hành, kẻ cơ hội phục vụ cho bất kỳ kẻ mạnh nào để duy trì trật tự bề ngoài. |
+| **SheMal** | Ghép từ *She* (cô ấy) và *Mal* (bệnh dịch / ác quỷ) | Trùm của Stage 1, một vật thí nghiệm thất bại hoàn hảo bị biến đổi cơ thể, đại diện cho nỗi đau đớn và tiếng thét vô vọng của những nạn nhân dưới tay Jamerson. |
+| **Sakuri / Sakura** | "Hoa anh đào" mong manh trước gió | Thánh nữ của bán đảo phía đông. Cái tên tượng trưng cho số phận mong manh bị giam cầm trong cung điện, phải lắng nghe những tiếng thì thầm dối trá của thế gian. |
+| **Aramut** | "Vực thẳm" / "Sự hy sinh quên mình" | Người anh hùng huyền thoại cổ đại đã hy sinh bản thân để tiêu diệt và phân tách Thần Sơ Sinh đầu tiên, bảo vệ nhân loại. |
+| **The Father-Eye** | "Cha-Mắt" (Sự kết hợp quái dị) | Trùm cuối do Jamerson biến thành khi bị Con Mắt nuốt chửng hoàn toàn. Thể hiện sự biến dạng kinh hoàng khi tình yêu thương bị biến thành sự chiếm đoạt vô độ. |
+
+---
+
+### 3. Khu vực & Môi trường (Environments & Locations)
+
+| Tên Môi Trường | Ý Nghĩa Chữ Viết & Biểu Tượng | Vai Trò & Động Lực Sáng Tạo |
+| :--- | :--- | :--- |
+| **Armorlite** | "Giáp nhẹ" / "Đá lửa ẩn mình" | Quán bar/Safehouse của Jacques giữa Marseille. Nơi ẩn náu tạm thời giúp nhóm nghỉ ngơi, vá víu vết thương trước khi đối mặt với cuộc truy đuổi của cảnh sát mật. |
+| **Laundel** | Kết hợp từ *Launder* (rửa trôi) và *Dell* (thung lũng) | Chợ ngầm trong ga metro bỏ dở dưới lòng đất Marseille. Nơi nước thải thành phố và những mảnh đời nhập cư bị gạt bỏ cùng trôi về và nương tựa vào nhau. |
+| **Mizero Honor** | *Mizero* (Hy vọng trong tiếng Rwanda) & *Honor* (Danh dự) | Tên của chiếc tàu ngầm nghiên cứu ngoài khơi. Ban đầu được Jamerson đặt với hy vọng cứu sống con gái một cách danh dự, nhưng cuối cùng lại biến thành một phòng thí nghiệm đen tối dưới đáy biển sâu. |
+| **Naminoura** | "Sóng vỗ bờ" trong tiếng Nhật | Làng chài hoang tàn ở bán đảo Sakuri, nơi đón nhận những tiếng rì rầm của sóng biển mang theo tiếng gọi tiềm thức của Cái Tai. |
+| **Gekkoukan** | "Nguyệt Quang Điện" (Cung điện trăng sáng) | Cung điện nội địa nơi Sakuri bị giam cầm. Tượng trưng cho vẻ đẹp lạnh lẽo, cô độc, hoàn toàn biệt lập với nỗi đau của người dân bên ngoài. |
+| **Vespera Crypt** | "Hầm mộ hoàng hôn" | Nơi giấu Cái Lưỡi ở Calvaria. Tượng trưng cho sự im lặng vĩnh hằng của cái chết, nơi hoàng hôn buông xuống mọi cuộc đối thoại của thế giới người sống. |
+| **Kardias Peak** | "Đỉnh Trái Tim" (Gốc từ *Kardia* - tiếng Hy Lạp cổ) | Đỉnh núi cao nhất ở Akam Meskul, nơi Trái Tim của Thần Sơ Sinh đập những nhịp phẫn nộ, khuếch đại lòng thù hận của hai phe chiến tranh. |
+| **Aletheia Nexus** | "Tâm điểm của sự thật trần trụi" | Trung tâm của Stage 5 (The Cradle). Nơi ảo ảnh biến mất, bắt buộc các nhân vật phải đối mặt với sự thật trần trụi và đưa ra quyết định cuối cùng về việc trả lại các mảnh thần. |
+
+---
+
+### 4. Màn chơi & Giai đoạn (Stages)
+
+| Tên Giai Đoạn | Ý Nghĩa Chữ Viết & Biểu Tượng | Ý Nghĩa Câu Chuyện & Thiết Kế |
+| :--- | :--- | :--- |
+| **Stage 0: Bastonne** | Pháo đài giam giữ (Bastion) | Nhà tù kiên cố nơi mở đầu trò chơi. Nơi các nhân vật gặp gỡ Ghost và thực hiện cuộc giải cứu Block đầy kịch tính, khơi nguồn hành trình. |
+| **Stage 1: Marseille** | Siêu đô thị cảng tự trị thối rữa | Đại diện cho ảo tưởng về một trật tự văn minh hoàn hảo được xây dựng bằng sự bóc lột âm thầm đối với người nghèo và tù nhân. |
+| **Stage 2: Sakuri** | Mảnh đất lắng nghe | Vùng đất của Cái Tai, tượng trưng cho mối nguy hại khi biến một đứa trẻ thành thánh nhân và sự lan truyền độc hại của những lời dối trá. |
+| **Stage 3: Calvaria** | Đồi sọ của người chết (Skull) | Thành phố mộ nơi giấu Cái Lưỡi. Tượng trưng cho sự mệt mỏi sau chiến tranh và việc biến nỗi đau mất mát thành công cụ trục lợi tâm linh. |
+| **Stage 4: Akam Meskul** | Huyết mạch của rồng cổ | Vùng núi bị nguyền chứa Trái Tim. Tượng trưng cho việc con người biến lịch sử phục thù và sinh tồn thành cái cớ để phát động các cuộc thánh chiến tàn khốc. |
+| **Stage 5: The Cradle** | Chiếc nôi khởi nguyên | Nơi nằm giữa hiện thực và giấc mơ. Tượng trưng cho sự quay về điểm khởi đầu, nơi con người phải chấp nhận buông bỏ quyền lực phép màu để thế giới hồi sinh tự nhiên. |
