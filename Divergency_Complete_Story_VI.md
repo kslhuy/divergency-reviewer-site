@@ -415,9 +415,9 @@ Trong trận, Sakuri phơi bày nỗi sợ của từng người. Henry sợ mì
 
 Khi bị đánh bại, Sakuri không xin tha, không phải vì kiêu ngạo mà vì cô không còn biết phải xin ai. Cô cười vì lần đầu tiên quanh mình im lặng. Trước khi chết hoặc rơi vào trạng thái vô thức, cô nói: "Mắt đã thấy. Tai đã nghe. Lưỡi sẽ nói điều các ngươi không muốn tin."
 
-Jamerson xuất hiện qua một kênh ngầm đã chuẩn bị trước, cướp dữ liệu từ Cái Tai và mang Heniana rời khỏi đền. Ông không cần cướp trọn Cái Tai nữa; Con Mắt đã học đủ từ nó để tìm mảnh tiếp theo. Nhưng Cái Tai vẫn gọi các mảnh khác, và lời gọi đó dẫn cả nhóm đến **Calvaria**, thành phố mộ.
+Jamerson xuất hiện qua một kênh ngầm đã chuẩn bị trước, cướp dữ liệu từ Cái Tai và mang Heniana rời khỏi đền. Ông không cần cướp trọn Cái Tai nữa; Con Mắt đã học đủ từ nó để lần theo mảnh tiếp theo. Trước khi biến mất, dư âm của Cái Tai còn để lại một chuỗi âm thanh rất lạ: tiếng chuông tang, tiếng mũi khắc cào tên lên xương, và một giọng nói không thuộc về người sống.
 
-Kết thúc Stage 2, Heni quyết định đi cùng nhóm. Cô không muốn bị Jamerson lấy lại, cũng không muốn tiếp tục sống như mẫu thử nghiệm. Solei là người đầu tiên gọi cô là "em" mà không thêm bất cứ điều kiện nào.
+Henry ghép những manh mối đó với tuyến vận chuyển xác người ở biên giới phía tây và nhận ra Jamerson đang hướng đến **Calvaria**, thành phố mộ. Kết thúc Stage 2, Heni quyết định đi cùng nhóm. Cô không muốn bị Jamerson lấy lại, cũng không muốn tiếp tục sống như mẫu thử nghiệm. Solei là người đầu tiên gọi cô là "em" mà không thêm bất cứ điều kiện nào.
 
 ## Stage 3 - Calvaria: xương, mộ, tôn giáo, và cái chết bị rao bán
 
@@ -425,33 +425,87 @@ Kết thúc Stage 2, Heni quyết định đi cùng nhóm. Cô không muốn b�
 ![Pain fotress](<imgs/Stage3/Pain_fotress.png>)
 
 
-**Calvaria** là một thành phố mộ xây quanh những hầm xương không thấy đáy. Từ xa xưa, người dân mang xác người thân đến đây để được đặt tên trong **Sổ Thở Cuối**. Khi Đại Họa lan rộng, Calvaria trở thành nơi hành hương của cả thế giới. Ai cũng muốn nghe lại giọng người đã mất một lần cuối.
+**Calvaria** là một thành phố mộ xây quanh những hầm xương không thấy đáy. Từ xa xưa, người dân mang xác người thân đến đây để được đặt tên trong **Sổ Thở Cuối**, tin rằng một cái tên được ghi đúng cách sẽ giúp linh hồn không tan vào bóng tối. Khi Đại Họa lan rộng, Calvaria trở thành nơi hành hương của cả thế giới. Ai cũng muốn nghe lại giọng người đã mất một lần cuối, dù chỉ để được tha thứ, được trách móc, hoặc được nói lời tạm biệt quá muộn.
 
-Giáo hội **Hơi Thở Cuối** nắm giữ Cái Lưỡi. Nó có thể nói bằng giọng người chết, đọc ngôn ngữ đã thất truyền, và biến câu nói thành mệnh lệnh nếu người nghe đủ yếu lòng. Ban đầu, giáo hội dùng nó để an ủi những người vừa mất thân nhân. Về sau, sự an ủi thành dịch vụ, dịch vụ thành quyền lực, quyền lực thành nhà tù.
+Giáo hội **Hơi Thở Cuối** nắm giữ **Cái Lưỡi**. Nó có thể nói bằng giọng người chết, đọc ngôn ngữ đã thất truyền, và biến câu nói thành mệnh lệnh nếu người nghe đủ yếu lòng. Ban đầu, giáo hội dùng nó để an ủi những gia đình vừa mất thân nhân. Về sau, sự an ủi thành dịch vụ, dịch vụ thành quyền lực, quyền lực thành nhà tù. Calvaria vẫn mở cổng cho người hành hương, nhưng mọi con đường vào thành phố đều buộc người sống trả phí cho người chết.
 
-Ở Calvaria, cái chết cũng có giá. Người giàu mua quan tài bằng bạc, mua lễ cầu siêu riêng, mua "lời nhắn từ người chết". Người nghèo bán xương của người thân làm thánh tích, bán tên trong sổ, hoặc làm phu mộ cho đến ngày chính họ rơi xuống hầm.
+Ở Calvaria, cái chết cũng có giá. Người giàu mua quan tài bằng bạc, mua lễ cầu siêu riêng, mua "lời nhắn từ người chết". Người nghèo bán xương của người thân làm thánh tích, bán tên trong sổ, hoặc làm phu mộ cho đến ngày chính họ rơi xuống hầm. Vì vậy Stage 3 không mở ra bằng một trận đánh lớn, mà bằng cảm giác bị kéo chậm vào một nơi ai cũng đang đau khổ và ai cũng học cách kiếm lợi từ đau khổ đó.
 
-Stage 3 là nơi Cái Lưỡi đào sâu nhất vào **Deep** và **Henry**. Nó không chỉ nói bằng giọng người chết; nó đánh thẳng vào ruột gan người nghe, dùng một phần sự thật để buộc họ quỳ xuống. Với Deep, Calvaria kéo lại những cuộc chiến xưa, những đồng đội đã chết, và nỗi mệt mỏi của một người từng bị biến thành biểu tượng. Với Henry, nó moi lại các quyết định bẩn, những người anh không cứu được, và nỗi sợ rằng anh tiếp tục chiến đấu không phải vì còn hy vọng, mà vì anh không biết cách nghỉ ngơi.
+Đây là giai đoạn Cái Lưỡi đào sâu nhất vào **Deep** và **Henry**. Nó không chỉ nói bằng giọng người chết; nó đánh thẳng vào ruột gan người nghe, dùng một phần sự thật để buộc họ quỳ xuống. Với Deep, Calvaria kéo lại những cuộc chiến xưa, những đồng đội đã chết, và nỗi mệt mỏi của một người từng bị biến thành biểu tượng. Với Henry, nó moi lại các quyết định bẩn, những người anh không cứu được, và nỗi sợ rằng anh tiếp tục chiến đấu không phải vì còn hy vọng, mà vì anh không biết cách nghỉ ngơi.
 
-Vì vậy Calvaria không chỉ là giai đoạn kể về tang lễ. Nó là giai đoạn kể về sự kiệt sức sau chiến tranh, về câu hỏi đời người còn ý nghĩa gì khi mọi chiến thắng đều để lại xác chết. Cái Lưỡi thắng nếu nó khiến Deep tin rằng anh phải trở lại làm vũ khí cho người chết, hoặc khiến Henry tin rằng tội lỗi cũ cho anh quyền ra lệnh giết thêm người.
+Vì vậy mạch Stage 3 đi từ yên tĩnh đến ngột ngạt: con đường hoang vắng ngoài biên giới, khu rừng bị giáo hội dùng làm bãi săn, pháo đài chắn lối vào, hầm ngầm dưới thành phố, dòng sông oán hận, rồi cuối cùng mới tới con đường hành hương và trung tâm Calvaria. Mỗi act nhỏ đẩy nhóm đến gần Cái Lưỡi hơn, nhưng cũng buộc họ bước sâu hơn vào câu hỏi của vùng đất này: người chết có được tưởng nhớ, hay đang bị biến thành công cụ để điều khiển người sống?
 
-### 3-1. Đường hành hương
+### 3-1. Con đường đơn độc (Solitary Road)
+![Solitary Road](<imgs/Stage3/solitary road.png>)
+
+Nhóm rời vùng núi của Sakuri mà gần như không có thời gian hồi sức. Jamerson đã đi trước bằng tuyến xe tang và thương nhân xương, còn các cổng chính vào Calvaria đều nằm dưới quyền Giáo hội Hơi Thở Cuối. Henry không thể đưa cả nhóm đi theo một đoàn hành hương chính thức vì Heni quá dễ bị nhận ra, nên họ chọn con đường cũ dành cho dân tị nạn: **Con đường đơn độc**.
+
+Con đường đất cằn cỗi bị bao phủ bởi sương mù xám lạnh và những hàng cây trơ trụi lá. Rải rác hai bên đường là xe ngựa đổ nát, bảng tên mộ bị cạo sạch, và những vòng đá dựng vội cho người chết không đủ tiền vào Calvaria. Đây là đoạn giảm nhịp sau Stage 2, nhưng không hề nhẹ: cả nhóm lần đầu đi cùng Heni như một thành viên thật sự, trong khi phía trước là nơi có thể bắt cô nói bằng giọng của một người khác.
+
+Henry bước chậm hơn vì vết thương cũ ở chân nhức lên trong gió lạnh. Deep luôn giữ tay gần chuôi kiếm, nhưng sự im lặng của anh không còn giống cảnh giác đơn thuần; nó giống một người đang nghe lại tiếng bước chân của những đồng đội đã mất. Ghost đi phía sau cùng, cảm nhận một dao động mơ hồ từ Calvaria vọng lại. Đó không phải âm thanh vật lý, mà là áp lực của Cái Lưỡi đang thử gọi từng cái tên trong đầu họ.
+
+Cuối con đường, nhóm bắt gặp một đoàn linh hồn lang thang lướt qua các mộ đá như đang tìm cổng vào thành phố. Một người hành hương già cảnh báo rằng ai không có dấu ghi tên của giáo hội sẽ bị "thợ gặt" săn trong rừng. Cảnh báo này đẩy nhóm sang lựa chọn đầu tiên của Stage 3: đi thẳng vào quốc lộ của Calvaria và để giáo hội nhận diện Heni, hoặc rẽ vào Rừng Đồ Tể để tránh các trạm kiểm soát.
+
+### 3-2. Rừng Đồ Tể (Slayer Jungle)
+![Slayer Jungle](<imgs/Stage3/slayer jungle.png>)
+
+Henry đề xuất rẽ vào Rừng Đồ Tể vì đây là khoảng trống duy nhất trên bản đồ tuần tra của giáo hội. Nhưng "khoảng trống" không có nghĩa là an toàn. Khu rừng là một vùng đầm lầy hóa đá u ám, nơi những thân cây gai khổng lồ mọc đan chéo nhau như xương sườn gãy, còn mặt đất phủ đầy hài cốt của những người từng nghĩ mình có thể vào Calvaria mà không trả phí.
+
+Nơi đây là lãnh địa săn bắn của các **Slayer** thuộc Giáo hội. Họ đeo mặt nạ sắt hình đầu lâu, cầm lưỡi hái lớn và di chuyển lặng lẽ như những cái bóng để hành hình bất cứ ai không có giấy thông hành. Cả nhóm phải tận dụng địa hình gai góc để lẩn trốn, cắt đứt các bẫy chông xương, và đối phó với những đợt phục kích chớp nhoáng. Tulas lần đầu phải sử dụng năng lực của mình để hóa lỏng chất độc chảy ra từ rễ cây hóa đá, tạo rào chắn tạm thời hoặc ăn mòn giáp sắt của kẻ địch.
+
+Ở cuối rừng, nhóm phát hiện các Slayer không chỉ canh biên giới. Họ đang gom xác những kẻ bị giết để chuyển về thành phố như "vật liệu thánh". Dấu xe chở xác trùng với tuyến Jamerson đã đi, dẫn cả nhóm đến bức tường phòng thủ thật sự của Calvaria: Pháo đài Linh hồn.
+
+### 3-3. Pháo đài Linh hồn (Spirit Fortress)
+![Spirit Fortress](<imgs/Stage3/Spirit fortress complete.png>)
+
+Vượt qua cánh rừng, nhóm không tìm thấy lối thoát mà đụng thẳng vào một bức tường đá khổng lồ bắc ngang hẻm núi sâu: **Pháo đài Linh hồn**. Đây là tiền đồn quân sự kiên cố nhất bảo vệ Calvaria từ bên ngoài, đồng thời là nơi giáo hội xử lý những linh hồn không đủ "sạch" để đưa vào nghi lễ chính.
+
+Pháo đài được vận hành bởi các **Bình chứa Linh hồn** (Spirit Batteries): những chiếc lồng kim loại giam giữ hàng trăm linh hồn oán hận của bệnh nhân, kẻ phản loạn, dân nghèo không trả nổi phí tang lễ, và cả những người bị Slayer giết trong rừng. Năng lượng từ tiếng thét của họ được chuyển hóa thành lá chắn ánh sáng xanh lam bao bọc toàn bộ pháo đài và kích hoạt các khẩu pháo linh hồn tầm xa.
+
+Cả nhóm phải thực hiện một chiến dịch tấn công trực diện đầy nguy hiểm. Henry điều phối chỉ dẫn Block giương khiên sắt bảo vệ nhóm trước những đợt đạn pháo oán khí, trong khi Deep dùng đao nặng đập vỡ các cổng phụ. Solei leo lên các tháp gác cao để tìm cách ngắt kết nối các đường truyền năng lượng. Tại đây, nhóm phải đối mặt với lựa chọn đạo đức lớn: phá hủy trực tiếp các bình linh hồn để ép hệ thống lá chắn sụp đổ nhanh chóng (làm tiêu tán các linh hồn vĩnh viễn), hay dùng Ghost và Tulas để từ từ giải thoát họ một cách an toàn nhưng phải đối đầu với các đợt lính gác đông đảo hơn.
+
+Dù lựa chọn thế nào, pháo đài sụp một phần cũng khiến cổng chính của Calvaria báo động. Nhóm không thể tiếp tục đi trên mặt đất. Một linh hồn được giải thoát, hoặc một tù nhân còn sống trong pháo đài, chỉ cho họ ký hiệu của một lối mộ đạo cũ nằm dưới chân tường thành.
+
+### 3-4. Lối đi bí mật dưới lòng đất (Under Secret Passage)
+<!-- ![Under Secret Passage](<imgs/Stage3/under secrect passage.png>) -->
+![Under Secret Passage_new](<imgs/Stage3/under secrect passage complete.png>)
+
+Khi cổng chính đã báo động, cả nhóm buộc phải đi theo lối mộ đạo vừa được chỉ cho. Đây là **Lối đi bí mật dưới lòng đất**, một hệ thống đường hầm chằng chịt do trộm mộ, phu xương, và các giáo sĩ đào tẩu tạo ra từ nhiều thế kỷ trước để luồn vào Calvaria mà không bị ghi tên trong sổ.
+
+Không gian bên dưới cực kỳ chật hẹp, tối tăm và chứa đầy những cạm bẫy cổ xưa: các phiến đá sập, phòng ngập khí gas độc và những cơ quan bánh răng cần sức mạnh lớn để vận hành. Sự phối hợp nhóm được đẩy lên tối đa: Block phải gồng mình nâng những cánh cổng đá nặng hàng tấn để Solei lách qua mở cơ quan, Tulas điều khiển dòng nước ngầm làm nguội các luồng khí nóng tỏa ra từ lò đốt rác của Giáo hội, và Ghost dùng khả năng kháng nhận diện lỗi của mình để đi qua các bẫy quét năng lượng mà không kích hoạt chúng.
+
+Ở giữa đường hầm, nhóm tìm thấy dấu vết Jamerson đã đi qua trước: một giáo sĩ bị ép mở khóa, vài mảnh thiết bị của Con Mắt, và mẫu máu đông của Heniana rơi trên nền đá. Nhưng đường hầm không dẫn thẳng vào giáo đường như họ hy vọng. Khi hệ thống cũ bị kích hoạt lại, sàn đá vỡ ra và kéo cả nhóm rơi xuống dòng nước đen bên dưới.
+
+### 3-5. Sông Oán Hận (River of Hatred 3)
+<!-- ![River of Hatred 3](<imgs/Stage3/river of hatress 3.png>) -->
+
+![River of Hatred 3](<imgs/Stage3/river_of hatress 3 complete.png>)
+
+Lối đi ngầm vỡ ra trên một hang động khổng lồ, nơi **Sông Oán Hận** chảy cuồn cuộn dưới lòng đất. Dòng sông là một vũng lầy đen ngòm, ăn mòn da thịt, tích tụ nước thải độc hại từ các tuyến thành phố, dịch bệnh của Calvaria, và oán khí của những người bị chôn cất sai cách. Đây không phải đường vào thành phố; đây là thứ Calvaria cố giấu dưới nền đá của mình.
+
+Cả nhóm phải đứng trên một chiếc bè gỗ lớn ghép vội và trôi tự do dọc theo dòng nước xiết. Họ phải liên tục chiến đấu để bảo vệ chiếc bè khỏi sự tấn công của lũ quái vật xương kéo từ lòng sông và những linh hồn bay lượn phun độc từ trần hang. Deep phải liên tục đập tan các tảng đá nhọn trôi nổi trên sông trước khi chúng đâm sầm vào bè, trong khi Tulas tập trung kiểm soát dòng nước đen để giữ cho bè thăng bằng và Henry bắn hạ các xạ thủ xương từ hai bên bờ đá.
+
+Dòng sông cuốn nhóm qua những cửa xả bên dưới khu hành hương. Khi thoát được lên bờ, họ không còn ở ngoài Calvaria nữa, nhưng cũng chưa vào trung tâm. Trước mặt họ là con đường mà mọi người hành hương đều phải đi: nơi người sống xếp hàng để xin người chết nói chuyện.
+
+### 3-6. Đường hành hương
 ![dusk_haeven](<imgs/Stage3/dusk_haeven.png>)
 
-Nhóm đến Calvaria để tìm Cái Lưỡi, nhưng mỗi người đến đây với một lý do riêng. Henry muốn biết liệu những giọng nói trong quá khứ có thật là người chết hay chỉ là ký ức bị lợi dụng. Deep thấy dấu vết của những đội viễn chinh cũ. Heni nghe tin giáo hội có thể "cho người chết nói", nên âm thầm tự hỏi nếu mình nói bằng giọng Heniana, mình có còn là mình không.
+Sau khi thoát khỏi Sông Oán Hận, nhóm phải hòa vào dòng người hành hương thay vì tiếp tục đánh thẳng. Đây là lần đầu Stage 3 cho người chơi nhìn Calvaria từ phía người dân: những đoàn người ôm tro cốt, bó xương, di ảnh, búp bê giữ tóc người đã mất, và những lá thư chưa kịp gửi. Không ai ở đây nghĩ mình đang bước vào một cái bẫy. Họ chỉ muốn đau ít hơn.
 
-Trên đường, người chơi gặp dân hành hương, kẻ trộm mộ, lính đánh thuê của giáo hội, và những "người ghi tên" chuyên thu phí từ từng cái chết. Đây là giai đoạn kể về mặt trái của niềm an ủi: khi đau khổ quá lớn, con người sẵn sàng trả bất cứ giá nào để nghe một lời nói dối dịu dàng.
+Nhóm đến Calvaria để tìm Cái Lưỡi, nhưng mỗi người bước trên đường hành hương với một lý do riêng. Henry muốn biết liệu những giọng nói trong quá khứ có thật là người chết hay chỉ là ký ức bị lợi dụng. Deep thấy dấu vết của những đội viễn chinh cũ. Heni nghe tin giáo hội có thể "cho người chết nói", nên âm thầm tự hỏi nếu mình nói bằng giọng Heniana, mình có còn là mình không.
 
-### 3-2. Chợ xương và hầm mộ sống
+Trên đường, người chơi gặp dân hành hương, kẻ trộm mộ, lính đánh thuê của giáo hội, và những **người ghi tên** chuyên thu phí từ từng cái chết. Đây là giai đoạn kể về mặt trái của niềm an ủi: khi đau khổ quá lớn, con người sẵn sàng trả bất cứ giá nào để nghe một lời nói dối dịu dàng. Dòng người này dẫn nhóm vào nơi Calvaria lộ bộ mặt thật rõ nhất: chợ xương và hầm mộ sống.
+
+### 3-7. Chợ xương và hầm mộ sống
 ![Calvaria bone market wide](<imgs/Stage3/xuong_skull_market_wide_v2.png>)
-
 ![Calvaria living catacomb market](<imgs/Stage3/xuong_skull_catacomb_market_v2.png>)
 
 Calvaria không chỉ có mộ. Nó là một hệ sinh thái. Xương được rửa, phân loại, khắc tên, bán làm bùa hộ, vật liệu xây dựng, hoặc linh kiện cho những cơ thể cầu nguyện. Giáo hội tạo ra những chiến binh xương bằng cách gắn mảnh ý chí của Cái Lưỡi vào hài cốt.
 
 Ghost bắt đầu nghe những đoạn tên cũ của mình. Cái Lưỡi có thể biết, hoặc chỉ đang đoán theo nỗi sợ. Khi nó gọi một cái tên, Ghost suýt quay lại. Nhưng Heni hỏi: "Nếu cái tên đó thuộc về người đã chết, anh có bắt buộc phải làm người đó nữa không?"
 
-### 3-3. Đại giáo đường Hơi Thở Cuối
+### 3-8. Đại giáo đường Hơi Thở Cuối
+![Pain fotress](<imgs/Stage3/Pain_fotress.png>)
 
 Đại giáo đường là nơi người giàu ngồi trên ghế nhung, nghe "người chết" nói lời tha thứ. Bên dưới, hàng nghìn người nghèo dập đầu xin một câu trả lời miễn phí.
 
@@ -465,7 +519,7 @@ Jamerson đập vỡ bàn thờ, giết những giáo sĩ cản đường, và q
 
 Đây là điểm Jamerson vượt qua ranh giới cuối cùng: từ cứu con gái sang sở hữu một hình ảnh của con gái.
 
-### 3-4. Phòng Cái Lưỡi
+### 3-9. Phòng Cái Lưỡi
 ![Ruined boss](<imgs/Stage3/Ruined boss.png>)
 
 Boss cuối Stage 3 là một hợp xướng xương khổng lồ được gọi là **Dàn Hợp Xướng**, gồm những hài cốt, giọng nói, và lời cầu nguyện bị giáo hội khâu lại thành một "thánh thân". Cái Lưỡi nằm trong miệng của nó. Nó không chỉ nhại âm thanh; nó chọn những giọng từng có quyền làm người sống nghe lời, rồi biến chúng thành mệnh lệnh.
@@ -510,6 +564,7 @@ Về sau, con người dùng chính xác rồng làm lối đi vào sâu vùng �
 Không phe nào hoàn toàn vô tội. Một phe dùng tôn giáo để biến phục thù thành thánh chiến. Phe kia dùng khoa học và sinh tồn để biến bạo lực thành nghĩa vụ.
 
 ### 4-1. Ngoài cửa hang rồng
+![Stage 4-1 playable map - Dragon Cave Approach](<imgs/Stage4/stage4_act_4_1_dragon_cave_approach_map.png>)
 
 Màn đầu của Stage 4 bắt đầu ở ngoài cửa hang xác rồng. Kẻ địch gồm:
 
@@ -521,6 +576,7 @@ Màn đầu của Stage 4 bắt đầu ở ngoài cửa hang xác rồng. Kẻ �
 Boss cuối màn là **Crusader Band**, một đội tiên phong của Con Cháu Chiếc Nôi. Họ bắt người để thử xem ai sống sót được trong lời nguyền, rồi biến người sống sót thành bằng chứng rằng "thần đã chọn".
 
 ### 4-2. Đường hầm trong xác Akam Meskul
+![Stage 4-2 playable map - Dragon Bone Catacombs](<imgs/Stage4/stage4_act_4_2_dragon_bone_catacombs_map.png>)
 
 Người chơi đi vào trong xác rồng. Đây là một màn choáng ngợp: xương sườn như cột đền, da rồng đóng cứng thành tường, những khoang nội tạng rỗng biến thành hang động. Thỉnh thoảng, lời nguyền chiếu lại những ký ức cũ: Aramut cưỡi rồng bay qua bầu trời, quân đội sáu vương quốc tranh cãi, và khoảnh khắc thánh long quay đầu giữ chân thứ không ai thấy rõ.
 
@@ -529,6 +585,7 @@ Deep nhận ra những bài ca về Aramut mà anh từng nghe đã bị cắt b
 Đây là tấm gương soi lại Deep. Nếu anh tiếp tục để người khác dùng mình làm biểu tượng, anh sẽ chỉ lặp lại lịch sử.
 
 ### 4-3. Thành phố nhân tạo và bộ tộc ẩn
+![Stage 4-3 playable map - Glass City and Ritual Cave](<imgs/Stage4/stage4_act_4_3_glass_city_ritual_cave_map.png>)
 ![blood_lari_bos](<imgs/Stage4/blood_lari_bos.png>)
 
 Tàn Dư Sáu Vương Quốc sống trong một thành phố kín bằng kim loại và kính, nơi không khí được lọc liên tục. Họ lịch sự, có học thức, và nói năng như những người văn minh. Nhưng dưới tầng hầm là những phòng thử nghiệm với tù nhân Con Cháu Chiếc Nôi, mẫu máu, và trẻ em được kiểm tra khả năng chịu lời nguyền.
@@ -544,6 +601,7 @@ Với Tulas, Akam Meskul không cần phải là quê hương hay tín ngưỡng
 Với Block, Akam Meskul là nơi các bộ lạc và phe phái nói rất nhiều về anh hùng, sức mạnh, thân thể, tốc độ, huyết thống và chiến công. Block không nhanh nhất, không hào nhoáng nhất, và không giống kiểu anh hùng được hát trong sử thi. Nhưng chính ở đây anh thấy mình có ích theo cách bền hơn: giữ cầu cho dân chạy, che khiên cho người bị thương, vác người qua vùng độc, giữ cửa đủ lâu để cả nhóm thoát, hoặc đứng yên giữa hỗn loạn để người khác có chỗ bám. Sự trưởng thành của Block không phải là trở thành biểu tượng chiến tranh, mà là hiểu rằng sức mạnh có thể là một nơi trú tạm cho người khác.
 
 ### 4-4. Trái Tim và Titan Rồng
+![Stage 4-4 playable map - Heart Titan Battlefield](<imgs/Stage4/stage4_act_4_4_heart_titan_battlefield_map.png>)
 ![view_final](<imgs/Stage4/view_final.gif>)
 
 
@@ -572,6 +630,8 @@ Con đường cuối cùng mở ra qua xương sống của Akam Meskul, dẫn �
 
 **The Cradle** không giống một ngôi đền. Nó là một vùng đất nằm giữa hiện thực và giấc mơ. Đồ vật từ khắp thế giới xuất hiện ở đây như bị kéo ra từ ký ức của các mảnh thần: một góc quán bar Armorlite, một chợ nhỏ ở Laundel, chiếc ghế của làng chài, những cột xương Calvaria, cánh rồng Akam Meskul, và phòng ngủ đông trắng của Heniana.
 
+![Cradle Landscape](<imgs/Stage5/the_cradle_landscape.png>)
+
 Những mảnh ký ức này không chỉ là hình ảnh. Chúng thử lại các lựa chọn của cả hành trình. Marseille dựng lại một lối thoát riêng cho nhóm, nhưng phía sau là tiếng tù nhân trong Bastonne bị bỏ lại. Sakuri trả lại sự im lặng nếu nhóm chịu để một đứa trẻ làm vật tế. Calvaria mở những cánh cửa bằng giọng người chết. Akam Meskul cho thấy một chiến thắng rực rỡ nếu nhóm chấp nhận để hai phe tự tàn sát. The Cradle không hỏi nhóm có đủ mạnh để thắng không. Nó hỏi họ có lặp lại cách nghĩ của những kẻ họ đã đánh bại không.
 
 Không khí có độc, nhưng nhóm sống sót vì đã tiếp xúc với nhiều mảnh thần và có thiết bị lọc của Tàn Dư. Heni yếu đi nhanh. Cô càng gần Dây Rốn, cô càng nghe thấy Heniana mơ. Điều này không biến Heni thành chìa khóa vô tri. Ngược lại, lần đầu tiên cô hiểu rõ nỗi sợ lớn nhất của mình: nếu cô có thể mở đường đến Heniana, mọi người sẽ lại muốn dùng cô như phần thay thế cho một người khác.
@@ -579,6 +639,14 @@ Không khí có độc, nhưng nhóm sống sót vì đã tiếp xúc với nhi�
 Ghost cũng bắt đầu thấy những mảnh quá khứ. Những hình ảnh rải rác từ Bastonne, Calvaria và Akam Meskul ghép lại thành một khả năng: anh từng là một đứa trẻ trong một đợt thử nghiệm cũ hơn của Jamerson hoặc của những kẻ đi trước Jamerson. Tên anh đã bị xóa khỏi hồ sơ vì anh "thất bại": không thích hợp làm vật chứa, không dễ điều khiển, không phản ứng đúng với thôi miên. Vẫn còn những khoảng trống về ai đã xóa hồ sơ, ai đã để anh sống, và vì sao anh bị bỏ lại. Nhưng chính sự thất bại đó cứu anh.
 
 Anh không phải vị cứu tinh do số mệnh chọn. Anh là người sống sót từ một lỗi sai, và anh có quyền biến lỗi sai đó thành lựa chọn.
+
+**Thân thế của Ghost & Nhịp tim cộng hưởng:**
+Tại đây, Ghost bắt đầu trải qua những cơn đau co thắt lồng ngực dữ dội. Nhịp tim của anh đồng bộ kỳ lạ với nhịp đập từ lõi Dây Rốn. Những hình ảnh chập chờn từ quá khứ hiện về rõ nét: Ghost không chỉ đơn thuần là một tù nhân hay một lỗi sai ngẫu nhiên của hệ thống. Anh chính là **Prototype Zero (Mẫu Thử Không)** – tiêu bản phôi thai nhân tạo đầu tiên được cấy tế bào của Thần Sơ Sinh trong các nghiên cứu sơ khởi của Jamerson nhiều năm trước. Do không thể tích hợp trọn vẹn sức mạnh thần tính và bị coi là "thất bại", ký ức của anh bị xóa sạch và anh bị vứt bỏ vào khu giam giữ Bastonne. Nhưng chính sự "thất bại" này – việc giữ lại phần lớn nhân tính và cấu trúc sinh học không hoàn thiện – đã giúp Ghost sở hữu khả năng kháng nhận diện sinh học và kháng lại sự thôi miên của các mảnh thần. Khi tiến sâu vào The Cradle, nhịp tim cộng hưởng này vừa là một lời nguyền rút cạn sinh lực anh, vừa là chiếc chìa khóa sinh học duy nhất giúp Ghost nhìn thấu các cơ quan bảo vệ của Dây Rốn.
+
+**Phòng Gương Ký Ức (Memory Mirror Chamber):**
+Trong hành trình xuyên qua Vùng Mơ, nhóm bước vào một không gian biệt lập nơi ý thức của Heni chạm vào tâm trí ngủ đông của Heniana. Không phải qua các báo cáo y học lạnh lùng, mà qua một gương nước phản chiếu tâm linh. Heniana thật sự kẹt trong nỗi cô đơn vô tận của buồng ngủ đông, liên tục nghe thấy những âm thanh méo mó từ người cha và thế giới bên ngoài. Heni nhận ra Heniana không hề oán giận sự tồn tại của cô. Cả hai cô bé, một người là bản gốc đau đớn, một người là bản nhân bản bị săn đuổi, đã tìm thấy sự đồng điệu sâu sắc. Họ từ chối làm những vật tế câm lặng cho tham vọng của người lớn, quyết định sẽ cùng đứng lên khẳng định quyền tự quyết của bản thân.
+
+![Heni and Heniana Resonance](<imgs/Stage5/heni_heniana_resonance.png>)
 
 ### 5-2. Chiến trường của hai chính nghĩa
 
@@ -592,13 +660,15 @@ Henry cuối cùng nói với Ghost: "Lệnh duy nhất của tôi cho cậu là
 
 ### 5-3. Jamerson và Heniana
 
-Ở trung tâm The Cradle, Dây Rốn của Thần Sơ Sinh vẫn còn sống. Nó không phải một sợi dây đơn giản mà là một mạng mạch máu khổng lồ nối vào khoảng tối trên bầu trời, nơi có thứ gì đó ngoài thế giới đang lắng nghe.
+Ở trung tâm The Cradle, Dây Rốn của Thần Sơ Sinh vẫn còn sống. Nó không phải một sợi dây đơn giản mà là một mạng mạch máu khổng lồ nối vào khoảng tối trên bầu trời, nơi có thứ gì đó ngoài thế giới đang lắng nghe. Thực chất, Dây Rốn hoạt động như một **Ăng-ten Vũ Trụ (Cosmic Antenna)**. Khi Thần Sơ Sinh bị con người cắt xẻ trong quá khứ, tiếng khóc đau đớn của nó liên tục phát ra ngoài vũ trụ qua chiếc ăng-ten này, thu hút các thực thể vĩ đại khác tìm đến Trái Đất và gây ra các đợt Đại Họa. Nếu cố tình tiêu diệt các mảnh thần bằng bạo lực một lần nữa, chiếc ăng-ten sẽ phát tín hiệu khẩn cấp cực đại, kéo theo sự hủy diệt hoàn toàn của hành tinh. Cách duy nhất để chấm dứt lời nguyền là thực hiện một **Nghi lễ Ngược (Inverse Ritual)** – hoạt động như một bài ca ru (Cosmic Lullaby) xoa dịu tiếng khóc của thần và ngắt kết nối Dây Rốn một cách an hòa.
 
 Jamerson đặt buồng ngủ đông của Heniana vào vòng mạch. Con Mắt mở trong cánh tay ông. Cái Tai nghe nhịp máu con gái. Cái Lưỡi nói bằng giọng Heniana. Trái Tim đập theo mong muốn của ông. Mọi thứ ông cần đều ở đó.
 
 Nhưng sự thật lộ ra: nếu nghi lễ thành công, Heniana sẽ tỉnh dậy trong một cơ thể thần, nhưng ký ức, ý chí, và nhân tính của cô sẽ bị nhấn chìm bởi Thần Sơ Sinh đang tìm đường trở lại. Jamerson sẽ không cứu con gái. Ông sẽ dùng hình ảnh con gái làm cửa vào cho một thứ khác.
 
 Jamerson không chấp nhận. Ông gọi nhóm là kẻ sát nhân, gọi thế giới là vô ơn, gọi tất cả tù nhân đã chết là cái giá phải trả. Trận boss cuối bắt đầu với Jamerson trong bộ giáp gắn các mảnh thần, vừa là người cha, vừa là tế tư, vừa là vật chứa sắp vỡ.
+
+![Final Boss Jamerson](<imgs/Stage5/final_boss_jamerson.png>)
 
 Trong các pha, mỗi mảnh thần dùng một dạng tấn công:
 

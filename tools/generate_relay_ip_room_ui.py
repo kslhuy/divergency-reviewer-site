@@ -50,8 +50,7 @@ class ModeSpec:
     active: str
     subtitle: str
     left_title: str
-    empty_title: str
-    empty_subtitle: str
+    rooms: tuple[tuple[str, str, str, str, str], ...]
     right_title: str
     row_1: tuple[str, str]
     row_2: tuple[str, str]
@@ -67,8 +66,13 @@ MODES = {
         active="RELAY",
         subtitle="JOIN THROUGH RELAY CODE",
         left_title="LOBBY LIST",
-        empty_title="NO RELAY ROOMS",
-        empty_subtitle="Refresh or enter a room code.",
+        rooms=(
+            ("LAUNDEL GATE", "RLY-7K2Q  DEEP", "2/4", "42 MS", "READY"),
+            ("SEWER RUN", "RLY-9M4D  SOLEIL", "1/4", "58 MS", "OPEN"),
+            ("CLOCKTOWER", "RLY-2F8A  FIRREN", "3/4", "77 MS", "STORY"),
+            ("MIRE MARKET", "RLY-5C1N  BLANC", "2/4", "81 MS", "OPEN"),
+            ("OLD CATACOMB", "RLY-8P6V  NOX", "1/4", "95 MS", "READY"),
+        ),
         right_title="CREATE LOBBY",
         row_1=("ROUTE", "RELAY"),
         row_2=("REGION", "AUTO"),
@@ -82,8 +86,13 @@ MODES = {
         active="IP LOCAL",
         subtitle="LAN / DIRECT IP CONNECTION",
         left_title="LAN ROOMS",
-        empty_title="NO LOCAL ROOMS",
-        empty_subtitle="Host a room or enter an IP.",
+        rooms=(
+            ("LAUNDEL GATE", "192.168.0.42  DEEP", "2/4", "12 MS", "READY"),
+            ("ARSENAL DOCK", "192.168.0.18  SOLEIL", "1/4", "18 MS", "OPEN"),
+            ("OLD SEWER", "192.168.0.63  FIRREN", "3/4", "24 MS", "STORY"),
+            ("FOUNDRY WALK", "192.168.0.77  BLANC", "2/4", "31 MS", "OPEN"),
+            ("BRIDGE WATCH", "192.168.0.91  NOX", "1/4", "36 MS", "READY"),
+        ),
         right_title="HOST LOCAL",
         row_1=("ROUTE", "IP LOCAL"),
         row_2=("HOST IP", "AUTO"),
@@ -114,7 +123,7 @@ def load_fonts(scale: float) -> dict[str, ImageFont.FreeTypeFont]:
         return max(7, round(value * scale))
 
     return {
-        "title": font("BOD_B.TTF", sz(29)),
+        "title": font("BOD_B.TTF", sz(24)),
         "section": font("georgiab.ttf", sz(13)),
         "tab": font("georgiab.ttf", sz(11)),
         "body": font("georgia.ttf", sz(10)),
@@ -247,10 +256,10 @@ def draw_rivets(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], radi
 
 def draw_modal(canvas: Image.Image, s: float, spec: ModeSpec) -> tuple[int, int, int, int]:
     draw = ImageDraw.Draw(canvas, "RGBA")
-    x = round(145 * s)
-    y = round(62 * s)
-    w = round(515 * s)
-    h = round(348 * s)
+    x = round(135 * s)
+    y = round(52 * s)
+    w = round(535 * s)
+    h = round(358 * s)
     c = round(5 * s)
 
     shadow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
@@ -268,9 +277,6 @@ def draw_modal(canvas: Image.Image, s: float, spec: ModeSpec) -> tuple[int, int,
         BRASS_DARK,
         max(1, round(1 * s)),
     )
-    draw.rectangle((x + round(18 * s), y + round(63 * s), x + w - round(18 * s), y + round(64 * s)), fill=(95, 67, 42, 150))
-    draw.rectangle((x + round(18 * s), y + h - round(57 * s), x + w - round(18 * s), y + h - round(56 * s)), fill=(95, 67, 42, 130))
-
     rail_y = y + round(5 * s)
     draw.line((x + round(82 * s), rail_y, x + w - round(82 * s), rail_y), fill=BRASS, width=max(1, round(1 * s)))
     draw.line((x + round(100 * s), rail_y + round(3 * s), x + w - round(100 * s), rail_y + round(3 * s)), fill=BRASS_DARK, width=max(1, round(1 * s)))
@@ -306,10 +312,10 @@ def draw_modal(canvas: Image.Image, s: float, spec: ModeSpec) -> tuple[int, int,
 
 def draw_title(draw: ImageDraw.ImageDraw, modal: tuple[int, int, int, int], fonts: dict[str, ImageFont.ImageFont], spec: ModeSpec, s: float) -> None:
     x, y, w, _ = modal
-    draw_centered(draw, (x, y + round(17 * s), w, round(33 * s)), "STORY ROOM", fonts["title"], CREAM, 1, (22, 13, 8, 230))
-    divider_y = y + round(55 * s)
-    draw.line((x + round(158 * s), divider_y, x + round(236 * s), divider_y), fill=BRASS, width=max(1, round(1 * s)))
-    draw.line((x + w - round(236 * s), divider_y, x + w - round(158 * s), divider_y), fill=BRASS, width=max(1, round(1 * s)))
+    draw_centered(draw, (x, y + round(13 * s), w, round(28 * s)), "STORY ROOM", fonts["title"], CREAM, 1, (22, 13, 8, 230))
+    divider_y = y + round(44 * s)
+    draw.line((x + round(164 * s), divider_y, x + round(235 * s), divider_y), fill=BRASS, width=max(1, round(1 * s)))
+    draw.line((x + w - round(235 * s), divider_y, x + w - round(164 * s), divider_y), fill=BRASS, width=max(1, round(1 * s)))
     draw.polygon(
         [
             (x + w // 2, divider_y - round(4 * s)),
@@ -320,15 +326,25 @@ def draw_title(draw: ImageDraw.ImageDraw, modal: tuple[int, int, int, int], font
         fill=(12, 10, 7, 255),
         outline=GOLD_DIM,
     )
-    draw_centered(draw, (x, y + round(58 * s), w, round(14 * s)), spec.subtitle, fonts["footer"], MUTED, 0)
+    subtitle_rect = (x + round(137 * s), y + round(50 * s), w - round(274 * s), round(13 * s))
+    chamfered_rect(draw, subtitle_rect, max(1, round(2 * s)), (6, 7, 7, 220), BRASS_DARK, max(1, round(1 * s)))
+    draw_centered(draw, subtitle_rect, spec.subtitle, fonts["footer"], CREAM, 0)
 
 
 def draw_tab(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], label: str, active: bool, font_obj: ImageFont.ImageFont, s: float) -> None:
-    fill = (41, 26, 12, 244) if active else (13, 16, 17, 235)
-    outline = GOLD_DIM
+    fill = (48, 27, 10, 244) if active else (9, 12, 13, 238)
+    outline = GOLD if active else GOLD_DIM
     chamfered_rect(draw, rect, max(2, round(4 * s)), fill, outline, max(1, round(1 * s)))
     x, y, w, h = rect
     draw.line((x + round(5 * s), y + round(5 * s), x + w - round(5 * s), y + round(5 * s)), fill=(225, 159, 52, 105) if active else (123, 84, 41, 80))
+    if active:
+        chamfered_rect(
+            draw,
+            (x + round(3 * s), y + round(3 * s), w - round(6 * s), h - round(6 * s)),
+            max(1, round(3 * s)),
+            None,
+            (236, 178, 70, 160),
+        )
     draw_centered(draw, rect, label, font_obj, GOLD_LIGHT if active else CREAM, 1)
     if active:
         draw.polygon(
@@ -345,12 +361,12 @@ def draw_tab(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], label: 
 
 def draw_tabs(draw: ImageDraw.ImageDraw, modal: tuple[int, int, int, int], fonts: dict[str, ImageFont.ImageFont], spec: ModeSpec, s: float) -> None:
     x, y, w, _ = modal
-    tab_y = y + round(82 * s)
+    tab_y = y + round(69 * s)
     tab_w = round(126 * s)
     gap = round(10 * s)
     start = x + (w - tab_w * 2 - gap) // 2
-    draw_tab(draw, (start, tab_y, tab_w, round(29 * s)), "RELAY", spec.active == "RELAY", fonts["tab"], s)
-    draw_tab(draw, (start + tab_w + gap, tab_y, tab_w, round(29 * s)), "IP LOCAL", spec.active == "IP LOCAL", fonts["tab"], s)
+    draw_tab(draw, (start, tab_y, tab_w, round(27 * s)), "RELAY", spec.active == "RELAY", fonts["tab"], s)
+    draw_tab(draw, (start + tab_w + gap, tab_y, tab_w, round(27 * s)), "IP LOCAL", spec.active == "IP LOCAL", fonts["tab"], s)
 
 
 def draw_section_panel(
@@ -380,17 +396,55 @@ def draw_signal_icon(draw: ImageDraw.ImageDraw, center: tuple[int, int], s: floa
     draw.line((cx - round(6 * s), cy + round(14 * s), cx + round(6 * s), cy + round(14 * s)), fill=GOLD_DIM, width=max(1, round(1 * s)))
 
 
+def draw_room_row(
+    draw: ImageDraw.ImageDraw,
+    rect: tuple[int, int, int, int],
+    room: tuple[str, str, str, str, str],
+    selected: bool,
+    fonts: dict[str, ImageFont.ImageFont],
+    s: float,
+) -> None:
+    x, y, w, h = rect
+    fill = (35, 20, 10, 242) if selected else ROW_FILL
+    outline = GOLD if selected else BRASS_DARK
+    chamfered_rect(draw, rect, max(2, round(3 * s)), fill, outline, max(1, round(1 * s)))
+    if selected:
+        chamfered_rect(
+            draw,
+            (x + round(3 * s), y + round(3 * s), w - round(6 * s), h - round(6 * s)),
+            max(1, round(2 * s)),
+            None,
+            (236, 178, 70, 150),
+        )
+        draw.rectangle((x + round(5 * s), y + round(4 * s), x + w - round(5 * s), y + round(5 * s)), fill=(220, 150, 45, 95))
+
+    name, detail, slots, ping, status = room
+    draw_text(draw, (x + round(8 * s), y + round(3 * s)), name, fonts["body_bold"], GOLD_LIGHT if selected else CREAM, 0)
+    draw_text(draw, (x + round(8 * s), y + round(14 * s)), detail, fonts["small"], CYAN if selected else MUTED, 0)
+
+    status_fill = CYAN if status in {"READY", "OPEN"} else GOLD_LIGHT
+    tx0, _, tx1, _ = bbox(draw, slots, fonts["body_bold"])
+    draw_text(draw, (x + w - round(60 * s) - (tx1 - tx0), y + round(3 * s)), slots, fonts["body_bold"], GOLD_LIGHT, 0)
+    tx0, _, tx1, _ = bbox(draw, ping, fonts["small"])
+    draw_text(draw, (x + w - round(8 * s) - (tx1 - tx0), y + round(14 * s)), ping, fonts["small"], MUTED, 0)
+    tx0, _, tx1, _ = bbox(draw, status, fonts["small"])
+    draw_text(draw, (x + w - round(8 * s) - (tx1 - tx0), y + round(4 * s)), status, fonts["small"], status_fill, 0)
+
+
 def draw_left_panel(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], fonts: dict[str, ImageFont.ImageFont], spec: ModeSpec, s: float) -> None:
     content = draw_section_panel(draw, rect, spec.left_title, fonts, s)
     x, y, w, h = content
-    draw.rectangle((x, y, x + w, y + h), fill=(1, 4, 5, 112), outline=(28, 42, 42, 170))
-    draw_signal_icon(draw, (x + w // 2, y + round(18 * s)), s)
-    draw_centered(draw, (x, y + round(31 * s), w, round(16 * s)), spec.empty_title, fonts["body_bold"], GOLD_LIGHT, 1)
-    draw_centered(draw, (x, y + round(47 * s), w, round(13 * s)), spec.empty_subtitle, fonts["small"], MUTED, 0)
+    draw.rectangle((x, y, x + w, y + h), fill=(1, 4, 5, 122), outline=(28, 42, 42, 160))
+
+    row_h = round(23 * s)
+    gap = round(2 * s)
+    for index, room in enumerate(spec.rooms):
+        row_y = y + round(4 * s) + index * (row_h + gap)
+        draw_room_row(draw, (x + round(5 * s), row_y, w - round(10 * s), row_h), room, index == 0, fonts, s)
 
     button_y = y + h - round(23 * s)
-    draw_button(draw, (x + round(8 * s), button_y, round(92 * s), round(21 * s)), "REFRESH", fonts["button"], False, s)
-    draw_button(draw, (x + w - round(100 * s), button_y, round(92 * s), round(21 * s)), "QUICK JOIN", fonts["button"], False, s)
+    draw_button(draw, (x + round(5 * s), button_y, round(88 * s), round(21 * s)), "REFRESH", fonts["button"], False, s)
+    draw_button(draw, (x + w - round(127 * s), button_y, round(122 * s), round(21 * s)), "JOIN SELECTED", fonts["button"], True, s)
 
 
 def draw_setting_row(
@@ -415,7 +469,14 @@ def draw_right_panel(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int],
     draw_setting_row(draw, (x, y, w, row_h), spec.row_1[0], spec.row_1[1], fonts, s)
     draw_setting_row(draw, (x, y + round(24 * s), w, row_h), spec.row_2[0], spec.row_2[1], fonts, s)
     draw_setting_row(draw, (x, y + round(48 * s), w, row_h), spec.row_3[0], spec.row_3[1], fonts, s)
-    draw_button(draw, (x + round(5 * s), y + round(75 * s), w - round(10 * s), round(22 * s)), "HOST ROOM", fonts["button"], True, s)
+    draw_button(draw, (x + round(5 * s), y + round(73 * s), w - round(10 * s), round(21 * s)), "HOST ROOM", fonts["button"], True, s)
+
+    entry_y = y + round(101 * s)
+    draw_text(draw, (x + round(5 * s), entry_y), spec.code_label, fonts["small"], CREAM, 0)
+    field_y = entry_y + round(14 * s)
+    chamfered_rect(draw, (x + round(5 * s), field_y, w - round(10 * s), round(21 * s)), max(2, round(3 * s)), FIELD_FILL, GOLD_DIM)
+    draw_text(draw, (x + round(12 * s), field_y + round(5 * s)), spec.placeholder, fonts["small"], GOLD_LIGHT, 0)
+    draw_button(draw, (x + round(5 * s), field_y + round(25 * s), w - round(10 * s), round(20 * s)), spec.action, fonts["button"], True, s)
 
 
 def draw_button(
@@ -426,29 +487,26 @@ def draw_button(
     selected: bool,
     s: float,
 ) -> None:
-    fill = (36, 22, 10, 242) if selected else (10, 13, 14, 238)
-    outline = GOLD_DIM
+    fill = (45, 26, 10, 246) if selected else (9, 12, 13, 238)
+    outline = GOLD if selected else GOLD_DIM
     chamfered_rect(draw, rect, max(2, round(3 * s)), fill, outline, max(1, round(1 * s)))
     x, y, w, h = rect
     if selected:
         draw.rectangle((x + round(5 * s), y + round(4 * s), x + w - round(5 * s), y + round(5 * s)), fill=(215, 145, 42, 80))
+        chamfered_rect(
+            draw,
+            (x + round(3 * s), y + round(3 * s), w - round(6 * s), h - round(6 * s)),
+            max(1, round(2 * s)),
+            None,
+            (238, 177, 63, 145),
+        )
     draw_centered(draw, rect, label, font_obj, GOLD_LIGHT if selected else CREAM, 1)
 
 
-def draw_input_bar(draw: ImageDraw.ImageDraw, modal: tuple[int, int, int, int], fonts: dict[str, ImageFont.ImageFont], spec: ModeSpec, s: float) -> None:
+def draw_name_row(draw: ImageDraw.ImageDraw, modal: tuple[int, int, int, int], fonts: dict[str, ImageFont.ImageFont], s: float) -> None:
     x, y, w, h = modal
-    row_y = y + h - round(69 * s)
+    name_y = y + h - round(34 * s)
     label_x = x + round(42 * s)
-    row_h = round(25 * s)
-    draw_text(draw, (label_x, row_y + round(6 * s)), spec.code_label, fonts["body_bold"], CREAM, 0)
-    field_x = x + round(128 * s)
-    field_w = round(228 * s)
-    field = (field_x, row_y, field_w, row_h)
-    chamfered_rect(draw, field, max(2, round(3 * s)), FIELD_FILL, GOLD_DIM, max(1, round(1 * s)))
-    draw_text(draw, (field_x + round(12 * s), row_y + round(6 * s)), spec.placeholder, fonts["field"], GOLD_LIGHT, 0)
-    draw_button(draw, (field_x + field_w + round(10 * s), row_y, round(78 * s), row_h), spec.action, fonts["button"], True, s)
-
-    name_y = row_y + round(36 * s)
     draw_text(draw, (label_x, name_y + round(5 * s)), "YOUR NAME:", fonts["body_bold"], GOLD_LIGHT, 0)
     draw_text(draw, (label_x + round(82 * s), name_y + round(5 * s)), "Displayed Name", fonts["body_bold"], CYAN, 0)
     edit_x = label_x + round(226 * s)
@@ -498,12 +556,12 @@ def render(bg_path: Path, out_path: Path, mode_key: str) -> None:
     draw_tabs(draw, modal, fonts, spec, scale)
 
     x, y, w, _ = modal
-    panel_y = y + round(122 * scale)
-    left = (x + round(28 * scale), panel_y, round(294 * scale), round(142 * scale))
-    right = (x + round(337 * scale), panel_y, round(150 * scale), round(142 * scale))
+    panel_y = y + round(105 * scale)
+    left = (x + round(24 * scale), panel_y, round(328 * scale), round(214 * scale))
+    right = (x + round(362 * scale), panel_y, round(149 * scale), round(214 * scale))
     draw_left_panel(draw, left, fonts, spec, scale)
     draw_right_panel(draw, right, fonts, spec, scale)
-    draw_input_bar(draw, modal, fonts, spec, scale)
+    draw_name_row(draw, modal, fonts, scale)
     draw_footer(canvas, modal, fonts, spec, scale)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)

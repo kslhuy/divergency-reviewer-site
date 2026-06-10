@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const outputFile = path.join(here, "Divergency_Reviewer_Tabs.html");
-const heroBackground = "imgs/UI/K_baner.png";
+const heroBackground = "imgs/UI/K_banner/K_baner_animated.gif";
 
 const documents = [
   {
@@ -117,6 +117,26 @@ const imageSlots = {
     },
   ],
   gameplay: [
+    {
+      src: "imgs/Stage4/stage4_act_4_1_dragon_cave_approach_map.png",
+      alt: "Stage 4-1 dragon cave approach playable map",
+      caption: "Stage 4-1 playable map: Dragon Cave Approach",
+    },
+    {
+      src: "imgs/Stage4/stage4_act_4_2_dragon_bone_catacombs_map.png",
+      alt: "Stage 4-2 dragon bone catacombs playable map",
+      caption: "Stage 4-2 playable map: Dragon Bone Catacombs",
+    },
+    {
+      src: "imgs/Stage4/stage4_act_4_3_glass_city_ritual_cave_map.png",
+      alt: "Stage 4-3 glass city and ritual cave playable map",
+      caption: "Stage 4-3 playable map: Glass City and Ritual Cave",
+    },
+    {
+      src: "imgs/Stage4/stage4_act_4_4_heart_titan_battlefield_map.png",
+      alt: "Stage 4-4 Heart Titan battlefield playable map",
+      caption: "Stage 4-4 playable map: Heart Titan Battlefield",
+    },
     {
       src: "imgs/Stage1/Bastonne.png",
       alt: "Bastonne prison stage",

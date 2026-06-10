@@ -1,0 +1,1117 @@
+{
+  "image": "Relay_IP_Room_spritesheet.png",
+  "source": "tools/generate_relay_ip_room_ui.py",
+  "native_canvas_size": {
+    "w": 805,
+    "h": 456
+  },
+  "export_scale": 1.0,
+  "size": {
+    "w": 927,
+    "h": 700
+  },
+  "padding": 1,
+  "sprite_count": 55,
+  "packing": "MaxRects best-short-side-fit, non-rotated, exact non-power-of-two transparent RGBA atlas",
+  "sprites": {
+    "modal_frame_with_shadow": {
+      "group": "frame",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 609,
+        "h": 389
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 609,
+        "h": 389
+      },
+      "source_rect": {
+        "x": 98,
+        "y": 45,
+        "w": 609,
+        "h": 389
+      },
+      "note": "Transparent centered modal backplate, trimmed from the 805x456 UI canvas."
+    },
+    "header_relay_subtitle": {
+      "group": "header",
+      "frame": {
+        "x": 329,
+        "y": 457,
+        "w": 535,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 535,
+        "h": 66
+      },
+      "source_rect": {
+        "x": 135,
+        "y": 52,
+        "w": 535,
+        "h": 66
+      }
+    },
+    "header_ip_local_subtitle": {
+      "group": "header",
+      "frame": {
+        "x": 329,
+        "y": 390,
+        "w": 535,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 535,
+        "h": 66
+      },
+      "source_rect": {
+        "x": 135,
+        "y": 52,
+        "w": 535,
+        "h": 66
+      }
+    },
+    "tab_relay_active": {
+      "group": "tabs",
+      "frame": {
+        "x": 760,
+        "y": 0,
+        "w": 126,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 126,
+        "h": 32
+      },
+      "source_rect": {
+        "x": 271,
+        "y": 121,
+        "w": 126,
+        "h": 32
+      }
+    },
+    "tab_relay_normal": {
+      "group": "tabs",
+      "frame": {
+        "x": 760,
+        "y": 94,
+        "w": 126,
+        "h": 27
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 126,
+        "h": 27
+      },
+      "source_rect": {
+        "x": 271,
+        "y": 121,
+        "w": 126,
+        "h": 27
+      }
+    },
+    "tab_ip_local_active": {
+      "group": "tabs",
+      "frame": {
+        "x": 702,
+        "y": 524,
+        "w": 126,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 126,
+        "h": 32
+      },
+      "source_rect": {
+        "x": 407,
+        "y": 121,
+        "w": 126,
+        "h": 32
+      }
+    },
+    "tab_ip_local_normal": {
+      "group": "tabs",
+      "frame": {
+        "x": 760,
+        "y": 66,
+        "w": 126,
+        "h": 27
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 126,
+        "h": 27
+      },
+      "source_rect": {
+        "x": 407,
+        "y": 121,
+        "w": 126,
+        "h": 27
+      }
+    },
+    "template_tab_active_blank": {
+      "group": "templates",
+      "frame": {
+        "x": 760,
+        "y": 33,
+        "w": 126,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 126,
+        "h": 32
+      },
+      "note": "Active tab frame with text cleared."
+    },
+    "template_tab_normal_blank": {
+      "group": "templates",
+      "frame": {
+        "x": 760,
+        "y": 122,
+        "w": 126,
+        "h": 27
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 126,
+        "h": 27
+      },
+      "note": "Normal tab frame with text cleared."
+    },
+    "panel_left_blank": {
+      "group": "panels",
+      "frame": {
+        "x": 0,
+        "y": 390,
+        "w": 328,
+        "h": 214
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 328,
+        "h": 214
+      },
+      "source_rect": {
+        "x": 159,
+        "y": 157,
+        "w": 328,
+        "h": 214
+      }
+    },
+    "panel_right_blank": {
+      "group": "panels",
+      "frame": {
+        "x": 610,
+        "y": 0,
+        "w": 149,
+        "h": 214
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 149,
+        "h": 214
+      },
+      "source_rect": {
+        "x": 497,
+        "y": 157,
+        "w": 149,
+        "h": 214
+      }
+    },
+    "section_header_lobby_list": {
+      "group": "section_headers",
+      "frame": {
+        "x": 610,
+        "y": 241,
+        "w": 312,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 312,
+        "h": 25
+      },
+      "source_rect": {
+        "x": 167,
+        "y": 165,
+        "w": 312,
+        "h": 25
+      }
+    },
+    "section_header_lan_rooms": {
+      "group": "section_headers",
+      "frame": {
+        "x": 610,
+        "y": 215,
+        "w": 312,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 312,
+        "h": 25
+      },
+      "source_rect": {
+        "x": 167,
+        "y": 165,
+        "w": 312,
+        "h": 25
+      }
+    },
+    "section_header_create_lobby": {
+      "group": "section_headers",
+      "frame": {
+        "x": 760,
+        "y": 178,
+        "w": 133,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 133,
+        "h": 25
+      },
+      "source_rect": {
+        "x": 505,
+        "y": 165,
+        "w": 133,
+        "h": 25
+      }
+    },
+    "section_header_host_local": {
+      "group": "section_headers",
+      "frame": {
+        "x": 0,
+        "y": 653,
+        "w": 133,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 133,
+        "h": 25
+      },
+      "source_rect": {
+        "x": 505,
+        "y": 165,
+        "w": 133,
+        "h": 25
+      }
+    },
+    "template_section_header_left_blank": {
+      "group": "templates",
+      "frame": {
+        "x": 610,
+        "y": 267,
+        "w": 312,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 312,
+        "h": 25
+      }
+    },
+    "template_section_header_right_blank": {
+      "group": "templates",
+      "frame": {
+        "x": 134,
+        "y": 653,
+        "w": 133,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 133,
+        "h": 25
+      }
+    },
+    "relay_room_row_1_laundel_gate": {
+      "group": "room_rows",
+      "frame": {
+        "x": 624,
+        "y": 563,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 203,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "relay_room_row_2_sewer_run": {
+      "group": "room_rows",
+      "frame": {
+        "x": 329,
+        "y": 587,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 228,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "relay_room_row_3_clocktower": {
+      "group": "room_rows",
+      "frame": {
+        "x": 624,
+        "y": 587,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 253,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "relay_room_row_4_mire_market": {
+      "group": "room_rows",
+      "frame": {
+        "x": 0,
+        "y": 605,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 278,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "relay_room_row_5_old_catacomb": {
+      "group": "room_rows",
+      "frame": {
+        "x": 295,
+        "y": 611,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 303,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "ip_local_room_row_1_laundel_gate": {
+      "group": "room_rows",
+      "frame": {
+        "x": 610,
+        "y": 293,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 203,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "ip_local_room_row_2_arsenal_dock": {
+      "group": "room_rows",
+      "frame": {
+        "x": 610,
+        "y": 317,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 228,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "ip_local_room_row_3_old_sewer": {
+      "group": "room_rows",
+      "frame": {
+        "x": 610,
+        "y": 341,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 253,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "ip_local_room_row_4_foundry_walk": {
+      "group": "room_rows",
+      "frame": {
+        "x": 610,
+        "y": 365,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 278,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "ip_local_room_row_5_bridge_watch": {
+      "group": "room_rows",
+      "frame": {
+        "x": 329,
+        "y": 563,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 303,
+        "w": 294,
+        "h": 23
+      }
+    },
+    "template_room_row_selected_blank": {
+      "group": "templates",
+      "frame": {
+        "x": 590,
+        "y": 611,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      }
+    },
+    "template_room_row_normal_blank": {
+      "group": "templates",
+      "frame": {
+        "x": 0,
+        "y": 629,
+        "w": 294,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 294,
+        "h": 23
+      }
+    },
+    "button_refresh": {
+      "group": "buttons",
+      "frame": {
+        "x": 829,
+        "y": 524,
+        "w": 88,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 88,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 176,
+        "y": 338,
+        "w": 88,
+        "h": 21
+      }
+    },
+    "button_join_selected": {
+      "group": "buttons",
+      "frame": {
+        "x": 646,
+        "y": 657,
+        "w": 122,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 122,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 348,
+        "y": 338,
+        "w": 122,
+        "h": 21
+      }
+    },
+    "button_host_room": {
+      "group": "buttons",
+      "frame": {
+        "x": 769,
+        "y": 657,
+        "w": 115,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 115,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 514,
+        "y": 272,
+        "w": 115,
+        "h": 21
+      }
+    },
+    "button_join": {
+      "group": "buttons",
+      "frame": {
+        "x": 580,
+        "y": 679,
+        "w": 115,
+        "h": 20
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 115,
+        "h": 20
+      },
+      "source_rect": {
+        "x": 514,
+        "y": 339,
+        "w": 115,
+        "h": 20
+      }
+    },
+    "button_connect": {
+      "group": "buttons",
+      "frame": {
+        "x": 464,
+        "y": 679,
+        "w": 115,
+        "h": 20
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 115,
+        "h": 20
+      },
+      "source_rect": {
+        "x": 514,
+        "y": 339,
+        "w": 115,
+        "h": 20
+      }
+    },
+    "template_button_selected_blank_115x21": {
+      "group": "templates",
+      "frame": {
+        "x": 232,
+        "y": 679,
+        "w": 115,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 115,
+        "h": 21
+      }
+    },
+    "template_button_normal_blank_88x21": {
+      "group": "templates",
+      "frame": {
+        "x": 696,
+        "y": 679,
+        "w": 88,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 88,
+        "h": 21
+      }
+    },
+    "setting_route_relay": {
+      "group": "setting_rows",
+      "frame": {
+        "x": 268,
+        "y": 657,
+        "w": 125,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 125,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 509,
+        "y": 199,
+        "w": 125,
+        "h": 21
+      }
+    },
+    "setting_region_auto": {
+      "group": "setting_rows",
+      "frame": {
+        "x": 673,
+        "y": 635,
+        "w": 125,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 125,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 509,
+        "y": 223,
+        "w": 125,
+        "h": 21
+      }
+    },
+    "setting_slots_1_4": {
+      "group": "setting_rows",
+      "frame": {
+        "x": 394,
+        "y": 657,
+        "w": 125,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 125,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 509,
+        "y": 247,
+        "w": 125,
+        "h": 21
+      }
+    },
+    "setting_route_ip_local": {
+      "group": "setting_rows",
+      "frame": {
+        "x": 799,
+        "y": 635,
+        "w": 125,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 125,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 509,
+        "y": 199,
+        "w": 125,
+        "h": 21
+      }
+    },
+    "setting_host_ip_auto": {
+      "group": "setting_rows",
+      "frame": {
+        "x": 760,
+        "y": 150,
+        "w": 125,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 125,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 509,
+        "y": 223,
+        "w": 125,
+        "h": 21
+      }
+    },
+    "setting_port_7777": {
+      "group": "setting_rows",
+      "frame": {
+        "x": 547,
+        "y": 635,
+        "w": 125,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 125,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 509,
+        "y": 247,
+        "w": 125,
+        "h": 21
+      }
+    },
+    "template_setting_row_blank": {
+      "group": "templates",
+      "frame": {
+        "x": 520,
+        "y": 657,
+        "w": 125,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 125,
+        "h": 21
+      }
+    },
+    "field_room_code_placeholder": {
+      "group": "fields",
+      "frame": {
+        "x": 116,
+        "y": 679,
+        "w": 115,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 115,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 514,
+        "y": 314,
+        "w": 115,
+        "h": 21
+      }
+    },
+    "field_host_ip_placeholder": {
+      "group": "fields",
+      "frame": {
+        "x": 0,
+        "y": 679,
+        "w": 115,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 115,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 514,
+        "y": 314,
+        "w": 115,
+        "h": 21
+      }
+    },
+    "template_entry_field_blank": {
+      "group": "templates",
+      "frame": {
+        "x": 348,
+        "y": 679,
+        "w": 115,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 115,
+        "h": 21
+      }
+    },
+    "name_row_displayed_name": {
+      "group": "name_row",
+      "frame": {
+        "x": 295,
+        "y": 635,
+        "w": 251,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 251,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 177,
+        "y": 376,
+        "w": 251,
+        "h": 21
+      }
+    },
+    "edit_arrow_button": {
+      "group": "name_row",
+      "frame": {
+        "x": 902,
+        "y": 427,
+        "w": 25,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 25,
+        "h": 21
+      },
+      "source_rect": {
+        "x": 403,
+        "y": 376,
+        "w": 25,
+        "h": 21
+      }
+    },
+    "top_right_settings_button": {
+      "group": "window_controls",
+      "frame": {
+        "x": 894,
+        "y": 178,
+        "w": 32,
+        "h": 29
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 32,
+        "h": 29
+      },
+      "source_rect": {
+        "x": 728,
+        "y": 18,
+        "w": 32,
+        "h": 29
+      }
+    },
+    "top_right_close_button": {
+      "group": "window_controls",
+      "frame": {
+        "x": 865,
+        "y": 427,
+        "w": 36,
+        "h": 29
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 36,
+        "h": 29
+      },
+      "source_rect": {
+        "x": 765,
+        "y": 18,
+        "w": 36,
+        "h": 29
+      }
+    },
+    "top_left_corner_ornament": {
+      "group": "frame",
+      "frame": {
+        "x": 885,
+        "y": 657,
+        "w": 42,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 42,
+        "h": 37
+      },
+      "source_rect": {
+        "x": 127,
+        "y": 50,
+        "w": 42,
+        "h": 37
+      }
+    },
+    "top_right_corner_ornament": {
+      "group": "frame",
+      "frame": {
+        "x": 865,
+        "y": 389,
+        "w": 39,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 39,
+        "h": 37
+      },
+      "source_rect": {
+        "x": 636,
+        "y": 50,
+        "w": 39,
+        "h": 37
+      }
+    },
+    "left_purple_banner": {
+      "group": "frame",
+      "frame": {
+        "x": 887,
+        "y": 0,
+        "w": 38,
+        "h": 88
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 38,
+        "h": 88
+      },
+      "source_rect": {
+        "x": 98,
+        "y": 162,
+        "w": 38,
+        "h": 88
+      }
+    },
+    "right_purple_banner": {
+      "group": "frame",
+      "frame": {
+        "x": 887,
+        "y": 89,
+        "w": 38,
+        "h": 88
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 38,
+        "h": 88
+      },
+      "source_rect": {
+        "x": 669,
+        "y": 162,
+        "w": 38,
+        "h": 88
+      }
+    },
+    "footer_prompt_panel": {
+      "group": "footer",
+      "frame": {
+        "x": 329,
+        "y": 524,
+        "w": 372,
+        "h": 38
+      },
+      "rotated": false,
+      "trimmed": false,
+      "size": {
+        "w": 372,
+        "h": 38
+      },
+      "source_rect": {
+        "x": 216,
+        "y": 415,
+        "w": 372,
+        "h": 38
+      }
+    }
+  },
+  "notes": "Transparent 1x UI sprites generated from the Relay/IP room drawing code. Use frame for atlas UV slicing. source_rect is the recommended position on an 805x456 Unity UI canvas when present."
+}

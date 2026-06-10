@@ -185,6 +185,8 @@ Nguyên tắc dùng:
 | `SubmarinePowerRoute` | State | `Stable` nếu người chơi dùng terminal để giữ điện; `Sabotage` nếu phá hai máy phát phụ. | `Stable`: tàu sáng hơn, terminal/log dùng được. `Sabotage`: Hard Mode, arena tối, ít telegraph, SheMal nguy hiểm hơn, nhưng loot/skill tốt hơn và một số thí nghiệm bị ngắt. | Epilogue Marseille ghi nhận phòng thí nghiệm mất dữ liệu sống nếu sabotage. Không nên đổi ending chính; chỉ đổi bằng chứng, độ khó, và giọng nói về cái giá của sabotage. |
 | `HeniTrust` | Counter 0..3 | Tăng khi trả giá tử tế, không coi Heni như key item, hỏi consent trước khi dùng ký ức/resonance, giúp người bệnh quanh làng. Giảm khi ép cô, mặc cả tàn nhẫn, nói dối về Heniana, hoặc chỉ dùng cô như công cụ. | Heni bán/vừa tặng vật nhỏ, chỉ lối phụ, kể giấc mơ phòng trắng rõ hơn. | Resonance trong The Cradle ổn định hơn. Trong final, Heni có thêm câu tự chọn tên mình; trust thấp không phá canon nhưng cô ít chủ động mở lòng. |
 | `CalvariaTruthsFound` | Counter 0..5 | Sửa tên người chết, tìm bằng chứng giáo hội làm giả lời tha thứ, giúp NPC nghèo nghe sự thật, phá khế ước giọng nói. | Ít skeleton hơn trong Dàn Hợp Xướng, giảm số lần Cái Lưỡi dùng giọng người thân để khóa nhân vật. | Dùng làm bằng chứng ở Stage 5 để thuyết phục một nhóm rút khỏi cổng vật tế. Epilogue Calvaria nói người sống tự nói lời tạm biệt. |
+| `SlayerJungleStealth` | State | Bật khi vượt qua rừng mà không kích hoạt chuông báo động quá 3 lần ở 3-2. | Nếu thành công (Stealth), đội tuần tra Pháo đài Linh hồn (3-3) bị bất ngờ, làm giảm 30% lượng máu của đợt phòng thủ đầu tiên. | Giảm mức độ truy đuổi đô thị (Heat) cho toàn bộ Stage 3. |
+| `SpiritFortressChoice` | State | `Destroy` nếu phá hủy các bình năng lượng linh hồn; `Purify` nếu giải phóng họ an toàn. | `Destroy`: Vách pháo đài sụp đổ nhanh, nổ lan dọn bớt lính xung quanh, nhưng tăng oán hận. `Purify`: Chống đỡ các đợt lính gác phản kích lâu hơn, nhưng giải phóng được linh hồn. | Nếu `Purify`, các linh hồn sẽ xuất hiện tạo lá chắn âm thanh bảo vệ đội trước chiêu cuối của boss Dàn Hợp Xướng (3-9). Nếu `Destroy`, linh hồn oán giận hóa thành quái cận chiến hỗ trợ boss. |
 | `AkamCiviliansSaved` | Counter | Cứu người bị ép cải đạo, mở evac route, phá loa tuyên truyền, không đánh người đầu hàng. | Rage của Titan giảm, ít reinforcement, weakpoint mở lâu hơn. | Ở cảnh cuối, số dân hai phe cùng mở đường cho trẻ em/người bị thương thay đổi theo counter này. |
 | `FinalMercyActions` | Counter | Trong The Cradle/final: Hold Fire, Disable Weapon thay vì giết, Protect Civilians, từ chối dùng Heniana/Heni như vật tế, không xử tử kẻ đã đầu hàng. | Phase Trái Tim trong final bớt sạc Rage, đồng đội có thêm assist bảo vệ. | Không tạo "good ending" riêng. Nó đổi tone epilogue: thắng bằng cách ít biến người khác thành chi phí hơn, hoặc thắng nhưng thế giới còn cay đắng hơn. |
 
@@ -196,6 +198,168 @@ Ví dụ kết hợp biến:
 - `AkamCiviliansSaved` cao + `FinalMercyActions` cao: final boss vẫn khó, nhưng phase Trái Tim có nhiều khoảng thở hơn và epilogue bớt tuyệt vọng.
 
 Điểm quan trọng: biến trust không phải để thưởng người chơi "ngoan". Nó làm thế giới nhớ các chi phí nhỏ mà người chơi đã chấp nhận hoặc né tránh.
+
+## UI/UX, menu và flow ngoài gameplay
+
+UI của Divergency nên đi cùng ngôn ngữ thị giác đã có trong các mockup hiện tại: nền tối, kim loại cũ, viền đồng/brass, điểm chọn màu vàng cũ, banner tím, xích, bánh răng, họa tiết góc và footer prompt cho tay cầm/bàn phím. Tránh cảm giác sci-fi neon sạch hoặc menu mobile quá phẳng. UI phải đọc được ở canvas nhỏ `805x456`, vì phần lớn asset hiện tại đã có preview theo tỷ lệ này.
+
+Các asset UI hiện có nên được xem là reference chính:
+
+- `imgs/UI/main_menu_sprites/`: main menu, logo, background, button và icon.
+- `imgs/UI/Pause_menu_options_spritesheet.json` và `imgs/UI/pause_menu_options_sprites/`: pause/options overlay.
+- `imgs/UI/settings_menu_sections/` và `imgs/UI/settings_menu_sprites/`: Settings theo tab Video/Audio/Controls/Gameplay/Misc.
+- `imgs/UI/Character_selected_story_spritesheet.json` và `imgs/UI/character_selected_story_sprites/`: chọn nhân vật, map campaign, stage card, skill panel.
+- `imgs/UI/in_game_hud_ui_skill_set/`: HUD trong gameplay, command wheel, skill hotbar, objective marker.
+- `imgs/UI/Relay_IP_Room_design_notes.md` và `imgs/UI/relay_ip_room_sprites/`: phòng Relay/IP nếu Story có co-op hoặc lobby.
+
+### Main Menu
+
+Màn hình chính dùng background `main_menu_background_805x456.png` làm cảnh nền tĩnh/animated nhẹ. Logo Divergency ở trên/trái hoặc trên/giữa, không che nhân vật chính trong nền. Menu chính không cần giải thích dài; người chơi phải vào game nhanh.
+
+Các nút chính:
+
+- **Continue:** hiện khi có save gần nhất. Dòng phụ nhỏ ghi Stage/Act, ví dụ `Stage 1-2 Laundel`.
+- **Start Story:** vào flow chọn slot hoặc Relay/IP room tùy chế độ chơi.
+- **Heroes:** mở màn hình nhân vật/kỹ năng ngoài campaign. Nếu chưa mở đủ nhân vật, hiển thị silhouette hoặc locked card, không spoil Ghost/Heni quá sớm.
+- **PvP / Relay:** chỉ bật nếu mode này thật sự có gameplay. Nếu chưa làm, đổi thành `Extras` hoặc ẩn để tránh hứa quá sớm.
+- **Settings:** mở Settings overlay.
+- **Quit:** thoát game, có confirm đơn giản.
+
+Flow đề xuất:
+
+1. `Continue` -> load autosave gần nhất.
+2. `Start Story` -> chọn save slot.
+3. Nếu chọn chơi online/co-op -> mở Relay/IP Room.
+4. Nếu chơi single-player -> vào Stage 0 tutorial ở căn cứ Deep Team.
+
+### Relay/IP Room
+
+Màn Relay/IP chỉ dùng khi cần kết nối người chơi. Nó không nên thay thế main menu campaign nếu bản chơi hiện tại là single-player. Màn này giữ nền main menu đã dim, mở modal đồng/brass ở giữa, đúng hướng trong `Relay_IP_Room_design_notes.md`.
+
+Nội dung chính:
+
+- Tab **Relay** và **IP Local** ở trên.
+- Danh sách phòng bên trái, 5 dòng là đủ cho canvas nhỏ.
+- Khu host/join bên phải: region, slot, route, room code/host IP, nút `Host Room`, `Join Selected`, `Connect`.
+- Hàng tên người chơi ở đáy modal.
+- Nút settings và close ở góc phải, dùng cùng sprite với pause/settings.
+
+### Character Select / Story Select
+
+Màn character select không nên là "shop" nếu dùng trong campaign. Nó nên là màn **Story Party**: chọn nhân vật đang điều khiển, assist, reserve, skill loadout và Stage map.
+
+Layout dùng asset `Character_selected_story` hiện có:
+
+- Tab trái/phải: **Character** và **Map**.
+- Cột trái: card nhân vật gồm Deep, Solei, Henry, Tulas, Block. Ghost chỉ mở sau Bastonne; Heni là companion/puzzle key, không đặt như DPS chính nếu story chưa cho phép.
+- Trung tâm: nhân vật đang chọn, nameplate, class/role, chỉ số HP/ATK/DEF/SPD, skill slots.
+- Dưới: `Current Fighter`, `Assist`, `Reserve`, nút `Ready`.
+- Bên Map: các card Stage 1-1, 1-2, 1-3, 1-4, progression node và branch marker.
+
+Luật mở khóa:
+
+- Stage 0 đầu game: chỉ Solei trong tutorial, Deep/Henry/Tulas là assist theo cảnh.
+- Sau Bastonne: Deep/Solei/Henry/Block có thể vào party tùy hệ thống swap; Ghost mở như special member hoặc route-specific playable.
+- Stage 2: Heni xuất hiện như companion; UI phải gọi cô là **Heni**, không dùng nhãn kiểu `Clone`, `Copy`, `Key Item`.
+- Khi nhân vật bị thương theo state như `BlockInjuryState`, card hiển thị trạng thái bằng icon nhỏ và mô tả gameplay, không khóa nhân vật một cách khó hiểu.
+
+### Pause Menu
+
+Pause menu là overlay lên gameplay đã làm tối, không đưa người chơi ra màn hình riêng trừ khi chọn map/settings. Asset hiện tại đã có hướng đúng với title `P1 PAUSED`, chain frame, purple banner và option buttons.
+
+Các lựa chọn chính:
+
+- **Resume:** quay lại gameplay.
+- **Change Character:** mở Story Party/Character Select ở trạng thái gọn, chỉ cho đổi nhân vật hợp lệ trong party hiện tại.
+- **Command List:** xem COMMAND đã mở, synergy, input, cooldown và ví dụ ngữ cảnh.
+- **Options:** mở Settings trên cùng overlay pause.
+- **Restart Map:** xác nhận trước khi restart checkpoint/map hiện tại.
+- **Quit:** lựa chọn `Quit to Main Menu` và `Quit Game`, luôn có confirm nếu có tiến trình chưa save.
+
+Quy tắc:
+
+- Pause trong combat thường dừng game. Nếu có co-op/online, pause chuyển thành menu không dừng thời gian và cần label rõ.
+- Trong cutscene, nút pause chỉ mở `Resume`, `Skip`, `Settings`, `Quit to Main Menu`.
+- Nếu người chơi chết sau Bastonne, ưu tiên đưa về Map Ngủ Mơ/respawn flow thay vì pause menu thường.
+
+### Options / Settings
+
+Settings nên dùng bản section/tab hiện tại trong `imgs/UI/settings_menu_sections/`. Cấu trúc:
+
+- **Video:** resolution, window mode, V-Sync, brightness, UI scale, damage numbers.
+- **Audio:** master/music/SFX/voice, mute background audio, subtitles.
+- **Controls:** keyboard, gamepad, remap, input buffer, vibration.
+- **Gameplay:** difficulty assist, camera shake, hold/toggle choices, command slowdown, auto-lock options.
+- **Misc:** language, save data, reset defaults, credits/legal.
+
+Các setting quan trọng cho gameplay Divergency:
+
+- **Command Slowdown:** `Off / Light / Full` để người chơi không bị quá tải khi dùng COMMAND.
+- **Interact Prompt Size:** vì game có nhiều nhặt/ném/cửa/van/NPC.
+- **Subtitles:** bật mặc định, có speaker name và background opacity.
+- **Color/Contrast Aid:** cần cho poison, blood, water, rage, hidden objects.
+- **Screen Shake:** slider, không chỉ toggle.
+- **Hold vs Toggle:** guard, sprint, command wheel, lock-on.
+
+### In-Game HUD
+
+HUD phải giữ nguyên triết lý: không biến mọi lựa chọn thành morality meter. Không hiển thị thanh `Good/Evil`, không hiển thị `Trust +1` kiểu game hệ thống lộ liễu. Hậu quả thể hiện qua NPC, route, giá shop, encounter và epilogue.
+
+HUD chính:
+
+- Góc trên trái: portrait, tên nhân vật, HP, mana/energy, level, status icon.
+- Góc trên phải: objective ngắn, icon map/skull/star nếu cần, không quá nhiều text.
+- Đáy giữa/phải: skill hotbar `Q/W/E/R` hoặc gamepad equivalent.
+- COMMAND: command wheel chỉ hiện khi giữ nút, có segment `Hold`, `Come`, `Free`, `Focus` hoặc lệnh ngữ cảnh.
+- Scene marker: enemy guard HP/marker, ally nameplate, objective marker; chỉ hiện khi cần đọc combat.
+
+Stage-specific UI:
+
+- **Con Mắt:** UI có thể sai lệch nhẹ, hiện đồ giả hoặc objective mơ hồ, nhưng không được lừa người chơi bằng nút hệ thống nguy hiểm.
+- **Cái Tai:** prompt âm thanh/im lặng, wave/noise indicator.
+- **Cái Lưỡi:** command giả hoặc voice prompt bị méo; cần có cách phản biện bằng gameplay, không chỉ làm người chơi mất quyền điều khiển.
+- **Trái Tim:** Rage/Heartbeat meter xuất hiện theo encounter, không dùng như thanh "ác".
+- **Dây Rốn/The Cradle:** UI và level hòa vào nhau; Map Ngủ Mơ không còn là menu tách biệt.
+
+### Save/Load và Checkpoint
+
+Save screen nên hiển thị thông tin hữu ích nhưng không spoil:
+
+- Stage/Act hiện tại.
+- Thời lượng chơi.
+- Nhân vật active/assist.
+- Checkpoint gần nhất.
+- Một dòng trạng thái thế giới nhẹ, ví dụ `Laundel remembers your route`, không ghi số trust cụ thể.
+
+Autosave nên chạy ở:
+
+- đầu Act,
+- trước boss,
+- sau boss,
+- khi vào Map Ngủ Mơ,
+- sau lựa chọn có flag/state quan trọng.
+
+Manual save đặt ở căn cứ, safehouse, camp hoặc điểm nghỉ. Không cho save ngay giữa phase boss nếu nó phá encounter.
+
+### Visual rules cho AI sketch UI
+
+Khi tạo sketch UI, dùng brief ngắn này:
+
+```text
+Divergency UI concept, dark fantasy sci-fi action RPG, old brass frame, worn dark metal panels, muted gold active selection, purple hanging banners, chain and gear ornaments, readable 805x456 game UI layout, controller prompt footer, cinematic but functional, no neon futuristic HUD, no mobile-game clutter.
+```
+
+Màn cần sketch/hoàn thiện trước:
+
+| Ưu tiên | Màn hình | Mục tiêu |
+|---|---|---|
+| 1 | Main Menu | Nhận diện brand, Start Story/Continue/Settings rõ |
+| 2 | Pause Menu | Resume/Change Character/Command List/Options/Restart/Quit |
+| 3 | Character Select / Story Party | Chọn active fighter, assist, reserve, skill loadout, map |
+| 4 | Settings | Video/Audio/Controls/Gameplay/Misc, dễ đọc ở 805x456 |
+| 5 | In-Game HUD | HP/mana/skills/objective/command wheel không che combat |
+| 6 | Save/Load | Slot rõ, không spoil, có Stage/Act/checkpoint |
+| 7 | Map Ngủ Mơ UI | Respawn/loadout/reset skill nhưng vẫn gắn với Ghost và Dây Rốn |
 
 ## Stage 0 - Căn cứ Deep Team và Bastonne Prison
 
@@ -527,7 +691,104 @@ Kết màn: Cái Tai dẫn đến Calvaria và Cái Lưỡi; Heni quyết địn
 
 ## Stage 3 - Calvaria
 
-## 3-1. Đường hành hương
+## 3-1. Con đường đơn độc (Solitary Road)
+
+### Mục tiêu gameplay
+
+- Tạo không khí yên tĩnh, u ám xen kẽ hành động nhẹ nhàng để chuyển tiếp nhịp độ sau trận chiến Marseille.
+- Dạy người chơi cách xử lý tầm nhìn hạn chế và quái vật dạng vong linh (wandering souls).
+- Giới thiệu mối liên hệ kỳ lạ của Ghost với Cái Lưỡi thông qua tiếng gọi ảo giác nhỏ.
+
+### Cơ chế dùng được
+
+- **Sương mù dày đặc:** giảm tầm nhìn của lính bắn tỉa và tầm bắn xa của Henry, buộc người chơi tiến sát hoặc dùng Solei do thám.
+- **Bia mộ có thể tương tác:** phá hủy bia mộ gỗ/đá để tìm mảnh hồi sinh stamina hoặc đạn nhẹ cho Henry.
+- **Wandering Souls (Vong hồn lang thang):** loại quái vật bay lơ lửng, lướt chéo qua màn hình theo nhịp bất định. Chúng không thể bị đánh bại bằng sát thương vật lý thường của Deep mà phải dùng chưởng/kỹ năng năng lượng của Solei hoặc bắn tỉa của Henry.
+
+### Puzzle/encounter
+
+- **Lối đi sương mù:** Solei phải chạy trước, dùng kỹ năng dò thám để đánh dấu các bia mộ ẩn chứa bẫy trước khi cả nhóm đi qua.
+- **Tụ linh trận:** một kết giới chắn ngang đường do Giáo hội thiết lập. Người chơi phải bảo vệ Henry trong 30 giây khi anh dùng COMMAND để định vị và phá hủy 3 viên linh đá ngụy trang ven đường.
+
+## 3-2. Rừng Đồ Tể (Slayer Jungle)
+
+### Mục tiêu gameplay
+
+- Trải nghiệm lén lút (stealth) và né tránh bẫy rập trong môi trường đầm lầy hóa đá chật hẹp, tối tăm.
+- Thách thức khả năng kiểm soát nhịp độ chiến đấu dưới áp lực bẫy xung quanh.
+- Dạy Tulas cách tương tác với chất độc lỏng tự nhiên.
+
+### Cơ chế dùng được
+
+- **Bẫy chông xương trồi:** kích hoạt khi dẫm lên các bãi lá khô hoặc vùng đất mềm, gây sát thương lớn và làm chậm.
+- **Kén độc (Thorn Pods):** treo trên các thân cây hóa đá. Đánh hoặc bắn rụng chúng để tạo ra vùng sương độc ăn mòn giáp và gây choáng cho bất kỳ kẻ địch nào đứng bên trong.
+- **Patrol "Slayer":** lính gác đeo mặt nạ có khả năng ẩn thân trong bụi cỏ xương, có đòn chém lưỡi hái kéo ngã và ném bom khói gây mù.
+
+### Puzzle/encounter
+
+- **Vượt rừng lén lút:** người chơi phải di chuyển cẩn thận, dùng bẫy gai độc để hạ tuần tra. Nếu kích hoạt chuông báo động quá 3 lần, trạng thái `SlayerJungleStealth` sẽ chuyển thành `Detected`, ngược lại là `Stealth`.
+- **Cơ quan kén gai:** một lối đi bị chắn bởi gai nhọn khổng lồ. Tulas phải dùng năng lực chất lỏng để dẫn dòng nước đen ăn mòn rễ cây gai, mở đường cho nhóm đi qua.
+
+## 3-3. Pháo đài Linh hồn (Spirit Fortress)
+
+### Mục tiêu gameplay
+
+- Trận công thành quy mô lớn kết hợp COMMAND phối hợp hành động nhóm cao độ.
+- Đặt người chơi trước lựa chọn đạo đức quan trọng đầu tiên của Stage 3.
+
+### Cơ chế dùng được
+
+- **Bình chứa Linh hồn (Spirit Batteries):** các máy phát năng lượng cho lá chắn pháo đài. Phá hủy bình sẽ tiêu diệt linh hồn bên trong; giải thoát bình yêu cầu đứng yên bảo vệ vòng thanh tẩy.
+- **Pháo linh hồn:** bắn đạn năng lượng oán khí từ đỉnh tháp gác xuống.
+- **COMMAND công thành:** ra lệnh Block giương khiên thép che chắn đạn pháo, ra lệnh Deep đập cửa vách đá, và ra lệnh Solei leo ròng rọc tiếp cận tháp gác.
+
+### Puzzle/encounter
+
+- **Công phá 3 tháp năng lượng:**
+    *   Tháp 1: Deep và Block kết hợp đột kích phá cổng bảo vệ lò năng lượng.
+    *   Tháp 2: Solei vượt rào và ngắt các cáp kết nối để lộ lò năng lượng từ trên cao.
+    *   Tháp 3: Cả nhóm chống đỡ các đợt phản kích của lính canh để lộ bình chứa.
+- **Quyết định `SpiritFortressChoice`:** Sau khi hạ gục chỉ huy pháo đài, người chơi quyết định phá hủy nhanh các bình linh hồn (Destroy) hoặc dùng Ghost/Tulas để thanh tẩy giải thoát họ (Purify).
+
+## 3-4. Lối đi bí mật dưới lòng đất (Under Secret Passage)
+
+### Mục tiêu gameplay
+
+- Câu đố môi trường (platforming puzzle) kết hợp né tránh bẫy trong không gian hẹp hầm ngầm.
+- Thể hiện sự hữu dụng của Ghost khi đi qua các thiết bị quét năng lượng của Giáo hội.
+
+### Cơ chế dùng được
+
+- **Cổng đá thủy lực:** cổng nặng tự động sập xuống theo thời gian, cần người/vật giữ đòn bẩy.
+- **Van xả khí gas nóng:** phun khí theo chu kỳ gây sát thương lớn và đẩy lùi.
+- **Glitched Light Sweep (Quét ánh sáng lỗi):** hệ thống quét an ninh của Giáo hội. Ghost đi qua sẽ không kích hoạt bẫy vì cơ thể anh là một lỗi hệ thống, nhưng các nhân vật khác đi vào sẽ kích hoạt đá rơi lập tức.
+
+### Puzzle/encounter
+
+- **Giải mã áp suất thủy lực:** Tulas điều khiển dòng nước ngầm đổ vào ống áp suất để giữ cổng đá mở lâu hơn. Block gồng mình giữ cổng để Solei trượt qua cắt đứt van gas độc.
+- **Đường đi quét an ninh:** Người chơi điều khiển Ghost đi qua các luồng ánh sáng quét lỗi để tìm và phá hủy bộ máy phát bẫy từ phía bên kia, mở đường an toàn cho cả đội.
+
+## 3-5. Sông Oán Hận (River of Hatred 3)
+
+### Mục tiêu gameplay
+
+- Trải nghiệm sinh tồn nhịp độ nhanh (auto-scrolling / raft survival) độc đáo.
+- Phối hợp bảo vệ mục tiêu di động (Raft HP) trước các đòn tấn công môi trường và quái vật.
+
+### Cơ chế dùng được
+
+- **Raft HP (Máu của Bè):** Bè gỗ có thanh HP riêng. Rơi về 0 gây game over (Map Ngủ Mơ).
+- **Đá nhọn trôi nổi:** trôi từ thượng nguồn xuống, gây sát thương lớn cho bè nếu va chạm trực diện.
+- **Water Ghouls (Quái cống sông đen):** quái vật xương trồi lên từ nước đen bám vào bè để tự nổ hoặc cắn phá.
+
+### Puzzle/encounter
+
+- **Hành trình trên sông oán hận:**
+    *   Deep dùng đòn đập Break phá đá lớn chắn đường.
+    *   Tulas điều khiển nước đen tạo sóng phản lực giúp bè đổi hướng nhanh để né tránh xoáy nước hoặc đẩy lùi lũ quái tụ đông ở đuôi bè.
+    *   Henry dùng súng bắn tỉa phá hủy các neo xích của lính xương từ hai bên bờ đá trước khi chúng kéo bè vào bãi chông đá.
+
+## 3-6. Đường hành hương
 
 ### Mục tiêu gameplay
 
@@ -549,7 +810,7 @@ Kết màn: Cái Tai dẫn đến Calvaria và Cái Lưỡi; Heni quyết địn
 - **Đường một chiều:** đi thuận dòng an toàn hơn; đi ngược mở phòng ẩn nhưng gặp phục kích.
 - **Lời nhắn miễn phí:** một NPC nghèo xin nghe người chết. Giúp họ mở thông tin về giáo hội.
 
-## 3-2. Chợ xương và hầm mộ sống
+## 3-7. Chợ xương và hầm mộ sống
 
 ### Mục tiêu gameplay
 
@@ -567,7 +828,7 @@ Kết màn: Cái Tai dẫn đến Calvaria và Cái Lưỡi; Heni quyết địn
 - **Hài cốt sai tên:** sửa tên cho người chết làm giảm số skeleton ở boss.
 - **Giọng Heni/Heniana:** Cái Lưỡi giả giọng để dụ Heni. Đáp án dựa vào hành vi và ký ức, không chỉ âm thanh.
 
-## 3-3. Đại giáo đường Hơi Thở Cuối
+## 3-8. Đại giáo đường Hơi Thở Cuối
 
 ### Mục tiêu gameplay
 
@@ -586,12 +847,13 @@ Kết màn: Cái Tai dẫn đến Calvaria và Cái Lưỡi; Heni quyết địn
 - **Ba lời tha thứ:** ba NPC trả tiền để nghe người chết tha thứ. Người chơi chọn lộ sự thật, im lặng, hoặc tìm bằng chứng.
 - **Mẹ Bề Trên Voro:** social mini-boss hoặc boss phụ. Bà không lừa đảo tầm thường; bà tin mình đang giúp người đau khổ.
 
-## 3-4. Phòng Cái Lưỡi
+## 3-9. Phòng Cái Lưỡi
 
 ### Mục tiêu gameplay
 
 - Boss về tên gọi, mệnh lệnh, giọng người chết.
 - Ghost chọn tên đồng đội gọi thay vì tên cũ.
+- Tích hợp hệ quả từ quyết định ở Pháo đài Linh hồn (`SpiritFortressChoice`).
 
 ### Cơ chế dùng được
 
@@ -608,111 +870,123 @@ Kết màn: Cái Tai dẫn đến Calvaria và Cái Lưỡi; Heni quyết địn
 - Với Deep: gọi danh hiệu anh hùng cũ, buff Rage khi người chơi truy sát hoặc đứng đánh như một biểu tượng chiến tranh.
 - Với Ghost: chỉ mở thêm mảnh ký ức/tên cũ, không giải thích toàn bộ quá khứ ngay ở Stage 3.
 - Mỗi giọng tạo một kiểu đòn.
-- Cách thắng là phá các lời nói dối đang buộc người sống phục tùng người chết.
+- **Hệ quả của `SpiritFortressChoice`:**
+    *   *Nếu đã thanh tẩy linh hồn (Purify):* các linh hồn được giải phóng sẽ bay quanh đấu trường, định kỳ tạo ra một *Lá chắn oán niệm* màu lam nhạt bao quanh cả nhóm. Lá chắn này tự động hấp thụ toàn bộ sát thương và hiệu ứng choáng của 1 đòn sóng âm oán niệm cực đại từ boss trong mỗi phase.
+    *   *Nếu đã phá hủy bình linh hồn (Destroy):* các linh hồn oán giận hóa thành các quái vật cận chiến (Vong hồn thù hận) liên tục xuất hiện từ rìa màn hình. Chúng lao vào ôm chặt nhân vật, khóa hoàn toàn thanh COMMAND của Henry và tự phát nổ gây sát thương diện rộng.
 
 Reward: nhóm giữ mảnh Cái Lưỡi bị cháy, biết Thần Sơ Sinh không nguyền rủa mà đang gọi mẹ. Mục tiêu chuyển sang tìm Dây Rốn.
 
 ## Stage 4 - Akam Meskul
 
-## 4-1. Ngoài cửa hang rồng
+### Cơ chế gameplay đặc trưng của Stage 4
+
+#### 1. Cơ chế "Nhịp Đập Oán Hận" (Resonant Heartbeat)
+Trái Tim của Thần Sơ Sinh khuếch đại cảm xúc cực đoan của vùng đất và phát ra nhịp đập oán oán theo chu kỳ (mỗi 5 giây một lần, thể hiện bằng hiệu ứng đỏ nhấp nháy trên viền màn hình và âm thanh thịch-thịch trầm đục).
+- **Trong Chiến Đấu**:
+    *   **Resonant Strike (Đòn đánh cộng hưởng)**: Nhấp phím tấn công hoặc tung kỹ năng vào đúng khoảnh khắc nhịp tim đập (dung sai 0.3 giây) sẽ tăng 100% sát thương chí mạng và lập tức phá vỡ giáp bảo vệ (Guard Break) của địch.
+    *   **Rage Build-up (Tích tụ Nộ khí)**: Tấn công liên tục và bị lệch nhịp sẽ tích lũy thanh Rage cục bộ của trận đấu. Khi thanh Rage đầy, kẻ địch xung quanh sẽ gầm lên và rơi vào trạng thái cuồng loạn (Frenzy) - tăng 50% tốc độ di chuyển và công kích nhưng giảm 30% phòng thủ.
+- **Trong Di Chuyển (Traversal)**:
+    *   Một số cầu máu, chướng ngại vật chất lỏng hoặc các dải xương rồng sáp nhập chỉ cứng lại và đi qua được trong 1.5 giây trùng khớp với nhịp tim. Người chơi phải căn thời gian di chuyển để nhảy và lướt qua.
+
+#### 2. Kỹ năng mở rộng của Tulas (Toxic Triage & Vascular Lock)
+Akam Meskul đẩy kỹ năng kiểm soát dịch thể của Tulas lên cực hạn, chạm vào ranh giới của cấm thuật sinh học:
+- **Màng Lọc Huyết Dịch (Toxic Filtration Aura)**: Tulas tạo một vòng hào quang nước bao bọc xung quanh, trung hòa hoàn toàn khí độc trong phạm vi nhỏ. Người chơi có thể dùng lệnh COMMAND bắt Tulas giữ vị trí tĩnh để che chắn cho Henry bắn tỉa hoặc bảo vệ nhóm NPC tị nạn. Kỹ năng này tiêu hao năng lượng từ các vũng nước hoặc bình thí nghiệm vỡ quanh map.
+- **Khóa Huyết Quản (Vascular Lock)**: Cứu mạng đồng đội hoặc dân thường bị phơi nhiễm khí độc bằng cách đông cứng tạm thời độc tố trong huyết quản của họ. Kích hoạt kỹ năng này sẽ khóa 25% lượng Máu tối đa của Tulas cho đến khi quay về checkpoint, đòi hỏi người chơi phải quản lý tài nguyên máu cực kỳ cẩn thận.
+
+#### 3. Kỹ năng mở rộng của Block: "Cực Hạn Chắn Đỡ" (Bastion Shield)
+- Block có thể nhặt các mảnh xương sườn rồng Akam Meskul khổng lồ nằm rải rác trên màn chơi để biến thành lá chắn di động hạng nặng. Kỹ năng này cho phép Block dựng một bức tường vững chắc, hấp thụ hoàn toàn các đợt bão oán niệm và tia lửa địa nhiệt, mở đường cho Solei và Ghost áp sát mục tiêu phía sau.
+
+#### 4. Lựa chọn phi sát thương: "Hold Fire" & "Phá Hủy Vật Neo"
+- Thay vì tiêu diệt các chiến binh cuồng giáo bị Matriarch Vanya thao túng, Henry có thể ra lệnh **Hold Fire**. Solei hoặc Ghost sẽ sử dụng tốc độ cơ động để vượt qua hàng phòng thủ, phá hủy các "Vật Neo Nghi Lễ" (cột xương, đền thờ đá mini). Khi Vật Neo vỡ, các chiến binh sẽ thoát khỏi ảo giác, dừng chiến đấu và bỏ chạy, giúp giảm 50% thanh Rage oán niệm của khu vực và tăng chỉ số cứu dân.
+
+#### 5. Khả năng tương tác ảo ảnh của Ghost
+- Với hệ thần kinh kháng thôi miên độc lập, Ghost là nhân vật duy nhất nhìn thấy các điểm nứt gãy của ảo ảnh lịch sử Aramut. Trong Act 4-2, người chơi điều khiển Ghost chạm vào các ảo ảnh oán niệm để giải mã các cơ quan cổ xưa, làm biến đổi địa hình hoặc mở các con đường ẩn chứa tài liệu lore đặc biệt.
+
+---
+
+### Thiết kế màn chơi chi tiết (Acts)
+
+## 4-1. Ngoài cửa hang rồng (Biên giới Quỷ Huyệt)
+![Stage 4-1 playable map - Dragon Cave Approach](<imgs/Stage4/stage4_act_4_1_dragon_cave_approach_map.png>)
 
 ### Mục tiêu gameplay
-
-- Combat chiến trường.
-- Giới thiệu hai phe đều có lý do và đều sai.
-- Dạy cứu người bị ép cải đạo.
+- Dạy người chơi cách phối hợp vượt chướng ngại khí độc địa nhiệt.
+- Giới thiệu cơ chế phi sát thương thông qua việc phá hủy Vật Neo Nghi Lễ.
 
 ### Cơ chế dùng được
-
-- **Người bị bắt cải đạo:** enemy yếu; có thể giết nhanh hoặc phá bùa để họ bỏ chạy.
-- **Zealot:** mob chính, buff theo chant.
-- **Demon tamer:** gọi quái; nếu tamer chết khi quái còn sống, quái quay sang đánh mọi phe.
-- **Malaestro:** chỉ huy làm toàn bộ địch focus một nhân vật.
+- **Địa nhiệt độc**: Các vents phun khí độc theo chu kỳ. Block có thể dùng COMMAND để nhặt đá đè lên chặn lỗ phun, hoặc Tulas tạo màng lọc độc để nhóm đi qua.
+- **Demon tamer**: Kẻ địch gọi quái vật. Tiêu diệt tamer sẽ khiến quái quay sang cắn lính tuần tra.
+- **Malaestro**: Chỉ huy tế tự, buff sát thương và ép lính tập trung tấn công Solei.
 
 ### Puzzle/encounter
+- **Vượt Quỷ Huyệt**: Sử dụng COMMAND phối hợp Block đè đá chặn khí độc, Solei leo vách đá tiêu diệt sniper của phe Con Cháu Chiếc Nôi.
+- **Giải cải đạo**: Gặp nhóm người tị nạn bị ép cải đạo làm lá chắn thịt. Người chơi phải dùng đòn phi sát thương của Henry và phá Vật Neo để cứu họ, mở lối đi tắt.
 
-- **Bẫy lời nguyền:** khí độc/ảo giác làm hiện đường giả. Solei đọc dấu nghi lễ để tìm đường thật.
-- **Giải cải đạo:** cứu nhiều người làm boss Crusader Band ít reinforcement hơn.
+### Boss: Crusader Band
+Trận chiến với toán cảnh vệ tiên phong của Vanya trên một sườn núi dốc.
+- Gồm: 1 khiên lớn bảo vệ, 2 thương thủ lướt nhanh, và 1 Malaestro đứng sau tụng kinh buff giáp.
+- Phá hủy cột tế đàn trung tâm sẽ ngắt hoàn toàn buff của Malaestro, khiến cả toán lính rơi vào trạng thái choáng (Stun).
 
-### Boss
+---
 
-**Crusader Band**
-
-Boss nhóm, gồm shield, spear, chant, beast handler. Giết chant trước làm boss yếu nhưng có thể khiến con tin mất kiểm soát; cứu con tin trước làm trận lâu hơn.
-
-## 4-2. Đường hầm trong xác Akam Meskul
+## 4-2. Đường hầm trong xác Akam Meskul (Dragon Bone Catacombs)
+![Stage 4-2 playable map - Dragon Bone Catacombs](<imgs/Stage4/stage4_act_4_2_dragon_bone_catacombs_map.png>)
 
 ### Mục tiêu gameplay
-
-- Organic dungeon trong xác rồng.
-- Arc của Deep: anh hùng có thể bị dùng làm biểu tượng che thất bại.
+- Khám phá dungeon sinh học khổng lồ bên trong xác thánh long.
+- Kể chuyện về cuộc đời Aramut qua ảo ảnh cộng hưởng của Ghost.
 
 ### Cơ chế dùng được
-
-- **Xương sườn/cột đền:** platform và cover.
-- **Da rồng đóng cứng:** tường có thể phá bằng Deep.
-- **Khoang nội tạng rỗng:** đường vòng, phòng ẩn.
-- **Ký ức Aramut:** đường thật/giả hiện theo lời nguyền.
+- **Địa hình sinh học**: Da rồng hóa thạch làm tường chắn (chỉ phá được bằng búa nặng của Deep), xương sườn làm bệ nhảy.
+- **Ảo ảnh Aramut**: Các sự kiện lịch sử hiện về dưới dạng ảo ảnh vật lý gây sát thương. Chỉ Ghost mới có thể hóa giải hoặc tương tác để mở đường.
 
 ### Puzzle/encounter
+- **Phân khu "Lục Phủ Ngũ Tạng"**:
+    *   *Buồng Phổi*: Các luồng gió độc thổi mạnh theo nhịp, có thể thổi bay nhân vật xuống vực. Block phải dựng Bastion Shield chắn gió để cả đội đi sau lưng.
+    *   *Buồng Tim (Organ Chamber)*: Trọng lực đảo lộn liên tục theo nhịp tim. Người chơi phải thực hiện các cú nhảy platform đồng bộ với nhịp đập để đi qua bể axit bên dưới.
+- **Ghost và các vết nứt oán niệm**: Ghost tương tác với ảo ảnh Aramut bị phản bội để mở các rương báu cổ xưa chứa vật phẩm nâng cấp kỹ năng.
 
-- **Ký ức bị cắt:** ghép ba hồi tưởng để biết Aramut chết vì kế hoạch sai, không phải vinh quang đơn giản.
-- **Cầu xương gãy:** Block giữ, Solei chạy, Deep đóng chốt.
-- **Nhịp rồng chết:** cửa mở theo nhịp tim giả; đánh lệch nhịp gọi quái.
+---
 
-## 4-3. Thành phố nhân tạo và bộ tộc ẩn
+## 4-3. Phân tranh lưỡng cực (Thành phố kính & Ca động tế lễ)
+![Stage 4-3 playable map - Glass City and Ritual Cave](<imgs/Stage4/stage4_act_4_3_glass_city_ritual_cave_map.png>)
 
 ### Mục tiêu gameplay
-
-- Faction puzzle không có phe sạch.
-- Arc của Solei: từ chối bị định nghĩa bằng dòng máu.
-- Arc của Tulas: dùng năng lực máu/chất lỏng để cứu người trong vùng độc, nhưng luôn có rủi ro bị xem như cấm thuật.
-- Arc của Block: hiểu sức mạnh không chỉ để đánh, mà để giữ tuyến, che chở, và làm nơi trú cho người khác.
+- Lựa chọn route xâm nhập với phong cách chơi đối lập: Stealth vs Combat.
+- Giải quyết khủng hoảng sức khỏe của Heni bằng kỹ năng hi sinh máu của Tulas.
 
 ### Cơ chế dùng được
-
-- **Hai hub đối xứng:** thành phố lọc khí của Tàn Dư Sáu Vương Quốc và khu nghi lễ của Con Cháu Chiếc Nôi.
-- **Reputation cục bộ:** tin một phe quá sâu sẽ làm phe kia khóa cửa, nhưng không phe nào là "good route".
-- **Kiểm tra máu:** có thể từ chối, hack máy, dùng nghi lễ che dấu, hoặc phá cửa.
-- **Máu nhiễm độc:** Tulas có thể kéo/khóa/lọc tạm thời để cứu NPC hoặc mở đường, nhưng dùng quá nhiều làm tăng nguy cơ combat hoặc khiến NPC sợ anh.
-- **Tuyến che chở:** Block có thể giữ cửa, giữ cầu, chắn khí độc hoặc vác NPC. Đây là objective bảo vệ chủ động, không chỉ là tank đứng chịu đòn.
+- **Cơn sốt của Heni**: Heni bị sốt cao do cộng hưởng. Tulas phải dùng Vascular Lock để ổn định mạch máu cho cô bé, giảm 25% HP tối đa của anh suốt Act.
+- **Tuyến Tàn Dư (Eldar Kaelen)**: Thành phố kính đầy rẫy camera quét lỗi và drone an ninh. Người chơi dùng Ghost lẻn vào hack terminal để giải cứu tù nhân.
+- **Tuyến Con Cháu (Matriarch Vanya)**: Ca động rực lửa với bẫy hiến tế. Lối chơi combat dồn dập, Solei dùng phản đòn và Tulas dùng chất lỏng dập lửa tế để cứu trẻ em.
 
 ### Puzzle/encounter
+- **Lực lượng hỗ trợ**: Cứu được tù nhân ở tuyến Tàn dư sẽ mở khóa ụ súng máy hỗ trợ trong trận Titan; cứu trẻ em tuyến Con Cháu sẽ được các tế sư phục hồi lượng máu bị khóa của Tulas.
 
-- **Máu không phải chìa khóa:** puzzle chủ đề cho Solei. Đáp án tốt là tìm cách đi qua mà không để cô bị biến thành bằng chứng cho phe nào.
-- **Máu không phải vật liệu:** puzzle chủ đề cho Tulas. Đáp án tốt là dùng máu/chất lỏng để cứu người mà không biến người đó thành công cụ mở khóa.
-- **Anh hùng không phải tượng:** encounter chủ đề cho Block. Người chơi giữ tuyến cho dân thoát thay vì đuổi boss phụ lấy loot.
-- **Hai phòng thí nghiệm:** một bên thử tù nhân, bên kia tẩy não trẻ em. Cứu phòng nào trước ảnh hưởng encounter 4-4.
+---
 
-## 4-4. Trái Tim và Titan Rồng
+## 4-4. Thần Long Titan (Titan Trái Tim)
+![Stage 4-4 playable map - Heart Titan Battlefield](<imgs/Stage4/stage4_act_4_4_heart_titan_battlefield_map.png>)
 
 ### Mục tiêu gameplay
-
-- Boss đa mục tiêu.
-- Người chơi vừa đánh boss vừa ngăn chiến tranh giết dân thường.
-- Trái Tim biến cảm xúc thành luật combat.
+- Boss khổng lồ đa mục tiêu trên đấu trường sụp đổ.
+- Lồng ghép cơ chế Rage và nhiệm vụ cứu hộ dân thường.
 
 ### Cơ chế dùng được
+- **Titan Trái Tim (Boss Sinh Học)**: Một thực thể khổng lồ làm từ xương rồng cổ đại, cơ thịt đan xen ống thép rỉ sét, lồng ngực để lộ Trái Tim rực sáng quấn quanh bởi các rễ cây thần.
+- **Rage oán niệm**: Giết lính rút lui hoặc để dân thường chết sẽ tăng Rage của boss, khiến boss tung chiêu quét đấu trường bằng oán niệm cực đại.
+- **COMMAND phân việc cứu hộ**: Bảo vệ dân thường trong lúc chiến đấu.
 
-- **Rage meter:** đánh trong giận dữ, truy sát lính rút lui, hoặc để dân chết làm meter tăng; Titan mạnh hơn.
-- **Loa tuyên truyền:** buff hai phe. Deep phá loa thay vì truy sát.
-- **Evac route:** Block giữ tuyến, Henry ra lệnh không giết người đầu hàng, Solei cứu trẻ bị đánh dấu.
-- **Tulas triage:** Tulas khóa vết thương, lọc độc, dựng màng chắn chất lỏng, hoặc kéo NPC ra khỏi vùng đỏ. Làm tốt giảm Rage và mở assist; làm quá tay có thể khiến vài NPC hoảng sợ hoặc tăng Heat cục bộ.
-- **Block shelter:** Block cắm khiên/giữ cầu trong thời gian giới hạn. Nếu người chơi bỏ mặc tuyến này, dân thường chết và Titan sạc nhanh hơn.
-- **Nhịp tim Heniana:** đánh đúng nhịp gây damage tốt; đánh loạn nhịp tăng Rage.
-
-### Boss
-
-**Titan Trái Tim**
-
-- Core chính nối với xác rồng.
-- Hai phe vẫn đánh nhau trong arena.
-- Weakpoint xuất hiện khi người chơi giảm Rage bằng hành động bảo vệ.
-- Kết trận: Jamerson lấy Trái Tim và bỏ lại hàng trăm người đang chết. Nhóm nên bị buộc chọn cứu người thay vì đuổi theo ngay; đây là payoff cho Tulas và Block, vì họ dùng chính sức mạnh/cơ thể bị xem là thô bạo để giữ người khác sống.
+### Thiết kế trận đánh Boss: Titan Trái Tim
+- **Phase 1: Đấu trường hỗn loạn**: Hai phe lính của Kaelen và Vanya liên tục chém giết nhau và xả súng vào đấu trường. Người chơi phải dùng Henry ra lệnh Hold Fire và ra lệnh Block giương khiên bảo vệ nhóm dân thường tị nạn ở rìa sân đấu. Titan dùng tay xương khổng lồ đập quét sân khấu.
+- **Phase 2: Rễ cây oán niệm**: Titan cắm các mạch máu xương vào mặt đất, tạo ra các vũng máu độc phát nổ theo nhịp đập. Tulas phải liên tục di chuyển để dọn dẹp các vũng máu độc, trong khi Ghost dùng khả năng kháng ảo ảnh định vị điểm yếu thực sự của Titan.
+- **Phase 3: Nhịp đập chí mạng**: Titan để lộ lõi Trái Tim ở ngực. Người chơi phải căn đúng nhịp đập (Resonant Heartbeat) để tung đòn đánh cộng hưởng phá hủy lớp giáp xương bao bọc lõi.
+- **Kết trận**: Titan sụp đổ. Jamerson xuất hiện trên buồng ngủ đông của Heniana, cướp lấy Trái Tim thần và trốn thoát. Đấu trường sụp đổ hoàn toàn. Cả nhóm phải lựa chọn dừng lại cứu những người lính và người dân đang bị vùi lấp (phát triển tâm lý Tulas & Block về giá trị của sức mạnh bảo vệ) thay vì đuổi theo Jamerson ngay lập tức. Hai phe tàn quân dừng chiến đấu trước nghĩa cử của nhóm, chỉ cho họ đường tiến vào The Cradle.
 
 ## Stage 5 - The Cradle
 
 ## 5-1. Vùng mơ của Thần Sơ Sinh
+![Cradle Landscape](<imgs/Stage5/the_cradle_landscape.png>)
 
 ### Mục tiêu gameplay
 
@@ -730,6 +1004,7 @@ Boss nhóm, gồm shield, spear, chant, beast handler. Giết chant trước là
 - **Skill loadout thành vật thể:** những skill người chơi chọn trong Map Ngủ Mơ có thể hiện thành cổng/đòn hỗ trợ trong level.
 - **Ký ức cám dỗ:** mỗi vùng ký ức đưa ra một lối giải dễ nhưng sai chủ đề, như bỏ tù nhân để mở đường nhanh, dùng Heni làm khóa, nghe giọng người chết để mở cổng, hoặc để hai phe tự giết nhau cho boss yếu đi.
 - **Từ chối lối tắt:** route tốt thường khó hơn ngay lúc đó nhưng giữ trust, giảm Rage cuối, mở assist hoặc giảm số nạn nhân trong epilogue.
+- **Cơ chế Cộng hưởng nhịp tim (Heartbeat Resonance):** Nhịp tim của Ghost và Heni hiển thị trực tiếp trên HUD. Nhịp tim tăng khi chạy nhanh, chiến đấu hoặc đứng trong vùng oán niệm quá lâu. Khi nhịp tim quá cao, màn hình bị nhiễu ảo giác nặng và sinh ra **Shadow Echoes** (quái vật bóng ma chỉ tập trung săn đuổi nhân vật có nhịp tim cao). Để giảm nhịp tim: Tulas sử dụng kỹ năng lọc/tuần hoàn máu, hoặc ra lệnh COMMAND cho Block giương khiên tạo vùng trú ẩn an toàn để Ghost/Heni đứng yên tĩnh tâm.
 
 ### Puzzle/encounter
 
@@ -739,6 +1014,7 @@ Boss nhóm, gồm shield, spear, chant, beast handler. Giết chant trước là
 - **Lối thoát Marseille giả:** mở ra nếu bỏ lại các bóng tù nhân. Cách đúng là quay lại cứu họ, làm route dài hơn nhưng giảm áp lực encounter 5-2.
 - **Lời hứa im lặng của Sakuri:** Heni có thể mở cổng nhanh bằng cộng hưởng đau đớn. Cách đúng là để Solei giữ cô lại và tìm đường khác bằng stealth/âm thanh.
 - **Bàn thờ Calvaria:** giọng người chết chỉ đường rất ngắn. Cách đúng là dùng Cái Lưỡi để nhận ra lời giả và chọn đường không có phần thưởng tức thì.
+- **Giải đố Phản chiếu Không gian (Space Inversion Puzzle):** Vùng Mơ chứa các mảng không gian lơ lửng đại diện cho ký ức cũ. Người chơi phải hoán đổi vị trí của các nhân vật nằm ở các vùng ký ức khác nhau (ví dụ: Solei ở Marseille, Ghost ở Bastonne) để họ cùng đẩy vật thể, kéo cần hoặc kích hoạt công tắc đồng bộ ở hai chiều không gian để mở cổng tiếp theo.
 
 ## 5-2. Chiến trường của hai chính nghĩa
 
@@ -773,6 +1049,7 @@ Boss nhóm, gồm shield, spear, chant, beast handler. Giết chant trước là
 - Sau boss có gameplay nghi lễ ngược, không chỉ cutscene.
 
 ### Boss: Jamerson trong giáp mảnh thần
+![Final Boss Jamerson](<imgs/Stage5/final_boss_jamerson.png>)
 
 Mỗi phase dùng một luật:
 
@@ -806,27 +1083,27 @@ Cơ chế:
 
 Kết thúc đúng với bản Complete: Ghost cắt liên kết, Jamerson rơi xuống bên buồng ngủ đông, không được tha thứ nhưng lần đầu không còn ra lệnh.
 
-### Nghi lễ ngược sau boss
+### Nghi lễ ngược (Inverse Ritual Mode) sau boss
+![Heni and Heniana Resonance](<imgs/Stage5/heni_heniana_resonance.png>)
 
-Sau The Father-Eye, không nên cắt thẳng sang cinematic dài. Người chơi nên có một đoạn điều khiển ngắn, chậm hơn combat nhưng vẫn có áp lực, để trả các mảnh thần qua Dây Rốn.
+Sau The Father-Eye, không nên cắt thẳng sang cinematic dài. Người chơi sẽ bước vào một chế độ chơi phòng thủ chiến thuật thời gian thực thu nhỏ (**Inverse Ritual Mode**), nơi cả 6 thành viên trong đội đều xuất hiện trên đấu trường và người chơi phải phân chia vai trò để bảo vệ lõi Dây Rốn và Heni/Heniana trong khi tiến trình ngắt kết nối diễn ra.
 
-Mục tiêu:
+**Mục tiêu chiến thuật:**
 
-- **Keep Links Severed:** các liên kết Mắt/Tai/Lưỡi/Tim cố nối lại vào Heniana, Heni hoặc xác Jamerson. Người chơi phải giữ từng tuyến bằng nhân vật phù hợp.
-- **Protect Heni and Heniana:** Heni cần đứng gần Dây Rốn nhưng không được bị kéo thành vật tế. Heniana cần được giữ ổn định như một người bệnh, không như core thần lực.
-- **Open Evac Route:** Block và Deep giữ đường rút cho dân, tù binh và cả lính đầu hàng của hai phe.
-- **No More Sacrifice:** Henry giữ lệnh Hold Fire/Protect Civilians; nếu người chơi giết mục tiêu đầu hàng ở đoạn này, nghi lễ bất ổn hơn.
-- **Triage:** Tulas cứu người bị nối vào mạch thần. Cứu càng nhiều, epilogue càng rõ cảm giác thế giới nhẹ đi.
+- **Keep Links Severed (Solei & Ghost):** Các liên kết năng lượng từ các mảnh cổ vật cố gắng tái kết nối vào Heniana hoặc xác Jamerson. Người chơi điều khiển Solei chạy tường cơ động để chém đứt các liên kết oán niệm (Corruption Links), trong khi Ghost tiếp cận trực tiếp lõi Dây Rốn để đồng bộ và ngắt kết nối an toàn.
+- **Evac & Defense (Block & Deep):** Các quái vật oán niệm (Relic Distortions) liên tục trào ra từ các vết nứt không gian để phá vỡ nghi lễ. Block phải giương khiên đặc chặn hướng tấn công chính, trong khi Deep dùng đao nặng cản phá các đợt quái lớn và hỗ trợ giữ đường rút lui cho những người sống sót (bao gồm cả tàn quân hai phe).
+- **Triage & Life Support (Tulas):** Dòng năng lượng Dây Rốn rút cạn sinh lực của hai cô bé. Người chơi điều khiển Tulas sử dụng kỹ năng tuần hoàn máu để ổn định thể trạng của Heni và Heniana, ngăn không cho thanh sinh lực của họ tụt xuống mức nguy kịch.
+- **Command Control (Henry):** Cái Lưỡi phát ra các lệnh giả làm nhiễu loạn hành vi của đồng đội. Henry phải sử dụng COMMAND cấp cuối (Hold Fire / Protect / Focus) để triệt tiêu các lệnh gây nhiễu và phối hợp hành động của cả đội.
 
-Vai trò payoff:
+**Vai trò payoff cụ thể:**
 
-- **Ghost:** cắt Con Mắt vì hệ thống không nhận diện anh.
-- **Solei:** giữ Heni bằng tên riêng, không để UI gọi cô là "clone key" hay "Heniana copy".
-- **Henry:** dùng COMMAND lần cuối để cấm vật tế thay vì tối ưu sát thương.
-- **Deep:** không đánh đòn kết liễu; anh giữ tuyến và kéo người sống ra ngoài.
-- **Tulas:** dùng máu/chất lỏng để cứu người mà không biến họ thành công cụ mở khóa.
-- **Block:** giữ cổng đủ lâu để người sống rời đi, kể cả người từng là địch.
-- **Heni:** tự chạm Dây Rốn khi người chơi đã tạo đủ khoảng an toàn; đây là prompt xác nhận agency, không phải nút hi sinh.
+- **Ghost:** Cắt Con Mắt vì hệ thống sinh học lỗi không nhận diện được anh.
+- **Solei:** Giữ Heni bằng tên riêng (Heni), không để UI chuyển thành "Clone Core" hay "Heniana Copy".
+- **Henry:** Dùng COMMAND lần cuối để cấm tuyệt đối việc sử dụng vật tế người, bất kể điều đó làm nhịp phòng thủ khó hơn.
+- **Deep:** Từ chối tung đòn kết liễu tàn quân; tập trung kéo những người bị thương ra xa khỏi vùng sụp đổ.
+- **Tulas:** Lọc độc tố và cứu người bị nối vào mạch thần mà không dùng cơ thể ai làm công cụ mở khóa.
+- **Block:** Giữ cánh cổng ngầm mở đủ lâu để toàn bộ người sống rút lui an toàn.
+- **Heni:** Tự tay chạm vào Dây Rốn thông qua một prompt xác nhận ý chí tự do (agency prompt) của chính cô bé khi người chơi đã tạo ra đủ khoảng an toàn, chấm dứt hoàn toàn nghi lễ.
 
 Kết quả tốt nhất không phải "perfect victory". Nó là ending bittersweet: Đại Họa giảm dần, Heniana chỉ còn cơ hội mong manh như người thường, Heni sống tiếp như một người riêng, và Jamerson không được tôn vinh.
 
@@ -944,3 +1221,9 @@ Dùng mạnh ở Stage 4 và final boss:
 - Mức độ hậu quả của LaundelTrust nên lớn đến đâu?
 - `SubmarinePowerRoute` nên thưởng loot/skill ở mức nào để đáng chọn Hard Mode mà không biến thành route bắt buộc?
 - Final boss có cho chọn kết thúc không, hay canon luôn là trả mảnh thần qua Dây Rốn?
+- `Start Story` luôn vào save slot trước, hay vào Relay/IP Room khi người chơi chọn co-op từ main menu?
+- `Heroes` trên main menu là character viewer ngoài campaign, hay chính là Story Party/Character Select?
+- Pause menu có dừng thời gian trong mọi mode không, hay online/co-op dùng pause không dừng thời gian?
+- Character Select cho đổi active fighter mọi lúc ở checkpoint, hay chỉ tại căn cứ/Map Ngủ Mơ/safehouse?
+- Settings nên dùng layout v2 một trang rộng hay v3 tabbed sections cho bản đầu tiên?
+- UI có cần language toggle Việt/Anh ngay từ đầu không, hay để sau khi khóa text chính?

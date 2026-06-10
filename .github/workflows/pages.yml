@@ -42,7 +42,7 @@ jobs:
           cp -R imgs _site/imgs
           touch _site/.nojekyll
           test -s _site/index.html
-          test -f _site/imgs/UI/K_baner.png
+          test -f _site/imgs/UI/K_banner/K_baner_animated.gif
 
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'

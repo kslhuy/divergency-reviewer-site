@@ -12,12 +12,14 @@ Revision direction:
 - Keep the UI dark fantasy and old-metal, closer to `settings_menu_sections/Settings_section_misc.png`.
 - Avoid futuristic neon borders and oversized network symbols.
 - Keep the Relay/IP entry field moderate in size so it reads like a menu row, not a banner.
+- Keep title and subtitle dividers outside the text bounds; no decorative line should run through `LAN / DIRECT IP CONNECTION` or `JOIN THROUGH RELAY CODE`.
+- Show a larger populated room list so multiple available rooms are visible at once, with the first row selected and a clear `JOIN SELECTED` action.
 
 Layout:
 - Top mode tabs switch between `RELAY` and `IP LOCAL`.
-- The left panel shows room discovery/list status plus `REFRESH` and `QUICK JOIN`.
+- The left panel shows five joinable room rows plus `REFRESH` and `JOIN SELECTED`.
 - The right panel keeps create-host settings visible without requiring a separate floating menu.
-- The bottom row is the active join/connect entry field.
+- The manual `ROOM CODE` / `HOST IP` entry field lives in the right panel under `HOST ROOM`, followed by `JOIN` / `CONNECT`.
 - The player name row remains persistent at the bottom of the modal.
 
 Regenerate with:

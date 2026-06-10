@@ -1,23 +1,23 @@
-# Divergency: Dark Fantasy Party Brawler
+# Divergency: Dark Fantasy Tactical Brawler
 
-Divergency is a dark fantasy pixel-art beat 'em up where you build a small squad, equip only the skills you can carry into battle, command allies in real time, and fight through corrupted cities, secret labs, cursed forests, ancient relic sites, and brutal boss encounters.
+Divergency is a high-velocity, dark fantasy 2.5D beat 'em up that fuses fluid, satisfying character movement with real-time tactical squad control. Build your team, attune your active skill deck, and lead a desperate rebellion through a corrupted world where every drop of blood has a cost. Can you stop a grieving father's covenant with a forgotten god before Marseille is consumed?
 
 Five main fighters are playable in the current build. The Kickstarter campaign helps us finish the full PC-first story campaign: combat polish, stages, enemies, bosses, UI, music, sound, QA, release work, and backer rewards.
 
-![Divergency key art banner](<imgs/UI/K_baner.png>)
+![Divergency key art banner](<imgs/UI/K_banner/K_baner_animated.gif>)
 
 ## The Quick Pitch
 
-Divergency is built for players who like side-scrolling action that is fast, readable, tactical, and character-driven.
+Divergency is built for players who love classic side-scrolling action refined with modern responsiveness, satisfying traversal, and tactical depth.
 
-- Fast 2D/2.5D brawler combat with dodges, combos, enemy waves, bosses, and stage pressure.
-- Five playable main fighters with different weapons, movement, roles, and combat rhythm.
-- A limited loadout system: characters can learn many skills, but only four active skills go into a mission.
-- A squad command system that lets you direct allies during real-time fights.
-- Handcrafted pixel-art stages with hidden routes, story encounters, puzzle moments, and secrets.
-- A dark fantasy campaign about grief, sacrifice, relic fragments, and the cost of turning people into tools.
+- **High-Velocity Combat & Satisfying Movement:** Fast-paced, fluid 2D/2.5D brawling featuring highly responsive dashes, animation cancels, parries, and tight mechanical control.
+- **Dynamic Playable Cast:** Five playable fighters, each with their own unique weapons, weight, movement rhythm, and mechanical feel.
+- **Deck-Based Skill Loadouts:** Customize your approach before every mission. Select and carry only 4 active skills from a pool of over 10 unique abilities per fighter.
+- **Real-Time Tactical Command:** Direct your allies seamlessly in the heat of battle. Switch formations and call synchronized assist attacks to shatter enemy lines.
+- **Handcrafted Pixel-Art World:** Explore branching stages with hidden routes, environmental puzzle sections, and secret lore encounters.
+- **A Dark Fantasy Narrative:** A gripping campaign about grief, survival, relic fragments, and the heavy price of turning human beings into weapons.
 
-The goal is not to make a simple arena brawler. Divergency is a full adventure campaign built around combat mastery, party identity, and a world that changes as each relic fragment is revealed.
+The goal is not to make a simple arena brawler. Divergency is a complete, satisfying adventure campaign centered around combat mastery, party synergy, and a world that shifts as each relic fragment is revealed.
 
 ## Inspiration Games
 
@@ -32,45 +32,44 @@ Classic arcade brawlers like Final Fight and Streets of Rage also guide the 2.5D
 
 ## Gameplay
 
-### Fast Beat 'Em Up Combat
+### High-Velocity, Responsive Combat
 
-Combat is about movement, impact, spacing, and timing. You push through enemy groups, chain attacks, dodge pressure, and use each fighter's strengths to control the fight.
+Combat in Divergency is defined by its speed, impact, and mechanical responsiveness. We want every strike, dash, and block to feel incredibly satisfying. 
+
+- **Fluid Traversal & Movement:** Dash through lane pressure, cancel your attack animations to escape danger, and execute quick parries to turn the tide. Movement is not just a way to walk between fights—it is your primary survival tool, allowing for high-skill combat expressions.
+- **Dynamic Physics & Hit-Stop:** Every weapon impact features tailored visual hit-stop, camera shake, and screen-space particle effects that give combat a heavy, physical punch.
+- **Encounter Pressure:** You don't just fight passive targets. Enemy groups act in formations. Soldiers, shield bearers, ranged shooters, and brutal bosses force you to constantly reposition, break formations, and adapt your rhythm.
 
 ![Boss encounter in Akam Meskul](<imgs/Stage4/blood_lari_bos.png>)
 
-Enemy waves are designed to change how you play. Soldiers, gangs, shield users, shooters, ambushers, monsters, and relic-born bosses create different kinds of pressure. Some fights ask you to break formations. Others ask you to reposition, protect allies, or burst down a dangerous target before the battlefield collapses around you.
+### Deck-Based Combat Attunement (Loadouts)
 
-### Choose Your Loadout Before Each Mission
+Each fighter has access to an expansive pool of over 10 unique active skills, but you cannot bring them all. Before setting foot in a stage, you must customize your combat deck, selecting only **4 active skills** to equip for the mission ahead.
 
-Each fighter can learn a larger skill pool over time, but cannot bring everything into a stage. A character may have around 10 available skills, while only 4 active skills can be equipped during a mission.
+This structural limit changes how you play:
+- Attune for **Crowd Control** when heading into dense enemy waves.
+- Focus on **High Mobility** for stages with hazardous traversal and environmental traps.
+- Select **Guard Breaks** to shatter heavy front-line shield formations.
+- Pack **Burst Damage** when preparing for major boss fights.
 
-That limit is important. Before a map, you choose the tools that fit the route ahead:
-
-- Crowd control for enemy waves.
-- Mobility for routes with traversal pressure.
-- Guard break skills for shield formations.
-- Burst damage for boss fights.
-- Defensive or recovery options for dangerous zones.
-
-The system is meant to create preparation without slowing the game down. You look at the mission, choose a plan, and feel that decision in combat.
+The attunement system is designed to create tactical preparation without slowing down the action. You analyze the map, select your loadout, and immediately feel the weight of your choices in battle.
 
 ![Character and mission selection UI](<imgs/UI/Character_selcted_story.png>)
 
-### Command Allies In Real Time
+### Real-Time Tactical Command (Squad Synergy)
 
-Some battles are not won by one fighter alone. Divergency includes a player-to-AI command system that lets you direct nearby allies while the fight continues.
+You are not fighting this war alone. Divergency features a seamless, real-time player-to-AI command wheel that lets you orchestrate your squad without stopping the brawler action.
 
 ![In-game ally command system](<imgs/UI/In_game_generated.png>)
 
-You can select a nearby ally, give quick directional orders, change formation, and trigger assist behavior:
+Quickly select a nearby ally and issue orders to coordinate attacks or protect your flanks:
+- **Free:** Release the squad back to independent AI behavior.
+- **Come:** Instantly regroup around the player's position.
+- **Hold Left / Hold Right:** Hold a specific flank to control lane pressure.
+- **Line / Wedge / Circle:** Shift the party's formation dynamically.
+- **Synchronized Assist:** Call a selected ally to trigger their signature support action (e.g., calling Block to drop a shield wall or Henry to throw smoke bombs).
 
-- Free: release the squad back into normal behavior.
-- Come: regroup around the player.
-- Hold Left / Hold Right: keep a flank position.
-- Line / Wedge / Circle: change formation.
-- Assist: call the selected ally to support an attack, movement, or defensive action.
-
-The player still brawls in real time. The command system adds a tactical layer: pull allies out of danger, hold space, create a formation, or call support at the moment a boss or enemy group opens up.
+While you brawl in real-time, the command system adds a satisfying layer of tactician control—pulling allies out of danger zones, locking down choke points, or calling in synchronized strikes exactly when a boss reveals a weak spot.
 
 ### Explore Handcrafted Stages
 
@@ -88,31 +87,73 @@ Each chapter has its own combat identity. Marseille is built around prisons, gan
 
 ![Divergency main character lineup](<imgs/chars/Poster.png>)
 
-### Deep
+### Deep — *The Weary Crusader*
+
+> *"I've fought in enough wars to know that symbols don't bleed. We do."*
 
 Deep is a heavy melee fighter and former crusader who has survived too many wars. He hits hard, controls space, and carries the weight of a man who no longer wants to be used as a symbol.
 
+*   **Combat Style:** Frontline Juggernaut / Crowd Control
+*   **Signature Weapon:** Relic-Iron Greatsword
+*   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Heavy charge, ground slam cancels)
+*   **Squad Synergy:** Absorbs frontline pressure, breaks shield formations, and peels enemies off vulnerable teammates.
+
 ![Deep character art](<imgs/chars/Deep.png>)
 
-### Solei
+### Solei — *The Swift Vanguard*
+
+> *"The fastest way to end a war is to strike before they can draw their steel."*
 
 Solei is fast, sharp, and fearless. She is built for speed, pressure, and quick reads, striking before enemies can settle into formation.
 
-### Henry
+*   **Combat Style:** High-Speed Duelist / Combo Specialist
+*   **Signature Weapon:** Twin Steel Kunai
+*   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Dash cancels, multi-directional air dashes)
+*   **Squad Synergy:** High single-target DPS, executes high-priority targets, and moves swiftly across lanes to assist allies in distress.
+
+### Henry — *The Tactical Scout*
+
+> *"Knowing where the enemy will stand tomorrow is worth more than a thousand swords today."*
 
 Henry is a tactical veteran who works from the shadows. He reads the battlefield, gathers information, and supports the team when brute force is not enough.
 
-### Tulas
+*   **Combat Style:** Ranged Support / Battlefield Disruption
+*   **Signature Weapon:** Silent Crossbow & Smoke Bombs
+*   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Tactical slide, smoke evasions)
+*   **Squad Synergy:** Blinds enemies, slows down crowd movements, and provides cover so teammates can regroup.
+
+### Tulas — *The Blood Channeler*
+
+> *"Every miracle has a price. Some choose to pay in steel; others, in blood."*
 
 Tulas is a blood and liquid mage. His abilities can create shields, platforms, filters, temporary paths, and dangerous offensive tools, but his power always carries a moral cost.
 
-### Block
+*   **Combat Style:** Area Denial / Platform Conjurer
+*   **Signature Weapon:** Liquid Catalyst Core
+*   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Blood platform creation for lane elevation)
+*   **Squad Synergy:** Creates defensive barriers and vertical paths, controlling the flow of the battlefield and shielding allies from harm.
+
+### Block — *The Unyielding Guardian*
+
+> *"I stand. For you, for the team, until the armor cracks."*
 
 Block is a loyal ally and defensive force. Saving him is one of the first campaign objectives, and his role reinforces the game's focus on trust, party pressure, and commandable teamwork.
 
-### Ghost
+*   **Combat Style:** Pure Defensive Tank
+*   **Signature Weapon:** Tower Aegis Shield
+*   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Stationary block parry, heavy shield bash)
+*   **Squad Synergy:** Absorbs maximum damage, draws enemy aggro, and creates temporary invulnerability zones for the party.
+
+### Ghost — *The Unbound Anomaly*
+
+> *"My record is blank. My future is mine to write."*
 
 Ghost begins as a nameless survivor pulled out of Jamerson's prison. The system cannot fully identify him, and that failure may be the reason the relic fragments cannot control him like everyone else.
+
+*   **Combat Style:** Unpredictable Skirmisher / Phase Duelist
+*   **Signature Weapon:** Fragmented Phase Blade
+*   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Glitch phase-dash, teleport cancels)
+*   **Squad Synergy:** Bypasses enemy guards completely, creates temporal decoys, and disrupts boss spell-casting.
 
 ## Story
 
@@ -265,14 +306,15 @@ Stretch goals expand the game after the core campaign is funded. If a stretch fe
 
 | Goal | Unlock | What it adds |
 | ---: | --- | --- |
-| $20,000 | Full Story Campaign Foundation | Main campaign production, core combat, squad commands, bosses, QA, release work, and digital delivery |
-| $25,000 | Combat Expansion | Larger skill pools, more passive upgrades, extra weapon variations, and deeper loadout choices |
-| $30,000 | World Expansion | Hidden side quests, lore events, secret areas, optional mini-bosses, and hidden bosses |
-| $35,000 | Co-op And PvP Development | Local co-op target, online co-op/PvP testing if stable, and team synergy mechanics |
-| $40,000 | Expert Mode | Smarter enemy behavior, reworked encounters, stronger bosses, and challenge-focused content |
-| $50,000 | Survival Mode | Permadeath rules, limited resources, Boss Rush challenge, and survival-focused tuning |
-| $60,000 | Infinity Tower | Scaling challenge mode, unique enemy combinations, progression rewards, and leaderboards if platform support is ready |
-| $88,000 | Custom Stage Mode | Stage-building tools, custom fights, enemy/layout/difficulty options, and sharing only if moderation support is ready |
+| $20,000 | **Full Story Campaign Foundation** | Main campaign production, core combat, real-time squad commands, boss fights, QA, PC release, and digital delivery. |
+| $25,000 | **The Arsenal: Extended Masteries** | Expanded skill trees, more passive upgrades, weapon cosmetic variations, and deeper loadout deck-building. |
+| $30,000 | **Whispers of the Dead: Lore & Secrets** | Hidden side quests, character backstory events, secret rooms, and optional lore mini-bosses. |
+| $35,000 | **Covenant of Two: Local Co-op** | Local shared-screen co-op, custom team synergy commands, and online co-op matchmaking testing. |
+| $45,000 | **Acoustic Awakening: Composer Collaboration** | Live acoustic instrument recording for the soundtrack, advanced dynamic SFX package, and guest composer guest tracks. |
+| $55,000 | **The Calamity's True Face: Expert Mode** | Smart enemy AI behaviors, reworked group formations, advanced boss phases, and challenge rewards. |
+| $65,000 | **Ascension: Survival & Boss Rush** | Permadeath challenge rules, limited resource survival run, and a dedicated Boss Rush mode. |
+| $80,000 | **The Infinity Tower** | Endless scaling wave-based challenge mode with unique elite enemy groupings, custom rules, and progression badges. |
+| $100,000 | **The Architect: Custom Stage Editor** | In-game stage-building tools to create custom combat arenas, set enemy wave layouts, and share stages with the community. |
 
 ## Production Timeline
 
