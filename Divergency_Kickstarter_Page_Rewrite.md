@@ -275,7 +275,7 @@ Still to finish:
 
 ## Why Kickstarter?
 
-Divergency is being built by TriLinkage, a small independent game studio based in Marseille, France. Kickstarter support lets us keep the full story campaign as the priority and pay for the production work that turns the current playable build into a finished PC-first release.
+Divergency is being built by a small independent team. Kickstarter support lets us keep the full story campaign as the priority and pay for the production work that turns the current playable build into a finished PC-first release.
 
 The base campaign is focused on the main game, not extra modes. Funding goes toward the work backers will actually feel when they play: combat polish, stage content, playable character refinement, enemies, bosses, UI, audio, QA, release preparation, and reward fulfillment.
 

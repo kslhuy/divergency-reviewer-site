@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kslhuy.github.io/divergency-reviewer-site/sitemap.xml

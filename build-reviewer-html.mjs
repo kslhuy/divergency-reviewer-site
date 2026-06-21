@@ -4,6 +4,11 @@ import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const outputFile = path.join(here, "Divergency_Reviewer_Tabs.html");
+const siteUrl = "https://kslhuy.github.io/divergency-reviewer-site/";
+const siteTitle = "Divergency by TriLinkage | Dark Fantasy Tactical Brawler";
+const siteDescription = "Divergency is a dark fantasy 2.5D tactical brawler from TriLinkage, a small independent game studio based in Marseille, France. Explore the campaign pitch, story, gameplay, rewards, and development notes.";
+const siteImage = `${'$'}{siteUrl}imgs/UI/K_banner/K_banner_color.jpg`;
+const facebookUrl = "https://www.facebook.com/profile.php?id=61579395298870";
 const heroBackground = "imgs/UI/K_banner/K_baner_animated.gif";
 
 const documents = [
@@ -540,16 +545,13 @@ function renderTabs(docs) {
     .join("");
 }
 
-function renderHeroStats(docs) {
-  const totalMinutes = docs.reduce((sum, doc) => sum + doc.readMinutes, 0);
-  const totalSections = docs.reduce((sum, doc) => sum + doc.sections, 0);
-  const totalTables = docs.reduce((sum, doc) => sum + doc.tables, 0);
+function renderHeroStats() {
   return `
-    <dl class="hero-stats" aria-label="Packet statistics">
-      <div><dt>Docs</dt><dd>${docs.length}</dd></div>
-      <div><dt>Read</dt><dd>${totalMinutes} min</dd></div>
-      <div><dt>Sections</dt><dd>${totalSections}</dd></div>
-      <div><dt>Tables</dt><dd>${totalTables}</dd></div>
+    <dl class="hero-stats" aria-label="Product and studio identity">
+      <div><dt>Product</dt><dd>Divergency</dd></div>
+      <div><dt>Studio</dt><dd>TriLinkage</dd></div>
+      <div><dt>Base</dt><dd>Marseille, France</dd></div>
+      <div><dt>Status</dt><dd>Playable build</dd></div>
     </dl>`;
 }
 
@@ -625,7 +627,46 @@ function buildPage(docs) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Divergency Reviewer Packet</title>
+  <title>${escapeHtml(siteTitle)}</title>
+  <meta name="description" content="${escapeAttribute(siteDescription)}">
+  <link rel="canonical" href="${siteUrl}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="${escapeAttribute(siteTitle)}">
+  <meta property="og:description" content="${escapeAttribute(siteDescription)}">
+  <meta property="og:url" content="${siteUrl}">
+  <meta property="og:image" content="${siteImage}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeAttribute(siteTitle)}">
+  <meta name="twitter:description" content="${escapeAttribute(siteDescription)}">
+  <meta name="twitter:image" content="${siteImage}">
+  <script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}#organization`,
+        name: "TriLinkage",
+        url: siteUrl,
+        sameAs: [facebookUrl],
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Marseille",
+          addressCountry: "FR",
+        },
+      },
+      {
+        "@type": "VideoGame",
+        "@id": `${siteUrl}#divergency`,
+        name: "Divergency",
+        description: "A dark fantasy 2.5D tactical brawler with real-time squad commands and a story campaign beginning in Marseille.",
+        genre: ["Dark fantasy", "Tactical brawler", "Beat 'em up"],
+        operatingSystem: "PC",
+        url: siteUrl,
+        developer: { "@id": `${siteUrl}#organization` },
+        publisher: { "@id": `${siteUrl}#organization` },
+      },
+    ],
+  })}</script>
   <style>
     :root {
       color-scheme: dark;
@@ -753,6 +794,33 @@ function buildPage(docs) {
       max-width: 840px;
       color: var(--muted);
       font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .hero-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 14px;
+      border: 1px solid rgba(111, 184, 174, 0.48);
+      border-radius: 7px;
+      background: rgba(20, 19, 18, 0.72);
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .hero-link:hover,
+    .hero-link:focus-visible {
+      border-color: var(--amber);
+      outline: none;
     }
 
     .toolbar {
@@ -1523,13 +1591,17 @@ function buildPage(docs) {
   <main class="shell">
     <header class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Divergency reviewer packet</p>
-        <h1>Dark fantasy beat 'em up campaign docs</h1>
+        <p class="eyebrow">TriLinkage studio site</p>
+        <h1>Divergency</h1>
         <p>
-          A tabbed, visual reading version of the Kickstarter pitch, short story summary,
-          complete story, gameplay and level design, and fulfillment checklist.
+          A dark fantasy 2.5D tactical brawler from TriLinkage, a small independent
+          game studio based in Marseille, France. This site separates the game,
+          the studio, the campaign pitch, story, gameplay, rewards, and production notes.
         </p>
-        ${renderHeroStats(docs)}
+        <div class="hero-links" aria-label="Official links">
+          <a class="hero-link" href="${facebookUrl}" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+        ${renderHeroStats()}
       </div>
     </header>
 

@@ -1,6 +1,6 @@
-﻿# Divergency Reviewer Site
+# Divergency Reviewer Site
 
-Public reviewer site for Divergency Kickstarter campaign materials.
+Public product and reviewer site for Divergency, a dark fantasy tactical brawler by TriLinkage, an independent game studio based in Marseille, France.
 
 Live site after GitHub Pages deploys:
 

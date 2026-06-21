@@ -40,6 +40,7 @@ jobs:
           mkdir -p _site
           cp Divergency_Reviewer_Tabs.html _site/index.html
           cp -R imgs _site/imgs
+          cp robots.txt sitemap.xml _site/
           touch _site/.nojekyll
           test -s _site/index.html
           test -f _site/imgs/UI/K_banner/K_baner_animated.gif
