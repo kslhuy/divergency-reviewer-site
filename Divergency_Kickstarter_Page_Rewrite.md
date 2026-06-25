@@ -45,7 +45,7 @@ Combat in Divergency is defined by its speed, impact, and mechanical responsiven
 ### Deck-Based Combat Attunement (Loadouts)
 
 Each fighter has access to an expansive pool of over 10 unique active skills, but you cannot bring them all. Before setting foot in a stage, you must customize your combat deck, selecting only **4 active skills** to equip for the mission ahead.
-
+![Character and mission selection UI](<imgs\UI\main_menu_sprites\Khoa\main_menu_V3.png>)
 This structural limit changes how you play:
 - Attune for **Crowd Control** when heading into dense enemy waves.
 - Focus on **High Mobility** for stages with hazardous traversal and environmental traps.
@@ -54,7 +54,10 @@ This structural limit changes how you play:
 
 The attunement system is designed to create tactical preparation without slowing down the action. You analyze the map, select your loadout, and immediately feel the weight of your choices in battle.
 
-![Character and mission selection UI](<imgs/UI/Character_selcted_story.png>)
+Each skill can be enhance base on your level with higher base damage , effect. 
+![Skill Deep](<imgs\chars\Deep\deep_sword_1.gif>)
+![Skill Deep](<imgs\chars\Deep\deep_sword_2.gif>)
+
 
 ### Real-Time Tactical Command (Squad Synergy)
 

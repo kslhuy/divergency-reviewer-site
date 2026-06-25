@@ -7,7 +7,7 @@ const outputFile = path.join(here, "Divergency_Reviewer_Tabs.html");
 const siteUrl = "https://kslhuy.github.io/divergency-reviewer-site/";
 const siteTitle = "Divergency by TriLinkage | Dark Fantasy Tactical Brawler";
 const siteDescription = "Divergency is a dark fantasy 2.5D tactical brawler from TriLinkage, a small independent game studio based in Marseille, France. Explore the campaign pitch, story, gameplay, rewards, and development notes.";
-const siteImage = `${'$'}{siteUrl}imgs/UI/K_banner/K_banner_color.jpg`;
+const siteImage = `${siteUrl}imgs/UI/K_banner/K_banner_color.jpg`;
 const facebookUrl = "https://www.facebook.com/profile.php?id=61579395298870";
 const heroBackground = "imgs/UI/K_banner/K_baner_animated.gif";
 
@@ -104,6 +104,11 @@ const imageSlots = {
       src: "imgs/chars/Poster.png",
       alt: "Divergency character poster",
       caption: "Main cast / story anchor",
+    },
+    {
+      src: "imgs/Stage1/stage0_to_bastonne_cutscene.gif",
+      alt: "Stage 0 cutscene animatic from Team Deep base to Bastonne prison",
+      caption: "Stage 0 cutscene: base to Bastonne",
     },
     {
       src: "imgs/Stage1/Bastonne.png",

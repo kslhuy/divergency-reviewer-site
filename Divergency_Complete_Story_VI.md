@@ -141,9 +141,24 @@ Phần chơi nên bắt đầu ở căn cứ tạm của đội Deep, không ph�
 
 Đây là phần hướng dẫn tự nhiên. Người chơi điều khiển Solei để học di chuyển, né, đánh thường, combo, chưởng, phản đòn, cầm/nhặt/ném vật thể, và phối hợp cơ bản với đồng đội. Nếu Tulas có mặt trong đội từ đầu, anh có thể tạo bệ chất lỏng cho Solei nhảy qua vật cản, dựng khiên nước để chặn đạn tập, hoặc kéo một thùng kim loại đến vị trí cần ném vào công tắc. Qua lời thoại, người chơi biết **Block** là người của đội hoặc đồng minh thân thiết đã bị Jamerson bắt. Nhiệm vụ tới Bastonne vì vậy có hai mục tiêu: cứu Block và lấy bằng chứng về thí nghiệm của Jamerson.
 
+![Stage 0 cutscene - Team Deep leaves the base for Bastonne](<imgs/Stage1/stage0_to_bastonne_cutscene.gif>)
+
+Cutscene beat: Team Deep leaves the base by jet ski, crosses the dark harbor, and approaches Bastonne from the outer waterline before the rescue begins.
+
 ![Bastonne](<imgs/Stage1/Bastonne.png>)
 
 Henry, Deep, Solei và một nhóm nhỏ đột nhập Bastonne. Tulas có thể đi cùng để hỗ trợ, hoặc ở ngoài giữ tuyến rút lui, tùy quy mô đội hình mà thiết kế chọn. Trước đó, Henry chỉ mua được thông tin về **dãy giam đặc biệt** của Block, không mua được số phòng. Block biết điều này: nếu đêm giải cứu xảy ra và lính gác ngoài cửa gục xuống vì khí mê, anh phải gây tiếng động lớn để đội tìm đúng phòng.
+
+![Dãy giam đặc biệt Bastonne](<imgs/Stage1/Special_Jail.png>)
+
+![Dãy giam đặc biệt Bastonne - detailed strip](<imgs/Stage1/Special_Jail_stage0_detail_strip.png>)
+
+Dãy giam đặc biệt là khu màn hình ngang dài, thấp và nặng, nối giữa pháo đài cũ và phần phòng thí nghiệm cải tạo. Hình ảnh nên giữ cùng ngôn ngữ với Bastonne: tường đá xám bẩn, khung sắt đen, ánh đèn lạnh bị cắt thành từng mảng nhỏ, hơi nước và khí mê chạy sát sàn, các chi tiết cơ khí lộ ra nhưng không biến khu này thành sci-fi sạch sẽ. Đây vẫn là nhà tù cổ bị ép thành cơ sở nghiên cứu, nên mọi thứ phải có cảm giác chắp vá, ẩm, rỉ, và bị dùng quá lâu.
+
+Khu này có ba lớp đọc rõ trên màn hình. Lớp trước là song sắt, bàn dụng cụ, thùng kim loại, dây xích và vật thể có thể nhặt/ném. Lớp giữa là đường chơi chính: hành lang giam, cửa trượt thủy lực, camera xoay chậm, van khí và các buồng biệt giam có bảng số tù nhân. Lớp sau là bóng phòng thí nghiệm: ống dẫn, bóng người bị kéo qua kính mờ, đèn cảnh báo đỏ nhấp nháy nhưng vẫn nằm trong bảng màu u tối của Stage 0. Không thêm màu mới quá nổi; chỉ dùng đỏ báo động, xanh lạnh của đèn tù, và vàng bẩn của bóng đèn cũ để nối với các ảnh Bastonne hiện có.
+
+Về gameplay, đây là đoạn chuyển từ giải cứu có kế hoạch sang hỗn loạn. Người chơi thấy đội Deep di chuyển qua trục hành lang chính, nhưng camera có thể cắt xuống các phòng biệt giam thấp hơn để chuẩn bị cho góc nhìn Stranger. Các vật thể trong ảnh ref nên được biến thành dấu hiệu tương tác: đèn treo có thể đánh rơi để tạo tiếng vang, thùng sắt có thể ném vào cửa, van khí có thể khóa tạm thời, bảng điện có thể làm tắt camera trong vài giây. Khi khí mê tràn vào, các lớp nền vẫn giữ nguyên bố cục nhưng ánh sáng đổi nhịp, giúp người chơi hiểu cùng một không gian đang chuyển trạng thái chứ không phải sang một map khác.
+
 
 Jamerson đoán được sẽ có người đến, nhưng không biết chính xác đêm nào. Hắn cho đổi phòng tù nhân mỗi ngày, rồi ra lệnh đánh Block trước ngày hành động để anh không còn sức đập cửa. Stranger bị lôi vào trận đòn chỉ vì cai ngục thấy hai người nói chuyện với nhau. Trước khi bị kéo về hai phòng biệt giam khác nhau, Block chỉ kịp thì thầm với Stranger rằng nếu thấy lính gác ngủ gục, hãy làm ồn thật lớn. Stranger không biết người này là ai, nhưng đó là lời nhờ vả đầu tiên trong Bastonne không giống mệnh lệnh.
 
