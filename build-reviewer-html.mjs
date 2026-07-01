@@ -50,7 +50,7 @@ const documents = [
     eyebrow: "Launch readiness",
     file: "Rewards_Fulfillment_Checklist.md",
     summary:
-      "Reward tiers, EU shipping rules, custom NPC scope, pledge manager setup, reviewer questions, and launch blockers.",
+      "Reward tiers, clear mockup/product visuals, EU shipping rules, creative tier scope, pledge manager setup, reviewer questions, and launch blockers.",
   },
 ];
 
@@ -75,6 +75,21 @@ const imageSlots = {
       src: "imgs/Stage4/view_final.gif",
       alt: "Animated Stage 4 view",
       caption: "Animated world / set-piece preview",
+    },
+    {
+      src: "imgs/rewards/beacon-bracelet-product-mockup.png",
+      alt: "Beacon bracelet product mockup",
+      caption: "Physical reward mockup: Beacon Bracelet",
+    },
+    {
+      src: "imgs/rewards/a3-poster-product-mockup.png",
+      alt: "A3 Divergency poster product mockup",
+      caption: "Physical reward mockup: A3 poster",
+    },
+    {
+      src: "imgs/items/massk.png",
+      alt: "Mask relic reward visual",
+      caption: "Reward visual: Mask of the Listening Route",
     },
   ],
   story: [
@@ -170,19 +185,114 @@ const imageSlots = {
   ],
   rewards: [
     {
-      src: "imgs/chars/Poster.png",
-      alt: "Poster reward preview",
-      caption: "Poster reward preview",
+      src: "imgs/items/flower.png",
+      alt: "Heniana flower seal item symbol for the $5 Signal Supporter tier",
+      caption: "Tier symbol: $5 Signal Supporter",
     },
     {
-      src: "",
-      alt: "Budget graphic",
-      caption: "Add budget pie/bar chart",
+      src: "imgs/items/knife.png",
+      alt: "Relic-iron knife item symbol for the $20 Early Recruit tier",
+      caption: "Tier symbol: $20 Early Recruit",
     },
     {
-      src: "",
-      alt: "Timeline graphic",
-      caption: "Add 24-month timeline visual",
+      src: "imgs/items/massk.png",
+      alt: "Mask item symbol for the $25 Digital Recruit tier",
+      caption: "Tier symbol: $25 Digital Recruit",
+    },
+    {
+      src: "imgs/items/skull emer.png",
+      alt: "Emerald skull item symbol for the $40 Digital Deluxe Pack tier",
+      caption: "Tier symbol: $40 Digital Deluxe Pack",
+    },
+    {
+      src: "imgs/items/poition.png",
+      alt: "Red treatment vial item symbol for the $70 Beta Fighter tier",
+      caption: "Tier symbol: $70 Beta Fighter",
+    },
+    {
+      src: "imgs/items/Barcalet.png",
+      alt: "Beacon bracelet item symbol for the $120 Collector's Pack tier",
+      caption: "Tier symbol: $120 Collector's Pack, EU only",
+    },
+    {
+      src: "imgs/items/cloth dirty.png",
+      alt: "Bastonne cloth patch item symbol for the $250 Prisoner's Scratchings tier",
+      caption: "Tier symbol: $250 Prisoner's Scratchings",
+    },
+    {
+      src: "imgs/items/figsure.png",
+      alt: "Worn field figure item symbol for the $500 Creative Collaborator tier",
+      caption: "Tier symbol: $500 Creative Collaborator",
+    },
+    {
+      src: "imgs/rewards/a3-poster-product-mockup.png",
+      alt: "A3 Divergency poster product mockup",
+      caption: "Physical reward mockup: A3 poster",
+    },
+    {
+      src: "imgs/rewards/beacon-bracelet-product-mockup.png",
+      alt: "Beacon bracelet product mockup",
+      caption: "Physical reward mockup: Beacon Bracelet",
+    },
+    {
+      src: "imgs/rewards/stage1-evidence-pack-mockup.png",
+      alt: "Stage 1 evidence pack mockup",
+      caption: "Digital reward preview: Stage 1 evidence pack",
+    },
+    {
+      src: "imgs/rewards/laundel-route-cloth-pass-mockup.png",
+      alt: "Laundel route cloth pass mockup",
+      caption: "Reward concept mockup: Laundel route cloth pass",
+    },
+    {
+      src: "imgs/rewards/bastonne-cell-key-keychain-mockup.png",
+      alt: "Bastonne cell key keychain mockup",
+      caption: "Optional add-on concept: Bastonne cell key keychain",
+    },
+    {
+      src: "imgs/rewards/armorlite-coaster-set-mockup.png",
+      alt: "Armorlite coaster set mockup",
+      caption: "Optional add-on concept: Armorlite coaster set",
+    },
+    {
+      src: "imgs/items/Barcalet.png",
+      alt: "Beacon bracelet icon",
+      caption: "Field Relics visual: Beacon bracelet icon",
+    },
+    {
+      src: "imgs/items/massk.png",
+      alt: "Mask of the Listening Route",
+      caption: "Field Relics visual: Mask of the Listening Route",
+    },
+    {
+      src: "imgs/items/skull emer.png",
+      alt: "Emerald Skull token",
+      caption: "Field Relics visual: Emerald Skull token",
+    },
+    {
+      src: "imgs/items/knife.png",
+      alt: "Relic-Iron knife",
+      caption: "Field Relics visual: Relic-Iron knife",
+    },
+    {
+      src: "imgs/items/poition.png",
+      alt: "Red treatment vial",
+      caption: "Field Relics visual: Red treatment vial",
+    },
+    {
+      src: "imgs/items/cloth dirty.png",
+      alt: "Bastonne cloth patch",
+      caption: "Field Relics visual: Bastonne cloth patch",
+    },
+    {
+      src: "imgs/items/flower.png",
+      alt: "Heniana flower seal",
+      caption: "Field Relics visual: Heniana flower seal",
+    },
+    {
+      src: "imgs/items/figsure.png",
+      alt: "Worn field figure",
+      caption: "Field Relics visual: Worn field figure",
     },
   ],
 };
@@ -191,6 +301,124 @@ const supportedImageExtensions = new Set([".gif", ".jpg", ".jpeg", ".png", ".web
 const excludedAutoImageSlots = new Set([
   "imgs/UI/base-goal-stretch-goals.png",
 ]);
+
+const excludedAutoImageFolders = [
+  "imgs/rewards/pledge-tiers/",
+];
+
+const pledgeTierSymbols = [
+  {
+    src: "imgs/items/flower.png",
+    name: "$5 Signal Supporter",
+    tag: "Recognition",
+    note: "Use the flower seal as a soft supporter badge for updates, one wallpaper, and the digital supporter wall name.",
+  },
+  {
+    src: "imgs/items/knife.png",
+    name: "$20 Early Recruit",
+    tag: "Limited digital key",
+    note: "Use the relic-iron knife as an early recruit signal for the lower-price PC key tier. It is visual identity only, not an exclusive weapon.",
+  },
+  {
+    src: "imgs/items/massk.png",
+    name: "$25 Digital Recruit",
+    tag: "Standard digital key",
+    note: "Use the mask as the recruit identity symbol for the game key, wallpapers, avatar/icon pack, mini lore dossier, and wall name.",
+  },
+  {
+    src: "imgs/items/skull emer.png",
+    name: "$40 Digital Deluxe Pack",
+    tag: "Deluxe digital",
+    note: "Use the emerald skull as the Field Relics sheet anchor for soundtrack, mini artbook, lore dossier, wallpapers, and avatar icons.",
+  },
+  {
+    src: "imgs/items/poition.png",
+    name: "$70 Beta Fighter",
+    tag: "Feedback access",
+    note: "Use the treatment vial as a test-build marker for beta access, private feedback, and beta tester credit.",
+  },
+  {
+    src: "imgs/items/Barcalet.png",
+    name: "$120 Collector's Pack, EU only",
+    tag: "Physical collector",
+    note: "Use the Beacon bracelet icon beside the actual poster and bracelet mockups so the EU-only physical tier stays clear.",
+  },
+  {
+    src: "imgs/items/cloth dirty.png",
+    name: "$250 Prisoner's Scratchings",
+    tag: "Limited wall mark",
+    note: "Use the Bastonne cloth patch as the prison texture symbol for an approved short message or graffiti line.",
+  },
+  {
+    src: "imgs/items/figsure.png",
+    name: "$500 Creative Collaborator",
+    tag: "Scoped collaboration",
+    note: "Use the field figure as the collaboration symbol for one reviewed cosmetic or background-lore contribution.",
+  },
+];
+
+const rewardItemShowcase = [
+  {
+    src: "imgs/rewards/a3-poster-product-mockup.png",
+    name: "A3 Divergency Poster",
+    tag: "Physical mockup",
+    note: "A professional visual mockup for the EU Collector's Pack poster. The final print should still be checked against the chosen A3 vendor and paper stock.",
+  },
+  {
+    src: "imgs/rewards/beacon-bracelet-product-mockup.png",
+    name: "Beacon Bracelet",
+    tag: "Physical mockup",
+    note: "A professional visual mockup for the bracelet reward, showing the intended dark leather, aged metal, teal patina, and ember-signal identity before final production sampling.",
+  },
+  {
+    src: "imgs/items/Barcalet.png",
+    name: "Beacon Bracelet Icon",
+    tag: "Reward symbol",
+    note: "The original item-art signal can still support the lore dossier, wallpaper details, supporter badges, and product identity around the physical bracelet.",
+  },
+  {
+    src: "imgs/items/massk.png",
+    name: "Mask of the Listening Route",
+    tag: "Lore object",
+    note: "A strong symbol for Sakuri, secrecy, and the danger of obeying voices without proof. It can appear in reward art and as an in-game discoverable object.",
+  },
+  {
+    src: "imgs/items/skull emer.png",
+    name: "Emerald Skull Token",
+    tag: "Story token",
+    note: "A Calvaria-facing relic symbol that can support the mini lore dossier, wallpaper details, or normal in-game collectible lore.",
+  },
+  {
+    src: "imgs/items/knife.png",
+    name: "Relic-Iron Knife",
+    tag: "Game prop",
+    note: "A compact prop for Bastonne, prison escape, contraband, and the line between survival tool and weapon.",
+  },
+  {
+    src: "imgs/items/poition.png",
+    name: "Red Treatment Vial",
+    tag: "Dossier object",
+    note: "Connects directly to Jamerson's disease research, failed medicine, and the laboratory evidence recovered in Stage 1.",
+  },
+  {
+    src: "imgs/items/cloth dirty.png",
+    name: "Bastonne Cloth Patch",
+    tag: "Reward texture",
+    note: "A grounded texture piece for a prisoner record, wallpaper pack, sticker sheet, or mini artbook page.",
+  },
+  {
+    src: "imgs/items/flower.png",
+    name: "Heniana Flower Seal",
+    tag: "Story symbol",
+    note: "A softer counterpoint to the weapons and masks, useful for the emotional thread around Heniana and Heni.",
+  },
+  {
+    src: "imgs/items/figsure.png",
+    name: "Worn Field Figure",
+    tag: "Supporter badge",
+    note: "Works as a supporter-wall badge, profile icon, or small collectible concept without adding gameplay power.",
+  },
+];
 
 function toBrowserPath(value) {
   return value.split(path.sep).join("/");
@@ -237,7 +465,10 @@ function collectImageSlots() {
         }
 
         const src = toBrowserPath(path.relative(here, absolute));
-        if (excludedAutoImageSlots.has(src)) {
+        if (
+          excludedAutoImageSlots.has(src) ||
+          excludedAutoImageFolders.some((folder) => src.startsWith(folder))
+        ) {
           return;
         }
         const caption = captionFromImagePath(src);
@@ -362,11 +593,84 @@ function renderTable(rows) {
 function renderMarkdownImage(src, alt) {
   const cleanSrc = src.trim();
   const cleanAlt = stripMarkdown(alt || "Divergency image");
+  const normalizedSrc = cleanSrc.replaceAll("\\", "/").toLowerCase();
+  const isTitleOrnament = normalizedSrc.endsWith("/kick_title.png");
+  const isPageDivider = normalizedSrc.endsWith("/kick_jumppage.png");
+  const isDecorative = isTitleOrnament || isPageDivider;
+  const classes = [
+    "markdown-image",
+    isTitleOrnament ? "is-title-ornament" : "",
+    isPageDivider ? "is-page-divider" : "",
+  ].filter(Boolean).join(" ");
+  const imageAlt = isDecorative ? "" : cleanAlt;
+  const figcaption = isDecorative ? "" : `  <figcaption>${inlineMarkdown(cleanAlt)}</figcaption>
+`;
   return `
-<figure class="markdown-image">
-  <img src="${escapeAttribute(cleanSrc)}" alt="${escapeAttribute(cleanAlt)}" loading="lazy">
-  <figcaption>${inlineMarkdown(cleanAlt)}</figcaption>
+<figure class="${escapeAttribute(classes)}"${isDecorative ? ' aria-hidden="true"' : ""}>
+  <img src="${escapeAttribute(cleanSrc)}" alt="${escapeAttribute(imageAlt)}" loading="lazy">
+${figcaption}
 </figure>`;
+}
+
+function renderRewardItemShowcase() {
+  const tierCards = pledgeTierSymbols
+    .map(
+      (item) => `
+        <article class="reward-item-card">
+          <div class="reward-item-image">
+            <img src="${escapeAttribute(item.src)}" alt="${escapeAttribute(item.name)}" loading="lazy">
+          </div>
+          <div class="reward-item-card-copy">
+            <p class="reward-item-tag">${escapeHtml(item.tag)}</p>
+            <h4>${escapeHtml(item.name)}</h4>
+            <p>${escapeHtml(item.note)}</p>
+          </div>
+        </article>`,
+    )
+    .join("");
+  const cards = rewardItemShowcase
+    .map(
+      (item) => `
+        <article class="reward-item-card">
+          <div class="reward-item-image">
+            <img src="${escapeAttribute(item.src)}" alt="${escapeAttribute(item.name)}" loading="lazy">
+          </div>
+          <div class="reward-item-card-copy">
+            <p class="reward-item-tag">${escapeHtml(item.tag)}</p>
+            <h4>${escapeHtml(item.name)}</h4>
+            <p>${escapeHtml(item.note)}</p>
+          </div>
+        </article>`,
+    )
+    .join("");
+
+  return `
+<section class="reward-item-showcase" aria-label="Divergency Kickstarter reward item preview">
+  <div class="reward-item-lead">
+    <p class="eyebrow">Reward visual preview</p>
+    <h3>Item-Based Reward Cards</h3>
+    <p>Use the existing item sprites as the pledge-tier symbols, then place exact prices, tier names, and delivery dates in normal page text. The physical Collector's Pack still uses the poster and bracelet mockups, but the reward ladder itself should feel like Divergency UI rather than generic product bundles.</p>
+    <dl class="reward-item-metrics" aria-label="Item-based reward visual positioning">
+      <div><dt>Tier symbols</dt><dd>Item sprites</dd></div>
+      <div><dt>Physical</dt><dd>Real mockups</dd></div>
+      <div><dt>Gameplay</dt><dd>No paid power</dd></div>
+    </dl>
+  </div>
+  <div class="reward-item-content">
+    <div class="reward-showcase-block">
+      <h4>Pledge Tier Item Symbols</h4>
+      <div class="reward-item-grid">
+        ${tierCards}
+      </div>
+    </div>
+    <div class="reward-showcase-block">
+      <h4>Collector And Field Relics References</h4>
+      <div class="reward-item-grid">
+        ${cards}
+      </div>
+    </div>
+  </div>
+</section>`;
 }
 
 function renderMarkdown(markdown, docId) {
@@ -429,6 +733,13 @@ function renderMarkdown(markdown, docId) {
     if (!trimmed) {
       flushParagraph();
       closeList();
+      continue;
+    }
+
+    if (trimmed === "{{REWARD_ITEM_SHOWCASE}}") {
+      flushParagraph();
+      closeList();
+      parts.push(renderRewardItemShowcase());
       continue;
     }
 
@@ -1327,6 +1638,39 @@ function buildPage(docs) {
       line-height: 1.35;
     }
 
+    .markdown-image.is-title-ornament,
+    .markdown-image.is-page-divider {
+      overflow: visible;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .markdown-image.is-title-ornament {
+      display: flex;
+      justify-content: flex-start;
+      margin: 8px 0 18px;
+    }
+
+    .markdown-image.is-title-ornament img {
+      width: min(400px, 78%);
+      max-height: none;
+      object-fit: contain;
+      background: transparent;
+    }
+
+    .markdown-image.is-page-divider {
+      margin: 30px 0 22px;
+    }
+
+    .markdown-image.is-page-divider img {
+      width: 100%;
+      max-height: 96px;
+      object-fit: contain;
+      background: transparent;
+    }
+
     .inline-markdown-image {
       display: block;
       width: 100%;
@@ -1336,6 +1680,138 @@ function buildPage(docs) {
       background: #0f0f0f;
       border: 1px solid var(--line-soft);
       border-radius: 8px;
+    }
+
+    .reward-item-showcase {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.88fr) minmax(0, 1.45fr);
+      gap: 18px;
+      margin: 28px 0 34px;
+      padding: 24px 0;
+      border-top: 1px solid rgba(216, 166, 77, 0.28);
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .reward-item-lead {
+      align-self: stretch;
+      min-width: 0;
+      padding-right: 8px;
+    }
+
+    .reward-item-lead h3 {
+      margin: 0 0 12px;
+      color: #fff5e6;
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+      line-height: 1.05;
+    }
+
+    .reward-item-lead p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .reward-item-metrics {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 18px 0 0;
+    }
+
+    .reward-item-metrics div {
+      padding: 10px 12px;
+      background: rgba(33, 31, 27, 0.72);
+      border: 1px solid var(--line-soft);
+      border-radius: 7px;
+    }
+
+    .reward-item-metrics dd {
+      font-size: 1rem;
+    }
+
+    .reward-item-content {
+      display: grid;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .reward-showcase-block {
+      min-width: 0;
+    }
+
+    .reward-showcase-block > h4 {
+      margin: 0 0 10px;
+      color: #fff5e6;
+      font-size: 0.92rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .reward-item-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .reward-item-card {
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr);
+      gap: 12px;
+      min-width: 0;
+      min-height: 142px;
+      padding: 12px;
+      background: rgba(33, 31, 27, 0.82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .reward-item-image {
+      display: grid;
+      width: 86px;
+      height: 86px;
+      place-items: center;
+      align-self: start;
+      background:
+        radial-gradient(circle, rgba(216, 166, 77, 0.28), transparent 62%),
+        #12110f;
+      border: 1px solid rgba(245, 238, 227, 0.12);
+      border-radius: 7px;
+    }
+
+    .reward-item-image img {
+      display: block;
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.42));
+    }
+
+    .reward-item-card-copy {
+      min-width: 0;
+    }
+
+    .reward-item-tag {
+      margin: 0 0 5px;
+      color: var(--teal);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .reward-item-card h4 {
+      margin: 0 0 6px;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .reward-item-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.42;
     }
 
     body.lightbox-open {
@@ -1487,6 +1963,10 @@ function buildPage(docs) {
         grid-template-columns: 1fr;
       }
 
+      .reward-item-showcase {
+        grid-template-columns: 1fr;
+      }
+
       .toc-sticky {
         position: relative;
         top: auto;
@@ -1536,6 +2016,25 @@ function buildPage(docs) {
 
       .doc-stats {
         min-width: 0;
+      }
+
+      .reward-item-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reward-item-card {
+        grid-template-columns: 72px minmax(0, 1fr);
+        min-height: 0;
+      }
+
+      .reward-item-image {
+        width: 72px;
+        height: 72px;
+      }
+
+      .reward-item-image img {
+        width: 60px;
+        height: 60px;
       }
 
       .toolbar {

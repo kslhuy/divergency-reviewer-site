@@ -1,5 +1,7 @@
 # Divergency: Dark Fantasy Tactical Brawler
 
+![Decorative Divergency title ornament](<imgs/others/kick_title.png>)
+
 *A fast 2.5D pixel-art brawler where every fight is shaped by your fighter, your skill deck, and your squad commands.*
 
 Pick a fighter. Build a 4-skill loadout. Command your allies while you dash, parry, cancel, juggle, and break enemy formations in real time.
@@ -11,6 +13,8 @@ Combat is the hook. The campaign gives those fights a world, routes, bosses, and
 Kickstarter funding helps finish the full PC-first campaign with sharper combat, complete stages, more enemies and bosses, finished UI, music, sound, QA, release work, and backer rewards.
 
 ![Divergency key art banner](<imgs/UI/K_banner/K_baner_animated.gif>)
+
+![Decorative Kickstarter page divider](<imgs/others/kick_jumppage.png>)
 
 ## The Quick Pitch
 
@@ -29,9 +33,9 @@ The goal is not to make a simple arena brawler. Divergency is a complete, satisf
 
 Divergency is inspired by games that made 2D action feel fast, readable, chaotic, and character-driven. These references explain the combat feeling, not the final art direction or story identity. Divergency has its own dark fantasy world, relic-fragment campaign, and party command systems.
 
-![Divergency combat inspiration wheel](<imgs/others/inspiration_games_wheel.png>)
+![Four inspiration games: Little Fighter 2, Hero Fighter X, M.U.G.E.N, and Streets of Rage 4](<imgs/others/inspiration_games_wheel.png>)
 
-Classic arcade brawlers like Final Fight and Streets of Rage also guide the 2.5D lane pressure, enemy waves, and stage pacing. Modern brawlers and action RPGs guide replayability, character identity, and loadout depth.
+The wheel highlights four references: Little Fighter 2, Hero Fighter X, M.U.G.E.N, and Streets of Rage 4. Classic arcade brawlers guide the 2.5D lane pressure, enemy waves, and stage pacing, while modern brawlers and action RPGs guide replayability, character identity, and loadout depth.
 
 ## Gameplay
 
@@ -291,11 +295,11 @@ This campaign is completion funding for the full story campaign foundation. It d
 
 ![Solei scouting the $20,000 funding goal](<imgs/others/goal-money-solei-20000-v2.png>)
 
-The $20,000 base goal supports the production foundation for Divergency's full story campaign: the Marseille opening arc, remaining chapters, core combat and squad commands, boss work, UI, QA, release preparation, and digital game delivery for eligible tiers.
+The $20,000 base goal is completion funding for the main story campaign. It covers the work needed to turn the current playable build into a finished PC-first release: combat polish, stage implementation, playable character refinement, enemies, boss tuning, UI, audio, QA, launch preparation, and backer reward fulfillment.
 
 Budget breakdown:
 
-![Divergency $20,000 budget breakdown chart](<imgs/UI/Goal_money/budget-breakdown-khoa-style-game-bg.png>)
+![Divergency $20,000 budget breakdown on flipped Khoa goal panels](<imgs/UI/Goal_money/budget-breakdown-stretch-goals-khoa-flipped.png>)
 
 At a glance, the base goal is split between taxes, platform fees, and reserve (**31%**), gameplay programming and production (**30%**), pixel art and VFX (**18%**), QA/community/launch work (**8%**), music and sound effects (**7%**), and EU physical reward preparation (**6%**).
 
@@ -303,19 +307,19 @@ This draft uses a cautious fee and tax reserve because French micro-entreprise r
 
 ## Stretch Goals
 
-![Divergency funding goals roadmap](<imgs\UI\Goal_money\funding-goals-khoa-style-game-bg.png>)
+![Divergency stretch goals roadmap with Khoa pulling each funding tier](<imgs/UI/Goal_money/stretch-goals-Khoa-text.png>)
 
-Stretch goals expand the game after the core campaign is funded. If a stretch feature threatens the main story release, we will prioritize the base campaign first and update backers clearly.
+The roadmap starts with the protected **$20,000 base goal**. Everything above that is extra production scope. If a stretch feature threatens the main story release, the base campaign stays first and backers receive a clear production update.
 
 | Goal | Unlock | What it adds |
 | ---: | --- | --- |
 | $20,000 | **Full Story Campaign Foundation** | Main campaign production, core combat, real-time squad commands, boss fights, QA, PC release, and digital delivery. |
-| $25,000 | **The Arsenal: Extended Masteries** | Additional skill upgrades, weapon cosmetic variations, deeper passive tuning, and more loadout-building options. |
-| $30,000 | **Whispers of the Dead: Lore & Secrets** | Hidden routes, character backstory events, secret rooms, and optional lore mini-boss encounters. |
-| $35,000 | **Covenant of Two: Local Co-op** | Local shared-screen 2-player co-op, team-combo commands, and shared camera tuning. |
-| $45,000 | **Acoustic Awakening: Audio Expansion** | Live acoustic recording for selected key tracks, expanded combat SFX, and additional music polish. |
+| $30,000 | **The Arsenal: Extended Masteries** | Additional skill upgrades, weapon cosmetic variations, deeper passive tuning, and more loadout-building options. |
+| $40,000 | **Whispers of the Dead: Lore & Secrets** | Hidden routes, character backstory events, secret rooms, and optional lore mini-boss encounters. |
+| $50,000 | **Covenant of Two: Local Co-op** | Local shared-screen 2-player co-op, team-combo commands, and shared camera tuning. |
+| $60,000 | **Survival Modes & Boss Rush** | Replay-focused combat modes, boss-rush structure, and expanded combat SFX polish. |
 
-Larger ideas such as survival modes, boss rush, endless towers, online co-op, or stage editing are not part of this launch promise. They may be explored later only after the base campaign is stable.
+<!-- Larger ideas such as endless towers, online co-op, or stage editing are not part of this launch promise. They may be explored later only after the base campaign is stable. -->
 
 ## Production Timeline
 
@@ -344,9 +348,9 @@ Campaign currency is shown in USD in this draft. Physical rewards are EU-only at
 Backer rewards should feel like a fair thank-you, not like random merchandise or a hidden store page. The reward ladder for Divergency is built around five kinds of supporter value:
 
 - Recognition: names in the digital supporter wall, credits, and backer thanks.
-- Digital gifts: wallpapers, avatar icons, a small lore dossier, soundtrack, and mini artbook.
+- Digital gifts: wallpapers, avatar icons, a small lore dossier, soundtrack, mini artbook, and a Field Relics reward visual sheet built from in-world object art.
 - Game access: the full PC digital key, an early-backer key tier, and beta access for feedback-focused backers.
-- Collector objects: one poster and one bracelet, both tied to the world of Divergency and limited to EU shipping.
+- Collector objects: one poster and one Beacon bracelet, both tied to the world of Divergency and limited to EU shipping.
 - Creative participation: limited higher tiers where backers can leave their mark, name NPCs, or help shape custom visual elements and enemy concepts.
 
 The rewards avoid pay-to-win items, exclusive combat power, or exclusive playable characters. Backers can receive access, recognition, development participation, and collector gifts, but the final game should remain fair for players who discover Divergency after Kickstarter.
@@ -356,11 +360,37 @@ The rewards avoid pay-to-win items, exclusive combat power, or exclusive playabl
 | $5 | Signal Supporter | Campaign updates, one backer wallpaper, and name on the digital supporter wall | Month 6 + Month 24 |
 | $20 | Early Recruit, limited quantity | Full PC digital game key at a lower early-backer price, plus wallpapers, avatar/icon pack, and mini lore dossier | Month 24 |
 | $25 | Digital Recruit | Full PC digital game key, wallpapers, avatar/icon pack, mini lore dossier, and supporter wall name | Month 24 |
-| $40 | Digital Deluxe Pack | Game key, soundtrack, mini artbook, wallpapers, avatar/icon pack, and mini lore dossier | Month 24 |
+| $40 | Digital Deluxe Pack | Game key, soundtrack, mini artbook, wallpapers, avatar/icon pack, mini lore dossier, and Field Relics reward visual sheet | Month 24 |
 | $70 | Beta Fighter | Digital Deluxe Pack, beta access, private feedback form, and beta tester credit listing | Month 19-24 |
 | $120 | Collector's Pack, EU only | Beta Fighter digital rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet | Month 24-26 |
-| $175 | Prisoner's Scratchings, limited | Beta Fighter digital rewards plus write an approved short message/graffiti on a Bastonne prison cell wall | Month 24 |
-| $350 | Creative Collaborator, limited | Beta Fighter digital rewards plus collaborate on one scoped cosmetic or background-lore contribution | Month 24 |
+| $250 | Prisoner's Scratchings, limited | Beta Fighter digital rewards plus write an approved short message/graffiti on a Bastonne prison cell wall | Month 24 |
+| $500 | Creative Collaborator, limited | Beta Fighter digital rewards plus collaborate on one scoped cosmetic or background-lore contribution | Month 24 |
+
+### Reward Item Visuals
+
+The pledge tier visuals should use the existing `imgs/items` pixel-art objects as symbols instead of generated bundle mockups. That keeps the reward ladder closer to Divergency's actual game identity and avoids making digital tiers look like physical boxes or merchandise packs.
+
+The Collector's Pack should still use professional physical mockups first: one A3 Divergency poster print and one Beacon bracelet product image. These visuals show backers what the physical reward is meant to feel like while still leaving final paper stock, bracelet materials, and vendor details open until production quotes are confirmed.
+
+Recommended pledge-symbol mapping:
+
+| Pledge | Tier | Item symbol | Why it fits |
+| ---: | --- | --- | --- |
+| $5 | Signal Supporter | Heniana flower seal | Soft supporter badge for updates, wallpaper, and supporter wall recognition |
+| $20 | Early Recruit | Relic-iron knife | Early recruit signal for the limited digital key tier, treated as visual identity only |
+| $25 | Digital Recruit | Mask of the Listening Route | Strong avatar/recruit identity for the standard digital tier |
+| $40 | Digital Deluxe Pack | Emerald Skull token | Field Relics anchor for soundtrack, mini artbook, and lore-sheet bonuses |
+| $70 | Beta Fighter | Red treatment vial | Test-build symbol for beta access, feedback, and beta tester credit |
+| $120 | Collector's Pack, EU only | Beacon bracelet icon | Directly matches the physical bracelet reward while the poster/bracelet mockups show the real goods |
+| $250 | Prisoner's Scratchings | Bastonne cloth patch | Prison texture symbol for the approved Bastonne wall message |
+| $500 | Creative Collaborator | Worn field figure | Small character/object concept symbol for scoped creative collaboration |
+
+The item art also works as in-world reward representation. These objects can support wallpapers, avatar icons, lore-dossier pages, the mini artbook, supporter-wall badges, and the Collector's Pack visual identity.
+
+If any of these objects appear inside the finished game, they should be normal discoverable or earnable items for all players, not Kickstarter-exclusive combat power.
+
+<!-- The build script renders this marker as the professional Field Relics reward item showcase in the HTML preview. -->
+{{REWARD_ITEM_SHOWCASE}}
 
 ### Why These Rewards Feel Fair
 
@@ -373,8 +403,8 @@ The $40 and $70 tiers are the strongest digital-value tiers. They reward serious
 The $120 physical tier is priced above the digital tiers because it adds manufacturing, packing, shipping, damaged-package support, and address management. It should be treated as a collector gift, not as the core reason to back the campaign.
 
 The creative backing tiers allow supporters to leave their mark on the game in a tiered, logical format that matches the world's dark fantasy identity:
-- At **$175 (Prisoner's Scratchings)**, backers gain a small, immersive storytelling opportunity that adds flavor to Bastonne without requiring new systems or complex assets.
-- At **$350 (Creative Collaborator)**, backers collaborate on one tightly scoped cosmetic or background-lore contribution. This tier is strictly capped to avoid scope creep.
+- At **$250 (Prisoner's Scratchings)**, backers gain a small, immersive storytelling opportunity that adds flavor to Bastonne without requiring new systems or complex assets.
+- At **$500 (Creative Collaborator)**, backers collaborate on one tightly scoped cosmetic or background-lore contribution. This tier is strictly capped to avoid scope creep.
 
 ### Optional Add-Ons
 
@@ -385,14 +415,13 @@ Add-ons can increase pledge value without creating too many reward tiers.
 | Extra PC digital key | $20-25 | Best low-risk add-on because it has no shipping cost |
 | Soundtrack + mini artbook | $15 | Useful for backers who choose the standard game key but later want the deluxe digital pack |
 | A3 poster, EU only | $25 plus shipping | Keep to one poster size and one print vendor if possible |
-| Beacon bracelet, EU only | $35 plus shipping | Only launch after a sample photo and unit cost are confirmed |
 | Final credits name upgrade | $10 | Optional upgrade for standard digital tiers; use one approved name or alias |
 
 Final quantities should be locked before launch. Recommended limits: Early Recruit around 200-300 backers, Collector's Pack based on confirmed physical unit quotes, Prisoner's Scratchings around 30-50 slots, and Creative Collaborator around 5-10 slots unless the team is certain it can absorb more review work.
 
 ### Reward Fulfillment Rules
 
-- Prepare visible sample images before launch for the wallpaper pack, lore dossier, poster, and bracelet concept.
+- Prepare visible sample images before launch for the wallpaper pack, Field Relics reward visual sheet, lore dossier, poster, and bracelet concept.
 - Do not promise more than one poster size, one bracelet design, or multiple physical variants unless production quotes are already confirmed.
 - Keep all supporter names subject to approval, character limits, and a final survey deadline.
 - Lock digital reward file formats before launch: JPG/PNG wallpapers, PDF dossier/artbook, MP3/WAV soundtrack, and Steam or platform key delivery where available.
@@ -404,11 +433,11 @@ Final quantities should be locked before launch. Recommended limits: Early Recru
 
 To ensure smooth development and fair play, creative tiers are governed by the following guidelines:
 
-#### Prisoner's Scratchings ($175)
+#### Prisoner's Scratchings ($250)
 - Up to 40 characters of text to be placed as background graffiti on the stone/iron walls of Bastonne prison.
 - Must read like it was carved by an inmate, resistance fighter, or jailer (e.g., cryptic warnings, names, dates, or desperate messages).
 
-#### Creative Collaborator ($350)
+#### Creative Collaborator ($500)
 - Collaborate on one scoped cosmetic or background-lore contribution.
 - Suggested options: name a minor non-interactive background NPC, help shape a weapon cosmetic skin, or help shape a passive skill badge icon.
 - Backers submit visual themes, color schemes, names, or short concepts.
