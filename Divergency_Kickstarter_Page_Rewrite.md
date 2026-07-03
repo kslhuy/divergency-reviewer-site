@@ -350,7 +350,7 @@ Backer rewards should feel like a fair thank-you, not like random merchandise or
 - Recognition: names in the digital supporter wall, credits, and backer thanks.
 - Digital gifts: wallpapers, avatar icons, a small lore dossier, soundtrack, mini artbook, and a Field Relics reward visual sheet built from in-world object art.
 - Game access: the full PC digital key, an early-backer key tier, and beta access for feedback-focused backers.
-- Collector objects: one poster and one Beacon bracelet, both tied to the world of Divergency and limited to EU shipping.
+- Collector objects: one poster and one Beacon bracelet, both tied to the world of Divergency and limited to EU shipping, with extra physical add-on candidates shown separately until production quotes are confirmed.
 - Creative participation: limited higher tiers where backers can leave their mark, name NPCs, or help shape custom visual elements and enemy concepts.
 
 The rewards avoid pay-to-win items, exclusive combat power, or exclusive playable characters. Backers can receive access, recognition, development participation, and collector gifts, but the final game should remain fair for players who discover Divergency after Kickstarter.
@@ -371,6 +371,26 @@ The rewards avoid pay-to-win items, exclusive combat power, or exclusive playabl
 The pledge tier visuals should use the existing `imgs/items` pixel-art objects as symbols instead of generated bundle mockups. That keeps the reward ladder closer to Divergency's actual game identity and avoids making digital tiers look like physical boxes or merchandise packs.
 
 The Collector's Pack should still use professional physical mockups first: one A3 Divergency poster print and one Beacon bracelet product image. These visuals show backers what the physical reward is meant to feel like while still leaving final paper stock, bracelet materials, and vendor details open until production quotes are confirmed.
+
+The Bastonne cell key cap, Bastonne cell key keychain, Divergency Daily access badge, and Divergency Daily cargo tag are strong physical reward candidates. They should be shown as **candidate physical add-ons or collector upgrades** unless they are added to the reward table with confirmed production cost, shipping weight, quantity limits, and delivery rules.
+
+#### Candidate Physical Add-On Mockups
+
+![Candidate physical add-on mockup: Bastonne cell key cap](<imgs/rewards/bastonne-cell-key-cap-mockup.png>)
+
+Caption to use: **Candidate physical add-on mockup: Bastonne cell key cap.** A wearable Bastonne-themed collector item. Do not list it as included in the Collector's Pack until production quotes and sizing options are confirmed.
+
+![Candidate physical add-on mockup: Bastonne cell key keychain](<imgs/rewards/bastonne-cell-key-keychain-mockup.png>)
+
+Caption to use: **Candidate physical add-on mockup: Bastonne cell key keychain.** A small physical reward candidate that fits the prison escape identity and should be easy to ship if unit cost is acceptable.
+
+![Candidate physical add-on mockup: Divergency Daily access badge](<imgs/rewards/divergency-daily-access-badge-mockup.png>)
+
+Caption to use: **Candidate physical add-on mockup: Divergency Daily access badge.** A lanyard-style convention/access badge concept for backers who want a practical branded object.
+
+![Candidate physical add-on mockup: Divergency Daily cargo tag](<imgs/rewards/divergency-daily-cargo-tag-mockup.png>)
+
+Caption to use: **Candidate physical add-on mockup: Divergency Daily cargo tag.** A luggage/cargo tag concept that connects to Marseille routes, Laundel movement, and the campaign's field-document identity.
 
 Recommended pledge-symbol mapping:
 
@@ -415,6 +435,10 @@ Add-ons can increase pledge value without creating too many reward tiers.
 | Extra PC digital key | $20-25 | Best low-risk add-on because it has no shipping cost |
 | Soundtrack + mini artbook | $15 | Useful for backers who choose the standard game key but later want the deluxe digital pack |
 | A3 poster, EU only | $25 plus shipping | Keep to one poster size and one print vendor if possible |
+| Bastonne cell key keychain, EU only | $12-18 plus shipping | Small physical add-on candidate; confirm metal weight, packaging, and minimum order quantity first |
+| Bastonne cell key cap, EU only | $25-35 plus shipping | Wearable add-on candidate; only use if cap sizing, vendor samples, and replacement policy are confirmed |
+| Divergency Daily access badge, EU only | $12-18 plus shipping | Lanyard/badge add-on candidate; practical and visually clear but needs print/vendor quote |
+| Divergency Daily cargo tag, EU only | $12-18 plus shipping | Travel/cargo tag add-on candidate; confirm material, print durability, and package weight |
 | Final credits name upgrade | $10 | Optional upgrade for standard digital tiers; use one approved name or alias |
 
 Final quantities should be locked before launch. Recommended limits: Early Recruit around 200-300 backers, Collector's Pack based on confirmed physical unit quotes, Prisoner's Scratchings around 30-50 slots, and Creative Collaborator around 5-10 slots unless the team is certain it can absorb more review work.
@@ -422,7 +446,7 @@ Final quantities should be locked before launch. Recommended limits: Early Recru
 ### Reward Fulfillment Rules
 
 - Prepare visible sample images before launch for the wallpaper pack, Field Relics reward visual sheet, lore dossier, poster, and bracelet concept.
-- Do not promise more than one poster size, one bracelet design, or multiple physical variants unless production quotes are already confirmed.
+- Do not promise more than one poster size, one bracelet design, or multiple physical add-on variants unless production quotes are already confirmed.
 - Keep all supporter names subject to approval, character limits, and a final survey deadline.
 - Lock digital reward file formats before launch: JPG/PNG wallpapers, PDF dossier/artbook, MP3/WAV soundtrack, and Steam or platform key delivery where available.
 - Reserve 5-10% extra physical items for damaged parcels, lost mail, and replacement handling.
@@ -456,7 +480,7 @@ Planned shipping approach:
 
 - Ship-from region: France/EU.
 - Poster or Collector's Pack estimated shipping: EUR 8-15 depending on EU destination.
-- Bracelet or combined collector shipment estimated shipping: EUR 10-18 depending on EU destination.
+- Bracelet, cap, keychain, badge, cargo tag, or combined collector shipment estimated shipping: EUR 10-18 depending on EU destination.
 - Final country-by-country shipping prices should be entered before launch or confirmed through Kickstarter Pledge Manager before fulfillment.
 - Backer addresses and reward preferences will be collected through Kickstarter surveys or Pledge Manager.
 - Digital rewards will be delivered through Kickstarter digital rewards, game keys, or secure download links.

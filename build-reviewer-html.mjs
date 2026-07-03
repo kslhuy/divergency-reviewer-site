@@ -235,6 +235,26 @@ const imageSlots = {
       caption: "Physical reward mockup: Beacon Bracelet",
     },
     {
+      src: "imgs/rewards/bastonne-cell-key-cap-mockup.png",
+      alt: "Bastonne cell key cap mockup",
+      caption: "Candidate physical add-on: Bastonne cell key cap",
+    },
+    {
+      src: "imgs/rewards/bastonne-cell-key-keychain-mockup.png",
+      alt: "Bastonne cell key keychain mockup",
+      caption: "Candidate physical add-on: Bastonne cell key keychain",
+    },
+    {
+      src: "imgs/rewards/divergency-daily-access-badge-mockup.png",
+      alt: "Divergency Daily access badge mockup",
+      caption: "Candidate physical add-on: Divergency Daily access badge",
+    },
+    {
+      src: "imgs/rewards/divergency-daily-cargo-tag-mockup.png",
+      alt: "Divergency Daily cargo tag mockup",
+      caption: "Candidate physical add-on: Divergency Daily cargo tag",
+    },
+    {
       src: "imgs/rewards/stage1-evidence-pack-mockup.png",
       alt: "Stage 1 evidence pack mockup",
       caption: "Digital reward preview: Stage 1 evidence pack",
@@ -243,11 +263,6 @@ const imageSlots = {
       src: "imgs/rewards/laundel-route-cloth-pass-mockup.png",
       alt: "Laundel route cloth pass mockup",
       caption: "Reward concept mockup: Laundel route cloth pass",
-    },
-    {
-      src: "imgs/rewards/bastonne-cell-key-keychain-mockup.png",
-      alt: "Bastonne cell key keychain mockup",
-      caption: "Optional add-on concept: Bastonne cell key keychain",
     },
     {
       src: "imgs/rewards/armorlite-coaster-set-mockup.png",
@@ -369,6 +384,30 @@ const rewardItemShowcase = [
     name: "Beacon Bracelet",
     tag: "Physical mockup",
     note: "A professional visual mockup for the bracelet reward, showing the intended dark leather, aged metal, teal patina, and ember-signal identity before final production sampling.",
+  },
+  {
+    src: "imgs/rewards/bastonne-cell-key-cap-mockup.png",
+    name: "Bastonne Cell Key Cap",
+    tag: "Candidate physical add-on",
+    note: "A wearable Bastonne-themed collector item. Keep it separate from the base Collector's Pack until cap vendor quotes, sizing options, and replacement handling are confirmed.",
+  },
+  {
+    src: "imgs/rewards/bastonne-cell-key-keychain-mockup.png",
+    name: "Bastonne Cell Key Keychain",
+    tag: "Candidate physical add-on",
+    note: "A compact prison escape reward candidate that could work well as an EU add-on if metal weight, packaging, and minimum order quantity are manageable.",
+  },
+  {
+    src: "imgs/rewards/divergency-daily-access-badge-mockup.png",
+    name: "Divergency Daily Access Badge",
+    tag: "Candidate physical add-on",
+    note: "A lanyard-style badge concept for backers who want a practical branded object. Confirm print quality and supplier details before promising it.",
+  },
+  {
+    src: "imgs/rewards/divergency-daily-cargo-tag-mockup.png",
+    name: "Divergency Daily Cargo Tag",
+    tag: "Candidate physical add-on",
+    note: "A travel/cargo tag concept connected to Marseille routes and the campaign's field-document identity. Confirm material durability before launch.",
   },
   {
     src: "imgs/items/Barcalet.png",
