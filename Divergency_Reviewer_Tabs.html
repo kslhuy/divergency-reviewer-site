@@ -683,7 +683,7 @@
     .markdown-image.is-title-ornament {
       display: flex;
       justify-content: flex-start;
-      margin: 8px 0 18px;
+      margin: 8px 0 4px;
     }
 
     .markdown-image.is-title-ornament img {
@@ -691,6 +691,14 @@
       max-height: none;
       object-fit: contain;
       background: transparent;
+    }
+
+    .markdown-image.is-title-ornament + p {
+      margin-top: 0;
+      max-width: 900px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.24rem);
+      line-height: 1.42;
     }
 
     .markdown-image.is-page-divider {
@@ -1076,6 +1084,15 @@
 
       .heading-link {
         display: none;
+      }
+
+      .markdown-image.is-title-ornament {
+        margin-bottom: 2px;
+      }
+
+      .markdown-image.is-title-ornament + p {
+        font-size: 1rem;
+        line-height: 1.45;
       }
     }
 
