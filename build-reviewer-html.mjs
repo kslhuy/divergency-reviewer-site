@@ -54,6 +54,14 @@ const documents = [
   },
 ];
 
+const galleryTab = {
+  id: "gallery",
+  label: "Gallery",
+  eyebrow: "Image library",
+  summary:
+    "Main image assets grouped by source folder, so stage art, direct UI images, rewards, items, characters, and other references stay easy to scan.",
+};
+
 const imageSlots = {
   kickstarter: [
     {
@@ -321,6 +329,32 @@ const excludedAutoImageFolders = [
   "imgs/rewards/pledge-tiers/",
 ];
 
+const galleryFolderOrder = [
+  "Stage1",
+  "Stage2",
+  "Stage3",
+  "Stage4",
+  "Stage5",
+  "UI",
+  "chars",
+  "items",
+  "rewards",
+  "others",
+];
+
+const galleryFolderLabels = new Map([
+  ["Stage1", "Stage 1"],
+  ["Stage2", "Stage 2"],
+  ["Stage3", "Stage 3"],
+  ["Stage4", "Stage 4"],
+  ["Stage5", "Stage 5"],
+  ["UI", "UI"],
+  ["chars", "Characters"],
+  ["items", "Items"],
+  ["rewards", "Rewards"],
+  ["others", "Others"],
+]);
+
 const pledgeTierSymbols = [
   {
     src: "imgs/items/flower.png",
@@ -467,16 +501,43 @@ function titleCase(value) {
   return value.replace(/\b[a-z]/g, (match) => match.toUpperCase());
 }
 
+function readableName(value) {
+  return titleCase(value.replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim());
+}
+
 function captionFromImagePath(src) {
   const parsed = path.posix.parse(src);
   const folder = path.posix.basename(parsed.dir);
-  const name = titleCase(
-    parsed.name.replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim(),
-  );
+  const name = readableName(parsed.name);
   return folder && folder !== "imgs" ? `${folder} - ${name}` : name;
 }
 
-function collectImageSlots() {
+function galleryCaptionFromImagePath(src) {
+  const parts = src.split("/");
+  const folders = parts.slice(1, -1).map(readableName).filter(Boolean);
+  const name = readableName(path.posix.parse(src).name);
+
+  return folders.length ? `${folders.join(" / ")} - ${name}` : name;
+}
+
+function isNestedUiImage(src) {
+  const parts = src.split("/");
+  return parts[0] === "imgs" && parts[1] === "UI" && parts.length > 3;
+}
+
+function isExcludedAutoImageSlot(src) {
+  return (
+    excludedAutoImageSlots.has(src) ||
+    excludedAutoImageFolders.some((folder) => src.startsWith(folder))
+  );
+}
+
+function collectImageSlots(options = {}) {
+  const {
+    includeExcluded = false,
+    includeNestedUi = false,
+    galleryCaptions = false,
+  } = options;
   const root = path.join(here, "imgs");
   const slots = [];
 
@@ -505,12 +566,14 @@ function collectImageSlots() {
 
         const src = toBrowserPath(path.relative(here, absolute));
         if (
-          excludedAutoImageSlots.has(src) ||
-          excludedAutoImageFolders.some((folder) => src.startsWith(folder))
+          (!includeExcluded && isExcludedAutoImageSlot(src)) ||
+          (!includeNestedUi && isNestedUiImage(src))
         ) {
           return;
         }
-        const caption = captionFromImagePath(src);
+        const caption = galleryCaptions
+          ? galleryCaptionFromImagePath(src)
+          : captionFromImagePath(src);
         slots.push({
           src,
           alt: caption,
@@ -888,8 +951,8 @@ function buildDocs() {
   });
 }
 
-function renderTabs(docs) {
-  return docs
+function renderTabs(tabItems) {
+  return tabItems
     .map(
       (doc, index) => `
         <button class="tab-button${index === 0 ? " is-active" : ""}" type="button" data-tab="${doc.id}">
@@ -971,10 +1034,120 @@ function renderPane(doc, index) {
     </section>`;
 }
 
+function galleryGroupId(key) {
+  return `gallery-${key.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+}
+
+function galleryGroupForSlot(slot) {
+  const parts = slot.src.split("/");
+  const topFolder = parts[1] || "others";
+  const orderIndex = galleryFolderOrder.indexOf(topFolder);
+
+  return {
+    key: topFolder,
+    id: galleryGroupId(topFolder),
+    label: galleryFolderLabels.get(topFolder) || readableName(topFolder),
+    order: orderIndex === -1 ? galleryFolderOrder.length : orderIndex,
+  };
+}
+
+function collectGalleryGroups() {
+  const groups = new Map();
+  const gallerySlots = collectImageSlots({
+    includeExcluded: true,
+    includeNestedUi: false,
+    galleryCaptions: true,
+  });
+
+  gallerySlots.forEach((slot) => {
+    const groupInfo = galleryGroupForSlot(slot);
+    if (!groups.has(groupInfo.key)) {
+      groups.set(groupInfo.key, {
+        ...groupInfo,
+        slots: [],
+      });
+    }
+
+    groups.get(groupInfo.key).slots.push(slot);
+  });
+
+  return [...groups.values()].sort((a, b) => {
+    if (a.order !== b.order) return a.order - b.order;
+    return a.label.localeCompare(b.label, undefined, { numeric: true });
+  });
+}
+
+function renderGalleryImage(slot) {
+  const src = escapeAttribute(slot.src);
+  const caption = escapeHtml(slot.caption || "Divergency image");
+  const captionAttr = escapeAttribute(slot.caption || "Divergency image");
+  const alt = escapeAttribute(slot.alt || slot.caption || "Divergency image");
+
+  return `
+          <figure class="gallery-slot">
+            <button class="gallery-image-button" type="button" data-lightbox-src="${src}" data-lightbox-alt="${alt}" data-lightbox-caption="${captionAttr}" aria-label="View larger image: ${captionAttr}">
+              <img src="${src}" alt="${alt}" loading="lazy">
+            </button>
+            <figcaption>${caption}</figcaption>
+          </figure>`;
+}
+
+function renderGalleryPane(groups) {
+  const imageCount = groups.reduce((total, group) => total + group.slots.length, 0);
+  const groupLinks = groups
+    .map(
+      (group) => `
+          <a class="gallery-jump" href="#${group.id}">
+            <span>${escapeHtml(group.label)}</span>
+            <small>${group.slots.length}</small>
+          </a>`,
+    )
+    .join("");
+  const sections = groups
+    .map(
+      (group) => `
+      <section class="gallery-section" id="${group.id}" aria-labelledby="${group.id}-title">
+        <div class="gallery-section-head">
+          <h3 id="${group.id}-title">${escapeHtml(group.label)}</h3>
+          <span>${group.slots.length} images</span>
+        </div>
+        <div class="gallery-grid" data-gallery-grid="${escapeAttribute(group.key)}">
+          ${group.slots.map(renderGalleryImage).join("")}
+        </div>
+      </section>`,
+    )
+    .join("");
+
+  return `
+    <section class="doc-pane gallery-pane" id="pane-${galleryTab.id}" data-doc="${galleryTab.id}" aria-labelledby="tab-title-${galleryTab.id}">
+      <div class="doc-intro">
+        <div>
+          <p class="eyebrow">${escapeHtml(galleryTab.eyebrow)}</p>
+          <h2 id="tab-title-${galleryTab.id}">${escapeHtml(galleryTab.label)}</h2>
+          <p>${escapeHtml(galleryTab.summary)}</p>
+        </div>
+        <dl class="doc-stats" aria-label="${escapeAttribute(galleryTab.label)} statistics">
+          <div><dt>Folders</dt><dd>${groups.length}</dd></div>
+          <div><dt>Images</dt><dd>${imageCount}</dd></div>
+          <div><dt>Order</dt><dd>Folder</dd></div>
+        </dl>
+      </div>
+
+      <nav class="gallery-jumps" aria-label="Gallery folder jumps">
+        ${groupLinks}
+      </nav>
+
+      <div class="gallery-body">
+        ${sections || '<p class="empty-note">No images found.</p>'}
+      </div>
+    </section>`;
+}
+
 function buildPage(docs) {
-  const tabs = renderTabs(docs);
-  const panes = docs.map(renderPane).join("\n");
-  const docIds = docs.map((doc) => doc.id);
+  const galleryGroups = collectGalleryGroups();
+  const tabs = renderTabs([...docs, galleryTab]);
+  const panes = [...docs.map(renderPane), renderGalleryPane(galleryGroups)].join("\n");
+  const docIds = [...docs.map((doc) => doc.id), galleryTab.id];
   const allImageSlots = collectImageSlots();
 
   return `<!doctype html>
@@ -1201,8 +1374,7 @@ function buildPage(docs) {
       gap: 8px;
     }
 
-    .tab-button,
-    .action-button {
+    .tab-button {
       min-height: 54px;
       border: 1px solid var(--line);
       border-radius: 7px;
@@ -1228,9 +1400,7 @@ function buildPage(docs) {
     }
 
     .tab-button:hover,
-    .tab-button:focus-visible,
-    .action-button:hover,
-    .action-button:focus-visible {
+    .tab-button:focus-visible {
       border-color: var(--amber);
       outline: none;
     }
@@ -1248,18 +1418,19 @@ function buildPage(docs) {
     }
 
     .search-wrap {
-      min-width: 220px;
+      width: clamp(120px, 12vw, 160px);
     }
 
     .search-wrap input {
       width: 100%;
-      min-height: 54px;
-      padding: 0 12px;
+      min-height: 40px;
+      padding: 0 10px;
       border: 1px solid var(--line);
       border-radius: 7px;
       background: #141312;
       color: var(--ink);
       font: inherit;
+      font-size: 0.9rem;
     }
 
     .search-wrap input:focus {
@@ -1267,14 +1438,6 @@ function buildPage(docs) {
       outline: none;
     }
 
-    .action-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 92px;
-      padding: 0 14px;
-      text-align: center;
-    }
 
     .search-count {
       min-width: 68px;
@@ -1451,7 +1614,7 @@ function buildPage(docs) {
     .media-slot {
       flex: 0 0 calc((100% - 36px) / 4);
       margin: 0;
-      min-width: 220px;
+      width: clamp(150px, 15vw, 190px);
       min-height: 190px;
       overflow: hidden;
       background: var(--panel);
@@ -1510,6 +1673,120 @@ function buildPage(docs) {
       color: var(--muted);
       font-size: 0.9rem;
       line-height: 1.35;
+    }
+
+    .gallery-jumps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 18px 0 8px;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .gallery-jump {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 12px;
+      background: #181614;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: var(--ink);
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+
+    .gallery-jump:hover,
+    .gallery-jump:focus-visible {
+      border-color: var(--amber);
+      outline: none;
+    }
+
+    .gallery-jump small {
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+    }
+
+    .gallery-section {
+      padding: 28px 0 32px;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .gallery-section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 14px;
+    }
+
+    .gallery-section-head h3 {
+      margin: 0;
+      color: var(--amber);
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .gallery-section-head span {
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 12px;
+    }
+
+    .gallery-slot {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 28px var(--shadow);
+    }
+
+    .gallery-image-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: #0f0f0f;
+      cursor: zoom-in;
+    }
+
+    .gallery-image-button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+
+    .gallery-slot img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 40%),
+        #0f0f0f;
+      transition: transform 180ms ease, filter 180ms ease;
+    }
+
+    .gallery-image-button:hover img {
+      filter: brightness(1.08);
+      transform: scale(1.025);
+    }
+
+    .gallery-slot figcaption {
+      min-height: 58px;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.3;
     }
 
     .doc-layout {
@@ -1904,6 +2181,44 @@ function buildPage(docs) {
       outline: none;
     }
 
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      display: grid;
+      width: 46px;
+      height: 58px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: 7px;
+      background: rgba(16, 15, 13, 0.82);
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+      font-size: 1.65rem;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+
+    .lightbox-prev {
+      left: 10px;
+    }
+
+    .lightbox-next {
+      right: 10px;
+    }
+
+    .lightbox-nav:hover,
+    .lightbox-nav:focus-visible {
+      background: rgba(208, 90, 70, 0.95);
+      outline: none;
+    }
+
+    .lightbox-nav:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
     .lightbox-image {
       display: block;
       width: 100%;
@@ -2053,6 +2368,19 @@ function buildPage(docs) {
         min-width: 240px;
       }
 
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+      }
+
+      .gallery-section-head {
+        align-items: start;
+      }
+
+      .lightbox-nav {
+        width: 40px;
+        height: 50px;
+      }
+
       .doc-stats {
         min-width: 0;
       }
@@ -2095,7 +2423,6 @@ function buildPage(docs) {
       .toolbar,
       .toc-panel,
       .media-band,
-      .action-button,
       .search-wrap,
       .search-count {
         display: none !important;
@@ -2154,10 +2481,9 @@ function buildPage(docs) {
       </nav>
       <div class="actions">
         <label class="search-wrap">
-          <input id="doc-search" type="search" placeholder="Search active tab">
+          <input id="doc-search" type="search" placeholder="Search">
         </label>
         <span class="search-count" id="search-count">0 hits</span>
-        <button class="action-button" type="button" id="print-button">Print / PDF</button>
       </div>
     </section>
 
@@ -2167,6 +2493,8 @@ function buildPage(docs) {
   <div class="lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-label="Expanded image viewer" hidden>
     <div class="lightbox-panel">
       <button class="lightbox-close" type="button" id="lightbox-close" aria-label="Close image viewer" title="Close image viewer">&times;</button>
+      <button class="lightbox-nav lightbox-prev" type="button" id="lightbox-prev" aria-label="Previous image" title="Previous image">&larr;</button>
+      <button class="lightbox-nav lightbox-next" type="button" id="lightbox-next" aria-label="Next image" title="Next image">&rarr;</button>
       <img class="lightbox-image" id="lightbox-image" src="" alt="">
       <p class="lightbox-caption" id="lightbox-caption"></p>
     </div>
@@ -2175,8 +2503,9 @@ function buildPage(docs) {
   <!--
     EASY IMAGE EDIT:
     1. This page automatically includes supported image files under Campaign/Kickstarter/imgs.
-    2. Add image paths to IMAGE_SLOTS to pin priority images before the auto-discovered list.
-    3. Leave src empty only when you want to keep a placeholder box.
+    2. Nested imgs/UI folders are skipped in both Visual Slots and Gallery.
+    3. Add image paths to IMAGE_SLOTS to pin priority images before the auto-discovered list.
+    4. Leave src empty only when you want to keep a placeholder box.
   -->
   <script>
     const DOC_IDS = ${JSON.stringify(docIds)};
@@ -2192,7 +2521,11 @@ function buildPage(docs) {
     const lightboxImage = document.getElementById("lightbox-image");
     const lightboxCaption = document.getElementById("lightbox-caption");
     const lightboxClose = document.getElementById("lightbox-close");
+    const lightboxPrev = document.getElementById("lightbox-prev");
+    const lightboxNext = document.getElementById("lightbox-next");
     let lastFocusedElement = null;
+    let lightboxItems = [];
+    let lightboxIndex = -1;
 
     function mergedImageSlots(docSlots) {
       const seen = new Set();
@@ -2268,14 +2601,41 @@ function buildPage(docs) {
       window.setTimeout(() => updateMediaControls(docId), 360);
     }
 
-    function openLightbox(button) {
-      if (!button || !button.dataset.lightboxSrc) return;
-      lastFocusedElement = document.activeElement;
+    function collectLightboxItems(button) {
+      const container = button.closest(".media-grid, .gallery-grid");
+      const buttons = container
+        ? Array.from(container.querySelectorAll("[data-lightbox-src]"))
+        : [button];
+
+      return buttons.filter((item) => item.dataset.lightboxSrc);
+    }
+
+    function showLightboxItem(index) {
+      if (!lightboxItems.length) return;
+      const total = lightboxItems.length;
+      lightboxIndex = ((index % total) + total) % total;
+      const button = lightboxItems[lightboxIndex];
+
       lightboxImage.src = button.dataset.lightboxSrc;
       lightboxImage.alt = button.dataset.lightboxAlt || "";
       lightboxCaption.textContent = button.dataset.lightboxCaption || "";
+      lightboxPrev.disabled = total < 2;
+      lightboxNext.disabled = total < 2;
+    }
+
+    function moveLightbox(direction) {
+      if (lightbox.hidden || lightboxItems.length < 2) return;
+      showLightboxItem(lightboxIndex + direction);
+    }
+
+    function openLightbox(button) {
+      if (!button || !button.dataset.lightboxSrc) return;
+      lastFocusedElement = document.activeElement;
+      lightboxItems = collectLightboxItems(button);
+      lightboxIndex = Math.max(0, lightboxItems.indexOf(button));
       lightbox.hidden = false;
       document.body.classList.add("lightbox-open");
+      showLightboxItem(lightboxIndex);
       lightboxClose.focus();
     }
 
@@ -2286,6 +2646,8 @@ function buildPage(docs) {
       lightboxImage.removeAttribute("src");
       lightboxImage.alt = "";
       lightboxCaption.textContent = "";
+      lightboxItems = [];
+      lightboxIndex = -1;
       if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
         lastFocusedElement.focus();
       }
@@ -2378,6 +2740,9 @@ function buildPage(docs) {
 
     document.querySelectorAll(".media-grid").forEach((grid) => {
       grid.addEventListener("scroll", () => updateMediaControls(grid.dataset.mediaGrid), { passive: true });
+    });
+
+    document.querySelectorAll(".media-grid, .gallery-grid").forEach((grid) => {
       grid.addEventListener("click", (event) => {
         const button = event.target.closest("[data-lightbox-src]");
         if (button) openLightbox(button);
@@ -2385,11 +2750,25 @@ function buildPage(docs) {
     });
 
     lightboxClose.addEventListener("click", closeLightbox);
+    lightboxPrev.addEventListener("click", () => moveLightbox(-1));
+    lightboxNext.addEventListener("click", () => moveLightbox(1));
     lightbox.addEventListener("click", (event) => {
       if (event.target === lightbox) closeLightbox();
     });
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeLightbox();
+      if (lightbox.hidden) return;
+      if (event.key === "Escape") {
+        closeLightbox();
+        return;
+      }
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        moveLightbox(-1);
+      }
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        moveLightbox(1);
+      }
     });
 
     searchInput.addEventListener("input", runSearch);
@@ -2399,7 +2778,6 @@ function buildPage(docs) {
       updateProgress();
       DOC_IDS.forEach(updateMediaControls);
     });
-    document.getElementById("print-button").addEventListener("click", () => window.print());
 
     renderImageSlots();
     openHash();
