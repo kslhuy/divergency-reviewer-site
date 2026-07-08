@@ -314,12 +314,12 @@ The roadmap starts with the protected **$20,000 base goal**. Everything above th
 | Goal | Unlock | What it adds |
 | ---: | --- | --- |
 | $20,000 | **Full Story Campaign Foundation** | Main campaign production, core combat, real-time squad commands, boss fights, QA, PC release, and digital delivery. |
-| $30,000 | **The Arsenal: Extended Masteries** | Additional skill upgrades, weapon cosmetic variations, deeper passive tuning, and more loadout-building options. |
+| $30,000 | **The Arsenal: Skills, Items & Character Voices** | Additional skill upgrades, new in-game items/relic pickups, expanded item art, and scoped character voice lines for combat barks and key story moments. |
 | $40,000 | **Whispers of the Dead: Lore & Secrets** | Hidden routes, character backstory events, secret rooms, and optional lore mini-boss encounters. |
-| $50,000 | **Covenant of Two: Local Co-op** | Local shared-screen 2-player co-op, team-combo commands, and shared camera tuning. |
+| $50,000 | **Covenant of Two: LAN Network Co-op** | 2-player co-op over LAN/direct-IP network sessions, with separate screens, host/join UI, team-combo commands, and sync testing. |
 | $60,000 | **Survival Modes & Boss Rush** | Replay-focused combat modes, boss-rush structure, and expanded combat SFX polish. |
 
-<!-- Larger ideas such as endless towers, online co-op, or stage editing are not part of this launch promise. They may be explored later only after the base campaign is stable. -->
+<!-- Larger ideas such as endless towers, public matchmaking, PvP, or stage editing are not part of this launch promise. They may be explored later only after the base campaign is stable. -->
 
 ## Production Timeline
 
@@ -501,7 +501,7 @@ The full world of Divergency has room for more modes, side content, and playable
 
 ### Co-op And Online Features
 
-Local co-op is easier to control than online play, but it still affects camera behavior, encounter readability, UI, and testing. Online co-op and PvP are not launch promises in this campaign draft. If they are explored later, they will be treated as separate technical work after the base game is stable.
+Co-op in this stretch goal means LAN/direct-IP network play, not shared-screen couch co-op. That makes the feature heavier than same-screen play: it needs host/join flow, connection handling, gameplay-state synchronization, latency tolerance, save/session rules, co-op UI, and dedicated testing. Public matchmaking, relay-server infrastructure, PvP, and broader online-service features are not launch promises in this campaign draft. If they are explored later, they will be treated as separate technical work after the base game is stable.
 
 ### Platform And Release Approvals
 
