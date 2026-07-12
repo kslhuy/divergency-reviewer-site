@@ -883,6 +883,18 @@
       text-transform: uppercase;
     }
 
+    .reward-showcase-note {
+      margin: -2px 0 12px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
+    .reward-showcase-block--candidate {
+      padding-top: 16px;
+      border-top: 1px dashed rgba(245, 238, 227, 0.18);
+    }
+
     .reward-item-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -900,6 +912,11 @@
       background: rgba(33, 31, 27, 0.82);
       border: 1px solid var(--line);
       border-radius: var(--radius);
+    }
+
+    .reward-item-card.is-featured {
+      border-color: rgba(216, 166, 77, 0.72);
+      box-shadow: inset 0 0 0 1px rgba(216, 166, 77, 0.14), 0 12px 28px rgba(0, 0, 0, 0.18);
     }
 
     .reward-item-image {
@@ -922,6 +939,43 @@
       object-fit: contain;
       image-rendering: pixelated;
       filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.42));
+    }
+
+    .reward-item-image--photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      image-rendering: auto;
+      filter: none;
+    }
+
+    .reward-item-card--product {
+      display: block;
+      min-height: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .reward-item-card--product .reward-item-image {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      border: 0;
+      border-bottom: 1px solid rgba(245, 238, 227, 0.12);
+      border-radius: 0;
+    }
+
+    .reward-item-card--product .reward-item-card-copy {
+      padding: 14px;
+    }
+
+    .reward-item-card--candidate {
+      background: rgba(24, 23, 21, 0.7);
+      border-style: dashed;
+    }
+
+    .reward-item-card--candidate .reward-item-tag {
+      color: #e7b873;
     }
 
     .reward-item-card-copy {
@@ -1225,6 +1279,20 @@
         height: 60px;
       }
 
+      .reward-item-card--product {
+        display: block;
+      }
+
+      .reward-item-card--product .reward-item-image {
+        width: 100%;
+        height: auto;
+      }
+
+      .reward-item-card--product .reward-item-image img {
+        width: 100%;
+        height: 100%;
+      }
+
       .toolbar {
         position: static;
       }
@@ -1347,9 +1415,9 @@
           <p>Reviewer-ready campaign copy: hook, gameplay, story, funding, timeline, rewards, shipping, and risks.</p>
         </div>
         <dl class="doc-stats" aria-label="Kickstarter Page statistics">
-          <div><dt>Read</dt><dd>27 min</dd></div>
+          <div><dt>Read</dt><dd>26 min</dd></div>
           <div><dt>Sections</dt><dd>17</dd></div>
-          <div><dt>Tables</dt><dd>6</dd></div>
+          <div><dt>Tables</dt><dd>5</dd></div>
         </dl>
       </div>
 
@@ -1450,8 +1518,8 @@
         <a class="toc-link toc-level-2" href="#kickstarter-rewards">
           Rewards
         </a>
-        <a class="toc-link toc-level-3" href="#kickstarter-reward-item-visuals">
-          Reward Item Visuals
+        <a class="toc-link toc-level-3" href="#kickstarter-reward-previews">
+          Reward Previews
         </a>
         <a class="toc-link toc-level-3" href="#kickstarter-why-these-rewards-feel-fair">
           Why These Rewards Feel Fair
@@ -1833,7 +1901,7 @@
 <tr><td>Month 15-18</td><td>Stage 4 Akam Meskul and Stage 5 The Cradle content pass, final systems, and campaign arc lock</td></tr>
 <tr><td>Month 19-21</td><td>Full campaign alpha/beta: balancing, bug fixing, boss tuning, and backer feedback</td></tr>
 <tr><td>Month 22-24</td><td>Polish: UI, audio, VFX, accessibility checks, localization pass, PC release candidate, digital rewards</td></tr>
-<tr><td>Month 24-26</td><td>EU physical reward production and shipping window for poster/bracelet tiers</td></tr></tbody></table></div>
+<tr><td>Month 24-26</td><td>EU physical reward production and shipping window for poster, bracelet, and cap tiers</td></tr></tbody></table></div>
 <p>Backer-facing progress checkpoints are planned around visible milestones: combat polish footage, Stage 1 vertical-slice capture, stage-content updates, alpha/beta access for eligible tiers, and release-candidate updates.</p>
 <p>Dates may shift if testing shows that a feature needs more work. If that happens, backers will receive clear updates explaining what changed, what is being fixed, and how it affects delivery.</p>
 <h2 id="kickstarter-rewards"><a class="heading-link" href="#kickstarter-rewards" aria-label="Link to section">#</a>Rewards</h2>
@@ -1841,81 +1909,40 @@
 <p>Backer rewards should feel like a fair thank-you, not like random merchandise or a hidden store page. The reward ladder for Divergency is built around five kinds of supporter value:</p>
 <ul>
 <li>Recognition: names in the digital supporter wall, credits, and backer thanks.</li>
-<li>Digital gifts: wallpapers, avatar icons, a small lore dossier, soundtrack, mini artbook, and a Field Relics reward visual sheet built from in-world object art.</li>
+<li>Digital gifts: wallpapers, avatar icons, a small lore dossier, Digital Evidence Pack PDF, soundtrack, mini artbook, and a Field Relics reward visual sheet built from in-world object art.</li>
 <li>Game access: the full PC digital key, an early-backer key tier, and beta access for feedback-focused backers.</li>
-<li>Collector objects: one poster and one Beacon bracelet, both tied to the world of Divergency and limited to EU shipping, with extra physical add-on candidates shown separately until production quotes are confirmed.</li>
-<li>Creative participation: limited higher tiers where backers can leave their mark, name NPCs, or help shape custom visual elements and enemy concepts.</li>
+<li>Collector objects: one poster and one Beacon bracelet, with physical rewards limited to EU shipping at launch and any additional product concepts kept separate until confirmed.</li>
+<li>Creative participation: limited higher tiers where backers can leave a short approved wall message or help shape one tightly scoped cosmetic or background-lore detail.</li>
 </ul>
 <p>The rewards avoid pay-to-win items, exclusive combat power, or exclusive playable characters. Backers can receive access, recognition, development participation, and collector gifts, but the final game should remain fair for players who discover Divergency after Kickstarter.</p>
 <div class="table-wrap"><table><thead><tr><th>Pledge</th><th>Reward</th><th>Supporter value</th><th>Estimated delivery</th></tr></thead><tbody><tr><td>$5</td><td>Signal Supporter</td><td>Campaign updates, one backer wallpaper, and name on the digital supporter wall</td><td>Month 6 + Month 24</td></tr>
 <tr><td>$20</td><td>Early Recruit, limited quantity</td><td>Full PC digital game key at a lower early-backer price, plus wallpapers, avatar/icon pack, and mini lore dossier</td><td>Month 24</td></tr>
 <tr><td>$25</td><td>Digital Recruit</td><td>Full PC digital game key, wallpapers, avatar/icon pack, mini lore dossier, and supporter wall name</td><td>Month 24</td></tr>
-<tr><td>$40</td><td>Digital Deluxe Pack</td><td>Game key, soundtrack, mini artbook, wallpapers, avatar/icon pack, mini lore dossier, and Field Relics reward visual sheet</td><td>Month 24</td></tr>
-<tr><td>$70</td><td>Beta Fighter</td><td>Digital Deluxe Pack, beta access, private feedback form, and beta tester credit listing</td><td>Month 19-24</td></tr>
-<tr><td>$120</td><td>Collector's Pack, EU only</td><td>Beta Fighter digital rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet</td><td>Month 24-26</td></tr>
-<tr><td>$250</td><td>Prisoner's Scratchings, limited</td><td>Beta Fighter digital rewards plus write an approved short message/graffiti on a Bastonne prison cell wall</td><td>Month 24</td></tr>
-<tr><td>$500</td><td>Creative Collaborator, limited</td><td>Beta Fighter digital rewards plus collaborate on one scoped cosmetic or background-lore contribution</td><td>Month 24</td></tr></tbody></table></div>
-<h3 id="kickstarter-reward-item-visuals"><a class="heading-link" href="#kickstarter-reward-item-visuals" aria-label="Link to section">#</a>Reward Item Visuals</h3>
-<p>The pledge tier visuals should use the existing <code>imgs/items</code> pixel-art objects as symbols instead of generated bundle mockups. That keeps the reward ladder closer to Divergency's actual game identity and avoids making digital tiers look like physical boxes or merchandise packs.</p>
-<p>The Collector's Pack should still use professional physical mockups first: one A3 Divergency poster print and one Beacon bracelet product image. These visuals show backers what the physical reward is meant to feel like while still leaving final paper stock, bracelet materials, and vendor details open until production quotes are confirmed.</p>
-<p>The Bastonne cell key cap, Bastonne cell key keychain, Divergency Daily access badge, and Divergency Daily cargo tag are strong physical reward candidates. They should be shown as <strong>candidate physical add-ons or collector upgrades</strong> unless they are added to the reward table with confirmed production cost, shipping weight, quantity limits, and delivery rules.</p>
-<h4 id="kickstarter-candidate-physical-add-on-mockups"><a class="heading-link" href="#kickstarter-candidate-physical-add-on-mockups" aria-label="Link to section">#</a>Candidate Physical Add-On Mockups</h4>
-
-<figure class="markdown-image">
-  <img src="imgs/rewards/bastonne-cell-key-cap-mockup.png" alt="Candidate physical add-on mockup: Bastonne cell key cap" loading="lazy">
-  <figcaption>Candidate physical add-on mockup: Bastonne cell key cap</figcaption>
-
-</figure>
-<p>Caption to use: <strong>Candidate physical add-on mockup: Bastonne cell key cap.</strong> A wearable Bastonne-themed collector item. Do not list it as included in the Collector's Pack until production quotes and sizing options are confirmed.</p>
-
-<figure class="markdown-image">
-  <img src="imgs/rewards/bastonne-cell-key-keychain-mockup.png" alt="Candidate physical add-on mockup: Bastonne cell key keychain" loading="lazy">
-  <figcaption>Candidate physical add-on mockup: Bastonne cell key keychain</figcaption>
-
-</figure>
-<p>Caption to use: <strong>Candidate physical add-on mockup: Bastonne cell key keychain.</strong> A small physical reward candidate that fits the prison escape identity and should be easy to ship if unit cost is acceptable.</p>
-
-<figure class="markdown-image">
-  <img src="imgs/rewards/divergency-daily-access-badge-mockup.png" alt="Candidate physical add-on mockup: Divergency Daily access badge" loading="lazy">
-  <figcaption>Candidate physical add-on mockup: Divergency Daily access badge</figcaption>
-
-</figure>
-<p>Caption to use: <strong>Candidate physical add-on mockup: Divergency Daily access badge.</strong> A lanyard-style convention/access badge concept for backers who want a practical branded object.</p>
-
-<figure class="markdown-image">
-  <img src="imgs/rewards/divergency-daily-cargo-tag-mockup.png" alt="Candidate physical add-on mockup: Divergency Daily cargo tag" loading="lazy">
-  <figcaption>Candidate physical add-on mockup: Divergency Daily cargo tag</figcaption>
-
-</figure>
-<p>Caption to use: <strong>Candidate physical add-on mockup: Divergency Daily cargo tag.</strong> A luggage/cargo tag concept that connects to Marseille routes, Laundel movement, and the campaign's field-document identity.</p>
-<p>Recommended pledge-symbol mapping:</p>
-<div class="table-wrap"><table><thead><tr><th>Pledge</th><th>Tier</th><th>Item symbol</th><th>Why it fits</th></tr></thead><tbody><tr><td>$5</td><td>Signal Supporter</td><td>Heniana flower seal</td><td>Soft supporter badge for updates, wallpaper, and supporter wall recognition</td></tr>
-<tr><td>$20</td><td>Early Recruit</td><td>Relic-iron knife</td><td>Early recruit signal for the limited digital key tier, treated as visual identity only</td></tr>
-<tr><td>$25</td><td>Digital Recruit</td><td>Mask of the Listening Route</td><td>Strong avatar/recruit identity for the standard digital tier</td></tr>
-<tr><td>$40</td><td>Digital Deluxe Pack</td><td>Emerald Skull token</td><td>Field Relics anchor for soundtrack, mini artbook, and lore-sheet bonuses</td></tr>
-<tr><td>$70</td><td>Beta Fighter</td><td>Red treatment vial</td><td>Test-build symbol for beta access, feedback, and beta tester credit</td></tr>
-<tr><td>$120</td><td>Collector's Pack, EU only</td><td>Beacon bracelet icon</td><td>Directly matches the physical bracelet reward while the poster/bracelet mockups show the real goods</td></tr>
-<tr><td>$250</td><td>Prisoner's Scratchings</td><td>Bastonne cloth patch</td><td>Prison texture symbol for the approved Bastonne wall message</td></tr>
-<tr><td>$500</td><td>Creative Collaborator</td><td>Worn field figure</td><td>Small character/object concept symbol for scoped creative collaboration</td></tr></tbody></table></div>
-<p>The item art also works as in-world reward representation. These objects can support wallpapers, avatar icons, lore-dossier pages, the mini artbook, supporter-wall badges, and the Collector's Pack visual identity.</p>
-<p>If any of these objects appear inside the finished game, they should be normal discoverable or earnable items for all players, not Kickstarter-exclusive combat power.</p>
+<tr><td>$40</td><td>Digital Deluxe Pack</td><td>Game key, soundtrack, mini artbook, wallpapers, avatar/icon pack, mini lore dossier, Digital Evidence Pack PDF, and Field Relics reward visual sheet</td><td>Month 24</td></tr>
+<tr><td>$70</td><td>Field Tester</td><td>Digital Deluxe Pack, beta access, private feedback form, and beta tester credit listing</td><td>Month 19-24</td></tr>
+<tr><td>$95</td><td>Poster Scout, EU only</td><td>Field Tester digital rewards plus one A3 Marseille/Divergency poster</td><td>Month 24-26</td></tr>
+<tr><td>$120</td><td>Collector's Pack, EU only</td><td>Field Tester digital rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet</td><td>Month 24-26</td></tr>
+<tr><td>$250</td><td>Prisoner's Scratchings, limited</td><td>Field Tester digital rewards plus one approved short message/graffiti on a Bastonne prison wall</td><td>Month 24</td></tr>
+<tr><td>$500</td><td>Creative Collaborator, limited</td><td>Field Tester digital rewards plus one tightly scoped cosmetic or background-lore contribution</td><td>Month 24</td></tr></tbody></table></div>
+<h3 id="kickstarter-reward-previews"><a class="heading-link" href="#kickstarter-reward-previews" aria-label="Link to section">#</a>Reward Previews</h3>
+<p>Each pledge uses an in-world Divergency item as its visual identity. Physical product images are concept mockups; final materials and finishes may differ after vendor sampling. Potential add-ons are shown separately and are not included in any pledge unless they are confirmed before launch.</p>
+<p>Field Relics remain art, lore, and cosmetic presentation—not paid equipment. Any relic or prop that appears inside the game will be discoverable or earnable by all players.</p>
 
 <section class="reward-item-showcase" aria-label="Divergency Kickstarter reward item preview">
   <div class="reward-item-lead">
-    <p class="eyebrow">Reward visual preview</p>
-    <h3>Item-Based Reward Cards</h3>
-    <p>Use the existing item sprites as the pledge-tier symbols, then place exact prices, tier names, and delivery dates in normal page text. The physical Collector's Pack still uses the poster and bracelet mockups, but the reward ladder itself should feel like Divergency UI rather than generic product bundles.</p>
+    <p class="eyebrow">Choose your signal</p>
+    <h3>Rewards At A Glance</h3>
+    <p>Every tier supports the same complete game. Higher pledges add digital extras, feedback access, collector goods, or tightly scoped creative participation—never paid gameplay power.</p>
     <dl class="reward-item-metrics" aria-label="Item-based reward visual positioning">
-      <div><dt>Tier symbols</dt><dd>Item sprites</dd></div>
-      <div><dt>Physical</dt><dd>Real mockups</dd></div>
-      <div><dt>Gameplay</dt><dd>No paid power</dd></div>
+      <div><dt>Best digital value</dt><dd>$40 Deluxe</dd></div>
+      <div><dt>Collector goods</dt><dd>EU shipping only</dd></div>
+      <div><dt>Gameplay promise</dt><dd>No paid power</dd></div>
     </dl>
   </div>
   <div class="reward-item-content">
     <div class="reward-showcase-block">
-      <h4>Pledge Tier Item Symbols</h4>
+      <h4>Pledge Tiers</h4>
       <div class="reward-item-grid">
-        
         <article class="reward-item-card">
           <div class="reward-item-image">
             <img src="imgs/items/flower.png" alt="$5 Signal Supporter" loading="lazy">
@@ -1923,223 +1950,156 @@
           <div class="reward-item-card-copy">
             <p class="reward-item-tag">Recognition</p>
             <h4>$5 Signal Supporter</h4>
-            <p>Use the flower seal as a soft supporter badge for updates, one wallpaper, and the digital supporter wall name.</p>
+            <p>Campaign updates, one backer wallpaper, and an approved name on the digital supporter wall.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
+        </article><article class="reward-item-card">
           <div class="reward-item-image">
             <img src="imgs/items/knife.png" alt="$20 Early Recruit" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
             <p class="reward-item-tag">Limited digital key</p>
             <h4>$20 Early Recruit</h4>
-            <p>Use the relic-iron knife as an early recruit signal for the lower-price PC key tier. It is visual identity only, not an exclusive weapon.</p>
+            <p>Full PC game key at the early-backer price, plus wallpapers, avatar icons, and a mini lore dossier.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
+        </article><article class="reward-item-card">
           <div class="reward-item-image">
             <img src="imgs/items/massk.png" alt="$25 Digital Recruit" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
             <p class="reward-item-tag">Standard digital key</p>
             <h4>$25 Digital Recruit</h4>
-            <p>Use the mask as the recruit identity symbol for the game key, wallpapers, avatar/icon pack, mini lore dossier, and wall name.</p>
+            <p>Full PC game key, wallpapers, avatar icons, mini lore dossier, and an approved supporter-wall name.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
+        </article><article class="reward-item-card is-featured">
           <div class="reward-item-image">
             <img src="imgs/items/skull emer.png" alt="$40 Digital Deluxe Pack" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Deluxe digital</p>
+            <p class="reward-item-tag">Recommended digital tier</p>
             <h4>$40 Digital Deluxe Pack</h4>
-            <p>Use the emerald skull as the Field Relics sheet anchor for soundtrack, mini artbook, lore dossier, wallpapers, and avatar icons.</p>
+            <p>Game key plus the soundtrack, mini artbook, Digital Evidence Pack, Field Relics sheet, wallpapers, icons, and lore dossier.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
+        </article><article class="reward-item-card">
           <div class="reward-item-image">
-            <img src="imgs/items/poition.png" alt="$70 Beta Fighter" loading="lazy">
+            <img src="imgs/items/poition.png" alt="$70 Field Tester" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
             <p class="reward-item-tag">Feedback access</p>
-            <h4>$70 Beta Fighter</h4>
-            <p>Use the treatment vial as a test-build marker for beta access, private feedback, and beta tester credit.</p>
+            <h4>$70 Field Tester</h4>
+            <p>Everything in Digital Deluxe, plus beta access, a private feedback path, and beta tester credit.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
+        </article><article class="reward-item-card">
+          <div class="reward-item-image reward-item-image--photo">
+            <img src="imgs/rewards/a3-poster-product-mockup.png" alt="$95 Poster Scout, EU only" loading="lazy">
+          </div>
+          <div class="reward-item-card-copy">
+            <p class="reward-item-tag">Light physical</p>
+            <h4>$95 Poster Scout, EU only</h4>
+            <p>Everything in Field Tester, plus one A3 Divergency poster. Shipping is charged separately.</p>
+          </div>
+        </article><article class="reward-item-card">
           <div class="reward-item-image">
             <img src="imgs/items/Barcalet.png" alt="$120 Collector&#39;s Pack, EU only" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
             <p class="reward-item-tag">Physical collector</p>
             <h4>$120 Collector's Pack, EU only</h4>
-            <p>Use the Beacon bracelet icon beside the actual poster and bracelet mockups so the EU-only physical tier stays clear.</p>
+            <p>Everything in Field Tester, plus one A3 poster and one Marseille-inspired Beacon bracelet. Shipping is charged separately.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
+        </article><article class="reward-item-card">
           <div class="reward-item-image">
             <img src="imgs/items/cloth dirty.png" alt="$250 Prisoner&#39;s Scratchings" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
             <p class="reward-item-tag">Limited wall mark</p>
             <h4>$250 Prisoner's Scratchings</h4>
-            <p>Use the Bastonne cloth patch as the prison texture symbol for an approved short message or graffiti line.</p>
+            <p>Everything in Field Tester, plus one approved message of up to 40 characters placed on a Bastonne prison wall.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
+        </article><article class="reward-item-card">
           <div class="reward-item-image">
             <img src="imgs/items/figsure.png" alt="$500 Creative Collaborator" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
             <p class="reward-item-tag">Scoped collaboration</p>
             <h4>$500 Creative Collaborator</h4>
-            <p>Use the field figure as the collaboration symbol for one reviewed cosmetic or background-lore contribution.</p>
+            <p>Everything in Field Tester, plus one reviewed cosmetic or background-lore contribution. Limited to 3-5 backers.</p>
           </div>
         </article>
       </div>
     </div>
     <div class="reward-showcase-block">
-      <h4>Collector And Field Relics References</h4>
-      <div class="reward-item-grid">
-        
-        <article class="reward-item-card">
-          <div class="reward-item-image">
+      <h4>Included Reward Previews</h4>
+      <p class="reward-showcase-note">Product images are concept mockups. Final materials and finishes may differ after vendor sampling.</p>
+      <div class="reward-item-grid reward-product-grid">
+        <article class="reward-item-card reward-item-card--product">
+          <div class="reward-item-image reward-item-image--photo">
             <img src="imgs/rewards/a3-poster-product-mockup.png" alt="A3 Divergency Poster" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Physical mockup</p>
+            <p class="reward-item-tag">Guaranteed reward concept</p>
             <h4>A3 Divergency Poster</h4>
-            <p>A professional visual mockup for the EU Collector's Pack poster. The final print should still be checked against the chosen A3 vendor and paper stock.</p>
+            <p>Included in the $95 Poster Scout and $120 Collector's Pack. Concept mockup; final paper stock and print finish may differ.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
-            <img src="imgs/rewards/beacon-bracelet-product-mockup.png" alt="Beacon Bracelet" loading="lazy">
+        </article><article class="reward-item-card reward-item-card--product">
+          <div class="reward-item-image reward-item-image--photo">
+            <img src="imgs/rewards/beacon-bracelet-marseille-mockup.png" alt="Marseille Beacon Bracelet" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Physical mockup</p>
-            <h4>Beacon Bracelet</h4>
-            <p>A professional visual mockup for the bracelet reward, showing the intended dark leather, aged metal, teal patina, and ember-signal identity before final production sampling.</p>
+            <p class="reward-item-tag">Guaranteed reward concept</p>
+            <h4>Marseille Beacon Bracelet</h4>
+            <p>Included only in the $120 Collector's Pack. Concept mockup; final materials, sizing, and finish may differ after vendor sampling.</p>
+          </div>
+        </article><article class="reward-item-card reward-item-card--product">
+          <div class="reward-item-image reward-item-image--photo">
+            <img src="imgs/rewards/stage1-evidence-pack-mockup.png" alt="Digital Evidence Pack" loading="lazy">
+          </div>
+          <div class="reward-item-card-copy">
+            <p class="reward-item-tag">Guaranteed digital preview</p>
+            <h4>Digital Evidence Pack</h4>
+            <p>A downloadable PDF dossier included from the $40 Digital Deluxe tier upward. This is a digital reward, not a physical packet.</p>
           </div>
         </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
+      </div>
+    </div>
+    <div class="reward-showcase-block reward-showcase-block--candidate">
+      <h4>Potential Add-Ons — Not Included Yet</h4>
+      <p class="reward-showcase-note">These concepts are not part of any pledge. They will be offered only if production and shipping are confirmed before launch.</p>
+      <div class="reward-item-grid reward-product-grid">
+        <article class="reward-item-card reward-item-card--product reward-item-card--candidate">
+          <div class="reward-item-image reward-item-image--photo">
             <img src="imgs/rewards/bastonne-cell-key-cap-mockup.png" alt="Bastonne Cell Key Cap" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Candidate physical add-on</p>
+            <p class="reward-item-tag">Potential add-on — not included</p>
             <h4>Bastonne Cell Key Cap</h4>
-            <p>A wearable Bastonne-themed collector item. Keep it separate from the base Collector's Pack until cap vendor quotes, sizing options, and replacement handling are confirmed.</p>
+            <p>A wearable concept that needs a vendor sample, adjustable-fit confirmation, package weight, and replacement policy before it can be offered.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
+        </article><article class="reward-item-card reward-item-card--product reward-item-card--candidate">
+          <div class="reward-item-image reward-item-image--photo">
             <img src="imgs/rewards/bastonne-cell-key-keychain-mockup.png" alt="Bastonne Cell Key Keychain" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Candidate physical add-on</p>
+            <p class="reward-item-tag">Potential add-on — not included</p>
             <h4>Bastonne Cell Key Keychain</h4>
-            <p>A compact prison escape reward candidate that could work well as an EU add-on if metal weight, packaging, and minimum order quantity are manageable.</p>
+            <p>A compact concept that may work as an EU add-on after metal weight, packaging, minimum quantity, and shipping are confirmed.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
+        </article><article class="reward-item-card reward-item-card--product reward-item-card--candidate">
+          <div class="reward-item-image reward-item-image--photo">
             <img src="imgs/rewards/divergency-daily-access-badge-mockup.png" alt="Divergency Daily Access Badge" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Candidate physical add-on</p>
+            <p class="reward-item-tag">Potential add-on — not included</p>
             <h4>Divergency Daily Access Badge</h4>
-            <p>A lanyard-style badge concept for backers who want a practical branded object. Confirm print quality and supplier details before promising it.</p>
+            <p>A lanyard-style concept that requires a print sample, supplier quote, package weight, and durability check before it can be offered.</p>
           </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
+        </article><article class="reward-item-card reward-item-card--product reward-item-card--candidate">
+          <div class="reward-item-image reward-item-image--photo">
             <img src="imgs/rewards/divergency-daily-cargo-tag-mockup.png" alt="Divergency Daily Cargo Tag" loading="lazy">
           </div>
           <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Candidate physical add-on</p>
+            <p class="reward-item-tag">Potential add-on — not included</p>
             <h4>Divergency Daily Cargo Tag</h4>
-            <p>A travel/cargo tag concept connected to Marseille routes and the campaign's field-document identity. Confirm material durability before launch.</p>
-          </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
-            <img src="imgs/items/Barcalet.png" alt="Beacon Bracelet Icon" loading="lazy">
-          </div>
-          <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Reward symbol</p>
-            <h4>Beacon Bracelet Icon</h4>
-            <p>The original item-art signal can still support the lore dossier, wallpaper details, supporter badges, and product identity around the physical bracelet.</p>
-          </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
-            <img src="imgs/items/massk.png" alt="Mask of the Listening Route" loading="lazy">
-          </div>
-          <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Lore object</p>
-            <h4>Mask of the Listening Route</h4>
-            <p>A strong symbol for Sakuri, secrecy, and the danger of obeying voices without proof. It can appear in reward art and as an in-game discoverable object.</p>
-          </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
-            <img src="imgs/items/skull emer.png" alt="Emerald Skull Token" loading="lazy">
-          </div>
-          <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Story token</p>
-            <h4>Emerald Skull Token</h4>
-            <p>A Calvaria-facing relic symbol that can support the mini lore dossier, wallpaper details, or normal in-game collectible lore.</p>
-          </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
-            <img src="imgs/items/knife.png" alt="Relic-Iron Knife" loading="lazy">
-          </div>
-          <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Game prop</p>
-            <h4>Relic-Iron Knife</h4>
-            <p>A compact prop for Bastonne, prison escape, contraband, and the line between survival tool and weapon.</p>
-          </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
-            <img src="imgs/items/poition.png" alt="Red Treatment Vial" loading="lazy">
-          </div>
-          <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Dossier object</p>
-            <h4>Red Treatment Vial</h4>
-            <p>Connects directly to Jamerson's disease research, failed medicine, and the laboratory evidence recovered in Stage 1.</p>
-          </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
-            <img src="imgs/items/cloth dirty.png" alt="Bastonne Cloth Patch" loading="lazy">
-          </div>
-          <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Reward texture</p>
-            <h4>Bastonne Cloth Patch</h4>
-            <p>A grounded texture piece for a prisoner record, wallpaper pack, sticker sheet, or mini artbook page.</p>
-          </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
-            <img src="imgs/items/flower.png" alt="Heniana Flower Seal" loading="lazy">
-          </div>
-          <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Story symbol</p>
-            <h4>Heniana Flower Seal</h4>
-            <p>A softer counterpoint to the weapons and masks, useful for the emotional thread around Heniana and Heni.</p>
-          </div>
-        </article>
-        <article class="reward-item-card">
-          <div class="reward-item-image">
-            <img src="imgs/items/figsure.png" alt="Worn Field Figure" loading="lazy">
-          </div>
-          <div class="reward-item-card-copy">
-            <p class="reward-item-tag">Supporter badge</p>
-            <h4>Worn Field Figure</h4>
-            <p>Works as a supporter-wall badge, profile icon, or small collectible concept without adding gameplay power.</p>
+            <p>A Marseille-route concept that requires material, print-durability, packaging, and shipping confirmation before it can be offered.</p>
           </div>
         </article>
       </div>
@@ -2149,7 +2109,8 @@
 <h3 id="kickstarter-why-these-rewards-feel-fair"><a class="heading-link" href="#kickstarter-why-these-rewards-feel-fair" aria-label="Link to section">#</a>Why These Rewards Feel Fair</h3>
 <p>The $5 tier gives a low-risk symbolic gift to people who mainly want to help. It should not require heavy production work, but it still gives supporters something with Divergency identity.</p>
 <p>The $20 early-backer key gives the first supporters a clear reason to pledge early without lowering the normal game-key value for the whole campaign. The $25 tier remains the standard digital copy, and extra keys can be handled as add-ons instead of a separate tier.</p>
-<p>The $40 and $70 tiers are the strongest digital-value tiers. They reward serious supporters with music, art, lore, beta access, and a feedback path while keeping fulfillment mostly digital.</p>
+<p>The $40 and $70 tiers are the strongest digital-value tiers. They reward serious supporters with music, art, lore, Digital Evidence Pack material, beta access, and a feedback path while keeping fulfillment mostly digital.</p>
+<p>The $95 Poster Scout tier is the light physical option: one A3 poster plus the Field Tester digital rewards. It adds shipping and packaging, but avoids a second manufactured object.</p>
 <p>The $120 physical tier is priced above the digital tiers because it adds manufacturing, packing, shipping, damaged-package support, and address management. It should be treated as a collector gift, not as the core reason to back the campaign.</p>
 <p>The creative backing tiers allow supporters to leave their mark on the game in a tiered, logical format that matches the world's dark fantasy identity:</p>
 <ul>
@@ -2160,19 +2121,20 @@
 <p>Add-ons can increase pledge value without creating too many reward tiers.</p>
 <div class="table-wrap"><table><thead><tr><th>Add-on</th><th>Suggested price</th><th>Notes</th></tr></thead><tbody><tr><td>Extra PC digital key</td><td>$20-25</td><td>Best low-risk add-on because it has no shipping cost</td></tr>
 <tr><td>Soundtrack + mini artbook</td><td>$15</td><td>Useful for backers who choose the standard game key but later want the deluxe digital pack</td></tr>
+<tr><td>Digital Evidence Pack</td><td>$10-15</td><td>PDF-only upgrade for backers below Digital Deluxe; do not present it as a physical packet</td></tr>
 <tr><td>A3 poster, EU only</td><td>$25 plus shipping</td><td>Keep to one poster size and one print vendor if possible</td></tr>
 <tr><td>Bastonne cell key keychain, EU only</td><td>$12-18 plus shipping</td><td>Small physical add-on candidate; confirm metal weight, packaging, and minimum order quantity first</td></tr>
-<tr><td>Bastonne cell key cap, EU only</td><td>$25-35 plus shipping</td><td>Wearable add-on candidate; only use if cap sizing, vendor samples, and replacement policy are confirmed</td></tr>
+<tr><td>Bastonne cell key cap, EU only</td><td>$25-35 plus shipping</td><td>Potential wearable add-on; offer only after vendor samples, adjustable fit, packaging weight, and replacement policy are confirmed</td></tr>
 <tr><td>Divergency Daily access badge, EU only</td><td>$12-18 plus shipping</td><td>Lanyard/badge add-on candidate; practical and visually clear but needs print/vendor quote</td></tr>
 <tr><td>Divergency Daily cargo tag, EU only</td><td>$12-18 plus shipping</td><td>Travel/cargo tag add-on candidate; confirm material, print durability, and package weight</td></tr>
 <tr><td>Final credits name upgrade</td><td>$10</td><td>Optional upgrade for standard digital tiers; use one approved name or alias</td></tr></tbody></table></div>
-<p>Final quantities should be locked before launch. Recommended limits: Early Recruit around 200-300 backers, Collector's Pack based on confirmed physical unit quotes, Prisoner's Scratchings around 30-50 slots, and Creative Collaborator around 5-10 slots unless the team is certain it can absorb more review work.</p>
+<p>Final quantities should be locked before launch. Recommended limits: Early Recruit around 200-300 backers, Poster Scout and Collector's Pack based on confirmed physical unit quotes, Prisoner's Scratchings around 30-50 slots, and Creative Collaborator around 3-5 slots unless the team is certain it can absorb more review work.</p>
 <h3 id="kickstarter-reward-fulfillment-rules"><a class="heading-link" href="#kickstarter-reward-fulfillment-rules" aria-label="Link to section">#</a>Reward Fulfillment Rules</h3>
 <ul>
-<li>Prepare visible sample images before launch for the wallpaper pack, Field Relics reward visual sheet, lore dossier, poster, and bracelet concept.</li>
+<li>Prepare visible sample images before launch for the wallpaper pack, Field Relics reward visual sheet, Digital Evidence Pack, lore dossier, poster, and bracelet concept. Show the Bastonne cap only as a clearly labeled potential add-on until confirmed.</li>
 <li>Do not promise more than one poster size, one bracelet design, or multiple physical add-on variants unless production quotes are already confirmed.</li>
 <li>Keep all supporter names subject to approval, character limits, and a final survey deadline.</li>
-<li>Lock digital reward file formats before launch: JPG/PNG wallpapers, PDF dossier/artbook, MP3/WAV soundtrack, and Steam or platform key delivery where available.</li>
+<li>Lock digital reward file formats before launch: JPG/PNG wallpapers, PDF dossier/artbook/Evidence Pack, MP3/WAV soundtrack, and Steam or platform key delivery where available.</li>
 <li>Reserve 5-10% extra physical items for damaged parcels, lost mail, and replacement handling.</li>
 <li>Treat beta access as feedback participation, not as a guaranteed polished early version of the final game.</li>
 <li>All in-game text, names, visual assets, and gameplay designs submitted by backers are subject to developer approval, editing, and revision to maintain appropriate tone, balance, and quality.</li>
@@ -2202,7 +2164,8 @@
 <p>Planned shipping approach:</p>
 <ul>
 <li>Ship-from region: France/EU.</li>
-<li>Poster or Collector's Pack estimated shipping: EUR 8-15 depending on EU destination.</li>
+<li>Poster Scout or poster-only shipment estimated shipping: EUR 8-15 depending on EU destination.</li>
+<li>Collector's Pack estimated shipping: EUR 10-18 depending on EU destination.</li>
 <li>Bracelet, cap, keychain, badge, cargo tag, or combined collector shipment estimated shipping: EUR 10-18 depending on EU destination.</li>
 <li>Final country-by-country shipping prices should be entered before launch or confirmed through Kickstarter Pledge Manager before fulfillment.</li>
 <li>Backer addresses and reward preferences will be collected through Kickstarter surveys or Pledge Manager.</li>
@@ -4981,7 +4944,7 @@
           <p>Reward tiers, clear mockup/product visuals, EU shipping rules, creative tier scope, pledge manager setup, reviewer questions, and launch blockers.</p>
         </div>
         <dl class="doc-stats" aria-label="Rewards Checklist statistics">
-          <div><dt>Read</dt><dd>11 min</dd></div>
+          <div><dt>Read</dt><dd>12 min</dd></div>
           <div><dt>Sections</dt><dd>10</dd></div>
           <div><dt>Tables</dt><dd>1</dd></div>
         </dl>
@@ -5021,11 +4984,11 @@
         <a class="toc-link toc-level-3" href="#rewards-pledge-tier-item-symbols">
           Pledge Tier Item Symbols
         </a>
-        <a class="toc-link toc-level-3" href="#rewards-physical-collector-s-pack-mockups">
-          Physical Collector's Pack Mockups
+        <a class="toc-link toc-level-3" href="#rewards-guaranteed-physical-reward-concept-mockups">
+          Guaranteed Physical Reward Concept Mockups
         </a>
-        <a class="toc-link toc-level-3" href="#rewards-candidate-physical-add-on-mockups">
-          Candidate Physical Add-On Mockups
+        <a class="toc-link toc-level-3" href="#rewards-potential-add-ons-not-included-in-any-pledge-yet">
+          Potential Add-Ons — Not Included In Any Pledge Yet
         </a>
         <a class="toc-link toc-level-3" href="#rewards-digital-reward-and-optional-add-on-mockups">
           Digital Reward And Optional Add-On Mockups
@@ -5073,19 +5036,21 @@
 <div class="table-wrap"><table><thead><tr><th>Pledge</th><th>Tier</th><th>Type</th><th>What backers receive</th><th>Estimated delivery</th><th>Visuals to show</th></tr></thead><tbody><tr><td>$5</td><td>Signal Supporter</td><td>Digital</td><td>Campaign updates, one wallpaper, and name on the digital supporter wall</td><td>Month 6 + Month 24</td><td>Wallpaper sample and supporter wall example</td></tr>
 <tr><td>$20</td><td>Early Recruit, limited</td><td>Digital</td><td>Full PC digital game key at the early-backer price, wallpapers, avatar/icon pack, and mini lore dossier</td><td>Month 24</td><td>Game key graphic, wallpaper sample, avatar/icon sample, dossier cover</td></tr>
 <tr><td>$25</td><td>Digital Recruit</td><td>Digital</td><td>Full PC digital game key, wallpapers, avatar/icon pack, mini lore dossier, and supporter wall name</td><td>Month 24</td><td>Same digital reward sample set as Early Recruit</td></tr>
-<tr><td>$40</td><td>Digital Deluxe Pack</td><td>Digital</td><td>Digital Recruit rewards plus soundtrack, mini artbook, and Field Relics reward visual sheet</td><td>Month 24</td><td>Soundtrack cover, mini artbook cover, Field Relics preview sheet</td></tr>
-<tr><td>$70</td><td>Beta Fighter</td><td>Digital</td><td>Digital Deluxe Pack plus beta access, private feedback form, and beta tester credit listing</td><td>Month 19-24</td><td>Beta badge, feedback form preview, beta credit example</td></tr>
-<tr><td>$120</td><td>Collector's Pack, EU only</td><td>Digital + physical</td><td>Beta Fighter digital rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet</td><td>Month 24-26</td><td>A3 poster product mockup, Beacon bracelet product mockup, and clearly separated candidate physical add-on mockups</td></tr>
-<tr><td>$250</td><td>Prisoner's Scratchings, limited</td><td>Digital/experience</td><td>Beta Fighter rewards plus one approved short message or graffiti line on a Bastonne prison wall</td><td>Month 24</td><td>Bastonne wall/graffiti placement mockup</td></tr>
-<tr><td>$500</td><td>Creative Collaborator, limited</td><td>Digital/experience</td><td>Beta Fighter rewards plus one scoped cosmetic or background-lore contribution</td><td>Month 24</td><td>Example cosmetic/icon/lore contribution mockup</td></tr></tbody></table></div>
+<tr><td>$40</td><td>Digital Deluxe Pack</td><td>Digital</td><td>Digital Recruit rewards plus soundtrack, mini artbook, Digital Evidence Pack PDF, and Field Relics reward visual sheet</td><td>Month 24</td><td>Soundtrack cover, mini artbook cover, Digital Evidence Pack preview, Field Relics preview sheet</td></tr>
+<tr><td>$70</td><td>Field Tester</td><td>Digital</td><td>Digital Deluxe Pack plus beta access, private feedback form, and beta tester credit listing</td><td>Month 19-24</td><td>Field Tester badge, feedback form preview, beta credit example</td></tr>
+<tr><td>$95</td><td>Poster Scout, EU only</td><td>Digital + physical</td><td>Field Tester digital rewards plus one A3 Marseille/Divergency poster</td><td>Month 24-26</td><td>A3 poster product mockup</td></tr>
+<tr><td>$120</td><td>Collector's Pack, EU only</td><td>Digital + physical</td><td>Field Tester digital rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet</td><td>Month 24-26</td><td>A3 poster and Beacon bracelet concept mockups</td></tr>
+<tr><td>$250</td><td>Prisoner's Scratchings, limited</td><td>Digital/experience</td><td>Field Tester rewards plus one approved short message or graffiti line on a Bastonne prison wall</td><td>Month 24</td><td>Bastonne wall/graffiti placement example</td></tr>
+<tr><td>$500</td><td>Creative Collaborator, limited</td><td>Digital/experience</td><td>Field Tester rewards plus one tightly scoped cosmetic or background-lore contribution</td><td>Month 24</td><td>Example cosmetic/icon/lore contribution</td></tr></tbody></table></div>
 <p>Reward promise rules:</p>
 <ul>
 <li>Use the tier names, prices, and delivery windows from <code>Divergency_Kickstarter_Page_Rewrite.md</code> unless the campaign page is intentionally changed.</li>
 <li>Do not use the old Act 1 tier naming on the public page unless the product scope returns to an Act 1-only release.</li>
 <li>Do not sell exclusive combat power, exclusive playable characters, or paid stat advantages.</li>
-<li>Keep the base physical launch promise to one A3 poster and one Beacon bracelet unless production quotes confirm more included items.</li>
-<li>Treat the Bastonne cell key cap, Bastonne cell key keychain, Divergency Daily access badge, and Divergency Daily cargo tag as candidate physical add-ons or collector upgrades unless they are added to the reward table with price, delivery, and shipping rules.</li>
-<li>Treat coaster sets, cloth passes, and evidence packs as visual concepts or future add-ons unless they are added to the reward table with price, delivery, and shipping rules.</li>
+<li>Keep the guaranteed physical launch promise to one A3 poster and one Beacon bracelet.</li>
+<li>Treat the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag as potential add-ons—not included rewards—unless they are added to the reward table with confirmed price, delivery, and shipping rules.</li>
+<li>Treat coaster sets, cloth passes, and physical evidence packs as visual concepts or future add-ons unless they are added to the reward table with price, delivery, and shipping rules.</li>
+<li>Treat the Digital Evidence Pack as a PDF/digital dossier, not a physical envelope or packet.</li>
 </ul>
 <h2 id="rewards-reward-visuals-and-product-mockups"><a class="heading-link" href="#rewards-reward-visuals-and-product-mockups" aria-label="Link to section">#</a>Reward Visuals And Product Mockups</h2>
 <p>Show these images large enough that backers can understand the item without zooming. Each visual needs a direct caption that says whether it is a tier symbol, a physical mockup, a digital reward preview, an optional add-on concept, or an in-world visual reference.</p>
@@ -5121,11 +5086,18 @@
 <p>Caption to use: <strong>Tier symbol: $40 Digital Deluxe Pack.</strong> Emerald Skull token used as the Field Relics anchor for soundtrack, mini artbook, lore dossier, wallpapers, and avatar icons.</p>
 
 <figure class="markdown-image">
-  <img src="imgs/items/poition.png" alt="Tier symbol: $70 Beta Fighter" loading="lazy">
-  <figcaption>Tier symbol: $70 Beta Fighter</figcaption>
+  <img src="imgs/items/poition.png" alt="Tier symbol: $70 Field Tester" loading="lazy">
+  <figcaption>Tier symbol: $70 Field Tester</figcaption>
 
 </figure>
-<p>Caption to use: <strong>Tier symbol: $70 Beta Fighter.</strong> Red treatment vial used as the test-build symbol for beta access, private feedback, and beta tester credit.</p>
+<p>Caption to use: <strong>Tier symbol: $70 Field Tester.</strong> Red treatment vial used as the test-build symbol for beta access, private feedback, and beta tester credit.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/rewards/a3-poster-product-mockup.png" alt="Tier symbol: $95 Poster Scout, EU only" loading="lazy">
+  <figcaption>Tier symbol: $95 Poster Scout, EU only</figcaption>
+
+</figure>
+<p>Caption to use: <strong>Tier symbol: $95 Poster Scout, EU only.</strong> A3 poster mockup used as the direct visual for the lighter physical poster tier.</p>
 
 <figure class="markdown-image">
   <img src="imgs/items/Barcalet.png" alt="Tier symbol: $120 Collector&#39;s Pack, EU only" loading="lazy">
@@ -5147,58 +5119,58 @@
 
 </figure>
 <p>Caption to use: <strong>Tier symbol: $500 Creative Collaborator.</strong> Worn field figure used as the collaboration symbol for one reviewed cosmetic or background-lore contribution.</p>
-<h3 id="rewards-physical-collector-s-pack-mockups"><a class="heading-link" href="#rewards-physical-collector-s-pack-mockups" aria-label="Link to section">#</a>Physical Collector's Pack Mockups</h3>
+<h3 id="rewards-guaranteed-physical-reward-concept-mockups"><a class="heading-link" href="#rewards-guaranteed-physical-reward-concept-mockups" aria-label="Link to section">#</a>Guaranteed Physical Reward Concept Mockups</h3>
 
 <figure class="markdown-image">
   <img src="imgs/rewards/a3-poster-product-mockup.png" alt="Physical reward mockup: A3 Divergency poster" loading="lazy">
   <figcaption>Physical reward mockup: A3 Divergency poster</figcaption>
 
 </figure>
-<p>Caption to use: <strong>Physical reward mockup: A3 Divergency poster.</strong> Included only in the EU Collector's Pack unless offered later as an add-on.</p>
+<p>Caption to use: <strong>Concept mockup — final materials may differ.</strong> One A3 Divergency poster is included in the $95 Poster Scout and $120 Collector's Pack tiers, with EU shipping only.</p>
 
 <figure class="markdown-image">
-  <img src="imgs/rewards/beacon-bracelet-product-mockup.png" alt="Physical reward mockup: Beacon bracelet" loading="lazy">
+  <img src="imgs/rewards/beacon-bracelet-marseille-mockup.png" alt="Physical reward mockup: Beacon bracelet" loading="lazy">
   <figcaption>Physical reward mockup: Beacon bracelet</figcaption>
 
 </figure>
-<p>Caption to use: <strong>Physical reward mockup: Beacon bracelet.</strong> Included only in the EU Collector's Pack unless offered later as an add-on.</p>
-<h3 id="rewards-candidate-physical-add-on-mockups"><a class="heading-link" href="#rewards-candidate-physical-add-on-mockups" aria-label="Link to section">#</a>Candidate Physical Add-On Mockups</h3>
+<p>Caption to use: <strong>Concept mockup — final materials may differ.</strong> One Marseille-inspired Beacon bracelet is included only in the $120 Collector's Pack, with EU shipping only.</p>
+<h3 id="rewards-potential-add-ons-not-included-in-any-pledge-yet"><a class="heading-link" href="#rewards-potential-add-ons-not-included-in-any-pledge-yet" aria-label="Link to section">#</a>Potential Add-Ons — Not Included In Any Pledge Yet</h3>
 
 <figure class="markdown-image">
-  <img src="imgs/rewards/bastonne-cell-key-cap-mockup.png" alt="Candidate physical add-on mockup: Bastonne cell key cap" loading="lazy">
-  <figcaption>Candidate physical add-on mockup: Bastonne cell key cap</figcaption>
+  <img src="imgs/rewards/bastonne-cell-key-cap-mockup.png" alt="Potential add-on concept: Bastonne cell key cap" loading="lazy">
+  <figcaption>Potential add-on concept: Bastonne cell key cap</figcaption>
 
 </figure>
-<p>Caption to use: <strong>Candidate physical add-on mockup: Bastonne cell key cap.</strong> A wearable Bastonne-themed collector item. Do not imply it ships in the Collector's Pack unless cap vendor quotes, sizing options, and replacement handling are confirmed.</p>
+<p>Caption to use: <strong>Potential add-on concept — not included in any pledge.</strong> A wearable Bastonne-themed item that requires a vendor sample, adjustable-fit confirmation, package weight, and replacement policy before it can be offered.</p>
 
 <figure class="markdown-image">
   <img src="imgs/rewards/bastonne-cell-key-keychain-mockup.png" alt="Candidate physical add-on mockup: Bastonne cell key keychain" loading="lazy">
   <figcaption>Candidate physical add-on mockup: Bastonne cell key keychain</figcaption>
 
 </figure>
-<p>Caption to use: <strong>Candidate physical add-on mockup: Bastonne cell key keychain.</strong> A small physical reward candidate that fits the prison escape identity and may work well as an EU add-on if metal weight and packaging cost are manageable.</p>
+<p>Caption to use: <strong>Potential add-on concept — not included in any pledge.</strong> The Bastonne cell key keychain may work as an EU add-on after metal weight, packaging, minimum quantity, and shipping cost are confirmed.</p>
 
 <figure class="markdown-image">
   <img src="imgs/rewards/divergency-daily-access-badge-mockup.png" alt="Candidate physical add-on mockup: Divergency Daily access badge" loading="lazy">
   <figcaption>Candidate physical add-on mockup: Divergency Daily access badge</figcaption>
 
 </figure>
-<p>Caption to use: <strong>Candidate physical add-on mockup: Divergency Daily access badge.</strong> A lanyard-style badge concept for backers who want a practical branded object. Confirm print quality and supplier before promising it.</p>
+<p>Caption to use: <strong>Potential add-on concept — not included in any pledge.</strong> The Divergency Daily access badge requires a print sample, supplier quote, package weight, and durability check before it can be offered.</p>
 
 <figure class="markdown-image">
   <img src="imgs/rewards/divergency-daily-cargo-tag-mockup.png" alt="Candidate physical add-on mockup: Divergency Daily cargo tag" loading="lazy">
   <figcaption>Candidate physical add-on mockup: Divergency Daily cargo tag</figcaption>
 
 </figure>
-<p>Caption to use: <strong>Candidate physical add-on mockup: Divergency Daily cargo tag.</strong> A travel/cargo tag concept connected to Marseille routes and field-document identity. Confirm material durability before launch.</p>
+<p>Caption to use: <strong>Potential add-on concept — not included in any pledge.</strong> The Divergency Daily cargo tag requires material, print-durability, packaging, and shipping confirmation before it can be offered.</p>
 <h3 id="rewards-digital-reward-and-optional-add-on-mockups"><a class="heading-link" href="#rewards-digital-reward-and-optional-add-on-mockups" aria-label="Link to section">#</a>Digital Reward And Optional Add-On Mockups</h3>
 
 <figure class="markdown-image">
-  <img src="imgs/rewards/stage1-evidence-pack-mockup.png" alt="Digital reward preview: Stage 1 evidence pack / lore dossier style" loading="lazy">
-  <figcaption>Digital reward preview: Stage 1 evidence pack / lore dossier style</figcaption>
+  <img src="imgs/rewards/stage1-evidence-pack-mockup.png" alt="Digital reward preview: Stage 1 Evidence Pack / lore dossier style" loading="lazy">
+  <figcaption>Digital reward preview: Stage 1 Evidence Pack / lore dossier style</figcaption>
 
 </figure>
-<p>Caption to use: <strong>Digital reward preview: Stage 1 evidence pack / lore dossier style.</strong> Use this to explain the mini lore dossier or Field Relics visual sheet, not as a guaranteed physical packet.</p>
+<p>Caption to use: <strong>Digital reward preview: Stage 1 Evidence Pack / lore dossier style.</strong> Use this to explain the PDF Digital Evidence Pack, mini lore dossier, or Field Relics visual sheet, not as a guaranteed physical packet.</p>
 
 <figure class="markdown-image">
   <img src="imgs/rewards/laundel-route-cloth-pass-mockup.png" alt="Reward concept mockup: Laundel route cloth pass" loading="lazy">
@@ -5214,7 +5186,8 @@
 </figure>
 <p>Caption to use: <strong>Optional add-on concept mockup: Armorlite coaster set.</strong> Do not imply it ships in the Collector's Pack unless it is added to the reward ladder and fulfillment budget.</p>
 <h3 id="rewards-field-relics-and-in-world-reward-visuals"><a class="heading-link" href="#rewards-field-relics-and-in-world-reward-visuals" aria-label="Link to section">#</a>Field Relics And In-World Reward Visuals</h3>
-<p>Use these images to support wallpapers, avatar icons, lore dossier pages, supporter-wall badges, mini artbook pages, and the Field Relics reward visual sheet. These are not paid gameplay power.</p>
+<p>Use these images to support wallpapers, avatar icons, lore dossier pages, Digital Evidence Pack pages, supporter-wall badges, mini artbook pages, and the Field Relics reward visual sheet. These are not paid gameplay power.</p>
+<p>If any Field Relics appear inside the finished game, they should be normal discoverable or earnable items for all players. Backers may receive digital art, dossier pages, supporter badges, beta credit, approved graffiti, or scoped background/lore participation, but not exclusive weapons, stat boosts, playable characters, or combat advantages.</p>
 
 <figure class="markdown-image">
   <img src="imgs/items/Barcalet.png" alt="Field Relics visual: Beacon bracelet icon" loading="lazy">
@@ -5275,20 +5248,20 @@
 <ul>
 <li>Every reward tier must have a matching visual or sample image before launch.</li>
 <li>All pledge-tier item symbols, product mockups, optional concepts, and Field Relics item visuals listed above should appear in the reviewer page before launch.</li>
-<li>Every physical mockup must include the word &quot;mockup&quot; in the caption until vendor samples are confirmed.</li>
+<li>Every photoreal product image must say &quot;Concept mockup — final materials may differ&quot; until vendor samples are confirmed.</li>
 <li>Every digital reward preview must state its format: JPG/PNG, PDF, MP3/WAV, Steam/platform key, or secure download.</li>
 <li>Images should be clean, bright enough to read, and free of debug UI unless the caption clearly says it is work-in-progress.</li>
 <li>Physical reward images should show scale or context where possible: A3 poster size, bracelet material direction, cap sizing, keychain scale, badge/lanyard materials, cargo tag materials, and pack contents.</li>
 <li>Optional concept mockups must be grouped separately from guaranteed rewards.</li>
-<li>Do not mix in-game discoverable relics with paid reward promises unless the copy clearly says the object is only a visual theme.</li>
+<li>Do not mix in-game discoverable relics with paid reward promises unless the copy clearly says the object is only a visual theme, lore reward, or non-exclusive in-game discoverable.</li>
 </ul>
 <h2 id="rewards-page-placement-checklist"><a class="heading-link" href="#rewards-page-placement-checklist" aria-label="Link to section">#</a>Page Placement Checklist</h2>
 <p>Recommended order on the Kickstarter page:</p>
 <ol>
 <li>Reward tier table.</li>
-<li>One image block for digital rewards: wallpaper, avatar/icon pack, lore dossier, soundtrack, mini artbook, and Field Relics sheet.</li>
-<li>One image block for the physical Collector's Pack: A3 poster and Beacon bracelet mockups.</li>
-<li>One clearly labeled candidate physical add-on block for the Bastonne cell key cap, Bastonne cell key keychain, Divergency Daily access badge, and Divergency Daily cargo tag.</li>
+<li>One image block for digital rewards: wallpaper, avatar/icon pack, lore dossier, Digital Evidence Pack, soundtrack, mini artbook, and Field Relics sheet.</li>
+<li>One guaranteed-reward image block for the A3 poster and Beacon bracelet concept mockups.</li>
+<li>One clearly separated &quot;Potential add-ons — not included yet&quot; block for the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag.</li>
 <li>One clearly labeled concept/add-on block for coaster set, cloth pass, or evidence pack if those assets are shown.</li>
 <li>Shipping and fulfillment notes directly below the physical reward visuals.</li>
 <li>Creative tier scope and approval rules near the $250 and $500 tiers.</li>
@@ -5297,7 +5270,8 @@
 <ul>
 <li>Physical rewards ship to EU countries only at launch.</li>
 <li>Ship-from region: France/EU.</li>
-<li>Poster or Collector's Pack estimated shipping: EUR 8-15 depending on EU destination.</li>
+<li>Poster Scout or poster-only shipment estimated shipping: EUR 8-15 depending on EU destination.</li>
+<li>Collector's Pack estimated shipping: EUR 10-18 depending on EU destination.</li>
 <li>Bracelet, cap, keychain, badge, cargo tag, or combined collector shipment estimated shipping: EUR 10-18 depending on EU destination.</li>
 <li>Add final country-by-country shipping values before launch if Kickstarter requires exact pricing.</li>
 <li>Use Kickstarter surveys or Pledge Manager for addresses and final reward preferences.</li>
@@ -5331,11 +5305,11 @@
 <h2 id="rewards-pledge-manager-setup"><a class="heading-link" href="#rewards-pledge-manager-setup" aria-label="Link to section">#</a>Pledge Manager Setup</h2>
 <p>Prepare these fields before launching Pledge Manager:</p>
 <ul>
-<li>Reward item categories: digital key, digital art/audio pack, beta access, physical Collector's Pack, candidate physical add-ons, creative submission.</li>
-<li>Market value for poster and bracelet.</li>
+<li>Reward item categories: digital key, digital art/audio pack, Digital Evidence Pack, beta access, Poster Scout, physical Collector's Pack, potential physical add-ons, creative submission.</li>
+<li>Market value for the poster and bracelet, plus any add-on that is confirmed before launch.</li>
 <li>EU shipping origins and destination countries.</li>
 <li>Backer survey questions for approved display name, supporter wall name, credits name, and creative tier submissions.</li>
-<li>Add-on selection fields for Bastonne cell key cap, Bastonne cell key keychain, Divergency Daily access badge, and Divergency Daily cargo tag if those add-ons are confirmed before launch.</li>
+<li>Add-on selection fields for the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag only if those add-ons are confirmed before launch.</li>
 <li>Digital file/code delivery method.</li>
 <li>Address lock date before physical production.</li>
 <li>Replacement policy for damaged or lost physical parcels.</li>
@@ -5363,7 +5337,7 @@
 <li>EU-only shipping is clearly stated on physical tiers.</li>
 <li>Budget and timeline are visible.</li>
 <li>Risks &amp; Challenges are complete.</li>
-<li>The A3 poster and Beacon bracelet mockups are shown clearly in the physical reward section.</li>
+<li>The A3 poster and Beacon bracelet concept mockups are shown clearly in the guaranteed physical reward section.</li>
 <li>Optional product mockups do not imply extra physical rewards unless those items are priced, budgeted, and listed in a tier or add-on.</li>
 <li>The $250 and $500 creative tiers have scope limits and approval rules.</li>
 </ul>
@@ -5380,7 +5354,7 @@
         </div>
         <dl class="doc-stats" aria-label="Gallery statistics">
           <div><dt>Folders</dt><dd>10</dd></div>
-          <div><dt>Images</dt><dd>197</dd></div>
+          <div><dt>Images</dt><dd>189</dd></div>
           <div><dt>Order</dt><dd>Folder</dd></div>
         </dl>
       </div>
@@ -5421,7 +5395,7 @@
           </a>
           <a class="gallery-jump" href="#gallery-rewards">
             <span>Rewards</span>
-            <small>21</small>
+            <small>13</small>
           </a>
           <a class="gallery-jump" href="#gallery-others">
             <span>Others</span>
@@ -6490,7 +6464,7 @@
       <section class="gallery-section" id="gallery-rewards" aria-labelledby="gallery-rewards-title">
         <div class="gallery-section-head">
           <h3 id="gallery-rewards-title">Rewards</h3>
-          <span>21 images</span>
+          <span>13 images</span>
         </div>
         <div class="gallery-grid" data-gallery-grid="rewards">
           
@@ -6531,10 +6505,10 @@
             <figcaption>Rewards - Bastonne Prisoner Id Pass Set Mockup</figcaption>
           </figure>
           <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/beacon-bracelet-product-mockup.png" data-lightbox-alt="Rewards - Beacon Bracelet Product Mockup" data-lightbox-caption="Rewards - Beacon Bracelet Product Mockup" aria-label="View larger image: Rewards - Beacon Bracelet Product Mockup">
-              <img src="imgs/rewards/beacon-bracelet-product-mockup.png" alt="Rewards - Beacon Bracelet Product Mockup" loading="lazy">
+            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/beacon-bracelet-marseille-mockup.png" data-lightbox-alt="Rewards - Beacon Bracelet Marseille Mockup" data-lightbox-caption="Rewards - Beacon Bracelet Marseille Mockup" aria-label="View larger image: Rewards - Beacon Bracelet Marseille Mockup">
+              <img src="imgs/rewards/beacon-bracelet-marseille-mockup.png" alt="Rewards - Beacon Bracelet Marseille Mockup" loading="lazy">
             </button>
-            <figcaption>Rewards - Beacon Bracelet Product Mockup</figcaption>
+            <figcaption>Rewards - Beacon Bracelet Marseille Mockup</figcaption>
           </figure>
           <figure class="gallery-slot">
             <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/divergency-daily-access-badge-mockup.png" data-lightbox-alt="Rewards - Divergency Daily Access Badge Mockup" data-lightbox-caption="Rewards - Divergency Daily Access Badge Mockup" aria-label="View larger image: Rewards - Divergency Daily Access Badge Mockup">
@@ -6553,54 +6527,6 @@
               <img src="imgs/rewards/laundel-route-cloth-pass-mockup.png" alt="Rewards - Laundel Route Cloth Pass Mockup" loading="lazy">
             </button>
             <figcaption>Rewards - Laundel Route Cloth Pass Mockup</figcaption>
-          </figure>
-          <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/pledge-tiers/pledge-005-signal-supporter.png" data-lightbox-alt="Rewards / Pledge Tiers - Pledge 005 Signal Supporter" data-lightbox-caption="Rewards / Pledge Tiers - Pledge 005 Signal Supporter" aria-label="View larger image: Rewards / Pledge Tiers - Pledge 005 Signal Supporter">
-              <img src="imgs/rewards/pledge-tiers/pledge-005-signal-supporter.png" alt="Rewards / Pledge Tiers - Pledge 005 Signal Supporter" loading="lazy">
-            </button>
-            <figcaption>Rewards / Pledge Tiers - Pledge 005 Signal Supporter</figcaption>
-          </figure>
-          <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/pledge-tiers/pledge-020-early-recruit.png" data-lightbox-alt="Rewards / Pledge Tiers - Pledge 020 Early Recruit" data-lightbox-caption="Rewards / Pledge Tiers - Pledge 020 Early Recruit" aria-label="View larger image: Rewards / Pledge Tiers - Pledge 020 Early Recruit">
-              <img src="imgs/rewards/pledge-tiers/pledge-020-early-recruit.png" alt="Rewards / Pledge Tiers - Pledge 020 Early Recruit" loading="lazy">
-            </button>
-            <figcaption>Rewards / Pledge Tiers - Pledge 020 Early Recruit</figcaption>
-          </figure>
-          <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/pledge-tiers/pledge-025-digital-recruit.png" data-lightbox-alt="Rewards / Pledge Tiers - Pledge 025 Digital Recruit" data-lightbox-caption="Rewards / Pledge Tiers - Pledge 025 Digital Recruit" aria-label="View larger image: Rewards / Pledge Tiers - Pledge 025 Digital Recruit">
-              <img src="imgs/rewards/pledge-tiers/pledge-025-digital-recruit.png" alt="Rewards / Pledge Tiers - Pledge 025 Digital Recruit" loading="lazy">
-            </button>
-            <figcaption>Rewards / Pledge Tiers - Pledge 025 Digital Recruit</figcaption>
-          </figure>
-          <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/pledge-tiers/pledge-040-digital-deluxe-pack.png" data-lightbox-alt="Rewards / Pledge Tiers - Pledge 040 Digital Deluxe Pack" data-lightbox-caption="Rewards / Pledge Tiers - Pledge 040 Digital Deluxe Pack" aria-label="View larger image: Rewards / Pledge Tiers - Pledge 040 Digital Deluxe Pack">
-              <img src="imgs/rewards/pledge-tiers/pledge-040-digital-deluxe-pack.png" alt="Rewards / Pledge Tiers - Pledge 040 Digital Deluxe Pack" loading="lazy">
-            </button>
-            <figcaption>Rewards / Pledge Tiers - Pledge 040 Digital Deluxe Pack</figcaption>
-          </figure>
-          <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/pledge-tiers/pledge-070-beta-fighter.png" data-lightbox-alt="Rewards / Pledge Tiers - Pledge 070 Beta Fighter" data-lightbox-caption="Rewards / Pledge Tiers - Pledge 070 Beta Fighter" aria-label="View larger image: Rewards / Pledge Tiers - Pledge 070 Beta Fighter">
-              <img src="imgs/rewards/pledge-tiers/pledge-070-beta-fighter.png" alt="Rewards / Pledge Tiers - Pledge 070 Beta Fighter" loading="lazy">
-            </button>
-            <figcaption>Rewards / Pledge Tiers - Pledge 070 Beta Fighter</figcaption>
-          </figure>
-          <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/pledge-tiers/pledge-120-collectors-pack-eu.png" data-lightbox-alt="Rewards / Pledge Tiers - Pledge 120 Collectors Pack Eu" data-lightbox-caption="Rewards / Pledge Tiers - Pledge 120 Collectors Pack Eu" aria-label="View larger image: Rewards / Pledge Tiers - Pledge 120 Collectors Pack Eu">
-              <img src="imgs/rewards/pledge-tiers/pledge-120-collectors-pack-eu.png" alt="Rewards / Pledge Tiers - Pledge 120 Collectors Pack Eu" loading="lazy">
-            </button>
-            <figcaption>Rewards / Pledge Tiers - Pledge 120 Collectors Pack Eu</figcaption>
-          </figure>
-          <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/pledge-tiers/pledge-250-prisoners-scratchings.png" data-lightbox-alt="Rewards / Pledge Tiers - Pledge 250 Prisoners Scratchings" data-lightbox-caption="Rewards / Pledge Tiers - Pledge 250 Prisoners Scratchings" aria-label="View larger image: Rewards / Pledge Tiers - Pledge 250 Prisoners Scratchings">
-              <img src="imgs/rewards/pledge-tiers/pledge-250-prisoners-scratchings.png" alt="Rewards / Pledge Tiers - Pledge 250 Prisoners Scratchings" loading="lazy">
-            </button>
-            <figcaption>Rewards / Pledge Tiers - Pledge 250 Prisoners Scratchings</figcaption>
-          </figure>
-          <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/pledge-tiers/pledge-500-creative-collaborator.png" data-lightbox-alt="Rewards / Pledge Tiers - Pledge 500 Creative Collaborator" data-lightbox-caption="Rewards / Pledge Tiers - Pledge 500 Creative Collaborator" aria-label="View larger image: Rewards / Pledge Tiers - Pledge 500 Creative Collaborator">
-              <img src="imgs/rewards/pledge-tiers/pledge-500-creative-collaborator.png" alt="Rewards / Pledge Tiers - Pledge 500 Creative Collaborator" loading="lazy">
-            </button>
-            <figcaption>Rewards / Pledge Tiers - Pledge 500 Creative Collaborator</figcaption>
           </figure>
           <figure class="gallery-slot">
             <button class="gallery-image-button" type="button" data-lightbox-src="imgs/rewards/port-ambush-cargo-tag-mockup.png" data-lightbox-alt="Rewards - Port Ambush Cargo Tag Mockup" data-lightbox-caption="Rewards - Port Ambush Cargo Tag Mockup" aria-label="View larger image: Rewards - Port Ambush Cargo Tag Mockup">
@@ -6749,14 +6675,14 @@
                   "caption": "Animated world / set-piece preview"
             },
             {
-                  "src": "imgs/rewards/beacon-bracelet-product-mockup.png",
-                  "alt": "Beacon bracelet product mockup",
-                  "caption": "Physical reward mockup: Beacon Bracelet"
+                  "src": "imgs/rewards/beacon-bracelet-marseille-mockup.png",
+                  "alt": "Marseille-inspired Beacon bracelet product mockup",
+                  "caption": "Concept mockup: Marseille Beacon Bracelet — final materials may differ"
             },
             {
                   "src": "imgs/rewards/a3-poster-product-mockup.png",
                   "alt": "A3 Divergency poster product mockup",
-                  "caption": "Physical reward mockup: A3 poster"
+                  "caption": "Concept mockup: A3 poster — final materials may differ"
             },
             {
                   "src": "imgs/items/massk.png",
@@ -6878,8 +6804,13 @@
             },
             {
                   "src": "imgs/items/poition.png",
-                  "alt": "Red treatment vial item symbol for the $70 Beta Fighter tier",
-                  "caption": "Tier symbol: $70 Beta Fighter"
+                  "alt": "Red treatment vial item symbol for the $70 Field Tester tier",
+                  "caption": "Tier symbol: $70 Field Tester"
+            },
+            {
+                  "src": "imgs/rewards/a3-poster-product-mockup.png",
+                  "alt": "A3 poster mockup for the $95 Poster Scout tier",
+                  "caption": "Tier symbol: $95 Poster Scout, EU only"
             },
             {
                   "src": "imgs/items/Barcalet.png",
@@ -6902,34 +6833,34 @@
                   "caption": "Physical reward mockup: A3 poster"
             },
             {
-                  "src": "imgs/rewards/beacon-bracelet-product-mockup.png",
-                  "alt": "Beacon bracelet product mockup",
-                  "caption": "Physical reward mockup: Beacon Bracelet"
+                  "src": "imgs/rewards/beacon-bracelet-marseille-mockup.png",
+                  "alt": "Marseille-inspired Beacon bracelet product mockup",
+                  "caption": "Concept mockup: Marseille Beacon Bracelet — final materials may differ"
             },
             {
                   "src": "imgs/rewards/bastonne-cell-key-cap-mockup.png",
                   "alt": "Bastonne cell key cap mockup",
-                  "caption": "Candidate physical add-on: Bastonne cell key cap"
+                  "caption": "Potential add-on concept — not included: Bastonne cell key cap"
             },
             {
                   "src": "imgs/rewards/bastonne-cell-key-keychain-mockup.png",
                   "alt": "Bastonne cell key keychain mockup",
-                  "caption": "Candidate physical add-on: Bastonne cell key keychain"
+                  "caption": "Potential add-on concept — not included: Bastonne cell key keychain"
             },
             {
                   "src": "imgs/rewards/divergency-daily-access-badge-mockup.png",
                   "alt": "Divergency Daily access badge mockup",
-                  "caption": "Candidate physical add-on: Divergency Daily access badge"
+                  "caption": "Potential add-on concept — not included: Divergency Daily access badge"
             },
             {
                   "src": "imgs/rewards/divergency-daily-cargo-tag-mockup.png",
                   "alt": "Divergency Daily cargo tag mockup",
-                  "caption": "Candidate physical add-on: Divergency Daily cargo tag"
+                  "caption": "Potential add-on concept — not included: Divergency Daily cargo tag"
             },
             {
                   "src": "imgs/rewards/stage1-evidence-pack-mockup.png",
                   "alt": "Stage 1 evidence pack mockup",
-                  "caption": "Digital reward preview: Stage 1 evidence pack"
+                  "caption": "Digital reward preview: Stage 1 Evidence Pack"
             },
             {
                   "src": "imgs/rewards/laundel-route-cloth-pass-mockup.png",
@@ -7155,9 +7086,9 @@
             "caption": "rewards - Bastonne Prisoner Id Pass Set Mockup"
       },
       {
-            "src": "imgs/rewards/beacon-bracelet-product-mockup.png",
-            "alt": "rewards - Beacon Bracelet Product Mockup",
-            "caption": "rewards - Beacon Bracelet Product Mockup"
+            "src": "imgs/rewards/beacon-bracelet-marseille-mockup.png",
+            "alt": "rewards - Beacon Bracelet Marseille Mockup",
+            "caption": "rewards - Beacon Bracelet Marseille Mockup"
       },
       {
             "src": "imgs/rewards/divergency-daily-access-badge-mockup.png",

@@ -11,20 +11,22 @@ Recommended reward ladder, aligned with the current Kickstarter page rewrite:
 | $5 | Signal Supporter | Digital | Campaign updates, one wallpaper, and name on the digital supporter wall | Month 6 + Month 24 | Wallpaper sample and supporter wall example |
 | $20 | Early Recruit, limited | Digital | Full PC digital game key at the early-backer price, wallpapers, avatar/icon pack, and mini lore dossier | Month 24 | Game key graphic, wallpaper sample, avatar/icon sample, dossier cover |
 | $25 | Digital Recruit | Digital | Full PC digital game key, wallpapers, avatar/icon pack, mini lore dossier, and supporter wall name | Month 24 | Same digital reward sample set as Early Recruit |
-| $40 | Digital Deluxe Pack | Digital | Digital Recruit rewards plus soundtrack, mini artbook, and Field Relics reward visual sheet | Month 24 | Soundtrack cover, mini artbook cover, Field Relics preview sheet |
-| $70 | Beta Fighter | Digital | Digital Deluxe Pack plus beta access, private feedback form, and beta tester credit listing | Month 19-24 | Beta badge, feedback form preview, beta credit example |
-| $120 | Collector's Pack, EU only | Digital + physical | Beta Fighter digital rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet | Month 24-26 | A3 poster product mockup, Beacon bracelet product mockup, and clearly separated candidate physical add-on mockups |
-| $250 | Prisoner's Scratchings, limited | Digital/experience | Beta Fighter rewards plus one approved short message or graffiti line on a Bastonne prison wall | Month 24 | Bastonne wall/graffiti placement mockup |
-| $500 | Creative Collaborator, limited | Digital/experience | Beta Fighter rewards plus one scoped cosmetic or background-lore contribution | Month 24 | Example cosmetic/icon/lore contribution mockup |
+| $40 | Digital Deluxe Pack | Digital | Digital Recruit rewards plus soundtrack, mini artbook, Digital Evidence Pack PDF, and Field Relics reward visual sheet | Month 24 | Soundtrack cover, mini artbook cover, Digital Evidence Pack preview, Field Relics preview sheet |
+| $70 | Field Tester | Digital | Digital Deluxe Pack plus beta access, private feedback form, and beta tester credit listing | Month 19-24 | Field Tester badge, feedback form preview, beta credit example |
+| $95 | Poster Scout, EU only | Digital + physical | Field Tester digital rewards plus one A3 Marseille/Divergency poster | Month 24-26 | A3 poster product mockup |
+| $120 | Collector's Pack, EU only | Digital + physical | Field Tester digital rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet | Month 24-26 | A3 poster and Beacon bracelet concept mockups |
+| $250 | Prisoner's Scratchings, limited | Digital/experience | Field Tester rewards plus one approved short message or graffiti line on a Bastonne prison wall | Month 24 | Bastonne wall/graffiti placement example |
+| $500 | Creative Collaborator, limited | Digital/experience | Field Tester rewards plus one tightly scoped cosmetic or background-lore contribution | Month 24 | Example cosmetic/icon/lore contribution |
 
 Reward promise rules:
 
 - Use the tier names, prices, and delivery windows from `Divergency_Kickstarter_Page_Rewrite.md` unless the campaign page is intentionally changed.
 - Do not use the old Act 1 tier naming on the public page unless the product scope returns to an Act 1-only release.
 - Do not sell exclusive combat power, exclusive playable characters, or paid stat advantages.
-- Keep the base physical launch promise to one A3 poster and one Beacon bracelet unless production quotes confirm more included items.
-- Treat the Bastonne cell key cap, Bastonne cell key keychain, Divergency Daily access badge, and Divergency Daily cargo tag as candidate physical add-ons or collector upgrades unless they are added to the reward table with price, delivery, and shipping rules.
-- Treat coaster sets, cloth passes, and evidence packs as visual concepts or future add-ons unless they are added to the reward table with price, delivery, and shipping rules.
+- Keep the guaranteed physical launch promise to one A3 poster and one Beacon bracelet.
+- Treat the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag as potential add-ons—not included rewards—unless they are added to the reward table with confirmed price, delivery, and shipping rules.
+- Treat coaster sets, cloth passes, and physical evidence packs as visual concepts or future add-ons unless they are added to the reward table with price, delivery, and shipping rules.
+- Treat the Digital Evidence Pack as a PDF/digital dossier, not a physical envelope or packet.
 
 ## Reward Visuals And Product Mockups
 
@@ -50,9 +52,13 @@ Caption to use: **Tier symbol: $25 Digital Recruit.** Mask of the Listening Rout
 
 Caption to use: **Tier symbol: $40 Digital Deluxe Pack.** Emerald Skull token used as the Field Relics anchor for soundtrack, mini artbook, lore dossier, wallpapers, and avatar icons.
 
-![Tier symbol: $70 Beta Fighter](<imgs/items/poition.png>)
+![Tier symbol: $70 Field Tester](<imgs/items/poition.png>)
 
-Caption to use: **Tier symbol: $70 Beta Fighter.** Red treatment vial used as the test-build symbol for beta access, private feedback, and beta tester credit.
+Caption to use: **Tier symbol: $70 Field Tester.** Red treatment vial used as the test-build symbol for beta access, private feedback, and beta tester credit.
+
+![Tier symbol: $95 Poster Scout, EU only](<imgs/rewards/a3-poster-product-mockup.png>)
+
+Caption to use: **Tier symbol: $95 Poster Scout, EU only.** A3 poster mockup used as the direct visual for the lighter physical poster tier.
 
 ![Tier symbol: $120 Collector's Pack, EU only](<imgs/items/Barcalet.png>)
 
@@ -66,39 +72,39 @@ Caption to use: **Tier symbol: $250 Prisoner's Scratchings.** Bastonne cloth pat
 
 Caption to use: **Tier symbol: $500 Creative Collaborator.** Worn field figure used as the collaboration symbol for one reviewed cosmetic or background-lore contribution.
 
-### Physical Collector's Pack Mockups
+### Guaranteed Physical Reward Concept Mockups
 
 ![Physical reward mockup: A3 Divergency poster](<imgs/rewards/a3-poster-product-mockup.png>)
 
-Caption to use: **Physical reward mockup: A3 Divergency poster.** Included only in the EU Collector's Pack unless offered later as an add-on.
+Caption to use: **Concept mockup — final materials may differ.** One A3 Divergency poster is included in the $95 Poster Scout and $120 Collector's Pack tiers, with EU shipping only.
 
-![Physical reward mockup: Beacon bracelet](<imgs/rewards/beacon-bracelet-product-mockup.png>)
+![Physical reward mockup: Beacon bracelet](<imgs/rewards/beacon-bracelet-marseille-mockup.png>)
 
-Caption to use: **Physical reward mockup: Beacon bracelet.** Included only in the EU Collector's Pack unless offered later as an add-on.
+Caption to use: **Concept mockup — final materials may differ.** One Marseille-inspired Beacon bracelet is included only in the $120 Collector's Pack, with EU shipping only.
 
-### Candidate Physical Add-On Mockups
+### Potential Add-Ons — Not Included In Any Pledge Yet
 
-![Candidate physical add-on mockup: Bastonne cell key cap](<imgs/rewards/bastonne-cell-key-cap-mockup.png>)
+![Potential add-on concept: Bastonne cell key cap](<imgs/rewards/bastonne-cell-key-cap-mockup.png>)
 
-Caption to use: **Candidate physical add-on mockup: Bastonne cell key cap.** A wearable Bastonne-themed collector item. Do not imply it ships in the Collector's Pack unless cap vendor quotes, sizing options, and replacement handling are confirmed.
+Caption to use: **Potential add-on concept — not included in any pledge.** A wearable Bastonne-themed item that requires a vendor sample, adjustable-fit confirmation, package weight, and replacement policy before it can be offered.
 
 ![Candidate physical add-on mockup: Bastonne cell key keychain](<imgs/rewards/bastonne-cell-key-keychain-mockup.png>)
 
-Caption to use: **Candidate physical add-on mockup: Bastonne cell key keychain.** A small physical reward candidate that fits the prison escape identity and may work well as an EU add-on if metal weight and packaging cost are manageable.
+Caption to use: **Potential add-on concept — not included in any pledge.** The Bastonne cell key keychain may work as an EU add-on after metal weight, packaging, minimum quantity, and shipping cost are confirmed.
 
 ![Candidate physical add-on mockup: Divergency Daily access badge](<imgs/rewards/divergency-daily-access-badge-mockup.png>)
 
-Caption to use: **Candidate physical add-on mockup: Divergency Daily access badge.** A lanyard-style badge concept for backers who want a practical branded object. Confirm print quality and supplier before promising it.
+Caption to use: **Potential add-on concept — not included in any pledge.** The Divergency Daily access badge requires a print sample, supplier quote, package weight, and durability check before it can be offered.
 
 ![Candidate physical add-on mockup: Divergency Daily cargo tag](<imgs/rewards/divergency-daily-cargo-tag-mockup.png>)
 
-Caption to use: **Candidate physical add-on mockup: Divergency Daily cargo tag.** A travel/cargo tag concept connected to Marseille routes and field-document identity. Confirm material durability before launch.
+Caption to use: **Potential add-on concept — not included in any pledge.** The Divergency Daily cargo tag requires material, print-durability, packaging, and shipping confirmation before it can be offered.
 
 ### Digital Reward And Optional Add-On Mockups
 
-![Digital reward preview: Stage 1 evidence pack / lore dossier style](<imgs/rewards/stage1-evidence-pack-mockup.png>)
+![Digital reward preview: Stage 1 Evidence Pack / lore dossier style](<imgs/rewards/stage1-evidence-pack-mockup.png>)
 
-Caption to use: **Digital reward preview: Stage 1 evidence pack / lore dossier style.** Use this to explain the mini lore dossier or Field Relics visual sheet, not as a guaranteed physical packet.
+Caption to use: **Digital reward preview: Stage 1 Evidence Pack / lore dossier style.** Use this to explain the PDF Digital Evidence Pack, mini lore dossier, or Field Relics visual sheet, not as a guaranteed physical packet.
 
 ![Reward concept mockup: Laundel route cloth pass](<imgs/rewards/laundel-route-cloth-pass-mockup.png>)
 
@@ -110,7 +116,9 @@ Caption to use: **Optional add-on concept mockup: Armorlite coaster set.** Do no
 
 ### Field Relics And In-World Reward Visuals
 
-Use these images to support wallpapers, avatar icons, lore dossier pages, supporter-wall badges, mini artbook pages, and the Field Relics reward visual sheet. These are not paid gameplay power.
+Use these images to support wallpapers, avatar icons, lore dossier pages, Digital Evidence Pack pages, supporter-wall badges, mini artbook pages, and the Field Relics reward visual sheet. These are not paid gameplay power.
+
+If any Field Relics appear inside the finished game, they should be normal discoverable or earnable items for all players. Backers may receive digital art, dossier pages, supporter badges, beta credit, approved graffiti, or scoped background/lore participation, but not exclusive weapons, stat boosts, playable characters, or combat advantages.
 
 ![Field Relics visual: Beacon bracelet icon](<imgs/items/Barcalet.png>)
 
@@ -148,21 +156,21 @@ Caption to use: **Field Relics visual: Worn field figure.** Use as supporter-wal
 
 - Every reward tier must have a matching visual or sample image before launch.
 - All pledge-tier item symbols, product mockups, optional concepts, and Field Relics item visuals listed above should appear in the reviewer page before launch.
-- Every physical mockup must include the word "mockup" in the caption until vendor samples are confirmed.
+- Every photoreal product image must say "Concept mockup — final materials may differ" until vendor samples are confirmed.
 - Every digital reward preview must state its format: JPG/PNG, PDF, MP3/WAV, Steam/platform key, or secure download.
 - Images should be clean, bright enough to read, and free of debug UI unless the caption clearly says it is work-in-progress.
 - Physical reward images should show scale or context where possible: A3 poster size, bracelet material direction, cap sizing, keychain scale, badge/lanyard materials, cargo tag materials, and pack contents.
 - Optional concept mockups must be grouped separately from guaranteed rewards.
-- Do not mix in-game discoverable relics with paid reward promises unless the copy clearly says the object is only a visual theme.
+- Do not mix in-game discoverable relics with paid reward promises unless the copy clearly says the object is only a visual theme, lore reward, or non-exclusive in-game discoverable.
 
 ## Page Placement Checklist
 
 Recommended order on the Kickstarter page:
 
 1. Reward tier table.
-2. One image block for digital rewards: wallpaper, avatar/icon pack, lore dossier, soundtrack, mini artbook, and Field Relics sheet.
-3. One image block for the physical Collector's Pack: A3 poster and Beacon bracelet mockups.
-4. One clearly labeled candidate physical add-on block for the Bastonne cell key cap, Bastonne cell key keychain, Divergency Daily access badge, and Divergency Daily cargo tag.
+2. One image block for digital rewards: wallpaper, avatar/icon pack, lore dossier, Digital Evidence Pack, soundtrack, mini artbook, and Field Relics sheet.
+3. One guaranteed-reward image block for the A3 poster and Beacon bracelet concept mockups.
+4. One clearly separated "Potential add-ons — not included yet" block for the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag.
 5. One clearly labeled concept/add-on block for coaster set, cloth pass, or evidence pack if those assets are shown.
 6. Shipping and fulfillment notes directly below the physical reward visuals.
 7. Creative tier scope and approval rules near the $250 and $500 tiers.
@@ -171,7 +179,8 @@ Recommended order on the Kickstarter page:
 
 - Physical rewards ship to EU countries only at launch.
 - Ship-from region: France/EU.
-- Poster or Collector's Pack estimated shipping: EUR 8-15 depending on EU destination.
+- Poster Scout or poster-only shipment estimated shipping: EUR 8-15 depending on EU destination.
+- Collector's Pack estimated shipping: EUR 10-18 depending on EU destination.
 - Bracelet, cap, keychain, badge, cargo tag, or combined collector shipment estimated shipping: EUR 10-18 depending on EU destination.
 - Add final country-by-country shipping values before launch if Kickstarter requires exact pricing.
 - Use Kickstarter surveys or Pledge Manager for addresses and final reward preferences.
@@ -208,11 +217,11 @@ Use this scope on the limited creative tiers so the reward stays manageable.
 
 Prepare these fields before launching Pledge Manager:
 
-- Reward item categories: digital key, digital art/audio pack, beta access, physical Collector's Pack, candidate physical add-ons, creative submission.
-- Market value for poster and bracelet.
+- Reward item categories: digital key, digital art/audio pack, Digital Evidence Pack, beta access, Poster Scout, physical Collector's Pack, potential physical add-ons, creative submission.
+- Market value for the poster and bracelet, plus any add-on that is confirmed before launch.
 - EU shipping origins and destination countries.
 - Backer survey questions for approved display name, supporter wall name, credits name, and creative tier submissions.
-- Add-on selection fields for Bastonne cell key cap, Bastonne cell key keychain, Divergency Daily access badge, and Divergency Daily cargo tag if those add-ons are confirmed before launch.
+- Add-on selection fields for the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag only if those add-ons are confirmed before launch.
 - Digital file/code delivery method.
 - Address lock date before physical production.
 - Replacement policy for damaged or lost physical parcels.
@@ -241,6 +250,6 @@ Ask 3-5 trusted readers to answer these after reading the page:
 - EU-only shipping is clearly stated on physical tiers.
 - Budget and timeline are visible.
 - Risks & Challenges are complete.
-- The A3 poster and Beacon bracelet mockups are shown clearly in the physical reward section.
+- The A3 poster and Beacon bracelet concept mockups are shown clearly in the guaranteed physical reward section.
 - Optional product mockups do not imply extra physical rewards unless those items are priced, budgeted, and listed in a tier or add-on.
 - The $250 and $500 creative tiers have scope limits and approval rules.
