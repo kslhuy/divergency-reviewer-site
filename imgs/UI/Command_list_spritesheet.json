@@ -1,0 +1,664 @@
+{
+  "image": "Command_list_spritesheet.png",
+  "source": "imgs/UI/Command_list_generated.png",
+  "source_size": {
+    "w": 1621,
+    "h": 970
+  },
+  "size": {
+    "w": 2016,
+    "h": 869
+  },
+  "padding": 4,
+  "sprite_count": 37,
+  "packing": "MaxRects best-short-side-fit, non-rotated, exact non-power-of-two transparent RGBA atlas",
+  "sprites": {
+    "menu_top_frame_bar": {
+      "group": "frame",
+      "frame": {
+        "x": 0,
+        "y": 826,
+        "w": 1238,
+        "h": 37
+      },
+      "source_rect": {
+        "x": 192,
+        "y": 38,
+        "w": 1238,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "menu_top_left_corner_ornament": {
+      "group": "frame",
+      "frame": {
+        "x": 1766,
+        "y": 484,
+        "w": 71,
+        "h": 65
+      },
+      "source_rect": {
+        "x": 192,
+        "y": 38,
+        "w": 71,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "menu_top_right_corner_ornament": {
+      "group": "frame",
+      "frame": {
+        "x": 1766,
+        "y": 415,
+        "w": 72,
+        "h": 65
+      },
+      "source_rect": {
+        "x": 1357,
+        "y": 38,
+        "w": 72,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "menu_left_chain_hanger": {
+      "group": "frame",
+      "frame": {
+        "x": 1704,
+        "y": 349,
+        "w": 58,
+        "h": 221
+      },
+      "source_rect": {
+        "x": 150,
+        "y": 95,
+        "w": 58,
+        "h": 221
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "menu_left_purple_banner_full": {
+      "group": "frame",
+      "frame": {
+        "x": 1574,
+        "y": 349,
+        "w": 61,
+        "h": 217
+      },
+      "source_rect": {
+        "x": 149,
+        "y": 298,
+        "w": 61,
+        "h": 217
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "menu_right_chain_hanger": {
+      "group": "frame",
+      "frame": {
+        "x": 1957,
+        "y": 349,
+        "w": 59,
+        "h": 221
+      },
+      "source_rect": {
+        "x": 1405,
+        "y": 95,
+        "w": 59,
+        "h": 221
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "menu_right_purple_banner_full": {
+      "group": "frame",
+      "frame": {
+        "x": 1639,
+        "y": 349,
+        "w": 61,
+        "h": 217
+      },
+      "source_rect": {
+        "x": 1404,
+        "y": 298,
+        "w": 61,
+        "h": 217
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "menu_bottom_chain": {
+      "group": "frame",
+      "frame": {
+        "x": 598,
+        "y": 778,
+        "w": 1110,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 237,
+        "y": 782,
+        "w": 1110,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "menu_bottom_center_gears": {
+      "group": "frame",
+      "frame": {
+        "x": 1766,
+        "y": 349,
+        "w": 181,
+        "h": 62
+      },
+      "source_rect": {
+        "x": 720,
+        "y": 777,
+        "w": 181,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "menu_bottom_controls_panel_blank": {
+      "group": "frame",
+      "frame": {
+        "x": 1047,
+        "y": 584,
+        "w": 906,
+        "h": 78
+      },
+      "source_rect": {
+        "x": 357,
+        "y": 851,
+        "w": 906,
+        "h": 78
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_bottom_controls"
+    },
+    "portrait_panel_blank": {
+      "group": "header",
+      "frame": {
+        "x": 1450,
+        "y": 310,
+        "w": 120,
+        "h": 120
+      },
+      "source_rect": {
+        "x": 239,
+        "y": 75,
+        "w": 120,
+        "h": 120
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_portrait_panel"
+    },
+    "portrait_deep": {
+      "group": "characters",
+      "frame": {
+        "x": 1450,
+        "y": 434,
+        "w": 96,
+        "h": 95
+      },
+      "source_rect": {
+        "x": 251,
+        "y": 84,
+        "w": 96,
+        "h": 95
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "player_status_chevrons": {
+      "group": "header",
+      "frame": {
+        "x": 1957,
+        "y": 574,
+        "w": 59,
+        "h": 25
+      },
+      "source_rect": {
+        "x": 384,
+        "y": 124,
+        "w": 59,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "title_command_list": {
+      "group": "header",
+      "frame": {
+        "x": 598,
+        "y": 712,
+        "w": 388,
+        "h": 50
+      },
+      "source_rect": {
+        "x": 620,
+        "y": 75,
+        "w": 388,
+        "h": 50
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "title_divider_full": {
+      "group": "header",
+      "frame": {
+        "x": 1242,
+        "y": 837,
+        "w": 473,
+        "h": 17
+      },
+      "source_rect": {
+        "x": 576,
+        "y": 132,
+        "w": 473,
+        "h": 17
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "title_divider_left": {
+      "group": "header",
+      "frame": {
+        "x": 1719,
+        "y": 837,
+        "w": 225,
+        "h": 14
+      },
+      "source_rect": {
+        "x": 576,
+        "y": 132,
+        "w": 225,
+        "h": 14
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "title_divider_right": {
+      "group": "header",
+      "frame": {
+        "x": 1719,
+        "y": 855,
+        "w": 225,
+        "h": 14
+      },
+      "source_rect": {
+        "x": 825,
+        "y": 132,
+        "w": 225,
+        "h": 14
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "title_divider_gem": {
+      "group": "header",
+      "frame": {
+        "x": 1645,
+        "y": 666,
+        "w": 35,
+        "h": 31
+      },
+      "source_rect": {
+        "x": 797,
+        "y": 122,
+        "w": 35,
+        "h": 31
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "tab_special_moves_active": {
+      "group": "tabs",
+      "frame": {
+        "x": 1712,
+        "y": 780,
+        "w": 278,
+        "h": 53
+      },
+      "source_rect": {
+        "x": 382,
+        "y": 177,
+        "w": 278,
+        "h": 53
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "tab_normal_moves": {
+      "group": "tabs",
+      "frame": {
+        "x": 1712,
+        "y": 723,
+        "w": 281,
+        "h": 53
+      },
+      "source_rect": {
+        "x": 672,
+        "y": 177,
+        "w": 281,
+        "h": 53
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "tab_common_moves": {
+      "group": "tabs",
+      "frame": {
+        "x": 1712,
+        "y": 666,
+        "w": 281,
+        "h": 53
+      },
+      "source_rect": {
+        "x": 964,
+        "y": 177,
+        "w": 281,
+        "h": 53
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "tab_active_diamond": {
+      "group": "tabs",
+      "frame": {
+        "x": 1985,
+        "y": 310,
+        "w": 31,
+        "h": 25
+      },
+      "source_rect": {
+        "x": 508,
+        "y": 214,
+        "w": 31,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "command_list_panel_full": {
+      "group": "command_list",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 595,
+        "h": 533
+      },
+      "source_rect": {
+        "x": 255,
+        "y": 252,
+        "w": 595,
+        "h": 533
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_command_panel"
+    },
+    "command_row_selected_blank": {
+      "group": "command_list",
+      "frame": {
+        "x": 0,
+        "y": 706,
+        "w": 594,
+        "h": 111
+      },
+      "source_rect": {
+        "x": 255,
+        "y": 253,
+        "w": 594,
+        "h": 111
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_selected_row"
+    },
+    "command_row_normal_blank": {
+      "group": "command_list",
+      "frame": {
+        "x": 1047,
+        "y": 666,
+        "w": 594,
+        "h": 108
+      },
+      "source_rect": {
+        "x": 256,
+        "y": 383,
+        "w": 594,
+        "h": 108
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_normal_row"
+    },
+    "command_row_empty_area": {
+      "group": "command_list",
+      "frame": {
+        "x": 0,
+        "y": 537,
+        "w": 594,
+        "h": 165
+      },
+      "source_rect": {
+        "x": 256,
+        "y": 619,
+        "w": 594,
+        "h": 165
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "command_scroll_markers": {
+      "group": "command_list",
+      "frame": {
+        "x": 1550,
+        "y": 434,
+        "w": 18,
+        "h": 145
+      },
+      "source_rect": {
+        "x": 856,
+        "y": 381,
+        "w": 18,
+        "h": 145
+      },
+      "rotated": false,
+      "trimmed": false
+    },
+    "detail_panel_full": {
+      "group": "details",
+      "frame": {
+        "x": 599,
+        "y": 0,
+        "w": 465,
+        "h": 511
+      },
+      "source_rect": {
+        "x": 891,
+        "y": 248,
+        "w": 465,
+        "h": 511
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_detail_panel"
+    },
+    "move_preview_window": {
+      "group": "details",
+      "frame": {
+        "x": 1527,
+        "y": 0,
+        "w": 455,
+        "h": 306
+      },
+      "source_rect": {
+        "x": 900,
+        "y": 248,
+        "w": 455,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_preview_window"
+    },
+    "move_preview_viewport_background": {
+      "group": "details",
+      "frame": {
+        "x": 1068,
+        "y": 310,
+        "w": 378,
+        "h": 270
+      },
+      "source_rect": {
+        "x": 927,
+        "y": 270,
+        "w": 378,
+        "h": 270
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_preview_viewport"
+    },
+    "move_preview_character_deep_layer": {
+      "group": "characters",
+      "frame": {
+        "x": 1068,
+        "y": 0,
+        "w": 455,
+        "h": 306
+      },
+      "source_rect": {
+        "x": 900,
+        "y": 248,
+        "w": 455,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "preview_character_layer",
+      "note": "Same canvas size as move_preview_window so it can be overlaid or replaced per character."
+    },
+    "detail_text_panel_blank": {
+      "group": "details",
+      "frame": {
+        "x": 599,
+        "y": 515,
+        "w": 444,
+        "h": 193
+      },
+      "source_rect": {
+        "x": 902,
+        "y": 558,
+        "w": 444,
+        "h": 193
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_detail_text_panel"
+    },
+    "detail_row_blank": {
+      "group": "details",
+      "frame": {
+        "x": 1574,
+        "y": 310,
+        "w": 407,
+        "h": 35
+      },
+      "source_rect": {
+        "x": 922,
+        "y": 599,
+        "w": 407,
+        "h": 35
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_detail_row"
+    },
+    "input_keycap_blank": {
+      "group": "inputs",
+      "frame": {
+        "x": 990,
+        "y": 712,
+        "w": 42,
+        "h": 37
+      },
+      "source_rect": {
+        "x": 778,
+        "y": 273,
+        "w": 42,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": false,
+      "process": "blank_keycap"
+    },
+    "input_icon_circle_blank": {
+      "group": "inputs",
+      "frame": {
+        "x": 1957,
+        "y": 603,
+        "w": 35,
+        "h": 36
+      },
+      "source_rect": {
+        "x": 288,
+        "y": 314,
+        "w": 35,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": false,
+      "mask": "ellipse",
+      "process": "blank_input_circle"
+    },
+    "bottom_icon_b": {
+      "group": "bottom_controls",
+      "frame": {
+        "x": 1498,
+        "y": 533,
+        "w": 43,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 573,
+        "y": 861,
+        "w": 43,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "mask": "ellipse"
+    },
+    "bottom_icon_r": {
+      "group": "bottom_controls",
+      "frame": {
+        "x": 1450,
+        "y": 533,
+        "w": 44,
+        "h": 44
+      },
+      "source_rect": {
+        "x": 817,
+        "y": 861,
+        "w": 44,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": false,
+      "mask": "ellipse"
+    }
+  },
+  "notes": "Reusable command-list UI crops from the flattened generated source. Skill-specific row text was cleared into blank templates, and the move preview is split into background and character layers."
+}

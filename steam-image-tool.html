@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steam Screenshot Formatter | TriLinkage</title>
+  <meta name="description" content="Crop, resize, preview, and export screenshots in Steam's 16:9 format without uploading them.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1118;
+      --panel: #121c27;
+      --panel-2: #172433;
+      --line: #2b4155;
+      --line-bright: #467394;
+      --ink: #f4f8fb;
+      --muted: #9db0c0;
+      --blue: #66c0f4;
+      --blue-strong: #1a9fff;
+      --green: #a4d007;
+      --danger: #ff6b6b;
+      --radius: 14px;
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.32);
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "Cascadia Mono", Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% -10%, rgba(26, 159, 255, 0.2), transparent 34rem),
+        radial-gradient(circle at 100% 15%, rgba(102, 192, 244, 0.09), transparent 30rem),
+        linear-gradient(145deg, #0b1118, #101923 55%, #0a1016);
+      color: var(--ink);
+      font-family: var(--sans);
+    }
+
+    button, input, select { font: inherit; }
+    button, select, input[type="range"] { cursor: pointer; }
+    button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible {
+      outline: 3px solid rgba(102, 192, 244, 0.45);
+      outline-offset: 2px;
+    }
+
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .brand { display: flex; gap: 12px; align-items: center; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      aspect-ratio: 1;
+      border: 1px solid var(--line-bright);
+      border-radius: 50%;
+      background: linear-gradient(145deg, #1e91d5, #13273a);
+      box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.05);
+      font-weight: 900;
+      letter-spacing: -0.08em;
+    }
+    .brand strong, .brand small { display: block; }
+    .brand strong { letter-spacing: 0.02em; }
+    .brand small { margin-top: 2px; color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; }
+    .back-link { color: var(--blue); text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+
+    .hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: end; margin-bottom: 22px; }
+    .eyebrow { margin: 0 0 8px; color: var(--blue); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(2rem, 5vw, 4.2rem); line-height: 0.98; letter-spacing: -0.045em; }
+    .intro { max-width: 720px; margin: 18px 0 0; color: var(--muted); font-size: 1.06rem; line-height: 1.65; }
+    .privacy {
+      align-self: start;
+      padding: 9px 12px;
+      border: 1px solid rgba(164, 208, 7, 0.34);
+      border-radius: 999px;
+      color: #cce970;
+      background: rgba(164, 208, 7, 0.08);
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .requirements { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 24px 0; }
+    .requirement {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(18, 28, 39, 0.75);
+    }
+    .requirement b { color: var(--blue); font-family: var(--mono); font-size: 1.02rem; }
+    .requirement span { color: var(--muted); font-size: 0.82rem; }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(260px, 330px) minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(23, 36, 51, 0.94), rgba(15, 25, 35, 0.96));
+      box-shadow: var(--shadow);
+    }
+    .controls { position: sticky; top: 16px; padding: 20px; }
+    .controls h2, .queue-head h2 { margin: 0; font-size: 1rem; }
+    .control { display: grid; gap: 8px; margin-top: 18px; }
+    .control-row { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+    .control label, .control legend { color: #d9e4ec; font-size: 0.83rem; font-weight: 750; }
+    .control output { color: var(--blue); font-family: var(--mono); font-size: 0.78rem; }
+    select {
+      width: 100%;
+      min-height: 43px;
+      padding: 0 38px 0 12px;
+      border: 1px solid var(--line-bright);
+      border-radius: 8px;
+      background: #0d1720;
+      color: var(--ink);
+    }
+    input[type="range"] { width: 100%; accent-color: var(--blue-strong); }
+    .segmented { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .mode-button {
+      min-height: 43px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0d1720;
+      color: var(--muted);
+    }
+    .mode-button.is-active { border-color: var(--blue); background: rgba(26, 159, 255, 0.14); color: var(--ink); }
+    .check { display: flex; gap: 9px; align-items: center; color: var(--muted); font-size: 0.82rem; }
+    .check input { width: 17px; height: 17px; accent-color: var(--blue-strong); }
+    .hint { margin: 7px 0 0; color: #7f95a6; font-size: 0.75rem; line-height: 1.5; }
+
+    .primary, .secondary, .download {
+      min-height: 44px;
+      border-radius: 8px;
+      font-weight: 800;
+    }
+    .primary {
+      width: 100%;
+      margin-top: 22px;
+      border: 0;
+      background: linear-gradient(90deg, #75b022, #a4d007);
+      color: #172100;
+      box-shadow: 0 8px 20px rgba(164, 208, 7, 0.18);
+    }
+    .primary:disabled, .download:disabled { cursor: not-allowed; filter: grayscale(1); opacity: 0.48; }
+    .secondary { border: 1px solid var(--line-bright); background: #132535; color: var(--ink); padding: 0 14px; }
+
+    .queue { min-width: 0; padding: 20px; }
+    .queue-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .queue-count { color: var(--muted); font-size: 0.82rem; }
+    .drop-zone {
+      display: grid;
+      place-items: center;
+      min-height: 290px;
+      padding: 26px;
+      border: 2px dashed var(--line-bright);
+      border-radius: 12px;
+      background:
+        linear-gradient(rgba(102, 192, 244, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(102, 192, 244, 0.035) 1px, transparent 1px),
+        rgba(9, 17, 24, 0.6);
+      background-size: 24px 24px;
+      text-align: center;
+      transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+    }
+    .drop-zone.is-dragging { border-color: var(--green); background-color: rgba(164, 208, 7, 0.08); transform: scale(1.006); }
+    .drop-icon {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 16px;
+      border: 1px solid var(--line-bright);
+      border-radius: 18px;
+      background: rgba(26, 159, 255, 0.1);
+      color: var(--blue);
+      font-size: 1.8rem;
+    }
+    .drop-zone h3 { margin: 0; font-size: 1.2rem; }
+    .drop-zone p { margin: 8px 0 18px; color: var(--muted); font-size: 0.88rem; }
+    #file-input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+    .cards { display: grid; gap: 14px; }
+    .image-card {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.9fr) minmax(230px, 1.1fr);
+      gap: 16px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: rgba(8, 15, 21, 0.55);
+    }
+    .preview-wrap { overflow: hidden; align-self: center; border: 1px solid #24394c; border-radius: 7px; background: #05090d; }
+    .preview-wrap canvas { display: block; width: 100%; aspect-ratio: 16 / 9; }
+    .card-info { min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+    .card-title-row { display: flex; gap: 10px; justify-content: space-between; align-items: start; }
+    .card-title { overflow: hidden; margin: 0; font-size: 0.96rem; text-overflow: ellipsis; white-space: nowrap; }
+    .remove {
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: transparent;
+      color: var(--muted);
+    }
+    .remove:hover { border-color: var(--danger); color: var(--danger); }
+    .meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 14px; }
+    .tag { padding: 4px 7px; border-radius: 5px; background: #172738; color: var(--muted); font-family: var(--mono); font-size: 0.7rem; }
+    .tag.good { color: #cce970; background: rgba(164, 208, 7, 0.09); }
+    .card-actions { display: flex; gap: 8px; }
+    .download { flex: 1; border: 1px solid #6e9721; background: #21320b; color: #dff493; }
+    .status { min-height: 1.3em; margin: 10px 0 0; color: var(--muted); font-size: 0.75rem; }
+    .status.error { color: var(--danger); }
+
+    .empty-note { display: none; margin-top: 14px; color: var(--muted); font-size: 0.8rem; text-align: center; }
+    footer { margin-top: 24px; color: #718697; font-size: 0.76rem; text-align: center; }
+
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; gap: 16px; }
+      .privacy { justify-self: start; }
+      .requirements { grid-template-columns: 1fr; }
+      .workspace { grid-template-columns: 1fr; }
+      .controls { position: static; }
+      .image-card { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .shell { width: min(100% - 20px, 1180px); padding-top: 16px; }
+      .topbar { align-items: flex-start; }
+      .back-link { font-size: 0.8rem; }
+      h1 { font-size: 2.35rem; }
+      .queue, .controls { padding: 14px; }
+      .drop-zone { min-height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">TL</span>
+        <span><strong>TriLinkage</strong><small>Creator toolkit</small></span>
+      </div>
+      <a class="back-link" href="Divergency_Reviewer_Tabs.html">&larr; Back to Divergency</a>
+    </div>
+
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Steam screenshot formatter</p>
+        <h1>Ready for Steam.<br>In a few seconds.</h1>
+        <p class="intro">Drop screenshots, choose how they fit, and export clean 16:9 files at Steam-ready resolution. Batch conversion works right here in your browser.</p>
+      </div>
+      <span class="privacy">&#9679; 100% local — no uploads</span>
+    </header>
+
+    <section class="requirements" aria-label="Steam screenshot requirements">
+      <div class="requirement"><b>16:9</b><span>Required aspect ratio</span></div>
+      <div class="requirement"><b>&ge; 1920&times;1080</b><span>Minimum output size</span></div>
+      <div class="requirement"><b>PNG / JPG</b><span>Common image formats</span></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel controls" aria-labelledby="settings-title">
+        <h2 id="settings-title">Export settings</h2>
+
+        <div class="control">
+          <label for="size">Output size</label>
+          <select id="size">
+            <option value="1920x1080">1920 &times; 1080 — Full HD</option>
+            <option value="2560x1440">2560 &times; 1440 — QHD</option>
+            <option value="3840x2160">3840 &times; 2160 — 4K</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label>Fit mode</label>
+          <div class="segmented" role="group" aria-label="Fit mode">
+            <button class="mode-button is-active" type="button" data-mode="cover" aria-pressed="true">Crop to fill</button>
+            <button class="mode-button" type="button" data-mode="contain" aria-pressed="false">Fit + bars</button>
+          </div>
+          <p class="hint" id="mode-hint">Fills the frame and trims only the overflow.</p>
+        </div>
+
+        <div class="control" id="focus-control">
+          <div class="control-row"><label for="focus-x">Horizontal focus</label><output id="focus-x-value">Center</output></div>
+          <input id="focus-x" type="range" min="0" max="100" value="50">
+          <div class="control-row"><label for="focus-y">Vertical focus</label><output id="focus-y-value">Center</output></div>
+          <input id="focus-y" type="range" min="0" max="100" value="50">
+        </div>
+
+        <div class="control">
+          <label for="format">File format</label>
+          <select id="format">
+            <option value="png">PNG — lossless</option>
+            <option value="jpeg">JPG — smaller file</option>
+          </select>
+        </div>
+
+        <div class="control" id="quality-control" hidden>
+          <div class="control-row"><label for="quality">JPG quality</label><output id="quality-value">92%</output></div>
+          <input id="quality" type="range" min="65" max="100" value="92">
+        </div>
+
+        <div class="control">
+          <label class="check"><input id="pixel-art" type="checkbox" checked> Pixel art / nearest-neighbor upscale</label>
+          <p class="hint">Use this for crisp pixel art. Leave it off for normal 3D screenshots.</p>
+        </div>
+
+        <button class="primary" id="download-all" type="button" disabled>Download all</button>
+      </aside>
+
+      <section class="panel queue" aria-labelledby="queue-title">
+        <div class="queue-head">
+          <div><h2 id="queue-title">Screenshot queue</h2><span class="queue-count" id="queue-count">No images yet</span></div>
+          <button class="secondary" id="add-more" type="button" hidden>Add more</button>
+        </div>
+
+        <input id="file-input" type="file" accept="image/png,image/jpeg,image/webp" multiple>
+        <label class="drop-zone" id="drop-zone" for="file-input">
+          <div>
+            <span class="drop-icon" aria-hidden="true">&#8593;</span>
+            <h3>Drop screenshots here</h3>
+            <p>PNG, JPG, or WebP &middot; select several at once</p>
+            <span class="secondary" style="display:inline-flex;align-items:center">Choose images</span>
+          </div>
+        </label>
+        <div class="cards" id="cards"></div>
+        <p class="empty-note" id="empty-note">Add screenshots to begin.</p>
+      </section>
+    </section>
+
+    <footer>Exports are resized to the selected 16:9 resolution. Always review the preview before submitting to Steam.</footer>
+  </main>
+
+  <script>
+    const input = document.getElementById("file-input");
+    const dropZone = document.getElementById("drop-zone");
+    const cards = document.getElementById("cards");
+    const queueCount = document.getElementById("queue-count");
+    const addMore = document.getElementById("add-more");
+    const downloadAll = document.getElementById("download-all");
+    const sizeSelect = document.getElementById("size");
+    const formatSelect = document.getElementById("format");
+    const qualityControl = document.getElementById("quality-control");
+    const quality = document.getElementById("quality");
+    const qualityValue = document.getElementById("quality-value");
+    const pixelArt = document.getElementById("pixel-art");
+    const focusControl = document.getElementById("focus-control");
+    const focusX = document.getElementById("focus-x");
+    const focusY = document.getElementById("focus-y");
+    const focusXValue = document.getElementById("focus-x-value");
+    const focusYValue = document.getElementById("focus-y-value");
+    const modeHint = document.getElementById("mode-hint");
+    const items = [];
+    let mode = "cover";
+    let renderFrame = 0;
+
+    function outputSize() {
+      const [width, height] = sizeSelect.value.split("x").map(Number);
+      return { width, height };
+    }
+
+    function focusLabel(value, low, high) {
+      const number = Number(value);
+      if (number < 35) return low;
+      if (number > 65) return high;
+      return "Center";
+    }
+
+    function syncControls() {
+      formatSelect.value === "jpeg" ? qualityControl.removeAttribute("hidden") : qualityControl.setAttribute("hidden", "");
+      qualityValue.value = quality.value + "%";
+      focusXValue.value = focusLabel(focusX.value, "Left", "Right");
+      focusYValue.value = focusLabel(focusY.value, "Top", "Bottom");
+      mode === "cover" ? focusControl.removeAttribute("hidden") : focusControl.setAttribute("hidden", "");
+      modeHint.textContent = mode === "cover"
+        ? "Fills the frame and trims only the overflow."
+        : "Keeps the whole image and adds dark bars where needed.";
+    }
+
+    function setMode(nextMode) {
+      mode = nextMode;
+      document.querySelectorAll("[data-mode]").forEach((button) => {
+        const active = button.dataset.mode === mode;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+      syncControls();
+      schedulePreviews();
+    }
+
+    function loadImage(file) {
+      return new Promise((resolve, reject) => {
+        const url = URL.createObjectURL(file);
+        const image = new Image();
+        image.onload = () => resolve({ image, url });
+        image.onerror = () => { URL.revokeObjectURL(url); reject(new Error("This image could not be read.")); };
+        image.src = url;
+      });
+    }
+
+    function safeBaseName(name) {
+      return name.replace(/\.[^.]+$/, "").replace(/[^a-z0-9_-]+/gi, "_").replace(/^_+|_+$/g, "") || "screenshot";
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function drawOutput(context, width, height, image) {
+      context.clearRect(0, 0, width, height);
+      context.imageSmoothingEnabled = !pixelArt.checked;
+      context.imageSmoothingQuality = "high";
+
+      const scale = mode === "cover"
+        ? Math.max(width / image.naturalWidth, height / image.naturalHeight)
+        : Math.min(width / image.naturalWidth, height / image.naturalHeight);
+      const drawWidth = image.naturalWidth * scale;
+      const drawHeight = image.naturalHeight * scale;
+      const x = (width - drawWidth) * (mode === "cover" ? Number(focusX.value) / 100 : 0.5);
+      const y = (height - drawHeight) * (mode === "cover" ? Number(focusY.value) / 100 : 0.5);
+
+      if (mode === "contain") {
+        const gradient = context.createLinearGradient(0, 0, width, height);
+        gradient.addColorStop(0, "#0a1118");
+        gradient.addColorStop(1, "#172432");
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, width, height);
+      }
+      context.drawImage(image, x, y, drawWidth, drawHeight);
+    }
+
+    function renderPreview(item) {
+      const canvas = item.card.querySelector("canvas");
+      const width = 640;
+      const height = 360;
+      canvas.width = width;
+      canvas.height = height;
+      drawOutput(canvas.getContext("2d"), width, height, item.image);
+      const target = outputSize();
+      item.card.querySelector("[data-output]").textContent = target.width + "×" + target.height;
+      item.card.querySelector("[data-fit]").textContent = mode === "cover" ? "cropped" : "full image";
+    }
+
+    function schedulePreviews() {
+      cancelAnimationFrame(renderFrame);
+      renderFrame = requestAnimationFrame(() => items.forEach(renderPreview));
+    }
+
+    function updateQueue() {
+      const count = items.length;
+      queueCount.textContent = count ? count + (count === 1 ? " image" : " images") : "No images yet";
+      dropZone.hidden = count > 0;
+      addMore.hidden = count === 0;
+      downloadAll.disabled = count === 0;
+      document.getElementById("empty-note").style.display = "none";
+    }
+
+    function createCard(file, image, url) {
+      const card = document.createElement("article");
+      card.className = "image-card";
+      const escapedName = escapeHtml(file.name);
+      card.innerHTML = `
+        <div class="preview-wrap"><canvas aria-label="16:9 preview of ${escapedName}"></canvas></div>
+        <div class="card-info">
+          <div class="card-title-row"><h3 class="card-title" title="${escapedName}">${escapedName}</h3><button class="remove" type="button" aria-label="Remove ${escapedName}">&times;</button></div>
+          <div class="meta"><span class="tag">${image.naturalWidth}×${image.naturalHeight} source</span><span class="tag good" data-output></span><span class="tag" data-fit></span></div>
+          <div class="card-actions"><button class="download" type="button">Download converted image</button></div>
+          <p class="status" aria-live="polite">Ready to export.</p>
+        </div>`;
+      const item = { file, image, url, card };
+      card.querySelector(".remove").addEventListener("click", () => removeItem(item));
+      card.querySelector(".download").addEventListener("click", () => downloadItem(item));
+      cards.append(card);
+      items.push(item);
+      renderPreview(item);
+    }
+
+    function removeItem(item) {
+      const index = items.indexOf(item);
+      if (index !== -1) items.splice(index, 1);
+      URL.revokeObjectURL(item.url);
+      item.card.remove();
+      updateQueue();
+    }
+
+    async function addFiles(fileList) {
+      const files = Array.from(fileList).filter((file) => file.type.startsWith("image/"));
+      for (const file of files) {
+        try {
+          const loaded = await loadImage(file);
+          createCard(file, loaded.image, loaded.url);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      input.value = "";
+      updateQueue();
+    }
+
+    function canvasBlob(canvas) {
+      const isJpeg = formatSelect.value === "jpeg";
+      const mime = isJpeg ? "image/jpeg" : "image/png";
+      const amount = isJpeg ? Number(quality.value) / 100 : undefined;
+      return new Promise((resolve, reject) => canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error("Export failed.")), mime, amount));
+    }
+
+    async function exportItem(item) {
+      const target = outputSize();
+      const canvas = document.createElement("canvas");
+      canvas.width = target.width;
+      canvas.height = target.height;
+      drawOutput(canvas.getContext("2d"), target.width, target.height, item.image);
+      const blob = await canvasBlob(canvas);
+      const extension = formatSelect.value === "jpeg" ? "jpg" : "png";
+      const fileName = safeBaseName(item.file.name) + "_steam_" + target.width + "x" + target.height + "." + extension;
+      return { blob, fileName };
+    }
+
+    function saveBlob(blob, fileName) {
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = fileName;
+      document.body.append(anchor);
+      anchor.click();
+      anchor.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    async function downloadItem(item) {
+      const button = item.card.querySelector(".download");
+      const status = item.card.querySelector(".status");
+      button.disabled = true;
+      status.classList.remove("error");
+      status.textContent = "Rendering full-size image…";
+      try {
+        const result = await exportItem(item);
+        saveBlob(result.blob, result.fileName);
+        status.textContent = "Downloaded " + result.fileName;
+      } catch (error) {
+        status.classList.add("error");
+        status.textContent = error.message;
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    async function downloadEveryItem() {
+      downloadAll.disabled = true;
+      downloadAll.textContent = "Rendering…";
+      for (const item of items) {
+        await downloadItem(item);
+        await new Promise((resolve) => setTimeout(resolve, 180));
+      }
+      downloadAll.disabled = false;
+      downloadAll.textContent = "Download all";
+    }
+
+    input.addEventListener("change", () => addFiles(input.files));
+    addMore.addEventListener("click", () => input.click());
+    downloadAll.addEventListener("click", downloadEveryItem);
+    document.querySelectorAll("[data-mode]").forEach((button) => button.addEventListener("click", () => setMode(button.dataset.mode)));
+    [sizeSelect, formatSelect, quality, pixelArt, focusX, focusY].forEach((control) => {
+      control.addEventListener("input", () => { syncControls(); schedulePreviews(); });
+      control.addEventListener("change", () => { syncControls(); schedulePreviews(); });
+    });
+
+    ["dragenter", "dragover"].forEach((type) => dropZone.addEventListener(type, (event) => {
+      event.preventDefault();
+      dropZone.classList.add("is-dragging");
+    }));
+    ["dragleave", "drop"].forEach((type) => dropZone.addEventListener(type, (event) => {
+      event.preventDefault();
+      dropZone.classList.remove("is-dragging");
+    }));
+    dropZone.addEventListener("drop", (event) => addFiles(event.dataTransfer.files));
+    window.addEventListener("beforeunload", () => items.forEach((item) => URL.revokeObjectURL(item.url)));
+
+    syncControls();
+    updateQueue();
+  </script>
+</body>
+</html>

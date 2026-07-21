@@ -6,15 +6,17 @@ Use this checklist before resubmitting the Kickstarter page. The main goal is th
 
 Recommended reward ladder, aligned with the current Kickstarter page rewrite:
 
+Every paid pledge tier includes campaign updates and one approved display name or alias on the digital supporter wall. Higher tiers keep the rewards from lower tiers unless the tier says otherwise.
+
 | Pledge | Tier | Type | What backers receive | Estimated delivery | Visuals to show |
 | ---: | --- | --- | --- | --- | --- |
-| $5 | Signal Supporter | Digital | Campaign updates, one wallpaper, and name on the digital supporter wall | Month 6 + Month 24 | Wallpaper sample and supporter wall example |
-| $20 | Early Recruit, limited | Digital | Full PC digital game key at the early-backer price, wallpapers, avatar/icon pack, and mini lore dossier | Month 24 | Game key graphic, wallpaper sample, avatar/icon sample, dossier cover |
-| $25 | Digital Recruit | Digital | Full PC digital game key, wallpapers, avatar/icon pack, mini lore dossier, and supporter wall name | Month 24 | Same digital reward sample set as Early Recruit |
-| $40 | Digital Deluxe Pack | Digital | Digital Recruit rewards plus soundtrack, mini artbook, Digital Evidence Pack PDF, and Field Relics reward visual sheet | Month 24 | Soundtrack cover, mini artbook cover, Digital Evidence Pack preview, Field Relics preview sheet |
-| $70 | Field Tester | Digital | Digital Deluxe Pack plus beta access, private feedback form, and beta tester credit listing | Month 19-24 | Field Tester badge, feedback form preview, beta credit example |
-| $95 | Poster Scout, EU only | Digital + physical | Field Tester digital rewards plus one A3 Marseille/Divergency poster | Month 24-26 | A3 poster product mockup |
-| $120 | Collector's Pack, EU only | Digital + physical | Field Tester digital rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet | Month 24-26 | A3 poster and Beacon bracelet concept mockups |
+| $5 | Signal Supporter | Digital | Campaign updates, one wallpaper, and one approved supporter-wall display name | Month 6 + Month 24 | Wallpaper sample and supporter wall example |
+| $20 | Early Recruit, limited | Digital | Signal Supporter rewards plus a full PC digital game key at the early-backer price, avatar/icon pack, and mini lore dossier | Month 24 | Game key graphic, wallpaper sample, avatar/icon sample, dossier cover |
+| $25 | Digital Recruit | Digital | Signal Supporter rewards plus full PC digital game key, avatar/icon pack, and mini lore dossier | Month 24 | Same digital reward sample set as Early Recruit |
+| $40 | Digital Deluxe Pack | Digital | Digital Recruit rewards plus soundtrack, mini artbook, Digital Evidence Pack PDF, and Field Relics Digital Art Sheet | Month 24 | Soundtrack cover, mini artbook cover, Digital Evidence Pack preview, Field Relics art sheet sample |
+| $70 | Field Tester | Digital | Digital Deluxe Pack rewards plus beta access, private feedback form, and beta tester credit listing | Month 19-24 | Field Tester badge, feedback form preview, beta credit example |
+| $95 | Poster Scout, EU only | Digital + physical | Field Tester rewards plus one A3 Marseille/Divergency poster | Month 24-26 | A3 poster product mockup |
+| $120 | Collector's Pack, EU only | Digital + physical | Field Tester rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet | Month 24-26 | A3 poster and Beacon bracelet concept mockups |
 | $250 | Prisoner's Scratchings, limited | Digital/experience | Field Tester rewards plus one approved short message or graffiti line on a Bastonne prison wall | Month 24 | Bastonne wall/graffiti placement example |
 | $500 | Creative Collaborator, limited | Digital/experience | Field Tester rewards plus one tightly scoped cosmetic or background-lore contribution | Month 24 | Example cosmetic/icon/lore contribution |
 
@@ -23,6 +25,7 @@ Reward promise rules:
 - Use the tier names, prices, and delivery windows from `Divergency_Kickstarter_Page_Rewrite.md` unless the campaign page is intentionally changed.
 - Do not use the old Act 1 tier naming on the public page unless the product scope returns to an Act 1-only release.
 - Do not sell exclusive combat power, exclusive playable characters, or paid stat advantages.
+- Keep the supporter-wall promise to one approved display name or alias for every paid pledge tier.
 - Keep the guaranteed physical launch promise to one A3 poster and one Beacon bracelet.
 - Treat the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag as potential add-ons—not included rewards—unless they are added to the reward table with confirmed price, delivery, and shipping rules.
 - Treat coaster sets, cloth passes, and physical evidence packs as visual concepts or future add-ons unless they are added to the reward table with price, delivery, and shipping rules.
@@ -104,7 +107,7 @@ Caption to use: **Potential add-on concept — not included in any pledge.** The
 
 ![Digital reward preview: Stage 1 Evidence Pack / lore dossier style](<imgs/rewards/stage1-evidence-pack-mockup.png>)
 
-Caption to use: **Digital reward preview: Stage 1 Evidence Pack / lore dossier style.** Use this to explain the PDF Digital Evidence Pack, mini lore dossier, or Field Relics visual sheet, not as a guaranteed physical packet.
+Caption to use: **Digital reward preview: Stage 1 Evidence Pack / lore dossier style.** Use this to explain the PDF Digital Evidence Pack, mini lore dossier, or Field Relics Digital Art Sheet, not as a guaranteed physical packet.
 
 ![Reward concept mockup: Laundel route cloth pass](<imgs/rewards/laundel-route-cloth-pass-mockup.png>)
 
@@ -114,9 +117,9 @@ Caption to use: **Reward concept mockup: Laundel route cloth pass.** Use as a Fi
 
 Caption to use: **Optional add-on concept mockup: Armorlite coaster set.** Do not imply it ships in the Collector's Pack unless it is added to the reward ladder and fulfillment budget.
 
-### Field Relics And In-World Reward Visuals
+### Field Relics Digital Art Sheet And In-World Reward Visuals
 
-Use these images to support wallpapers, avatar icons, lore dossier pages, Digital Evidence Pack pages, supporter-wall badges, mini artbook pages, and the Field Relics reward visual sheet. These are not paid gameplay power.
+The Field Relics Digital Art Sheet is a downloadable visual/lore sheet showing in-world objects such as masks, tokens, vials, patches, and symbols with short captions. Use these images to support wallpapers, avatar icons, lore dossier pages, Digital Evidence Pack pages, supporter-wall badges, mini artbook pages, and the Field Relics Digital Art Sheet. These are not paid gameplay power.
 
 If any Field Relics appear inside the finished game, they should be normal discoverable or earnable items for all players. Backers may receive digital art, dossier pages, supporter badges, beta credit, approved graffiti, or scoped background/lore participation, but not exclusive weapons, stat boosts, playable characters, or combat advantages.
 
@@ -168,7 +171,7 @@ Caption to use: **Field Relics visual: Worn field figure.** Use as supporter-wal
 Recommended order on the Kickstarter page:
 
 1. Reward tier table.
-2. One image block for digital rewards: wallpaper, avatar/icon pack, lore dossier, Digital Evidence Pack, soundtrack, mini artbook, and Field Relics sheet.
+2. One image block for digital rewards: wallpaper, avatar/icon pack, lore dossier, Digital Evidence Pack, soundtrack, mini artbook, and Field Relics Digital Art Sheet.
 3. One guaranteed-reward image block for the A3 poster and Beacon bracelet concept mockups.
 4. One clearly separated "Potential add-ons — not included yet" block for the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag.
 5. One clearly labeled concept/add-on block for coaster set, cloth pass, or evidence pack if those assets are shown.
@@ -220,7 +223,7 @@ Prepare these fields before launching Pledge Manager:
 - Reward item categories: digital key, digital art/audio pack, Digital Evidence Pack, beta access, Poster Scout, physical Collector's Pack, potential physical add-ons, creative submission.
 - Market value for the poster and bracelet, plus any add-on that is confirmed before launch.
 - EU shipping origins and destination countries.
-- Backer survey questions for approved display name, supporter wall name, credits name, and creative tier submissions.
+- Backer survey questions for approved supporter-wall display name or alias, credits name where relevant, and creative tier submissions.
 - Add-on selection fields for the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag only if those add-ons are confirmed before launch.
 - Digital file/code delivery method.
 - Address lock date before physical production.

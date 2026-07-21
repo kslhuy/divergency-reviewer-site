@@ -34,3 +34,7 @@ node build-reviewer-html.mjs
 ```
 
 Then open `Divergency_Reviewer_Tabs.html` in a browser.
+
+## Steam Screenshot Formatter
+
+Open `steam-image-tool.html` to batch-convert screenshots to Steam-ready 16:9 PNG or JPG files. The tool supports crop-to-fill or fit-with-bars, exports at 1920x1080 or higher, and processes every image locally in the browser.

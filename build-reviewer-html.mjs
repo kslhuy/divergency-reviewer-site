@@ -9,6 +9,11 @@ const siteTitle = "Divergency by TriLinkage | Dark Fantasy Tactical Brawler";
 const siteDescription = "Divergency is a dark fantasy 2.5D tactical brawler from TriLinkage, a small independent game studio based in Marseille, France. Explore the campaign pitch, story, gameplay, rewards, and development notes.";
 const siteImage = `${siteUrl}imgs/UI/K_banner/K_banner_color.jpg`;
 const facebookUrl = "https://www.facebook.com/profile.php?id=61579395298870";
+const bilibiliUrl = "https://space.bilibili.com/3707037181545433";
+const youtubeUrl = "https://www.youtube.com/@TriLinkage-Studio";
+const xUrl = "https://x.com/Divergency_TrL";
+const instagramUrl = "https://www.instagram.com/divergency.trilinkage/";
+const kickstarterUrl = "https://www.kickstarter.com/projects/divergency/divergency-dark-story-fantasy-game";
 const heroBackground = "imgs/UI/K_banner/K_baner_animated.gif";
 
 const documents = [
@@ -96,8 +101,8 @@ const imageSlots = {
     },
     {
       src: "imgs/items/massk.png",
-      alt: "Mask relic reward visual",
-      caption: "Reward visual: Mask of the Listening Route",
+      alt: "Mask relic Field Relics digital art visual",
+      caption: "Field Relics digital art: Mask of the Listening Route",
     },
   ],
   story: [
@@ -374,57 +379,57 @@ const pledgeTierSymbols = [
     src: "imgs/items/flower.png",
     name: "$5 Signal Supporter",
     tag: "Recognition",
-    note: "Campaign updates, one backer wallpaper, and an approved name on the digital supporter wall.",
+    note: "Campaign updates, one backer wallpaper, and one approved display name or alias on the digital supporter wall.",
   },
   {
     src: "imgs/items/knife.png",
     name: "$20 Early Recruit",
     tag: "Limited digital key",
-    note: "Full PC game key at the early-backer price, plus wallpapers, avatar icons, and a mini lore dossier.",
+    note: "Signal Supporter rewards plus a full PC game key at the early-backer price, avatar icons, and a mini lore dossier.",
   },
   {
     src: "imgs/items/massk.png",
     name: "$25 Digital Recruit",
     tag: "Standard digital key",
-    note: "Full PC game key, wallpapers, avatar icons, mini lore dossier, and an approved supporter-wall name.",
+    note: "Signal Supporter rewards plus a full PC game key, avatar icons, and a mini lore dossier.",
   },
   {
     src: "imgs/items/skull emer.png",
     name: "$40 Digital Deluxe Pack",
     tag: "Recommended digital tier",
-    note: "Game key plus the soundtrack, mini artbook, Digital Evidence Pack, Field Relics sheet, wallpapers, icons, and lore dossier.",
+    note: "Digital Recruit rewards plus the soundtrack, mini artbook, Digital Evidence Pack, and Field Relics Digital Art Sheet.",
     featured: true,
   },
   {
     src: "imgs/items/poition.png",
     name: "$70 Field Tester",
     tag: "Feedback access",
-    note: "Everything in Digital Deluxe, plus beta access, a private feedback path, and beta tester credit.",
+    note: "Digital Deluxe rewards plus beta access, a private feedback path, and beta tester credit.",
   },
   {
     src: "imgs/rewards/a3-poster-product-mockup.png",
     name: "$95 Poster Scout, EU only",
     tag: "Light physical",
-    note: "Everything in Field Tester, plus one A3 Divergency poster. Shipping is charged separately.",
+    note: "Field Tester rewards plus one A3 Divergency poster. Shipping is charged separately.",
     isPhoto: true,
   },
   {
     src: "imgs/items/Barcalet.png",
     name: "$120 Collector's Pack, EU only",
     tag: "Physical collector",
-    note: "Everything in Field Tester, plus one A3 poster and one Marseille-inspired Beacon bracelet. Shipping is charged separately.",
+    note: "Field Tester rewards plus one A3 poster and one Marseille-inspired Beacon bracelet. Shipping is charged separately.",
   },
   {
     src: "imgs/items/cloth dirty.png",
     name: "$250 Prisoner's Scratchings",
     tag: "Limited wall mark",
-    note: "Everything in Field Tester, plus one approved message of up to 40 characters placed on a Bastonne prison wall.",
+    note: "Field Tester rewards plus one approved message of up to 40 characters placed on a Bastonne prison wall.",
   },
   {
     src: "imgs/items/figsure.png",
     name: "$500 Creative Collaborator",
     tag: "Scoped collaboration",
-    note: "Everything in Field Tester, plus one reviewed cosmetic or background-lore contribution. Limited to 3-5 backers.",
+    note: "Field Tester rewards plus one reviewed cosmetic or background-lore contribution. Limited to 3-5 backers.",
   },
 ];
 
@@ -733,7 +738,7 @@ function renderRewardItemShowcase() {
   <div class="reward-item-lead">
     <p class="eyebrow">Choose your signal</p>
     <h3>Rewards At A Glance</h3>
-    <p>Every tier supports the same complete game. Higher pledges add digital extras, feedback access, collector goods, or tightly scoped creative participation—never paid gameplay power.</p>
+    <p>Every paid tier includes campaign updates and one approved display name or alias on the digital supporter wall. Higher pledges add digital extras, feedback access, collector goods, or tightly scoped creative participation--never paid gameplay power.</p>
     <dl class="reward-item-metrics" aria-label="Item-based reward visual positioning">
       <div><dt>Best digital value</dt><dd>$40 Deluxe</dd></div>
       <div><dt>Collector goods</dt><dd>EU shipping only</dd></div>
@@ -1107,7 +1112,7 @@ function renderGalleryPane(groups) {
           <span>${group.slots.length} images</span>
         </div>
         <div class="gallery-grid" data-gallery-grid="${escapeAttribute(group.key)}">
-          ${group.slots.map(renderGalleryImage).join("")}
+${group.slots.map(renderGalleryImage).join("")}
         </div>
       </section>`,
     )
@@ -1170,7 +1175,7 @@ function buildPage(docs) {
         "@id": `${siteUrl}#organization`,
         name: "TriLinkage",
         url: siteUrl,
-        sameAs: [facebookUrl],
+        sameAs: [facebookUrl, bilibiliUrl, youtubeUrl, xUrl, instagramUrl],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Marseille",
@@ -2533,6 +2538,12 @@ function buildPage(docs) {
         </p>
         <div class="hero-links" aria-label="Official links">
           <a class="hero-link" href="${facebookUrl}" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="hero-link" href="${bilibiliUrl}" target="_blank" rel="noopener noreferrer">Bilibili</a>
+          <a class="hero-link" href="${youtubeUrl}" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a class="hero-link" href="${xUrl}" target="_blank" rel="noopener noreferrer">X</a>
+          <a class="hero-link" href="${instagramUrl}" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="hero-link" href="${kickstarterUrl}" target="_blank" rel="noopener noreferrer">Kickstarter</a>
+          <a class="hero-link" href="steam-image-tool.html">Steam image formatter</a>
         </div>
         ${renderHeroStats()}
       </div>

@@ -345,10 +345,12 @@ Dates may shift if testing shows that a feature needs more work. If that happens
 
 Campaign currency is shown in USD in this draft. Physical rewards are EU-only at launch to keep fulfillment manageable.
 
-Backer rewards should feel like a fair thank-you, not like random merchandise or a hidden store page. The reward ladder for Divergency is built around five kinds of supporter value:
+Backer rewards should feel like a fair thank-you, not like random merchandise or a hidden store page. Every paid pledge tier includes campaign updates and one approved display name or alias on the digital supporter wall. Higher tiers keep the rewards from lower tiers unless the tier says otherwise.
 
-- Recognition: names in the digital supporter wall, credits, and backer thanks.
-- Digital gifts: wallpapers, avatar icons, a small lore dossier, Digital Evidence Pack PDF, soundtrack, mini artbook, and a Field Relics reward visual sheet built from in-world object art.
+The reward ladder for Divergency is built around five kinds of supporter value:
+
+- Recognition: one approved display name or alias on the digital supporter wall for every paid pledge tier, plus credits or beta credits where listed.
+- Digital gifts: wallpapers, avatar icons, a small lore dossier, Digital Evidence Pack PDF, soundtrack, mini artbook, and the Field Relics Digital Art Sheet, a downloadable image/PDF page built from in-world relic and prop art.
 - Game access: the full PC digital key, an early-backer key tier, and beta access for feedback-focused backers.
 - Collector objects: one poster and one Beacon bracelet, with physical rewards limited to EU shipping at launch and any additional product concepts kept separate until confirmed.
 - Creative participation: limited higher tiers where backers can leave a short approved wall message or help shape one tightly scoped cosmetic or background-lore detail.
@@ -357,21 +359,21 @@ The rewards avoid pay-to-win items, exclusive combat power, or exclusive playabl
 
 | Pledge | Reward | Supporter value | Estimated delivery |
 | ---: | --- | --- | --- |
-| $5 | Signal Supporter | Campaign updates, one backer wallpaper, and name on the digital supporter wall | Month 6 + Month 24 |
-| $20 | Early Recruit, limited quantity | Full PC digital game key at a lower early-backer price, plus wallpapers, avatar/icon pack, and mini lore dossier | Month 24 |
-| $25 | Digital Recruit | Full PC digital game key, wallpapers, avatar/icon pack, mini lore dossier, and supporter wall name | Month 24 |
-| $40 | Digital Deluxe Pack | Game key, soundtrack, mini artbook, wallpapers, avatar/icon pack, mini lore dossier, Digital Evidence Pack PDF, and Field Relics reward visual sheet | Month 24 |
-| $70 | Field Tester | Digital Deluxe Pack, beta access, private feedback form, and beta tester credit listing | Month 19-24 |
-| $95 | Poster Scout, EU only | Field Tester digital rewards plus one A3 Marseille/Divergency poster | Month 24-26 |
-| $120 | Collector's Pack, EU only | Field Tester digital rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet | Month 24-26 |
-| $250 | Prisoner's Scratchings, limited | Field Tester digital rewards plus one approved short message/graffiti on a Bastonne prison wall | Month 24 |
-| $500 | Creative Collaborator, limited | Field Tester digital rewards plus one tightly scoped cosmetic or background-lore contribution | Month 24 |
+| $5 | Signal Supporter | Campaign updates, one backer wallpaper, and one approved supporter-wall display name | Month 6 + Month 24 |
+| $20 | Early Recruit, limited quantity | Signal Supporter rewards plus a full PC digital game key at a lower early-backer price, avatar/icon pack, and mini lore dossier | Month 24 |
+| $25 | Digital Recruit | Signal Supporter rewards plus full PC digital game key, avatar/icon pack, and mini lore dossier | Month 24 |
+| $40 | Digital Deluxe Pack | Digital Recruit rewards plus soundtrack, mini artbook, Digital Evidence Pack PDF, and Field Relics Digital Art Sheet | Month 24 |
+| $70 | Field Tester | Digital Deluxe Pack rewards plus beta access, private feedback form, and beta tester credit listing | Month 19-24 |
+| $95 | Poster Scout, EU only | Field Tester rewards plus one A3 Marseille/Divergency poster | Month 24-26 |
+| $120 | Collector's Pack, EU only | Field Tester rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet | Month 24-26 |
+| $250 | Prisoner's Scratchings, limited | Field Tester rewards plus one approved short message/graffiti on a Bastonne prison wall | Month 24 |
+| $500 | Creative Collaborator, limited | Field Tester rewards plus one tightly scoped cosmetic or background-lore contribution | Month 24 |
 
 ### Reward Previews
 
 Each pledge uses an in-world Divergency item as its visual identity. Physical product images are concept mockups; final materials and finishes may differ after vendor sampling. Potential add-ons are shown separately and are not included in any pledge unless they are confirmed before launch.
 
-Field Relics remain art, lore, and cosmetic presentation—not paid equipment. Any relic or prop that appears inside the game will be discoverable or earnable by all players.
+The Field Relics Digital Art Sheet is a downloadable visual/lore sheet showing in-world objects such as masks, tokens, vials, patches, and symbols with short captions. Field Relics remain art, lore, and cosmetic presentation--not paid equipment. Any relic or prop that appears inside the game will be discoverable or earnable by all players.
 
 <!-- The build script renders this marker as the backer-facing reward showcase in the HTML preview. -->
 {{REWARD_ITEM_SHOWCASE}}
@@ -412,7 +414,7 @@ Final quantities should be locked before launch. Recommended limits: Early Recru
 
 ### Reward Fulfillment Rules
 
-- Prepare visible sample images before launch for the wallpaper pack, Field Relics reward visual sheet, Digital Evidence Pack, lore dossier, poster, and bracelet concept. Show the Bastonne cap only as a clearly labeled potential add-on until confirmed.
+- Prepare visible sample images before launch for the wallpaper pack, Field Relics Digital Art Sheet, Digital Evidence Pack, lore dossier, poster, and bracelet concept. Show the Bastonne cap only as a clearly labeled potential add-on until confirmed.
 - Do not promise more than one poster size, one bracelet design, or multiple physical add-on variants unless production quotes are already confirmed.
 - Keep all supporter names subject to approval, character limits, and a final survey deadline.
 - Lock digital reward file formats before launch: JPG/PNG wallpapers, PDF dossier/artbook/Evidence Pack, MP3/WAV soundtrack, and Steam or platform key delivery where available.
@@ -491,6 +493,14 @@ Your support helps us finish the full story campaign, sharpen the combat, comple
 
 Back Divergency and help us build a new 2D action game with skill loadouts, ally commands, handcrafted stages, and a story about refusing to sacrifice people for someone else's miracle.
 
+Follow and support Divergency:
+
+- [Bilibili](https://space.bilibili.com/3707037181545433)
+- [YouTube](https://www.youtube.com/@TriLinkage-Studio)
+- [X](https://x.com/Divergency_TrL)
+- [Instagram](https://www.instagram.com/divergency.trilinkage/)
+- [Kickstarter](https://www.kickstarter.com/projects/divergency/divergency-dark-story-fantasy-game)
+
 <!-- Pre-launch asset checklist:
 
 - Add final Kickstarter trailer at the top before launch.
@@ -504,5 +514,5 @@ Back Divergency and help us build a new 2D action game with skill loadouts, ally
 - Confirm add-on availability and prices.
 - Prepare sample/mockup images for wallpapers, lore dossier, Digital Evidence Pack, poster, bracelet, and cap.
 - Confirm shipping prices for every physical tier before launch.
-- Add creator/studio public links, Steam page, Discord, and press/social links when ready.
+- Add the Steam page, Discord, and press links when ready.
 -->
