@@ -1,8 +1,10 @@
 # Divergency: Dark Fantasy Tactical Brawler
 
-![Decorative Divergency title ornament](<imgs/others/kick_title.png>)
+
 
 *A fast 2.5D pixel-art brawler where every fight is shaped by your fighter, your skill deck, and your squad commands.*
+<!-- 
+![Divergency campaign introduction splash](<imgs/campaign-panels/divergency-ai-intro-splash.png>) -->
 
 Pick a fighter. Build a 4-skill loadout. Command your allies while you dash, parry, cancel, juggle, and break enemy formations in real time.
 
@@ -16,7 +18,8 @@ Kickstarter funding helps finish the full PC-first campaign with sharper combat,
 
 ![Decorative Kickstarter page divider](<imgs/others/kick_jumppage.png>)
 
-## The Quick Pitch
+<!-- ## The Quick Pitch -->
+![Decorative Divergency title ornament](<imgs\campaign-panels\kick\theQuickPitch.png>)
 
 Divergency is built for players who love classic side-scrolling action refined with modern responsiveness, satisfying traversal, and tactical depth.
 
@@ -29,7 +32,9 @@ Divergency is built for players who love classic side-scrolling action refined w
 
 The goal is not to make a simple arena brawler. Divergency is a complete, satisfying adventure campaign centered around combat mastery, party synergy, and a world that shifts as each relic fragment is revealed.
 
-## Inspiration Games
+<!-- ## Inspiration Games -->
+
+![ Inspiration Games](<imgs\campaign-panels\kick\inspriation_game.png>)
 
 Divergency is inspired by games that made 2D action feel fast, readable, chaotic, and character-driven. These references explain the combat feeling, not the final art direction or story identity. Divergency has its own dark fantasy world, relic-fragment campaign, and party command systems.
 
@@ -37,7 +42,8 @@ Divergency is inspired by games that made 2D action feel fast, readable, chaotic
 
 The wheel highlights four references: Little Fighter 2, Hero Fighter X, M.U.G.E.N, and Streets of Rage 4. Classic arcade brawlers guide the 2.5D lane pressure, enemy waves, and stage pacing, while modern brawlers and action RPGs guide replayability, character identity, and loadout depth.
 
-## Gameplay
+<!-- ## Gameplay -->
+![GamePlay](<imgs\campaign-panels\kick\gameplay.png>)
 
 ### High-Velocity, Responsive Combat
 
@@ -81,25 +87,15 @@ Quickly select a nearby ally and issue orders to coordinate attacks or protect y
 
 While you brawl in real-time, the command system adds a satisfying layer of tactician control—pulling allies out of danger zones, locking down choke points, or calling in synchronized strikes exactly when a boss reveals a weak spot.
 
-### Explore Handcrafted Stages
-
-Divergency is not only arena combat. Stages include hidden routes, environmental details, puzzle moments, optional secrets, and quieter story beats between fights.
-
-![Marseille sewer route](<imgs/Stage1/Sewer2.png>)
-
-![Sakuri bridge route](<imgs/Stage2/Bridge_1.png>)
-
-![Submarine laboratory environment](<imgs/Stage1/lab_3.png>)
-
-Each chapter has its own combat identity. Marseille is built around prisons, gangs, undercity routes, industrial spaces, and a research submarine. Sakuri moves into sacred routes, hidden doors, identity, and corruption. Later chapters push into grave-cities, cursed mountain war zones, and the dreamlike final space called The Cradle.
+<!-- ### Explore Handcrafted Stages -->
 
 ## Playable Fighters
 
 ![Divergency main character lineup](<imgs/chars/Poster.png>)
 
-### Deep — *The Weary Crusader*
+### Deep — *The War-Tired Crusader*
 
-> *"I've fought in enough wars to know that symbols don't bleed. We do."*
+> *"I've fought in enough wars to know symbols don't bleed. People do."*
 
 Deep is a heavy melee fighter and former crusader who has survived too many wars. He hits hard, controls space, and carries the weight of a man who no longer wants to be used as a symbol.
 
@@ -110,11 +106,11 @@ Deep is a heavy melee fighter and former crusader who has survived too many wars
 
 ![Deep character art](<imgs/chars/Deep.png>)
 
-### Solei — *The Swift Vanguard*
+### Solei — *The Swift Runner*
 
-> *"The fastest way to end a war is to strike before they can draw their steel."*
+> *"I'm still young. I still doubt. But when I run, I know exactly who I am."*
 
-Solei is fast, sharp, and fearless. She is built for speed, pressure, and quick reads, striking before enemies can settle into formation.
+Solei is young, fast, and confident when she moves, even when she still doubts herself. She is built for speed, pressure, and quick reads, trusting her movement before she trusts her certainty.
 
 *   **Combat Style:** High-Speed Duelist / Combo Specialist
 *   **Signature Weapon:** Twin Steel Kunai
@@ -123,7 +119,7 @@ Solei is fast, sharp, and fearless. She is built for speed, pressure, and quick 
 
 ### Henry — *The Tactical Scout*
 
-> *"Knowing where the enemy will stand tomorrow is worth more than a thousand swords today."*
+> *"Knowing where the enemy will be tomorrow is worth more than a thousand soldiers today."*
 
 Henry is a tactical veteran who works from the shadows. He reads the battlefield, gathers information, and supports the team when brute force is not enough.
 
@@ -143,18 +139,18 @@ Tulas is a blood and liquid mage. His abilities can create shields, platforms, f
 *   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Blood platform creation for lane elevation)
 *   **Squad Synergy:** Creates defensive barriers and vertical paths, controlling the flow of the battlefield and shielding allies from harm.
 
-### Block — *The Unyielding Guardian*
+### Block — *The Young Guardian*
 
-> *"I stand. For you, for the team, until the armor cracks."*
+> *"Call me boy or call me man. I'll stand on my own two feet and fight with my fists."*
 
-Block is a loyal ally and defensive force. Saving him is one of the first campaign objectives, and his role reinforces the game's focus on trust, party pressure, and commandable teamwork.
+Block is a loyal young ally and defensive force. Saving him is one of the first campaign objectives, and his role reinforces the game's focus on trust, courage, party pressure, and commandable teamwork.
 
 *   **Combat Style:** Pure Defensive Tank
 *   **Signature Weapon:** Tower Aegis Shield
 *   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Stationary block parry, heavy shield bash)
 *   **Squad Synergy:** Absorbs maximum damage, draws enemy aggro, and creates temporary invulnerability zones for the party.
 
-### Ghost — *The Unbound Anomaly*
+### Ghost — *The Nameless Survivor*
 
 > *"My record is blank. My future is mine to write."*
 
@@ -164,66 +160,45 @@ Ghost begins as a nameless survivor pulled out of Jamerson's prison. The system 
 *   **Signature Weapon:** Fragmented Phase Blade
 *   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Glitch phase-dash, teleport cancels)
 *   **Squad Synergy:** Bypasses enemy guards completely, creates temporal decoys, and disrupts boss spell-casting.
+## Enemies & Bosses
 
-## Story
 
-Marseille looks like a city that survived.
 
-From the hills, it still has blue water, bright streets, repaired ports, new hospitals, and military order. After years of Calamity, disease, abandoned roads, and broken borders, that image is powerful. People want to believe Marseille is proof that civilization can still hold.
+Over 50+ enemies, each designed and animated by hand to demand a different strategy.
 
-But the farther you move from the clean districts, the more the truth shows through: crowded worker housing, quarantine blocks, debts tied to entry permits, missing refugees, private prisons, and soldiers watching places the city pretends do not exist.
+Human foes fight intelligently — shields protect gunners, ambushers flank, and no one fights to die.
+![NPC Marseille](<imgs\chars\new creep 1.png>)
 
-Jamerson Obsworth did not begin as a monster. He was once an officer, a husband, and a father. His daughter Heniana was injured during a failed police rescue, infected by blood from a sick hostage, and placed in cryogenic sleep before the disease could finish killing her.
+Demons fight relentlessly — for death means nothing to them.
+![NPC Stage3](<imgs\chars\new creep.png>)
 
-Jamerson could not accept a life where saving Heniana meant waiting beside a machine. In the old fortress-prison of Bastonne, he began with blood tests, medicine, and disease research. Then came surgery. Then body reconstruction. Then The Eye: a living fragment of a forgotten god that offered him knowledge no human science could reach.
+Bosses range from twisted mortals to nightmarish entities born from the Calamity itself.
+![NPCs](<imgs\chars\crepp_stage3.png>)
 
-The Eye gave Jamerson a bargain.
 
-It would give him knowledge. He would give it a body.
+<!-- ## Story -->
+![Story](<imgs\campaign-panels\kick\story.png>)
 
-### Stage 1: Marseille Unstable
+<!-- 
+![Divergency story panel: Marseille above, Bastonne below](<imgs/story-panels/divergency-ai-story-01-city-bastonne.png>) -->
 
-The campaign begins with a rescue mission. Deep, Solei, Henry, and the team break into Bastonne to save Block, one of their closest allies, and recover evidence of Jamerson's experiments.
+Every miracle in Divergency leaves something behind.
 
-Jamerson expected someone to come. He changed prisoner rooms, had Block beaten before the rescue, and locked Bastonne down with gas, steel doors, drones, and emergency guards.
+The old gods are dead, but the things they left in the world still work.
 
-In the middle of that lockdown, a nameless prisoner wakes up when everyone else should be unconscious. He has no memory, no usable record, and no reason to survive the gas. When he makes enough noise to draw help, Henry opens the wrong cell and finds him instead of Block.
+Deep's journey begins in Marseille, a city trying hard to look healed. The harbor is bright again. Streets have been rebuilt. Hospitals are open. Soldiers keep people moving.
 
-The team does not trust the Stranger. They also cannot ignore him. He can still breathe in Bastonne's gas, Jamerson's systems cannot fully read him, and he may be the only reason Block survives the escape with fewer injuries. After the prison break, the team gives him a temporary name: Ghost.
+But under that surface are quarantine rooms, sealed prisons, hidden tunnels, and people who vanish when someone promises a cure.
+
+Deep and his companions come to rescue a friend. They leave with a trail that leads toward relic fragments, old curses, and people still reaching for miracles after they should have stopped.
+
+This is not a story about evil born from hatred.
+
+It is about the damage love can do when someone refuses to let go.
 
 ![Marseille metropolis](<imgs/Stage1/Marseille_Metropolis_Splash_Day.png>)
 
-After Bastonne, the plan is simple: hide the vehicle, reach Armorlite, treat Block's wounds, trade information, and leave Marseille before dawn.
-
-Jamerson moves faster.
-
-Armorlite is a small underworld bar run by Jacques, a quiet bartender who knows sewer routes, port schedules, checkpoint shifts, and which guards Jamerson has already bought. Before the team can recover, gangs hired through the secret police track them there. The first escape route burns in a street fight that spills from the bar into Marseille's back roads.
-
-Henry changes the plan. The team goes below the city.
-
-The sewers are not only sewers. They connect old maintenance tunnels, unfinished metro lines, abandoned shelters, and Laundel, a black-market station built by people Marseille pushed underground. Laundel has its own factions, traders, smugglers, rules, and rumors. The team can buy help and earn trust, or take what they need and make the route more dangerous later.
-
-By the time they reach the port, sunset almost makes escape feel possible. The boat is there.
-
-It is empty.
-
-Marius Vane, Jamerson's right hand in the secret police, turns the harbor into a trap. Snipers, soldiers, containers, sewer creatures, and closing routes force the team into a battlefield where ally commands start to matter. After the fight, they learn the worst part: prisoners, evidence, and experiment data have already been moved offshore to a research submarine.
-
-Running would let Jamerson erase everything.
-
-So the escape becomes sabotage.
-
-Inside the submarine laboratory, the team finds prisoners connected to machines, hybrid bodies in tanks, cell samples marked with Heniana's name, and failed artificial vessels built from the biological structure of the relic fragments. Jamerson is not only trying to cure a disease. He is trying to build a body that can survive what Heniana could not.
-
-The first major boss is his perfect failure: not the final vessel The Eye wants, but close enough to prove that resurrection is no longer theory.
-
-The submarine collapses. Jamerson appears to die behind glass, but The Eye warned him early enough. The body destroyed in the blast is a substitute. The real Jamerson escapes with blood samples, research data, and a route pointing east toward Sakuri.
-
-By the end of Stage 1, the team understands what the submarine was proving. Jamerson is no longer only looking for a cure. Guided by The Eye, he is preparing a vessel that can survive the disease, hold Heniana, and give the relic fragment the body it wants.
-
-The evidence points east, toward Sakuri and the next relic fragment. Deep wants to stop Jamerson before more people disappear. Henry wants the proof brought into the open. Solei refuses to let Heniana become the excuse for more victims.
-
-So the team follows the trail.
+<!-- ![Divergency story panel: Sakuri and the Ear](<imgs/story-panels/divergency-ai-story-02-sakuri-ear.png>) -->
 
 ## The Full Campaign
 
@@ -237,16 +212,30 @@ Divergency is planned as a five-stage story campaign, with each major stage buil
 | Stage 4 | Akam Meskul | Cursed mountain war zone, body horror, loyalty, and survival |
 | Stage 5 | The Cradle | Final relic convergence, memory, temptation, and the last test of the team |
 
-![The Cradle concept art](<imgs/others/Slash_art_Stage.png>)
+<!-- ![Divergency story panel: The Cradle bargain](<imgs/story-panels/divergency-ai-story-03-cradle-bargain.png>) -->
+
+<!-- ![The Cradle concept art](<imgs/others/Slash_art_Stage.png>) -->
 
 The core story is about refusing the easy lie that love, grief, faith, history, or survival can make sacrifice clean.
 
 
-![The Cradle concept art](<imgs/chars/SlashArt_2.png>)
+<!-- ## Art And World -->
+![Art And World](<imgs\campaign-panels\kick\AroundtheWorld.png>)
+![SlashArt](<imgs/chars/SlashArt_2.png>)
 
-## Art And World
+Divergency's world is built to feel dangerous, beautiful, and lived in. Its pixel art blends ruined industry, sacred landscapes, grotesque experiments, cursed wilderness, and hand-animated fighters into a dark fantasy campaign where every region has its own visual language.
 
-Divergency uses pixel art to combine ruined industry, sacred landscapes, grotesque experiments, cursed wilderness, and hand-animated fighters. The world mixes traditional beauty with technological decay: Marseille's bright surface hides prisons below, Sakuri's calm paths hide manipulation, and later regions turn grief, memory, and violence into physical spaces.
+Marseille's bright surface hides prisons, gangs, undercity routes, and forbidden laboratories. Sakuri's calm paths and sacred bridges conceal old manipulation. Later chapters move into grave-cities, cursed mountain war zones, and the dreamlike final space known as The Cradle, where grief, memory, and violence become physical places.
+
+The stages are not just backdrops for arena fights. They include hidden routes, environmental details, puzzle moments, optional secrets, and quieter story beats between combat encounters. Exploration gives the world room to breathe, while each new region changes how battles feel and how the party moves through danger.
+
+![Marseille sewer route](<imgs/Stage1/Sewer2.png>)
+
+![Sakuri bridge route](<imgs/Stage2/Bridge_1.png>)
+
+![Submarine laboratory environment](<imgs/Stage1/lab_3.png>)
+
+Each chapter has its own combat identity. Marseille emphasizes tight industrial spaces, prison escapes, gang pressure, and the research submarine. Sakuri shifts toward sacred routes, hidden doors, identity, and corruption. Calvaria, Akam Meskul, and The Cradle push the campaign into stranger territory, changing the atmosphere, enemy pressure, and route design as the story moves closer to the relics.
 
 
 ![Sakuri stage environment](<imgs/Stage2/J start sakuri.png>)
@@ -299,15 +288,21 @@ The $20,000 base goal is completion funding for the main story campaign. It cove
 
 Budget breakdown:
 
-![Divergency $20,000 budget breakdown on flipped Khoa goal panels](<imgs/UI/Goal_money/budget-breakdown-stretch-goals-khoa-flipped.png>)
+![Budget breakdown](<imgs\campaign-panels\kick\Bugget.png
+>)
 
-At a glance, the base goal is split between taxes, platform fees, and reserve (**31%**), gameplay programming and production (**30%**), pixel art and VFX (**18%**), QA/community/launch work (**8%**), music and sound effects (**7%**), and EU physical reward preparation (**6%**).
+
+<!-- ![Divergency funding distribution campaign panel](<imgs/campaign-panels/divergency-ai-funding-distribution.png>) -->
+
+At a glance, the base goal is split between taxes, platform fees, and reserve (**30%**), gameplay programming and production (**15%**), pixel art and VFX (**30%**), QA/community/launch work (**10%**), music and sound effects , physical reward preparation (**15%**).
 
 This draft uses a cautious fee and tax reserve because French micro-entreprise rates, VAT thresholds, and income-tax treatment depend on the final activity classification, year, and campaign total. The final public page should be checked against an accountant or official guidance before launch.
 
-## Stretch Goals
+![Stretch Goals](<imgs\campaign-panels\kick\SteachGoal.png>)
+<!-- ## Stretch Goals -->
 
-![Divergency stretch goals roadmap with Khoa pulling each funding tier](<imgs/UI/Goal_money/stretch-goals-Khoa-text.png>)
+<!-- ![Divergency stretch goals roadmap campaign panel](<imgs/campaign-panels/divergency-ai-stretch-goals-roadmap.png>) -->
+
 
 The roadmap starts with the protected **$20,000 base goal**. Everything above that is extra production scope. If a stretch feature threatens the main story release, the base campaign stays first and backers receive a clear production update.
 
@@ -321,6 +316,7 @@ The roadmap starts with the protected **$20,000 base goal**. Everything above th
 
 <!-- Larger ideas such as endless towers, public matchmaking, PvP, or stage editing are not part of this launch promise. They may be explored later only after the base campaign is stable. -->
 
+![Stretch Goals](<imgs\campaign-panels\kick\Goal.webp>)
 ## Production Timeline
 
 This is a 24-month production plan from the end of the Kickstarter campaign, with physical reward shipping planned after the digital release window.
@@ -335,24 +331,27 @@ This is a 24-month production plan from the end of the Kickstarter campaign, wit
 | Month 15-18 | Stage 4 Akam Meskul and Stage 5 The Cradle content pass, final systems, and campaign arc lock |
 | Month 19-21 | Full campaign alpha/beta: balancing, bug fixing, boss tuning, and backer feedback |
 | Month 22-24 | Polish: UI, audio, VFX, accessibility checks, localization pass, PC release candidate, digital rewards |
-| Month 24-26 | EU physical reward production and shipping window for poster, bracelet, and cap tiers |
+| Month 24-26 | EU physical reward production and shipping window for poster, printed artbook, bracelet, and pixel accessory tiers |
 
 Backer-facing progress checkpoints are planned around visible milestones: combat polish footage, Stage 1 vertical-slice capture, stage-content updates, alpha/beta access for eligible tiers, and release-candidate updates.
 
 Dates may shift if testing shows that a feature needs more work. If that happens, backers will receive clear updates explaining what changed, what is being fixed, and how it affects delivery.
 
-## Rewards
+<!-- ## Rewards -->
+![Rewards](<imgs\campaign-panels\kick\Reward.png>)
+
 
 Campaign currency is shown in USD in this draft. Physical rewards are EU-only at launch to keep fulfillment manageable.
 
-Backer rewards should feel like a fair thank-you, not like random merchandise or a hidden store page. Every paid pledge tier includes campaign updates and one approved display name or alias on the digital supporter wall. Higher tiers keep the rewards from lower tiers unless the tier says otherwise.
+Backer rewards should feel like a fair thank-you, not like random merchandise or a hidden store page. Every paid pledge tier includes campaign updates and one approved display name or alias on the digital supporter wall. Each tier includes the lower bundle named in its description; physical goods are included only in tiers that explicitly list them.
 
-The reward ladder for Divergency is built around five kinds of supporter value:
+The reward ladder for Divergency is built around six kinds of supporter value:
 
 - Recognition: one approved display name or alias on the digital supporter wall for every paid pledge tier, plus credits or beta credits where listed.
-- Digital gifts: wallpapers, avatar icons, a small lore dossier, Digital Evidence Pack PDF, soundtrack, mini artbook, and the Field Relics Digital Art Sheet, a downloadable image/PDF page built from in-world relic and prop art.
+- Digital gifts: wallpapers, avatar icons, a small lore dossier, Digital Evidence Pack PDF, soundtrack, Digital Field Artbook PDF, and the Field Relics Digital Art Sheet, a downloadable image/PDF page built from in-world relic and prop art.
 - Game access: the full PC digital key, an early-backer key tier, and beta access for feedback-focused backers.
-- Collector objects: one poster and one Beacon bracelet, with physical rewards limited to EU shipping at launch and any additional product concepts kept separate until confirmed.
+- Credits participation: a mid-priced digital tier for backers who want their approved name in the final credits without joining beta testing or physical fulfillment.
+- Collector objects: one poster, one printed Divergency Field Artbook/art zine, one Beacon bracelet, and one Pixel Character Patch & Keychain Set, with physical rewards limited to EU shipping at launch and any additional product concepts kept separate until confirmed.
 - Creative participation: limited higher tiers where backers can leave a short approved wall message or help shape one tightly scoped cosmetic or background-lore detail.
 
 The rewards avoid pay-to-win items, exclusive combat power, or exclusive playable characters. Backers can receive access, recognition, development participation, and collector gifts, but the final game should remain fair for players who discover Divergency after Kickstarter.
@@ -362,10 +361,11 @@ The rewards avoid pay-to-win items, exclusive combat power, or exclusive playabl
 | $5 | Signal Supporter | Campaign updates, one backer wallpaper, and one approved supporter-wall display name | Month 6 + Month 24 |
 | $20 | Early Recruit, limited quantity | Signal Supporter rewards plus a full PC digital game key at a lower early-backer price, avatar/icon pack, and mini lore dossier | Month 24 |
 | $25 | Digital Recruit | Signal Supporter rewards plus full PC digital game key, avatar/icon pack, and mini lore dossier | Month 24 |
-| $40 | Digital Deluxe Pack | Digital Recruit rewards plus soundtrack, mini artbook, Digital Evidence Pack PDF, and Field Relics Digital Art Sheet | Month 24 |
-| $70 | Field Tester | Digital Deluxe Pack rewards plus beta access, private feedback form, and beta tester credit listing | Month 19-24 |
+| $40 | Digital Deluxe Pack | Digital Recruit rewards plus soundtrack, Digital Field Artbook PDF, Digital Evidence Pack PDF, and Field Relics Digital Art Sheet | Month 24 |
+| $60 | Credits Recruit | Digital Deluxe Pack rewards plus one approved final-credits display name or alias and a credits-badge wallpaper variant | Month 24 |
+| $70 | Field Tester | Credits Recruit rewards plus beta access, private feedback form, and beta tester credit listing | Month 19-24 |
 | $95 | Poster Scout, EU only | Field Tester rewards plus one A3 Marseille/Divergency poster | Month 24-26 |
-| $120 | Collector's Pack, EU only | Field Tester rewards plus one A3 Marseille/Divergency poster and one Beacon bracelet | Month 24-26 |
+| $120 | Collector's Pack, EU only | Field Tester rewards plus one A3 Marseille/Divergency poster, one printed Divergency Field Artbook/art zine, one Beacon bracelet, and one Pixel Character Patch & Keychain Set | Month 24-26 |
 | $250 | Prisoner's Scratchings, limited | Field Tester rewards plus one approved short message/graffiti on a Bastonne prison wall | Month 24 |
 | $500 | Creative Collaborator, limited | Field Tester rewards plus one tightly scoped cosmetic or background-lore contribution | Month 24 |
 
@@ -384,11 +384,11 @@ The $5 tier gives a low-risk symbolic gift to people who mainly want to help. It
 
 The $20 early-backer key gives the first supporters a clear reason to pledge early without lowering the normal game-key value for the whole campaign. The $25 tier remains the standard digital copy, and extra keys can be handled as add-ons instead of a separate tier.
 
-The $40 and $70 tiers are the strongest digital-value tiers. They reward serious supporters with music, art, lore, Digital Evidence Pack material, beta access, and a feedback path while keeping fulfillment mostly digital.
+The $40, $60, and $70 tiers are the strongest digital-value tiers. The $40 tier is the clean global upgrade for music, art, lore, the Digital Field Artbook PDF, and Digital Evidence Pack material. The $60 tier adds visible recognition in the final game credits without forcing backers into testing. The $70 tier is for backers who actively want beta access and a feedback path while keeping fulfillment digital.
 
 The $95 Poster Scout tier is the light physical option: one A3 poster plus the Field Tester digital rewards. It adds shipping and packaging, but avoids a second manufactured object.
 
-The $120 physical tier is priced above the digital tiers because it adds manufacturing, packing, shipping, damaged-package support, and address management. It should be treated as a collector gift, not as the core reason to back the campaign.
+The $120 physical tier is priced above the digital tiers because it adds manufacturing, packing, shipping, damaged-package support, and address management. It should feel like the premium collector option, with the clearest collector anchor being the printed Divergency Field Artbook/art zine. The included items must stay exact: one A3 poster, one printed Field Artbook/art zine, one Beacon bracelet, and one Pixel Character Patch & Keychain Set unless another physical item is priced, sampled, and added to the tier before launch.
 
 The creative backing tiers allow supporters to leave their mark on the game in a tiered, logical format that matches the world's dark fantasy identity:
 - At **$250 (Prisoner's Scratchings)**, backers gain a small, immersive storytelling opportunity that adds flavor to Bastonne without requiring new systems or complex assets.
@@ -398,26 +398,33 @@ The creative backing tiers allow supporters to leave their mark on the game in a
 
 Add-ons can increase pledge value without creating too many reward tiers.
 
+Digital add-ons can be offered broadly. Physical add-ons should be enabled only for eligible EU physical reward tiers, because Kickstarter does not show shippable add-ons to backers who selected a digital-only main reward.
+
 | Add-on | Suggested price | Notes |
 | --- | ---: | --- |
 | Extra PC digital key | $20-25 | Best low-risk add-on because it has no shipping cost |
-| Soundtrack + mini artbook | $15 | Useful for backers who choose the standard game key but later want the deluxe digital pack |
+| Soundtrack + Digital Field Artbook | $15 | Useful for backers who choose the standard game key but later want the deluxe digital pack |
 | Digital Evidence Pack | $10-15 | PDF-only upgrade for backers below Digital Deluxe; do not present it as a physical packet |
+| Final credits name upgrade | $10-15 | Optional recognition upgrade for backers below Credits Recruit; one approved display name or alias only |
 | A3 poster, EU only | $25 plus shipping | Keep to one poster size and one print vendor if possible |
+| Printed Field Artbook/art zine, EU only | $25-40 plus shipping | Offer only after final page count, binding, paper stock, print quote, and package weight are confirmed |
+| Beacon bracelet, EU only | $25-35 plus shipping | Offer only if unit cost, sizing, packaging, and replacement policy are confirmed |
 | Bastonne cell key keychain, EU only | $12-18 plus shipping | Small physical add-on candidate; confirm metal weight, packaging, and minimum order quantity first |
 | Bastonne cell key cap, EU only | $25-35 plus shipping | Potential wearable add-on; offer only after vendor samples, adjustable fit, packaging weight, and replacement policy are confirmed |
 | Divergency Daily access badge, EU only | $12-18 plus shipping | Lanyard/badge add-on candidate; practical and visually clear but needs print/vendor quote |
 | Divergency Daily cargo tag, EU only | $12-18 plus shipping | Travel/cargo tag add-on candidate; confirm material, print durability, and package weight |
-| Final credits name upgrade | $10 | Optional upgrade for standard digital tiers; use one approved name or alias |
 
 Final quantities should be locked before launch. Recommended limits: Early Recruit around 200-300 backers, Poster Scout and Collector's Pack based on confirmed physical unit quotes, Prisoner's Scratchings around 30-50 slots, and Creative Collaborator around 3-5 slots unless the team is certain it can absorb more review work.
 
+Recommended featured reward: feature the $40 Digital Deluxe Pack for the broadest global appeal, or the $60 Credits Recruit if preview readers respond strongly to credit recognition. Do not feature an EU-only physical tier unless the campaign is intentionally focused on EU collectors.
+
 ### Reward Fulfillment Rules
 
-- Prepare visible sample images before launch for the wallpaper pack, Field Relics Digital Art Sheet, Digital Evidence Pack, lore dossier, poster, and bracelet concept. Show the Bastonne cap only as a clearly labeled potential add-on until confirmed.
-- Do not promise more than one poster size, one bracelet design, or multiple physical add-on variants unless production quotes are already confirmed.
+- Prepare visible sample images before launch for the wallpaper pack, Field Relics Digital Art Sheet, Digital Field Artbook, Digital Evidence Pack, lore dossier, poster, printed artbook/art zine, bracelet concept, and Pixel Character Patch & Keychain Set. Show the Bastonne cap only as a clearly labeled potential add-on until confirmed.
+- Any staged collector image must state exactly what is included. If envelopes, cards, tags, wax seals, or table props are only scene dressing, the caption must say they are not included.
+- Do not promise more than one poster size, one printed artbook size/binding, one bracelet design, one pixel accessory set, or multiple physical add-on variants unless production quotes are already confirmed.
 - Keep all supporter names subject to approval, character limits, and a final survey deadline.
-- Lock digital reward file formats before launch: JPG/PNG wallpapers, PDF dossier/artbook/Evidence Pack, MP3/WAV soundtrack, and Steam or platform key delivery where available.
+- Lock digital reward file formats before launch: JPG/PNG wallpapers, PDF dossier/artbook/Evidence Pack, MP3/WAV soundtrack, and Steam or platform key delivery where available. Lock the printed artbook page count, trim size, binding, paper stock, and proofing deadline before promising it as a physical item.
 - Reserve 5-10% extra physical items for damaged parcels, lost mail, and replacement handling.
 - Treat beta access as feedback participation, not as a guaranteed polished early version of the final game.
 - All in-game text, names, visual assets, and gameplay designs submitted by backers are subject to developer approval, editing, and revision to maintain appropriate tone, balance, and quality.
@@ -449,13 +456,14 @@ Planned shipping approach:
 
 - Ship-from region: France/EU.
 - Poster Scout or poster-only shipment estimated shipping: EUR 8-15 depending on EU destination.
-- Collector's Pack estimated shipping: EUR 10-18 depending on EU destination.
-- Bracelet, cap, keychain, badge, cargo tag, or combined collector shipment estimated shipping: EUR 10-18 depending on EU destination.
+- Collector's Pack estimated shipping: EUR 12-22 depending on EU destination and final printed artbook weight.
+- Bracelet, printed artbook, Pixel Character Patch & Keychain Set, cap, keychain, badge, cargo tag, or combined collector shipment estimated shipping: EUR 12-22 depending on EU destination and final package weight.
 - Final country-by-country shipping prices should be entered before launch or confirmed through Kickstarter Pledge Manager before fulfillment.
 - Backer addresses and reward preferences will be collected through Kickstarter surveys or Pledge Manager.
 - Digital rewards will be delivered through Kickstarter digital rewards, game keys, or secure download links.
+- Physical add-ons should be available only to backers whose main reward tier includes physical shipping, so shipping rules stay simple and Kickstarter's add-on flow remains clear.
 
-We are choosing EU-only physical rewards because posters and bracelets add packing, customs, replacements, and address-management work. Digital rewards remain available more broadly.
+We are choosing EU-only physical rewards because posters, printed artbooks, and bracelets add packing, customs, replacements, and address-management work. Digital rewards remain available more broadly.
 
 ## Risks And Challenges
 
@@ -479,13 +487,15 @@ The current release plan is PC-first. Any additional platform can require techni
 
 ### Physical Reward Fulfillment
 
-Posters and bracelets require production, packing, address collection, shipping, and replacement handling. To keep that manageable, physical rewards are EU-only at launch, with shipping estimates shown before backers pledge.
+Posters, printed artbooks, bracelets, and pixel accessory sets require production, packing, address collection, shipping, and replacement handling. To keep that manageable, physical rewards are EU-only at launch, with shipping estimates shown before backers pledge.
 
 ### Communication
 
 If the project hits delays or roadblocks, we will post clear updates explaining what happened, what is being fixed, and how it affects the schedule.
 
-## Join Us
+<!-- ## Join Us -->
+![Join Us](<imgs\campaign-panels\kick\JoinsUs.png>)
+
 
 Divergency is for players who remember the joy of side-scrolling action, the tension of mastering a fighter, and the satisfaction of leading a small party through dangerous spaces.
 
@@ -512,7 +522,7 @@ Follow and support Divergency:
 - Confirm all reward item names match Kickstarter reward/item setup.
 - Confirm Early Recruit, Collector's Pack, Prisoner's Scratchings, and Creative Collaborator quantity limits.
 - Confirm add-on availability and prices.
-- Prepare sample/mockup images for wallpapers, lore dossier, Digital Evidence Pack, poster, bracelet, and cap.
+- Prepare sample/mockup images for wallpapers, lore dossier, Digital Field Artbook, Digital Evidence Pack, poster, printed artbook, bracelet, Pixel Character Patch & Keychain Set, and any confirmed cap add-on.
 - Confirm shipping prices for every physical tier before launch.
 - Add the Steam page, Discord, and press links when ready.
 -->

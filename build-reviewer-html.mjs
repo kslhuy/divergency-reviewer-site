@@ -70,6 +70,36 @@ const galleryTab = {
 const imageSlots = {
   kickstarter: [
     {
+      src: "imgs/campaign-panels/divergency-ai-intro-splash.png",
+      alt: "Divergency cinematic introduction splash showing the squad charging into a dark fantasy battle",
+      caption: "Campaign intro splash",
+    },
+    {
+      src: "imgs/campaign-panels/divergency-ai-funding-distribution.png",
+      alt: "Divergency Kickstarter funding distribution panel with blank production budget areas",
+      caption: "Campaign panel: Funding distribution",
+    },
+    {
+      src: "imgs/campaign-panels/divergency-ai-stretch-goals-roadmap.png",
+      alt: "Divergency Kickstarter stretch goals roadmap panel with blank milestone areas",
+      caption: "Campaign panel: Stretch goals roadmap",
+    },
+    {
+      src: "imgs/story-panels/divergency-ai-story-01-city-bastonne.png",
+      alt: "Divergency story panel showing Marseille above Bastonne",
+      caption: "Story panel: Marseille above, Bastonne below",
+    },
+    {
+      src: "imgs/story-panels/divergency-ai-story-02-sakuri-ear.png",
+      alt: "Divergency story panel showing Sakuri and the Ear",
+      caption: "Story panel: Sakuri and the Ear",
+    },
+    {
+      src: "imgs/story-panels/divergency-ai-story-03-cradle-bargain.png",
+      alt: "Divergency story panel showing Heni, Heniana, Jamerson, and the Cradle bargain",
+      caption: "Story panel: The Cradle bargain",
+    },
+    {
       src: "imgs/Stage1/In_thecity_Fix.png",
       alt: "Marseille city environment",
       caption: "Marseille city mood capture",
@@ -92,12 +122,17 @@ const imageSlots = {
     {
       src: "imgs/rewards/beacon-bracelet-marseille-mockup.png",
       alt: "Marseille-inspired Beacon bracelet product mockup",
-      caption: "Concept mockup: Marseille Beacon Bracelet — final materials may differ",
+      caption: "Concept mockup: Marseille Beacon Bracelet -- final materials may differ; staging props not included",
+    },
+    {
+      src: "imgs/rewards/pixel-character-patch-keychain-set-mockup.png",
+      alt: "Pixel character patch and keychain set product mockup",
+      caption: "Concept mockup: Pixel Character Patch & Keychain Set -- final materials may differ; staging props not included",
     },
     {
       src: "imgs/rewards/a3-poster-product-mockup.png",
       alt: "A3 Divergency poster product mockup",
-      caption: "Concept mockup: A3 poster — final materials may differ",
+      caption: "Concept mockup: A3 poster -- final materials may differ; staging props not included",
     },
     {
       src: "imgs/items/massk.png",
@@ -218,6 +253,11 @@ const imageSlots = {
       caption: "Tier symbol: $40 Digital Deluxe Pack",
     },
     {
+      src: "imgs/rewards/submarine-lab-access-badge-mockup.png",
+      alt: "Submarine laboratory access badge symbol for the $60 Credits Recruit tier",
+      caption: "Tier symbol: $60 Credits Recruit",
+    },
+    {
       src: "imgs/items/poition.png",
       alt: "Red treatment vial item symbol for the $70 Field Tester tier",
       caption: "Tier symbol: $70 Field Tester",
@@ -250,27 +290,32 @@ const imageSlots = {
     {
       src: "imgs/rewards/beacon-bracelet-marseille-mockup.png",
       alt: "Marseille-inspired Beacon bracelet product mockup",
-      caption: "Concept mockup: Marseille Beacon Bracelet — final materials may differ",
+      caption: "Concept mockup: Marseille Beacon Bracelet -- final materials may differ; staging props not included",
+    },
+    {
+      src: "imgs/rewards/pixel-character-patch-keychain-set-mockup.png",
+      alt: "Pixel character patch and keychain set product mockup",
+      caption: "Physical reward mockup: Pixel Character Patch & Keychain Set",
     },
     {
       src: "imgs/rewards/bastonne-cell-key-cap-mockup.png",
       alt: "Bastonne cell key cap mockup",
-      caption: "Potential add-on concept — not included: Bastonne cell key cap",
+      caption: "Potential add-on concept -- not included: Bastonne cell key cap",
     },
     {
       src: "imgs/rewards/bastonne-cell-key-keychain-mockup.png",
       alt: "Bastonne cell key keychain mockup",
-      caption: "Potential add-on concept — not included: Bastonne cell key keychain",
+      caption: "Potential add-on concept -- not included: Bastonne cell key keychain",
     },
     {
       src: "imgs/rewards/divergency-daily-access-badge-mockup.png",
       alt: "Divergency Daily access badge mockup",
-      caption: "Potential add-on concept — not included: Divergency Daily access badge",
+      caption: "Potential add-on concept -- not included: Divergency Daily access badge",
     },
     {
       src: "imgs/rewards/divergency-daily-cargo-tag-mockup.png",
       alt: "Divergency Daily cargo tag mockup",
-      caption: "Potential add-on concept — not included: Divergency Daily cargo tag",
+      caption: "Potential add-on concept -- not included: Divergency Daily cargo tag",
     },
     {
       src: "imgs/rewards/stage1-evidence-pack-mockup.png",
@@ -334,10 +379,16 @@ const supportedImageExtensions = new Set([".gif", ".jpg", ".jpeg", ".png", ".web
 const excludedAutoImageSlots = new Set([
   "imgs/UI/base-goal-stretch-goals.png",
   "imgs/rewards/beacon-bracelet-product-mockup.png",
+  "imgs/story-panels/divergency-story-01-city-bastonne.jpg",
+  "imgs/story-panels/divergency-story-02-sakuri-ear.jpg",
+  "imgs/story-panels/divergency-story-03-cradle-bargain.jpg",
 ]);
 
 const excludedGalleryImageSlots = new Set([
   "imgs/rewards/beacon-bracelet-product-mockup.png",
+  "imgs/story-panels/divergency-story-01-city-bastonne.jpg",
+  "imgs/story-panels/divergency-story-02-sakuri-ear.jpg",
+  "imgs/story-panels/divergency-story-03-cradle-bargain.jpg",
 ]);
 
 const excludedGalleryImageFolders = [
@@ -397,14 +448,21 @@ const pledgeTierSymbols = [
     src: "imgs/items/skull emer.png",
     name: "$40 Digital Deluxe Pack",
     tag: "Recommended digital tier",
-    note: "Digital Recruit rewards plus the soundtrack, mini artbook, Digital Evidence Pack, and Field Relics Digital Art Sheet.",
+    note: "Digital Recruit rewards plus the soundtrack, Digital Field Artbook PDF, Digital Evidence Pack, and Field Relics Digital Art Sheet.",
     featured: true,
+  },
+  {
+    src: "imgs/rewards/submarine-lab-access-badge-mockup.png",
+    name: "$60 Credits Recruit",
+    tag: "Recognition upgrade",
+    note: "Digital Deluxe rewards plus one approved final-credits display name or alias and a credits-badge wallpaper variant.",
+    isPhoto: true,
   },
   {
     src: "imgs/items/poition.png",
     name: "$70 Field Tester",
     tag: "Feedback access",
-    note: "Digital Deluxe rewards plus beta access, a private feedback path, and beta tester credit.",
+    note: "Credits Recruit rewards plus beta access, a private feedback path, and beta tester credit.",
   },
   {
     src: "imgs/rewards/a3-poster-product-mockup.png",
@@ -417,7 +475,7 @@ const pledgeTierSymbols = [
     src: "imgs/items/Barcalet.png",
     name: "$120 Collector's Pack, EU only",
     tag: "Physical collector",
-    note: "Field Tester rewards plus one A3 poster and one Marseille-inspired Beacon bracelet. Shipping is charged separately.",
+    note: "Field Tester rewards plus one A3 poster, one printed Divergency Field Artbook/art zine, one Marseille-inspired Beacon bracelet, and one Pixel Character Patch & Keychain Set. Shipping is charged separately.",
   },
   {
     src: "imgs/items/cloth dirty.png",
@@ -438,13 +496,25 @@ const rewardItemShowcase = [
     src: "imgs/rewards/a3-poster-product-mockup.png",
     name: "A3 Divergency Poster",
     tag: "Guaranteed reward concept",
-    note: "Included in the $95 Poster Scout and $120 Collector's Pack. Concept mockup; final paper stock and print finish may differ.",
+    note: "Included in the $95 Poster Scout and $120 Collector's Pack. Concept mockup; final paper stock and print finish may differ. Staging props are not included.",
+  },
+  {
+    src: "imgs/rewards/pledge-tiers/pledge-040-digital-deluxe-pack.png",
+    name: "Divergency Field Artbook",
+    tag: "Digital + printed reward preview",
+    note: "Digital PDF included from the $40 Digital Deluxe tier upward. One printed artbook/art zine is included only in the $120 Collector's Pack, EU only. Staging props are not included.",
   },
   {
     src: "imgs/rewards/beacon-bracelet-marseille-mockup.png",
     name: "Marseille Beacon Bracelet",
     tag: "Guaranteed reward concept",
-    note: "Included only in the $120 Collector's Pack. Concept mockup; final materials, sizing, and finish may differ after vendor sampling.",
+    note: "Included only in the $120 Collector's Pack. Concept mockup; final materials, sizing, and finish may differ after vendor sampling. Staging props are not included.",
+  },
+  {
+    src: "imgs/rewards/pixel-character-patch-keychain-set-mockup.png",
+    name: "Pixel Character Patch & Keychain Set",
+    tag: "Guaranteed reward concept",
+    note: "Included only in the $120 Collector's Pack, EU only. Concept mockup; final patch, sticker, acrylic charm, and bag-accessory counts may differ after vendor sampling. Staging props are not included.",
   },
   {
     src: "imgs/rewards/stage1-evidence-pack-mockup.png",
@@ -458,25 +528,25 @@ const candidateRewardShowcase = [
   {
     src: "imgs/rewards/bastonne-cell-key-cap-mockup.png",
     name: "Bastonne Cell Key Cap",
-    tag: "Potential add-on — not included",
+    tag: "Potential add-on -- not included",
     note: "A wearable concept that needs a vendor sample, adjustable-fit confirmation, package weight, and replacement policy before it can be offered.",
   },
   {
     src: "imgs/rewards/bastonne-cell-key-keychain-mockup.png",
     name: "Bastonne Cell Key Keychain",
-    tag: "Potential add-on — not included",
+    tag: "Potential add-on -- not included",
     note: "A compact concept that may work as an EU add-on after metal weight, packaging, minimum quantity, and shipping are confirmed.",
   },
   {
     src: "imgs/rewards/divergency-daily-access-badge-mockup.png",
     name: "Divergency Daily Access Badge",
-    tag: "Potential add-on — not included",
+    tag: "Potential add-on -- not included",
     note: "A lanyard-style concept that requires a print sample, supplier quote, package weight, and durability check before it can be offered.",
   },
   {
     src: "imgs/rewards/divergency-daily-cargo-tag-mockup.png",
     name: "Divergency Daily Cargo Tag",
-    tag: "Potential add-on — not included",
+    tag: "Potential add-on -- not included",
     note: "A Marseille-route concept that requires material, print-durability, packaging, and shipping confirmation before it can be offered.",
   },
 ];
@@ -597,6 +667,10 @@ function stripMarkdown(value) {
     .trim();
 }
 
+function toWebPath(value) {
+  return String(value).trim().replaceAll("\\", "/");
+}
+
 function inlineMarkdown(value) {
   const code = [];
   let html = escapeHtml(value);
@@ -612,7 +686,7 @@ function inlineMarkdown(value) {
   html = html.replace(
     /!\[([^\]]*)\]\((?:&lt;([^&]+)&gt;|([^)]+))\)/g,
     (_, alt, bracketedSrc, plainSrc) => {
-      const src = (bracketedSrc || plainSrc || "").trim();
+      const src = toWebPath(bracketedSrc || plainSrc || "");
       const cleanAlt = stripMarkdown(alt || "Divergency image");
       return `<img class="inline-markdown-image" src="${escapeAttribute(src)}" alt="${escapeAttribute(cleanAlt)}" loading="lazy">`;
     },
@@ -681,19 +755,24 @@ function renderTable(rows) {
 }
 
 function renderMarkdownImage(src, alt) {
-  const cleanSrc = src.trim();
+  const cleanSrc = toWebPath(src);
   const cleanAlt = stripMarkdown(alt || "Divergency image");
-  const normalizedSrc = cleanSrc.replaceAll("\\", "/").toLowerCase();
+  const normalizedSrc = cleanSrc.toLowerCase();
   const isTitleOrnament = normalizedSrc.endsWith("/kick_title.png");
   const isPageDivider = normalizedSrc.endsWith("/kick_jumppage.png");
+  const isCampaignSplash = normalizedSrc.includes("/campaign-panels/divergency-ai-intro-splash");
+  const isCampaignPanel = normalizedSrc.includes("/campaign-panels/");
+  const isStoryPanel = normalizedSrc.includes("/story-panels/") || (isCampaignPanel && !isCampaignSplash);
   const isDecorative = isTitleOrnament || isPageDivider;
   const classes = [
     "markdown-image",
     isTitleOrnament ? "is-title-ornament" : "",
     isPageDivider ? "is-page-divider" : "",
+    isCampaignSplash ? "is-campaign-splash" : "",
+    isStoryPanel ? "is-story-panel" : "",
   ].filter(Boolean).join(" ");
   const imageAlt = isDecorative ? "" : cleanAlt;
-  const figcaption = isDecorative ? "" : `  <figcaption>${inlineMarkdown(cleanAlt)}</figcaption>
+  const figcaption = isDecorative || isCampaignSplash || isStoryPanel ? "" : `  <figcaption>${inlineMarkdown(cleanAlt)}</figcaption>
 `;
   return `
 <figure class="${escapeAttribute(classes)}"${isDecorative ? ' aria-hidden="true"' : ""}>
@@ -738,10 +817,11 @@ function renderRewardItemShowcase() {
   <div class="reward-item-lead">
     <p class="eyebrow">Choose your signal</p>
     <h3>Rewards At A Glance</h3>
-    <p>Every paid tier includes campaign updates and one approved display name or alias on the digital supporter wall. Higher pledges add digital extras, feedback access, collector goods, or tightly scoped creative participation--never paid gameplay power.</p>
+    <p>Every paid tier includes campaign updates and one approved display name or alias on the digital supporter wall. Higher pledges add digital extras, feedback access, collector goods, or tightly scoped creative participation--never paid gameplay power. Physical goods are included only where listed.</p>
     <dl class="reward-item-metrics" aria-label="Item-based reward visual positioning">
       <div><dt>Best digital value</dt><dd>$40 Deluxe</dd></div>
-      <div><dt>Collector goods</dt><dd>EU shipping only</dd></div>
+      <div><dt>Recognition tier</dt><dd>$60 Credits</dd></div>
+      <div><dt>Collector goods</dt><dd>EU only</dd></div>
       <div><dt>Gameplay promise</dt><dd>No paid power</dd></div>
     </dl>
   </div>
@@ -760,8 +840,8 @@ function renderRewardItemShowcase() {
       </div>
     </div>
     <div class="reward-showcase-block reward-showcase-block--candidate">
-      <h4>Potential Add-Ons — Not Included Yet</h4>
-      <p class="reward-showcase-note">These concepts are not part of any pledge. They will be offered only if production and shipping are confirmed before launch.</p>
+      <h4>Potential Add-Ons -- Not Included Yet</h4>
+      <p class="reward-showcase-note">These concepts are not part of any pledge. Digital add-ons can be offered broadly; physical add-ons should stay limited to eligible EU physical tiers after production and shipping are confirmed.</p>
       <div class="reward-item-grid reward-product-grid">
         ${candidateCards}
       </div>
@@ -1985,6 +2065,43 @@ function buildPage(docs) {
       max-height: 96px;
       object-fit: contain;
       background: transparent;
+    }
+
+    .markdown-image.is-campaign-splash {
+      margin: 30px 0 34px;
+      overflow: visible;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .markdown-image.is-campaign-splash img {
+      width: 100%;
+      max-height: none;
+      object-fit: contain;
+      background: transparent;
+      border-radius: 18px;
+      box-shadow: 0 28px 72px rgba(0, 0, 0, 0.5);
+    }
+
+    .markdown-image.is-story-panel {
+      max-width: 760px;
+      margin: 34px auto 40px;
+      overflow: visible;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .markdown-image.is-story-panel img {
+      width: 100%;
+      max-height: none;
+      object-fit: contain;
+      background: transparent;
+      border-radius: 18px;
+      box-shadow: 0 28px 72px rgba(0, 0, 0, 0.48);
     }
 
     .inline-markdown-image {
