@@ -43,11 +43,11 @@ const documents = [
   },
   {
     id: "gameplay",
-    label: "Gameplay & Level Design",
-    eyebrow: "Design translation",
+    label: "Lối chơi & Thiết kế màn",
+    eyebrow: "Chuyển hóa thiết kế",
     file: "Divergency_Gameplay_Level_Design.md",
     summary:
-      "Stage-by-stage gameplay plan covering mechanics, puzzles, encounters, bosses, enemy families, and skill pacing.",
+      "Kế hoạch lối chơi theo từng chương, gồm cơ chế, câu đố, tình huống chiến đấu, trùm, nhóm kẻ địch và nhịp học kỹ năng.",
   },
   {
     id: "rewards",
@@ -192,95 +192,100 @@ const imageSlots = {
   gameplay: [
     {
       src: "imgs/Stage4/stage4_act_4_1_dragon_cave_approach_map.png",
-      alt: "Stage 4-1 dragon cave approach playable map",
-      caption: "Stage 4-1 playable map: Dragon Cave Approach",
+      alt: "Bản đồ chơi Chương 4-1 tại lối vào hang rồng",
+      caption: "Bản đồ Chương 4-1: Lối vào hang rồng",
     },
     {
       src: "imgs/Stage4/stage4_act_4_2_dragon_bone_catacombs_map.png",
-      alt: "Stage 4-2 dragon bone catacombs playable map",
-      caption: "Stage 4-2 playable map: Dragon Bone Catacombs",
+      alt: "Bản đồ chơi Chương 4-2 trong hầm xương rồng",
+      caption: "Bản đồ Chương 4-2: Hầm xương rồng",
     },
     {
       src: "imgs/Stage4/stage4_act_4_3_glass_city_ritual_cave_map.png",
-      alt: "Stage 4-3 glass city and ritual cave playable map",
-      caption: "Stage 4-3 playable map: Glass City and Ritual Cave",
+      alt: "Bản đồ chơi Chương 4-3 tại thành phố kính và ca động tế lễ",
+      caption: "Bản đồ Chương 4-3: Thành phố kính và ca động tế lễ",
     },
     {
       src: "imgs/Stage4/stage4_act_4_4_heart_titan_battlefield_map.png",
-      alt: "Stage 4-4 Heart Titan battlefield playable map",
-      caption: "Stage 4-4 playable map: Heart Titan Battlefield",
+      alt: "Bản đồ chơi Chương 4-4 tại chiến trường Titan Trái Tim",
+      caption: "Bản đồ Chương 4-4: Chiến trường Titan Trái Tim",
     },
     {
       src: "imgs/Stage1/Bastonne.png",
-      alt: "Bastonne prison stage",
-      caption: "Stage 0 Bastonne layout mood",
+      alt: "Không gian nhà tù Bastonne",
+      caption: "Định hướng không gian Chương 0: Bastonne",
     },
     {
       src: "imgs/Stage1/bar.png",
-      alt: "Armorlite bar encounter",
-      caption: "Stage 1 bar encounter space",
+      alt: "Tình huống chiến đấu trong quán Armorlite",
+      caption: "Không gian giao chiến tại Armorlite",
     },
     {
       src: "imgs/Stage1/GROGER_boss.png",
-      alt: "GROGER boss image",
-      caption: "Optional hidden boss visual",
+      alt: "Hình ảnh trùm GROGER",
+      caption: "Định hướng hình ảnh cho trùm ẩn GROGER",
     },
     {
       src: "imgs/Stage2/bridge_2_r_4.png",
-      alt: "Sakuri bridge encounter",
-      caption: "Stage 2 bridge encounter direction",
+      alt: "Tình huống chiến đấu trên cầu tại Sakuri",
+      caption: "Định hướng tình huống trên cầu ở Chương 2",
     },
   ],
   rewards: [
     {
-      src: "imgs/items/flower.png",
-      alt: "Heniana flower seal item symbol for the $5 Signal Supporter tier",
-      caption: "Tier symbol: $5 Signal Supporter",
+      src: "imgs/campaign-panels/kick/reward/reward 1.png",
+      alt: "Suspicious side-eye mutation portrait for the $5 Side-Eye Supporter tier",
+      caption: "Tier face: $5 Side-Eye Supporter",
     },
     {
-      src: "imgs/items/knife.png",
-      alt: "Relic-iron knife item symbol for the $20 Early Recruit tier",
-      caption: "Tier symbol: $20 Early Recruit",
+      src: "imgs/campaign-panels/kick/reward/reward 2.png",
+      alt: "Furious red-eyed mutation portrait for the $10 Red-Eye Signal Pack tier",
+      caption: "Tier face: $10 Red-Eye Signal Pack",
     },
     {
-      src: "imgs/items/massk.png",
-      alt: "Mask item symbol for the $25 Digital Recruit tier",
-      caption: "Tier symbol: $25 Digital Recruit",
+      src: "imgs/campaign-panels/kick/reward/reward 3.png",
+      alt: "Crooked-grin mutation portrait for the $20 Crooked-Grin Early Bird tier",
+      caption: "Tier face: $20 Crooked-Grin Early Bird",
     },
     {
-      src: "imgs/items/skull emer.png",
-      alt: "Emerald skull item symbol for the $40 Digital Deluxe Pack tier",
-      caption: "Tier symbol: $40 Digital Deluxe Pack",
+      src: "imgs/campaign-panels/kick/reward/reward 4.png",
+      alt: "Grim-faced mutation portrait for the $25 Grim-Faced Recruit tier",
+      caption: "Tier face: $25 Grim-Faced Recruit",
     },
     {
-      src: "imgs/rewards/submarine-lab-access-badge-mockup.png",
-      alt: "Submarine laboratory access badge symbol for the $60 Credits Recruit tier",
-      caption: "Tier symbol: $60 Credits Recruit",
+      src: "imgs/campaign-panels/kick/reward/reward 5.png",
+      alt: "Skull-grin mutation portrait for the $40 Skullgrin Deluxe tier",
+      caption: "Tier face: $40 Skullgrin Deluxe",
     },
     {
-      src: "imgs/items/poition.png",
-      alt: "Red treatment vial item symbol for the $70 Field Tester tier",
-      caption: "Tier symbol: $70 Field Tester",
+      src: "imgs/campaign-panels/kick/reward/reward 6.gif",
+      alt: "Animated exposed-mind portrait for the $60 Open-Mind Insider tier",
+      caption: "Tier face: $60 Open-Mind Insider",
     },
     {
-      src: "imgs/rewards/a3-poster-product-mockup.png",
-      alt: "A3 poster mockup for the $95 Poster Scout tier",
-      caption: "Tier symbol: $95 Poster Scout, EU only",
+      src: "imgs/campaign-panels/kick/reward/reward 7.gif",
+      alt: "Animated brainrot host portrait for the $70 Brainrot Test Subject tier",
+      caption: "Tier face: $70 Brainrot Test Subject",
     },
     {
-      src: "imgs/items/Barcalet.png",
-      alt: "Beacon bracelet item symbol for the $120 Collector's Pack tier",
-      caption: "Tier symbol: $120 Collector's Pack, EU only",
+      src: "imgs/campaign-panels/kick/reward/reward 8.gif",
+      alt: "Animated reality-glitch portrait for the $95 Glitched-Out Scout tier",
+      caption: "Tier face: $95 Glitched-Out Scout, EU only",
     },
     {
-      src: "imgs/items/cloth dirty.png",
-      alt: "Bastonne cloth patch item symbol for the $250 Prisoner's Scratchings tier",
-      caption: "Tier symbol: $250 Prisoner's Scratchings",
+      src: "imgs/campaign-panels/kick/reward/reward 9.gif",
+      alt: "Animated screaming mutation portrait for the $120 Full-Meltdown Collector tier",
+      caption: "Tier face: $120 Full-Meltdown Collector, EU only",
     },
     {
-      src: "imgs/items/figsure.png",
-      alt: "Worn field figure item symbol for the $500 Creative Collaborator tier",
-      caption: "Tier symbol: $500 Creative Collaborator",
+      src: "imgs/campaign-panels/kick/reward/reward 10.gif",
+      alt: "Animated mind-blown mutation portrait for the $250 Mind-Blown Scribbler tier",
+      caption: "Tier face: $250 Mind-Blown Scribbler",
+    },
+    {
+      src: "imgs/campaign-panels/kick/reward/reward 11.gif",
+      alt: "Animated final mutation portrait for the $500 Final-Form Architect tier",
+      caption: "Tier face: $500 Final-Form Architect",
     },
     {
       src: "imgs/rewards/a3-poster-product-mockup.png",
@@ -427,67 +432,71 @@ const galleryFolderLabels = new Map([
 
 const pledgeTierSymbols = [
   {
-    src: "imgs/items/flower.png",
-    name: "$5 Signal Supporter",
+    src: "imgs/campaign-panels/kick/reward/reward 1.png",
+    name: "$5 Side-Eye Supporter",
     tag: "Recognition",
     note: "Campaign updates, one backer wallpaper, and one approved display name or alias on the digital supporter wall.",
   },
   {
-    src: "imgs/items/knife.png",
-    name: "$20 Early Recruit",
+    src: "imgs/campaign-panels/kick/reward/reward 2.png",
+    name: "$10 Red-Eye Signal Pack",
+    tag: "Digital supporter pack",
+    note: "Side-Eye Supporter rewards plus a three-wallpaper set and avatar/icon pack.",
+  },
+  {
+    src: "imgs/campaign-panels/kick/reward/reward 3.png",
+    name: "$20 Crooked-Grin Early Bird",
     tag: "Limited digital key",
-    note: "Signal Supporter rewards plus a full PC game key at the early-backer price, avatar icons, and a mini lore dossier.",
+    note: "Red-Eye Signal Pack rewards plus a full PC game key at the early-backer price and a mini lore dossier.",
   },
   {
-    src: "imgs/items/massk.png",
-    name: "$25 Digital Recruit",
+    src: "imgs/campaign-panels/kick/reward/reward 4.png",
+    name: "$25 Grim-Faced Recruit",
     tag: "Standard digital key",
-    note: "Signal Supporter rewards plus a full PC game key, avatar icons, and a mini lore dossier.",
+    note: "Red-Eye Signal Pack rewards plus a full PC game key and a mini lore dossier.",
   },
   {
-    src: "imgs/items/skull emer.png",
-    name: "$40 Digital Deluxe Pack",
+    src: "imgs/campaign-panels/kick/reward/reward 5.png",
+    name: "$40 Skullgrin Deluxe",
     tag: "Recommended digital tier",
-    note: "Digital Recruit rewards plus the soundtrack, Digital Field Artbook PDF, Digital Evidence Pack, and Field Relics Digital Art Sheet.",
+    note: "Grim-Faced Recruit rewards plus the soundtrack, Digital Field Artbook PDF, Digital Evidence Pack, and Field Relics Digital Art Sheet.",
     featured: true,
   },
   {
-    src: "imgs/rewards/submarine-lab-access-badge-mockup.png",
-    name: "$60 Credits Recruit",
+    src: "imgs/campaign-panels/kick/reward/reward 6.gif",
+    name: "$60 Open-Mind Insider",
     tag: "Recognition upgrade",
-    note: "Digital Deluxe rewards plus one approved final-credits display name or alias and a credits-badge wallpaper variant.",
-    isPhoto: true,
+    note: "Skullgrin Deluxe rewards plus one approved final-credits display name or alias and a credits-badge wallpaper variant.",
   },
   {
-    src: "imgs/items/poition.png",
-    name: "$70 Field Tester",
+    src: "imgs/campaign-panels/kick/reward/reward 7.gif",
+    name: "$70 Brainrot Test Subject",
     tag: "Feedback access",
-    note: "Credits Recruit rewards plus beta access, a private feedback path, and beta tester credit.",
+    note: "Open-Mind Insider rewards plus beta access, a private feedback path, and beta tester credit.",
   },
   {
-    src: "imgs/rewards/a3-poster-product-mockup.png",
-    name: "$95 Poster Scout, EU only",
+    src: "imgs/campaign-panels/kick/reward/reward 8.gif",
+    name: "$95 Glitched-Out Scout, EU only",
     tag: "Light physical",
-    note: "Field Tester rewards plus one A3 Divergency poster. Shipping is charged separately.",
-    isPhoto: true,
+    note: "Brainrot Test Subject rewards plus one A3 Divergency poster. Shipping is charged separately.",
   },
   {
-    src: "imgs/items/Barcalet.png",
-    name: "$120 Collector's Pack, EU only",
+    src: "imgs/campaign-panels/kick/reward/reward 9.gif",
+    name: "$120 Full-Meltdown Collector, EU only",
     tag: "Physical collector",
-    note: "Field Tester rewards plus one A3 poster, one printed Divergency Field Artbook/art zine, one Marseille-inspired Beacon bracelet, and one Pixel Character Patch & Keychain Set. Shipping is charged separately.",
+    note: "Brainrot Test Subject rewards plus one A3 poster, one printed Divergency Field Artbook/art zine, one Marseille-inspired Beacon bracelet, and one Pixel Character Patch & Keychain Set. Shipping is charged separately.",
   },
   {
-    src: "imgs/items/cloth dirty.png",
-    name: "$250 Prisoner's Scratchings",
+    src: "imgs/campaign-panels/kick/reward/reward 10.gif",
+    name: "$250 Mind-Blown Scribbler",
     tag: "Limited wall mark",
-    note: "Field Tester rewards plus one approved message of up to 40 characters placed on a Bastonne prison wall.",
+    note: "Brainrot Test Subject rewards plus one approved message of up to 40 characters placed on a Bastonne prison wall.",
   },
   {
-    src: "imgs/items/figsure.png",
-    name: "$500 Creative Collaborator",
+    src: "imgs/campaign-panels/kick/reward/reward 11.gif",
+    name: "$500 Final-Form Architect",
     tag: "Scoped collaboration",
-    note: "Field Tester rewards plus one reviewed cosmetic or background-lore contribution. Limited to 3-5 backers.",
+    note: "Brainrot Test Subject rewards plus one reviewed cosmetic or background-lore contribution. Limited to 3-5 backers.",
   },
 ];
 
@@ -496,31 +505,31 @@ const rewardItemShowcase = [
     src: "imgs/rewards/a3-poster-product-mockup.png",
     name: "A3 Divergency Poster",
     tag: "Guaranteed reward concept",
-    note: "Included in the $95 Poster Scout and $120 Collector's Pack. Concept mockup; final paper stock and print finish may differ. Staging props are not included.",
+    note: "Included in the $95 Glitched-Out Scout and $120 Full-Meltdown Collector. Concept mockup; final paper stock and print finish may differ. Staging props are not included.",
   },
   {
     src: "imgs/rewards/pledge-tiers/pledge-040-digital-deluxe-pack.png",
     name: "Divergency Field Artbook",
     tag: "Digital + printed reward preview",
-    note: "Digital PDF included from the $40 Digital Deluxe tier upward. One printed artbook/art zine is included only in the $120 Collector's Pack, EU only. Staging props are not included.",
+    note: "Digital PDF included from the $40 Skullgrin Deluxe tier upward. One printed artbook/art zine is included only in the $120 Full-Meltdown Collector, EU only. Staging props are not included.",
   },
   {
     src: "imgs/rewards/beacon-bracelet-marseille-mockup.png",
     name: "Marseille Beacon Bracelet",
     tag: "Guaranteed reward concept",
-    note: "Included only in the $120 Collector's Pack. Concept mockup; final materials, sizing, and finish may differ after vendor sampling. Staging props are not included.",
+    note: "Included only in the $120 Full-Meltdown Collector. Concept mockup; final materials, sizing, and finish may differ after vendor sampling. Staging props are not included.",
   },
   {
     src: "imgs/rewards/pixel-character-patch-keychain-set-mockup.png",
     name: "Pixel Character Patch & Keychain Set",
     tag: "Guaranteed reward concept",
-    note: "Included only in the $120 Collector's Pack, EU only. Concept mockup; final patch, sticker, acrylic charm, and bag-accessory counts may differ after vendor sampling. Staging props are not included.",
+    note: "Included only in the $120 Full-Meltdown Collector, EU only. Concept mockup; final patch, sticker, acrylic charm, and bag-accessory counts may differ after vendor sampling. Staging props are not included.",
   },
   {
     src: "imgs/rewards/stage1-evidence-pack-mockup.png",
     name: "Digital Evidence Pack",
     tag: "Guaranteed digital preview",
-    note: "A downloadable PDF dossier included from the $40 Digital Deluxe tier upward. This is a digital reward, not a physical packet.",
+    note: "A downloadable PDF dossier included from the $40 Skullgrin Deluxe tier upward. This is a digital reward, not a physical packet.",
   },
 ];
 
@@ -815,16 +824,24 @@ function renderRewardItemShowcase() {
   return `
 <section class="reward-item-showcase" aria-label="Divergency Kickstarter reward item preview">
   <div class="reward-item-lead">
-    <p class="eyebrow">Choose your signal</p>
-    <h3>Rewards At A Glance</h3>
-    <p>Every paid tier includes campaign updates and one approved display name or alias on the digital supporter wall. Higher pledges add digital extras, feedback access, collector goods, or tightly scoped creative participation--never paid gameplay power. Physical goods are included only where listed.</p>
+    <div class="reward-item-lead-copy">
+      <p class="eyebrow">Choose your signal</p>
+      <h3>Rewards At A Glance</h3>
+      <p>Follow the signal from supporter recognition to digital rewards, beta access, collector goods, and tightly scoped creative participation. Every paid tier includes campaign updates and one approved name or alias on the digital supporter wall--never paid gameplay power.</p>
+    </div>
     <dl class="reward-item-metrics" aria-label="Item-based reward visual positioning">
-      <div><dt>Best digital value</dt><dd>$40 Deluxe</dd></div>
-      <div><dt>Recognition tier</dt><dd>$60 Credits</dd></div>
+      <div><dt>Best digital value</dt><dd>$40 Skullgrin</dd></div>
+      <div><dt>Recognition tier</dt><dd>$60 Open-Mind</dd></div>
       <div><dt>Collector goods</dt><dd>EU only</dd></div>
       <div><dt>Gameplay promise</dt><dd>No paid power</dd></div>
     </dl>
   </div>
+  <figure class="reward-master-visual">
+    <button type="button" data-lightbox-src="imgs/rewards/divergency-rewards-at-a-glance-v2.png" data-lightbox-alt="Divergency Rewards At A Glance: six pledge signals from supporter to creative participation" data-lightbox-caption="Choose Your Signal -- Divergency rewards at a glance" aria-label="View the Divergency rewards overview larger">
+      <img src="imgs/rewards/divergency-rewards-at-a-glance-v2.png" alt="Divergency Rewards At A Glance with icons for supporter recognition, game keys, deluxe digital rewards, insider access, EU collector goods, and creative participation" loading="lazy">
+    </button>
+    <figcaption>Six signals, one clear reward path. Collector goods are EU only; all tiers avoid paid gameplay power.</figcaption>
+  </figure>
   <div class="reward-item-content">
     <div class="reward-showcase-block">
       <h4>Pledge Tiers</h4>
@@ -2115,10 +2132,19 @@ function buildPage(docs) {
       border-radius: 8px;
     }
 
+    .table-wrap .inline-markdown-image {
+      width: 76px;
+      height: 76px;
+      min-width: 76px;
+      margin: 0 auto;
+      aspect-ratio: 1;
+      object-fit: contain;
+      background: transparent;
+      border-color: rgba(216, 166, 77, 0.28);
+      image-rendering: pixelated;
+    }
+
     .reward-item-showcase {
-      display: grid;
-      grid-template-columns: minmax(260px, 0.88fr) minmax(0, 1.45fr);
-      gap: 18px;
       margin: 28px 0 34px;
       padding: 24px 0;
       border-top: 1px solid rgba(216, 166, 77, 0.28);
@@ -2126,9 +2152,12 @@ function buildPage(docs) {
     }
 
     .reward-item-lead {
-      align-self: stretch;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+      gap: 24px;
+      align-items: end;
       min-width: 0;
-      padding-right: 8px;
+      margin-bottom: 18px;
     }
 
     .reward-item-lead h3 {
@@ -2145,9 +2174,9 @@ function buildPage(docs) {
 
     .reward-item-metrics {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 8px;
-      margin: 18px 0 0;
+      margin: 0;
     }
 
     .reward-item-metrics div {
@@ -2159,6 +2188,69 @@ function buildPage(docs) {
 
     .reward-item-metrics dd {
       font-size: 1rem;
+    }
+
+    .reward-master-visual {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      margin: 0 0 24px;
+      background: #090d0d;
+      border: 1px solid rgba(111, 184, 174, 0.5);
+      border-radius: var(--radius);
+      box-shadow:
+        0 20px 42px rgba(0, 0, 0, 0.36),
+        0 0 32px rgba(111, 184, 174, 0.1);
+    }
+
+    .reward-master-visual::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      pointer-events: none;
+      border: 1px solid rgba(216, 166, 77, 0.16);
+      border-radius: inherit;
+      box-shadow: inset 0 0 42px rgba(111, 184, 174, 0.08);
+    }
+
+    .reward-master-visual button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .reward-master-visual button:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: -3px;
+    }
+
+    .reward-master-visual img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      transition: filter 180ms ease, transform 180ms ease;
+    }
+
+    .reward-master-visual button:hover img {
+      filter: brightness(1.06);
+      transform: scale(1.008);
+    }
+
+    .reward-master-visual figcaption {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      padding: 11px 14px;
+      background: linear-gradient(90deg, rgba(14, 23, 23, 0.98), rgba(31, 26, 21, 0.98));
+      border-top: 1px solid rgba(111, 184, 174, 0.28);
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.4;
     }
 
     .reward-item-content {
@@ -2489,7 +2581,16 @@ function buildPage(docs) {
       }
 
       .reward-item-showcase {
+        display: block;
+      }
+
+      .reward-item-lead {
         grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .reward-item-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .toc-sticky {
@@ -2558,6 +2659,15 @@ function buildPage(docs) {
 
       .reward-item-grid {
         grid-template-columns: 1fr;
+      }
+
+      .reward-item-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .reward-master-visual img {
+        min-height: 0;
+        object-fit: contain;
       }
 
       .reward-item-card {
@@ -2933,7 +3043,7 @@ function buildPage(docs) {
       grid.addEventListener("scroll", () => updateMediaControls(grid.dataset.mediaGrid), { passive: true });
     });
 
-    document.querySelectorAll(".media-grid, .gallery-grid").forEach((grid) => {
+    document.querySelectorAll(".media-grid, .gallery-grid, .reward-master-visual").forEach((grid) => {
       grid.addEventListener("click", (event) => {
         const button = event.target.closest("[data-lightbox-src]");
         if (button) openLightbox(button);

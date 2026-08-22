@@ -10,16 +10,17 @@ Every paid pledge tier includes campaign updates and one approved display name o
 
 | Pledge | Tier | Type | What backers receive | Estimated delivery | Visuals to show |
 | ---: | --- | --- | --- | --- | --- |
-| $5 | Signal Supporter | Digital | Campaign updates, one wallpaper, and one approved supporter-wall display name | Month 6 + Month 24 | Wallpaper sample and supporter wall example |
-| $20 | Early Recruit, limited | Digital | Signal Supporter rewards plus a full PC digital game key at the early-backer price, avatar/icon pack, and mini lore dossier | Month 24 | Game key graphic, wallpaper sample, avatar/icon sample, dossier cover |
-| $25 | Digital Recruit | Digital | Signal Supporter rewards plus full PC digital game key, avatar/icon pack, and mini lore dossier | Month 24 | Same digital reward sample set as Early Recruit |
-| $40 | Digital Deluxe Pack | Digital | Digital Recruit rewards plus soundtrack, Digital Field Artbook PDF, Digital Evidence Pack PDF, and Field Relics Digital Art Sheet | Month 24 | Soundtrack cover, Digital Field Artbook cover, Digital Evidence Pack preview, Field Relics art sheet sample |
-| $60 | Credits Recruit | Digital | Digital Deluxe Pack rewards plus one approved final-credits display name or alias and a credits-badge wallpaper variant | Month 24 | Credits badge, final credits listing example, wallpaper variant |
-| $70 | Field Tester | Digital | Credits Recruit rewards plus beta access, private feedback form, and beta tester credit listing | Month 19-24 | Field Tester badge, feedback form preview, beta credit example |
-| $95 | Poster Scout, EU only | Digital + physical | Field Tester rewards plus one A3 Marseille/Divergency poster | Month 24-26 | A3 poster product mockup |
-| $120 | Collector's Pack, EU only | Digital + physical | Field Tester rewards plus one A3 Marseille/Divergency poster, one printed Divergency Field Artbook/art zine, one Beacon bracelet, and one Pixel Character Patch & Keychain Set | Month 24-26 | A3 poster, printed Field Artbook, Beacon bracelet, and Pixel Character Patch & Keychain Set concept mockups |
-| $250 | Prisoner's Scratchings, limited | Digital/experience | Field Tester rewards plus one approved short message or graffiti line on a Bastonne prison wall | Month 24 | Bastonne wall/graffiti placement example |
-| $500 | Creative Collaborator, limited | Digital/experience | Field Tester rewards plus one tightly scoped cosmetic or background-lore contribution | Month 24 | Example cosmetic/icon/lore contribution |
+| $5 | Side-Eye Supporter | Digital | Campaign updates, one wallpaper, and one approved supporter-wall display name | Month 6 + Month 24 | `reward 1.png`, wallpaper sample, and supporter wall example |
+| $10 | Red-Eye Signal Pack | Digital | Side-Eye Supporter rewards plus a three-wallpaper set and avatar/icon pack | Month 6 + Month 24 | `reward 2.png`, three wallpaper samples, and avatar/icon sample |
+| $20 | Crooked-Grin Early Bird, limited | Digital | Red-Eye Signal Pack rewards plus a full PC digital game key at the early-backer price and mini lore dossier | Month 24 | `reward 3.png`, game key graphic, and dossier cover |
+| $25 | Grim-Faced Recruit | Digital | Red-Eye Signal Pack rewards plus full PC digital game key and mini lore dossier | Month 24 | `reward 4.png` and the standard digital reward sample set |
+| $40 | Skullgrin Deluxe | Digital | Grim-Faced Recruit rewards plus soundtrack, Digital Field Artbook PDF, Digital Evidence Pack PDF, and Field Relics Digital Art Sheet | Month 24 | `reward 5.png`, soundtrack cover, artbook cover, Evidence Pack preview, and Field Relics art sheet |
+| $60 | Open-Mind Insider | Digital | Skullgrin Deluxe rewards plus one approved final-credits display name or alias and a credits-badge wallpaper variant | Month 24 | `reward 6.gif`, credits badge, final credits example, and wallpaper variant |
+| $70 | Brainrot Test Subject | Digital | Open-Mind Insider rewards plus beta access, private feedback form, and beta tester credit listing | Month 19-24 | `reward 7.gif`, feedback form preview, and beta credit example |
+| $95 | Glitched-Out Scout, EU only | Digital + physical | Brainrot Test Subject rewards plus one A3 Marseille/Divergency poster | Month 24-26 | `reward 8.gif` and A3 poster product mockup |
+| $120 | Full-Meltdown Collector, EU only | Digital + physical | Brainrot Test Subject rewards plus one A3 Marseille/Divergency poster, one printed Divergency Field Artbook/art zine, one Beacon bracelet, and one Pixel Character Patch & Keychain Set | Month 24-26 | `reward 9.gif` and all included physical product mockups |
+| $250 | Mind-Blown Scribbler, limited | Digital/experience | Brainrot Test Subject rewards plus one approved short message or graffiti line on a Bastonne prison wall | Month 24 | `reward 10.gif` and Bastonne wall/graffiti placement example |
+| $500 | Final-Form Architect, limited | Digital/experience | Brainrot Test Subject rewards plus one tightly scoped cosmetic or background-lore contribution | Month 24 | `reward 11.gif` and an example cosmetic/icon/lore contribution |
 
 Reward promise rules:
 
@@ -27,8 +28,8 @@ Reward promise rules:
 - Do not use the old Act 1 tier naming on the public page unless the product scope returns to an Act 1-only release.
 - Do not sell exclusive combat power, exclusive playable characters, or paid stat advantages.
 - Keep the supporter-wall promise to one approved display name or alias for every paid pledge tier.
-- Keep the final-credits promise to one approved display name or alias for Credits Recruit and higher tiers only, unless a lower tier adds the final credits name upgrade add-on.
-- Do not imply that Prisoner's Scratchings or Creative Collaborator automatically include the Poster Scout or Collector's Pack physical goods. They include Field Tester rewards plus the listed creative participation unless physical items are added explicitly.
+- Keep the final-credits promise to one approved display name or alias for Open-Mind Insider and higher tiers only, unless a lower tier adds the final credits name upgrade add-on.
+- Do not imply that Mind-Blown Scribbler or Final-Form Architect automatically include the Glitched-Out Scout or Full-Meltdown Collector physical goods. They include Brainrot Test Subject rewards plus the listed creative participation unless physical items are added explicitly.
 - Keep the guaranteed physical launch promise to one A3 poster, one printed Divergency Field Artbook/art zine, one Beacon bracelet, and one Pixel Character Patch & Keychain Set.
 - Treat the Bastonne cell key cap, cell key keychain, Divergency Daily access badge, and cargo tag as potential add-ons—not included rewards—unless they are added to the reward table with confirmed price, delivery, and shipping rules.
 - Treat coaster sets, cloth passes, and physical evidence packs as visual concepts or future add-ons unless they are added to the reward table with price, delivery, and shipping rules.
@@ -38,67 +39,71 @@ Reward promise rules:
 
 Show these images large enough that backers can understand the item without zooming. Each visual needs a direct caption that says whether it is a tier symbol, a physical mockup, a digital reward preview, an optional add-on concept, or an in-world visual reference.
 
-### Pledge Tier Item Symbols
+### Pledge Tier Mutation Portraits
 
-Use existing `imgs/items` pixel-art objects as the main visual ladder for the rewards section. Each symbol should sit beside or directly below the matching tier text, with the exact pledge name, price, and delivery window rendered as normal page text.
+Use the eleven portraits in `imgs/campaign-panels/kick/reward` as the main visual ladder for the rewards section. Their expressions escalate from suspicious and angry to exposed-brain, glitched, and fully mutated. Each face should sit beside or directly below the matching tier text, with the exact pledge name, price, and delivery window rendered as normal page text. These faces are tier mascots, not promised physical or in-game items.
 
-![Tier symbol: $5 Signal Supporter](<imgs/items/flower.png>)
+![Tier face: $5 Side-Eye Supporter](<imgs/campaign-panels/kick/reward/reward 1.png>)
 
-Caption to use: **Tier symbol: $5 Signal Supporter.** Heniana flower seal used as a soft supporter badge for campaign updates, wallpaper, and supporter wall recognition.
+Caption to use: **Tier face: $5 Side-Eye Supporter.** The suspicious sideways glance opens the mutation ladder for campaign updates, one wallpaper, and supporter-wall recognition.
 
-![Tier symbol: $20 Early Recruit](<imgs/items/knife.png>)
+![Tier face: $10 Red-Eye Signal Pack](<imgs/campaign-panels/kick/reward/reward 2.png>)
 
-Caption to use: **Tier symbol: $20 Early Recruit.** Relic-iron knife used as an early recruit signal for the limited digital key tier. This is visual identity only, not an exclusive weapon.
+Caption to use: **Tier face: $10 Red-Eye Signal Pack.** The furious red stare marks the first digital upgrade: a three-wallpaper set and avatar/icon pack.
 
-![Tier symbol: $25 Digital Recruit](<imgs/items/massk.png>)
+![Tier face: $20 Crooked-Grin Early Bird](<imgs/campaign-panels/kick/reward/reward 3.png>)
 
-Caption to use: **Tier symbol: $25 Digital Recruit.** Mask of the Listening Route used as the avatar/recruit identity for the standard PC digital key tier.
+Caption to use: **Tier face: $20 Crooked-Grin Early Bird.** The sideways grin marks the limited lower-price PC game-key tier.
 
-![Tier symbol: $40 Digital Deluxe Pack](<imgs/items/skull emer.png>)
+![Tier face: $25 Grim-Faced Recruit](<imgs/campaign-panels/kick/reward/reward 4.png>)
 
-Caption to use: **Tier symbol: $40 Digital Deluxe Pack.** Emerald Skull token used as the Field Relics anchor for soundtrack, Digital Field Artbook, lore dossier, wallpapers, and avatar icons.
+Caption to use: **Tier face: $25 Grim-Faced Recruit.** The hard stare marks the standard PC digital game tier.
 
-![Tier symbol: $60 Credits Recruit](<imgs/rewards/submarine-lab-access-badge-mockup.png>)
+![Tier face: $40 Skullgrin Deluxe](<imgs/campaign-panels/kick/reward/reward 5.png>)
 
-Caption to use: **Tier symbol: $60 Credits Recruit.** Submarine laboratory access badge used as the recognition symbol for one approved final-credits display name or alias. This is a digital recognition reward, not a shipped badge.
+Caption to use: **Tier face: $40 Skullgrin Deluxe.** The exposed teeth and death's-head grin anchor the soundtrack, Digital Field Artbook, Digital Evidence Pack, and Field Relics bundle.
 
-![Tier symbol: $70 Field Tester](<imgs/items/poition.png>)
+![Tier face: $60 Open-Mind Insider](<imgs/campaign-panels/kick/reward/reward 6.gif>)
 
-Caption to use: **Tier symbol: $70 Field Tester.** Red treatment vial used as the test-build symbol for beta access, private feedback, and beta tester credit.
+Caption to use: **Tier face: $60 Open-Mind Insider.** The animated exposed brain represents the final-credits recognition upgrade.
 
-![Tier symbol: $95 Poster Scout, EU only](<imgs/rewards/a3-poster-product-mockup.png>)
+![Tier face: $70 Brainrot Test Subject](<imgs/campaign-panels/kick/reward/reward 7.gif>)
 
-Caption to use: **Tier symbol: $95 Poster Scout, EU only.** A3 poster mockup used as the direct visual for the lighter physical poster tier.
+Caption to use: **Tier face: $70 Brainrot Test Subject.** The animated creature-in-the-brain portrait marks beta access, private feedback, and beta tester credit.
 
-![Tier symbol: $120 Collector's Pack, EU only](<imgs/items/Barcalet.png>)
+![Tier face: $95 Glitched-Out Scout, EU only](<imgs/campaign-panels/kick/reward/reward 8.gif>)
 
-Caption to use: **Tier symbol: $120 Collector's Pack, EU only.** Beacon bracelet icon used beside the actual poster, printed Field Artbook, and bracelet mockups for the EU-only physical tier.
+Caption to use: **Tier face: $95 Glitched-Out Scout, EU only.** The fragmenting face introduces the first physical tier and its A3 poster.
 
-![Tier symbol: $250 Prisoner's Scratchings](<imgs/items/cloth dirty.png>)
+![Tier face: $120 Full-Meltdown Collector, EU only](<imgs/campaign-panels/kick/reward/reward 9.gif>)
 
-Caption to use: **Tier symbol: $250 Prisoner's Scratchings.** Bastonne cloth patch used as the prison texture symbol for an approved short message or graffiti line.
+Caption to use: **Tier face: $120 Full-Meltdown Collector, EU only.** The screaming portrait marks the complete physical collector bundle.
 
-![Tier symbol: $500 Creative Collaborator](<imgs/items/figsure.png>)
+![Tier face: $250 Mind-Blown Scribbler](<imgs/campaign-panels/kick/reward/reward 10.gif>)
 
-Caption to use: **Tier symbol: $500 Creative Collaborator.** Worn field figure used as the collaboration symbol for one reviewed cosmetic or background-lore contribution.
+Caption to use: **Tier face: $250 Mind-Blown Scribbler.** The psychic detonation portrait marks the approved Bastonne wall message tier.
+
+![Tier face: $500 Final-Form Architect](<imgs/campaign-panels/kick/reward/reward 11.gif>)
+
+Caption to use: **Tier face: $500 Final-Form Architect.** The final purple mutation marks one tightly scoped cosmetic or background-lore collaboration.
 
 ### Guaranteed Physical Reward Concept Mockups
 
 ![Physical reward mockup: A3 Divergency poster](<imgs/rewards/a3-poster-product-mockup.png>)
 
-Caption to use: **Concept mockup — final materials may differ.** One A3 Divergency poster is included in the $95 Poster Scout and $120 Collector's Pack tiers, with EU shipping only.
+Caption to use: **Concept mockup — final materials may differ.** One A3 Divergency poster is included in the $95 Glitched-Out Scout and $120 Full-Meltdown Collector tiers, with EU shipping only.
 
 ![Physical reward mockup: Divergency Field Artbook](<imgs/rewards/pledge-tiers/pledge-040-digital-deluxe-pack.png>)
 
-Caption to use: **Concept mockup — final materials may differ.** The Digital Field Artbook PDF is included from the $40 Digital Deluxe tier upward. One printed Divergency Field Artbook/art zine is included only in the $120 Collector's Pack, with EU shipping only. Props shown around the book are not included unless listed separately.
+Caption to use: **Concept mockup — final materials may differ.** The Digital Field Artbook PDF is included from the $40 Skullgrin Deluxe tier upward. One printed Divergency Field Artbook/art zine is included only in the $120 Full-Meltdown Collector, with EU shipping only. Props shown around the book are not included unless listed separately.
 
 ![Physical reward mockup: Beacon bracelet](<imgs/rewards/beacon-bracelet-marseille-mockup.png>)
 
-Caption to use: **Concept mockup — final materials may differ.** One Marseille-inspired Beacon bracelet is included only in the $120 Collector's Pack, with EU shipping only.
+Caption to use: **Concept mockup — final materials may differ.** One Marseille-inspired Beacon bracelet is included only in the $120 Full-Meltdown Collector, with EU shipping only.
 
 ![Physical reward mockup: Pixel Character Patch & Keychain Set](<imgs/rewards/pixel-character-patch-keychain-set-mockup.png>)
 
-Caption to use: **Concept mockup - final materials may differ.** One Pixel Character Patch & Keychain Set is included only in the $120 Collector's Pack, with EU shipping only. Final patch, sticker, acrylic charm, and bag-accessory counts should be locked after vendor sampling.
+Caption to use: **Concept mockup - final materials may differ.** One Pixel Character Patch & Keychain Set is included only in the $120 Full-Meltdown Collector, with EU shipping only. Final patch, sticker, acrylic charm, and bag-accessory counts should be locked after vendor sampling.
 
 Any staged collector image that shows envelopes, cards, tags, wax seals, table props, or extra paper pieces must say whether those items are included. If they are only scene dressing, the caption must state: **Props shown for atmosphere only -- not included in this reward.**
 
@@ -132,7 +137,7 @@ Caption to use: **Reward concept mockup: Laundel route cloth pass.** Use as a Fi
 
 ![Optional add-on concept mockup: Armorlite coaster set](<imgs/rewards/armorlite-coaster-set-mockup.png>)
 
-Caption to use: **Optional add-on concept mockup: Armorlite coaster set.** Do not imply it ships in the Collector's Pack unless it is added to the reward ladder and fulfillment budget.
+Caption to use: **Optional add-on concept mockup: Armorlite coaster set.** Do not imply it ships in the Full-Meltdown Collector unless it is added to the reward ladder and fulfillment budget.
 
 ### Field Relics Digital Art Sheet And In-World Reward Visuals
 
@@ -200,8 +205,8 @@ Recommended order on the Kickstarter page:
 
 - Physical rewards ship to EU countries only at launch.
 - Ship-from region: France/EU.
-- Poster Scout or poster-only shipment estimated shipping: EUR 8-15 depending on EU destination.
-- Collector's Pack estimated shipping: EUR 12-22 depending on EU destination and final printed artbook weight.
+- Glitched-Out Scout or poster-only shipment estimated shipping: EUR 8-15 depending on EU destination.
+- Full-Meltdown Collector estimated shipping: EUR 12-22 depending on EU destination and final printed artbook weight.
 - Printed artbook, bracelet, Pixel Character Patch & Keychain Set, cap, keychain, badge, cargo tag, or combined collector shipment estimated shipping: EUR 12-22 depending on EU destination and final package weight.
 - Physical add-ons should be enabled only for main reward tiers that already include physical shipping; keep digital-only tiers limited to digital add-ons.
 - Add final country-by-country shipping values before launch if Kickstarter requires exact pricing.
@@ -213,7 +218,7 @@ Recommended order on the Kickstarter page:
 
 Use this scope on the limited creative tiers so the reward stays manageable.
 
-### Prisoner's Scratchings ($250)
+### Mind-Blown Scribbler ($250)
 
 - Backer may submit up to 40 characters of approved wall text.
 - Text appears as background graffiti or carving on Bastonne prison stone/iron.
@@ -221,7 +226,7 @@ Use this scope on the limited creative tiers so the reward stays manageable.
 - Team keeps final approval, editing rights, and placement control.
 - No custom quest, combat advantage, voiced line, or unique mechanical reward is included.
 
-### Creative Collaborator ($500)
+### Final-Form Architect ($500)
 
 - Backer collaborates on one scoped cosmetic or background-lore contribution.
 - Suggested options: minor background NPC name, weapon cosmetic theme, passive skill badge icon, or lore object concept.
@@ -239,7 +244,7 @@ Use this scope on the limited creative tiers so the reward stays manageable.
 
 Prepare these fields before launching Pledge Manager:
 
-- Reward item categories: digital key, digital art/audio pack, Digital Field Artbook, Digital Evidence Pack, final credits name, beta access, Poster Scout, physical Collector's Pack, Pixel Character Patch & Keychain Set, potential physical add-ons, creative submission.
+- Reward item categories: digital key, digital art/audio pack, Digital Field Artbook, Digital Evidence Pack, final credits name, beta access, Glitched-Out Scout, physical Full-Meltdown Collector, Pixel Character Patch & Keychain Set, potential physical add-ons, creative submission.
 - Market value for the poster, printed artbook, bracelet, and Pixel Character Patch & Keychain Set, plus any add-on that is confirmed before launch.
 - EU shipping origins and destination countries.
 - Backer survey questions for approved supporter-wall display name or alias, credits name where relevant, and creative tier submissions.
@@ -271,7 +276,7 @@ Ask 3-5 trusted readers to answer these after reading the page:
 - No debug screenshots remain on the public page.
 - Every reward has an estimated delivery date.
 - Every reward has a visible sample image, mockup, or clearly labeled visual placeholder.
-- The featured Kickstarter reward has been chosen: $40 Digital Deluxe for broad global value, or $60 Credits Recruit if recognition tests better with preview readers.
+- The featured Kickstarter reward has been chosen: $40 Skullgrin Deluxe for broad global value, or $60 Open-Mind Insider if recognition tests better with preview readers.
 - EU-only shipping is clearly stated on physical tiers.
 - Budget and timeline are visible.
 - Risks & Challenges are complete.

@@ -182,19 +182,15 @@ Bosses range from twisted mortals to nightmarish entities born from the Calamity
 <!-- 
 ![Divergency story panel: Marseille above, Bastonne below](<imgs/story-panels/divergency-ai-story-01-city-bastonne.png>) -->
 
-Every miracle in Divergency leaves something behind.
+Every miracle in Divergency leaves a wound.
 
-The old gods are dead, but the things they left in the world still work.
+Long ago, people killed a newborn creature from beyond their world, remembered as the **Infant God**. Its body was divided into five living relics: the Eye, Ear, Tongue, Heart, and Umbilical Cord. Each grants power, feeds on human desire, and seeks the others. Their survival is tied to recurring **Calamities** of disease and curses.
 
-Deep's journey begins in Marseille, a city trying hard to look healed. The harbor is bright again. Streets have been rebuilt. Hospitals are open. Soldiers keep people moving.
+Deep, a former crusader, chose the rebuilt Marseille Autonomous Metropolis to raise his adopted niece Solei away from war. But behind its bright harbor and guarded streets, former officer **Jamerson Obsworth** uses refugees and prisoners as test subjects. He holds the Eye and believes it can awaken his infected daughter, Heniana, from cryogenic sleep.
 
-But under that surface are quarantine rooms, sealed prisons, hidden tunnels, and people who vanish when someone promises a cure.
+When Block is captured while investigating the disappearances, Deep's team breaks into Bastonne Prison. They rescue Block, free Ghost--a nameless prisoner resistant to its drugs--and steal records proving that Jamerson is hunting the other relics. He believes their combined power can awaken Heniana.
 
-Deep and his companions come to rescue a friend. They leave with a trail that leads toward relic fragments, old curses, and people still reaching for miracles after they should have stopped.
-
-This is not a story about evil born from hatred.
-
-It is about the damage love can do when someone refuses to let go.
+That prison break is where the adventure begins. Branded as fugitives with nowhere safe left in Marseille, Deep's team follows Jamerson's trail across fractured lands. Each region holds another relic and another faction trying to use it. The team must reach the fragments first, uncover why the Calamities keep returning, and stop Jamerson from giving the Infant God a path back into the world.
 
 ![Marseille metropolis](<imgs/Stage1/Marseille_Metropolis_Splash_Day.png>)
 
@@ -316,7 +312,7 @@ The roadmap starts with the protected **$20,000 base goal**. Everything above th
 
 <!-- Larger ideas such as endless towers, public matchmaking, PvP, or stage editing are not part of this launch promise. They may be explored later only after the base campaign is stable. -->
 
-![Stretch Goals](<imgs\campaign-panels\kick\Goal.webp>)
+![Stretch Goals](<imgs\campaign-panels\kick\Goal.png>)
 ## Production Timeline
 
 This is a 24-month production plan from the end of the Kickstarter campaign, with physical reward shipping planned after the digital release window.
@@ -345,6 +341,8 @@ Campaign currency is shown in USD in this draft. Physical rewards are EU-only at
 
 Backer rewards should feel like a fair thank-you, not like random merchandise or a hidden store page. Every paid pledge tier includes campaign updates and one approved display name or alias on the digital supporter wall. Each tier includes the lower bundle named in its description; physical goods are included only in tiers that explicitly list them.
 
+The eleven tier portraits turn the reward ladder into a visual descent through Divergency-style brainrot: the faces begin suspicious and controlled, then become furious, grinning, exposed, glitched, and finally fully mutated. The names follow the expression in each icon, while the reward descriptions stay literal about what backers receive.
+
 The reward ladder for Divergency is built around six kinds of supporter value:
 
 - Recognition: one approved display name or alias on the digital supporter wall for every paid pledge tier, plus credits or beta credits where listed.
@@ -358,20 +356,21 @@ The rewards avoid pay-to-win items, exclusive combat power, or exclusive playabl
 
 | Pledge | Reward | Supporter value | Estimated delivery |
 | ---: | --- | --- | --- |
-| $5 | Signal Supporter | Campaign updates, one backer wallpaper, and one approved supporter-wall display name | Month 6 + Month 24 |
-| $20 | Early Recruit, limited quantity | Signal Supporter rewards plus a full PC digital game key at a lower early-backer price, avatar/icon pack, and mini lore dossier | Month 24 |
-| $25 | Digital Recruit | Signal Supporter rewards plus full PC digital game key, avatar/icon pack, and mini lore dossier | Month 24 |
-| $40 | Digital Deluxe Pack | Digital Recruit rewards plus soundtrack, Digital Field Artbook PDF, Digital Evidence Pack PDF, and Field Relics Digital Art Sheet | Month 24 |
-| $60 | Credits Recruit | Digital Deluxe Pack rewards plus one approved final-credits display name or alias and a credits-badge wallpaper variant | Month 24 |
-| $70 | Field Tester | Credits Recruit rewards plus beta access, private feedback form, and beta tester credit listing | Month 19-24 |
-| $95 | Poster Scout, EU only | Field Tester rewards plus one A3 Marseille/Divergency poster | Month 24-26 |
-| $120 | Collector's Pack, EU only | Field Tester rewards plus one A3 Marseille/Divergency poster, one printed Divergency Field Artbook/art zine, one Beacon bracelet, and one Pixel Character Patch & Keychain Set | Month 24-26 |
-| $250 | Prisoner's Scratchings, limited | Field Tester rewards plus one approved short message/graffiti on a Bastonne prison wall | Month 24 |
-| $500 | Creative Collaborator, limited | Field Tester rewards plus one tightly scoped cosmetic or background-lore contribution | Month 24 |
+| $5 | Side-Eye Supporter | Campaign updates, one backer wallpaper, and one approved supporter-wall display name | Month 6 + Month 24 |
+| $10 | Red-Eye Signal Pack | Side-Eye Supporter rewards plus a three-wallpaper set and avatar/icon pack | Month 6 + Month 24 |
+| $20 | Crooked-Grin Early Bird, limited quantity | Red-Eye Signal Pack rewards plus a full PC digital game key at a lower early-backer price and mini lore dossier | Month 24 |
+| $25 | Grim-Faced Recruit | Red-Eye Signal Pack rewards plus full PC digital game key and mini lore dossier | Month 24 |
+| $40 | Skullgrin Deluxe | Grim-Faced Recruit rewards plus soundtrack, Digital Field Artbook PDF, Digital Evidence Pack PDF, and Field Relics Digital Art Sheet | Month 24 |
+| $60 | Open-Mind Insider | Skullgrin Deluxe rewards plus one approved final-credits display name or alias and a credits-badge wallpaper variant | Month 24 |
+| $70 | Brainrot Test Subject | Open-Mind Insider rewards plus beta access, private feedback form, and beta tester credit listing | Month 19-24 |
+| $95 | Glitched-Out Scout, EU only | Brainrot Test Subject rewards plus one A3 Marseille/Divergency poster | Month 24-26 |
+| $120 | Full-Meltdown Collector, EU only | Brainrot Test Subject rewards plus one A3 Marseille/Divergency poster, one printed Divergency Field Artbook/art zine, one Beacon bracelet, and one Pixel Character Patch & Keychain Set | Month 24-26 |
+| $250 | Mind-Blown Scribbler, limited | Brainrot Test Subject rewards plus one approved short message/graffiti on a Bastonne prison wall | Month 24 |
+| $500 | Final-Form Architect, limited | Brainrot Test Subject rewards plus one tightly scoped cosmetic or background-lore contribution | Month 24 |
 
 ### Reward Previews
 
-Each pledge uses an in-world Divergency item as its visual identity. Physical product images are concept mockups; final materials and finishes may differ after vendor sampling. Potential add-ons are shown separately and are not included in any pledge unless they are confirmed before launch.
+Each pledge uses one of the eleven expression-and-mutation portraits in `imgs/campaign-panels/kick/reward` as its visual identity. The portraits are tier mascots, not extra physical or in-game items. Physical product images are concept mockups; final materials and finishes may differ after vendor sampling. Potential add-ons are shown separately and are not included in any pledge unless they are confirmed before launch.
 
 The Field Relics Digital Art Sheet is a downloadable visual/lore sheet showing in-world objects such as masks, tokens, vials, patches, and symbols with short captions. Field Relics remain art, lore, and cosmetic presentation--not paid equipment. Any relic or prop that appears inside the game will be discoverable or earnable by all players.
 
@@ -380,19 +379,19 @@ The Field Relics Digital Art Sheet is a downloadable visual/lore sheet showing i
 
 ### Why These Rewards Feel Fair
 
-The $5 tier gives a low-risk symbolic gift to people who mainly want to help. It should not require heavy production work, but it still gives supporters something with Divergency identity.
+The $5 Side-Eye Supporter tier gives a low-risk symbolic gift to people who mainly want to help. The new $10 Red-Eye Signal Pack fills the gap before the game-key tiers with a complete wallpaper set and avatar/icon pack, using digital assets already planned for the campaign.
 
-The $20 early-backer key gives the first supporters a clear reason to pledge early without lowering the normal game-key value for the whole campaign. The $25 tier remains the standard digital copy, and extra keys can be handled as add-ons instead of a separate tier.
+The $20 Crooked-Grin Early Bird key gives the first supporters a clear reason to pledge early without lowering the normal game-key value for the whole campaign. The $25 Grim-Faced Recruit tier remains the standard digital copy, and extra keys can be handled as add-ons instead of a separate tier.
 
-The $40, $60, and $70 tiers are the strongest digital-value tiers. The $40 tier is the clean global upgrade for music, art, lore, the Digital Field Artbook PDF, and Digital Evidence Pack material. The $60 tier adds visible recognition in the final game credits without forcing backers into testing. The $70 tier is for backers who actively want beta access and a feedback path while keeping fulfillment digital.
+The $40 Skullgrin Deluxe, $60 Open-Mind Insider, and $70 Brainrot Test Subject tiers are the strongest digital-value tiers. The $40 tier is the clean global upgrade for music, art, lore, the Digital Field Artbook PDF, and Digital Evidence Pack material. The $60 tier adds visible recognition in the final game credits without forcing backers into testing. The $70 tier is for backers who actively want beta access and a feedback path while keeping fulfillment digital.
 
-The $95 Poster Scout tier is the light physical option: one A3 poster plus the Field Tester digital rewards. It adds shipping and packaging, but avoids a second manufactured object.
+The $95 Glitched-Out Scout tier is the light physical option: one A3 poster plus the Brainrot Test Subject digital rewards. It adds shipping and packaging, but avoids a second manufactured object.
 
 The $120 physical tier is priced above the digital tiers because it adds manufacturing, packing, shipping, damaged-package support, and address management. It should feel like the premium collector option, with the clearest collector anchor being the printed Divergency Field Artbook/art zine. The included items must stay exact: one A3 poster, one printed Field Artbook/art zine, one Beacon bracelet, and one Pixel Character Patch & Keychain Set unless another physical item is priced, sampled, and added to the tier before launch.
 
 The creative backing tiers allow supporters to leave their mark on the game in a tiered, logical format that matches the world's dark fantasy identity:
-- At **$250 (Prisoner's Scratchings)**, backers gain a small, immersive storytelling opportunity that adds flavor to Bastonne without requiring new systems or complex assets.
-- At **$500 (Creative Collaborator)**, backers collaborate on one tightly scoped cosmetic or background-lore contribution. This tier is strictly capped to avoid scope creep.
+- At **$250 (Mind-Blown Scribbler)**, backers gain a small, immersive storytelling opportunity that adds flavor to Bastonne without requiring new systems or complex assets.
+- At **$500 (Final-Form Architect)**, backers collaborate on one tightly scoped cosmetic or background-lore contribution. This tier is strictly capped to avoid scope creep.
 
 ### Optional Add-Ons
 
@@ -404,8 +403,8 @@ Digital add-ons can be offered broadly. Physical add-ons should be enabled only 
 | --- | ---: | --- |
 | Extra PC digital key | $20-25 | Best low-risk add-on because it has no shipping cost |
 | Soundtrack + Digital Field Artbook | $15 | Useful for backers who choose the standard game key but later want the deluxe digital pack |
-| Digital Evidence Pack | $10-15 | PDF-only upgrade for backers below Digital Deluxe; do not present it as a physical packet |
-| Final credits name upgrade | $10-15 | Optional recognition upgrade for backers below Credits Recruit; one approved display name or alias only |
+| Digital Evidence Pack | $10-15 | PDF-only upgrade for backers below Skullgrin Deluxe; do not present it as a physical packet |
+| Final credits name upgrade | $10-15 | Optional recognition upgrade for backers below Open-Mind Insider; one approved display name or alias only |
 | A3 poster, EU only | $25 plus shipping | Keep to one poster size and one print vendor if possible |
 | Printed Field Artbook/art zine, EU only | $25-40 plus shipping | Offer only after final page count, binding, paper stock, print quote, and package weight are confirmed |
 | Beacon bracelet, EU only | $25-35 plus shipping | Offer only if unit cost, sizing, packaging, and replacement policy are confirmed |
@@ -414,9 +413,9 @@ Digital add-ons can be offered broadly. Physical add-ons should be enabled only 
 | Divergency Daily access badge, EU only | $12-18 plus shipping | Lanyard/badge add-on candidate; practical and visually clear but needs print/vendor quote |
 | Divergency Daily cargo tag, EU only | $12-18 plus shipping | Travel/cargo tag add-on candidate; confirm material, print durability, and package weight |
 
-Final quantities should be locked before launch. Recommended limits: Early Recruit around 200-300 backers, Poster Scout and Collector's Pack based on confirmed physical unit quotes, Prisoner's Scratchings around 30-50 slots, and Creative Collaborator around 3-5 slots unless the team is certain it can absorb more review work.
+Final quantities should be locked before launch. Recommended limits: Crooked-Grin Early Bird around 200-300 backers, Glitched-Out Scout and Full-Meltdown Collector based on confirmed physical unit quotes, Mind-Blown Scribbler around 30-50 slots, and Final-Form Architect around 3-5 slots unless the team is certain it can absorb more review work.
 
-Recommended featured reward: feature the $40 Digital Deluxe Pack for the broadest global appeal, or the $60 Credits Recruit if preview readers respond strongly to credit recognition. Do not feature an EU-only physical tier unless the campaign is intentionally focused on EU collectors.
+Recommended featured reward: feature the $40 Skullgrin Deluxe for the broadest global appeal, or the $60 Open-Mind Insider if preview readers respond strongly to credit recognition. Do not feature an EU-only physical tier unless the campaign is intentionally focused on EU collectors.
 
 ### Reward Fulfillment Rules
 
@@ -433,11 +432,11 @@ Recommended featured reward: feature the $40 Digital Deluxe Pack for the broades
 
 To ensure smooth development and fair play, creative tiers are governed by the following guidelines:
 
-#### Prisoner's Scratchings ($250)
+#### Mind-Blown Scribbler ($250)
 - Up to 40 characters of text to be placed as background graffiti on the stone/iron walls of Bastonne prison.
 - Must read like it was carved by an inmate, resistance fighter, or jailer (e.g., cryptic warnings, names, dates, or desperate messages).
 
-#### Creative Collaborator ($500)
+#### Final-Form Architect ($500)
 - Collaborate on one scoped cosmetic or background-lore contribution.
 - Suggested options: name a minor non-interactive background NPC, help shape a weapon cosmetic skin, or help shape a passive skill badge icon.
 - Backers submit visual themes, color schemes, names, or short concepts.
@@ -455,8 +454,8 @@ Physical rewards are limited to EU shipping for the campaign launch.
 Planned shipping approach:
 
 - Ship-from region: France/EU.
-- Poster Scout or poster-only shipment estimated shipping: EUR 8-15 depending on EU destination.
-- Collector's Pack estimated shipping: EUR 12-22 depending on EU destination and final printed artbook weight.
+- Glitched-Out Scout or poster-only shipment estimated shipping: EUR 8-15 depending on EU destination.
+- Full-Meltdown Collector estimated shipping: EUR 12-22 depending on EU destination and final printed artbook weight.
 - Bracelet, printed artbook, Pixel Character Patch & Keychain Set, cap, keychain, badge, cargo tag, or combined collector shipment estimated shipping: EUR 12-22 depending on EU destination and final package weight.
 - Final country-by-country shipping prices should be entered before launch or confirmed through Kickstarter Pledge Manager before fulfillment.
 - Backer addresses and reward preferences will be collected through Kickstarter surveys or Pledge Manager.
@@ -520,7 +519,7 @@ Follow and support Divergency:
 - Confirm all screenshots are final enough to show publicly.
 - Confirm campaign currency before launch: USD draft vs final Kickstarter currency.
 - Confirm all reward item names match Kickstarter reward/item setup.
-- Confirm Early Recruit, Collector's Pack, Prisoner's Scratchings, and Creative Collaborator quantity limits.
+- Confirm Crooked-Grin Early Bird, Full-Meltdown Collector, Mind-Blown Scribbler, and Final-Form Architect quantity limits.
 - Confirm add-on availability and prices.
 - Prepare sample/mockup images for wallpapers, lore dossier, Digital Field Artbook, Digital Evidence Pack, poster, printed artbook, bracelet, Pixel Character Patch & Keychain Set, and any confirmed cap add-on.
 - Confirm shipping prices for every physical tier before launch.

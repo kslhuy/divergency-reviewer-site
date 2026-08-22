@@ -1,1229 +1,947 @@
-# Divergency - Gameplay & Level Design theo cốt truyện hoàn chỉnh
+# Divergency – Ý tưởng lối chơi và thiết kế màn chơi
 
-Tài liệu này bám `Divergency_Complete_Story_VI.md` làm canon chính. Một số chi tiết từ bản nháp cũ được đưa lại khi chúng giúp Stage 1 rõ hơn, nhưng đã được chỉnh để không phá canon mới.
+Tài liệu này chuyển mạch truyện trong `Divergency_Complete_Story_VI.md` thành một trải nghiệm có thể chơi được. Trọng tâm không chỉ là chiến đấu, mà là cách từng thành viên trong đội phối hợp, cách năm mảnh Thần Sơ Sinh làm thay đổi luật chơi và cách những lựa chọn nhỏ của người chơi để lại hậu quả trong thế giới.
 
-Mục tiêu là chuyển cốt truyện hoàn chỉnh thành game design: nhân vật chơi được, cơ chế có thể dùng, puzzle, encounter, boss, nhịp học kỹ năng, và ý tưởng cho từng màn.
+Toàn bộ thiết kế đi theo một nguyên tắc: **mỗi cơ chế phải phục vụ đồng thời lối chơi, nhân vật và câu chuyện**. Một cơ chế chỉ nên xuất hiện khi người chơi hiểu vì sao nó tồn tại, dùng nó để giải quyết điều gì và lựa chọn của mình phải trả giá ra sao.
 
-## Trụ cột thiết kế
+## 1. Tầm nhìn lối chơi
 
-### 1. Sống sót nhờ tin nhau
+### 1.1. Trải nghiệm cốt lõi
 
-Divergency không nên mở như câu chuyện của một "người được chọn". Trục chính nên là **đội của Deep, Solei, Henry và Block**: họ đã có lịch sử, có căn cứ, có mục tiêu giải cứu, và có lý do để tin hoặc nghi ngờ nhau. Stranger/Ghost là biến số quan trọng bước vào câu chuyện ở Bastonne, nhưng không nên giành vị trí nhân vật chính ngay từ đầu.
+Divergency là trò chơi hành động nhập vai theo đội. Người chơi trực tiếp điều khiển một nhân vật, phối hợp với hai đồng đội hỗ trợ và thay đổi đội hình tại căn cứ hoặc điểm nghỉ. Trong từng khu vực, người chơi sẽ chiến đấu, quan sát môi trường, giải câu đố, cứu người, thu thập bằng chứng và quyết định nên dùng bạo lực đến mức nào.
 
-Cơ chế nên phản ánh điều này:
+Nhịp chơi cơ bản gồm sáu bước:
 
-- **COMMAND** là lòng tin, không chỉ là điều khiển NPC.
-- Cứu người thường làm màn khó hơn ngay lúc đó, nhưng mở đường, thông tin, hoặc kết quả tốt hơn về sau.
-- Party không nên chỉ là nhiều skin đánh nhau; mỗi người có một cách giải quyết tình huống khác nhau.
+1. Khám phá khu vực và đọc dấu hiệu môi trường.
+2. Xác định mối nguy, người cần cứu và mục tiêu quan trọng.
+3. Chọn nhân vật, lệnh phối hợp hoặc liên kết kỹ năng phù hợp.
+4. Chiến đấu hoặc mở đường bằng môi trường.
+5. Chấp nhận một cái giá ngắn hạn để đổi lấy lợi ích hoặc hậu quả về sau.
+6. Trở về nơi an toàn, điều chỉnh đội hình và xem thế giới phản hồi lựa chọn vừa thực hiện.
 
-### 2. Năm mảnh Thần Sơ Sinh là năm luật gameplay
+### 1.2. Ba trụ cột thiết kế
 
-Mỗi mảnh thần nên tạo một "luật chơi" riêng. Người chơi học từng luật qua từng Stage, rồi Stage 5 kiểm tra tất cả.
+#### Sống sót nhờ tin nhau
 
-| Mảnh | Ý nghĩa truyện | Cơ chế gameplay |
-|---|---|---|
-| **Con Mắt** | Thấy ký ức, ham muốn, sợ hãi, thứ bị che giấu | Ảo giác, vật thể ẩn, enemy đọc hướng nhìn, đồ giả, boss tạo hình từ mong muốn |
-| **Cái Tai** | Nghe tiếng nói, âm thanh, ý nghĩ từ xa | Stealth bằng tiếng động, boss đọc input/thói quen, puzzle nhịp âm thanh/im lặng , không nghe command|
-| **Cái Lưỡi** | Nói bằng giọng người chết, biến niềm tin thành mệnh lệnh | Gọi tên làm khựng, lệnh giả đảo hành vi (command sai), puzzle phân biệt lời thật/lời bị bóp méo  , đánh đồng đội|
-| **Trái Tim** | Khuếch đại cảm xúc, thù hận, tình thương, ý chí tập thể | Rage meter, địch buff theo đám đông, đánh trong giận dữ làm boss mạnh hơn |
-| **Dây Rốn** | Nối Thần Sơ Sinh với nơi bên ngoài thế giới | Level biến dạng, ký ức các Stage trộn nhau, final boss đổi luật từng phase |
+Divergency không mở đầu bằng câu chuyện về một “người được chọn”. Nhân vật trung tâm là một đội gồm nhiều thế hệ. **Deep và Henry** từng cùng đi qua một cuộc chiến ở vùng đất rất xa Marseille; đó là quá khứ của hai người lớn tuổi trong đội, không phải quá khứ của Tulas. **Solei và Tulas cùng lứa**, lớn lên trong cùng giai đoạn và bước vào những nhiệm vụ lớn dưới sự dẫn dắt của Deep và Henry. Block là đồng minh lâu năm mà cả đội tin cậy. Ghost bước vào câu chuyện tại Bastonne như một biến số, còn Heni gia nhập sau đó với tư cách một con người có ý chí riêng.
 
-### 3. Bạo lực không phải đáp án sạch
+Lối chơi phải thể hiện được mối quan hệ này:
 
-Game vẫn có combat, nhưng nhiều encounter nên hỏi người chơi: "giết nhanh" có thật là cách tốt nhất không?
+- Lệnh phối hợp là sự giao việc dựa trên lòng tin, không phải biến đồng đội thành công cụ.
+- Mỗi nhân vật giải quyết một loại trở ngại khác nhau; không ai có thể thay thế toàn bộ đội.
+- Cứu người thường khiến tình huống trước mắt khó hơn, nhưng có thể mở đường, cung cấp thông tin hoặc tạo sự hỗ trợ về sau.
+- Mâu thuẫn trong đội được thể hiện qua lời thoại, khả năng hỗ trợ và cách nhân vật phản ứng, không bằng một thanh thiện–ác.
 
-Ví dụ:
+#### Năm mảnh thần là năm luật chơi
 
-- Bastonne: Block cuối cùng vẫn được đội cứu, nhưng việc Stranger có giúp Block trong lúc nhà tù loạn hay không sẽ đổi mức độ tin tưởng, thương tích, và một số encounter sau.
-- Laundel: cướp shop cho lợi tức thì nhưng mất lòng tin.
-- Tàu ngầm: phá máy phát mở Hard Mode và loot tốt hơn, nhưng làm tình hình nguy hiểm hơn.
-- Akam Meskul: đánh boss đồng thời phải cứu dân, phá loa tuyên truyền, không truy sát người đầu hàng.
-- The Cradle: mục tiêu là trả mảnh thần qua Dây Rốn, không hồi sinh cũng không giết lại thần.
+Mỗi mảnh Thần Sơ Sinh tác động lên một phần khác nhau của con người. Mỗi chương giới thiệu một luật mới, sau đó tiếp tục kết hợp luật ấy với những gì người chơi đã học. Chương cuối yêu cầu người chơi vận dụng cả năm luật cùng lúc.
 
-## Nhân vật và cơ chế
-
-| Nhân vật | Vai trò đề xuất | Cơ chế dùng được | Câu hỏi cá nhân |
+| Mảnh thần | Ý nghĩa trong truyện | Luật chơi chính | Cách người chơi đối phó |
 |---|---|---|---|
-| **Solei** | Nhân vật tutorial/nhân vật vào game đầu tiên, speed/counter, đánh nhanh | Quick step, combo cơ bản, chưởng, counter đúng nhịp, đọc văn hóa/ngôn ngữ/dấu nghi lễ | Tôi thuộc về đâu? |
-| **Deep** | Trưởng nhóm và heavy fighter, phá giáp, sát thương cao | Guard break, armor crush, giữ vị trí trước đòn mạnh, phá loa tuyên truyền | Sức mạnh của tôi có phải chỉ để người khác dùng không? |
-| **Henry** | Chỉ huy/tactical support , bắn tỉa , tầm xa | COMMAND, đánh dấu mục tiêu, ra lệnh giữ vị trí, lệnh không sát thương | Tôi có thể chiến đấu mà không thành kẻ mình ghét không? |
-| **Tulas** | Pháp sư máu/chất lỏng, support cơ động, tạo địa hình tạm | Điều khiển máu/nước/chất lỏng, bay/ngã chậm, tạo bệ, khiên, cầu, vật thể tạm, khóa dòng nước/bẫy | Sức mạnh đáng sợ có thể cứu người mà không biến tôi thành quái vật không? |
-| **Block** | Tank và COMMAND partner | Giữ cửa, phá vách, khiên chắn, kéo cần, bảo vệ NPC | Lòng trung thành khác gì phục tùng? |
-| **Stranger / Ghost** | Biến số trong Bastonne, playable ngắn lúc nhà tù loạn, linh hoạt nhưng không phải mở đầu | Dash/iframe, kháng gọi tên, tương tác Map Ngủ Mơ, đi qua máy nhận diện lỗi | Tôi là ai nếu quá khứ bị xóa? |
-| **Heni** | Companion/puzzle key, không nên là DPS chính | Resonance với Heniana, nghe mạch Dây Rốn, mở ký ức, làm dịu nhiễu thần lực | Tôi là bản sao hay một người riêng? |
+| **Con Mắt** | Ký ức, ham muốn, nỗi sợ và điều bị che giấu | Tạo vật giả, đường giả, bóng người giả và điểm yếu giả | Quan sát dấu hiệu bất thường, tắt nguồn chiếu, đọc hồ sơ và kiểm tra bằng môi trường |
+| **Cái Tai** | Âm thanh, ý nghĩ và thói quen | Theo dõi tiếng động, ghi nhớ hành vi lặp lại và phản ứng theo nhịp | Thay đổi tiết tấu, tạo tiếng động đánh lạc hướng hoặc chủ động bước vào vùng im lặng |
+| **Cái Lưỡi** | Tên gọi, lời người chết và mệnh lệnh | Gọi tên làm khựng, tạo lệnh giả và bóp méo lời nói | Xác nhận lệnh thật, phá khế ước giọng nói và từ chối danh xưng dùng để kiểm soát |
+| **Trái Tim** | Thù hận, tình thương và ý chí tập thể | Khuếch đại Nộ khí, đẩy đám đông vào cuồng loạn và làm bạo lực nuôi sức mạnh của trùm | Giữ đội hình, ngừng truy sát, phá nguồn kích động và ưu tiên cứu người |
+| **Dây Rốn** | Mối nối với nơi nằm ngoài thế giới | Trộn ký ức, bẻ cong không gian và nối lại các luật cũ | Nhờ Heni nhận ra đường thật, Ghost cắt liên kết và cả đội cùng ổn định không gian |
 
+#### Bạo lực luôn có cái giá
 
-Mở game nên để người chơi điều khiển **Solei** ở căn cứ của đội Deep. Deep yêu cầu cô khởi động/luyện tập trước nhiệm vụ giải cứu Block: "Ta muốn cháu chứng minh cháu có thể tham gia nhiệm vụ lần này." Đây là tutorial tự nhiên cho di chuyển, đánh thường, combo, chưởng, né, counter, cầm/nhặt/ném vật thể, và nhịp teamwork.
+Chiến đấu vẫn là một phần quan trọng, nhưng giết nhanh không phải lúc nào cũng là cách tốt nhất. Người chơi có thể phá cửa hàng để lấy vật phẩm, bỏ tù nhân để rút ngắn đường đi hoặc truy sát kẻ đầu hàng để kết thúc trận sớm. Những lựa chọn đó không làm lệch mạch truyện chính, nhưng thay đổi độ khó, mức độ tin tưởng, sự hỗ trợ và giọng điệu của phần kết.
 
-Deep, Henry và Tulas có thể có lịch sử chung từ một cuộc chiến rất xa Marseille. Họ từng được gọi là anh hùng vì đã giải cứu một vùng đất khỏi thế lực hắc ám; cuộc chiến đó đã thắng, nhưng mất mát khiến họ không còn muốn sống như biểu tượng. Khi Deep nhận nuôi Solei, anh đưa cô đến Marseille để sống kín đáo hơn: làm việc, tránh chính quyền, thỉnh thoảng va vào băng nhóm nhưng cố không kéo Solei vào rắc rối lớn. Henry thì tiếp tục con đường ẩn danh, thu thập thông tin và bảo vệ những gì tình cờ lọt vào tay mình.
+Trò chơi không phán xét người chơi bằng nhãn “tốt” hoặc “xấu”. Thế giới chỉ nhớ người chơi đã làm gì và ai phải trả giá cho việc đó.
 
-Trong Bastonne, game có thể cắt sang **Stranger** ở một đoạn ngắn khi nhà tù náo loạn. Lúc này người chơi học sự khác biệt của Stranger: không mạnh như đội Deep, nhưng lạ với hệ thống, khó bị nhận diện, và có thể thoát khỏi các khóa của Jamerson.
+### 1.3. Nhịp dạy cơ chế
 
-Nếu game không có party swap đầy đủ, vẫn nên giữ cảm giác nhân vật chính là **đội Deep/Solei**. Stranger/Ghost là nhân vật playable theo đoạn hoặc party member đặc biệt sau Bastonne, không phải người mở đầu game.
+Mỗi cơ chế mới phải trải qua bốn bước:
 
-## Hệ thống chính
+1. **Giới thiệu:** xuất hiện trong tình huống an toàn, chỉ có một mục tiêu.
+2. **Luyện tập:** được dùng trong một trận hoặc câu đố đơn giản.
+3. **Kết hợp:** đi cùng một cơ chế cũ để người chơi phải lựa chọn.
+4. **Kiểm tra:** trở thành trọng tâm của trùm hoặc tình huống lớn cuối khu vực.
 
-### Synergy và vật thể tương tác
+Nhờ vậy, chương sau không thay thế chương trước. Nó mở rộng vốn hiểu biết của người chơi và khiến các cơ chế cũ có ý nghĩa mới.
 
-Synergy nên là lớp phối hợp **vật lý/kỹ năng** giữa party, khác với COMMAND. COMMAND trả lời câu hỏi "ai giữ việc gì"; Synergy trả lời câu hỏi "hai nhân vật kết hợp để làm được hành động nào mà một người không làm được".
+## 2. Nhân vật và vai trò trong đội
 
-Các synergy chính:
+| Nhân vật | Vai trò | Năng lực nổi bật | Câu hỏi cá nhân |
+|---|---|---|---|
+| **Solei** | Cơ động, phản đòn, áp sát mục tiêu quan trọng | Lướt nhanh, chuỗi đòn ngắn, phản đòn đúng nhịp, chạy tường, đọc dấu nghi lễ | Tôi thuộc về đâu? |
+| **Deep** | Tuyến trước, phá giáp, sát thương nặng | Phá thế đỡ, đánh vỡ vật cản, giữ vị trí trước đòn lớn, đẩy lùi đám đông | Sức mạnh của tôi có phải chỉ để người khác sử dụng? |
+| **Henry** | Chỉ huy, đánh dấu mục tiêu, tấn công tầm xa | Bắn tỉa, xác nhận lệnh thật, phân chia nhiệm vụ, ngăn đội tấn công người đầu hàng | Tôi có thể chiến đấu mà không trở thành kẻ mình căm ghét không? |
+| **Tulas** | Thành viên thế hệ trẻ, đồng lứa với Solei; hỗ trợ và điều khiển chất lỏng | Tạo bệ, khiên và cầu; lọc độc; khóa dòng chảy; ổn định máu và Độ Nhiễu | Sức mạnh đáng sợ có thể cứu người mà không biến tôi thành quái vật không? |
+| **Block** | Phòng thủ, giữ tuyến, bảo vệ dân thường | Khiên chắn, giữ cửa, kéo cần, chặn luồng khí và tạo vùng an toàn | Lòng trung thành khác gì sự phục tùng? |
+| **Ghost** | Xâm nhập, phá nhận diện, cắt liên kết thần lực | Lướt xuyên vùng nguy hiểm, ít bị hệ thống nhận diện, kháng gọi tên, bước vào Cõi Mộng Sau Cái Chết | Tôi là ai nếu quá khứ đã bị xóa? |
+| **Heni** | Đồng hành ngoài chiến đấu, nhận biết cộng hưởng | Nhìn ra đường thật, nghe Dây Rốn, mở ký ức và làm dịu nhiễu thần lực | Tôi là bản sao hay một con người riêng? |
 
-- **Deep + Tulas:** Deep bám vào bệ/chùm chất lỏng của Tulas để lao lên không trung, đánh enemy bay, vượt vực, hoặc đập xuống phá giáp diện rộng.
-- **Solei + Tulas:** Tulas tạo bệ/tay vịn tạm, Solei dùng speed/counter để chạy tường, nhảy qua bẫy, hoặc vào weakpoint trên cao.
-- **Henry + Tulas:** Tulas dựng màn nước làm lệch đạn hoặc tạo thấu kính chất lỏng; Henry bắn xuyên để đánh dấu weakpoint, kích công tắc xa, hoặc làm ricochet có kiểm soát.
-- **Block + Tulas:** Tulas gia cố khiên/đường chắn bằng chất lỏng đặc, Block giữ cửa, chặn dòng nước, chặn bẫy hoặc giữ tuyến trước projectile.
-- **Ghost + Tulas:** Ghost đi qua vùng máy nhận diện lỗi, Tulas giữ vật thể/cửa ở trạng thái lỏng để Ghost lách qua hoặc kéo cơ quan từ phía bên kia.
+### 2.1. Cấu trúc đội hình thống nhất
 
-Tulas không nên giải mọi puzzle một mình. Năng lực của anh nên có giới hạn: cần nguồn chất lỏng, tốn thời gian giữ hình, bị điện/nhiệt làm yếu, và nếu dùng máu quá nhiều thì tăng rủi ro narrative hoặc combat.
+Khung đề xuất cho phần chơi chính gồm:
 
-### Cầm, nhặt và ném vật thể
+- **Một nhân vật trực tiếp:** người chơi điều khiển hoàn toàn trong chiến đấu và di chuyển.
+- **Hai vị trí hỗ trợ:** đồng đội xuất hiện trên sân, tự chiến đấu và nhận lệnh ngắn.
+- **Đội dự bị:** có thể đổi tại căn cứ, nơi trú ẩn, điểm nghỉ hoặc trước tình huống lớn.
+- **Nhân vật đồng hành:** Heni không chiếm vị trí chiến đấu. Cô tự tìm chỗ nấp và chỉ tham gia khi câu đố hoặc cộng hưởng cần đến cô.
 
-Nhân vật có thể cầm vật thể nhỏ/vừa và ném theo hướng chỉ định. Đây nên là mechanic chung, không chỉ là vũ khí tạm:
+Một số đoạn truyện có thể chuyển quyền điều khiển tạm thời, chẳng hạn đoạn Ghost tỉnh dậy trong Bastonne. Việc chuyển nhân vật phải phục vụ câu chuyện và dạy một năng lực mới, không dùng chỉ để tạo bất ngờ.
 
-- **Combat:** ném ghế, chai, thùng kim loại, đá, bình gas để stun, phá guard, tạo tiếng động hoặc ép enemy đổi vị trí.
-- **Puzzle:** ném vật vào công tắc xa, làm kẹt bánh răng, phá khóa yếu, đặt vật lên pressure plate, hoặc ném qua khe cho đồng đội.
-- **Synergy:** Tulas có thể tạo vật thể/bệ tạm để nhân vật khác đứng lên, hoặc làm "tay" chất lỏng giữ một vật ở giữa không trung trước khi Deep/Solei/Henry tác động tiếp.
-- **Rủi ro:** vật nặng làm nhân vật chậm, dễ bị đánh rơi; ném sai có thể gây tiếng động, phá cover, hoặc kích bẫy sớm.
+### 2.2. Hướng phát triển của từng nhân vật
 
-### COMMAND
+- **Solei** là nhân vật mở đầu vì bộ kỹ năng dễ đọc, nhanh và phù hợp để dạy nền tảng.
+- **Deep và Henry** là hai người mang lịch sử từ cuộc chiến cũ rất xa Marseille. Họ giữ vai trò dẫn dắt, nhưng không được biến Tulas thành người cùng thế hệ hoặc một cựu binh ngang hàng với họ.
+- **Deep** và **Block** cùng mạnh ở tuyến trước nhưng không trùng vai trò: Deep phá thế phòng thủ, Block tạo an toàn.
+- **Henry** làm lệnh phối hợp rõ và hiệu quả hơn, nhưng các lệnh cốt lõi vẫn dùng được khi anh ở vị trí hỗ trợ.
+- **Tulas** là bạn đồng lứa với Solei ở Marseille. Anh xuất hiện trong bài tập đầu, trở thành thành viên đầy đủ sau Bastonne và là cầu nối giữa di chuyển, giải đố, phòng thủ và hồi phục. Cách nói chuyện, phản ứng và sai lầm của anh cần mang cảm giác của một người trẻ đang học cách dùng sức mạnh, không phải sự từng trải của Deep hoặc Henry.
+- **Ghost** chỉ chơi được trong một đoạn ngắn tại Bastonne, sau đó mở như thành viên đặc biệt. Anh mạnh trong xâm nhập và cơ chế thần lực, không thay thế Solei trong vai trò nhân vật trung tâm.
+- **Heni** không trở thành nguồn sát thương chính. Giá trị của cô nằm ở nhận thức, ký ức và quyền tự quyết.
 
-COMMAND không nên xuất hiện ngay khi Stranger gặp Block. Nếu làm vậy, cảnh này dễ bị cảm giác như người chơi đang điều khiển một NPC chưa có quan hệ gì với mình.
+## 3. Các hệ thống cốt lõi
 
-Flow hợp hơn:
+### 3.1. Lệnh phối hợp
 
-1. **Tutorial teamwork ở căn cứ**: Deep hướng dẫn Solei phối hợp với đồng đội. Đây là nơi dạy assist/team cue cơ bản, chưa cần gọi là COMMAND đầy đủ.
-2. **Nhiệm vụ Bastonne**: đội vào nhà tù để giải cứu Block, vì Block là người trong team hoặc đồng minh thân thiết đã bị Jamerson bắt.
-3. **Đoạn Stranger**: Stranger tỉnh trong phòng biệt giam, nhớ lời Block dặn phải gây tiếng động. Prompt đầu tiên là nhặt/ném/đánh vật thể như **Throw Cup**, **Kick Bed**, **Break Lamp**, không phải "Command Block".
-4. **Henry mở nhầm phòng**: đội đến vì tiếng động và tưởng Stranger là Block. Prompt kế tiếp mới là **Point to Block**, **Help Block**, **Open restraint**, hoặc **Slow the gas**.
-5. **Nếu Stranger giúp Block**: Block thoát dễ hơn, ít bị thương hơn, và sau này là người đầu tiên trong đội nói rằng Stranger đã không bỏ mặc mình.
-6. **Nếu Stranger không giúp Block**: Solei vẫn cứu Block trong route chính, nhưng Block bị thương hơn, đội mất thời gian hơn, và Henry/Solei có thêm lý do nghi Stranger.
-7. **COMMAND chính thức** mở sau khi Block đã trở lại đội và người chơi dùng anh trong teamwork thật, không phải ngay khoảnh khắc Stranger gặp anh.
+Lệnh phối hợp trả lời câu hỏi: **ai sẽ giữ phần việc nào trong lúc người chơi đang bận chiến đấu?** Đây là hệ thống chiến thuật nhẹ, dùng nhanh và theo ngữ cảnh. Người chơi không phải điều khiển từng bước chân của đồng đội.
 
-Cảm giác chính của COMMAND: đội không điều khiển nhau như công cụ, mà chia việc trong áp lực và tin người còn lại sẽ giữ phần của mình.
+Các lệnh dùng chung:
 
-Với hệ thống command hiện có, nên xem COMMAND là **RTS-lite theo ngữ cảnh**, gần cảm giác ra lệnh nhanh trong AOE/Warcraft nhưng không biến Divergency thành game xây căn cứ hoặc micro quá dày. Người chơi vẫn điều khiển một nhân vật hành động chính; command chỉ mở một lớp chia việc ngắn, rõ, có mục tiêu trên màn.
-
-Ba tầng dùng COMMAND:
-
-1. **Lệnh combat thời gian thực:** dùng trong arena rộng, có nhiều phe ta/địch và nhiều mục tiêu cùng lúc. Đây là phần gần hệ thống command hiện có nhất: chọn General/đội, chọn hướng/formation/assist, rồi để AI giữ vai trò trong vài giây.
-2. **Lệnh ngữ cảnh:** dùng khi đứng gần cửa, van, cầu, máy phát, loa tuyên truyền, thang máy, người bị thương. Người chơi không cần mở menu lớn; prompt ngắn như `Break Door`, `Hold Bridge`, `Turn Valve`, `Protect Heni` là đủ.
-3. **Quyết định hội thoại hoặc minigame nhỏ:** dùng cho hành động có trọng lượng đạo đức hoặc nhịp cảnh, như không bắn người đầu hàng, thuyết phục dân chạy, hoặc giữ một công tắc trong lúc đồng đội đánh. Những việc này có thể là chọn thoại, giữ nút theo nhịp, hoặc mini objective, không nhất thiết là lệnh AI thuần.
-
-Các dạng lệnh nên được hiểu theo vai trò thiết kế, không nhất thiết là enum riêng ngay từ đầu:
-
-- **Hold:** Block giữ cửa, giữ khiên, giữ cầu, giữ tuyến cho dân chạy.
-- **Break:** phá cửa, phá vách, phá giáp máy, phá loa tuyên truyền.
-- **Switch:** gạt công tắc, khóa van, vận hành thang máy khi nhân vật chính ở khu khác.
-- **Protect:** che Henry/Heni/NPC, giữ người bị thương khỏi đòn boss.
-- **Hold Fire:** Henry ra lệnh không bắn người đầu hàng hoặc dân bị ép cải đạo.
-- **Focus:** cả đội tập trung vào weakpoint hoặc enemy đang buff.
-
-COMMAND nên có cooldown/nguy cơ. Ra lệnh sai lúc có áp lực có thể làm đồng đội bị thương, nhưng không nên biến thành hệ thống trừng phạt quá nặng.
-
-### Map Ngủ Mơ Khi Chết
-
-Cơ chế này đã nằm trong ghi chú gameplay của bản Complete. Đây là không gian giữa giấc mơ của Thần Sơ Sinh và ý thức Ghost.
-
-Không nên dùng Map Ngủ Mơ ngay trong tutorial Solei ở căn cứ. Cơ chế này nên mở sau đoạn Bastonne, khi Stranger/Ghost đã xuất hiện và người chơi bắt đầu hiểu anh có liên hệ bất thường với Dây Rốn.
-
-Ghost nên là chủ thể chính của Map Ngủ Mơ. Đây không phải hub tinh thần chung cho cả đội, mà là nơi ý thức Ghost bị kéo vào mỗi lần cái chết, ký ức, hoặc Dây Rốn chạm đến anh.
-
-Với nhân vật khác, hệ thống vẫn dùng được nhưng cách kể khác:
-
-- **Ghost chết hoặc đoạn chơi Ghost:** vào thẳng Map Ngủ Mơ, có thoại/tiếng gọi riêng, thấy ký ức và dấu hiệu Dây Rốn rõ nhất.
-- **Solei/Deep/Henry/Block/Tulas bị hạ:** không biến họ thành chủ thể của Map Ngủ Mơ. Camera/transition nên cho cảm giác Ghost nghe được "tiếng vọng" của họ rồi kéo cả party về checkpoint hoặc điểm nghỉ.
-- **Đổi skill/loadout cho cả đội:** vẫn có thể làm trong Map Ngủ Mơ sau Bastonne, nhưng mỗi nhân vật hiện như một echo, bóng ký ức, hoặc vật neo. Người chơi chỉnh build của họ qua Ghost, không phải vì họ tự mơ cùng một giấc mơ.
-- **Heni:** là ngoại lệ cảm nhận được Dây Rốn/Heniana rõ hơn người khác. Cô có thể ổn định đường đi hoặc mở ký ức trong Map Ngủ Mơ, nhưng không nên thay Ghost làm chủ thể của không gian này.
-- **Trước Bastonne:** Solei và đội Deep dùng căn cứ, trạm nghỉ, hoặc màn chuẩn bị bình thường. Không dùng Map Ngủ Mơ để tránh lộ Ghost quá sớm.
-- **Trong The Cradle:** ranh giới này vỡ ra. Lúc đó cả đội có thể bước vào không gian Ngủ Mơ thật, nhưng payoff vẫn xoay quanh Ghost và Dây Rốn.
-
-Về hệ thống, dùng làm:
-
-- Respawn.
-- Đổi skill/loadout.
-- Reset kỹ năng bằng tài nguyên.
-- Xem lại mảnh ký ức.
-- Gợi dần tiếng gọi của Dây Rốn.
-
-Tiến triển theo Stage:
-
-- **Sau Bastonne:** phòng trắng, loa tù nhân, tiếng khí mê.
-- **Sau Marseille:** nước cống, ánh Con Mắt trong bề mặt nước.
-- **Sau Sakuri:** âm thanh xa, tiếng ý nghĩ bị lặp.
-- **Sau Calvaria:** giọng người chết gọi tên cũ của Ghost.
-- **Sau Akam Meskul:** nhịp tim làm méo menu.
-- **Trong The Cradle:** Map Ngủ Mơ không còn là menu riêng, mà thành một phần thật của level.
-
-### Trust và hậu quả nhỏ
-
-Không cần morality meter to. Divergency không nên nói người chơi là "thiện" hay "ác" bằng một thanh điểm chung. Cách hợp hơn là để từng khu nhớ những việc cụ thể người chơi đã làm: đã giúp ai, đã phá gì, đã nói thật hay im lặng, đã cứu người trong lúc trận khó hơn hay chọn đường nhanh hơn.
-
-Người chơi không cần thấy một UI `Good/Evil`. Họ chỉ thấy hậu quả qua phản ứng của NPC, độ khó của route, assist nhỏ, câu thoại khác, hoặc một chi tiết epilogue. Về kỹ thuật, đây là các flag/counter/state nhỏ được lưu trong save.
-
-Có ba loại biến:
-
-- **Flag:** sự kiện đã xảy ra hay chưa, ví dụ `BlockHelped`, `GrogerUnlocked`.
-- **State:** trạng thái hiện tại, ví dụ `BlockInjuryState = Stable/Wounded/Critical`.
-- **Counter/trust nhỏ:** điểm cục bộ trong một khu, ví dụ `LaundelTrust = -2..+2`, `Heat = 0..5`, `GrogerClues = 0..4`, `HeniTrust = 0..3`, `CalvariaTruthsFound = 0..5`.
-
-Nguyên tắc dùng:
-
-- Một biến chỉ nên ảnh hưởng khu của nó và 1-2 payoff về sau, không kéo thành nhánh truyện khổng lồ.
-- Reward tốt nhất là **hữu ích nhưng không bắt buộc**: shortcut, giảm phục kích, assist trong boss, item riêng, hoặc thêm lựa chọn thoại.
-- Hậu quả xấu không nên khóa canon chính. Ví dụ Block vẫn được cứu, Heni vẫn có arc riêng, Jamerson vẫn bị đánh bại; khác biệt nằm ở chi phí, lòng tin, và giọng kể.
-- Payoff nên đến nhanh trong 10-20 phút sau lựa chọn, rồi có một echo nhỏ ở cuối game để người chơi nhớ mình đã làm gì.
-
-| Biến | Loại | Tăng/đổi khi nào | Payoff gần | Payoff xa |
-|---|---|---|---|---|
-| `BlockHelped` | Flag | Ghost gây tiếng động để đội tìm thấy mình, rồi chỉ vị trí Block/mở restraint/làm chậm khí/phá chốt cửa cho Block trong Bastonne. | Block tỉnh hơn trong mini-boss Lockdown Unit, có thể giữ cửa/đỡ một đòn. Henry và Solei bớt nghi ngờ Ghost ở vài câu đầu. | Mở thoại Ghost-Block về chuyện "lòng trung thành không phải phục tùng". COMMAND với Block có cảm giác tự nhiên hơn sau khi anh trở lại đội. |
-| `BlockInjuryState` | State | Bị ảnh hưởng bởi việc Stranger giúp hay bỏ qua, đội bảo vệ Block tốt hay tệ trong trận cứu, và cách người chơi xử lý Armorlite. | `Stable`: Block assist sớm. `Wounded`: assist có cooldown lâu hơn. `Critical`: đội phải bảo vệ Block trong một encounter phụ. | Ảnh hưởng vài cảnh Block giữ cầu/evac route. Không làm Block chết ngoài canon, chỉ đổi mức tổn thương và lòng tin. |
-| `LaundelTrust` | Counter -2..+2 | Tăng khi mua công bằng, cất vũ khí, giữ lời với phe yếu, bảo vệ shop. Giảm khi cướp, phản bội, rút vũ khí trong chợ, hoặc lấy token của dân nghèo. | Giá shop, tin đồn, shortcut, số phục kích trong cống. | Nếu cao, NPC Laundel thả đèn/chỉ weakpoint khi gặp GROGER. Epilogue nói Laundel có thêm một tuyến tự quản thay vì chỉ là ổ tội phạm. |
-| `Heat` | Counter 0..5 | Tăng khi phá quán/shop, đánh quá lâu, để cảnh sát báo động, hoặc chọn route ồn ào. Giảm khi hỏi đúng Jacques, dùng shortcut, giữ dân thường khỏi báo động. | Cảnh sát đến sớm hơn, Marius gọi reinforcement nhiều hơn, một số đường mặt đất bị khóa. | Echo nhỏ trong epilogue Marseille: thành phố có nhớ nhóm như tội phạm phá hoại hay như người phơi bày Bastonne. |
-| `GrogerClues` | Counter 0..4 | Tăng khi tìm graffiti, phòng ẩn, tin đồn Áo Ghi, hoặc hỏi ông già ở chòi trước cống cuối. | Đủ clue mở lựa chọn truy GROGER chủ động; thiếu clue thì chỉ còn route bẫy nếu trust thấp. | Nếu đủ clue, hồ sơ GROGER được kể như bi kịch người bị bỏ lại, không chỉ là loot boss. |
-| `GrogerUnlocked` | Flag | Bật khi `GrogerClues` đủ ngưỡng hoặc khi `LaundelTrust` quá thấp khiến phe khác đẩy nhóm vào bẫy GROGER. | Mở boss ẩn GROGER. Trust cao biến trận thành điều tra-horror có NPC hỗ trợ; trust thấp biến thành phục kích bẩn và thiếu ánh sáng. | Nếu xử lý tốt, Laundel có tin đồn mới: GROGER từng là người bị bỏ lại, không chỉ là quái. Nếu chỉ giết lấy loot, epilogue lạnh hơn. |
-| `SubmarinePowerRoute` | State | `Stable` nếu người chơi dùng terminal để giữ điện; `Sabotage` nếu phá hai máy phát phụ. | `Stable`: tàu sáng hơn, terminal/log dùng được. `Sabotage`: Hard Mode, arena tối, ít telegraph, SheMal nguy hiểm hơn, nhưng loot/skill tốt hơn và một số thí nghiệm bị ngắt. | Epilogue Marseille ghi nhận phòng thí nghiệm mất dữ liệu sống nếu sabotage. Không nên đổi ending chính; chỉ đổi bằng chứng, độ khó, và giọng nói về cái giá của sabotage. |
-| `HeniTrust` | Counter 0..3 | Tăng khi trả giá tử tế, không coi Heni như key item, hỏi consent trước khi dùng ký ức/resonance, giúp người bệnh quanh làng. Giảm khi ép cô, mặc cả tàn nhẫn, nói dối về Heniana, hoặc chỉ dùng cô như công cụ. | Heni bán/vừa tặng vật nhỏ, chỉ lối phụ, kể giấc mơ phòng trắng rõ hơn. | Resonance trong The Cradle ổn định hơn. Trong final, Heni có thêm câu tự chọn tên mình; trust thấp không phá canon nhưng cô ít chủ động mở lòng. |
-| `CalvariaTruthsFound` | Counter 0..5 | Sửa tên người chết, tìm bằng chứng giáo hội làm giả lời tha thứ, giúp NPC nghèo nghe sự thật, phá khế ước giọng nói. | Ít skeleton hơn trong Dàn Hợp Xướng, giảm số lần Cái Lưỡi dùng giọng người thân để khóa nhân vật. | Dùng làm bằng chứng ở Stage 5 để thuyết phục một nhóm rút khỏi cổng vật tế. Epilogue Calvaria nói người sống tự nói lời tạm biệt. |
-| `SlayerJungleStealth` | State | Bật khi vượt qua rừng mà không kích hoạt chuông báo động quá 3 lần ở 3-2. | Nếu thành công (Stealth), đội tuần tra Pháo đài Linh hồn (3-3) bị bất ngờ, làm giảm 30% lượng máu của đợt phòng thủ đầu tiên. | Giảm mức độ truy đuổi đô thị (Heat) cho toàn bộ Stage 3. |
-| `SpiritFortressChoice` | State | `Destroy` nếu phá hủy các bình năng lượng linh hồn; `Purify` nếu giải phóng họ an toàn. | `Destroy`: Vách pháo đài sụp đổ nhanh, nổ lan dọn bớt lính xung quanh, nhưng tăng oán hận. `Purify`: Chống đỡ các đợt lính gác phản kích lâu hơn, nhưng giải phóng được linh hồn. | Nếu `Purify`, các linh hồn sẽ xuất hiện tạo lá chắn âm thanh bảo vệ đội trước chiêu cuối của boss Dàn Hợp Xướng (3-9). Nếu `Destroy`, linh hồn oán giận hóa thành quái cận chiến hỗ trợ boss. |
-| `AkamCiviliansSaved` | Counter | Cứu người bị ép cải đạo, mở evac route, phá loa tuyên truyền, không đánh người đầu hàng. | Rage của Titan giảm, ít reinforcement, weakpoint mở lâu hơn. | Ở cảnh cuối, số dân hai phe cùng mở đường cho trẻ em/người bị thương thay đổi theo counter này. |
-| `FinalMercyActions` | Counter | Trong The Cradle/final: Hold Fire, Disable Weapon thay vì giết, Protect Civilians, từ chối dùng Heniana/Heni như vật tế, không xử tử kẻ đã đầu hàng. | Phase Trái Tim trong final bớt sạc Rage, đồng đội có thêm assist bảo vệ. | Không tạo "good ending" riêng. Nó đổi tone epilogue: thắng bằng cách ít biến người khác thành chi phí hơn, hoặc thắng nhưng thế giới còn cay đắng hơn. |
-
-Ví dụ kết hợp biến:
-
-- `LaundelTrust` cao + `GrogerUnlocked`: dân Laundel hỗ trợ bằng đèn, tiếng gọi weakpoint, hoặc mở đường thoát sau boss.
-- `LaundelTrust` thấp + `GrogerUnlocked`: GROGER xuất hiện trong tối, nhiều token mồi hơn, NPC khóa cửa vì sợ nhóm.
-- `HeniTrust` cao + `CalvariaTruthsFound` cao: người chơi dễ nhận ra Cái Lưỡi đang giả giọng Heni/Heniana vì Heni từng kể chi tiết thật.
-- `AkamCiviliansSaved` cao + `FinalMercyActions` cao: final boss vẫn khó, nhưng phase Trái Tim có nhiều khoảng thở hơn và epilogue bớt tuyệt vọng.
-
-Điểm quan trọng: biến trust không phải để thưởng người chơi "ngoan". Nó làm thế giới nhớ các chi phí nhỏ mà người chơi đã chấp nhận hoặc né tránh.
-
-## UI/UX, menu và flow ngoài gameplay
-
-UI của Divergency nên đi cùng ngôn ngữ thị giác đã có trong các mockup hiện tại: nền tối, kim loại cũ, viền đồng/brass, điểm chọn màu vàng cũ, banner tím, xích, bánh răng, họa tiết góc và footer prompt cho tay cầm/bàn phím. Tránh cảm giác sci-fi neon sạch hoặc menu mobile quá phẳng. UI phải đọc được ở canvas nhỏ `805x456`, vì phần lớn asset hiện tại đã có preview theo tỷ lệ này.
-
-Các asset UI hiện có nên được xem là reference chính:
-
-- `imgs/UI/main_menu_sprites/`: main menu, logo, background, button và icon.
-- `imgs/UI/Pause_menu_options_spritesheet.json` và `imgs/UI/pause_menu_options_sprites/`: pause/options overlay.
-- `imgs/UI/settings_menu_sections/` và `imgs/UI/settings_menu_sprites/`: Settings theo tab Video/Audio/Controls/Gameplay/Misc.
-- `imgs/UI/Character_selected_story_spritesheet.json` và `imgs/UI/character_selected_story_sprites/`: chọn nhân vật, map campaign, stage card, skill panel.
-- `imgs/UI/in_game_hud_ui_skill_set/`: HUD trong gameplay, command wheel, skill hotbar, objective marker.
-- `imgs/UI/Relay_IP_Room_design_notes.md` và `imgs/UI/relay_ip_room_sprites/`: phòng Relay/IP nếu Story có co-op hoặc lobby.
-
-### Main Menu
-
-Màn hình chính dùng background `main_menu_background_805x456.png` làm cảnh nền tĩnh/animated nhẹ. Logo Divergency ở trên/trái hoặc trên/giữa, không che nhân vật chính trong nền. Menu chính không cần giải thích dài; người chơi phải vào game nhanh.
-
-Các nút chính:
-
-- **Continue:** hiện khi có save gần nhất. Dòng phụ nhỏ ghi Stage/Act, ví dụ `Stage 1-2 Laundel`.
-- **Start Story:** vào flow chọn slot hoặc Relay/IP room tùy chế độ chơi.
-- **Heroes:** mở màn hình nhân vật/kỹ năng ngoài campaign. Nếu chưa mở đủ nhân vật, hiển thị silhouette hoặc locked card, không spoil Ghost/Heni quá sớm.
-- **PvP / Relay:** chỉ bật nếu mode này thật sự có gameplay. Nếu chưa làm, đổi thành `Extras` hoặc ẩn để tránh hứa quá sớm.
-- **Settings:** mở Settings overlay.
-- **Quit:** thoát game, có confirm đơn giản.
-
-Flow đề xuất:
-
-1. `Continue` -> load autosave gần nhất.
-2. `Start Story` -> chọn save slot.
-3. Nếu chọn chơi online/co-op -> mở Relay/IP Room.
-4. Nếu chơi single-player -> vào Stage 0 tutorial ở căn cứ Deep Team.
-
-### Relay/IP Room
-
-Màn Relay/IP chỉ dùng khi cần kết nối người chơi. Nó không nên thay thế main menu campaign nếu bản chơi hiện tại là single-player. Màn này giữ nền main menu đã dim, mở modal đồng/brass ở giữa, đúng hướng trong `Relay_IP_Room_design_notes.md`.
-
-Nội dung chính:
-
-- Tab **Relay** và **IP Local** ở trên.
-- Danh sách phòng bên trái, 5 dòng là đủ cho canvas nhỏ.
-- Khu host/join bên phải: region, slot, route, room code/host IP, nút `Host Room`, `Join Selected`, `Connect`.
-- Hàng tên người chơi ở đáy modal.
-- Nút settings và close ở góc phải, dùng cùng sprite với pause/settings.
-
-### Character Select / Story Select
-
-Màn character select không nên là "shop" nếu dùng trong campaign. Nó nên là màn **Story Party**: chọn nhân vật đang điều khiển, assist, reserve, skill loadout và Stage map.
-
-Layout dùng asset `Character_selected_story` hiện có:
-
-- Tab trái/phải: **Character** và **Map**.
-- Cột trái: card nhân vật gồm Deep, Solei, Henry, Tulas, Block. Ghost chỉ mở sau Bastonne; Heni là companion/puzzle key, không đặt như DPS chính nếu story chưa cho phép.
-- Trung tâm: nhân vật đang chọn, nameplate, class/role, chỉ số HP/ATK/DEF/SPD, skill slots.
-- Dưới: `Current Fighter`, `Assist`, `Reserve`, nút `Ready`.
-- Bên Map: các card Stage 1-1, 1-2, 1-3, 1-4, progression node và branch marker.
-
-Luật mở khóa:
-
-- Stage 0 đầu game: chỉ Solei trong tutorial, Deep/Henry/Tulas là assist theo cảnh.
-- Sau Bastonne: Deep/Solei/Henry/Block có thể vào party tùy hệ thống swap; Ghost mở như special member hoặc route-specific playable.
-- Stage 2: Heni xuất hiện như companion; UI phải gọi cô là **Heni**, không dùng nhãn kiểu `Clone`, `Copy`, `Key Item`.
-- Khi nhân vật bị thương theo state như `BlockInjuryState`, card hiển thị trạng thái bằng icon nhỏ và mô tả gameplay, không khóa nhân vật một cách khó hiểu.
-
-### Pause Menu
-
-Pause menu là overlay lên gameplay đã làm tối, không đưa người chơi ra màn hình riêng trừ khi chọn map/settings. Asset hiện tại đã có hướng đúng với title `P1 PAUSED`, chain frame, purple banner và option buttons.
-
-Các lựa chọn chính:
-
-- **Resume:** quay lại gameplay.
-- **Change Character:** mở Story Party/Character Select ở trạng thái gọn, chỉ cho đổi nhân vật hợp lệ trong party hiện tại.
-- **Command List:** xem COMMAND đã mở, synergy, input, cooldown và ví dụ ngữ cảnh.
-- **Options:** mở Settings trên cùng overlay pause.
-- **Restart Map:** xác nhận trước khi restart checkpoint/map hiện tại.
-- **Quit:** lựa chọn `Quit to Main Menu` và `Quit Game`, luôn có confirm nếu có tiến trình chưa save.
-
-Quy tắc:
-
-- Pause trong combat thường dừng game. Nếu có co-op/online, pause chuyển thành menu không dừng thời gian và cần label rõ.
-- Trong cutscene, nút pause chỉ mở `Resume`, `Skip`, `Settings`, `Quit to Main Menu`.
-- Nếu người chơi chết sau Bastonne, ưu tiên đưa về Map Ngủ Mơ/respawn flow thay vì pause menu thường.
-
-### Options / Settings
-
-Settings nên dùng bản section/tab hiện tại trong `imgs/UI/settings_menu_sections/`. Cấu trúc:
-
-- **Video:** resolution, window mode, V-Sync, brightness, UI scale, damage numbers.
-- **Audio:** master/music/SFX/voice, mute background audio, subtitles.
-- **Controls:** keyboard, gamepad, remap, input buffer, vibration.
-- **Gameplay:** difficulty assist, camera shake, hold/toggle choices, command slowdown, auto-lock options.
-- **Misc:** language, save data, reset defaults, credits/legal.
-
-Các setting quan trọng cho gameplay Divergency:
-
-- **Command Slowdown:** `Off / Light / Full` để người chơi không bị quá tải khi dùng COMMAND.
-- **Interact Prompt Size:** vì game có nhiều nhặt/ném/cửa/van/NPC.
-- **Subtitles:** bật mặc định, có speaker name và background opacity.
-- **Color/Contrast Aid:** cần cho poison, blood, water, rage, hidden objects.
-- **Screen Shake:** slider, không chỉ toggle.
-- **Hold vs Toggle:** guard, sprint, command wheel, lock-on.
-
-### In-Game HUD
-
-HUD phải giữ nguyên triết lý: không biến mọi lựa chọn thành morality meter. Không hiển thị thanh `Good/Evil`, không hiển thị `Trust +1` kiểu game hệ thống lộ liễu. Hậu quả thể hiện qua NPC, route, giá shop, encounter và epilogue.
-
-HUD chính:
-
-- Góc trên trái: portrait, tên nhân vật, HP, mana/energy, level, status icon.
-- Góc trên phải: objective ngắn, icon map/skull/star nếu cần, không quá nhiều text.
-- Đáy giữa/phải: skill hotbar `Q/W/E/R` hoặc gamepad equivalent.
-- COMMAND: command wheel chỉ hiện khi giữ nút, có segment `Hold`, `Come`, `Free`, `Focus` hoặc lệnh ngữ cảnh.
-- Scene marker: enemy guard HP/marker, ally nameplate, objective marker; chỉ hiện khi cần đọc combat.
-
-Stage-specific UI:
-
-- **Con Mắt:** UI có thể sai lệch nhẹ, hiện đồ giả hoặc objective mơ hồ, nhưng không được lừa người chơi bằng nút hệ thống nguy hiểm.
-- **Cái Tai:** prompt âm thanh/im lặng, wave/noise indicator.
-- **Cái Lưỡi:** command giả hoặc voice prompt bị méo; cần có cách phản biện bằng gameplay, không chỉ làm người chơi mất quyền điều khiển.
-- **Trái Tim:** Rage/Heartbeat meter xuất hiện theo encounter, không dùng như thanh "ác".
-- **Dây Rốn/The Cradle:** UI và level hòa vào nhau; Map Ngủ Mơ không còn là menu tách biệt.
-
-### Save/Load và Checkpoint
-
-Save screen nên hiển thị thông tin hữu ích nhưng không spoil:
-
-- Stage/Act hiện tại.
-- Thời lượng chơi.
-- Nhân vật active/assist.
-- Checkpoint gần nhất.
-- Một dòng trạng thái thế giới nhẹ, ví dụ `Laundel remembers your route`, không ghi số trust cụ thể.
-
-Autosave nên chạy ở:
-
-- đầu Act,
-- trước boss,
-- sau boss,
-- khi vào Map Ngủ Mơ,
-- sau lựa chọn có flag/state quan trọng.
-
-Manual save đặt ở căn cứ, safehouse, camp hoặc điểm nghỉ. Không cho save ngay giữa phase boss nếu nó phá encounter.
-
-### Visual rules cho AI sketch UI
-
-Khi tạo sketch UI, dùng brief ngắn này:
-
-```text
-Divergency UI concept, dark fantasy sci-fi action RPG, old brass frame, worn dark metal panels, muted gold active selection, purple hanging banners, chain and gear ornaments, readable 805x456 game UI layout, controller prompt footer, cinematic but functional, no neon futuristic HUD, no mobile-game clutter.
-```
-
-Màn cần sketch/hoàn thiện trước:
-
-| Ưu tiên | Màn hình | Mục tiêu |
+| Lệnh | Công dụng | Ví dụ |
 |---|---|---|
-| 1 | Main Menu | Nhận diện brand, Start Story/Continue/Settings rõ |
-| 2 | Pause Menu | Resume/Change Character/Command List/Options/Restart/Quit |
-| 3 | Character Select / Story Party | Chọn active fighter, assist, reserve, skill loadout, map |
-| 4 | Settings | Video/Audio/Controls/Gameplay/Misc, dễ đọc ở 805x456 |
-| 5 | In-Game HUD | HP/mana/skills/objective/command wheel không che combat |
-| 6 | Save/Load | Slot rõ, không spoil, có Stage/Act/checkpoint |
-| 7 | Map Ngủ Mơ UI | Respawn/loadout/reset skill nhưng vẫn gắn với Ghost và Dây Rốn |
+| **Giữ** | Duy trì vị trí hoặc vật thể | Block giữ cửa, Tulas giữ màn lọc độc |
+| **Phá** | Tập trung phá vật cản, giáp hoặc nguồn tăng cường | Deep phá vách, Solei phá cột nghi lễ |
+| **Vận hành** | Điều khiển công tắc, van, thang máy hoặc bảng máy | Henry giữ bảng điều khiển khi người chơi đánh trùm phụ |
+| **Bảo vệ** | Che chắn một người hoặc khu vực | Block bảo vệ Heni, Deep giữ đường rút |
+| **Tập trung** | Dồn tấn công vào mục tiêu đã đánh dấu | Cả đội đánh kẻ chỉ huy hoặc điểm yếu của trùm |
+| **Vô hiệu hóa** | Tắt vũ khí hoặc cơ quan nguy hiểm mà không giết người vận hành | Solei cắt nguồn tháp súng, Ghost khóa máy tế |
+| **Ngừng bắn** | Không tấn công dân thường, người bị điều khiển hoặc kẻ đã đầu hàng | Henry ngăn đội truy sát trong Akam Meskul |
+| **Mở đường** | Ưu tiên cửa thoát, cầu hoặc tuyến sơ tán | Solei mở khóa trong khi Block giữ đám đông |
+| **Trấn tĩnh** | Xác nhận lệnh thật và giảm ảnh hưởng của Cái Lưỡi | Henry chặn mệnh lệnh giả trong Calvaria |
 
-## Stage 0 - Căn cứ Deep Team và Bastonne Prison
+Lệnh ngữ cảnh hiện ngay trên mục tiêu. Bánh xe lệnh chỉ mở khi cần chọn giữa nhiều nhiệm vụ. Trò chơi có tùy chọn làm chậm thời gian khi mở bánh xe, nhưng không dừng hoàn toàn trong chế độ nhiều người.
 
-### Mục tiêu gameplay
+Lệnh có thời gian hồi ngắn. Ra lệnh sai có thể khiến đồng đội mất vị trí hoặc bị thương, nhưng không được tạo thất bại không thể cứu vãn chỉ vì một lần bấm nhầm.
 
-- Mở game bằng Solei và đội Deep, không phải Stranger.
-- Dạy di chuyển, đánh thường, combo, chưởng, né, counter, đọc telegraph.
-- Cho người chơi hiểu Block là người trong team/đồng minh cần được giải cứu.
-- Sau tutorial, chuyển sang nhiệm vụ Bastonne và giới thiệu Stranger/Ghost như biến số trong nhà tù.
-- Cho lựa chọn Stranger có giúp Block hay không, nhưng Block cuối cùng vẫn được đội cứu.
+### 3.2. Liên kết kỹ năng
 
-### Cơ chế dùng được
+Liên kết kỹ năng trả lời câu hỏi khác: **hai nhân vật có thể cùng làm điều gì mà một người không thể làm một mình?** Hệ thống này dùng chung cách nhắm mục tiêu với lệnh phối hợp để giao diện không bị tách thành hai lớp khó nhớ.
 
-- **Training ở căn cứ:** Deep kiểm tra Solei bằng sparring, dummy, bài né đòn, bài combo, bài chưởng, và bài counter.
-- **Team cue cơ bản:** Deep hoặc Henry hô nhịp để Solei học assist, đổi mục tiêu, phá giáp, né đòn lớn.
-- **Tulas synergy drill:** Tulas tạo bệ chất lỏng, khiên nước, hoặc vật thể tạm để Solei/Deep học nhảy qua vật cản, chặn projectile, và đánh mục tiêu trên cao.
-- **Cầm và ném:** nhặt thùng, ghế, chai, tạ tập hoặc lõi máy để ném vào công tắc, dummy có giáp, hoặc vùng tạo tiếng động.
-- **Mission briefing:** mục tiêu rõ ràng là giải cứu Block khỏi Bastonne và lấy bằng chứng về thí nghiệm của Jamerson.
-- **Khí mê:** giảm tầm nhìn/stamina theo chu kỳ, nhưng Stranger không ngủ như người khác.
-- **Máy nhận diện tù nhân:** cửa/camera không biết xử lý Stranger vì anh không khớp hồ sơ.
-- **Loa đọc mã số:** tạo nhịp đóng mở cửa và áp lực thời gian.
-- **Lockdown:** cửa tự khóa, guard chuyển sang đội hình khẩn cấp.
-- **Noise objective trong phòng giam:** Stranger phải tạo đủ tiếng động bằng cách đánh/nhặt/ném vật thể để Henry tìm đến.
-- **Vật thể phòng giam:** đèn, hai cốc sứ, bàn kim loại nhẹ, giường sắt, bình vệ sinh đêm. Đánh giường có thể rơi mảnh kim loại; ném vỡ bình có thể rơi Stimpack cũ và mở UI máu lần đầu.
+Các liên kết chính:
 
-### Puzzle/encounter
+- **Deep và Tulas:** Tulas tạo bệ hoặc cột chất lỏng để Deep lao lên, phá giáp trên cao hoặc đập xuống diện rộng.
+- **Solei và Tulas:** Tulas tạo điểm tựa để Solei chạy tường, vượt bẫy và tiếp cận điểm yếu.
+- **Henry và Tulas:** màn nước làm lệch đường đạn hoặc tạo thấu kính giúp Henry bắn công tắc và điểm yếu ở góc khuất.
+- **Block và Tulas:** Tulas làm đặc chất lỏng quanh khiên của Block, tạo hành lang an toàn cho đội hoặc dân thường.
+- **Ghost và Tulas:** Ghost vượt qua máy nhận diện; Tulas giữ cửa, van hoặc vật thể từ phía bên kia để mở đường cho cả đội.
 
-- **Solei khởi động ở căn cứ:** Deep tạo bài kiểm tra ngắn. Người chơi học đi, nhảy/né, đánh thường, combo, chưởng, counter, nhặt/ném vật thể và synergy đơn giản với Tulas. Bài cuối là một sparring nhỏ chứng minh Solei đủ khả năng tham gia nhiệm vụ giải cứu Block.
-- **Đột nhập Bastonne:** người chơi điều khiển Solei hoặc đội Deep trong đoạn đầu, học teamwork thật trong môi trường nguy hiểm.
-- **Nhà tù náo loạn:** sau khi lockdown/gas/Con Mắt gây nhiễu, game cắt sang Stranger tỉnh dậy trong phòng biệt giam. Anh không có combo mạnh; bài chơi là sống sót, nhặt/ném đồ, và tạo tiếng động.
-- **Gây tiếng động gọi đội:** người chơi phải tương tác với ít nhất 2-3 vật thể hoặc đạt ngưỡng noise. Càng ít vật thể bị phá, càng ít guard bị kéo đến; phá hết phòng có thể tăng `Heat` nhưng cho thêm vũ khí tạm.
-- **Henry mở nhầm phòng:** đội phá cửa vì tưởng đó là Block. Cutscene ngắn: Henry hỏi về Block, Locke nghi kế hoạch lộ, Daniel báo guard đang tới. Người chơi có thể chỉ phòng Block hoặc chạy theo đội.
-- **Cửa không nhận Stranger:** sau khi ra khỏi phòng, người chơi phải đứng trong vùng nhiễu hoặc dùng mã tù nhân để đánh lừa cửa.
-- **Stranger gặp Block:** Block bị kẹt sau cửa thủy lực hoặc trong buồng đang bị bơm khí. Stranger có thể giúp bằng cách mở restraint, làm chậm khí, hoặc phá một chốt cửa. Đây là lựa chọn phụ trong lúc Stranger đang tìm đường thoát, không phải nhiệm vụ chính của anh.
-- **Nếu Stranger không giúp:** cảnh cắt về Solei. Solei và đội vẫn cứu Block, nhưng phải đánh thêm một encounter, Block bị thương hơn, hoặc mất một shortcut.
-- **Nếu Stranger giúp:** khi Solei tới nơi, Block đã có cơ hội chống đỡ hoặc tự bò ra khỏi vùng khí. Đội vẫn là người đưa Block ra ngoài, nhưng Block nhớ Stranger đã không bỏ mặc anh.
+Tulas không được giải mọi câu đố một mình. Năng lực của anh cần nguồn chất lỏng, chỉ giữ được hình dạng trong thời gian giới hạn và yếu đi trước điện hoặc nhiệt. Dùng máu sống thay cho nước tạo hiệu quả mạnh hơn nhưng làm tăng Độ Nhiễu và có thể khóa một phần sinh lực tối đa cho đến điểm nghỉ.
 
-### Boss/mini-boss đề xuất
+### 3.3. Cầm, nhặt và ném vật thể
 
-Có thể dùng hai mini-boss nhỏ thay vì một boss lớn:
+Môi trường là một phần của bộ kỹ năng chung. Mọi nhân vật có thể nhặt vật nhẹ; Deep và Block có thể xử lý vật nặng; Solei và Ghost ném vật nhẹ nhanh và chính xác hơn.
 
-1. **Training Bout ở căn cứ:** Deep hoặc drone tập luyện kiểm tra Solei. Đây là tutorial combo/chưởng/counter, không phải trận sinh tử.
-2. **Bastonne Lockdown Unit:** mini-boss trong nhà tù khi đội cứu Block.
+Vật thể được dùng theo bốn cách:
 
-- Khiên lớn, súng điện, drone khóa mục tiêu.
-- Dạy phá guard, né đòn điện, dùng môi trường và teamwork.
-- Nếu Stranger từng giúp Block, Block có thể tỉnh đủ để tự giữ một cửa/đỡ một đòn trong trận. Nếu không, đội phải bảo vệ Block bị thương.
+- **Chiến đấu:** làm choáng, phá thế đỡ, ép địch đổi vị trí hoặc tạo vùng nguy hiểm.
+- **Đánh lạc hướng:** tạo tiếng động để kéo tuần tra khỏi đường đi.
+- **Giải đố:** kích công tắc, chặn bánh răng, đè bàn áp lực hoặc chuyển vật qua khe.
+- **Tạo địa hình:** dựng chỗ nấp, làm bệ tạm hoặc cung cấp chất lỏng cho Tulas.
 
-## Stage 1 - Marseille
+Vật nặng làm nhân vật di chuyển chậm. Vật dễ vỡ có thể gây tiếng động hoặc kích hoạt bẫy sớm. Mọi vật thể quan trọng phải có hình dáng, màu viền hoặc chuyển động đủ rõ để người chơi nhận biết mà không cần phủ kín màn hình bằng biểu tượng.
 
-## 1-1. Quán bar Armorlite
+### 3.4. Độ Nhiễu Di Vật
 
-### Mục tiêu gameplay
+Độ Nhiễu Di Vật là trạng thái từ 0% đến 100%, thể hiện mức độ cơ thể và ý thức bị sức mạnh của các mảnh thần xâm nhập. Đây không phải “độ điên”, mà là một dạng nhiễm độc siêu nhiên có thật trong thế giới.
 
-- Biến Armorlite thành điểm lấy thông tin/safehouse, không phải một quán bar chỉ để đánh nhau ngẫu nhiên.
-- Có thể mở bằng một đoạn ngắn ở trụ sở/garage của đội Deep để chuẩn bị nhiệm vụ, rồi chuyển sang Armorlite gặp Jacques.
-- Dạy combat nhóm trong không gian chật khi cuộc xô xát đã bị kéo đến từ ngoài phố.
-- Dạy vũ khí môi trường.
-- Đặt quan hệ căng giữa Stranger/Ghost và đội sau Bastonne, nhưng trọng tâm gameplay vẫn là nhóm Deep/Solei.
-- Gắn `BlockHelped`, `BlockInjuryState` và `Heat` vào payoff đầu tiên để lựa chọn Bastonne có trọng lượng ngay trong 10-20 phút sau đó.
+Độ Nhiễu tăng khi nhân vật:
 
-### Cơ chế dùng được
+- đứng trong khí mê, vùng oán niệm hoặc gần nguồn thần lực;
+- trúng đòn liên quan đến mảnh thần;
+- nhìn hoặc nghe một ảo giác mạnh quá lâu;
+- để Nộ khí hoặc nhịp tim cộng hưởng ở mức cao;
+- lạm dụng kỹ năng cộng hưởng khi đã gần quá tải.
 
-- **Hỏi tin Jacques:** chọn chủ đề về bến cảng, đường cống, cảnh sát mật, băng đua xe, hoặc người bị đưa ra ngoài khơi. Hỏi đủ ý mở shortcut hoặc giảm phục kích.
-- **Chuẩn bị ở garage/safehouse:** kiểm tra Block bị thương, đổi loadout, nghe Henry/Deep thống nhất mục tiêu trước khi xuống phố. Đây là màn chọn nhân vật ngắn sau chase.
-- **Vật thể quán bar:** chai, cốc, ghế, bàn bi-da, đèn neon, cửa kính, thùng đá. Nhân vật đang được chọn sẽ xin lỗi Jacques rồi ném vật đang cầm để mở combat.
-- **Heat đô thị:** phá quá nhiều hoặc đánh quá lâu làm cảnh sát đến sớm.
-- **Block bị thương:** Block luôn được cứu khỏi Bastonne, nhưng nếu Stranger không giúp ở đoạn nhà tù loạn thì Block bắt đầu Stage 1 với thương tích nặng hơn hoặc Max HP thấp hơn, buộc người chơi chú ý bảo vệ.
-- **Mâu thuẫn có sẵn:** băng đua xe đã ghét đội Deep/Henry từ trước vì nhóm từng phá tuyến vận chuyển người, xăng và thuốc của chúng. Chúng bám theo đội đến Armorlite, không phải tự nhiên xuất hiện chỉ vì một cuộc nói chuyện.
-- **Moto telegraph:** mũi tên cảnh báo hướng xe lao vào, thời gian tăng tốc ban đầu chậm hơn người chơi để dạy né/nhảy đánh, sau đó mới nhanh dần.
-- **Moto rider state:** đánh sau lưng chỉ hất người ngồi sau nếu có passenger; đánh trực diện hoặc dùng vũ khí ném đúng lúc có thể hất cả xe.
+Độ Nhiễu giảm khi nhân vật:
 
-### Puzzle/encounter
+- rời khỏi nguồn gây nhiễu và tránh nhận đòn trong vài giây;
+- đứng trong vùng an toàn do Block tạo ra;
+- được Tulas lọc máu hoặc ổn định tuần hoàn;
+- nhận lệnh Trấn tĩnh của Henry;
+- phá nguồn gây nhiễu như loa, máy phát, cột nghi lễ hoặc mạch liên kết;
+- nghỉ tại trạm điều trị, nơi trú ẩn hoặc Cõi Mộng Sau Cái Chết.
 
-- **Nói chuyện với Jacques:** hỏi đủ thông tin mở đường cống thuận lợi hơn; hỏi thiếu thì vẫn đi tiếp được nhưng bị dẫn qua đoạn đông địch hơn.
-- **Quán bar thành arena:** bàn ghế bị phá sẽ đổi đường đi, có thể tạo cover hoặc tự chặn đường.
-- **Băng đua xe ngoài phố:** cuộc phục kích bắt đầu ngoài quán sau khi chúng nhận ra nhóm. Ba kẻ đầu tiên bị văng ra phố; một tên gục ngay, hai tên còn nửa máu. Dạy né đòn lao nhanh và vùng lửa, đồng thời cho thấy Marseille đã có nhiều món nợ cũ với đội.
-- **Vũ khí đường phố:** nắp thùng rác, tuýp nước, chai thủy tinh, thanh gỗ, vũ khí rơi từ enemy. Vật ném là cách tốt để hất rider khỏi xe trước khi chúng tăng tốc.
+Sau khi hạ xuống một ngưỡng an toàn hơn, nhân vật có 3–5 giây không bị tăng Nhiễu trở lại. Quy tắc này tránh việc thanh trạng thái nhảy liên tục giữa hai mức.
 
-### Boss
+#### Hiển thị bằng mười một khuôn mặt
 
-**Thủ lĩnh băng đua xe**
+Biểu tượng Độ Nhiễu nằm cạnh chân dung nhân vật. Mỗi 10% dùng một khuôn mặt khác, nhưng ảnh hưởng thực tế chỉ chia thành năm ngưỡng để người chơi dễ nhớ.
 
-- Phase 1A: cưỡi moto lớn, lao ngang, quay xe, để lại vạch lửa. Cần đánh trúng từ phía sau hoặc dùng vũ khí ném đúng timing để làm hắn ngã; mỗi lần ngã chỉ mở cửa sổ gây tối đa khoảng 25% HP.
-- Phase 1B: khi đi bộ tạm thời, dùng chém dọc, chém ngang, chém hất chống jump spam, rồi lao nhanh áp sát trước khi leo lại moto.
-- Phase 2: dưới 50% HP, rút kiếm gia truyền. Không còn dễ bị hất khỏi xe, gọi đàn em chạy cắt màn hình khoảng 20 giây, tăng tốc nhanh hơn và có combo 3 nhịp khi lướt qua người chơi.
-- Special: cắm mũi kiếm xuống đường khi tăng tốc, tạo tia lửa và vệt lửa tồn tại ngắn. Nếu người chơi đứng gần quá lâu khi boss nổ máy, boss quay vòng tại chỗ gây sát thương diện rộng.
-- Henry có thể đánh dấu lúc boss quay xe; Solei có cửa sổ counter tốt; Deep phá giáp khi boss đi bộ; Block nếu bị thương nặng chỉ nên assist phòng thủ.
+| Mức | Hình trạng thái | Tên trạng thái | Điều người chơi cần hiểu |
+|---:|:---:|---|---|
+| 0% | ![Khuôn mặt Độ Nhiễu 0%](<imgs/campaign-panels/kick/reward/reward 1.png>) | Ổn định | Chưa có ảnh hưởng xấu |
+| 10% | ![Khuôn mặt Độ Nhiễu 10%](<imgs/campaign-panels/kick/reward/reward 2.png>) | Căng thẳng | Chỉ có cảnh báo bằng hình ảnh |
+| 20% | ![Khuôn mặt Độ Nhiễu 20%](<imgs/campaign-panels/kick/reward/reward 3.png>) | Lệch nhịp | Âm thanh và hình ảnh bắt đầu thay đổi nhẹ |
+| 30% | ![Khuôn mặt Độ Nhiễu 30%](<imgs/campaign-panels/kick/reward/reward 4.png>) | Nhiễu nhẹ | Xuất hiện ảnh hưởng nhỏ theo luật của khu vực |
+| 40% | ![Khuôn mặt Độ Nhiễu 40%](<imgs/campaign-panels/kick/reward/reward 5.png>) | Méo giác quan | Có thể nhìn hoặc nghe thấy tín hiệu giả |
+| 50% | ![Khuôn mặt Độ Nhiễu 50%](<imgs/campaign-panels/kick/reward/reward 6.gif>) | Xâm nhập | Mảnh thần bắt đầu tác động rõ đến lối chơi |
+| 60% | ![Khuôn mặt Độ Nhiễu 60%](<imgs/campaign-panels/kick/reward/reward 7.gif>) | Ăn sâu | Nhân vật cần sớm tìm cách hồi phục |
+| 70% | ![Khuôn mặt Độ Nhiễu 70%](<imgs/campaign-panels/kick/reward/reward 8.gif>) | Phân mảnh | Ảnh hưởng mạnh đến chiến đấu và phối hợp đội |
+| 80% | ![Khuôn mặt Độ Nhiễu 80%](<imgs/campaign-panels/kick/reward/reward 9.gif>) | Hoảng loạn | Bóng Nhiễu có thể xuất hiện và truy đuổi |
+| 90% | ![Khuôn mặt Độ Nhiễu 90%](<imgs/campaign-panels/kick/reward/reward 10.gif>) | Quá tải | Cảnh báo cuối trước khi nhân vật mất ổn định |
+| 100% | ![Khuôn mặt Độ Nhiễu 100%](<imgs/campaign-panels/kick/reward/reward 11.gif>) | Bùng Nhiễu | Nhân vật rơi vào tình trạng nguy cấp; Stranger có thể trở thành trùm |
+
+| Khoảng | Trạng thái | Ảnh hưởng chung |
+|---:|---|---|
+| 0–20% | Ổn định đến lệch nhịp | Chỉ cảnh báo bằng hình và âm thanh |
+| 30–40% | Nhiễu nhẹ đến méo giác quan | Xuất hiện dấu hiệu giả nhưng chưa ảnh hưởng mạnh đến chỉ số |
+| 50–60% | Xâm nhập đến ăn sâu | Luật của mảnh thần trong chương bắt đầu tác động rõ |
+| 70–90% | Phân mảnh đến quá tải | Chiến trường khó đọc hơn, Bóng Nhiễu có thể xuất hiện |
+| 100% | Bùng Nhiễu | Khóa tạm một số kỹ năng và tạo tình huống nguy cấp |
+
+Khi một nhân vật thông thường Bùng Nhiễu, người chơi vẫn giữ quyền điều khiển. Trạng thái kéo dài khoảng 6–8 giây; một hoặc hai kỹ năng bị khóa, hồi máu thường giảm hiệu quả và một Bóng Nhiễu riêng xuất hiện. Người chơi có thể đổi nhân vật, gọi hỗ trợ, phá nguồn nhiễu hoặc chạy vào vùng an toàn. Nếu sống sót, Độ Nhiễu trở về khoảng 60% thay vì về 0%.
+
+#### Trùm điều kiện: Stranger mất kiểm soát
+
+**Stranger là ngoại lệ của trạng thái Bùng Nhiễu.** Khi Độ Nhiễu của Ghost/Stranger đạt 100%, anh không chỉ chịu một hiệu ứng nguy cấp ngắn mà có thể mất hoàn toàn điểm neo với đội và trở thành một trận trùm. Đây là phần giữ lại ý tưởng ban đầu của nhân vật: người sống sót mà đội vừa cứu cũng có thể trở thành mối nguy lớn nhất nếu sức mạnh trong anh vượt khỏi tầm kiểm soát.
+
+- Giao diện gọi anh là **Stranger** trong trận này, thay vì Ghost, để thể hiện rằng Độ Nhiễu đang xóa cái tên và mối quan hệ anh đã chọn.
+- Quyền điều khiển chuyển sang Solei. Deep, Henry, Tulas và Block trở thành đồng đội hỗ trợ theo đội hình hiện có.
+- Nếu Stranger đạt 100% trong một đoạn chơi đơn, trạng thái được giữ ở ngưỡng Quá tải và trận trùm bắt đầu ngay khi anh gặp lại đội. Trò chơi không tạo một trận đánh không thể hoàn thành vì thiếu đồng đội.
+- Stranger dùng chính những kỹ năng người chơi đã mở cho anh, đồng thời lặp lại một số thói quen di chuyển và tấn công gần nhất. Luật của mảnh thần trong chương hiện tại sẽ tạo thêm biến thể cho trận đấu.
+- Mục tiêu là **khống chế và cắt nguồn Nhiễu**, không giết Stranger. Solei phá các bóng lặp, Henry dùng Trấn tĩnh, Block tạo vùng an toàn, Tulas kéo Nhiễu khỏi cơ thể anh và Deep chỉ phá thế tấn công thay vì tung đòn kết liễu.
+- Ở 80% và 90%, chân dung, lời thoại và hành vi của Stranger phải cảnh báo rõ nguy cơ biến đổi để người chơi có cơ hội xử lý trước khi trận trùm xảy ra.
+
+Trận trùm đầy đủ chỉ kích hoạt một lần trong mỗi lượt chơi. Sau khi được khống chế, Stranger trở lại đội với Độ Nhiễu khoảng 40% và mở một đoạn đối thoại riêng. Nếu anh lại đạt 100%, trò chơi buộc anh rời vị trí chiến đấu cho đến điểm nghỉ thay vì lặp lại toàn bộ trận trùm. Cách xử lý này giữ trọng lượng của ý tưởng mà không biến nó thành một hình phạt lặp đi lặp lại.
+
+Không dùng Độ Nhiễu để đảo nút điều khiển, xóa thông tin hệ thống hoặc ép nhân vật tự đánh đồng đội. Ảo giác có thể làm chiến trường khó đọc, nhưng luôn phải có dấu hiệu để phân biệt thật và giả.
+
+#### Biến đổi theo từng chương
+
+| Khu vực | Biểu hiện chính | Cách xử lý |
+|---|---|---|
+| **Bastonne** | Hồi thể lực chậm, tác dụng chữa trị giảm, máy quét bám mục tiêu lâu hơn | Mở thông gió, tắt khí mê, dùng trạm điều trị |
+| **Marseille** | Vật phẩm, bóng người, cửa và điểm yếu giả | Tắt camera, kiểm tra bằng vật thể, đọc hồ sơ |
+| **Sakuri** | Tiếng bước chân lặp, thước tiếng động tăng nhanh, nhịp giả gọi Bóng Nhiễu | Giữ im lặng, thay đổi tiết tấu, phá nguồn tụng niệm |
+| **Calvaria** | Tên và mục tiêu bị méo, xuất hiện lệnh giả, giọng người chết khóa kỹ năng | Trấn tĩnh, phá khế ước, xác nhận bằng ký ức thật |
+| **Akam Meskul** | Nộ khí tăng nhanh, đám đông dễ cuồng loạn, trùm mạnh lên khi có người chết | Ngừng bắn, cứu dân, phá loa và giữ đội hình |
+| **Chiếc Nôi** | Luật cũ trộn vào nhau, địa hình lệch, đường giả và Bóng Nhiễu riêng xuất hiện | Heni tìm đường thật, Ghost cắt mạch nối, cả đội tạo vùng ổn định |
+
+#### Khác biệt theo nhân vật
+
+- Solei thoát vùng nguy hiểm nhanh nhưng bóng giả làm khó việc căn phản đòn.
+- Deep chịu đòn tốt nhưng dễ bị Trái Tim khơi lại ký ức chiến tranh; bảo vệ đồng đội giúp anh ổn định.
+- Henry nhận ra cấu trúc của ảo giác nhưng Cái Lưỡi có thể làm nhiễu lệnh của anh.
+- Tulas giảm Nhiễu cho người khác nhưng dễ quá tải nếu dùng máu quá nhiều.
+- Block chặn được đòn gây Nhiễu cho đồng đội, đổi lại thể lực của khiên hao nhanh khi bản thân bị nhiễm nặng.
+- Ghost tích Nhiễu chậm hơn, nhưng ở mức cao sẽ tạo một bóng lặp lại chính hành động cũ của anh. Nếu đạt 100%, anh có thể mất kiểm soát và trở thành trùm Stranger.
+- Heni nhìn thấy đường thật nhưng tích Nhiễu rất nhanh khi đến gần Dây Rốn.
+
+### 3.5. Cõi Mộng Sau Cái Chết
+
+Cõi Mộng Sau Cái Chết là không gian nằm giữa ý thức Ghost và giấc mơ của Thần Sơ Sinh. Hệ thống này chỉ mở sau Bastonne để không làm lộ Ghost quá sớm.
+
+Cõi Mộng dùng để:
+
+- hồi sinh tại điểm lưu;
+- thay đổi bộ kỹ năng và đội hình;
+- phân bổ lại nâng cấp bằng tài nguyên;
+- xem các mảnh ký ức đã tìm được;
+- gợi dần mối liên hệ giữa Ghost và Dây Rốn.
+
+Ghost là chủ thể của không gian này. Khi thành viên khác bị hạ, Ghost nghe thấy tiếng vọng của họ và kéo cả đội về điểm lưu. Heni là người duy nhất ngoài Ghost có thể cảm nhận rõ Cõi Mộng; cô giúp ổn định đường đi nhưng không thay Ghost làm trung tâm.
+
+Không gian thay đổi theo tiến độ:
+
+- Sau Bastonne: phòng trắng, loa tù nhân và hơi khí mê.
+- Sau Marseille: nước cống và ánh Con Mắt phản chiếu trên mặt nước.
+- Sau Sakuri: tiếng bước chân và ý nghĩ bị lặp lại từ rất xa.
+- Sau Calvaria: giọng người chết gọi tên cũ của Ghost.
+- Sau Akam Meskul: nhịp tim làm méo không gian và bảng kỹ năng.
+- Trong Chiếc Nôi: Cõi Mộng trở thành một phần thật của màn chơi.
+
+### 3.6. Ký ức của thế giới và hậu quả cục bộ
+
+Không có thanh đạo đức chung. Mỗi khu vực chỉ ghi nhớ những việc liên quan trực tiếp đến nó. Hậu quả nên xuất hiện lần đầu trong vòng 10–20 phút, sau đó vọng lại một lần ở cuối trò chơi.
+
+| Dữ liệu diễn giải | Thay đổi khi | Hậu quả gần | Hậu quả xa |
+|---|---|---|---|
+| **Đã giúp Block** | Ghost chỉ vị trí Block, làm chậm khí hoặc mở chốt cửa | Block tỉnh hơn trong trận thoát ngục; đội bớt nghi Ghost | Mở đối thoại riêng giữa Ghost và Block |
+| **Thương tích của Block** | Phụ thuộc việc cứu Block và khả năng bảo vệ anh | Thay đổi sinh lực và thời gian hồi hỗ trợ | Ảnh hưởng các cảnh giữ cầu và sơ tán |
+| **Lòng tin Laundel** | Mua bán công bằng, giữ lời hoặc cướp phá | Đổi giá, tin đồn, đường tắt và số lần phục kích | Người Laundel có thể hỗ trợ khi gặp GROGER |
+| **Mức truy nã Marseille** | Phá tài sản, để báo động hoặc chọn tuyến ồn ào | Cảnh sát đến sớm, Marius gọi thêm quân | Thành phố nhớ đội như kẻ phá hoại hoặc người phơi bày Bastonne |
+| **Manh mối GROGER** | Tìm hình vẽ, lời đồn và phòng ẩn | Mở tuyến chủ động tìm GROGER | Câu chuyện về GROGER thay đổi từ quái vật thành bi kịch |
+| **Tuyến điện tàu ngầm** | Giữ điện ổn định hoặc phá máy phát | Đổi ánh sáng, bản đồ, độ khó và phần thưởng | Thay đổi lượng bằng chứng còn lại ở Marseille |
+| **Lòng tin của Heni** | Tôn trọng lựa chọn, giúp người bệnh, không coi cô như chìa khóa | Heni chia sẻ đường phụ và ký ức rõ hơn | Cộng hưởng trong Chiếc Nôi ổn định hơn |
+| **Sự thật Calvaria** | Sửa tên người chết, phá lời tha thứ giả | Giảm quân xương và giọng giả trong trận trùm | Dùng làm bằng chứng để thuyết phục một nhóm rút lui ở Chiếc Nôi |
+| **Dân Akam được cứu** | Phá vật neo, mở đường sơ tán, không truy sát | Giảm Nộ khí của Titan, mở điểm yếu lâu hơn | Nhiều người của hai phe cùng hỗ trợ ở cuối chương |
+| **Hành động nhân từ cuối game** | Ngừng bắn, bảo vệ dân, từ chối vật tế | Giai đoạn Trái Tim của trùm cuối bớt khắc nghiệt | Đổi giọng điệu đoạn kết, không tạo một kết thúc hoàn toàn khác |
+
+Phần thưởng tốt nhất là đường tắt, đồng minh hỗ trợ, thông tin, vật phẩm đặc biệt hoặc chi tiết kết truyện. Không nên chỉ hiện thông báo “điểm tốt +1”.
+
+## 4. Nguyên tắc thiết kế màn chơi
+
+### 4.1. Cấu trúc mỗi phân đoạn
+
+Mỗi phân đoạn nên có cùng một nhịp rõ ràng:
+
+1. **Đặt chân:** cho người chơi quan sát bối cảnh, nói chuyện và hiểu mục tiêu.
+2. **Giới thiệu mối nguy:** dạy một luật mới trong không gian dễ đọc.
+3. **Mở rộng:** đưa luật mới vào chiến đấu, di chuyển hoặc câu đố.
+4. **Lựa chọn có giá:** tạo tuyến nhanh nhưng tàn nhẫn và tuyến khó hơn nhưng cứu được người.
+5. **Kiểm tra:** dùng trùm hoặc tình huống lớn để kết hợp cơ chế mới với cơ chế cũ.
+6. **Khoảng lặng:** cho người chơi thấy hậu quả trước khi chuyển sang khu vực tiếp theo.
+
+### 4.2. Ba lớp đường đi
+
+Mỗi khu vực nên có ba loại tuyến:
+
+- **Tuyến chính:** luôn hoàn thành được với đội hình hợp lệ và không đòi hỏi bí mật.
+- **Tuyến cứu hộ:** dài hơn hoặc khó hơn, tập trung vào dân thường, tù nhân và bằng chứng.
+- **Tuyến thử thách:** nguy hiểm hơn nhưng cho nâng cấp, tư liệu truyện hoặc cách đánh trùm khác.
+
+Không được khóa tiến trình vì người chơi không mang đúng nhân vật. Nếu một năng lực cần thiết thuộc về người đang ở đội dự bị, màn chơi phải có điểm gọi hỗ trợ, vật thay thế hoặc cách giải khác.
+
+### 4.3. Dấu hiệu và khả năng tiếp cận
+
+- Đòn nguy hiểm luôn có ít nhất hai dấu hiệu trong số hình ảnh, âm thanh và rung.
+- Câu đố màu sắc phải có thêm biểu tượng, độ sáng hoặc hoa văn; không dựa vào màu đơn thuần.
+- Khi Cái Tai làm mất âm thanh, mọi thông tin bắt buộc phải còn dấu hiệu hình ảnh.
+- Khi Con Mắt tạo tín hiệu giả, mục tiêu thật luôn có một quy luật để kiểm chứng.
+- Phụ đề, mục tiêu chính và dấu hiệu phản đòn không bị Độ Nhiễu làm méo đến mức không đọc được.
+- Mọi đoạn chỉ có một nhân vật đều phải có cách tự giảm Nhiễu mà không cần Tulas hoặc Block.
+
+## 5. Giao diện phục vụ lối chơi
+
+Giao diện dùng nền tối, kim loại cũ, viền đồng, điểm chọn vàng trầm, cờ tím, xích và bánh răng. Thông tin phải đọc rõ ở khung hình nhỏ `805x456`; tránh ánh đèn xanh quá sạch hoặc quá nhiều ô như trò chơi di động.
+
+Các thư mục hình ảnh hiện có vẫn là nguồn tham chiếu chính:
+
+- `imgs/UI/main_menu_sprites/`
+- `imgs/UI/pause_menu_options_sprites/`
+- `imgs/UI/settings_menu_sections/`
+- `imgs/UI/character_selected_story_sprites/`
+- `imgs/UI/in_game_hud_ui_skill_set/`
+- `imgs/UI/relay_ip_room_sprites/`
+
+### 5.1. Màn hình chính
+
+Các lựa chọn hiển thị bằng tiếng Việt:
+
+- **Tiếp tục:** tải điểm lưu gần nhất và ghi rõ chương hiện tại.
+- **Bắt đầu câu chuyện:** chọn ô lưu, sau đó vào Chương 0.
+- **Nhân vật:** xem nhân vật, kỹ năng và tư liệu đã mở.
+- **Kết nối:** chỉ hiện khi chế độ nhiều người đã sẵn sàng.
+- **Thiết lập:** mở phần hình ảnh, âm thanh, điều khiển và hỗ trợ chơi.
+- **Thoát:** yêu cầu xác nhận ngắn.
+
+### 5.2. Màn hình đội hình và bản đồ
+
+Màn hình này dùng để chọn nhân vật trực tiếp, hai vị trí hỗ trợ, đội dự bị, bộ kỹ năng và nút bản đồ. Ghost chỉ xuất hiện sau Bastonne. Heni được ghi đúng tên và đặt trong mục đồng hành, không dùng nhãn như “bản sao”, “lõi” hoặc “chìa khóa”.
+
+Chỉ đổi nhân vật tại căn cứ, nơi trú ẩn, điểm nghỉ hoặc trước tình huống lớn. Trạng thái thương tích được giải thích bằng biểu tượng và mô tả cụ thể, không khóa nhân vật mà không nói lý do.
+
+### 5.3. Giao diện trong trận
+
+- Góc trên trái: chân dung, sinh lực, năng lượng và Độ Nhiễu.
+- Góc trên phải: mục tiêu ngắn và dấu chỉ đường khi cần.
+- Mép dưới: bốn kỹ năng đang trang bị và thời gian hồi.
+- Bánh xe phối hợp: chỉ hiện khi giữ nút lệnh.
+- Dấu mục tiêu: chỉ hiện cho địch quan trọng, đồng minh cần bảo vệ và vật thể tương tác.
+
+Không hiển thị thanh thiện–ác hoặc số lòng tin. Hậu quả được kể bằng thế giới.
+
+### 5.4. Thiết lập quan trọng
+
+- Mức làm chậm khi mở bánh xe phối hợp: tắt, nhẹ hoặc đầy đủ.
+- Cỡ chữ và cỡ gợi ý tương tác.
+- Phụ đề bật mặc định, có tên người nói và nền mờ.
+- Hỗ trợ tương phản cho độc, máu, nước, Nộ khí và vật ẩn.
+- Thanh điều chỉnh rung màn hình.
+- Chọn giữ hoặc bật/tắt cho chạy, đỡ đòn, khóa mục tiêu và bánh xe phối hợp.
+- Chế độ giảm chuyển động dùng ảnh tĩnh cho các biểu tượng Độ Nhiễu động.
+
+### 5.5. Lưu và điểm nghỉ
+
+Tự động lưu ở đầu phân đoạn, trước và sau trùm, khi vào Cõi Mộng và sau lựa chọn quan trọng. Lưu thủ công chỉ dùng tại căn cứ, nơi trú ẩn, trại hoặc điểm nghỉ. Màn hình ô lưu hiển thị chương, thời lượng, đội hình, điểm lưu gần nhất và một câu mô tả thế giới nhưng không lộ số liệu ẩn.
+
+## 6. Thiết kế từng chương
+
+## Chương 0 – Căn cứ đội Deep và nhà tù Bastonne
+
+### Mục đích
+
+- Mở đầu bằng Solei và mối quan hệ trong đội.
+- Dạy di chuyển, chuỗi đòn, né, phản đòn, nhặt–ném vật và liên kết kỹ năng.
+- Xác lập Block là đồng đội cần được giải cứu.
+- Giới thiệu Ghost bằng một đoạn ngắn trong nhà tù, không thay anh thành nhân vật chính.
+
+### Dòng chảy không gian
+
+**Sân tập → phòng chuẩn bị → lối vào Bastonne → khu giam thường → khu biệt giam → phòng giữ Block → cổng thoát.**
+
+Phần căn cứ sáng và dễ đọc. Bastonne dần chuyển sang hành lang hẹp, khí mê, loa đọc mã tù và cửa tự khóa. Sự tương phản giúp người chơi cảm nhận rõ lúc bài học trở thành hiểm nguy thật.
+
+### Cơ chế và tình huống
+
+- Deep kiểm tra Solei bằng bài né, chuỗi đòn, chưởng và phản đòn.
+- Tulas tạo bệ và màn nước để dạy liên kết kỹ năng cơ bản.
+- Solei nhặt tạ, chai hoặc lõi máy để đánh công tắc và phá thế đỡ của hình nộm.
+- Sau phần luyện tập, đội đột nhập Bastonne để cứu Block và lấy bằng chứng về thí nghiệm của Jamerson.
+- Khí mê giảm hồi thể lực theo chu kỳ. Mở van thông gió tạo khoảng an toàn.
+- Máy nhận diện không biết xử lý Ghost vì anh không khớp hồ sơ tù nhân.
+- Loa đọc mã số điều khiển nhịp đóng mở cửa và khiến Độ Nhiễu tăng.
+
+Khi nhà tù phong tỏa, quyền điều khiển chuyển sang Ghost. Anh tỉnh dậy trong phòng biệt giam, yếu hơn đội Deep và chỉ có thể dùng vật thể trong phòng để tạo tiếng động. Người chơi có thể đá giường, ném cốc, phá đèn hoặc làm rơi mảnh kim loại. Tạo tiếng vừa đủ giúp đội tìm đến mà không kéo quá nhiều lính; phá hết căn phòng cho vũ khí tạm nhưng làm cuộc thoát ngục khó hơn.
+
+Henry mở nhầm phòng vì tưởng tiếng động đến từ Block. Lúc này Ghost chỉ có các lựa chọn tự nhiên như chỉ hướng, mở chốt hoặc làm chậm khí. Hệ lệnh phối hợp chưa mở, vì anh chưa có quan hệ đủ gần để ra lệnh cho đội.
+
+Ghost có thể giúp Block thoát khỏi buồng khí. Nếu không giúp, Solei và đội vẫn cứu được Block, nhưng phải đánh thêm một đợt lính và Block bị thương nặng hơn.
+
+### Đối đầu cuối chương
+
+1. **Trận tập với Deep:** kiểm tra chuỗi đòn, né và phản đòn trong môi trường an toàn.
+2. **Đơn vị phong tỏa Bastonne:** lính khiên lớn, súng điện và máy bay quét mục tiêu. Trận đấu yêu cầu phá thế đỡ, né điện và bảo vệ Block.
+
+Nếu Ghost đã giúp, Block đủ sức giữ một cửa hoặc đỡ một đòn lớn. Nếu không, đội phải dành một người bảo vệ anh. Đây là hậu quả đầu tiên xuất hiện ngay trong cùng chương.
+
+### Kết quả
+
+Đội thoát khỏi Bastonne cùng Block và Ghost. Hệ lệnh phối hợp mở chính thức sau khi Block trở lại đội. Ghost được đưa về căn cứ trong sự nghi ngờ, tạo cầu nối sang Marseille.
+
+## Chương 1 – Marseille và Con Mắt
+
+Chương này phát triển theo chuỗi: **môi trường đô thị → lòng tin phe phái → chia việc chiến thuật → ảo giác**. Người chơi bắt đầu bằng những món nợ rất con người và kết thúc trong phòng thí nghiệm nơi ham muốn bị biến thành vật thể.
+
+## 1-1. Quán Armorlite
+
+### Mục đích và dòng chảy
+
+Armorlite là nơi lấy thông tin và nơi trú ẩn, không phải một quán chỉ tồn tại để đánh nhau. Đội hỏi Jacques về bến cảng, đường cống, cảnh sát mật và những người bị đưa ra ngoài khơi. Băng đua xe từng mất tuyến vận chuyển vì đội Deep bám theo họ đến quán, khiến cuộc xung đột tràn từ ngoài phố vào trong.
+
+**Nhà xe của đội → Armorlite → hẻm sau quán → đại lộ ven cảng.**
+
+### Cơ chế và tình huống
+
+- Người chơi kiểm tra thương tích của Block, đổi đội hình và nghe Henry thống nhất mục tiêu.
+- Hỏi đủ thông tin từ Jacques mở một đường cống an toàn hơn.
+- Chai, ghế, bàn bi-da, thùng đá và cửa kính vừa là vũ khí vừa thay đổi đường đi.
+- Phá quá nhiều tài sản hoặc để trận kéo dài làm tăng mức truy nã.
+- Xe máy có mũi tên báo hướng lao. Ném vật đúng lúc có thể hất người lái khỏi xe.
+
+### Trùm: Thủ lĩnh băng đua xe
+
+- Giai đoạn đầu, hắn lao ngang, quay xe và để lại vệt lửa. Người chơi dùng vật ném hoặc phản đòn để hất hắn khỏi xe.
+- Khi đi bộ, hắn dùng chuỗi chém nặng và đòn hất ngăn người chơi liên tục nhảy vào.
+- Dưới nửa sinh lực, hắn rút kiếm gia truyền, tăng tốc và gọi đàn em chạy cắt đấu trường.
+- Henry đánh dấu lúc xe quay đầu; Solei phản đòn; Deep phá giáp khi trùm ngã; Block ưu tiên phòng thủ nếu còn bị thương.
 
 ## 1-2. Đường cống và chợ ngầm Laundel
 
-### Mục tiêu gameplay
+### Mục đích và dòng chảy
 
-- Dạy hub nhỏ, faction, shop choice.
-- Cho người chơi thấy Marseille ăn thịt người cả ở tầng dưới.
-- Tạo nhịp tương phản: cống hẹp/tối trước, rồi Laundel mở ra như một ga metro/chợ khổng lồ dưới lòng đất.
+Laundel là một trung tâm nhỏ có luật lệ, nhiều phe và đời sống riêng. Không gian mở từ đường cống chật, tối sang một ga ngầm hai tầng đầy quầy hàng, đường ray và lối bảo trì.
 
-### Cơ chế dùng được
+### Cơ chế và tình huống
 
-- **Token economy:** mua, mặc cả, làm việc cho phe, hoặc cướp.
-- **Luật chợ:** cất vũ khí thì đi qua được; rút vũ khí biến hub thành combat zone.
-- **Faction route:** Áo Đen của Jamerson, Xanh Dương bảo kê người nhập cư/thương nhân, Áo Ghi buôn tin và đưa đường.
-- **Nước cống:** van nước, dòng chảy, phòng ngập, quái phục kích. Enemy spawn ở trạng thái bơi bị tăng sát thương/stun khi trúng đòn đầu, nhưng mất debuff nếu nhảy lên bờ.
-- **Shop specialization:** Áo Đen bán vũ khí cận chiến/thuốc tăng damage; Xanh Dương bán hồi máu, vũ khí tầm xa và bẫy; Áo Ghi bán tin, đổi token, mở shortcut.
-- **Enemy shopping:** một số enemy có thể chạy vào shop để mua buff. Nếu người chơi không chặn, encounter khó hơn nhưng shop không bị phá.
-- **Laundel layout:** map chính khoảng 4-5 màn hình x 2 tầng; đường ray thấp có nhiều hồi máu/buff, bến ga cao có nhiều vũ khí và shop.
+- Ba phe gồm Áo Đen của Jamerson, Xanh Dương bảo vệ thương nhân và Áo Ghi buôn tin.
+- Cất vũ khí cho phép đi lại và mua bán. Rút vũ khí biến khu chợ thành chiến trường.
+- Người chơi có thể mua, mặc cả, làm việc đổi thẻ hoặc cướp. Mỗi cách ảnh hưởng lòng tin Laundel.
+- Quầy Xanh Dương bán thuốc và vũ khí tầm xa; Áo Đen bán vũ khí nặng; Áo Ghi bán thông tin và đường tắt.
+- Dòng nước, van, phòng ngập và quái đầu đàn kết nối chiến đấu với kỹ năng của Tulas.
+- Block giữ cần van, Solei vượt cửa trước khi đóng, Henry bắn khóa từ xa.
+- Các hình vẽ và lời đồn về GROGER tạo một tuyến điều tra riêng.
 
-### Puzzle/encounter
+### Đối đầu theo lựa chọn
 
-- **Mua hay phá shop:** mua mở trust, item hiếm, đường dẫn; phá cho lợi nhanh nhưng tăng phục kích.
-- **Graffiti GROGER:** tìm đủ graffiti, hỏi Áo Ghi và ông già trước cửa cống cuối để mở boss ẩn.
-- **Van nước nhiều người:** Block giữ cần, Solei chạy qua cửa, Henry bắn khóa van từ xa.
-- **Lời mời Áo Đen:** đầu Laundel có cutscene một nhóm Áo Đen đến "mời" đội gặp thủ lĩnh. Số người quá đông cho một lời mời nên chuyển thành combat tutorial token.
-- **Shop đầu tiên:** Xanh Dương bán hồi máu/vũ khí tầm xa và giải thích luật chợ. Nếu người chơi tấn công shop này, `LaundelTrust` tụt mạnh và chợ spawn thêm quái từ kiosk xung quanh.
- 
+- Giữ lời với Xanh Dương hoặc Áo Ghi dẫn tới trận đánh thủ lĩnh Áo Đen.
+- Cướp phá nhiều dẫn đội vào tuyến cống nguy hiểm và thêm một cuộc phục kích.
+- Tìm đủ manh mối cho phép chủ động truy tìm GROGER; lòng tin quá thấp có thể khiến cuộc gặp trở thành một cái bẫy.
 
-### Boss theo route
+**GROGER** lặn dưới nước và chỉ lộ khi có tiếng động hoặc ánh sáng. Thẻ giao dịch rơi trong đấu trường là cám dỗ: nhặt chúng cho lợi ích sau trận nhưng làm GROGER hung hãn hơn. Nếu người Laundel tin đội, họ thả đèn và chỉ điểm yếu. Qua đó, con quái không chỉ là nguồn vật phẩm mà là hậu quả của việc thành phố bỏ mặc một con người.
 
-- Giữ lời với Xanh Dương/Áo Ghi: đánh thủ lĩnh Áo Đen ở tầng 0 của chợ.
-- Phản bội hoặc cướp nhiều: bị dẫn vào tuyến cống nguy hiểm hơn, có thêm miniboss hoặc phục kích trước boss.
-- Tìm đủ điều kiện qua `GrogerClues`: mở **GROGER** chủ động; trust quá thấp có thể biến GROGER thành bẫy bắt buộc.
+## 1-3. Đường cống chính và bến cảng hoàng hôn
 
-### Boss ẩn GROGER
+### Mục đích và dòng chảy
 
-GROGER nên là sản phẩm của Laundel, không chỉ là quái. Ý tưởng mạnh nhất: một người nhập cư bị bỏ lại trong cống, ăn token, rác, xác chết và lời đồn đến khi thành truyền thuyết.
+Phân đoạn này dạy ưu tiên mục tiêu và mở rộng lệnh phối hợp trong không gian lớn. Người chơi rời cống, có một khoảng lặng ngắn ở bến cảng rồi bị lực lượng của Marius phục kích.
 
-Cơ chế:
+### Cơ chế và tình huống
 
-- Arena có token rơi. Nhặt token giúp người chơi mua/đổi sau trận, nhưng làm GROGER hung hãn hơn.
-- GROGER lặn trong nước, chỉ lộ khi người chơi tạo tiếng động hoặc bật đèn.
-- Nếu `LaundelTrust` cao, NPC có thể thả đèn/chỉ điểm weakpoint.
+- Quái đầu đàn tăng sức mạnh cho cả bầy; hạ chúng làm đám còn lại chậm và dễ choáng.
+- Nước sâu làm đội di chuyển chậm nhưng giúp tấn công quái khi chúng còn bơi.
+- Tia ngắm bắn tỉa buộc người chơi dùng thùng hàng làm chỗ nấp.
+- Mức truy nã quyết định thời điểm và số quân cảnh sát mật xuất hiện.
+- Trong khu cầu cống, Block giữ tuyến, Deep phá vách và Henry đánh dấu kẻ chỉ huy. Đây là bài kiểm tra đầu tiên cho các lệnh Giữ, Phá và Tập trung.
+- Tại bến cảng, người chơi vừa giữ bảng điều khiển thuyền tự động, vừa bảo vệ thuyền và xử lý lính bắn tỉa. Chỉ có tối đa ba mục tiêu cùng lúc để tránh quá tải.
 
-## 1-3. Đường cống chính và hoàng hôn bến cảng
+### Trùm: Marius Vane
 
-### Mục tiêu gameplay
-
-- Dạy ưu tiên mục tiêu.
-- Chuyển từ cống ngầm sang phục kích quân sự.
-- Tạo khoảng lặng bến cảng trước khi đánh lớn.
-- Thử COMMAND trong một không gian rộng hơn, có nhiều đồng minh, nhiều địch, và nhiều objective chạy song song.
-
-### Cơ chế dùng được
-
-- **Pack leader:** quái đầu đàn buff đàn nhỏ; giết đầu đàn làm đàn nhỏ chậm/dễ stun.
-- **Nước sâu tăng dần:** đầu màn còn nhiều lối gạch khô; về cuối nước chiếm phần lớn arena, làm người chơi chậm nếu đi thấp nhưng cho cơ hội đánh quái khi chúng còn bơi.
-- **Phòng ẩn/safe room:** cửa bảo trì, vách nứt, dấu phấn hoặc graffiti dẫn vào phòng của người tị nạn cũ, tàn dư Áo Đen, hoặc clue GROGER.
-- **Sniper laser:** buộc di chuyển liên tục, dùng cover.
-- **Cận chiến có tín hiệu rút súng:** enemy đổi từ dao sang súng, có audio/visual cue.
-- **Container cover:** có thể đẩy/kéo để chặn laser.
-- **Command RTS-lite ở bến cảng:** người chơi vẫn đánh trực tiếp, nhưng có thể ra lệnh ngắn cho đội giữ cầu, phá khóa container, bảo vệ thuyền, hoặc focus sniper/pack leader. Chỉ nên có 2-3 objective active cùng lúc để không quá tải.
-- **Target marker:** Henry đánh dấu mục tiêu ưu tiên; Block/Deep/Solei nhận lệnh theo vai trò thay vì cần người chơi micro từng bước.
-- **Heat reinforcement:** `Heat` từ 1-1/1-2 quyết định số đợt cảnh sát mật và thời điểm sniper xuất hiện ở bến cảng.
-
-### Puzzle/encounter
-
-- **Phòng sơ tán thất bại:** phòng ẩn chứa vali, giấy nhập thành, đồ chơi. Dùng để thưởng lore và tài nguyên.
-- **Cầu cống rộng:** Block giữ tuyến cho NPC/đội chạy qua, Deep phá mảng tường chặn lối, Henry focus pack leader. Đây là bài test đầu tiên cho Hold/Break/Focus theo ngữ cảnh.
-- **Khoảng lặng hoàng hôn:** sau khi ra khỏi cống, khóa combat khoảng 30 giây nhưng vẫn để người chơi tự đi. Nhạc nhẹ, hội thoại ngắn về việc rời Marseille, rồi điểm hẹn thuyền trống phá vỡ hy vọng đó.
-- **Autopilot boat:** sau phục kích, không chỉ giết hết địch; phải giữ vị trí đủ lâu để thuyền khóa đường đến tàu ngầm. Người chơi có thể giao một đồng đội giữ bảng điều khiển trong lúc nhân vật chính xử lý sniper.
-
-### Boss
-
-**Marius Vane**
-
-- Không dùng thần lực; dùng smoke, dao, súng, sniper support.
-- Phase cuối gọi reinforce theo Heat còn lại.
-- Điểm thiết kế: Marius là bộ mặt lạnh của Marseille, coi người nhập cư/tù nhân/người bệnh là chi phí vận hành.
+Marius không dùng thần lực. Hắn dùng khói, dao, súng ngắn và hỏa lực bắn tỉa. Ở giai đoạn cuối, số quân tiếp viện phụ thuộc mức truy nã. Trận đấu là phép thử chiến thuật trước khi chương chuyển hẳn sang kinh dị siêu nhiên.
 
 ## 1-4. Tàu ngầm nghiên cứu và SheMal
 
-### Mục tiêu gameplay
+### Mục đích và dòng chảy
 
-- Chuyển sang horror phòng thí nghiệm.
-- Dạy Con Mắt: ảo giác, mẫu thí nghiệm, vật thể giả.
-- Mở route khó "mất điện".
-- Cho người chơi chọn giữa route khám phá bằng terminal và route sabotage phá máy phát.
+Tàu ngầm là mê cung phòng thí nghiệm nơi Con Mắt biến ham muốn và sợ hãi thành ảo giác. Mỗi lần mở một cửa áp suất có thể khóa một khu khác, buộc người chơi chia việc.
 
-### Cơ chế dùng được
+### Hai tuyến điện
 
-- **Áp suất tàu:** mở một cửa khóa cửa khác; phải chia vai.
-- **Bình chứa thí nghiệm:** đánh bừa làm vỡ, thả quái phụ.
-- **Con Mắt:** tạo loot giả, cửa giả, bóng Jamerson/Heniana.
-- **Ba terminal:** phòng trưởng lính gác, kho dữ liệu thí nghiệm, phòng kiểm soát áp suất. Dùng đủ ba terminal mở lò phản ứng trung tâm theo route ổn định.
-- **Hai máy phát phụ:** phá đủ hai máy phát đặt `SubmarinePowerRoute = Sabotage`, mở cửa boss sớm nhưng làm nhiều phòng mất điện.
-- **Logic ánh sáng:** vật thí nghiệm thất bại sợ ánh sáng thường và còn bị guard điều khiển phần nào. Khi phòng mất điện/chuyển đèn đỏ, guard bị giết, quái tăng tốc và tăng sát thương.
-- **Wall-bounce tàu ngầm:** đòn đánh bay mạnh vào vách/ống khí có thể bật enemy lại thành projectile gây sát thương cho mục tiêu đầu tiên va phải; mỗi enemy có cooldown để tránh lạm dụng.
-- **Route mất điện:** phá máy phát làm Hard Mode, loot/skill tốt hơn.
+- **Giữ điện ổn định:** dùng ba bảng máy để mở lò phản ứng. Khu vực sáng hơn, bản đồ rõ, hồ sơ còn nguyên và đòn trùm dễ đọc hơn.
+- **Phá máy phát:** phá hai máy phát phụ để mở cửa trùm sớm. Tuyến này tối, khó hơn và có ít dấu hiệu báo đòn, nhưng chặn được một phần thí nghiệm và cho phần thưởng mạnh hơn.
 
-### Puzzle/encounter
+Không tuyến nào được xem là lựa chọn hoàn hảo. Giữ điện giúp điều tra nhưng để máy thí nghiệm tiếp tục hoạt động; phá điện cứu một số vật thí nghiệm khỏi quy trình nhưng làm những thứ đã thoát ra nguy hiểm hơn.
 
-- **Cứu tù nhân thí nghiệm:** mở khóa từng buồng làm timer khó hơn, nhưng tăng bằng chứng về Jamerson.
-- **Hồ sơ Heniana:** đọc đủ log giảm một phase ảo giác trong boss hoặc mở thoại riêng.
-- **Nguồn điện phụ:** người chơi chọn giữ điện ổn định để dễ đi, hoặc phá để ngăn thí nghiệm và nhận reward mạnh hơn.
-- **Map tàu:** đầu màn cho người chơi sơ đồ phòng rõ tên. Nếu đi terminal route, map đánh dấu phòng cần tới; nếu sabotage, map hiển thị khu mất điện sau mỗi máy phát bị phá.
-- **Cửa nhìn ra biển:** vài đoạn không combat cho thấy tàu đang di chuyển, sinh vật biển lướt ngoài kính, và loa của Jamerson bắt đầu nói như đang thu dữ liệu từ chính trận đánh.
+### Cơ chế và tình huống
 
-### Boss
+- Bình thí nghiệm vỡ nếu đánh bừa và thả thêm quái.
+- Vật phẩm, cửa và bóng Jamerson có thể là giả; người chơi kiểm tra bằng ánh sáng, vật ném và hồ sơ.
+- Đòn đánh văng vào vách tàu khiến địch bật lại, trở thành vật thể gây sát thương cho mục tiêu khác.
+- Cứu tù nhân làm đồng hồ báo động khắt khe hơn nhưng tăng bằng chứng chống Jamerson.
+- Đọc đủ hồ sơ Heniana làm yếu một đợt ảo giác trong trận trùm.
 
-**SheMal**
+### Trùm: SheMal
 
-- SheMal nghiêng về cận chiến như một fighter hạng nặng: kích thước ngang Deep, áp sát nhanh, dùng móng vuốt dài ở hai tay để cào, chém chéo, phản đòn và khóa khoảng cách.
-- Phase 1: cơ thể lai, grab, lao tường, wall bounce, combo móng vuốt ba nhịp. Người chơi phải đọc footwork thay vì chỉ né projectile.
-- Phase 2: liên kết Con Mắt, tạo ảo ảnh Heniana/Jamerson. Đánh nhầm ảo ảnh làm boss hồi hoặc đổi pattern.
-- Phase 3 nếu mất điện: ít telegraph hơn, arena tối hơn, nhưng weakpoint sáng rõ theo nhịp.
-- Phase transition: mỗi lần SheMal hấp thụ thêm năng lượng từ lò phản ứng, một số buồng thí nghiệm phụ mở ra và thả failed subjects. Nếu `SubmarinePowerRoute = Sabotage`, số buồng ít hơn nhưng quái dữ hơn.
+- Giai đoạn đầu là cận chiến nặng: móng vuốt, khóa người, lao tường và chuỗi đánh ba nhịp.
+- Giai đoạn hai, Con Mắt tạo hình Heniana và Jamerson. Đánh nhầm bóng giả giúp SheMal hồi phục hoặc đổi thế đánh.
+- Ở tuyến mất điện, đấu trường tối hơn và dấu báo đòn ngắn hơn, nhưng điểm yếu phát sáng theo nhịp.
+- Mỗi lần SheMal hút năng lượng, một số buồng phụ mở ra. Tuyến ổn định thả nhiều vật thí nghiệm yếu; tuyến phá điện thả ít hơn nhưng hung hãn hơn.
 
-Kết màn phải dẫn được sang Sakuri: SheMal có bản đồ bán đảo, ký hiệu Cái Tai, và ghi chú "nghe tiếng bệnh trong máu ngủ đông".
+Sau trận, đội tìm thấy bản đồ bán đảo Sakuri, ký hiệu Cái Tai và ghi chú về “tiếng bệnh trong dòng máu ngủ đông”.
 
-## Stage 2 - Sakuri
+## Chương 2 – Sakuri và Cái Tai
 
-### Định hướng Sakuri và Ryozan
-
-- Sakuri nên đáng thương nhiều hơn là ác. Cô có lúc mất kiểm soát vì Cái Tai bắt cô nghe máu, nhịp bệnh, lời nói dối và ham muốn của người khác quá lâu.
-- Cơn khát máu có thể được trình bày như triệu chứng gần ma cà rồng: không phải cô thích giết người, mà cơ thể bị nhiều dòng máu/thần lực kéo lệch, khiến cô thèm tiếng mạch máu và dễ bùng nổ khi bị dồn.
-- Ryozan không nên chỉ là nạn nhân bị Sakuri ghét. Ông từng có tình cảm bảo hộ, thương xót, hoặc lời thề với Sakuri, rồi bị gia tộc/lãnh chúa hãm hại. Bi kịch là cả hai bị đẩy vào vai trò làm hại nhau.
-- Boss Ryozan nên xuất hiện trước trận Sakuri, ở rừng tre/thác nước/cầu núi, để 2-4 tập trung vào Sakuri và Cái Tai.
+Chương này phát triển từ **nghe môi trường → điều khiển tiếng động → phá thói quen → đối mặt với kẻ nghe được ý nghĩ**. Sakuri đáng thương nhiều hơn độc ác: Cái Tai khiến cô phải nghe máu, bệnh, lời nói dối và ham muốn của người khác quá lâu.
 
 ## 2-1. Làng chài và Heni
 
-### Mục tiêu gameplay
+### Mục đích và dòng chảy
 
-- Giảm nhịp sau Marseille.
-- Giới thiệu Heni như con người, không phải key item.
-- Dạy investigation/social nhẹ.
+Nhịp chơi chậm lại sau Marseille. Người chơi khám phá làng chài, giúp người bệnh và gặp Heni như một cô bé đang sống trong cộng đồng, không phải một vật phẩm cốt truyện.
 
-### Cơ chế dùng được
+### Cơ chế và tình huống
 
-- **Bệnh dịch là hazard mềm:** giảm hồi máu/stamina khi đi qua vùng bệnh lâu.
-- **Shop của Heni:** mua vật nhỏ, thuốc, cá khô; cách người chơi trả giá ảnh hưởng `HeniTrust`.
-- **Dân làng:** thông tin về cha Heni, mẫu máu, giấc mơ phòng trắng.
-
-### Puzzle/encounter
-
-- **Ba dấu hiệu nhân bản:** ảnh Heniana, giấc mơ phòng trắng, lịch gửi mẫu máu.
-- **Cha hiền là điệp viên:** có thể phát hiện qua radio, sổ ghi cơn sốt, tuyến gửi hàng.
-- **Không làm xấu mặt cảng:** người bệnh bị đẩy ra rìa. Giúp họ mở đường phụ lên khu cách ly.
+- Vùng dịch làm hồi sinh lực và thể lực chậm lại nhưng chưa gây nguy hiểm tức thời.
+- Cách mua hàng, mặc cả và trò chuyện ảnh hưởng lòng tin của Heni.
+- Ba dấu hiệu về nguồn gốc của cô gồm ảnh Heniana, giấc mơ phòng trắng và lịch gửi mẫu máu.
+- Người cha hiền lành bị lộ là điệp viên qua máy liên lạc, sổ theo dõi cơn sốt và tuyến chuyển hàng.
+- Giúp khu người bệnh bị đẩy ra ngoài làng mở một đường phụ lên khu cách ly.
 
 ## 2-2. Khu cách ly và đường lên thủ phủ
 
-### Mục tiêu gameplay
+### Mục đích
 
-- Dạy stealth/route bằng âm thanh.
-- Biến Cái Tai thành luật chơi trước khi gặp Sakuri.
-- Đặt arc của Solei: bị gọi là người ngoài ở cả hai phía.
+Đây là bài học đầu tiên về tiếng động. Chạy, phá vật và dùng súng đều tạo vùng âm thanh khiến tuần tra đổi hướng.
 
-### Cơ chế dùng được
+### Cơ chế và tình huống
 
-- **Sound cone:** chạy, phá thùng, bắn súng làm patrol nghe thấy.
-- **Dây đánh dấu bệnh:** màu dây cho biết người bệnh bị phân loại thế nào.
-- **Escort Heni mềm:** Heni tự nấp ở điểm an toàn, không nên phải babysit liên tục.
+- Vật ném dùng để tạo tiếng động giả.
+- Chuông cách ly có thể bị bắn đứt dây, leo lên tháo hoặc giữ thang cho đồng đội.
+- Heni tự nấp tại các điểm an toàn; người chơi không phải liên tục trông chừng cô.
+- Cứu người còn khả năng lao động mở đường tắt nhưng làm số tuần tra tăng.
+- Thuốc có thể giữ làm vật phẩm hồi phục hoặc trao cho trại bệnh để lấy thông tin và thay đổi đoạn kết khu vực.
 
-### Puzzle/encounter
-
-- **Chuông cách ly:** tắt bằng bắn dây, leo lên, hoặc dùng Block giữ thang.
-- **Kho người còn lao động:** cứu họ mở shortcut nhưng tăng patrol.
-- **Đường thuốc:** giữ thuốc làm consumable hoặc đem cho trại bệnh để lấy thông tin/thay đổi epilogue.
+Solei bị gọi là người ngoài từ cả hai phía. Câu chuyện cá nhân của cô đi cùng lối chơi: muốn tiến lên, cô phải hiểu hệ thống phân loại người bệnh nhưng không chấp nhận để hệ thống ấy định nghĩa mình.
 
 ## 2-2B. Rừng tre, thác nước, cầu đá và Ryozan
 
-### Mục tiêu gameplay
+### Mục đích và dòng chảy
 
-- Tạo màn chuyển nhịp giữa khu cách ly và thủ phủ.
-- Dùng địa hình thiên nhiên để dạy âm thanh, tầm nhìn, mép vực, và command giữ cầu.
-- Cho Ryozan thành bi kịch riêng trước khi người chơi gặp Sakuri.
+Rừng tre và thác nước là cầu nối giữa khu cách ly với thủ phủ. Địa hình thiên nhiên vừa che tầm nhìn vừa thay đổi âm thanh.
 
-### Cơ chế dùng được
+### Cơ chế và tình huống
 
-- **Rừng tre:** thân tre che line of sight, gãy khi bị đánh mạnh, tạo tiếng động kéo patrol hoặc boss đổi hướng.
-- **Thác nước:** tiếng nước che bước chân và che command voice; đứng gần thác giúp né Cái Tai nhưng khó nghe telegraph.
-- **Mép núi đá:** knockback nguy hiểm, nhưng cũng có thể dùng Break/Hold để làm sập mảng đá chặn quân đuổi.
-- **Cầu đá/cầu gỗ hẹp:** Block giữ cầu, Deep phá chốt, Solei vượt nhanh qua dây treo, Henry focus kẻ bắn xa.
+- Tre gãy tạo tiếng động, kéo tuần tra hoặc làm Ryozan đổi hướng.
+- Tiếng thác che bước chân và tiếng lệnh, giúp tránh Cái Tai nhưng làm dấu báo đòn khó nghe.
+- Cầu hẹp tăng nguy cơ bị hất ngã. Block giữ cầu, Deep phá chốt đá, Solei vượt dây treo và Henry xử lý kẻ bắn xa.
+- Ba mũi yểm nằm dọc cầu kể lại lời thề bị bóp méo của Ryozan.
 
-### Boss
+### Trùm: Oan hồn Ryozan
 
-**Ryozan oan hồn**
+- Giai đoạn đầu, ông hiện thành sinh vật linh hồn chưa hoàn chỉnh, bám dưới mặt nước và kéo chân cầu.
+- Giai đoạn sau, ông trở lại dáng tướng quân giáp đỏ với đao dài, đánh nặng và có kỷ luật.
+- Phá ba mũi yểm giúp Ryozan nhớ rằng ông từng muốn bảo vệ Sakuri chứ không phải canh giữ cô như tù nhân.
 
-- Phase 1: một thực thể lưỡng cư/non trẻ như nòng nọc đen, kéo lê phần đuôi linh hồn dưới mặt nước và bám vào chân cầu. Nó không phải hình dạng thật của Ryozan, mà là lời thề bảo vệ Sakuri bị yểm thành thứ chưa hoàn chỉnh.
-- Phase 2: hiện lại dáng tướng quân mặc giáp đỏ, cầm đao dài, đánh kỷ luật và nặng. Các đòn chính là chém ngang giữ cầu, đâm dài ép khoảng cách, và dậm cán đao tạo sóng âm qua ván cầu.
-- Cách thắng tốt không chỉ là đánh cạn máu. Người chơi có thể phá ba mũi yểm trên cầu để Ryozan nhớ lại rằng ông từng muốn cứu Sakuri, không phải canh tù cho cô.
+Giải yểm không bỏ qua trận đấu, nhưng làm thay đổi giai đoạn cuối và giảm ảnh hưởng của Ryozan trong trận Sakuri.
 
-## 2-3. Quốc lộ, chợ trung tâm, và cung điện
+## 2-3. Quốc lộ, chợ trung tâm và cung điện
 
-### Mục tiêu gameplay
+### Mục đích
 
-- Cho thấy Sakuri không phải quê hương lý tưởng.
-- Dùng chợ như social puzzle.
-- Đưa người chơi từ đời sống xa hoa của thủ phủ vào cung điện và DeceptiveDoorPuzzle.
+Thủ phủ cho thấy Sakuri không phải quê hương lý tưởng. Tin đồn, giấy thông hành và dấu gia tộc trở thành tài nguyên xã hội.
 
-### Cơ chế dùng được
+### Cơ chế và tình huống
 
-- **Giấy thông hành/dấu gia tộc:** disguise nhẹ, không biến thành stealth game hoàn toàn.
-- **Tin đồn là resource:** nghe đủ tin mở đường vào cung điện.
-- **Cái Tai đọc thói quen:** spam một hành động nhiều lần làm enemy đoán được.
-- **DeceptiveDoorPuzzle:** trong cung điện có cụm cửa đánh lừa bằng màu sắc. Đáp án đúng không phải màu người bình thường thấy, mà là cách người mù màu/nhìn lệch màu phân biệt độ sáng, biểu tượng phụ, vân gỗ và thứ tự cửa.
+- Nghe đủ tin đồn mở nhiều cách vào cung điện.
+- Đứng gần nguồn ồn giúp che bước chân khi nghe lén.
+- Cái Tai ghi nhớ hành vi lặp. Dùng cùng một cách hạ lính nhiều lần khiến tuần tra sau chuẩn bị biện pháp đối phó.
+- Búp bê mang gương mặt Heni cho thấy cô đã bị biến thành biểu tượng thương mại.
+- Hồ sơ Ryozan hoàn thiện câu chuyện về lời thề và sự phản bội.
 
-### Puzzle/encounter
+### Câu đố cửa đánh lừa
 
-- **Búp bê mặt Heni:** nếu điều tra thay vì phá shop, người chơi biết Heni đã bị bán thành biểu tượng.
-- **Hồ sơ Ryozan:** ghép chuyện Ryozan bị hãm hại để hiểu vì sao oan hồn của ông còn giữ cầu lên núi.
-- **Chợ nghe lén:** đứng cạnh nguồn ồn để che bước chân và nghe gia tộc nói chuyện.
-- **Cửa nhìn sai:** người chơi có thể dùng ghi chú của người hầu, tranh phai màu, hoặc góc nhìn của Heni/Ghost để chọn cửa theo logic mù màu. Chọn theo màu rực rỡ nhất sẽ vào phòng bẫy hoặc quay lại hành lang cũ.
+Cụm cửa trong cung điện không thể giải chỉ bằng màu. Người chơi phải so độ sáng, biểu tượng nhỏ, vân gỗ và thứ tự trong ghi chú của người hầu. Chọn cánh cửa rực rỡ nhất dẫn vào phòng bẫy hoặc quay lại hành lang cũ. Câu đố vừa phù hợp chủ đề nhận thức sai lệch, vừa không loại trừ người khó phân biệt màu.
 
 ## 2-4. Đền ngầm, đỉnh núi và Sakuri
 
-### Mục tiêu gameplay
+### Mục đích và cơ chế
 
-- Boss dùng âm thanh, đọc ý định, và áp lực tâm lý.
-- Đưa Cái Tai lên thành mechanic rõ ràng.
-- Tạo cảnh gặp Sakuri trên đỉnh núi: cành sakura dày, đá lơ lửng, nền đền bị xé khỏi mặt đất.
+- Nhiều đòn của Sakuri báo bằng âm thanh, nhưng luôn có rung và dấu hiệu hình ảnh tương ứng.
+- Sakuri chỉ đọc được hành vi khi người chơi lặp một khuôn quá rõ; đổi nhịp khiến khả năng của cô chậm lại.
+- Vùng im lặng làm Sakuri yếu hơn nhưng cũng tắt dấu báo bằng âm thanh của người chơi.
+- Đá lơ lửng thay vị trí theo nhịp. Đi đúng nhịp mở đường; đánh bừa làm đá rơi.
+- Cành anh đào hấp thụ sóng âm và tạo chỗ nấp tạm, nhưng héo đi khi cơn khát máu của Sakuri bùng lên.
 
-### Cơ chế dùng được
+### Trùm: Sakuri
 
-- **Audio telegraph:** nhiều đòn báo bằng âm thanh. Cần có visual cue/subtitle cho accessibility.
-- **Input reading có giới hạn:** Sakuri chỉ đọc được nếu người chơi lặp pattern quá rõ.
-- **Phòng im lặng:** tắt nguồn âm khiến Sakuri yếu hơn, nhưng người chơi cũng mất audio cue.
-- **Đá lơ lửng:** platform đổi vị trí theo nhịp âm; đánh lệch nhịp làm đá rơi hoặc mở đường sai.
-- **Cành sakura:** hấp thụ một số sóng âm, có thể dùng làm cover tạm, nhưng bị héo nếu Sakuri mất kiểm soát cơn khát máu.
+Sakuri dùng sóng âm, ảo giác, đọc thói quen và những đợt khát máu ngắn. Nếu Ryozan được giải yểm, lời thề cũ tạo một khoảng dao động trong giai đoạn cuối. Ghost gần như không có tiếng nội tâm rõ ràng, khiến Sakuri không thể đọc anh và tạo một cửa sổ tấn công. Solei có khoảnh khắc từ chối để dòng máu hoặc quê quán định nghĩa mình.
 
-### Boss
+Kết chương, Cái Tai chỉ đường đến Calvaria và Cái Lưỡi. Heni tự quyết định đi cùng đội.
 
-**Sakuri**
+## Chương 3 – Calvaria và Cái Lưỡi
 
-- Sakuri: sóng âm, ảo giác, đọc input, và những cơn bùng nổ khát máu ngắn khi cô nghe quá nhiều nhịp mạch quanh mình.
-- Nếu Ryozan được giải yểm ở 2-2B, trận Sakuri có ít add cận chiến hơn và có một cửa sổ cô dao động khi nghe lời thề cũ của ông. Nếu không, giáp đỏ của Ryozan chỉ còn như dư âm bảo vệ máy móc trong một số pattern.
-- Ghost gần như không có tiếng nội tâm, tạo khoảng trống làm Sakuri sợ. Đây có thể là cửa sổ burst.
-- Solei nên có moment từ chối để Sakuri/địa phương định nghĩa cô bằng dòng máu.
+Chương này phát triển theo chuỗi **tiếng gọi → tên riêng → mệnh lệnh → lời người chết → quyền từ chối**. Không gian chuyển từ con đường vắng sang một nền kinh tế xây trên cái chết, rồi kết thúc tại nơi giọng nói trở thành vũ khí.
 
-Kết màn: Cái Tai dẫn đến Calvaria và Cái Lưỡi; Heni quyết định đi cùng nhóm.
+## 3-1. Con đường đơn độc
 
-## Stage 3 - Calvaria
+- Sương dày giảm tầm nhìn và hiệu quả bắn xa, buộc Solei do thám hoặc đội tiến gần.
+- Vong hồn lang thang không bị đòn vật lý nặng tác động tốt; cần chưởng năng lượng hoặc đạn đặc biệt.
+- Bia mộ có thể chứa tài nguyên nhưng một số là bẫy. Solei đánh dấu đường an toàn trước khi đội đi qua.
+- Tại kết giới tụ linh, đội bảo vệ Henry trong lúc anh xác định ba viên linh đá ngụy trang.
+- Những tiếng gọi đầu tiên dùng mã tù và tên cũ của Ghost, nhưng chưa giải thích toàn bộ quá khứ.
 
-## 3-1. Con đường đơn độc (Solitary Road)
+## 3-2. Rừng Đồ Tể
 
-### Mục tiêu gameplay
+- Bãi lá khô che chông xương và tạo tiếng động khi bước lên.
+- Kén độc có thể bị bắn rơi để ăn mòn giáp của cả địch lẫn người chơi.
+- Lính Đồ Tể ẩn trong bụi xương, dùng lưỡi hái kéo ngã và bom khói.
+- Nếu đội không kích chuông báo quá ba lần, đợt phòng thủ đầu tại pháo đài yếu hơn.
+- Tulas dẫn nước đen ăn mòn rễ gai, kết nối kỹ năng chất lỏng với lối đi lén lút thay vì biến nó thành một câu đố riêng lẻ.
 
-- Tạo không khí yên tĩnh, u ám xen kẽ hành động nhẹ nhàng để chuyển tiếp nhịp độ sau trận chiến Marseille.
-- Dạy người chơi cách xử lý tầm nhìn hạn chế và quái vật dạng vong linh (wandering souls).
-- Giới thiệu mối liên hệ kỳ lạ của Ghost với Cái Lưỡi thông qua tiếng gọi ảo giác nhỏ.
+## 3-3. Pháo đài Linh hồn
 
-### Cơ chế dùng được
+### Mục đích
 
-- **Sương mù dày đặc:** giảm tầm nhìn của lính bắn tỉa và tầm bắn xa của Henry, buộc người chơi tiến sát hoặc dùng Solei do thám.
-- **Bia mộ có thể tương tác:** phá hủy bia mộ gỗ/đá để tìm mảnh hồi sinh stamina hoặc đạn nhẹ cho Henry.
-- **Wandering Souls (Vong hồn lang thang):** loại quái vật bay lơ lửng, lướt chéo qua màn hình theo nhịp bất định. Chúng không thể bị đánh bại bằng sát thương vật lý thường của Deep mà phải dùng chưởng/kỹ năng năng lượng của Solei hoặc bắn tỉa của Henry.
+Đây là trận công thành đầu tiên dùng đầy đủ lệnh phối hợp. Năng lượng của lá chắn pháo đài đến từ những bình nhốt linh hồn.
 
-### Puzzle/encounter
+### Ba tháp năng lượng
 
-- **Lối đi sương mù:** Solei phải chạy trước, dùng kỹ năng dò thám để đánh dấu các bia mộ ẩn chứa bẫy trước khi cả nhóm đi qua.
-- **Tụ linh trận:** một kết giới chắn ngang đường do Giáo hội thiết lập. Người chơi phải bảo vệ Henry trong 30 giây khi anh dùng COMMAND để định vị và phá hủy 3 viên linh đá ngụy trang ven đường.
+1. Deep và Block phá cổng, che nhau trước pháo linh hồn.
+2. Solei leo ròng rọc, cắt dây nối và mở điểm yếu từ trên cao.
+3. Cả đội giữ vòng thanh tẩy trong lúc lính phản kích.
 
-## 3-2. Rừng Đồ Tể (Slayer Jungle)
+Sau khi hạ chỉ huy, người chơi có hai cách xử lý bình linh hồn:
 
-### Mục tiêu gameplay
+- **Phá hủy:** nhanh, tạo nổ dây chuyền và dọn bớt lính, nhưng biến linh hồn thành oán niệm.
+- **Thanh tẩy:** phải giữ vị trí lâu hơn, nhưng giải phóng linh hồn an toàn.
 
-- Trải nghiệm lén lút (stealth) và né tránh bẫy rập trong môi trường đầm lầy hóa đá chật hẹp, tối tăm.
-- Thách thức khả năng kiểm soát nhịp độ chiến đấu dưới áp lực bẫy xung quanh.
-- Dạy Tulas cách tương tác với chất độc lỏng tự nhiên.
+Lựa chọn này tác động trực tiếp tới trận Dàn Hợp Xướng ở cuối chương.
 
-### Cơ chế dùng được
+## 3-4. Lối đi bí mật dưới lòng đất
 
-- **Bẫy chông xương trồi:** kích hoạt khi dẫm lên các bãi lá khô hoặc vùng đất mềm, gây sát thương lớn và làm chậm.
-- **Kén độc (Thorn Pods):** treo trên các thân cây hóa đá. Đánh hoặc bắn rụng chúng để tạo ra vùng sương độc ăn mòn giáp và gây choáng cho bất kỳ kẻ địch nào đứng bên trong.
-- **Patrol "Slayer":** lính gác đeo mặt nạ có khả năng ẩn thân trong bụi cỏ xương, có đòn chém lưỡi hái kéo ngã và ném bom khói gây mù.
+- Cổng đá tự sập cần người giữ đòn bẩy hoặc vật nặng chèn lại.
+- Khí nóng phun theo chu kỳ, có thể bị Tulas đổi hướng trong thời gian ngắn.
+- Luồng quét năng lượng không nhận diện Ghost nhưng kích bẫy khi nhân vật khác đi qua.
+- Ghost sang phía bên kia để phá máy quét; Tulas tăng áp lực nước; Block giữ cổng; Solei trượt qua cắt van. Đây là một câu đố liên hoàn dùng đủ bốn vai trò nhưng vẫn có điểm dừng giữa các bước.
 
-### Puzzle/encounter
+## 3-5. Sông Oán Hận
 
-- **Vượt rừng lén lút:** người chơi phải di chuyển cẩn thận, dùng bẫy gai độc để hạ tuần tra. Nếu kích hoạt chuông báo động quá 3 lần, trạng thái `SlayerJungleStealth` sẽ chuyển thành `Detected`, ngược lại là `Stealth`.
-- **Cơ quan kén gai:** một lối đi bị chắn bởi gai nhọn khổng lồ. Tulas phải dùng năng lực chất lỏng để dẫn dòng nước đen ăn mòn rễ cây gai, mở đường cho nhóm đi qua.
+Đội di chuyển trên một chiếc bè có độ bền riêng. Không gian tự trôi, tạo nhịp sinh tồn ngắn giữa hai khu ngầm.
 
-## 3-3. Pháo đài Linh hồn (Spirit Fortress)
+- Deep phá đá lớn trước khi bè va vào.
+- Tulas tạo dòng đẩy để đổi hướng.
+- Henry bắn đứt neo của lính xương trên bờ.
+- Quái nước bám vào bè và phải bị gỡ trước khi tự nổ.
+- Cái Lưỡi phát lệnh giả từ hai bờ. Người chơi phải xác nhận đúng lệnh qua biểu tượng đội, chuẩn bị cho cơ chế mệnh lệnh ở nửa sau chương.
 
-### Mục tiêu gameplay
-
-- Trận công thành quy mô lớn kết hợp COMMAND phối hợp hành động nhóm cao độ.
-- Đặt người chơi trước lựa chọn đạo đức quan trọng đầu tiên của Stage 3.
-
-### Cơ chế dùng được
-
-- **Bình chứa Linh hồn (Spirit Batteries):** các máy phát năng lượng cho lá chắn pháo đài. Phá hủy bình sẽ tiêu diệt linh hồn bên trong; giải thoát bình yêu cầu đứng yên bảo vệ vòng thanh tẩy.
-- **Pháo linh hồn:** bắn đạn năng lượng oán khí từ đỉnh tháp gác xuống.
-- **COMMAND công thành:** ra lệnh Block giương khiên thép che chắn đạn pháo, ra lệnh Deep đập cửa vách đá, và ra lệnh Solei leo ròng rọc tiếp cận tháp gác.
-
-### Puzzle/encounter
-
-- **Công phá 3 tháp năng lượng:**
-    *   Tháp 1: Deep và Block kết hợp đột kích phá cổng bảo vệ lò năng lượng.
-    *   Tháp 2: Solei vượt rào và ngắt các cáp kết nối để lộ lò năng lượng từ trên cao.
-    *   Tháp 3: Cả nhóm chống đỡ các đợt phản kích của lính canh để lộ bình chứa.
-- **Quyết định `SpiritFortressChoice`:** Sau khi hạ gục chỉ huy pháo đài, người chơi quyết định phá hủy nhanh các bình linh hồn (Destroy) hoặc dùng Ghost/Tulas để thanh tẩy giải thoát họ (Purify).
-
-## 3-4. Lối đi bí mật dưới lòng đất (Under Secret Passage)
-
-### Mục tiêu gameplay
-
-- Câu đố môi trường (platforming puzzle) kết hợp né tránh bẫy trong không gian hẹp hầm ngầm.
-- Thể hiện sự hữu dụng của Ghost khi đi qua các thiết bị quét năng lượng của Giáo hội.
-
-### Cơ chế dùng được
-
-- **Cổng đá thủy lực:** cổng nặng tự động sập xuống theo thời gian, cần người/vật giữ đòn bẩy.
-- **Van xả khí gas nóng:** phun khí theo chu kỳ gây sát thương lớn và đẩy lùi.
-- **Glitched Light Sweep (Quét ánh sáng lỗi):** hệ thống quét an ninh của Giáo hội. Ghost đi qua sẽ không kích hoạt bẫy vì cơ thể anh là một lỗi hệ thống, nhưng các nhân vật khác đi vào sẽ kích hoạt đá rơi lập tức.
-
-### Puzzle/encounter
-
-- **Giải mã áp suất thủy lực:** Tulas điều khiển dòng nước ngầm đổ vào ống áp suất để giữ cổng đá mở lâu hơn. Block gồng mình giữ cổng để Solei trượt qua cắt đứt van gas độc.
-- **Đường đi quét an ninh:** Người chơi điều khiển Ghost đi qua các luồng ánh sáng quét lỗi để tìm và phá hủy bộ máy phát bẫy từ phía bên kia, mở đường an toàn cho cả đội.
-
-## 3-5. Sông Oán Hận (River of Hatred 3)
-
-### Mục tiêu gameplay
-
-- Trải nghiệm sinh tồn nhịp độ nhanh (auto-scrolling / raft survival) độc đáo.
-- Phối hợp bảo vệ mục tiêu di động (Raft HP) trước các đòn tấn công môi trường và quái vật.
-
-### Cơ chế dùng được
-
-- **Raft HP (Máu của Bè):** Bè gỗ có thanh HP riêng. Rơi về 0 gây game over (Map Ngủ Mơ).
-- **Đá nhọn trôi nổi:** trôi từ thượng nguồn xuống, gây sát thương lớn cho bè nếu va chạm trực diện.
-- **Water Ghouls (Quái cống sông đen):** quái vật xương trồi lên từ nước đen bám vào bè để tự nổ hoặc cắn phá.
-
-### Puzzle/encounter
-
-- **Hành trình trên sông oán hận:**
-    *   Deep dùng đòn đập Break phá đá lớn chắn đường.
-    *   Tulas điều khiển nước đen tạo sóng phản lực giúp bè đổi hướng nhanh để né tránh xoáy nước hoặc đẩy lùi lũ quái tụ đông ở đuôi bè.
-    *   Henry dùng súng bắn tỉa phá hủy các neo xích của lính xương từ hai bên bờ đá trước khi chúng kéo bè vào bãi chông đá.
+Khi độ bền bè về 0, đội trở lại điểm lưu gần nhất trong Cõi Mộng thay vì mất toàn bộ tiến trình phân đoạn.
 
 ## 3-6. Đường hành hương
 
-### Mục tiêu gameplay
-
-- Chuyển từ "nghe" sang "nói".
-- Cho người chơi thấy cái chết bị biến thành kinh tế.
-- Đào sâu Deep và Henry: chiến tranh xưa, mất mát, mệt mỏi, và câu hỏi người sống có được quyền nghỉ sau khi đã sống sót không.
-- Dùng Cái Lưỡi như mechanic moi lời thú tội/thứ sâu trong lòng, không chỉ là máy giả giọng.
-
-### Cơ chế dùng được
-
-- **Đám đông hành hương:** che line of sight, tạo hoảng loạn, cản đường.
-- **Last Breath Token:** token để mua lời nhắn/nghi thức, nhưng dùng nhiều là nuôi hệ thống giáo hội.
-- **Người ghi tên:** enemy/merchant thu phí từng cái chết.
-- **Lời trong tim gan ruột:** nếu người chơi dùng confession booth, nhận buff, hoặc nghe quá nhiều lời người chết, boss có thêm câu thoại/đòn đánh cá nhân hóa vào Deep hoặc Henry.
-
-### Puzzle/encounter
-
-- **Tên trong Sổ Thở Cuối:** tìm tên đúng để mở cửa mộ. Có thể mua, trộm, hoặc giúp thân nhân.
-- **Đường một chiều:** đi thuận dòng an toàn hơn; đi ngược mở phòng ẩn nhưng gặp phục kích.
-- **Lời nhắn miễn phí:** một NPC nghèo xin nghe người chết. Giúp họ mở thông tin về giáo hội.
+- Đám đông che tầm nhìn, cản đường và dễ hoảng loạn khi có giao tranh.
+- Thẻ Hơi Thở Cuối dùng để mua lời nhắn của người chết, nhưng mỗi lần sử dụng lại nuôi hệ thống của giáo hội.
+- Người ghi tên thu phí cho từng cái chết và có thể sửa hoặc xóa danh tính.
+- Muốn mở cửa mộ, người chơi có thể mua tên, trộm sổ hoặc giúp thân nhân tìm bằng chứng.
+- Một người nghèo xin nghe lời cuối mà không có tiền. Giúp họ mở manh mối về cách giáo hội làm giả giọng nói.
+- Các buồng thú tội cho tăng cường tạm thời nhưng cung cấp dữ liệu để trùm dùng lời nói cá nhân hóa chống Deep và Henry.
 
 ## 3-7. Chợ xương và hầm mộ sống
 
-### Mục tiêu gameplay
-
-- Dungeon puzzle về xương, tên, và giọng nói.
-- Bắt đầu đe dọa Ghost bằng tên cũ.
-
-### Cơ chế dùng được
-
-- **Xương làm key vật lý:** chỉ đúng nếu đặt đúng tên/đúng bia.
-- **Chiến binh xương:** nhận lệnh từ Cái Lưỡi; có thể phá loa, đổi bia tên, hoặc counter-command.
-- **Tên cũ của Ghost:** đi theo tiếng gọi mở lore nhưng có nguy cơ ambush.
-
-### Puzzle/encounter
-
-- **Hài cốt sai tên:** sửa tên cho người chết làm giảm số skeleton ở boss.
-- **Giọng Heni/Heniana:** Cái Lưỡi giả giọng để dụ Heni. Đáp án dựa vào hành vi và ký ức, không chỉ âm thanh.
+- Xương chỉ mở đúng khóa khi được đặt dưới đúng tên.
+- Đổi bia tên có thể làm quân xương mất lệnh hoặc quay sang bảo vệ ngôi mộ đúng.
+- Cái Lưỡi giả giọng Heni và Heniana để dụ Heni; người chơi phân biệt bằng ký ức và cách nói, không chỉ bằng chất giọng.
+- Sửa tên cho người chết làm giảm số quân xương trong trận cuối.
+- Đi theo tên cũ của Ghost mở tư liệu riêng nhưng dẫn tới phục kích; từ chối tên mở tuyến an toàn hơn.
 
 ## 3-8. Đại giáo đường Hơi Thở Cuối
 
-### Mục tiêu gameplay
+Đây là tình huống xã hội lớn: sự an ủi đã trở thành dịch vụ, rồi dịch vụ trở thành quyền lực.
 
-- Set-piece xã hội: an ủi biến thành dịch vụ, dịch vụ thành quyền lực.
-- Đặt Mẹ Bề Trên Voro như đối thủ có niềm tin thật.
-- Cho Deep/Henry thấy mặt tối của việc dùng quá khứ làm mệnh lệnh: tượng anh hùng, lời tha thứ giả, và giọng người chết gọi người sống tiếp tục chiến đấu.
-
-### Cơ chế dùng được
-
-- **Confession booth:** checkpoint phụ/hồi máu, nhưng lời thú tội có thể bị Cái Lưỡi dùng trong boss.
-- **Lời người chết:** buff hoặc debuff tùy người chơi tin/kháng.
-- **Deep và tượng anh hùng:** điều tra tượng mở nâng cấp chống rage; phá vì giận có reward ngắn hạn nhưng tăng rủi ro Stage 4.
-
-### Puzzle/encounter
-
-- **Ba lời tha thứ:** ba NPC trả tiền để nghe người chết tha thứ. Người chơi chọn lộ sự thật, im lặng, hoặc tìm bằng chứng.
-- **Mẹ Bề Trên Voro:** social mini-boss hoặc boss phụ. Bà không lừa đảo tầm thường; bà tin mình đang giúp người đau khổ.
+- Buồng thú tội là điểm nghỉ phụ nhưng lời nói tại đây có thể bị Cái Lưỡi sử dụng.
+- Tượng anh hùng cũ khơi lại quá khứ của Deep. Điều tra tượng mở khả năng chống Nộ khí; phá tượng cho tài nguyên ngay nhưng làm anh dễ mất ổn định ở Chương 4.
+- Ba người đã trả tiền để nghe lời tha thứ giả. Người chơi có thể im lặng, lộ sự thật hoặc tìm bằng chứng trước khi đối chất.
+- Mẹ Bề Trên Voro tin rằng bà đang giúp người đau khổ. Bà là đối thủ có niềm tin thật, không phải kẻ lừa đảo đơn giản.
 
 ## 3-9. Phòng Cái Lưỡi
 
-### Mục tiêu gameplay
+### Trùm: Dàn Hợp Xướng
 
-- Boss về tên gọi, mệnh lệnh, giọng người chết.
-- Ghost chọn tên đồng đội gọi thay vì tên cũ.
-- Tích hợp hệ quả từ quyết định ở Pháo đài Linh hồn (`SpiritFortressChoice`).
+Dàn Hợp Xướng dùng giọng của mẹ Henry, đồng đội cũ của Deep, người thân Solei, Heniana và cuối cùng là giọng quen thuộc với người chơi. Mỗi giọng tạo một kiểu đòn và một mệnh lệnh.
 
-### Cơ chế dùng được
+- Gọi đúng tên hoặc danh xưng làm nhân vật khựng trong chốc lát.
+- Lệnh như “quỳ”, “im” hoặc “lùi lại” tạo hiệu ứng ngắn, có dấu báo rõ và không tước quyền điều khiển lâu.
+- Đánh thân trùm chỉ làm chậm nó; muốn kết thúc giai đoạn phải phá các nút lời thề quanh đấu trường.
+- Henry dùng Trấn tĩnh để xác nhận lệnh thật.
+- Deep bị gọi bằng danh hiệu anh hùng cũ; truy sát trong lúc này làm Nộ khí tăng.
+- Ghost chọn cái tên đồng đội đang gọi mình thay vì tên cũ do trùm áp đặt.
 
-- **Gọi tên làm khựng:** nhân vật bị gọi đúng tên/danh xưng sẽ chậm trong chốc lát.
-- **Mệnh lệnh giọng nói:** "quỳ", "im", "lùi lại", "đánh" gây hiệu ứng ngắn. Dùng ít, rõ, không gây khó chịu.
-- **Phá lời nói dối:** đánh thân boss không đủ; phải phá các nút lời thề/khế ước quanh arena.
+Nếu linh hồn ở pháo đài đã được thanh tẩy, họ tạo lá chắn chặn một đợt sóng âm lớn mỗi giai đoạn. Nếu bình bị phá, các vong hồn oán giận xuất hiện, bám vào nhân vật và làm gián đoạn bánh xe phối hợp.
 
-### Boss
+Sau trận, đội giữ mảnh Cái Lưỡi bị cháy và hiểu rằng Thần Sơ Sinh không nguyền rủa thế giới; nó đang gọi mẹ. Mục tiêu chuyển sang tìm Dây Rốn.
 
-**Dàn Hợp Xướng**
+## Chương 4 – Akam Meskul và Trái Tim
 
-- Nhiều giọng: mẹ Henry, đồng đội Deep, người thân Solei, Heniana, cuối cùng là giọng người chơi.
-- Với Henry: nhiễu COMMAND bằng tội lỗi cũ, biến lệnh bảo vệ thành lệnh truy sát nếu người chơi không phá nút khế ước.
-- Với Deep: gọi danh hiệu anh hùng cũ, buff Rage khi người chơi truy sát hoặc đứng đánh như một biểu tượng chiến tranh.
-- Với Ghost: chỉ mở thêm mảnh ký ức/tên cũ, không giải thích toàn bộ quá khứ ngay ở Stage 3.
-- Mỗi giọng tạo một kiểu đòn.
-- **Hệ quả của `SpiritFortressChoice`:**
-    *   *Nếu đã thanh tẩy linh hồn (Purify):* các linh hồn được giải phóng sẽ bay quanh đấu trường, định kỳ tạo ra một *Lá chắn oán niệm* màu lam nhạt bao quanh cả nhóm. Lá chắn này tự động hấp thụ toàn bộ sát thương và hiệu ứng choáng của 1 đòn sóng âm oán niệm cực đại từ boss trong mỗi phase.
-    *   *Nếu đã phá hủy bình linh hồn (Destroy):* các linh hồn oán giận hóa thành các quái vật cận chiến (Vong hồn thù hận) liên tục xuất hiện từ rìa màn hình. Chúng lao vào ôm chặt nhân vật, khóa hoàn toàn thanh COMMAND của Henry và tự phát nổ gây sát thương diện rộng.
+Chương này đẩy các hệ thống đội hình, cứu hộ và hậu quả lên quy mô chiến trường. Trái Tim không chỉ tăng sát thương; nó biến cảm xúc tập thể thành tài nguyên nguy hiểm.
 
-Reward: nhóm giữ mảnh Cái Lưỡi bị cháy, biết Thần Sơ Sinh không nguyền rủa mà đang gọi mẹ. Mục tiêu chuyển sang tìm Dây Rốn.
+### Luật riêng của chương: Nhịp đập oán hận
 
-## Stage 4 - Akam Meskul
+Một nhịp tim trầm lan qua khu vực theo chu kỳ. Viền màn hình, rung và chuyển động môi trường cùng báo nhịp.
 
-### Cơ chế gameplay đặc trưng của Stage 4
+- Tấn công đúng nhịp tăng khả năng làm choáng và phá giáp.
+- Đánh liên tục lệch nhịp không gây phạt ngay, nhưng làm Nộ khí của khu vực tăng nhanh hơn.
+- Khi Nộ khí cao, địch di chuyển nhanh và tấn công dồn dập hơn nhưng phòng thủ kém ổn định.
+- Một số cầu máu, xương và bề mặt sinh học chỉ cứng lại trong khoảng ngắn theo nhịp.
 
-#### 1. Cơ chế "Nhịp Đập Oán Hận" (Resonant Heartbeat)
-Trái Tim của Thần Sơ Sinh khuếch đại cảm xúc cực đoan của vùng đất và phát ra nhịp đập oán oán theo chu kỳ (mỗi 5 giây một lần, thể hiện bằng hiệu ứng đỏ nhấp nháy trên viền màn hình và âm thanh thịch-thịch trầm đục).
-- **Trong Chiến Đấu**:
-    *   **Resonant Strike (Đòn đánh cộng hưởng)**: Nhấp phím tấn công hoặc tung kỹ năng vào đúng khoảnh khắc nhịp tim đập (dung sai 0.3 giây) sẽ tăng 100% sát thương chí mạng và lập tức phá vỡ giáp bảo vệ (Guard Break) của địch.
-    *   **Rage Build-up (Tích tụ Nộ khí)**: Tấn công liên tục và bị lệch nhịp sẽ tích lũy thanh Rage cục bộ của trận đấu. Khi thanh Rage đầy, kẻ địch xung quanh sẽ gầm lên và rơi vào trạng thái cuồng loạn (Frenzy) - tăng 50% tốc độ di chuyển và công kích nhưng giảm 30% phòng thủ.
-- **Trong Di Chuyển (Traversal)**:
-    *   Một số cầu máu, chướng ngại vật chất lỏng hoặc các dải xương rồng sáp nhập chỉ cứng lại và đi qua được trong 1.5 giây trùng khớp với nhịp tim. Người chơi phải căn thời gian di chuyển để nhảy và lướt qua.
+Nhịp tim là lớp tăng cường của Độ Nhiễu, không phải một thanh lớn thứ ba. Nộ khí chỉ xuất hiện trong những trận liên quan trực tiếp đến Trái Tim.
 
-#### 2. Kỹ năng mở rộng của Tulas (Toxic Triage & Vascular Lock)
-Akam Meskul đẩy kỹ năng kiểm soát dịch thể của Tulas lên cực hạn, chạm vào ranh giới của cấm thuật sinh học:
-- **Màng Lọc Huyết Dịch (Toxic Filtration Aura)**: Tulas tạo một vòng hào quang nước bao bọc xung quanh, trung hòa hoàn toàn khí độc trong phạm vi nhỏ. Người chơi có thể dùng lệnh COMMAND bắt Tulas giữ vị trí tĩnh để che chắn cho Henry bắn tỉa hoặc bảo vệ nhóm NPC tị nạn. Kỹ năng này tiêu hao năng lượng từ các vũng nước hoặc bình thí nghiệm vỡ quanh map.
-- **Khóa Huyết Quản (Vascular Lock)**: Cứu mạng đồng đội hoặc dân thường bị phơi nhiễm khí độc bằng cách đông cứng tạm thời độc tố trong huyết quản của họ. Kích hoạt kỹ năng này sẽ khóa 25% lượng Máu tối đa của Tulas cho đến khi quay về checkpoint, đòi hỏi người chơi phải quản lý tài nguyên máu cực kỳ cẩn thận.
+### Năng lực mở rộng của đội
 
-#### 3. Kỹ năng mở rộng của Block: "Cực Hạn Chắn Đỡ" (Bastion Shield)
-- Block có thể nhặt các mảnh xương sườn rồng Akam Meskul khổng lồ nằm rải rác trên màn chơi để biến thành lá chắn di động hạng nặng. Kỹ năng này cho phép Block dựng một bức tường vững chắc, hấp thụ hoàn toàn các đợt bão oán niệm và tia lửa địa nhiệt, mở đường cho Solei và Ghost áp sát mục tiêu phía sau.
+- **Màng lọc huyết dịch của Tulas:** tạo vùng lọc độc bằng nước hoặc chất lỏng quanh khu vực. Anh có thể giữ vùng này theo lệnh Giữ.
+- **Khóa huyết quản của Tulas:** cứu người bị nhiễm độc nặng bằng cách khóa tạm độc tố, đổi lại một phần sinh lực tối đa của anh bị khóa đến điểm nghỉ.
+- **Khiên thành của Block:** Block nhặt mảnh xương sườn rồng làm lá chắn nặng, chặn bão oán niệm và luồng địa nhiệt.
+- **Phá vật neo:** Solei hoặc Ghost vượt hàng phòng thủ để phá cột nghi lễ. Khi vật neo vỡ, người bị điều khiển ngừng chiến đấu.
+- **Ảo ảnh Aramut:** Ghost nhìn thấy vết nứt trong lịch sử bị bóp méo và có thể chạm vào chúng để đổi địa hình hoặc mở tư liệu.
 
-#### 4. Lựa chọn phi sát thương: "Hold Fire" & "Phá Hủy Vật Neo"
-- Thay vì tiêu diệt các chiến binh cuồng giáo bị Matriarch Vanya thao túng, Henry có thể ra lệnh **Hold Fire**. Solei hoặc Ghost sẽ sử dụng tốc độ cơ động để vượt qua hàng phòng thủ, phá hủy các "Vật Neo Nghi Lễ" (cột xương, đền thờ đá mini). Khi Vật Neo vỡ, các chiến binh sẽ thoát khỏi ảo giác, dừng chiến đấu và bỏ chạy, giúp giảm 50% thanh Rage oán niệm của khu vực và tăng chỉ số cứu dân.
+## 4-1. Biên giới Quỷ Huyệt
 
-#### 5. Khả năng tương tác ảo ảnh của Ghost
-- Với hệ thần kinh kháng thôi miên độc lập, Ghost là nhân vật duy nhất nhìn thấy các điểm nứt gãy của ảo ảnh lịch sử Aramut. Trong Act 4-2, người chơi điều khiển Ghost chạm vào các ảo ảnh oán niệm để giải mã các cơ quan cổ xưa, làm biến đổi địa hình hoặc mở các con đường ẩn chứa tài liệu lore đặc biệt.
+![Bản đồ Chương 4-1](<imgs/Stage4/stage4_act_4_1_dragon_cave_approach_map.png>)
 
----
+### Cơ chế và tình huống
 
-### Thiết kế màn chơi chi tiết (Acts)
+- Lỗ địa nhiệt phun khí độc theo chu kỳ. Block chặn bằng đá hoặc Tulas tạo màng lọc để đội đi qua.
+- Kẻ thuần quỷ gọi thêm quái; hạ hắn khiến quái mất kiểm soát và quay sang tấn công lính gần nhất.
+- Kẻ chủ tế tăng sức mạnh cho quân và ép họ tập trung vào Solei.
+- Người tị nạn bị dùng làm lá chắn. Henry ra lệnh Ngừng bắn, Solei hoặc Ghost phá vật neo để giải họ khỏi ảo giác.
 
-## 4-1. Ngoài cửa hang rồng (Biên giới Quỷ Huyệt)
-![Stage 4-1 playable map - Dragon Cave Approach](<imgs/Stage4/stage4_act_4_1_dragon_cave_approach_map.png>)
+### Trùm phụ: Đội Thập tự
 
-### Mục tiêu gameplay
-- Dạy người chơi cách phối hợp vượt chướng ngại khí độc địa nhiệt.
-- Giới thiệu cơ chế phi sát thương thông qua việc phá hủy Vật Neo Nghi Lễ.
+Một lính khiên lớn, hai thương thủ cơ động và một kẻ chủ tế phối hợp thành một đơn vị. Phá cột tế trung tâm cắt sức mạnh của chủ tế và làm đội hình mất liên kết. Người chơi có thể giết từng người, nhưng phá vật neo nhanh hơn về lâu dài và tăng số dân được cứu.
 
-### Cơ chế dùng được
-- **Địa nhiệt độc**: Các vents phun khí độc theo chu kỳ. Block có thể dùng COMMAND để nhặt đá đè lên chặn lỗ phun, hoặc Tulas tạo màng lọc độc để nhóm đi qua.
-- **Demon tamer**: Kẻ địch gọi quái vật. Tiêu diệt tamer sẽ khiến quái quay sang cắn lính tuần tra.
-- **Malaestro**: Chỉ huy tế tự, buff sát thương và ép lính tập trung tấn công Solei.
+## 4-2. Đường hầm trong xác Akam Meskul
 
-### Puzzle/encounter
-- **Vượt Quỷ Huyệt**: Sử dụng COMMAND phối hợp Block đè đá chặn khí độc, Solei leo vách đá tiêu diệt sniper của phe Con Cháu Chiếc Nôi.
-- **Giải cải đạo**: Gặp nhóm người tị nạn bị ép cải đạo làm lá chắn thịt. Người chơi phải dùng đòn phi sát thương của Henry và phá Vật Neo để cứu họ, mở lối đi tắt.
+![Bản đồ Chương 4-2](<imgs/Stage4/stage4_act_4_2_dragon_bone_catacombs_map.png>)
 
-### Boss: Crusader Band
-Trận chiến với toán cảnh vệ tiên phong của Vanya trên một sườn núi dốc.
-- Gồm: 1 khiên lớn bảo vệ, 2 thương thủ lướt nhanh, và 1 Malaestro đứng sau tụng kinh buff giáp.
-- Phá hủy cột tế đàn trung tâm sẽ ngắt hoàn toàn buff của Malaestro, khiến cả toán lính rơi vào trạng thái choáng (Stun).
+### Dòng chảy và cơ chế
 
----
+Đây là một hầm ngục sinh học trong xác thánh long. Da hóa thạch tạo tường chỉ Deep phá được; xương sườn là bệ; các cơ quan đã chết vẫn co giật theo Trái Tim.
 
-## 4-2. Đường hầm trong xác Akam Meskul (Dragon Bone Catacombs)
-![Stage 4-2 playable map - Dragon Bone Catacombs](<imgs/Stage4/stage4_act_4_2_dragon_bone_catacombs_map.png>)
+- **Buồng Phổi:** gió độc thổi theo nhịp, có thể hất nhân vật xuống vực. Block dựng Khiên thành để cả đội đi sau.
+- **Buồng Tim:** trọng lực và bệ sinh học đổi theo nhịp. Người chơi dùng dấu hình ảnh trên xương để căn bước, không phụ thuộc âm thanh.
+- **Ảo ảnh Aramut:** ký ức phản bội hiện thành vật cản thật. Ghost phá vết nứt để trả không gian về đúng hình dạng.
+- **Khoang mạch máu:** Tulas đổi hướng dòng độc để mở tuyến cứu hộ hoặc tuyến phần thưởng.
 
-### Mục tiêu gameplay
-- Khám phá dungeon sinh học khổng lồ bên trong xác thánh long.
-- Kể chuyện về cuộc đời Aramut qua ảo ảnh cộng hưởng của Ghost.
+## 4-3. Thành phố kính và ca động tế lễ
 
-### Cơ chế dùng được
-- **Địa hình sinh học**: Da rồng hóa thạch làm tường chắn (chỉ phá được bằng búa nặng của Deep), xương sườn làm bệ nhảy.
-- **Ảo ảnh Aramut**: Các sự kiện lịch sử hiện về dưới dạng ảo ảnh vật lý gây sát thương. Chỉ Ghost mới có thể hóa giải hoặc tương tác để mở đường.
+![Bản đồ Chương 4-3](<imgs/Stage4/stage4_act_4_3_glass_city_ritual_cave_map.png>)
 
-### Puzzle/encounter
-- **Phân khu "Lục Phủ Ngũ Tạng"**:
-    *   *Buồng Phổi*: Các luồng gió độc thổi mạnh theo nhịp, có thể thổi bay nhân vật xuống vực. Block phải dựng Bastion Shield chắn gió để cả đội đi sau lưng.
-    *   *Buồng Tim (Organ Chamber)*: Trọng lực đảo lộn liên tục theo nhịp tim. Người chơi phải thực hiện các cú nhảy platform đồng bộ với nhịp đập để đi qua bể axit bên dưới.
-- **Ghost và các vết nứt oán niệm**: Ghost tương tác với ảo ảnh Aramut bị phản bội để mở các rương báu cổ xưa chứa vật phẩm nâng cấp kỹ năng.
+Heni sốt cao vì cộng hưởng. Tulas phải dùng Khóa huyết quản, khiến một phần sinh lực tối đa của anh bị khóa trong phân đoạn. Người chơi chọn thứ tự tiếp cận hai tuyến, nhưng cuối cùng vẫn có thể giải quyết cả hai:
 
----
+- **Tuyến Tàn Dư của Kaelen:** thành phố kính có máy quét và thiết bị canh gác. Ghost xâm nhập để mở phòng giam; Solei cắt nguồn điện; Henry giữ lối rút.
+- **Tuyến Con Cháu của Vanya:** ca động đầy lửa tế và người bị ép hiến. Solei phản đòn trong không gian hẹp; Tulas dùng chất lỏng dập lửa; Block bảo vệ trẻ em.
 
-## 4-3. Phân tranh lưỡng cực (Thành phố kính & Ca động tế lễ)
-![Stage 4-3 playable map - Glass City and Ritual Cave](<imgs/Stage4/stage4_act_4_3_glass_city_ritual_cave_map.png>)
+Cứu tù nhân ở thành phố kính mở hỏa lực hỗ trợ trong trận Titan. Cứu trẻ em tại ca động giúp các tế sư hoàn trả một phần sinh lực bị khóa của Tulas. Hai phần thưởng khác nhau nhưng đều hữu ích, tránh tạo một tuyến “đúng” duy nhất.
 
-### Mục tiêu gameplay
-- Lựa chọn route xâm nhập với phong cách chơi đối lập: Stealth vs Combat.
-- Giải quyết khủng hoảng sức khỏe của Heni bằng kỹ năng hi sinh máu của Tulas.
+## 4-4. Titan Trái Tim
 
-### Cơ chế dùng được
-- **Cơn sốt của Heni**: Heni bị sốt cao do cộng hưởng. Tulas phải dùng Vascular Lock để ổn định mạch máu cho cô bé, giảm 25% HP tối đa của anh suốt Act.
-- **Tuyến Tàn Dư (Eldar Kaelen)**: Thành phố kính đầy rẫy camera quét lỗi và drone an ninh. Người chơi dùng Ghost lẻn vào hack terminal để giải cứu tù nhân.
-- **Tuyến Con Cháu (Matriarch Vanya)**: Ca động rực lửa với bẫy hiến tế. Lối chơi combat dồn dập, Solei dùng phản đòn và Tulas dùng chất lỏng dập lửa tế để cứu trẻ em.
+![Bản đồ Chương 4-4](<imgs/Stage4/stage4_act_4_4_heart_titan_battlefield_map.png>)
 
-### Puzzle/encounter
-- **Lực lượng hỗ trợ**: Cứu được tù nhân ở tuyến Tàn dư sẽ mở khóa ụ súng máy hỗ trợ trong trận Titan; cứu trẻ em tuyến Con Cháu sẽ được các tế sư phục hồi lượng máu bị khóa của Tulas.
+Titan là thực thể khổng lồ từ xương rồng, cơ thịt và ống thép rỉ. Trái Tim phát sáng nằm lộ trong lồng ngực, nối với toàn bộ chiến trường.
 
----
+### Giai đoạn 1 – Đấu trường hỗn loạn
 
-## 4-4. Thần Long Titan (Titan Trái Tim)
-![Stage 4-4 playable map - Heart Titan Battlefield](<imgs/Stage4/stage4_act_4_4_heart_titan_battlefield_map.png>)
+Hai phe chém giết quanh dân thường. Henry dùng Ngừng bắn, Block tạo vùng bảo vệ và Solei mở đường sơ tán. Titan quét tay xương qua sân. Giết lính đang rút hoặc để dân chết làm Nộ khí của Titan tăng.
 
-### Mục tiêu gameplay
-- Boss khổng lồ đa mục tiêu trên đấu trường sụp đổ.
-- Lồng ghép cơ chế Rage và nhiệm vụ cứu hộ dân thường.
+### Giai đoạn 2 – Rễ oán niệm
 
-### Cơ chế dùng được
-- **Titan Trái Tim (Boss Sinh Học)**: Một thực thể khổng lồ làm từ xương rồng cổ đại, cơ thịt đan xen ống thép rỉ sét, lồng ngực để lộ Trái Tim rực sáng quấn quanh bởi các rễ cây thần.
-- **Rage oán niệm**: Giết lính rút lui hoặc để dân thường chết sẽ tăng Rage của boss, khiến boss tung chiêu quét đấu trường bằng oán niệm cực đại.
-- **COMMAND phân việc cứu hộ**: Bảo vệ dân thường trong lúc chiến đấu.
+Titan cắm mạch xương xuống đất, tạo vũng độc nổ theo nhịp. Tulas lọc hoặc đổi hướng chất độc; Ghost xác định rễ thật giữa các ảo ảnh; Deep phá loa và lõi phụ làm đám đông bớt cuồng loạn.
 
-### Thiết kế trận đánh Boss: Titan Trái Tim
-- **Phase 1: Đấu trường hỗn loạn**: Hai phe lính của Kaelen và Vanya liên tục chém giết nhau và xả súng vào đấu trường. Người chơi phải dùng Henry ra lệnh Hold Fire và ra lệnh Block giương khiên bảo vệ nhóm dân thường tị nạn ở rìa sân đấu. Titan dùng tay xương khổng lồ đập quét sân khấu.
-- **Phase 2: Rễ cây oán niệm**: Titan cắm các mạch máu xương vào mặt đất, tạo ra các vũng máu độc phát nổ theo nhịp đập. Tulas phải liên tục di chuyển để dọn dẹp các vũng máu độc, trong khi Ghost dùng khả năng kháng ảo ảnh định vị điểm yếu thực sự của Titan.
-- **Phase 3: Nhịp đập chí mạng**: Titan để lộ lõi Trái Tim ở ngực. Người chơi phải căn đúng nhịp đập (Resonant Heartbeat) để tung đòn đánh cộng hưởng phá hủy lớp giáp xương bao bọc lõi.
-- **Kết trận**: Titan sụp đổ. Jamerson xuất hiện trên buồng ngủ đông của Heniana, cướp lấy Trái Tim thần và trốn thoát. Đấu trường sụp đổ hoàn toàn. Cả nhóm phải lựa chọn dừng lại cứu những người lính và người dân đang bị vùi lấp (phát triển tâm lý Tulas & Block về giá trị của sức mạnh bảo vệ) thay vì đuổi theo Jamerson ngay lập tức. Hai phe tàn quân dừng chiến đấu trước nghĩa cử của nhóm, chỉ cho họ đường tiến vào The Cradle.
+### Giai đoạn 3 – Lõi Trái Tim
 
-## Stage 5 - The Cradle
+Lồng ngực mở. Đội phải tạo khoảng trống cứu hộ, rồi tấn công đúng nhịp để phá từng lớp giáp xương. Nộ khí càng thấp, điểm yếu mở càng lâu. Số dân đã cứu trong chương quyết định lượng hỗ trợ và số đợt quân tiếp viện.
+
+Sau trận, Jamerson cướp Trái Tim và bỏ trốn cùng buồng ngủ đông của Heniana. Đội không đuổi theo ngay mà ở lại kéo người bị vùi lấp ra khỏi đấu trường. Hành động này khiến tàn quân hai phe ngừng đánh và chỉ đường vào Chiếc Nôi.
+
+## Chương 5 – Chiếc Nôi và Dây Rốn
+
+Chương cuối không thêm một hệ thống hoàn toàn mới. Nó kết hợp lại mọi luật đã học và hỏi người chơi có thực sự hiểu ý nghĩa của chúng hay chỉ biết cách vượt qua thử thách.
 
 ## 5-1. Vùng mơ của Thần Sơ Sinh
-![Cradle Landscape](<imgs/Stage5/the_cradle_landscape.png>)
 
-### Mục tiêu gameplay
+![Phong cảnh Chiếc Nôi](<imgs/Stage5/the_cradle_landscape.png>)
 
-- Remix tất cả Stage trước.
-- Map Ngủ Mơ trở thành không gian thật.
-- Ghost nhìn thấy quá khứ mình là thí nghiệm thất bại, không phải vị cứu tinh.
-- Kiểm tra lại các lựa chọn đạo đức của người chơi: thoát một mình, dùng trẻ em làm công cụ, nghe lệnh người chết, hoặc để chiến tranh tự nuốt dân thường.
-- Làm rõ Heni không phải chìa khóa vô tri; cô là companion có quyền sợ và quyền từ chối.
+### Mục đích và cơ chế
 
-### Cơ chế dùng được
+- Cõi Mộng Sau Cái Chết trở thành không gian thật.
+- Armorlite, Laundel, làng chài, Calvaria, xác rồng và phòng ngủ đông xuất hiện như những mảnh ký ức ghép sai.
+- Heni đứng gần vật thể sẽ làm lộ đường thật; Ghost cắt mạch nối để giữ đường không biến mất.
+- Kỹ năng người chơi đã trang bị hiện thành vật neo, cổng hoặc đòn hỗ trợ trong không gian.
+- Nhịp tim của Ghost và Heni tăng khi chạy, chiến đấu liên tục hoặc đứng trong oán niệm. Nhịp càng cao, Độ Nhiễu càng tăng nhanh.
+- Khi Độ Nhiễu vượt 70%, Bóng Nhiễu săn nhân vật đang cộng hưởng. Tulas hạ nhịp; Block tạo vùng an toàn.
 
-- **Địa hình ký ức:** Armorlite, Laundel, làng chài, Calvaria, xác rồng, phòng ngủ đông xuất hiện như mảnh ghép.
-- **Không khí độc:** buộc quản lý filter/điểm an toàn.
-- **Heni Resonance:** đứng gần Heni thấy đường thật hoặc ổn định vật thể.
-- **Skill loadout thành vật thể:** những skill người chơi chọn trong Map Ngủ Mơ có thể hiện thành cổng/đòn hỗ trợ trong level.
-- **Ký ức cám dỗ:** mỗi vùng ký ức đưa ra một lối giải dễ nhưng sai chủ đề, như bỏ tù nhân để mở đường nhanh, dùng Heni làm khóa, nghe giọng người chết để mở cổng, hoặc để hai phe tự giết nhau cho boss yếu đi.
-- **Từ chối lối tắt:** route tốt thường khó hơn ngay lúc đó nhưng giữ trust, giảm Rage cuối, mở assist hoặc giảm số nạn nhân trong epilogue.
-- **Cơ chế Cộng hưởng nhịp tim (Heartbeat Resonance):** Nhịp tim của Ghost và Heni hiển thị trực tiếp trên HUD. Nhịp tim tăng khi chạy nhanh, chiến đấu hoặc đứng trong vùng oán niệm quá lâu. Khi nhịp tim quá cao, màn hình bị nhiễu ảo giác nặng và sinh ra **Shadow Echoes** (quái vật bóng ma chỉ tập trung săn đuổi nhân vật có nhịp tim cao). Để giảm nhịp tim: Tulas sử dụng kỹ năng lọc/tuần hoàn máu, hoặc ra lệnh COMMAND cho Block giương khiên tạo vùng trú ẩn an toàn để Ghost/Heni đứng yên tĩnh tâm.
+### Những lối tắt cám dỗ
 
-### Puzzle/encounter
+Mỗi vùng đưa ra một cách giải nhanh nhưng lặp lại sai lầm cũ:
 
-- **Phòng ngủ đông trắng:** Heni nghe Heniana mơ; người chơi phải phân biệt ký ức của Heni, Heniana và Jamerson.
-- **Cổng ký ức:** mỗi cổng cần một luật đã học: nhìn qua Con Mắt, đi im lặng qua Cái Tai, từ chối tên của Cái Lưỡi, hạ Rage của Trái Tim.
-- **Ghost không có hồ sơ:** cổng chỉ mở cho kẻ "thất bại" ngoài dữ liệu. Đây là payoff cho Bastonne.
-- **Lối thoát Marseille giả:** mở ra nếu bỏ lại các bóng tù nhân. Cách đúng là quay lại cứu họ, làm route dài hơn nhưng giảm áp lực encounter 5-2.
-- **Lời hứa im lặng của Sakuri:** Heni có thể mở cổng nhanh bằng cộng hưởng đau đớn. Cách đúng là để Solei giữ cô lại và tìm đường khác bằng stealth/âm thanh.
-- **Bàn thờ Calvaria:** giọng người chết chỉ đường rất ngắn. Cách đúng là dùng Cái Lưỡi để nhận ra lời giả và chọn đường không có phần thưởng tức thì.
-- **Giải đố Phản chiếu Không gian (Space Inversion Puzzle):** Vùng Mơ chứa các mảng không gian lơ lửng đại diện cho ký ức cũ. Người chơi phải hoán đổi vị trí của các nhân vật nằm ở các vùng ký ức khác nhau (ví dụ: Solei ở Marseille, Ghost ở Bastonne) để họ cùng đẩy vật thể, kéo cần hoặc kích hoạt công tắc đồng bộ ở hai chiều không gian để mở cổng tiếp theo.
+- Bỏ bóng tù nhân trong ký ức Bastonne để mở lối Marseille giả.
+- Ép Heni cộng hưởng đau đớn để vượt vùng im lặng của Sakuri.
+- Tin giọng người chết tại bàn thờ Calvaria để nhận phần thưởng ngay.
+- Để hai phe tự giết nhau nhằm làm Trái Tim yếu đi.
 
-## 5-2. Chiến trường của hai chính nghĩa
+Từ chối lối tắt làm đường đi dài hơn nhưng giảm áp lực trong phân đoạn sau, giữ lòng tin và mở hỗ trợ.
 
-### Mục tiêu gameplay
+### Câu đố chính
 
-- Encounter đạo đức lớn nhất.
-- Không chọn phe nào làm chân lý cuối.
-- Bảo vệ người không muốn chiến đấu.
-- Gieo rõ ba kết thúc sai trước khi vào boss: phục thù, kiểm soát, sở hữu.
+- **Phòng ngủ đông trắng:** phân biệt ký ức của Heni, Heniana và Jamerson bằng chi tiết đã thu thập.
+- **Bốn cổng ký ức:** kiểm tra cách nhận ra ảo giác, đi qua im lặng, từ chối tên giả và hạ Nộ khí.
+- **Cổng không hồ sơ:** chỉ Ghost, kẻ bị xem là thí nghiệm thất bại ngoài dữ liệu, có thể mở.
+- **Không gian đảo chiều:** các thành viên đứng ở những ký ức khác nhau nhưng cùng đẩy vật, kéo cần hoặc kích công tắc. Người chơi đổi nhân vật theo nhịp để hai phía tác động lên cùng một cấu trúc.
 
-### Cơ chế dùng được
+## 5-2. Chiến trường của ba tham vọng
 
-- **Ba thế lực:** Con Cháu Chiếc Nôi, Tàn Dư Sáu Vương Quốc, Jamerson.
-- **Mục tiêu phi sát thương:** mở evac route, tắt vũ khí, phá tế đàn phụ, ngăn vật tế.
-- **COMMAND cấp cuối:** Hold Fire, Protect Civilians, Disable Weapon, Open Route.
-- **Faction pressure:** mỗi phe có thanh áp lực riêng. Giết nhiều quân của một phe làm phe đó cực đoan hơn; cứu dân/thả tù binh/đưa bằng chứng làm thanh áp lực giảm.
-- **Bằng chứng từ các Stage trước:** tài liệu Bastonne, lời khai Laundel, tên thật ở Calvaria, dữ kiện Aramut/Akam có thể dùng để buộc một số nhóm rút khỏi cổng vật tế mà không cần giết họ.
+Ba thế lực gồm Con Cháu Chiếc Nôi, Tàn Dư Sáu Vương Quốc và Jamerson. Mỗi bên đại diện một kết thúc sai: hồi sinh thần để thanh tẩy, biến thần thành vũ khí hoặc dùng Heniana làm cánh cửa.
 
-### Puzzle/encounter
+### Mục tiêu
 
-- **Cổng vật tế:** cần năng lượng từ nhiều phe. Có thể cướp bằng bạo lực, nhưng cách tốt hơn là làm từng phe rút khỏi cổng bằng bằng chứng/sự thật đã thu được.
-- **Không ai được dùng xác người làm phí:** sau câu Henry nói với Ghost, mở lệnh bảo vệ diện rộng hoặc objective "không để dân thường chết".
-- **Ba lối sai hiện hình:** game cho người chơi thấy kết quả nhanh của từng phe: hồi sinh thần để thanh tẩy, dùng thần như vũ khí, dùng Heniana làm cửa. Người chơi không chọn một trong ba để thắng; mục tiêu là phá logic của cả ba.
+- Mở đường sơ tán.
+- Vô hiệu hóa vũ khí thay vì giết người vận hành.
+- Phá tế đàn phụ và ngăn vật tế.
+- Dùng bằng chứng từ Bastonne, Laundel, Calvaria và Akam để làm một số nhóm tự rút lui.
+
+Mỗi phe có một mức áp lực cục bộ. Giết nhiều người làm phe đó cực đoan hơn; cứu tù binh, đưa bằng chứng hoặc mở đường thoát làm áp lực giảm. Các lệnh Ngừng bắn, Bảo vệ, Vô hiệu hóa và Mở đường đạt phiên bản hoàn chỉnh tại đây.
+
+Cổng vật tế cần năng lượng từ cả ba phe. Người chơi có thể cướp năng lượng bằng bạo lực, nhưng cách ổn định hơn là khiến từng phe rời khỏi cổng. Mục tiêu không phải chọn một phe đúng, mà phá logic biến con người thành chi phí của cả ba.
 
 ## 5-3. Jamerson và Heniana
 
-### Mục tiêu gameplay
+![Jamerson trong giáp mảnh thần](<imgs/Stage5/final_boss_jamerson.png>)
 
-- Final boss dùng đủ năm mảnh thần.
-- Kết thúc arc Jamerson: tình yêu biến thành quyền sở hữu.
-- Heni và Heniana được quyền từ chối làm biểu tượng.
-- Sau boss có gameplay nghi lễ ngược, không chỉ cutscene.
+### Trùm: Jamerson trong giáp năm mảnh thần
 
-### Boss: Jamerson trong giáp mảnh thần
-![Final Boss Jamerson](<imgs/Stage5/final_boss_jamerson.png>)
+Mỗi giai đoạn dùng một luật đã học:
 
-Mỗi phase dùng một luật:
+1. **Con Mắt:** Jamerson tạo cảnh Heniana khỏe mạnh, gia đình cũ và lối cứu giả. Người chơi kiểm tra bằng vật neo và ký ức thật.
+2. **Cái Tai:** hắn phản ứng với tiếng động và hành vi lặp. Người chơi phải đổi nhịp hoặc tạo vùng im lặng.
+3. **Cái Lưỡi:** hắn gọi tên để làm nhân vật khựng. Ghost kháng tốt hơn; Heni đáp lại bằng cái tên cô tự chọn.
+4. **Trái Tim:** tấn công liên tục gây sát thương nhanh nhưng nạp Nộ khí cho trùm. Bảo vệ đồng đội và tha người đã đầu hàng làm nhịp chậm lại.
+5. **Dây Rốn:** đấu trường bị kéo vào giấc mơ, khoảng cách và địa hình thay đổi liên tục.
 
-- **Con Mắt:** ảo giác từ ham muốn. Jamerson tạo cảnh Heniana khỏe mạnh, gia đình cũ, lối cứu giả.
-- **Cái Tai:** phản đòn theo tiếng động và input lặp. Người chơi phải đổi nhịp hoặc dùng im lặng.
-- **Cái Lưỡi:** gọi tên làm nhân vật khựng. Ghost kháng tốt hơn vì không bám vào tên cũ; Heni phản bằng tên mình tự chọn.
-- **Trái Tim:** đánh liên tục trong rage gây damage cao nhưng sạc boss. Bảo vệ đồng đội và không đánh mục tiêu đầu hàng làm giảm nhịp.
-- **Dây Rốn:** kéo arena vào giấc mơ của Thần Sơ Sinh, đổi địa hình và khoảng cách.
+Mục tiêu không chỉ là đánh cạn sinh lực. Đội phải cắt từng liên kết:
 
-### Puzzle trong boss
+- Ghost vượt vùng máy không nhận diện để cắt mạch Con Mắt.
+- Solei phản đòn đúng nhịp để phá vòng lặp của Cái Tai.
+- Henry dùng Trấn tĩnh để vô hiệu lệnh của Cái Lưỡi.
+- Deep phá loa và lõi phụ để ngăn Trái Tim bùng Nộ khí.
+- Tulas khóa mạch độc quanh đấu trường, vừa cứu nạn nhân vừa giảm khả năng hồi phục của Jamerson.
+- Block giữ rìa đấu trường và cổng sơ tán không sụp.
+- Heni chỉ chạm Dây Rốn sau khi người chơi tạo đủ khoảng an toàn để đó là lựa chọn của cô, không phải sự cưỡng ép.
 
-Không nên chỉ đánh cạn máu. Mục tiêu là **cắt liên kết** giữa Jamerson và các mảnh thần:
+### Giai đoạn cuối – Người Cha Mang Mắt
 
-- Ghost cắt Con Mắt bằng cách đi qua vùng máy không nhận diện.
-- Solei phá nhịp Cái Tai bằng counter đúng thời điểm.
-- Henry dùng counter-COMMAND để vô hiệu lệnh của Cái Lưỡi.
-- Deep giữ Trái Tim khỏi bùng Rage bằng phá loa/core phụ.
-- Tulas khóa các mạch máu độc quanh arena để cứu nạn nhân và giảm hồi phục của boss.
-- Block giữ cổng/rìa arena không sụp để dân và party không bị kéo vào Dây Rốn.
-- Heni chạm Dây Rốn để mở đường trả mảnh thần, nhưng chỉ khi người chơi đã bảo vệ cô đủ lâu để hành động này là lựa chọn của cô, không phải cưỡng ép.
+Con Mắt chiếm lấy Jamerson. Đấu trường hẹp dần quanh buồng ngủ đông; tia nhìn đọc vị trí người chơi nhưng có điểm mù gần Heni và Heniana. Các mảnh thần cố nối lại với Con Mắt, buộc đội vừa chiến đấu vừa giữ những mạch đã cắt.
 
-### Phase cuối: The Father-Eye
+Ghost ngắt liên kết cuối. Jamerson rơi xuống cạnh buồng ngủ đông. Ông không được tha thứ, nhưng lần đầu tiên không còn quyền ra lệnh cho người khác.
 
-Con Mắt chiếm Jamerson. Đây là phase ít lời, nhiều hình ảnh: người cha không còn kiểm soát mong muốn của mình.
+### Nghi lễ đảo chiều
 
-Cơ chế:
+![Cộng hưởng giữa Heni và Heniana](<imgs/Stage5/heni_heniana_resonance.png>)
 
-- Arena hẹp dần quanh buồng ngủ đông.
-- Eye beam đọc vị trí người chơi nhưng có blind spot nếu đứng gần Heniana/Heni đúng lúc.
-- Các mảnh thần bị kéo về Con Mắt; người chơi phải giữ từng liên kết đã cắt không nối lại.
+Sau trận trùm, người chơi bước thẳng vào một tình huống phòng thủ chiến thuật ngắn thay vì xem một đoạn phim dài. Cả sáu thành viên chiến đấu cùng lúc; mục tiêu là trả các mảnh thần qua Dây Rốn và giữ Heni, Heniana cùng người sống sót an toàn.
 
-Kết thúc đúng với bản Complete: Ghost cắt liên kết, Jamerson rơi xuống bên buồng ngủ đông, không được tha thứ nhưng lần đầu không còn ra lệnh.
+- **Solei và Ghost:** chạy giữa các điểm neo, cắt những mạch đang cố nối lại với Jamerson hoặc Heniana.
+- **Block và Deep:** giữ hướng tấn công chính, kéo người bị thương khỏi vùng sụp và bảo vệ đường rút.
+- **Tulas:** ổn định sinh lực của Heni và Heniana, lọc độc khỏi những người bị nối vào mạch thần.
+- **Henry:** xác nhận lệnh thật, cấm dùng vật tế người và phân chia các vị trí Giữ, Bảo vệ, Tập trung.
+- **Heni:** tự chạm Dây Rốn khi khu vực đã đủ an toàn. Gợi ý tương tác phải thể hiện đó là quyết định của cô.
 
-### Nghi lễ ngược (Inverse Ritual Mode) sau boss
-![Heni and Heniana Resonance](<imgs/Stage5/heni_heniana_resonance.png>)
+Kết quả tốt nhất vẫn mang vị đắng: Đại Họa giảm dần, Heniana chỉ còn một cơ hội mong manh để sống như người thường, Heni tiếp tục cuộc đời riêng và Jamerson không được tôn vinh.
 
-Sau The Father-Eye, không nên cắt thẳng sang cinematic dài. Người chơi sẽ bước vào một chế độ chơi phòng thủ chiến thuật thời gian thực thu nhỏ (**Inverse Ritual Mode**), nơi cả 6 thành viên trong đội đều xuất hiện trên đấu trường và người chơi phải phân chia vai trò để bảo vệ lõi Dây Rốn và Heni/Heniana trong khi tiến trình ngắt kết nối diễn ra.
+## 7. Sự phát triển của các cơ chế xuyên suốt trò chơi
 
-**Mục tiêu chiến thuật:**
+| Cơ chế | Giới thiệu | Mở rộng | Biến đổi | Kiểm tra cuối |
+|---|---|---|---|---|
+| **Nhặt và ném** | Sân tập và phòng giam | Vũ khí môi trường ở Marseille | Tạo tiếng động tại Sakuri, kích bẫy tại Calvaria | Kiểm tra ký ức giả và giữ điểm neo trong Chiếc Nôi |
+| **Lệnh phối hợp** | Tín hiệu đội ở căn cứ | Giữ cầu, vận hành thuyền, đánh dấu mục tiêu | Ngừng bắn và cứu dân trong Akam | Điều phối toàn đội trong nghi lễ đảo chiều |
+| **Liên kết kỹ năng** | Tulas tạo bệ cho Solei | Chất lỏng, khiên và góc bắn ở Marseille | Chống độc, mở đường sinh học và bảo vệ dân | Giữ không gian ổn định quanh Dây Rốn |
+| **Độ Nhiễu** | Khí mê Bastonne | Ảo giác, âm thanh và lệnh giả | Nộ khí và nhịp tim khuếch đại | Trộn cả năm biểu hiện trong Chiếc Nôi |
+| **Cứu người** | Giúp Block | Tù nhân, người bệnh, linh hồn, người bị cải đạo | Cứu dân ngay trong trận Titan | Từ chối mọi hình thức vật tế ở trận cuối |
+| **Tên gọi** | Mã tù của Ghost | Danh tính của Heni và người chết | Cái Lưỡi biến tên thành mệnh lệnh | Heni và Ghost tự chọn tên mình |
+| **Cõi Mộng** | Mở sau Bastonne | Thay đổi theo từng mảnh thần | Nhịp tim làm không gian méo | Trở thành màn chơi thật trong Chiếc Nôi |
 
-- **Keep Links Severed (Solei & Ghost):** Các liên kết năng lượng từ các mảnh cổ vật cố gắng tái kết nối vào Heniana hoặc xác Jamerson. Người chơi điều khiển Solei chạy tường cơ động để chém đứt các liên kết oán niệm (Corruption Links), trong khi Ghost tiếp cận trực tiếp lõi Dây Rốn để đồng bộ và ngắt kết nối an toàn.
-- **Evac & Defense (Block & Deep):** Các quái vật oán niệm (Relic Distortions) liên tục trào ra từ các vết nứt không gian để phá vỡ nghi lễ. Block phải giương khiên đặc chặn hướng tấn công chính, trong khi Deep dùng đao nặng cản phá các đợt quái lớn và hỗ trợ giữ đường rút lui cho những người sống sót (bao gồm cả tàn quân hai phe).
-- **Triage & Life Support (Tulas):** Dòng năng lượng Dây Rốn rút cạn sinh lực của hai cô bé. Người chơi điều khiển Tulas sử dụng kỹ năng tuần hoàn máu để ổn định thể trạng của Heni và Heniana, ngăn không cho thanh sinh lực của họ tụt xuống mức nguy kịch.
-- **Command Control (Henry):** Cái Lưỡi phát ra các lệnh giả làm nhiễu loạn hành vi của đồng đội. Henry phải sử dụng COMMAND cấp cuối (Hold Fire / Protect / Focus) để triệt tiêu các lệnh gây nhiễu và phối hợp hành động của cả đội.
+## 8. Các nhóm kẻ địch
 
-**Vai trò payoff cụ thể:**
-
-- **Ghost:** Cắt Con Mắt vì hệ thống sinh học lỗi không nhận diện được anh.
-- **Solei:** Giữ Heni bằng tên riêng (Heni), không để UI chuyển thành "Clone Core" hay "Heniana Copy".
-- **Henry:** Dùng COMMAND lần cuối để cấm tuyệt đối việc sử dụng vật tế người, bất kể điều đó làm nhịp phòng thủ khó hơn.
-- **Deep:** Từ chối tung đòn kết liễu tàn quân; tập trung kéo những người bị thương ra xa khỏi vùng sụp đổ.
-- **Tulas:** Lọc độc tố và cứu người bị nối vào mạch thần mà không dùng cơ thể ai làm công cụ mở khóa.
-- **Block:** Giữ cánh cổng ngầm mở đủ lâu để toàn bộ người sống rút lui an toàn.
-- **Heni:** Tự tay chạm vào Dây Rốn thông qua một prompt xác nhận ý chí tự do (agency prompt) của chính cô bé khi người chơi đã tạo ra đủ khoảng an toàn, chấm dứt hoàn toàn nghi lễ.
-
-Kết quả tốt nhất không phải "perfect victory". Nó là ending bittersweet: Đại Họa giảm dần, Heniana chỉ còn cơ hội mong manh như người thường, Heni sống tiếp như một người riêng, và Jamerson không được tôn vinh.
-
-## Puzzle/mechanic dùng lại
-
-### Gọi tên và từ chối tên
-
-Dùng ở Bastonne, Calvaria, The Cradle. Ghost bị gọi bằng mã tù, tên cũ, hoặc danh xưng vật chứa. Đáp án không phải luôn là tìm tên thật; nhiều lúc là từ chối cái tên dùng để điều khiển mình.
-
-### Cứu người làm trận khó hơn
-
-Dùng xuyên game:
-
-- Stranger có giúp Block trong lúc nhà tù loạn hay không; Block vẫn được Solei/đội cứu, nhưng trạng thái và lòng tin thay đổi.
-- Không cướp Laundel.
-- Cứu tù nhân thí nghiệm.
-- Đưa thuốc cho khu cách ly.
-- Sửa tên cho người chết ở Calvaria.
-- Giải cải đạo ở Akam.
-- Mở đường dân thường ở The Cradle.
-
-Reward nên là route, trust, assist, item, hoặc epilogue detail, không chỉ cộng điểm đạo đức.
-
-### Synergy địa hình
-
-Dùng xuyên game để làm party có cảm giác thật sự phối hợp:
-
-- Tulas tạo bệ/chùm chất lỏng để Deep hoặc Solei vượt vực, đánh enemy trên cao, hoặc vào đường phụ.
-- Block giữ khiên trong khi Tulas gia cố bằng nước/máu đông, tạo tuyến an toàn cho dân chạy.
-- Henry bắn công tắc/weakpoint qua màn chất lỏng do Tulas tạo, mở puzzle xa mà không cần biến Henry thành người giải mọi thứ.
-- Ghost đi qua vùng máy không nhận diện, rồi Tulas giữ cửa hoặc kéo vật thể từ phía bên kia để mở đường cho đội.
-- Synergy nên có cooldown, nguồn chất lỏng hoặc điểm neo rõ ràng để không phá level design.
-
-### Cầm và ném vật thể
-
-Dùng từ Stage 0 để người chơi hiểu môi trường là công cụ:
-
-- Ném vật vào công tắc, chuông, khóa, bánh răng, pressure plate.
-- Ném chai/đá tạo tiếng động dụ patrol trong Stage 2.
-- Ném thùng/container nhỏ tạo cover tạm ở Marseille.
-- Ném vật có chất lỏng để Tulas biến thành khiên, bệ, hoặc dây kéo.
-- Vật thể nặng cần nhân vật khỏe như Deep/Block; vật thể nhẹ phù hợp Solei/Ghost để giải puzzle nhanh.
-
-### Nghe/Im lặng
-
-Dùng từ Stage 2 trở đi:
-
-- Đi theo nhịp chuông.
-- Tạo tiếng động giả để dụ patrol.
-- Tắt nguồn âm để boss không đọc được mình.
-- Im lặng giúp tránh Cái Tai nhưng làm mất audio cue.
-
-### Rage/Không truy sát
-
-Dùng mạnh ở Stage 4 và final boss:
-
-- Đánh kẻ đầu hàng tăng Rage.
-- Cứu dân giảm Rage.
-- Phá loa tuyên truyền giảm buff địch.
-- Deep có kỹ năng giữ vị trí để chặn Rage wave.
-
-## Enemy families
-
-| Nhóm địch | Màn | Vai trò |
+| Nhóm | Khu vực | Vai trò trong chiến đấu |
 |---|---|---|
-| Bastonne guards | Stage 0 | Dạy shield, baton, taser, alarm |
-| Scanner/drone | Stage 0-1 | Lock-on, camera, phát hiện lỗi dữ liệu |
-| Marseille gang | 1-1 | Mob đông, vũ khí môi trường |
-| Laundel enforcers | 1-2 | Faction combat, phục kích |
-| Sewer mutants | 1-2, 1-3 | Pack leader, poison, nước cống |
-| Secret police | 1-3 | Sniper laser, smoke, súng ngắn |
-| Lab experiments | 1-4 | Horror, grab, bình chứa |
-| Quarantine patrol | 2-2 | Sound cone, bắt người bệnh |
-| Sakuri acolytes | 2-3, 2-4 | Âm thanh, đọc thói quen |
-| Bone clergy | Stage 3 | Gọi tên, revive, mệnh lệnh |
-| Cradle zealots | Stage 4-5 | Buff theo chant, hy sinh |
-| Six Kingdom machines | Stage 4-5 | Shield, turret, filtered zone |
-| Relic distortions | Stage 5 | Biến thể theo Mắt/Tai/Lưỡi/Tim/Dây Rốn |
+| Lính gác Bastonne | Chương 0 | Khiên, dùi điện, báo động, đội hình phong tỏa |
+| Máy quét và thiết bị bay | Chương 0–1 | Khóa mục tiêu, camera, phát hiện dữ liệu bất thường |
+| Băng đua xe Marseille | 1-1 | Lao nhanh, chia cắt đấu trường, tận dụng môi trường |
+| Tay chân Laundel | 1-2 | Phe phái, mua tăng cường, phục kích trong chợ |
+| Quái cống | 1-2 đến 1-3 | Đánh theo bầy, độc, lợi thế dưới nước |
+| Cảnh sát mật | 1-3 | Bắn tỉa, khói, súng ngắn, quân tiếp viện theo truy nã |
+| Vật thí nghiệm | 1-4 | Khóa người, sợ ánh sáng, thoát từ bình chứa |
+| Tuần tra cách ly | 2-2 | Phát hiện tiếng động, bắt người bệnh, chuông báo |
+| Tín đồ Sakuri | 2-3 đến 2-4 | Đọc thói quen, sóng âm, đổi đội hình theo nhịp |
+| Giáo sĩ xương | Chương 3 | Gọi tên, hồi sinh quân xương, phát mệnh lệnh |
+| Người bị cải đạo | Chương 4–5 | Được tăng sức mạnh bởi tụng niệm và vật neo; có thể giải cứu |
+| Máy móc Sáu Vương Quốc | Chương 4–5 | Khiên, tháp súng, vùng lọc và máy quét |
+| Dị thể Di Vật | Chương 5 | Thay đổi theo luật của Con Mắt, Cái Tai, Cái Lưỡi, Trái Tim và Dây Rốn |
 
-## Boss list
+Mỗi nhóm phải có một mục tiêu ưu tiên rõ, một dấu hiệu đặc trưng và ít nhất hai cách xử lý. Kẻ chỉ huy có thể bị hạ trực tiếp, bị tách khỏi quân hoặc mất nguồn tăng cường; kẻ bị điều khiển có thể được giải thoát thay vì buộc phải giết.
 
-| Màn | Boss | Cơ chế chính |
+## 9. Danh sách các trận trùm
+
+| Phân đoạn | Trùm | Bài kiểm tra chính |
 |---|---|---|
-| 0 | Training Bout + Bastonne Lockdown Unit | Solei tutorial, combo/chưởng/counter, teamwork, hậu quả Stranger có giúp Block |
-| 1-1 | Thủ lĩnh băng đua xe | Moto phase, vạch lửa, kiếm phase |
-| 1-2 | Thủ lĩnh Áo Đen / GROGER | Route theo LaundelTrust, boss ẩn token/nước cống |
-| 1-3 | Marius Vane | Sniper, smoke, Heat reinforcement |
-| 1-4 | SheMal | Con Mắt, ảo giác, bình chứa, route mất điện |
-| 2-2B | Ryozan oan hồn | Cầu núi, phase nòng nọc linh hồn, giáp đỏ và đao dài |
-| 2-4 | Sakuri | Âm thanh, input reading, cơn khát máu, đá lơ lửng |
-| 3-4 | Dàn Hợp Xướng | Gọi tên, giọng người chết, phá lời nói dối |
-| 4-1 | Crusader Band | Boss nhóm, cứu người bị cải đạo |
-| 4-4 | Titan Trái Tim | Rage, cứu dân, phá loa, đánh core |
-| 5-3 | Jamerson Relic Armor | Năm mảnh thần, cắt liên kết |
-| 5-3 Final | The Father-Eye | Con Mắt chiếm Jamerson, giữ liên kết không nối lại |
+| Chương 0 | Trận tập và Đơn vị phong tỏa Bastonne | Nền tảng chiến đấu, môi trường, bảo vệ Block |
+| 1-1 | Thủ lĩnh băng đua xe | Né lao, vật ném, phản đòn và phá giáp |
+| 1-2 | Thủ lĩnh Áo Đen hoặc GROGER | Hậu quả phe phái, tiếng động, ánh sáng và lòng tham |
+| 1-3 | Marius Vane | Ưu tiên mục tiêu, chỗ nấp và mức truy nã |
+| 1-4 | SheMal | Cận chiến nặng, ảo giác và lựa chọn nguồn điện |
+| 2-2B | Oan hồn Ryozan | Âm thanh môi trường, cầu hẹp và giải yểm |
+| 2-4 | Sakuri | Thay đổi thói quen, vùng im lặng và nhịp âm |
+| 3-9 | Dàn Hợp Xướng | Tên gọi, lệnh giả, ký ức và lựa chọn tại pháo đài |
+| 4-1 | Đội Thập tự | Đội hình địch, vật neo và giải cứu người bị điều khiển |
+| 4-4 | Titan Trái Tim | Nộ khí, cứu dân, chia việc và đánh đúng nhịp |
+| Khi Stranger đạt 100% Nhiễu | Stranger mất kiểm soát | Dùng đội hình để khống chế, phá bóng lặp và cắt nguồn Nhiễu thay vì kết liễu |
+| 5-3 | Jamerson trong giáp năm mảnh | Vận dụng cả năm luật và cắt liên kết |
+| 5-3 cuối | Người Cha Mang Mắt | Giữ các mạch đã cắt và bảo vệ buồng ngủ đông |
 
-## Nhịp học kỹ năng
+## 10. Nhịp học kỹ năng toàn trò chơi
 
-- **Stage 0:** Solei tutorial ở căn cứ, combo/chưởng/counter, cầm-ném vật thể, synergy Tulas cơ bản, nhiệm vụ giải cứu Block, đoạn Stranger gây tiếng động trong phòng giam, state `BlockHelped`.
-- **Stage 1:** party combat, môi trường, vật thể ném, synergy trong không gian đô thị, faction choice, route mất điện.
-- **Stage 2:** âm thanh, stealth nhẹ, Heni, boss đọc thói quen.
-- **Stage 3:** tên gọi, giọng người chết, mệnh lệnh, ký ức.
-- **Stage 4:** chiến trường, faction phức tạp, Rage, cứu người trong boss.
-- **Stage 5:** remix toàn bộ luật, Map Ngủ Mơ thành level, final boss năm mảnh thần.
+- **Chương 0:** điều khiển Solei, nền tảng chiến đấu, vật thể, liên kết với Tulas, giải cứu Block và đoạn Ghost trong phòng giam.
+- **Chương 1:** chiến đấu theo đội, môi trường đô thị, lòng tin phe phái, ưu tiên chiến thuật và ảo giác của Con Mắt. Từ sau Bastonne, người chơi cũng bắt đầu quản lý nguy cơ Stranger trở thành trùm khi đạt 100% Nhiễu.
+- **Chương 2:** tiếng động, lén lút nhẹ, phá thói quen, Heni và Cái Tai.
+- **Chương 3:** tên gọi, lệnh giả, lời người chết, hậu quả của việc giữ hay phá linh hồn.
+- **Chương 4:** chiến trường nhiều mục tiêu, Nộ khí, nhịp tim, cứu hộ trong lúc đánh trùm.
+- **Chương 5:** kết hợp toàn bộ luật, biến Cõi Mộng thành màn thật và kết thúc bằng phối hợp toàn đội.
 
-## Câu hỏi cần quyết định
+## 11. Các quyết định thiết kế đã thống nhất
 
-- Game có party swap đầy đủ hay đội Deep/Solei là core với assist/COMMAND theo ngữ cảnh?
-- Tulas là party member đầy đủ từ Stage 0, assist theo đoạn, hay mở sau khi nhóm rời Bastonne?
-- Synergy nên là input riêng, command ngữ cảnh, hay tự động hiện prompt khi hai nhân vật/điểm neo đứng đúng vị trí?
-- Cầm-ném vật thể là mechanic cho mọi nhân vật hay chỉ một số nhân vật có sức mạnh/kỹ năng phù hợp?
-- Stranger/Ghost là party member đầy đủ sau Bastonne hay chỉ playable ở các đoạn đặc biệt?
-- Tuning cụ thể cho `BlockInjuryState`: giảm Max HP bao nhiêu, assist cooldown bao lâu, encounter phụ có spawn bao nhiêu enemy?
-- Heni là companion active trong gameplay hay chỉ dùng ở puzzle/cutscene?
-- Mức độ hậu quả của LaundelTrust nên lớn đến đâu?
-- `SubmarinePowerRoute` nên thưởng loot/skill ở mức nào để đáng chọn Hard Mode mà không biến thành route bắt buộc?
-- Final boss có cho chọn kết thúc không, hay canon luôn là trả mảnh thần qua Dây Rốn?
-- `Start Story` luôn vào save slot trước, hay vào Relay/IP Room khi người chơi chọn co-op từ main menu?
-- `Heroes` trên main menu là character viewer ngoài campaign, hay chính là Story Party/Character Select?
-- Pause menu có dừng thời gian trong mọi mode không, hay online/co-op dùng pause không dừng thời gian?
-- Character Select cho đổi active fighter mọi lúc ở checkpoint, hay chỉ tại căn cứ/Map Ngủ Mơ/safehouse?
-- Settings nên dùng layout v2 một trang rộng hay v3 tabbed sections cho bản đầu tiên?
-- UI có cần language toggle Việt/Anh ngay từ đầu không, hay để sau khi khóa text chính?
+- Đội hình chuẩn gồm một nhân vật trực tiếp và hai vị trí hỗ trợ; đổi đội tại điểm an toàn.
+- Solei là nhân vật mở đầu. Ghost chỉ xuất hiện như nhân vật điều khiển tạm ở Bastonne rồi mới được mở.
+- Deep và Henry là hai người có lịch sử chung từ cuộc chiến cũ; Tulas cùng lứa với Solei và không được viết như một cựu binh ngang hàng với họ.
+- Tulas tham gia bài tập ở Chương 0 và trở thành thành viên đầy đủ sau Bastonne.
+- Khi Stranger đạt 100% Độ Nhiễu lần đầu, anh trở thành một trận trùm có điều kiện và cả đội phải khống chế anh.
+- Heni là nhân vật đồng hành có quyền tự quyết, không phải nguồn sát thương hoặc chìa khóa sống.
+- Lệnh phối hợp và liên kết kỹ năng dùng chung một lớp giao diện theo ngữ cảnh.
+- Mọi nhân vật đều nhặt được vật nhẹ; Deep và Block xử lý vật nặng tốt hơn.
+- Cõi Mộng chỉ mở sau Bastonne và luôn gắn với Ghost cho đến khi Chiếc Nôi làm ranh giới tan vỡ.
+- Không có thanh thiện–ác. Hậu quả được lưu theo từng khu vực và không khóa mạch truyện chính.
+- Kết thúc chính là trả các mảnh thần qua Dây Rốn, không hồi sinh hoặc giết lại Thần Sơ Sinh.
+- Giao diện tiếng Việt là mặc định của bản tài liệu này; tên tệp hình ảnh và tên riêng được giữ nguyên để không làm hỏng liên kết tài nguyên.
+
+Những nội dung còn cần thử nghiệm chỉ là thông số cân bằng: thời gian hồi lệnh, mức giảm sinh lực khi Block bị thương, dung sai của nhịp tim, số quân trong từng đợt và giá trị phần thưởng của tuyến mất điện. Các quyết định nền tảng về nhân vật, hệ thống và tiến trình màn chơi không nên thay đổi trong giai đoạn cân bằng.
