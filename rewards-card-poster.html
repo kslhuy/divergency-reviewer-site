@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Divergency Rewards At A Glance</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0c0b;
+      --panel: #1d1c19;
+      --panel-deep: #151513;
+      --line: #514537;
+      --line-soft: rgba(239, 202, 132, 0.18);
+      --ink: #fff7e8;
+      --muted: #d7c9b7;
+      --soft: #bcae9c;
+      --amber: #efca84;
+      --teal: #72b8ae;
+      --red: #d05a46;
+      --mono: "Cascadia Mono", "Courier New", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-width: 1200px;
+      background: var(--bg);
+    }
+
+    body {
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .poster {
+      position: relative;
+      isolation: isolate;
+      width: 1200px;
+      overflow: hidden;
+      padding: 44px 46px 40px;
+      background:
+        radial-gradient(circle at 9% 2%, rgba(111, 184, 174, 0.12), transparent 27%),
+        radial-gradient(circle at 92% 7%, rgba(208, 90, 70, 0.1), transparent 25%),
+        linear-gradient(180deg, #101210, var(--bg) 38%, #0c0d0c);
+    }
+
+    .poster::before,
+    .poster::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .poster::before {
+      inset: 13px;
+      border: 1px solid rgba(239, 202, 132, 0.14);
+    }
+
+    .poster::after {
+      inset: 0;
+      background:
+        repeating-linear-gradient(90deg, transparent 0 72px, rgba(255, 255, 255, 0.012) 72px 73px),
+        linear-gradient(90deg, var(--teal), var(--amber) 50%, var(--red)) top / 100% 3px no-repeat;
+      opacity: 0.72;
+    }
+
+    .poster-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 26px;
+      padding: 0 2px 22px;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .eyebrow,
+    .header-code,
+    .tag,
+    .footer-label {
+      font-family: var(--mono);
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      margin: 0 0 7px;
+      color: var(--amber);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .intro {
+      max-width: 770px;
+      margin: 13px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .header-code {
+      display: grid;
+      gap: 6px;
+      min-width: 205px;
+      padding: 12px 14px;
+      background: rgba(21, 21, 19, 0.74);
+      border: 1px solid rgba(111, 184, 174, 0.32);
+      color: var(--soft);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .header-code strong {
+      color: var(--teal);
+      font-size: 15px;
+      letter-spacing: 0.04em;
+    }
+
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .tier-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 98px minmax(0, 1fr);
+      gap: 16px;
+      min-height: 158px;
+      padding: 15px;
+      overflow: hidden;
+      background:
+        linear-gradient(115deg, rgba(255, 255, 255, 0.015), transparent 44%),
+        var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 9px 24px rgba(0, 0, 0, 0.16);
+    }
+
+    .tier-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 64px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(111, 184, 174, 0.65));
+    }
+
+    .tier-card.featured {
+      border-color: rgba(239, 202, 132, 0.82);
+      box-shadow:
+        inset 0 0 0 1px rgba(239, 202, 132, 0.12),
+        0 0 24px rgba(216, 166, 77, 0.08);
+    }
+
+    .tier-card.final-tier {
+      grid-column: 1 / -1;
+      grid-template-columns: 98px minmax(0, 1fr) auto;
+      align-items: center;
+      min-height: 136px;
+      background:
+        linear-gradient(100deg, rgba(208, 90, 70, 0.075), transparent 42%),
+        var(--panel);
+    }
+
+    .portrait {
+      width: 98px;
+      height: 98px;
+      padding: 6px;
+      overflow: hidden;
+      align-self: start;
+      background: #111210;
+      border: 1px solid rgba(239, 202, 132, 0.22);
+      border-radius: 8px;
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      image-rendering: pixelated;
+      filter: contrast(1.04) saturate(0.94);
+    }
+
+    .copy {
+      min-width: 0;
+    }
+
+    .tag {
+      margin: 0 0 4px;
+      color: #d9c7aa;
+      font-size: 13px;
+      line-height: 1.25;
+      letter-spacing: 0.045em;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.2;
+      letter-spacing: -0.012em;
+    }
+
+    .note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .limit-stamp {
+      min-width: 170px;
+      padding: 10px 12px;
+      border: 1px solid rgba(208, 90, 70, 0.45);
+      color: #e7b0a5;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.45;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .poster-footer {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-soft);
+    }
+
+    .poster-footer div {
+      padding: 11px 13px;
+      background: var(--panel-deep);
+      border-left: 2px solid rgba(111, 184, 174, 0.56);
+    }
+
+    .footer-label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--soft);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+    }
+
+    .poster-footer strong {
+      color: var(--ink);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main class="poster" aria-label="Divergency Kickstarter pledge tiers poster">
+    <header class="poster-header">
+      <div>
+        <p class="eyebrow">Choose your signal</p>
+        <h1>Rewards At A Glance</h1>
+        <p class="intro">Eleven escalating pledge signals, from supporter recognition and digital rewards to beta access, collector goods, and limited creative participation.</p>
+      </div>
+      <div class="header-code">
+        <span>Divergency // Rewards</span>
+        <strong>11 Pledge Tiers</strong>
+        <span>No paid power</span>
+      </div>
+    </header>
+
+    <section class="tier-grid" aria-label="Pledge tiers">
+      <article class="tier-card">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 1.png" alt="Side-Eye Supporter"></div>
+        <div class="copy">
+          <p class="tag">Recognition</p>
+          <h2>$5 Side-Eye Supporter</h2>
+          <p class="note">Campaign updates, one backer wallpaper, and one approved display name or alias on the digital supporter wall.</p>
+        </div>
+      </article>
+
+      <article class="tier-card">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 2.png" alt="Red-Eye Signal Pack"></div>
+        <div class="copy">
+          <p class="tag">Digital supporter pack</p>
+          <h2>$10 Red-Eye Signal Pack</h2>
+          <p class="note">Side-Eye Supporter rewards plus a three-wallpaper set and avatar/icon pack.</p>
+        </div>
+      </article>
+
+      <article class="tier-card">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 3.png" alt="Crooked-Grin Early Bird"></div>
+        <div class="copy">
+          <p class="tag">Limited digital key</p>
+          <h2>$20 Crooked-Grin Early Bird</h2>
+          <p class="note">Red-Eye Signal Pack rewards plus a full PC game key at the early-backer price and a mini lore dossier.</p>
+        </div>
+      </article>
+
+      <article class="tier-card">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 4.png" alt="Grim-Faced Recruit"></div>
+        <div class="copy">
+          <p class="tag">Standard digital key</p>
+          <h2>$25 Grim-Faced Recruit</h2>
+          <p class="note">Red-Eye Signal Pack rewards plus a full PC game key and a mini lore dossier.</p>
+        </div>
+      </article>
+
+      <article class="tier-card featured">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 5.png" alt="Skullgrin Deluxe"></div>
+        <div class="copy">
+          <p class="tag">Recommended digital tier</p>
+          <h2>$40 Skullgrin Deluxe</h2>
+          <p class="note">Grim-Faced Recruit rewards plus the soundtrack, Digital Field Artbook PDF, Digital Evidence Pack, and Field Relics Digital Art Sheet.</p>
+        </div>
+      </article>
+
+      <article class="tier-card">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 6.gif" alt="Open-Mind Insider"></div>
+        <div class="copy">
+          <p class="tag">Recognition upgrade</p>
+          <h2>$60 Open-Mind Insider</h2>
+          <p class="note">Skullgrin Deluxe rewards plus one approved final-credits display name or alias and a credits-badge wallpaper variant.</p>
+        </div>
+      </article>
+
+      <article class="tier-card">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 7.gif" alt="Brainrot Test Subject"></div>
+        <div class="copy">
+          <p class="tag">Feedback access</p>
+          <h2>$70 Brainrot Test Subject</h2>
+          <p class="note">Open-Mind Insider rewards plus beta access, a private feedback path, and beta tester credit.</p>
+        </div>
+      </article>
+
+      <article class="tier-card">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 8.gif" alt="Glitched-Out Scout"></div>
+        <div class="copy">
+          <p class="tag">Light physical</p>
+          <h2>$95 Glitched-Out Scout, EU only</h2>
+          <p class="note">Brainrot Test Subject rewards plus one A3 Divergency poster. Shipping is charged separately.</p>
+        </div>
+      </article>
+
+      <article class="tier-card">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 9.gif" alt="Full-Meltdown Collector"></div>
+        <div class="copy">
+          <p class="tag">Physical collector</p>
+          <h2>$120 Full-Meltdown Collector, EU only</h2>
+          <p class="note">Brainrot Test Subject rewards plus one A3 poster, one printed Field Artbook, one Beacon bracelet, and one Pixel Character Patch &amp; Keychain Set. Shipping is charged separately.</p>
+        </div>
+      </article>
+
+      <article class="tier-card">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 10.gif" alt="Mind-Blown Scribbler"></div>
+        <div class="copy">
+          <p class="tag">Limited wall mark</p>
+          <h2>$250 Mind-Blown Scribbler</h2>
+          <p class="note">Brainrot Test Subject rewards plus one approved message of up to 40 characters placed on a Bastonne prison wall.</p>
+        </div>
+      </article>
+
+      <article class="tier-card final-tier">
+        <div class="portrait"><img src="imgs/campaign-panels/kick/reward/reward 11.gif" alt="Final-Form Architect"></div>
+        <div class="copy">
+          <p class="tag">Scoped collaboration</p>
+          <h2>$500 Final-Form Architect</h2>
+          <p class="note">Brainrot Test Subject rewards plus one reviewed cosmetic or background-lore contribution.</p>
+        </div>
+        <div class="limit-stamp">Limited<br>3–5 backers</div>
+      </article>
+    </section>
+
+    <footer class="poster-footer">
+      <div><span class="footer-label">Digital access</span><strong>Available broadly</strong></div>
+      <div><span class="footer-label">Physical rewards</span><strong>EU only at launch</strong></div>
+      <div><span class="footer-label">Gameplay promise</span><strong>No paid power</strong></div>
+    </footer>
+  </main>
+</body>
+</html>

@@ -836,12 +836,6 @@ function renderRewardItemShowcase() {
       <div><dt>Gameplay promise</dt><dd>No paid power</dd></div>
     </dl>
   </div>
-  <figure class="reward-master-visual">
-    <button type="button" data-lightbox-src="imgs/rewards/divergency-rewards-at-a-glance-v2.png" data-lightbox-alt="Divergency Rewards At A Glance: six pledge signals from supporter to creative participation" data-lightbox-caption="Choose Your Signal -- Divergency rewards at a glance" aria-label="View the Divergency rewards overview larger">
-      <img src="imgs/rewards/divergency-rewards-at-a-glance-v2.png" alt="Divergency Rewards At A Glance with icons for supporter recognition, game keys, deluxe digital rewards, insider access, EU collector goods, and creative participation" loading="lazy">
-    </button>
-    <figcaption>Six signals, one clear reward path. Collector goods are EU only; all tiers avoid paid gameplay power.</figcaption>
-  </figure>
   <div class="reward-item-content">
     <div class="reward-showcase-block">
       <h4>Pledge Tiers</h4>
@@ -2190,69 +2184,6 @@ function buildPage(docs) {
       font-size: 1rem;
     }
 
-    .reward-master-visual {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      margin: 0 0 24px;
-      background: #090d0d;
-      border: 1px solid rgba(111, 184, 174, 0.5);
-      border-radius: var(--radius);
-      box-shadow:
-        0 20px 42px rgba(0, 0, 0, 0.36),
-        0 0 32px rgba(111, 184, 174, 0.1);
-    }
-
-    .reward-master-visual::after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      inset: 0;
-      pointer-events: none;
-      border: 1px solid rgba(216, 166, 77, 0.16);
-      border-radius: inherit;
-      box-shadow: inset 0 0 42px rgba(111, 184, 174, 0.08);
-    }
-
-    .reward-master-visual button {
-      display: block;
-      width: 100%;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      cursor: zoom-in;
-    }
-
-    .reward-master-visual button:focus-visible {
-      outline: 2px solid var(--teal);
-      outline-offset: -3px;
-    }
-
-    .reward-master-visual img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      transition: filter 180ms ease, transform 180ms ease;
-    }
-
-    .reward-master-visual button:hover img {
-      filter: brightness(1.06);
-      transform: scale(1.008);
-    }
-
-    .reward-master-visual figcaption {
-      position: relative;
-      z-index: 2;
-      margin: 0;
-      padding: 11px 14px;
-      background: linear-gradient(90deg, rgba(14, 23, 23, 0.98), rgba(31, 26, 21, 0.98));
-      border-top: 1px solid rgba(111, 184, 174, 0.28);
-      color: var(--muted);
-      font-size: 0.82rem;
-      line-height: 1.4;
-    }
-
     .reward-item-content {
       display: grid;
       gap: 18px;
@@ -2665,11 +2596,6 @@ function buildPage(docs) {
         grid-template-columns: 1fr;
       }
 
-      .reward-master-visual img {
-        min-height: 0;
-        object-fit: contain;
-      }
-
       .reward-item-card {
         grid-template-columns: 72px minmax(0, 1fr);
         min-height: 0;
@@ -3043,7 +2969,7 @@ function buildPage(docs) {
       grid.addEventListener("scroll", () => updateMediaControls(grid.dataset.mediaGrid), { passive: true });
     });
 
-    document.querySelectorAll(".media-grid, .gallery-grid, .reward-master-visual").forEach((grid) => {
+    document.querySelectorAll(".media-grid, .gallery-grid").forEach((grid) => {
       grid.addEventListener("click", (event) => {
         const button = event.target.closest("[data-lightbox-src]");
         if (button) openLightbox(button);
