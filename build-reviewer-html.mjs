@@ -1907,7 +1907,7 @@ export function buildPage(docs) {
 
     .doc-layout {
       display: grid;
-      grid-template-columns: 280px minmax(0, 1fr);
+      grid-template-columns: 240px minmax(0, 1fr);
       gap: 28px;
       align-items: start;
     }
@@ -1926,9 +1926,10 @@ export function buildPage(docs) {
     .toc-content {
       display: flex;
       flex-direction: column;
-      max-height: calc(100vh - var(--reader-top) - 16px);
-      max-height: calc(100dvh - var(--reader-top) - 16px);
-      padding: 14px 8px 8px;
+      max-height: min(480px, calc(100vh - var(--reader-top) - 16px));
+      max-height: min(480px, calc(100dvh - var(--reader-top) - 16px));
+      padding: 10px 6px 6px;
+      overflow: hidden;
     }
 
     .toc-header {
@@ -1991,6 +1992,7 @@ export function buildPage(docs) {
     .toc-actions button:disabled { color: var(--soft); cursor: default; }
 
     .toc-scroll {
+      flex: 1 1 auto;
       min-height: 0;
       overflow-y: auto;
       overscroll-behavior: contain;
@@ -2015,7 +2017,7 @@ export function buildPage(docs) {
     .toc-branch-toggle, .toc-leaf-spacer {
       flex: 0 0 28px;
       width: 28px;
-      min-height: 36px;
+      min-height: 30px;
     }
 
     .toc-branch-toggle {
@@ -2034,7 +2036,7 @@ export function buildPage(docs) {
       display: block;
       flex: 1;
       min-width: 0;
-      padding: 9px 6px;
+      padding: 5px 6px;
       color: var(--muted);
       font-size: 0.875rem;
       line-height: 1.4;
@@ -2658,7 +2660,7 @@ export function buildPage(docs) {
       }
 
       .toc-panel { margin-bottom: 20px; box-shadow: 0 10px 24px var(--shadow); }
-      .toc-content { display: none; max-height: calc(100dvh - var(--reader-top) - 72px); }
+      .toc-content { display: none; max-height: min(50dvh, calc(100dvh - var(--reader-top) - 72px)); }
       .toc-panel.is-open .toc-content { display: flex; }
       .toc-mobile-toggle {
         display: flex;

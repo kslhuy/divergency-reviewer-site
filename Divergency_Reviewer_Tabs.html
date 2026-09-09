@@ -614,7 +614,7 @@
 
     .doc-layout {
       display: grid;
-      grid-template-columns: 280px minmax(0, 1fr);
+      grid-template-columns: 240px minmax(0, 1fr);
       gap: 28px;
       align-items: start;
     }
@@ -633,9 +633,10 @@
     .toc-content {
       display: flex;
       flex-direction: column;
-      max-height: calc(100vh - var(--reader-top) - 16px);
-      max-height: calc(100dvh - var(--reader-top) - 16px);
-      padding: 14px 8px 8px;
+      max-height: min(480px, calc(100vh - var(--reader-top) - 16px));
+      max-height: min(480px, calc(100dvh - var(--reader-top) - 16px));
+      padding: 10px 6px 6px;
+      overflow: hidden;
     }
 
     .toc-header {
@@ -698,6 +699,7 @@
     .toc-actions button:disabled { color: var(--soft); cursor: default; }
 
     .toc-scroll {
+      flex: 1 1 auto;
       min-height: 0;
       overflow-y: auto;
       overscroll-behavior: contain;
@@ -722,7 +724,7 @@
     .toc-branch-toggle, .toc-leaf-spacer {
       flex: 0 0 28px;
       width: 28px;
-      min-height: 36px;
+      min-height: 30px;
     }
 
     .toc-branch-toggle {
@@ -741,7 +743,7 @@
       display: block;
       flex: 1;
       min-width: 0;
-      padding: 9px 6px;
+      padding: 5px 6px;
       color: var(--muted);
       font-size: 0.875rem;
       line-height: 1.4;
@@ -1365,7 +1367,7 @@
       }
 
       .toc-panel { margin-bottom: 20px; box-shadow: 0 10px 24px var(--shadow); }
-      .toc-content { display: none; max-height: calc(100dvh - var(--reader-top) - 72px); }
+      .toc-content { display: none; max-height: min(50dvh, calc(100dvh - var(--reader-top) - 72px)); }
       .toc-panel.is-open .toc-content { display: flex; }
       .toc-mobile-toggle {
         display: flex;
@@ -11185,11 +11187,24 @@ const readerNavigation = (() => {
   function revealLink(entry, link) {
     if (entry.filter.value.trim()) return;
     let item = link.closest('.toc-item');
-    const ownToggle = item.querySelector(':scope > .toc-row > .toc-branch-toggle');
-    if (ownToggle) setBranch(ownToggle, true);
+    const ancestors = new Map();
     for (let parent = item.parentElement; entry.panel.contains(parent); parent = parent.parentElement) {
       if (parent.matches('ol[id]')) {
-        setBranch(parent.parentElement.querySelector(':scope > .toc-row > .toc-branch-toggle'), true);
+        ancestors.set(parent.id, parent.parentElement.querySelector(':scope > .toc-row > .toc-branch-toggle'));
+      }
+    }
+    // Follow only the current path. Explicitly opened branches remain the reader's choice.
+    for (const id of entry.autoBranches) {
+      if (!ancestors.has(id)) {
+        const button = entry.panel.querySelector('[aria-controls="' + id + '"]');
+        if (button) setBranch(button, false);
+        entry.autoBranches.delete(id);
+      }
+    }
+    for (const [id, button] of ancestors) {
+      if (button.getAttribute('aria-expanded') !== 'true') {
+        setBranch(button, true);
+        entry.autoBranches.add(id);
       }
     }
     if (entry.scroll.matches(':hover') || entry.panel.contains(document.activeElement)) return;
@@ -11287,6 +11302,7 @@ const readerNavigation = (() => {
       scroll: panel.querySelector('.toc-scroll'),
       index: -1,
       savedBranches: null,
+      autoBranches: new Set(),
     };
     entries.set(panel.closest('.doc-pane').dataset.doc, entry);
     entry.toggle.addEventListener('click', () => {
@@ -11302,10 +11318,14 @@ const readerNavigation = (() => {
       }
     });
     panel.querySelectorAll('.toc-branch-toggle').forEach(button => {
-      button.addEventListener('click', () => setBranch(button, button.getAttribute('aria-expanded') !== 'true'));
+      button.addEventListener('click', () => {
+        entry.autoBranches.delete(button.getAttribute('aria-controls'));
+        setBranch(button, button.getAttribute('aria-expanded') !== 'true');
+      });
     });
     panel.querySelectorAll('[data-toc-expand]').forEach(button => {
       button.addEventListener('click', () => {
+        entry.autoBranches.clear();
         panel.querySelectorAll('.toc-branch-toggle').forEach(branch => setBranch(branch, button.dataset.tocExpand === 'true'));
       });
     });
@@ -11363,11 +11383,20 @@ const readerNavigation = (() => {
       if (!entry) return;
       const panel = entry.panel.cloneNode(true);
       panel.querySelector('.toc-scroll').replaceChildren(tree);
+      const expanded = new Map(Array.from(entry.panel.querySelectorAll('.toc-branch-toggle'), button => [button.getAttribute('aria-controls'), button.getAttribute('aria-expanded')]));
+      panel.querySelectorAll('.toc-branch-toggle').forEach(button => {
+        const id = button.getAttribute('aria-controls');
+        if (!expanded.has(id)) return;
+        button.setAttribute('aria-expanded', expanded.get(id));
+        const children = panel.querySelector('[id="' + id + '"]');
+        if (children) children.hidden = expanded.get(id) !== 'true';
+      });
       panel.querySelector('.toc-header > span').textContent = count + ' mục';
       panel.querySelector('.toc-filter').value = '';
       panel.querySelector('.toc-empty').hidden = true;
       entry.panel.replaceWith(panel);
       registerPanel(panel);
+      entries.get(docId).autoBranches = new Set(entry.autoBranches);
       if (active === entry) { active = entries.get(docId); measure(); }
     },
     activate(docId) {
