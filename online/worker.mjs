@@ -42,8 +42,9 @@ async function jsonBody(request) {
 export function contentStore(db, seed = initialHTML) {
   return {
     async read() {
-      return await db.prepare('SELECT html, revision, saved_at AS savedAt, saved_by AS savedBy FROM documents WHERE id = ?').bind('gameplay').first()
+      const current = await db.prepare('SELECT html, revision, saved_at AS savedAt, saved_by AS savedBy FROM documents WHERE id = ?').bind('gameplay').first()
         || { html: seed, revision: 0, savedAt: null, savedBy: 'Bản nhập ban đầu' };
+      return { ...current, html: prepareGameplay(current.html).html };
     },
     async save(input, user) {
       if (typeof input.html !== 'string' || !input.html.trim() || input.html.length > 3_000_000 || !Number.isSafeInteger(input.revision) || input.revision < 0)

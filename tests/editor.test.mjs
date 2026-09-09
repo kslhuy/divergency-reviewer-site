@@ -12,6 +12,14 @@ import { buildDocs, buildPage, renderMarkdown } from '../build-reviewer-html.mjs
 import { listImages, MAX_IMAGE_BYTES, saveImage } from '../scripts/editor-images.mjs';
 
 function walk(node, callback) { callback(node); for (const child of node.childNodes || []) walk(child, callback); }
+test('pasted body blocks inside a heading keep their text and images but never become TOC entries', () => {
+  const valid='<h1>Game</h1><p>Introduction</p><h2>Laundel</h2><div><p>Follow the dry path.</p><table><tr><td>Open the valve</td></tr></table><figure><img src="imgs/map.png" alt="Route"></figure></div><h3>Exit</h3>';
+  const pasted=valid.replace('<p>Introduction</p>','<h1><p>Introduction</p></h1>').replace('<div>','<h1><div>').replace('</div>','</div></h1>');
+  const fixed=prepareGameplay(pasted);
+  assert.deepEqual(fixed.toc.map(({level,text})=>({level,text})), [{level:1,text:'Game'},{level:2,text:'Laundel'},{level:3,text:'Exit'}]);
+  assert.deepEqual(contentSignature(fixed.html),contentSignature(prepareGameplay(valid).html));
+  assert.equal(prepareGameplay(fixed.html).html,fixed.html);
+});
 function contentSignature(html) {
   const text = [], images = [], cells = [];
   function visit(node) {

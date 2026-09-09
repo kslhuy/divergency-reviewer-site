@@ -8,6 +8,8 @@ for (const name of ['stage-plan', 'stage-plan-scroll', 'stage-map', 'stage-marke
   'stage-map-generator', 'stage-map-shemal', ...Array.from({ length: 6 }, (_, i) => `stage-marker-${i + 1}`)]) classes.add(name);
 const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value || '';
 const textOf = node => node.nodeName === '#text' ? node.value : (node.childNodes || []).map(textOf).join('');
+const blocks = new Set('p div ul ol li blockquote pre table thead tbody tfoot tr th td figure figcaption hr h1 h2 h3 h4 h5 h6'.split(' '));
+const containsBlock = node => (node.childNodes || []).some(child => blocks.has(child.tagName) || containsBlock(child));
 
 function safeUrl(value, image = false) {
   const url = value.trim();
@@ -45,6 +47,11 @@ export function prepareGameplay(input) {
       if (node.tagName === 'ol' && /^\d{1,5}$/.test(attr(node, 'start'))) keep('start', attr(node, 'start'));
       node.attrs = attributes;
       clean(node);
+      // Chromium can wrap pasted paragraphs/tables in the heading where selection began.
+      // Preserve those blocks as body content instead of indexing an entire passage as a title.
+      if (/^h[1-6]$/.test(node.tagName) && containsBlock(node)) {
+        node.tagName = node.nodeName = 'div';
+      }
       return true;
     });
   }

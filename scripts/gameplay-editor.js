@@ -179,6 +179,14 @@
     }
   }
   function refreshIndex() {
+    // Full-document paste can inherit the first heading and wrap body blocks in H1.
+    for (const heading of article.querySelectorAll('h1,h2,h3,h4,h5,h6')) {
+      if (!heading.querySelector('p,div,ul,ol,li,blockquote,pre,table,figure,hr,h1,h2,h3,h4,h5,h6')) continue;
+      heading.querySelectorAll('.heading-link').forEach(link => link.remove());
+      const body = document.createElement('div');
+      body.append(...heading.childNodes);
+      heading.replaceWith(body);
+    }
     const roots = [];
     const stack = [];
     const slugs = new Map();
