@@ -22,7 +22,7 @@ function setup() {
   const DB={prepare,async batch(statements){sqlite.exec('BEGIN');try{const rows=[];for(const s of statements)rows.push(await s.run());sqlite.exec('COMMIT');return rows;}catch(e){sqlite.exec('ROLLBACK');throw e;}}};
   const objects=new Map();
   const UPLOADS={async put(key,bytes,metadata){objects.set(key,{bytes,metadata});},async get(key){const o=objects.get(key);return o?{body:o.bytes,writeHttpMetadata(h){h.set('Content-Type',o.metadata.httpMetadata.contentType);}}:null;}};
-  const worker=makeWorker(prepareGameplay,'<h1>reader</h1>','<h1>Initial</h1>',[]);
+  const worker=makeWorker(prepareGameplay,'<article data-search-root="gameplay"><h1>Stale bundled content</h1></article>','<h1>Initial</h1>',[]);
   const env={DB,UPLOADS,ADMIN_EMAIL:'owner@example.test'};
   const request=async(path,method='GET',data,user=null,extra={})=>{
     const headers={'Content-Type':'application/json','Origin':'https://site.test','X-Editor-Token':'same-origin',...extra};
@@ -33,6 +33,22 @@ function setup() {
 }
 const owner={id:'owner-id',email:'owner@example.test'};
 const editor={id:'editor-id',email:'writer@example.test'};
+test('reader HTML and public API use the same saved gameplay after an editor save',async()=>{
+  const {request,sqlite}=setup();
+  await request('/api/editor','GET',null,owner);
+  await request('/api/gameplay','PUT',{revision:0,html:'<h1>Updated shared gameplay</h1><p>Route through Laundel</p>'},owner);
+  const current=await (await request('/api/gameplay')).json();
+  for(const path of ['/','/Divergency_Reviewer_Tabs.html']) {
+    const response=await request(path);
+    assert.equal(response.status,200);
+    assert.equal(response.headers.get('Cache-Control'),'no-store');
+    const html=await response.text();
+    assert.ok(html.includes(current.html));
+    assert.ok(!html.includes('Stale bundled content'));
+  }
+  assert.equal(await (await request('/','HEAD')).text(),'');
+  sqlite.close();
+});
 test('online access: anonymous read, verified owner bootstrap, pending approval, and revocation',async()=>{
   const {request,sqlite}=setup();
   assert.equal((await request('/api/gameplay')).status,200);

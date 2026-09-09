@@ -2,6 +2,10 @@ import { parseFragment, serialize } from 'parse5';
 
 const tags = new Set('h1 h2 h3 h4 h5 h6 p br strong b em i u s ul ol li blockquote pre code table thead tbody tfoot tr th td figure figcaption img div span a hr'.split(' '));
 const classes = new Set('table-wrap markdown-image inline-markdown-image is-title-ornament is-page-divider is-campaign-splash is-story-panel'.split(' '));
+// Fixed presentation classes only: editable layout notes never admit inline styles or scripts.
+for (const name of ['stage-plan', 'stage-plan-scroll', 'stage-map', 'stage-marker',
+  'stage-map-sewer2', 'stage-map-laundel', 'stage-map-sewer4', 'stage-map-harbor',
+  'stage-map-generator', 'stage-map-shemal', ...Array.from({ length: 6 }, (_, i) => `stage-marker-${i + 1}`)]) classes.add(name);
 const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value || '';
 const textOf = node => node.nodeName === '#text' ? node.value : (node.childNodes || []).map(textOf).join('');
 

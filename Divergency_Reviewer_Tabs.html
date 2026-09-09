@@ -1684,6 +1684,23 @@
 .online-member p { overflow-wrap: anywhere; }
 .editor-dialog { max-height: 85vh; overflow: auto; }
 .editor-dialog a { display: inline-block; color: #83cbbc; padding: .75rem; }
+.editor-conflict { margin: 1rem 0; border: 1px solid #667085; border-radius: 8px; }
+.editor-conflict label { display: block; margin: .75rem 0; cursor: pointer; }
+.editor-conflict-preview { white-space: pre-wrap; max-height: 180px; overflow: auto; padding: .75rem; border: 1px solid #667085; margin-top: .4rem; font-size: .9rem; }
+
+    /* Read-only annotations on the existing stage art. */
+.stage-plan-scroll { overflow-x: auto; }
+.stage-map { position: relative; min-width: 760px; }
+.markdown-image .stage-map img { width: 100%; max-height: none; height: auto; }
+.stage-map-overlay { pointer-events: none; }
+svg.stage-map-overlay { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.stage-marker { position: absolute; display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid #fff7dc; border-radius: 50%; background: #12232b; color: #fff7dc; box-shadow: 0 2px 8px #000; font: 750 16px/1 system-ui,sans-serif; transform: translate(-50%,-50%); }
+.stage-plan-key { display: flex; gap: 20px; flex-wrap: wrap; padding: 12px; font: 500 14px/1.5 system-ui,sans-serif; background: #12232b; color: #e7eef0; }
+.stage-plan-key span::before { content: ''; display: inline-block; width: 22px; border-top: 3px solid; margin: 0 7px 3px 0; }
+.stage-key-route::before { color: #5fe5ce; }
+.stage-key-choice::before { color: #ffd36c; }
+.stage-key-danger::before { color: #ff887e; }
+@media print { .stage-plan-scroll { overflow: visible; } .stage-map { min-width: 0; } .stage-plan { print-color-adjust: exact; } }
 
   </style>
 </head>
@@ -4044,12 +4061,12 @@
           <p class="eyebrow">Chuyển hóa thiết kế</p>
           <h2 id="tab-title-gameplay">Lối chơi &amp; Thiết kế màn</h2>
           <p>Kế hoạch lối chơi theo từng chương, gồm cơ chế, câu đố, tình huống chiến đấu, trùm, nhóm kẻ địch và nhịp học kỹ năng.</p>
-          <button class="web-edit-button" id="web-edit-start" type="button">✎ Chỉnh sửa trực tiếp</button><p class="web-edit-note" id="web-edit-note">Chỉnh sửa trên máy: mở Open-Gameplay-Editor.cmd trong thư mục dự án.</p>
+          <button class="web-edit-button" id="web-edit-start" type="button">✎ Chỉnh sửa trực tiếp</button><p class="web-edit-note" id="web-edit-note">Sửa và lưu online cho cả nhóm. Không cần đồng bộ file hoặc push Git.</p>
         </div>
         <dl class="doc-stats" aria-label="Lối chơi &amp; Thiết kế màn statistics">
-          <div><dt>Read</dt><dd>70 min</dd></div>
+          <div><dt>Read</dt><dd>88 min</dd></div>
           <div><dt>Sections</dt><dd>44</dd></div>
-          <div><dt>Tables</dt><dd>13</dd></div>
+          <div><dt>Tables</dt><dd>14</dd></div>
         </dl>
       </div>
 
@@ -4076,7 +4093,7 @@
       <span>Mục lục</span><span class="toc-current">Lối chơi &amp; Thiết kế màn</span><span class="toc-mobile-chevron" aria-hidden="true">⌄</span>
     </button>
     <div class="toc-content" id="toc-content-gameplay">
-      <div class="toc-header"><p class="toc-title">Mục lục</p><span>123 mục</span></div>
+      <div class="toc-header"><p class="toc-title">Mục lục</p><span>136 mục</span></div>
       <label class="toc-filter-label">Tìm mục
         <input class="toc-filter" type="search" placeholder="Tên mục hoặc chương…" autocomplete="off">
       </label>
@@ -4391,19 +4408,49 @@
         <ol id="toc-children-gameplay-1-2-uong-cong-va-cho-ngam-laundel" hidden><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-muc-ich-va-dong-chay-2">Mục đích và dòng chảy</a>
+          <a class="toc-link toc-level-3" href="#gameplay-mot-loi-thoat-i-xuyen-qua-oi-song-cua-nguoi-khac">Một lối thoát đi xuyên qua đời sống của người khác</a>
         </div>
 
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-2">Cơ chế và tình huống</a>
+          <a class="toc-link toc-level-3" href="#gameplay-1-xuong-cong-cho-nguoi-choi-tu-thu-truoc-khi-gap-nguy-hiem">1. Xuống cống — cho người chơi tự thử trước khi gặp nguy hiểm</a>
         </div>
 
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-oi-au-theo-lua-chon">Đối đầu theo lựa chọn</a>
+          <a class="toc-link toc-level-3" href="#gameplay-2-sewer2-nem-mot-hon-a-e-tao-khoang-trong">2. Sewer2 — ném một hòn đá để tạo khoảng trống</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-3-qua-cua-cho-thay-cang-thang-bang-to-mo">3. Qua cửa chợ — thay căng thẳng bằng tò mò</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-4-lay-loi-ra-mot-viec-chinh-vai-ly-do-e-o-lai">4. Lấy lối ra — một việc chính, vài lý do để ở lại</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-groger-mang-ieu-a-hoc-xuong-mot-cho-ang-so-hon">GROGER — mang điều đã học xuống một chỗ đáng sợ hơn</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-am-thanh-dung-the-nao-e-vui-ma-de-lam">Âm thanh dùng thế nào để vui mà dễ làm?</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-ra-khoi-laundel">Ra khỏi Laundel</a>
         </div>
 
       </li></ol>
@@ -4415,19 +4462,43 @@
         <ol id="toc-children-gameplay-1-3-uong-cong-chinh-va-ben-cang-hoang-hon" hidden><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-muc-ich-va-dong-chay-3">Mục đích và dòng chảy</a>
+          <a class="toc-link toc-level-3" href="#gameplay-tuong-a-toi-uong-thoat">Tưởng đã tới đường thoát</a>
         </div>
 
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-3">Cơ chế và tình huống</a>
+          <a class="toc-link toc-level-3" href="#gameplay-1-cong-chinh-chon-anh-luc-ich-con-yeu">1. Cống chính — chọn đánh lúc địch còn yếu</a>
         </div>
 
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-trum-marius-vane">Trùm: Marius Vane</a>
+          <a class="toc-link toc-level-3" href="#gameplay-2-sewer4-nhay-e-mo-uong-cho-ca-oi">2. Sewer4 — nhảy để mở đường cho cả đội</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-3-khoang-lang-e-nguoi-choi-tin-rang-minh-sap-thoat">3. Khoảng lặng — để người chơi tin rằng mình sắp thoát</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-4-ben-cang-anh-e-toi-uoc-bang-cau-tau">4. Bến cảng — đánh để tới được bảng cầu tàu</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-marius-vane-it-chieu-nhung-buoc-oi-vi-tri">Marius Vane — ít chiêu nhưng buộc đổi vị trí</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-5-vi-sao-oi-lai-toi-tau-ngam">5. Vì sao đội lại tới tàu ngầm?</a>
         </div>
 
       </li></ol>
@@ -4439,25 +4510,49 @@
         <ol id="toc-children-gameplay-1-4-tau-ngam-nghien-cuu-va-shemal" hidden><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-muc-ich-va-dong-chay-4">Mục đích và dòng chảy</a>
+          <a class="toc-link toc-level-3" href="#gameplay-biet-minh-o-au-nhung-khong-chac-minh-ang-thay-gi">Biết mình ở đâu, nhưng không chắc mình đang thấy gì</a>
         </div>
 
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-hai-tuyen-ien">Hai tuyến điện</a>
+          <a class="toc-link toc-level-3" href="#gameplay-1-mot-mon-o-khong-co-that">1. Một món đồ không có thật</a>
         </div>
 
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-4">Cơ chế và tình huống</a>
+          <a class="toc-link toc-level-3" href="#gameplay-2-tuyen-thuong-vao-ba-phong-hieu-dan-chuyen-ang-xay-ra">2. Tuyến thường — vào ba phòng, hiểu dần chuyện đang xảy ra</a>
         </div>
 
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-trum-shemal">Trùm: SheMal</a>
+          <a class="toc-link toc-level-3" href="#gameplay-3-tuyen-pha-ien-nhanh-hon-ve-khoa-cua-nguy-hiem-hon-ve-uong-i">3. Tuyến phá điện — nhanh hơn về khóa cửa, nguy hiểm hơn về đường đi</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-4-truoc-cua-lon-gom-nhung-gi-can-hieu">4. Trước cửa lớn — gom những gì cần hiểu</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-5-shemal-anh-that-truoc-anh-lua-sau">5. SheMal — đánh thật trước, đánh lừa sau</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-6-ho-so-su-co-va-uong-sang-sakuri">6. Hồ sơ, sự cố và đường sang Sakuri</a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#gameplay-nhung-gi-can-giu-khi-dung-man">Những gì cần giữ khi dựng màn</a>
         </div>
 
       </li></ol>
@@ -4475,13 +4570,13 @@
         <ol id="toc-children-gameplay-2-1-lang-chai-va-heni" hidden><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-muc-ich-va-dong-chay-5">Mục đích và dòng chảy</a>
+          <a class="toc-link toc-level-3" href="#gameplay-muc-ich-va-dong-chay-2">Mục đích và dòng chảy</a>
         </div>
 
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-5">Cơ chế và tình huống</a>
+          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-2">Cơ chế và tình huống</a>
         </div>
 
       </li></ol>
@@ -4499,7 +4594,7 @@
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-6">Cơ chế và tình huống</a>
+          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-3">Cơ chế và tình huống</a>
         </div>
 
       </li></ol>
@@ -4511,13 +4606,13 @@
         <ol id="toc-children-gameplay-2-2b-rung-tre-thac-nuoc-cau-a-va-ryozan" hidden><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-muc-ich-va-dong-chay-6">Mục đích và dòng chảy</a>
+          <a class="toc-link toc-level-3" href="#gameplay-muc-ich-va-dong-chay-3">Mục đích và dòng chảy</a>
         </div>
 
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-7">Cơ chế và tình huống</a>
+          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-4">Cơ chế và tình huống</a>
         </div>
 
       </li><li class="toc-item">
@@ -4541,7 +4636,7 @@
       </li><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-8">Cơ chế và tình huống</a>
+          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-5">Cơ chế và tình huống</a>
         </div>
 
       </li><li class="toc-item">
@@ -4673,7 +4768,7 @@
         <ol id="toc-children-gameplay-4-1-bien-gioi-quy-huyet" hidden><li class="toc-item">
         <div class="toc-row" style="--toc-depth: 2">
           <span class="toc-leaf-spacer" aria-hidden="true"></span>
-          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-9">Cơ chế và tình huống</a>
+          <a class="toc-link toc-level-3" href="#gameplay-co-che-va-tinh-huong-6">Cơ chế và tình huống</a>
         </div>
 
       </li><li class="toc-item">
@@ -5221,70 +5316,171 @@
 <li>Henry đánh dấu lúc xe quay đầu; Solei phản đòn; Deep phá giáp khi trùm ngã; Block ưu tiên phòng thủ nếu còn bị thương.</li>
 </ul>
 <h2 id="gameplay-1-2-uong-cong-va-cho-ngam-laundel" tabindex="-1"><a class="heading-link" href="#gameplay-1-2-uong-cong-va-cho-ngam-laundel" aria-label="Link to section">#</a>1-2. Đường cống và chợ ngầm Laundel</h2>
-<h3 id="gameplay-muc-ich-va-dong-chay-2" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-va-dong-chay-2" aria-label="Link to section">#</a>Mục đích và dòng chảy</h3>
-<p>Sau có được thông tin đến quán Bar , nhóm Deep sẽ đến được Laundel là một trung tâm nhỏ có luật lệ, nhiều phe và đời sống riêng. Không gian mở từ đường cống chật, tối sang một ga ngầm hai tầng đầy quầy hàng, đường ray và lối bảo trì.</p>
-<h3 id="gameplay-co-che-va-tinh-huong-2" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-2" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
+<h3 id="gameplay-mot-loi-thoat-i-xuyen-qua-oi-song-cua-nguoi-khac" tabindex="-1"><a class="heading-link" href="#gameplay-mot-loi-thoat-i-xuyen-qua-oi-song-cua-nguoi-khac" aria-label="Link to section">#</a>Một lối thoát đi xuyên qua đời sống của người khác</h3>
+<p><strong>Mục tiêu của đội:</strong> tới bến cảng mà không đi qua các chốt trên mặt đất. Jacques chỉ đường xuống cống sau Armorlite; người giữ lối ra biển nằm trong chợ ngầm Laundel. Người chơi bắt đầu bằng tìm đường, có một khoảng nghỉ để mua bán và làm việc, rồi tự chọn cách vượt chốt cuối chợ.</p>
+<p><strong>Tuyến màn:</strong> phố sau Armorlite → Sewer1 → trạm bơm Sewer2 → ga Laundel → cửa bảo trì phía đông. Chơi tuyến chính khoảng 20–25 phút; ở lại làm việc và tìm GROGER thêm khoảng 10 phút. Đây là hướng dựng thử; thời lượng sẽ điều chỉnh theo bản chơi thực tế.</p>
+<h3 id="gameplay-1-xuong-cong-cho-nguoi-choi-tu-thu-truoc-khi-gap-nguy-hiem" tabindex="-1"><a class="heading-link" href="#gameplay-1-xuong-cong-cho-nguoi-choi-tu-thu-truoc-khi-gap-nguy-hiem" aria-label="Link to section">#</a>1. Xuống cống — cho người chơi tự thử trước khi gặp nguy hiểm</h3>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/marsile background before finish.png" alt="Phố sau Armorlite — dùng nền Marsile Background Before Finish cho đoạn tìm cửa bảo trì xuống cống" loading="lazy">
+  <figcaption>Phố sau Armorlite — dùng nền Marsile Background Before Finish cho đoạn tìm cửa bảo trì xuống cống</figcaption>
+
+</figure>
+<p>Sau trận ngoài quán, Henry thấy đường xe bị phong tỏa. Người chơi vẫn điều khiển nhân vật đi về cuối phố, mở cửa bảo trì cạnh kho hàng. Camera đi xuống theo thang, tiếng xe và nhạc quán mờ dần thành tiếng nước nhỏ giọt. Chuyển cảnh chỉ khoảng 6–8 giây, kết thúc trên một bờ khô; điểm lưu nằm ngay đây.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/Sewer1.png" alt="Sewer1 — đi trên bờ khô, qua rãnh nhỏ rồi tới đoạn cống có người canh" loading="lazy">
+  <figcaption>Sewer1 — đi trên bờ khô, qua rãnh nhỏ rồi tới đoạn cống có người canh</figcaption>
+
+</figure>
+<p>Đoạn đầu chưa có địch. Một rãnh cắt ngang lối đi; người chơi có thể nhảy qua hoặc đi vòng qua tấm ván thấp. Bờ bên kia rộng, nên lần thử đầu không đòi căn từng pixel. Có vài hòn đá cạnh vách: nhặt, ném xuống nước, nhìn gợn nước nổi lên. Xa hơn, một con quái ngoi đầu đúng chỗ đá rơi rồi lặn xuống. Không cần popup dài: người chơi vừa tự thấy tiếng động có thể kéo một mối nguy ra khỏi đường đi.</p>
+<p>Nước sát bờ chỉ làm chậm. Phần kênh sâu nằm ngoài tuyến đi, có mép vỡ và dòng chảy báo nguy; rơi xuống được đưa về bờ vừa đứng, mất nhẹ máu nhưng không mất đồ nhiệm vụ. Không cần thêm hệ bơi/lặn cho đoạn này.</p>
+<h3 id="gameplay-2-sewer2-nem-mot-hon-a-e-tao-khoang-trong" tabindex="-1"><a class="heading-link" href="#gameplay-2-sewer2-nem-mot-hon-a-e-tao-khoang-trong" aria-label="Link to section">#</a>2. Sewer2 — ném một hòn đá để tạo khoảng trống</h3>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/Sewer2.png" alt="Phác thảo Sewer2 — xanh: lối người chơi 1→2→4→5; vàng: ném từ 2 tới 3. 1: vào màn; 2: cột che; 3: tấm sắt tạo tiếng; 4: van cửa; 5: ra chợ. Tấm sắt và vị trí lính là đạo cụ cần đặt thêm" loading="lazy">
+  <figcaption>Phác thảo Sewer2 — xanh: lối người chơi 1→2→4→5; vàng: ném từ 2 tới 3. 1: vào màn; 2: cột che; 3: tấm sắt tạo tiếng; 4: van cửa; 5: ra chợ. Tấm sắt và vị trí lính là đạo cụ cần đặt thêm</figcaption>
+
+</figure>
+<p>Ở cuối Sewer2, một tay chân Áo Đen đứng gần van cửa chợ, quay qua quay lại giữa cửa và đống phế liệu. Người chơi nhìn thấy hắn từ phía sau cột <strong>2</strong>. Bên kia lối đi có tấm sắt treo lỏng <strong>3</strong>; gõ vào đó sẽ kêu rõ hơn ném xuống nước.</p>
+<p><strong>Một lượt chơi cụ thể:</strong> nhặt đá trước cột → ném vào tấm sắt → tên gác quay đầu, đi tới kiểm tra → đi nhẹ phía sau hắn tới van <strong>4</strong> → mở cửa <strong>5</strong>. Cửa đã mở được chốt lại, cả đội đi qua; không cần để Block đứng giữ van mãi. Lính phát hiện người chơi thì chuyển thành trận nhỏ, đánh xong vẫn mở được cửa. Ném hụt có đá để lấy lại. Chọn lén lút giúp giữ thuốc, không phải điều kiện qua màn.</p>
+<p>Đồng đội tự thu đội hình khi chưa giao chiến, không chạy đập đồ làm hỏng bài thử. Nếu muốn đánh, người chơi có thể đặt một General Hold ở chỗ mình chọn để canh rồi tiến lên; <strong>Hold chỉ giữ vị trí</strong>, còn xoay van do nhân vật trực tiếp làm. Đây vẫn là đội một nhân vật trực tiếp và hai hỗ trợ, không gọi cả dàn nhân vật vào cùng một câu đố.</p>
+<h3 id="gameplay-3-qua-cua-cho-thay-cang-thang-bang-to-mo" tabindex="-1"><a class="heading-link" href="#gameplay-3-qua-cua-cho-thay-cang-thang-bang-to-mo" aria-label="Link to section">#</a>3. Qua cửa chợ — thay căng thẳng bằng tò mò</h3>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/RuinedTrainStation_2_Laundel.png" alt="Phác thảo Laundel — xanh: tuyến dưới 1→3→4→5→6; vàng: nhánh cầu thang 2. 1: cổng cống; 2: phòng bảo trì trên ga; 3: quầy thuốc; 4: quầy vũ khí; 5: người buôn tin; 6: lối sang cống chính" loading="lazy">
+  <figcaption>Phác thảo Laundel — xanh: tuyến dưới 1→3→4→5→6; vàng: nhánh cầu thang 2. 1: cổng cống; 2: phòng bảo trì trên ga; 3: quầy thuốc; 4: quầy vũ khí; 5: người buôn tin; 6: lối sang cống chính</figcaption>
+
+</figure>
+<p>Cửa mở ra không phải một bãi quái khác: người chơi nghe tiếng rao, bát đũa và một chiếc radio rè. Máy quay dịch nhẹ để lộ ba quầy dưới ga, cầu thang bên trái và sàn bảo trì ở trên. Nền chợ cao hơn nước cống, có cửa chống ngập và đường thoát nước riêng. Thuốc, thức ăn và chỗ ngủ nằm trên phần khô; người ở đây đang cố giữ một nơi sống được.</p>
+<p>Một nhóm Áo Đen nhận ra đội từ lệnh truy nã, chặn ở sân trước các quầy. Trận mở đầu nằm ngoài khu mua bán; tự vệ ở đây không làm thương nhân ghét đội. Sau trận, chủ quầy <strong>Xanh Dương</strong> gọi người chơi tới, cho một ít thuốc và giải thích lối ra cảng phải đi qua cửa bảo trì cuối ga. <strong>Áo Ghi</strong> biết mã cửa; <strong>Áo Đen</strong> giữ chìa của chốt hàng phía sau. Ba phe có vai trò cụ thể ngay trong đường đi, không cần ba thanh danh tiếng.</p>
+<p>Từ đây người chơi được nghỉ, đổi đội, mua đồ và nói chuyện. Vũ khí được hạ trong vùng trung lập. Muốn cướp quầy phải chủ động chọn hành động có cảnh báo; một cú bấm nhầm không biến cả chợ thành kẻ thù. Nếu gây hấn, dân đóng cửa và một nhóm bảo vệ đến, không sinh lính vô hạn.</p>
+<h3 id="gameplay-4-lay-loi-ra-mot-viec-chinh-vai-ly-do-e-o-lai" tabindex="-1"><a class="heading-link" href="#gameplay-4-lay-loi-ra-mot-viec-chinh-vai-ly-do-e-o-lai" aria-label="Link to section">#</a>4. Lấy lối ra — một việc chính, vài lý do để ở lại</h3>
+<p>Người buôn tin Áo Ghi đưa ra một trao đổi: <strong>bơm thoát nước của chợ bị kẹt, giúp họ sửa thì được mã cửa và chỉ đường</strong>. Người chơi không cần chứng minh lòng tốt bằng hàng loạt việc vặt. Chỉ hoàn thành việc này là đủ đi tiếp.</p>
+<p><strong>Việc chính: Khơi lại dòng nước.</strong> Lấy bộ lọc dự phòng trên sàn bảo trì của ga, rồi mở cửa tắt từ phòng đó về trạm bơm Sewer2. Chuyến quay lại dưới nửa phút, đi qua góc đã thấy từ lần đầu. Tại bơm có hai nhánh ống nhìn được trên cùng màn: một về ga, một tới bể trữ bỏ không. Dấu mực nước cho thấy nhánh về ga đang đầy. Người chơi lắp bộ lọc, xoay cần chuyển dòng sang bể trữ rồi bật bơm. Chọn nhầm thì kim áp suất lên vùng gạch chéo và máy tự ngắt; đổi cần là thử lại được. Khi nước rút, lộ bậc thang dẫn thẳng về quầy. Hoàn thành mở mã cửa, một ít Token và thái độ thân thiện của dân chợ.</p>
+<p><strong>Nếu không muốn làm việc:</strong> mua mã từ Áo Ghi bằng Token, hoặc ép qua chốt hàng của Áo Đen và lấy chìa trên thủ lĩnh. Tuyến bạo lực có một trận khó hơn và dân bớt giúp đỡ; chìa tự vào túi nhiệm vụ khi trùm bị hạ. Người chơi hết tiền vẫn có tuyến sửa bơm miễn phí. Mọi cách đều ra cùng cửa <strong>6</strong>, không phải ba nhánh cốt truyện lớn.</p>
+<p>Hai việc phụ dùng lại chính ga và cống vừa đi qua:</p>
 <ul>
-<li>Ba phe gồm Áo Đen của Jamerson, Xanh Dương bảo vệ thương nhân và Áo Ghi buôn tin.</li>
-<li>Cất vũ khí cho phép đi lại và mua bán. Rút vũ khí biến khu chợ thành chiến trường.</li>
-<li>Người chơi có thể mua, mặc cả, làm việc đổi thẻ hoặc cướp. Mỗi cách ảnh hưởng lòng tin Laundel.</li>
-<li>Quầy Xanh Dương bán thuốc và vũ khí tầm xa; Áo Đen bán vũ khí nặng; Áo Ghi bán thông tin và đường tắt.</li>
-<li>Dòng nước, van, phòng ngập và quái đầu đàn kết nối chiến đấu với kỹ năng của Tulas.</li>
-<li>Người chơi đặt Block ở Hold gần lối nguy hiểm để canh, rồi Solei thao tác van và vượt cửa trước khi đóng; Henry bắn khóa qua kỹ năng phù hợp nếu đã được gán. Phương án Block giữ cần van cần tương tác duy trì riêng, không được coi là tác dụng của Hold.</li>
-<li>Các hình vẽ và lời đồn về GROGER tạo một tuyến điều tra riêng.</li>
+<li><strong>Kiện hàng chưa tới quầy thuốc:</strong> tìm kiện bị giấu sau kiosk trên ga; thấy bên trong là thuốc và giấy ghi người nhận. Trả quầy Xanh Dương được thuốc dùng ngay và giảm giá nhỏ; bán Áo Đen được nhiều Token hơn nhưng quầy thuốc không tặng đồ nữa. Không có lựa chọn khiến tuyến chính bị khóa.</li>
+<li><strong>Tiếng gõ dưới đường ray:</strong> một người già nhờ tìm dấu người mất tích. Graffiti ở Sewer2, sổ tên sau kiosk và vết kéo gần cửa cống nối thành ba manh mối về GROGER. Chúng hiện trong nhật ký để người chơi biết mình còn thiếu gì; mỗi dấu chỉ tính một lần.</li>
 </ul>
-<h3 id="gameplay-oi-au-theo-lua-chon" tabindex="-1"><a class="heading-link" href="#gameplay-oi-au-theo-lua-chon" aria-label="Link to section">#</a>Đối đầu theo lựa chọn</h3>
-<ul>
-<li>Giữ lời với Xanh Dương hoặc Áo Ghi dẫn tới trận đánh thủ lĩnh Áo Đen.</li>
-<li>Cướp phá nhiều dẫn đội vào tuyến cống nguy hiểm và thêm một cuộc phục kích.</li>
-<li>Tìm đủ manh mối cho phép chủ động truy tìm GROGER; lòng tin quá thấp có thể khiến cuộc gặp trở thành một cái bẫy.</li>
-</ul>
-<p><strong>GROGER</strong> lặn dưới nước và chỉ lộ khi có tiếng động hoặc ánh sáng. Thẻ giao dịch rơi trong đấu trường là cám dỗ: nhặt chúng cho lợi ích sau trận nhưng làm GROGER hung hãn hơn. Nếu người Laundel tin đội, họ thả đèn và chỉ điểm yếu. Qua đó, con quái không chỉ là nguồn vật phẩm mà là hậu quả của việc thành phố bỏ mặc một con người.</p>
+<p><strong>RPG vừa đủ:</strong> giữ Token là tiền mua thuốc và nâng một kỹ năng đang có. Mốc thử: các trận trước chợ cho tổng 12 Token, thuốc giá 4, một nâng cấp nhỏ giá 8; làm việc chính giúp đi tiếp mà không phải mua mã. Việc phụ trả khoảng 4–6 Token. Muốn kiếm thêm, nhận việc dọn một bãi hàng với hai đợt quái ngắn; trả thưởng tối đa hai lượt, sau đó chỉ còn luyện tập. Không đặt yêu cầu cấp độ ở cửa cảng hoặc SheMal.</p>
+<h3 id="gameplay-groger-mang-ieu-a-hoc-xuong-mot-cho-ang-so-hon" tabindex="-1"><a class="heading-link" href="#gameplay-groger-mang-ieu-a-hoc-xuong-mot-cho-ang-so-hon" aria-label="Link to section">#</a>GROGER — mang điều đã học xuống một chỗ đáng sợ hơn</h3>
+<p>Đủ manh mối, ông già mở cửa xuống bể dưới ga. Người chơi thấy thang quay về trước khi bước vào; đây là cuộc điều tra tự chọn. Nếu đội đã cướp chợ, một lời chỉ đường giả có thể đưa tới bể này, nhưng vẫn được rút về tìm cửa chính. Hậu quả không biến boss ẩn thành phí bắt buộc để qua màn.</p>
+<p>GROGER nghe rung động mặt nước. Ném đá vào khoảng nước sáng để dụ hắn lao lên; gợn nước chạy về điểm chạm báo đường lao. Né khỏi đó, đánh khi hắn mắc người ở mép bờ, rồi lùi trước cú quét tay. Nửa sau trận thêm một cú quét sau khi trồi, vẫn giữ quy luật cũ. Dân tin đội sẽ thả đèn giúp thấy gợn; không có trợ giúp thì vệt sóng vẫn đọc được.</p>
+<p>Vài Token mắc trên tấm lưới trong bể là cám dỗ: kéo lưới tạo tiếng, GROGER quay sang trước khi người chơi nhặt xong. Có thể để sau trận mới lấy. Phần thưởng chính là vật tư nâng cấp và một mẩu hồ sơ giải thích người mất tích, đủ để nhánh này có ý nghĩa ngoài chuyện đánh thêm một trùm.</p>
+<h3 id="gameplay-am-thanh-dung-the-nao-e-vui-ma-de-lam" tabindex="-1"><a class="heading-link" href="#gameplay-am-thanh-dung-the-nao-e-vui-ma-de-lam" aria-label="Link to section">#</a>Âm thanh dùng thế nào để vui mà dễ làm?</h3>
+<p>Chỉ cần một quy tắc: <strong>địch nghe tiếng ở nơi nó phát ra, không tự biết ai gây ra tiếng</strong>. Đi nhẹ giúp qua sát địch đang quay lưng; chạy trên lưới sắt, đáp mạnh hoặc đập chai gây chú ý. Ném đá xuống nước dụ quái; ném vào sắt dụ lính ở xa hơn. Khi lính đã nhìn thấy và đánh nhau, ném thêm đá không khiến hắn quên người chơi.</p>
+<p>Phản hồi gồm dấu hỏi khi nghe, mũi hướng nhìn khi kiểm tra, dấu chấm than khi thấy người. Tường kín chặn tiếng, cửa mở nối hai phòng; chưa cần mô phỏng âm học thật. Máy bơm và tiếng chợ chủ yếu tạo không khí, không thêm bài canh nhịp bắt buộc. Mỗi tiếng quan trọng đều có gợn nước, động tác hoặc ký hiệu tương ứng để chơi tắt âm vẫn hiểu. Cơ chế nghe siêu nhiên, ghi nhớ thói quen được để dành cho Cái Tai ở chương sau.</p>
+<h3 id="gameplay-ra-khoi-laundel" tabindex="-1"><a class="heading-link" href="#gameplay-ra-khoi-laundel" aria-label="Link to section">#</a>Ra khỏi Laundel</h3>
+<p>Ở cửa <strong>6</strong>, Henry nhận bản đồ vẽ đường cống chính. Phe còn tin đội nhắc vị trí cửa xả và điểm hẹn thuyền. Đội nghỉ chờ đổi ca tuần tra rồi đi cuối chiều: một dòng chuyển cảnh báo thời gian đã trôi qua, nối hợp lý với hoàng hôn bến cảng. Tiếng radio chợ nhỏ dần, tiếng nước lớn lên; lưu ở bờ khô Sewer3 trước khi trả quyền điều khiển.</p>
 <h2 id="gameplay-1-3-uong-cong-chinh-va-ben-cang-hoang-hon" tabindex="-1"><a class="heading-link" href="#gameplay-1-3-uong-cong-chinh-va-ben-cang-hoang-hon" aria-label="Link to section">#</a>1-3. Đường cống chính và bến cảng hoàng hôn</h2>
-<h3 id="gameplay-muc-ich-va-dong-chay-3" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-va-dong-chay-3" aria-label="Link to section">#</a>Mục đích và dòng chảy</h3>
-<p>Phân đoạn này dạy ưu tiên mục tiêu và mở rộng lệnh phối hợp trong không gian lớn. Người chơi rời cống, có một khoảng lặng ngắn ở bến cảng rồi bị lực lượng của Marius phục kích.</p>
-<h3 id="gameplay-co-che-va-tinh-huong-3" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-3" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
-<ul>
-<li>Quái đầu đàn tăng sức mạnh cho cả bầy; hạ chúng làm đám còn lại chậm và dễ choáng.</li>
-<li>Nước sâu làm đội di chuyển chậm nhưng giúp tấn công quái khi chúng còn bơi.</li>
-<li>Tia ngắm bắn tỉa buộc người chơi dùng thùng hàng làm chỗ nấp.</li>
-<li>Mức truy nã quyết định thời điểm và số quân cảnh sát mật xuất hiện.</li>
-<li>Trong khu cầu cống, người chơi đặt Block ở Hold bên trái/phải tại chỗ chặn, gọi hỗ trợ phá giáp của Deep nếu đã cấu hình, rồi chuyển Regroup khi tiến lên. Kẻ chỉ huy được người chơi trực tiếp ưu tiên xử lý; không có lệnh Phá hoặc Tập trung riêng. Các vai trò được chia theo nhân vật trực tiếp và hai General hiện có, không bắt buộc cả ba NPC cùng ra sân.</li>
-<li>Tại bến cảng, bảng điều khiển thuyền là tương tác riêng của nhân vật trực tiếp. Người chơi bố trí General canh bằng Hold và gọi hỗ trợ thích hợp để đối phó lính bắn tỉa. Hold không vận hành bảng máy hoặc tự hộ tống thuyền đang chạy; cần Regroup để đi theo người chơi hoặc cơ chế thuyền riêng. Chỉ có tối đa ba mục tiêu cùng lúc để tránh quá tải.</li>
-</ul>
-<h3 id="gameplay-trum-marius-vane" tabindex="-1"><a class="heading-link" href="#gameplay-trum-marius-vane" aria-label="Link to section">#</a>Trùm: Marius Vane</h3>
-<p>Marius không dùng thần lực. Hắn dùng khói, dao, súng ngắn và hỏa lực bắn tỉa. Ở giai đoạn cuối, số quân tiếp viện phụ thuộc mức truy nã. Trận đấu là phép thử chiến thuật trước khi chương chuyển hẳn sang kinh dị siêu nhiên.</p>
+<h3 id="gameplay-tuong-a-toi-uong-thoat" tabindex="-1"><a class="heading-link" href="#gameplay-tuong-a-toi-uong-thoat" aria-label="Link to section">#</a>Tưởng đã tới đường thoát</h3>
+<p><strong>Mục tiêu ban đầu:</strong> ra cửa xả, tìm thuyền của người quen Henry và rời Marseille. <strong>Tuyến màn:</strong> Sewer3 → các bệ Sewer4 → bến cảng → phục kích Marius → chiếm thuyền cảnh sát mật. Nhịp khoảng 20 phút: cống căng ngắn, bến cảng yên, rồi một trận lớn có mục tiêu rõ.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/Sewer3.png" alt="Sewer3 — quái bơi dưới kênh, lối khô và cửa phòng sơ tán bên đường" loading="lazy">
+  <figcaption>Sewer3 — quái bơi dưới kênh, lối khô và cửa phòng sơ tán bên đường</figcaption>
+
+</figure>
+<h3 id="gameplay-1-cong-chinh-chon-anh-luc-ich-con-yeu" tabindex="-1"><a class="heading-link" href="#gameplay-1-cong-chinh-chon-anh-luc-ich-con-yeu" aria-label="Link to section">#</a>1. Cống chính — chọn đánh lúc địch còn yếu</h3>
+<p>Lối khô thu hẹp, người chơi thấy một con đầu đàn gọi hai quái bơi tới. Chúng chưa đánh được khi đang trèo lên bờ; đòn trúng lúc này gây choáng tốt hơn. Người chơi có thể ném đá kéo cả nhóm tới mép cạn dễ đánh, hoặc chạy lên hạ đầu đàn trước. Hạ nó làm đàn mất tăng sức. Chỉ một nhóm nhỏ xuất hiện, đủ để nhận ra lợi thế của việc quan sát thay vì chờ cả bầy lên bờ mới giao chiến.</p>
+<p>Sau trận có một cửa phòng sơ tán hé mở: vali, giấy nhập thành và một túi thuốc. Nhánh này mất khoảng hai phút, quay ra gần bậc thang kế tiếp. Không khóa chìa chính trong phòng phụ, không làm người chỉ muốn tiến tiếp phải lục mọi góc.</p>
+<h3 id="gameplay-2-sewer4-nhay-e-mo-uong-cho-ca-oi" tabindex="-1"><a class="heading-link" href="#gameplay-2-sewer4-nhay-e-mo-uong-cho-ca-oi" aria-label="Link to section">#</a>2. Sewer4 — nhảy để mở đường cho cả đội</h3>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/Sewer4.png" alt="Phác thảo Sewer4 — xanh: đường nhảy 1→2→3→4; vàng: vị trí cầu bảo trì mở đường theo sau. 1: vào; 2: bệ thấp nghỉ; 3: cần hạ cầu; 4: thang ra cảng. Đường nối được dựng theo tầm nhảy thực tế, không lấy tỷ lệ ảnh làm khoảng nhảy" loading="lazy">
+  <figcaption>Phác thảo Sewer4 — xanh: đường nhảy 1→2→3→4; vàng: vị trí cầu bảo trì mở đường theo sau. 1: vào; 2: bệ thấp nghỉ; 3: cần hạ cầu; 4: thang ra cảng. Đường nối được dựng theo tầm nhảy thực tế, không lấy tỷ lệ ảnh làm khoảng nhảy</figcaption>
+
+</figure>
+<p>Các mảng sàn trong ảnh trở thành một đoạn ngắn có hai khe. Nhảy từ <strong>1</strong> xuống bệ nghỉ <strong>2</strong>, rồi qua bệ <strong>3</strong> để kéo cần hạ cầu. Cầu nối lại lối dưới cho hai đồng đội đi tới; cả đội lên thang <strong>4</strong>. Chỉ nhân vật đang điều khiển phải thực hiện bài nhảy, không bắt AI làm chính xác một chuỗi platform.</p>
+<p>Khe ngắn hơn tầm nhảy của nhân vật kém cơ động nhất, bệ đủ rộng để đứng lại. Nếu không muốn nhảy, van ngay bệ đầu rút nước khỏi lối thấp, cho đi vòng tới tay quay cầu. Tulas tạo bệ là cách tiện hơn khi có kỹ năng, không phải người bắt buộc trong đội. Cầu đã hạ giữ nguyên; hụt chân trở lại bệ gần nhất, không giải lại cả đoạn.</p>
+<p>Thang kết thúc tại cánh cửa xả. Người chơi tương tác mở cửa, ánh cam tràn vào nền cống, camera theo đội bước ra bến. Không cắt cảnh teleport từ bóng tối sang giữa sân cảng.</p>
+<h3 id="gameplay-3-khoang-lang-e-nguoi-choi-tin-rang-minh-sap-thoat" tabindex="-1"><a class="heading-link" href="#gameplay-3-khoang-lang-e-nguoi-choi-tin-rang-minh-sap-thoat" aria-label="Link to section">#</a>3. Khoảng lặng — để người chơi tin rằng mình sắp thoát</h3>
+<p>Khoảng 30 giây đầu trên bến không có địch. Solei nói nửa câu về việc được ngủ mà không nghe còi truy đuổi; Deep nhìn mặt nước, Ghost nhìn mặt trời. Người chơi vẫn đi được, nhạc nhẹ và tiếng gió thay tiếng máy. Chiếc thuyền nằm trong tầm nhìn, nhưng không có người đón.</p>
+<p>Đến gần cầu tàu, một chấm laser lướt qua thùng hàng rồi dừng trên sàn trước chân đội. Tiếng lên đạn, đèn kho bật. Camera chỉ đường tới chỗ nấp trong một nhịp ngắn rồi trả điều khiển <strong>trước phát súng đầu tiên</strong>. Marius bước ra từ sau container; phục kích bắt đầu từ những vị trí đã có trong cảnh, không thả địch sát lưng vô cớ.</p>
+<h3 id="gameplay-4-ben-cang-anh-e-toi-uoc-bang-cau-tau" tabindex="-1"><a class="heading-link" href="#gameplay-4-ben-cang-anh-e-toi-uoc-bang-cau-tau" aria-label="Link to section">#</a>4. Bến cảng — đánh để tới được bảng cầu tàu</h3>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/Harbor_Sunset_Battle_Map.png" alt="Phác thảo bến cảng — xanh: cửa xả 1→chỗ nấp 2→bảng cầu 3→thuyền 4; đỏ: tuyến bắn từ chòi 5, sân Marius tại 6. Container cản đạn; cầu thang bên kho cho đường tiếp cận lính bắn tỉa" loading="lazy">
+  <figcaption>Phác thảo bến cảng — xanh: cửa xả 1→chỗ nấp 2→bảng cầu 3→thuyền 4; đỏ: tuyến bắn từ chòi 5, sân Marius tại 6. Container cản đạn; cầu thang bên kho cho đường tiếp cận lính bắn tỉa</figcaption>
+
+</figure>
+<p>Mục tiêu hiện tại chỉ là <strong>hạ cầu tàu và lấy lại quyền khởi động thuyền</strong>. Có một lính bắn tỉa trên chòi <strong>5</strong>, hai lính áp sát ở sân, còn Marius giữ bộ điều khiển. Người chơi nấp sau container <strong>2</strong>, xử lý lính gần, rồi chọn lên cầu thang hạ bắn tỉa hoặc gọi kỹ năng tầm xa phù hợp. Laser rà, dừng rồi lóe nòng trước khi bắn; tia ngắm không gây sát thương và container thật sự chặn viên đạn.</p>
+<p><strong>Ví dụ chia việc:</strong> nhân vật trực tiếp chạy tới bảng <strong>3</strong>, Block nhận Hold ở mép container để canh một phía, Henry dùng hỗ trợ bắn nếu đã gán kỹ năng đó. Không có họ thì dọn đợt lính đầu rồi tự đi tới máy. Bảng cần một tương tác ngắn; bị đánh thì ngắt, các chốt đã mở được giữ lại. Hold không vận hành máy, Regroup mới gọi General theo khi đội rút về cầu.</p>
+<p>Hạ cầu xong vẫn phải lấy bộ điều khiển trên Marius. Thuyền vì thế có lý do chưa rời bến, thay vì xuất hiện một tường vô hình chờ đánh hết quái. Mức truy nã cao từ trước thêm <strong>một</strong> đợt tiếp viện hữu hạn, đến sớm hơn; không cộng máu trùm hoặc sinh quân liên tục trong lúc dùng máy.</p>
+<h3 id="gameplay-marius-vane-it-chieu-nhung-buoc-oi-vi-tri" tabindex="-1"><a class="heading-link" href="#gameplay-marius-vane-it-chieu-nhung-buoc-oi-vi-tri" aria-label="Link to section">#</a>Marius Vane — ít chiêu nhưng buộc đổi vị trí</h3>
+<p>Trận này giữ ba đòn dễ nhớ: hai nhát dao rồi thu tay; rút súng bắn theo hướng đã khóa; ném khói để đổi phía. Người chơi né hết chuỗi dao mới phản công, rời đường súng hoặc nấp sau thùng. Khói che thân Marius nhưng không che laser và dấu chân ở mép khói, nên vẫn đọc được phía hắn ra.</p>
+<p>Nửa sau, hắn nối một cú lao dao sau loạt súng và thu hồi chậm hơn. Không thêm câu đố trong lúc đang né ba hệ khác. Nếu lính bắn tỉa đã bị hạ thì không tự xuất hiện lại; việc xử lý hắn sớm thật sự làm trận dễ hơn. Điểm lưu nằm trước phục kích, sau chiến thắng có điểm nghỉ để hồi sức và đổi đội.</p>
+<h3 id="gameplay-5-vi-sao-oi-lai-toi-tau-ngam" tabindex="-1"><a class="heading-link" href="#gameplay-5-vi-sao-oi-lai-toi-tau-ngam" aria-label="Link to section">#</a>5. Vì sao đội lại tới tàu ngầm?</h3>
+<p>Trên người Marius có lệnh điều chuyển ghi tên đồng minh Henry và mã của trạm nghiên cứu ngoài khơi. Một lính sống sót xác nhận người đó vẫn còn ở tàu; nếu lính không còn, radio trên thuyền chứa cùng thông tin. Mục tiêu đổi rõ ràng: <strong>“Tới trạm nghiên cứu — tìm người bị bắt và hồ sơ của Jamerson.”</strong> Việc cứu người xuất phát từ điều đội vừa biết, không phải lạc đường tới một boss mới.</p>
+<p>Cảnh chuyển khoảng 20–25 giây, gồm ba nhịp: Henry bật tuyến tự lái bằng bộ điều khiển Marius; thuyền chạy tới một trạm đo áp lực giữa biển; đội cập sàn trạm rồi xuống giếng dịch vụ khô nối tới tàu ngầm đang neo bên dưới. Hai cửa khoang vào mở lần lượt. Không bơm nước vào khoang có người, không cần thêm hệ lái thuyền. Lưu khi cả đội đã xuống tàu; bỏ qua cutscene vẫn đặt đủ đội và vật nhiệm vụ tại đó.</p>
 <h2 id="gameplay-1-4-tau-ngam-nghien-cuu-va-shemal" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-tau-ngam-nghien-cuu-va-shemal" aria-label="Link to section">#</a>1-4. Tàu ngầm nghiên cứu và SheMal</h2>
-<h3 id="gameplay-muc-ich-va-dong-chay-4" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-va-dong-chay-4" aria-label="Link to section">#</a>Mục đích và dòng chảy</h3>
-<p>Tàu ngầm là mê cung phòng thí nghiệm nơi Con Mắt biến ham muốn và sợ hãi thành ảo giác. Mỗi lần mở một cửa áp suất có thể khóa một khu khác, buộc người chơi chia việc.</p>
-<h3 id="gameplay-hai-tuyen-ien" tabindex="-1"><a class="heading-link" href="#gameplay-hai-tuyen-ien" aria-label="Link to section">#</a>Hai tuyến điện</h3>
-<ul>
-<li><strong>Giữ điện ổn định:</strong> dùng ba bảng máy để mở lò phản ứng. Khu vực sáng hơn, bản đồ rõ, hồ sơ còn nguyên và đòn trùm dễ đọc hơn.</li>
-<li><strong>Phá máy phát:</strong> phá hai máy phát phụ để mở cửa trùm sớm. Tuyến này tối, khó hơn và có ít dấu hiệu báo đòn, nhưng chặn được một phần thí nghiệm và cho phần thưởng mạnh hơn.</li>
-</ul>
-<p>Không tuyến nào được xem là lựa chọn hoàn hảo. Giữ điện giúp điều tra nhưng để máy thí nghiệm tiếp tục hoạt động; phá điện cứu một số vật thí nghiệm khỏi quy trình nhưng làm những thứ đã thoát ra nguy hiểm hơn.</p>
-<h3 id="gameplay-co-che-va-tinh-huong-4" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-4" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
-<ul>
-<li>Bình thí nghiệm vỡ nếu đánh bừa và thả thêm quái.</li>
-<li>Vật phẩm, cửa và bóng Jamerson có thể là giả; người chơi kiểm tra bằng ánh sáng, vật ném và hồ sơ.</li>
-<li>Đòn đánh văng vào vách tàu khiến địch bật lại, trở thành vật thể gây sát thương cho mục tiêu khác.</li>
-<li>Cứu tù nhân làm đồng hồ báo động khắt khe hơn nhưng tăng bằng chứng chống Jamerson.</li>
-<li>Đọc đủ hồ sơ Heniana làm yếu một đợt ảo giác trong trận trùm.</li>
-</ul>
-<h3 id="gameplay-trum-shemal" tabindex="-1"><a class="heading-link" href="#gameplay-trum-shemal" aria-label="Link to section">#</a>Trùm: SheMal</h3>
-<ul>
-<li>Giai đoạn đầu là cận chiến nặng: móng vuốt, khóa người, lao tường và chuỗi đánh ba nhịp.</li>
-<li>Giai đoạn hai, Con Mắt tạo hình Heniana và Jamerson. Đánh nhầm bóng giả giúp SheMal hồi phục hoặc đổi thế đánh.</li>
-<li>Ở tuyến mất điện, đấu trường tối hơn và dấu báo đòn ngắn hơn, nhưng điểm yếu phát sáng theo nhịp.</li>
-<li>Mỗi lần SheMal hút năng lượng, một số buồng phụ mở ra. Tuyến ổn định thả nhiều vật thí nghiệm yếu; tuyến phá điện thả ít hơn nhưng hung hãn hơn.</li>
-</ul>
-<p>Sau trận, đội tìm thấy bản đồ bán đảo Sakuri, ký hiệu Cái Tai và ghi chú về “tiếng bệnh trong dòng máu ngủ đông”.</p>
+<h3 id="gameplay-biet-minh-o-au-nhung-khong-chac-minh-ang-thay-gi" tabindex="-1"><a class="heading-link" href="#gameplay-biet-minh-o-au-nhung-khong-chac-minh-ang-thay-gi" aria-label="Link to section">#</a>Biết mình ở đâu, nhưng không chắc mình đang thấy gì</h3>
+<p><strong>Mục tiêu:</strong> cứu người của Henry, lấy bằng chứng và tìm cách vào khu nghiên cứu kín. Tàu ngầm là điểm cuối Chương 1, nơi các việc quen thuộc — nhìn đường, ném một vật, chọn lúc mở cửa — bắt đầu bị Con Mắt làm sai lệch. Tuyến chính khoảng 25–30 phút, không tính đọc hồ sơ và thử lại trùm.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/map_submarine_lab.png" alt="Bản đồ tàu ngầm — dùng map_submarine_lab làm khung chia khoang. Sơ đồ hành trình bên dưới là bố trí gameplay đề xuất; các số viết sẵn trên ảnh chưa phải mã phòng nhiệm vụ" loading="lazy">
+  <figcaption>Bản đồ tàu ngầm — dùng map_submarine_lab làm khung chia khoang. Sơ đồ hành trình bên dưới là bố trí gameplay đề xuất; các số viết sẵn trên ảnh chưa phải mã phòng nhiệm vụ</figcaption>
+
+</figure>
+<p><strong>Cách nhớ tàu:</strong> khoang vào ở đuôi → một hành lang chính → cửa lò lớn → buồng SheMal phía mũi. Ba phòng nhỏ mở từ hành lang; tuyến máy phát nằm ở tầng dưới và vòng trở lại trước cửa lò. Khi hoàn thành một phòng, mở cửa tắt về trục chính. Không bắt chạy ngược hết tàu ba lần.</p>
+<div class="table-wrap"><table><thead><tr><th>Đi từ hành lang chính</th><th>Việc ở phòng</th><th>Khi quay lại thấy gì thay đổi?</th></tr></thead><tbody><tr><td>Phòng trưởng gác</td><td>Lấy quyền bảo trì, bật bảng thứ nhất</td><td>Đèn “Quyền truy cập” ở cửa lò sáng</td></tr>
+<tr><td>Kho dữ liệu và buồng giam</td><td>Chọn cửa thật, lấy hồ sơ, cứu người, bật bảng thứ hai</td><td>Đèn “Dữ liệu” sáng; người được cứu chờ ở khoang vào</td></tr>
+<tr><td>Phòng áp suất</td><td>Khóa chỗ rò rồi cân bằng khoang, bật bảng thứ ba</td><td>Đèn “Khoang an toàn” sáng</td></tr>
+<tr><td>Cầu thang kỹ thuật</td><td>Tới máy phụ A, rồi phòng máy B</td><td>Tuyến phá điện hội lại ở cửa lò, thay ba đèn bằng chốt mở tay</td></tr></tbody></table></div>
+<h3 id="gameplay-1-mot-mon-o-khong-co-that" tabindex="-1"><a class="heading-link" href="#gameplay-1-mot-mon-o-khong-co-that" aria-label="Link to section">#</a>1. Một món đồ không có thật</h3>
+<p>Ngay hành lang đầu có một thùng thuốc. Bên cạnh là bu lông nhặt được. Ném thử: bu lông xuyên hình thùng rồi kêu vào vách phía sau; hình ảnh nhòe đi. Vài bước sau là thùng thật, bu lông bật lại ở đúng mặt thùng. Hai vật ở cùng vùng sáng, lần học này không có địch hoặc hình phạt.</p>
+<p>Luật của câu đố là <strong>ảo ảnh không có va chạm vật lý</strong>. Có thể kiểm chứng bằng cú ném, bóng tiếp đất hoặc dấu va chạm; không bắt nghe bằng tai. Luật này lặp lại tại cửa kho dữ liệu: cửa giả che một hốc cụt, cửa thật có khung, bản lề và lối đi. Chọn sai vẫn quay ra được. Mỗi điểm kiểm tra có vật nhỏ lấy lại, nên không thể hết đá rồi kẹt.</p>
+<h3 id="gameplay-2-tuyen-thuong-vao-ba-phong-hieu-dan-chuyen-ang-xay-ra" tabindex="-1"><a class="heading-link" href="#gameplay-2-tuyen-thuong-vao-ba-phong-hieu-dan-chuyen-ang-xay-ra" aria-label="Link to section">#</a>2. Tuyến thường — vào ba phòng, hiểu dần chuyện đang xảy ra</h3>
+<p><strong>Phòng trưởng gác</strong> dùng lại bài ném vật: dụ một lính khỏi bàn để lấy thẻ, hoặc đánh lấy thẻ. Khi có thẻ, dùng bảng ngay trong phòng. Thẻ nhiệm vụ không bán được và tự thu nếu lính bị đánh văng khỏi khu đi lại.</p>
+<p><strong>Kho dữ liệu</strong> kiểm tra cửa thật/giả trước khi giao chiến. Bên trong là hồ sơ Heniana và người của Henry bị nối vào máy. Để cứu, người chơi ngắt hai khóa trên cùng bảng đầu giường rồi mở buồng. Một đợt lính nhỏ tới; bảo vệ lối ra, người được cứu tự đi theo hành lang đã dọn về khoang vào. Không thêm nhân vật chiến đấu thứ tư hoặc bắt Hold nhắm vào người hộ tống.</p>
+<p><strong>Phòng áp suất</strong> có một đường khí rò chắn bảng điều khiển. Vòi và van nằm trong cùng khung hình: chờ hơi ngừng, tới van khóa nó, đợi hai kim trên bảng vào cùng vùng “An toàn”, rồi nhấn cân bằng. Bấm sớm máy từ chối, không làm ngập hoặc nổ tàu. Đây là khoang khí khô ở trong thân tàu, không phải một van nhỏ thay đổi áp suất ngoài biển.</p>
+<p>Ba bảng có thể bật theo thứ tự tự chọn, sáng rồi không tắt khi rời phòng. Trên đường về cửa lò, người chơi luôn thấy tiến độ bằng ba đèn có tên. Nếu chưa cứu người, bảng nhiệm vụ và lời Henry nhắc trước cửa một chiều, cho quay lại. Người được cứu là lý do đội tới đây; bỏ lại phải là lựa chọn chủ động, không do bước nhầm qua trigger.</p>
+<h3 id="gameplay-3-tuyen-pha-ien-nhanh-hon-ve-khoa-cua-nguy-hiem-hon-ve-uong-i" tabindex="-1"><a class="heading-link" href="#gameplay-3-tuyen-pha-ien-nhanh-hon-ve-khoa-cua-nguy-hiem-hon-ve-uong-i" aria-label="Link to section">#</a>3. Tuyến phá điện — nhanh hơn về khóa cửa, nguy hiểm hơn về đường đi</h3>
+<p>Ở cầu thang kỹ thuật có sơ đồ điện: ba bảng chứng thực mở cửa lò khi tàu hoạt động bình thường; mất cả hai nguồn <strong>điện thí nghiệm</strong> sẽ nhả chốt để nhân viên thoát bằng tay. Pin khẩn cấp riêng vẫn cấp cho đèn sàn, cửa thoát và duy trì sự sống. Vì vậy phá máy không khiến mọi cửa thành một bức tường khóa chết.</p>
+<p>Người chơi xuống phá lõi máy phụ A và B, bỏ qua việc chứng thực ba bảng. Phá là tương tác tại nắp bảo trì có cảnh báo, không do đòn combo lạc vào hậu cảnh. Sau máy đầu có cầu dao dự phòng để đổi ý; phá máy thứ hai mới chốt tuyến. Lúc cửa lò đã mở bằng một cách, phần thưởng và trạng thái tuyến được chốt một lần.</p>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/submarine_backup_generator_b_engine_heat_room.png" alt="Phác thảo máy phát B — xanh: cửa vào 1→van hơi 2→bảng lõi 3→cửa tắt 4; đỏ: đoạn sàn có hơi nóng. Khối động cơ là hậu cảnh, người chơi đi trên sàn trước máy" loading="lazy">
+  <figcaption>Phác thảo máy phát B — xanh: cửa vào 1→van hơi 2→bảng lõi 3→cửa tắt 4; đỏ: đoạn sàn có hơi nóng. Khối động cơ là hậu cảnh, người chơi đi trên sàn trước máy</figcaption>
+
+</figure>
+<p>Tại máy B, hơi nóng cắt ngang sàn. Ống rung và rít trước khi phun; đợi khoảng nghỉ rồi tới van <strong>2</strong> khóa hẳn. Sau đó mới thao tác lõi <strong>3</strong>. Máy ngừng, tiếng quạt biến mất, đèn thường tắt; nghe rõ một buồng giam vừa nhả khóa. Hai vật thí nghiệm bò ra, tạo trận rút ngắn qua cửa <strong>4</strong> về hành lang. Không đặt nhảy khe, bắn tỉa và hơi nóng lên cùng một bài thử.</p>
+<p><strong>Đổi lại điều gì?</strong> Giữ điện cho đường sáng, đầy đủ hồ sơ số và ít buồng tự mở, nhưng quy trình thí nghiệm vẫn chạy tới khi được tắt tại chỗ. Phá điện ngừng quy trình cưỡng bức, mất một phần bản ghi phụ và thả quái hung hãn hơn; cuối tuyến nhận thêm vật tư tốt. Cả hai vẫn cứu được người bằng khóa cơ và lấy được bằng chứng chính. Tuyến khó không bán một kỹ năng bắt buộc để qua chương sau.</p>
+<h3 id="gameplay-4-truoc-cua-lon-gom-nhung-gi-can-hieu" tabindex="-1"><a class="heading-link" href="#gameplay-4-truoc-cua-lon-gom-nhung-gi-can-hieu" aria-label="Link to section">#</a>4. Trước cửa lớn — gom những gì cần hiểu</h3>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/submarine_central_reactor_access.png" alt="Central Reactor Access — cửa lớn là điểm hội hai tuyến; bảng giữa cho biết đã đủ ba trạm hay đang dùng chốt mở tay" loading="lazy">
+  <figcaption>Central Reactor Access — cửa lớn là điểm hội hai tuyến; bảng giữa cho biết đã đủ ba trạm hay đang dùng chốt mở tay</figcaption>
+
+</figure>
+<p>Trước cửa lò có chỗ nghỉ, đổi đội và điểm lưu. Đây là lúc xem hồ sơ, không phải giữa một đồng hồ đếm ngược. Ba mẩu tài liệu — ảnh Heniana, bản ghi giọng nói bên giường và ghi chú cộng hưởng — giải thích vì sao SheMal lặp lời một đứa trẻ. Thu đủ giúp đội nhận ra và rút ngắn một đợt ảo ảnh trong trận, không tự bỏ cả cơ chế trùm.</p>
+<p>Cửa mở vào hành lang ngắn rồi tới bình giam. Có vết móng trong kính. SheMal mở mắt, bước xuống sàn; loa phát “Cha ơi, đừng đóng cửa.” Cutscene khoảng 10 giây, trả quyền trước đòn đầu. Cô là người bị ép vào một cơ thể sai, nên chiến đấu phải nặng, gần và có những khoảng mất tự chủ rõ.</p>
+<h3 id="gameplay-5-shemal-anh-that-truoc-anh-lua-sau" tabindex="-1"><a class="heading-link" href="#gameplay-5-shemal-anh-that-truoc-anh-lua-sau" aria-label="Link to section">#</a>5. SheMal — đánh thật trước, đánh lừa sau</h3>
+
+<figure class="markdown-image">
+  <img src="imgs/Stage1/chap1/submarine_shemal_containment_chamber.png" alt="Phác thảo SheMal — xanh: cửa vào 1 và cửa ra 5; đỏ: sân cận chiến 3; vàng: máy cấp trái 2 và phải 4. Điểm tương tác nằm trước máy, không buộc leo lên bình hậu cảnh" loading="lazy">
+  <figcaption>Phác thảo SheMal — xanh: cửa vào 1 và cửa ra 5; đỏ: sân cận chiến 3; vàng: máy cấp trái 2 và phải 4. Điểm tương tác nằm trước máy, không buộc leo lên bình hậu cảnh</figcaption>
+
+</figure>
+<p><strong>Nửa đầu: đọc người thật.</strong> SheMal có chuỗi hai nhát vuốt rồi một nhát nặng; đòn chộp mở hai tay trước khi lao; cú lao tường có động tác ghì chân báo hướng. Người chơi né/đỡ các nhát đầu, tránh nhát cuối rồi đánh vào khoảng thu tay. Dụ cô lao trượt vào vách mở cơ hội dài hơn. Không cần bấm QTE khi bị chộp; đồng đội có thể phá thế bằng kỹ năng đã gán, hoặc người chơi chịu một cú quăng rồi có thời gian đứng dậy.</p>
+<p><strong>Nửa sau: một bóng giả chen vào nhịp cũ.</strong> Con Mắt tạo một hình SheMal lệch sang bên, đôi lúc hình Heniana/Jamerson lướt qua sau kính. Bóng giả thiếu tiếp đất và không có gợn va chạm; vật ném đi xuyên như bài học đầu tàu. Chỉ một bóng xuất hiện mỗi đợt. Đánh nhầm làm nó vỡ, SheMal thật có cơ hội đổi phía; lần giới thiệu đầu không đánh úp ngay. Không cần thêm cơ chế hồi máu khi đánh nhầm khiến trận kéo dài và AI hỗ trợ bị phạt oan.</p>
+<p><strong>Nhịp nghỉ có mục tiêu:</strong> Hai máy cạnh bình dùng tụ tích năng lượng còn dư, kể cả khi điện thí nghiệm đã bị cắt. SheMal lùi về bình hút năng lượng, một dây sáng nối tới máy <strong>2</strong> hoặc <strong>4</strong>. Người chơi chạy tới ngắt máy đang sáng, hoặc ném vào công tắc phía trước nó. Cô không đồng thời áp sát trong nhịp này. Một buồng phụ mở thả ít quái; xử lý xong cô trở lại chuỗi cận chiến. Chỉ dùng nhịp hút tối đa hai lần, không tạo nguồn sinh quái vô hạn.</p>
+<p>Tuyến mất điện thêm một nhát quét sau cú lao và làm góc sân tối hơn; <strong>vẫn giữ báo đòn, bóng chân và đèn sàn đọc được</strong>. Tuyến sáng dễ quan sát hơn và có quái phụ yếu hơn. Độ khó đến từ phải phản ứng thêm một việc quen thuộc, không đến từ giấu thông tin rồi bắt đoán.</p>
+<h3 id="gameplay-6-ho-so-su-co-va-uong-sang-sakuri" tabindex="-1"><a class="heading-link" href="#gameplay-6-ho-so-su-co-va-uong-sang-sakuri" aria-label="Link to section">#</a>6. Hồ sơ, sự cố và đường sang Sakuri</h3>
+<p>Sau trận, liên kết thí nghiệm bị phá làm khu phản ứng quá tải ở cả hai tuyến. Điện pin còn mở được đường thoát nhưng không cứu được khu máy. Cửa <strong>5</strong> mở tới bàn hồ sơ; đội tự nhận bản đồ Sakuri, ký hiệu Cái Tai và ghi chú về “tiếng bệnh trong dòng máu ngủ đông” trước khi chạy. Lưu ngay sau trận để thất bại khi rút không bắt đánh lại SheMal.</p>
+<p>Đường thoát dùng lại hành lang chính tới khoang vào, khoảng một phút. Sập và hơi nóng xảy ra theo các mốc đội đi tới, có cảnh báo; bản đầu không cần đồng hồ chết cứng. Người đã cứu chờ sẵn ở khoang, lên giếng dịch vụ cùng đội. Các phòng phụ đóng cửa hướng người chơi ra ngoài, tuyến chính luôn thông.</p>
+<p>Ba nhịp kết cảnh: Jamerson nói qua loa về con gái; đội thấy một bóng giống ông sau kính bị lửa che; thuyền rời trạm khi biển phía sau sáng lên. Đội tin ông đã chết, nhưng một cảnh riêng cho người xem thấy Jamerson thật thoát bằng ống phóng với mẫu máu và bản đồ. Hồ sơ khiến Henry muốn đưa bằng chứng ra ngoài, Solei muốn tìm Heniana; bản đồ chuyển vùng dẫn chuyến đi phía đông tới Sakuri. Heni chưa gia nhập trong Chương 1.</p>
+<h3 id="gameplay-nhung-gi-can-giu-khi-dung-man" tabindex="-1"><a class="heading-link" href="#gameplay-nhung-gi-can-giu-khi-dung-man" aria-label="Link to section">#</a>Những gì cần giữ khi dựng màn</h3>
+<p>Chỉ bổ sung ba kiểu tương tác dùng lại: <strong>ném vật tạo tiếng/kiểm chứng, van hoặc bảng máy có trạng thái, cầu/thang nối hai sàn</strong>. Lén lút là lựa chọn tiết kiệm sức; đánh trực tiếp vẫn giải được đường chính. Đồng đội có lối theo an toàn, Hold không thay thao tác giữ máy, và mọi kỹ năng riêng đều có cách môi trường thay thế.</p>
+<p>Chết hoặc tải lại phải giữ đúng cửa đã mở, việc đã trả, phần thưởng đã nhận, người đã cứu và tuyến điện đã chọn. Bỏ qua cutscene vẫn nhận hồ sơ và đứng ở đúng cửa ra. Tất cả chú thích đường đi trên ảnh là lớp phác thảo để dựng thử; đạo cụ, vùng va chạm và khoảng nhảy còn phải đặt vào game.</p>
 <h2 id="gameplay-chuong-2-sakuri-va-cai-tai" tabindex="-1"><a class="heading-link" href="#gameplay-chuong-2-sakuri-va-cai-tai" aria-label="Link to section">#</a>Chương 2 – Sakuri và Cái Tai</h2>
 <p>Chương này phát triển từ <strong>nghe môi trường → điều khiển tiếng động → phá thói quen → đối mặt với kẻ nghe được ý nghĩ</strong>. Sakuri đáng thương nhiều hơn độc ác: Cái Tai khiến cô phải nghe máu, bệnh, lời nói dối và ham muốn của người khác quá lâu.</p>
 <h2 id="gameplay-2-1-lang-chai-va-heni" tabindex="-1"><a class="heading-link" href="#gameplay-2-1-lang-chai-va-heni" aria-label="Link to section">#</a>2-1. Làng chài và Heni</h2>
-<h3 id="gameplay-muc-ich-va-dong-chay-5" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-va-dong-chay-5" aria-label="Link to section">#</a>Mục đích và dòng chảy</h3>
+<h3 id="gameplay-muc-ich-va-dong-chay-2" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-va-dong-chay-2" aria-label="Link to section">#</a>Mục đích và dòng chảy</h3>
 <p>Nhịp chơi chậm lại sau Marseille. Người chơi khám phá làng chài, giúp người bệnh và gặp Heni như một cô bé đang sống trong cộng đồng, không phải một vật phẩm cốt truyện.</p>
-<h3 id="gameplay-co-che-va-tinh-huong-5" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-5" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
+<h3 id="gameplay-co-che-va-tinh-huong-2" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-2" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
 <ul>
 <li>Vùng dịch làm hồi sinh lực và thể lực chậm lại nhưng chưa gây nguy hiểm tức thời.</li>
 <li>Cách mua hàng, mặc cả và trò chuyện ảnh hưởng lòng tin của Heni.</li>
@@ -5295,7 +5491,7 @@
 <h2 id="gameplay-2-2-khu-cach-ly-va-uong-len-thu-phu" tabindex="-1"><a class="heading-link" href="#gameplay-2-2-khu-cach-ly-va-uong-len-thu-phu" aria-label="Link to section">#</a>2-2. Khu cách ly và đường lên thủ phủ</h2>
 <h3 id="gameplay-muc-ich-2" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-2" aria-label="Link to section">#</a>Mục đích</h3>
 <p>Đây là bài học đầu tiên về tiếng động. Chạy, phá vật và dùng súng đều tạo vùng âm thanh khiến tuần tra đổi hướng.</p>
-<h3 id="gameplay-co-che-va-tinh-huong-6" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-6" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
+<h3 id="gameplay-co-che-va-tinh-huong-3" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-3" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
 <ul>
 <li>Vật ném dùng để tạo tiếng động giả.</li>
 <li>Chuông cách ly có thể bị bắn đứt dây, leo lên tháo hoặc giữ thang cho đồng đội.</li>
@@ -5305,9 +5501,9 @@
 </ul>
 <p>Solei bị gọi là người ngoài từ cả hai phía. Câu chuyện cá nhân của cô đi cùng lối chơi: muốn tiến lên, cô phải hiểu hệ thống phân loại người bệnh nhưng không chấp nhận để hệ thống ấy định nghĩa mình.</p>
 <h2 id="gameplay-2-2b-rung-tre-thac-nuoc-cau-a-va-ryozan" tabindex="-1"><a class="heading-link" href="#gameplay-2-2b-rung-tre-thac-nuoc-cau-a-va-ryozan" aria-label="Link to section">#</a>2-2B. Rừng tre, thác nước, cầu đá và Ryozan</h2>
-<h3 id="gameplay-muc-ich-va-dong-chay-6" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-va-dong-chay-6" aria-label="Link to section">#</a>Mục đích và dòng chảy</h3>
+<h3 id="gameplay-muc-ich-va-dong-chay-3" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-va-dong-chay-3" aria-label="Link to section">#</a>Mục đích và dòng chảy</h3>
 <p>Rừng tre và thác nước là cầu nối giữa khu cách ly với thủ phủ. Địa hình thiên nhiên vừa che tầm nhìn vừa thay đổi âm thanh.</p>
-<h3 id="gameplay-co-che-va-tinh-huong-7" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-7" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
+<h3 id="gameplay-co-che-va-tinh-huong-4" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-4" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
 <ul>
 <li>Tre gãy tạo tiếng động, kéo tuần tra hoặc làm Ryozan đổi hướng.</li>
 <li>Tiếng thác che bước chân và tiếng lệnh, giúp tránh Cái Tai nhưng làm dấu báo đòn khó nghe.</li>
@@ -5324,7 +5520,7 @@
 <h2 id="gameplay-2-3-quoc-lo-cho-trung-tam-va-cung-ien" tabindex="-1"><a class="heading-link" href="#gameplay-2-3-quoc-lo-cho-trung-tam-va-cung-ien" aria-label="Link to section">#</a>2-3. Quốc lộ, chợ trung tâm và cung điện</h2>
 <h3 id="gameplay-muc-ich-3" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-3" aria-label="Link to section">#</a>Mục đích</h3>
 <p>Thủ phủ cho thấy Sakuri không phải quê hương lý tưởng. Tin đồn, giấy thông hành và dấu gia tộc trở thành tài nguyên xã hội.</p>
-<h3 id="gameplay-co-che-va-tinh-huong-8" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-8" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
+<h3 id="gameplay-co-che-va-tinh-huong-5" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-5" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
 <ul>
 <li>Nghe đủ tin đồn mở nhiều cách vào cung điện.</li>
 <li>Đứng gần nguồn ồn giúp che bước chân khi nghe lén.</li>
@@ -5462,7 +5658,7 @@
   <figcaption>Bản đồ Chương 4-1</figcaption>
 
 </figure>
-<h3 id="gameplay-co-che-va-tinh-huong-9" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-9" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
+<h3 id="gameplay-co-che-va-tinh-huong-6" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-va-tinh-huong-6" aria-label="Link to section">#</a>Cơ chế và tình huống</h3>
 <ul>
 <li>Lỗ địa nhiệt phun khí độc theo chu kỳ. Block chặn bằng đá hoặc Tulas tạo màng lọc để đội đi qua.</li>
 <li>Kẻ thuần quỷ gọi thêm quái; hạ hắn khiến quái mất kiểm soát và quay sang tấn công lính gần nhất.</li>
@@ -6368,6 +6564,12 @@
             <figcaption>Stage1 / Chap1 - Lab Under Mechanical Surveillance Room</figcaption>
           </figure>
           <figure class="gallery-slot">
+            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/Stage1/chap1/map_submarine_lab.png" data-lightbox-alt="Stage1 / Chap1 - Map Submarine Lab" data-lightbox-caption="Stage1 / Chap1 - Map Submarine Lab" aria-label="View larger image: Stage1 / Chap1 - Map Submarine Lab">
+              <img src="imgs/Stage1/chap1/map_submarine_lab.png" alt="Stage1 / Chap1 - Map Submarine Lab" loading="lazy">
+            </button>
+            <figcaption>Stage1 / Chap1 - Map Submarine Lab</figcaption>
+          </figure>
+          <figure class="gallery-slot">
             <button class="gallery-image-button" type="button" data-lightbox-src="imgs/Stage1/chap1/marsile background before finish.png" data-lightbox-alt="Stage1 / Chap1 - Marsile Background Before Finish" data-lightbox-caption="Stage1 / Chap1 - Marsile Background Before Finish" aria-label="View larger image: Stage1 / Chap1 - Marsile Background Before Finish">
               <img src="imgs/Stage1/chap1/marsile background before finish.png" alt="Stage1 / Chap1 - Marsile Background Before Finish" loading="lazy">
             </button>
@@ -6402,12 +6604,6 @@
               <img src="imgs/Stage1/chap1/Sewer4.png" alt="Stage1 / Chap1 - Sewer4" loading="lazy">
             </button>
             <figcaption>Stage1 / Chap1 - Sewer4</figcaption>
-          </figure>
-          <figure class="gallery-slot">
-            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/Stage1/chap1/structure_Lab_underground.png" data-lightbox-alt="Stage1 / Chap1 - Structure Lab Underground" data-lightbox-caption="Stage1 / Chap1 - Structure Lab Underground" aria-label="View larger image: Stage1 / Chap1 - Structure Lab Underground">
-              <img src="imgs/Stage1/chap1/structure_Lab_underground.png" alt="Stage1 / Chap1 - Structure Lab Underground" loading="lazy">
-            </button>
-            <figcaption>Stage1 / Chap1 - Structure Lab Underground</figcaption>
           </figure>
           <figure class="gallery-slot">
             <button class="gallery-image-button" type="button" data-lightbox-src="imgs/Stage1/chap1/submarine_backup_generator_b_engine_heat_room.png" data-lightbox-alt="Stage1 / Chap1 - Submarine Backup Generator B Engine Heat Room" data-lightbox-caption="Stage1 / Chap1 - Submarine Backup Generator B Engine Heat Room" aria-label="View larger image: Stage1 / Chap1 - Submarine Backup Generator B Engine Heat Room">
@@ -9870,6 +10066,11 @@
             "caption": "chap1 - Lab Under Mechanical Surveillance Room"
       },
       {
+            "src": "imgs/Stage1/chap1/map_submarine_lab.png",
+            "alt": "chap1 - Map Submarine Lab",
+            "caption": "chap1 - Map Submarine Lab"
+      },
+      {
             "src": "imgs/Stage1/chap1/marsile background before finish.png",
             "alt": "chap1 - Marsile Background Before Finish",
             "caption": "chap1 - Marsile Background Before Finish"
@@ -9898,11 +10099,6 @@
             "src": "imgs/Stage1/chap1/Sewer4.png",
             "alt": "chap1 - Sewer4",
             "caption": "chap1 - Sewer4"
-      },
-      {
-            "src": "imgs/Stage1/chap1/structure_Lab_underground.png",
-            "alt": "chap1 - Structure Lab Underground",
-            "caption": "chap1 - Structure Lab Underground"
       },
       {
             "src": "imgs/Stage1/chap1/submarine_backup_generator_b_engine_heat_room.png",
@@ -11287,7 +11483,70 @@ const readerNavigation = (() => {
     openHash();
     updateProgress();
   </script>
-  <script>function createOnlineControls({getSession,note,bar,saveButton,dialog,restore,isEditing,hasChanges}) {
+  <script>const stagePlans = (() => {
+  const plans = {
+    'Sewer2.png': { points:[[5,57],[30,52],[47,58],[91,32],[97,60]], route:[[5,66],[30,66],[30,79],[86,79],[91,60],[97,60]], choice:[[30,52],[47,58]] },
+    'RuinedTrainStation_2_Laundel.png': { points:[[5,52],[33,46],[46,57],[62,57],[78,57],[92,57]], route:[[5,73],[46,73],[62,73],[78,73],[92,73]], choice:[[25,67],[33,46],[41,29],[78,29]] },
+    'Sewer4.png': { points:[[9,52],[40,83],[61,42],[93,53]], route:[[9,52],[22,60],[40,83],[46,66],[61,42],[73,31],[86,39],[93,53]], choice:[[40,83],[61,83],[61,42]] },
+    'Harbor_Sunset_Battle_Map.png': { points:[[5,52],[74,52],[59,48],[48,47],[80,21],[43,79]], route:[[5,67],[27,68],[43,64],[74,60],[59,55],[48,47]], danger:[[80,21],[43,79]] },
+    'submarine_backup_generator_b_engine_heat_room.png': { points:[[7,62],[28,78],[53,65],[94,67]], route:[[7,85],[28,85],[53,82],[94,82]], danger:[[35,88],[44,88]] },
+    'submarine_shemal_containment_chamber.png': { points:[[7,71],[30,66],[50,86],[71,66],[94,71]], route:[[7,85],[18,85]], choice:[[30,66],[30,80],[71,80],[71,66]], danger:[[37,91],[63,91]] },
+  };
+  let serial = 0;
+  const ns = 'http://www.w3.org/2000/svg';
+  function svgNode(tag, attrs) {
+    const node = document.createElementNS(ns, tag);
+    for (const [key,value] of Object.entries(attrs)) node.setAttribute(key, value);
+    return node;
+  }
+  function enhance(root = document) {
+    for (const img of root.querySelectorAll('figure img')) {
+      if (!img.alt.startsWith('Phác thảo ') || img.closest('.stage-map')) continue;
+      const plan = plans[decodeURIComponent(new URL(img.src, document.baseURI).pathname.split('/').pop())];
+      if (!plan) continue;
+      if (!img.naturalWidth) {
+        if (!img.dataset.stageWaiting) {
+          img.dataset.stageWaiting = 'true';
+          img.addEventListener('load', () => { delete img.dataset.stageWaiting; if (!img.closest('[contenteditable="true"]')) enhance(root); }, {once:true});
+        }
+        continue;
+      }
+      const figure = img.closest('figure'); figure.classList.add('stage-plan');
+      const scroll = document.createElement('div'); scroll.className = 'stage-plan-scroll';
+      const map = document.createElement('div'); map.className = 'stage-map';
+      img.replaceWith(scroll); scroll.append(map); map.append(img);
+      const w = img.naturalWidth, h = img.naturalHeight;
+      const svg = svgNode('svg', {class:'stage-map-overlay',viewBox:`0 0 ${w} ${h}`,'aria-hidden':'true'});
+      const defs = svgNode('defs', {}); svg.append(defs);
+      const key = document.createElement('div'); key.className = 'stage-plan-key stage-map-overlay'; key.setAttribute('aria-hidden','true');
+      for (const [type,color,label] of [['route','#5fe5ce','Lối đi chính'],['choice','#ffd36c','Thao tác / nhánh lựa chọn'],['danger','#ff887e','Vị trí nguy hiểm']]) {
+        if (!plan[type]) continue;
+        const id = `stage-arrow-${++serial}`;
+        const marker = svgNode('marker', {id,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:4,markerHeight:4,orient:'auto'});
+        marker.append(svgNode('path',{d:'M 0 0 L 10 5 L 0 10 z',fill:color})); defs.append(marker);
+        const line = svgNode('polyline', {points:plan[type].map(([x,y])=>`${x*w/100},${y*h/100}`).join(' '),fill:'none',stroke:color,'stroke-width':w/260,'stroke-linejoin':'round','stroke-linecap':'round','marker-end':`url(#${id})`});
+        if (type !== 'route') line.setAttribute('stroke-dasharray',`${w/130} ${w/200}`);
+        svg.append(line);
+        const labelNode = document.createElement('span'); labelNode.className = `stage-key-${type}`; labelNode.textContent = label; key.append(labelNode);
+      }
+      map.append(svg);
+      plan.points.forEach(([x,y],i) => {
+        const marker = document.createElement('span'); marker.className = 'stage-marker stage-map-overlay';
+        marker.textContent = i+1; marker.style.left = x+'%'; marker.style.top = y+'%'; marker.setAttribute('aria-hidden','true'); map.append(marker);
+      });
+      scroll.after(key);
+    }
+  }
+  function clear(root) {
+    root.querySelectorAll('.stage-map-overlay').forEach(node => node.remove());
+    root.querySelectorAll('.stage-plan-scroll').forEach(node => { const img = node.querySelector('img'); if (img) node.replaceWith(img); });
+    root.querySelectorAll('.stage-plan').forEach(node => node.classList.remove('stage-plan'));
+    root.querySelectorAll('[data-stage-waiting]').forEach(node => node.removeAttribute('data-stage-waiting'));
+  }
+  return { enhance, clear };
+})();
+
+    function createOnlineControls({getSession,note,bar,saveButton,dialog,restore,isEditing,hasChanges}) {
   const controls = document.createElement('div'); controls.className='online-account'; controls.hidden=true;
   note.after(controls);
   function button(text, action, parent=controls) {
@@ -11578,6 +11837,55 @@ function createImagePicker({ getSession, onInsert }) {
   };
 }
 
+  // Three-way merge of normalized top-level HTML blocks. Conflicts remain explicit.
+function mergeGameplayBlocks(base, mine, theirs) {
+  const equal = (a, b) => a.length === b.length && a.every((x, i) => x === b[i]);
+  function changes(next) {
+    const rows = Array.from({length: base.length + 1}, () => new Uint32Array(next.length + 1));
+    for (let i = base.length - 1; i >= 0; i--) for (let j = next.length - 1; j >= 0; j--)
+      rows[i][j] = base[i] === next[j] ? 1 + rows[i + 1][j + 1] : Math.max(rows[i + 1][j], rows[i][j + 1]);
+    const edits = []; let i = 0, j = 0, edit;
+    while (i < base.length || j < next.length) {
+      if (i < base.length && j < next.length && base[i] === next[j]) {
+        if (edit) { edits.push(edit); edit = null; } i++; j++;
+      } else {
+        edit ||= {start:i, end:i, blocks:[]};
+        if (j < next.length && (i === base.length || rows[i][j + 1] >= rows[i + 1][j])) edit.blocks.push(next[j++]);
+        else edit.end = ++i;
+      }
+    }
+    if (edit) edits.push(edit);
+    return edits;
+  }
+  if (equal(mine, theirs)) return [{blocks:mine}];
+  if (equal(base, mine)) return [{blocks:theirs}];
+  if (equal(base, theirs)) return [{blocks:mine}];
+  // Bound memory for unusually large imported documents; show an explicit conflict instead.
+  if (base.length * Math.max(mine.length, theirs.length) > 4_000_000) return [{mine, theirs}];
+  const edits = [...changes(mine).map(e => ({...e, side:'mine'})), ...changes(theirs).map(e => ({...e, side:'theirs'}))]
+    .sort((a,b) => a.start - b.start || a.end - b.end);
+  const result = []; let cursor = 0;
+  for (let n = 0; n < edits.length;) {
+    const group = [edits[n++]]; const start = group[0].start; let end = group[0].end;
+    // Include boundary insertions conservatively: no insertion is silently dropped.
+    while (n < edits.length && (edits[n].start < end || (edits[n].start === end &&
+      (edits[n].end === end || group.some(e => e.start === end && e.end === end))))) {
+      group.push(edits[n]); end = Math.max(end, edits[n++].end);
+    }
+    result.push({blocks:base.slice(cursor, start)});
+    const render = side => {
+      const output = []; let at = start;
+      for (const edit of group.filter(e => e.side === side)) { output.push(...base.slice(at, edit.start), ...edit.blocks); at = edit.end; }
+      return [...output, ...base.slice(at, end)];
+    };
+    const a = render('mine'), b = render('theirs'), original = base.slice(start,end);
+    result.push(equal(a,b) || equal(b,original) ? {blocks:a} : equal(a,original) ? {blocks:b} : {mine:a,theirs:b});
+    cursor = end;
+  }
+  result.push({blocks:base.slice(cursor)});
+  return result;
+}
+
   (() => {
   const article = document.querySelector('[data-search-root="gameplay"]');
   const start = document.getElementById('web-edit-start');
@@ -11587,11 +11895,21 @@ function createImagePicker({ getSession, onInsert }) {
   const isLocalEditor = location.hostname === '127.0.0.1' && location.port === '4177';
   const isOnline = location.origin === onlineOrigin || (location.hostname === '127.0.0.1' && !isLocalEditor);
   const isPublishedReader = location.hostname === 'kslhuy.github.io';
+  const localOptIn = isLocalEditor && new URLSearchParams(location.search).has('local');
+  if ((location.protocol === 'file:' || isLocalEditor) && !localOptIn) {
+    window.addEventListener('hashchange', () => { if (location.hash.startsWith('#gameplay')) location.replace(onlineOrigin + '/' + location.hash); });
+  }
+  if ((location.protocol === 'file:' || isLocalEditor) && !localOptIn &&
+      (location.hash.startsWith('#gameplay') || new URLSearchParams(location.search).has('edit'))) {
+    location.replace(onlineOrigin + '/' + (new URLSearchParams(location.search).has('edit') ? '?edit=1' : '') + (location.hash || '#gameplay'));
+    return;
+  }
   let loadError = '';
   if (!article || !start) return;
   const draftKey = 'divergency-gameplay-web-draft-v1';
   let session = null;
   let revision = '';
+  let baseBlocks = null;
   let editing = false;
   let dirty = false;
   let saving = false;
@@ -11636,31 +11954,32 @@ function createImagePicker({ getSession, onInsert }) {
       onlineControls.access();
       return;
     }
-    if (isPublishedReader) {
-      location.href = onlineOrigin + '/?edit=1#gameplay';
-      return;
-    }
-    dialog.innerHTML = '<h2>Chỉnh sửa trên máy của bạn</h2><p>Mở <strong>Open-Gameplay-Editor.cmd</strong> trong thư mục dự án. Trình duyệt sẽ mở trang biên tập; bấm <strong>Chỉnh sửa trực tiếp</strong> để bắt đầu.</p><p>Nút Lưu cập nhật dự án trên máy. Website online được cập nhật khi bạn xuất bản dự án.</p><form method="dialog"><button>Đã hiểu</button></form>';
-    dialog.showModal();
+    location.href = onlineOrigin + '/?edit=1' + (location.hash.startsWith('#gameplay') ? location.hash : '#gameplay');
   }
   const ready = (async () => {
     if (!isOnline && !isLocalEditor && !isPublishedReader) return;
     try {
       if (isOnline || isPublishedReader) {
         note.textContent = 'Đang tải nội dung đã lưu online…';
-        const content = await fetch((isPublishedReader ? onlineOrigin : '') + '/api/gameplay', {signal:AbortSignal.timeout(20000)});
+        article.setAttribute('aria-busy', 'true');
+        if (isPublishedReader) article.hidden = true;
+        const content = await fetch((isPublishedReader ? onlineOrigin : '') + '/api/gameplay', {cache:'no-store',signal:AbortSignal.timeout(20000)});
         if (!content.ok) throw new Error('Chưa tải được bản online. Trang đang hiển thị bản đi kèm giao diện; hãy tải lại.');
         const current = await content.json();
         article.innerHTML = current.html;
+        article.hidden = false;
+        article.removeAttribute('aria-busy');
         if (isPublishedReader) article.querySelectorAll('img[src^="imgs/online/"]').forEach(img => img.src = onlineOrigin + '/' + img.getAttribute('src'));
         refreshIndex();
+        const target = document.getElementById(location.hash.slice(1));
+        if (target && article.contains(target)) readerNavigation.jumpTo(target);
         const metrics = document.querySelectorAll('#pane-gameplay .doc-stats dd');
         if(metrics.length===3) {
           metrics[0].textContent = Math.max(1,Math.ceil(article.textContent.trim().split(/\s+/).length/220))+' min';
           metrics[1].textContent = article.querySelectorAll('h1,h2').length;
           metrics[2].textContent = article.querySelectorAll('table').length;
         }
-        note.textContent = current.savedAt ? 'Bản online đã lưu lúc '+new Date(current.savedAt).toLocaleString('vi-VN') : 'Nội dung đã sẵn sàng để nhóm biên tập online.';
+        note.textContent = 'Nội dung chung · bản ' + current.revision + (current.savedAt ? ' · lưu lúc ' + new Date(current.savedAt).toLocaleString('vi-VN') : '');
         if (isPublishedReader) return;
       }
       const response = await fetch('/api/editor', { signal: AbortSignal.timeout(10000) });
@@ -11672,7 +11991,8 @@ function createImagePicker({ getSession, onInsert }) {
       }
     } catch (error) {
       loadError = error.message;
-      if(isOnline || isPublishedReader) note.textContent = 'Không tải được bản online. Đang hiển thị bản đi kèm giao diện; hãy tải lại trang.';
+      article.removeAttribute('aria-busy');
+      if (isOnline || isPublishedReader) note.innerHTML = 'Chưa tải được nội dung chung. Hãy tải lại hoặc <a href="' + onlineOrigin + '/#gameplay">mở trang biên tập online</a>.';
     }
   })();
   const onlineControls = createOnlineControls({ getSession: () => session, note, bar, saveButton, dialog,
@@ -11686,11 +12006,13 @@ function createImagePicker({ getSession, onInsert }) {
       signal: AbortSignal.timeout(20000),
     });
     const result = await response.json();
-    if (!response.ok) throw new Error(result.error || 'Không lưu được. Giữ bản nháp và thử lại.');
+    if (!response.ok) throw Object.assign(new Error(result.error || 'Không lưu được. Giữ bản nháp và thử lại.'), {status:response.status});
     return result;
   }
-  function cleanHTML() {
-    const copy = article.cloneNode(true);
+  function normalizedHTML(html) {
+    const copy = document.createElement('div');
+    copy.innerHTML = html;
+    stagePlans.clear(copy);
     copy.querySelectorAll('.heading-link').forEach(node => node.remove());
     copy.querySelectorAll('*').forEach(node => {
       node.removeAttribute('contenteditable');
@@ -11700,6 +12022,38 @@ function createImagePicker({ getSession, onInsert }) {
       if (!node.className) node.removeAttribute('class');
     });
     return copy.innerHTML;
+  }
+  function cleanHTML() { return normalizedHTML(article.innerHTML); }
+  function safeFragment(html) {
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    const allowed = new Set('H1 H2 H3 H4 H5 H6 P BR STRONG B EM I U S UL OL LI BLOCKQUOTE PRE CODE TABLE THEAD TBODY TFOOT TR TH TD FIGURE FIGCAPTION IMG DIV SPAN A HR'.split(' '));
+    template.content.querySelectorAll('*').forEach(node => {
+      if (!allowed.has(node.tagName)) { node.remove(); return; }
+      for (const attribute of [...node.attributes]) {
+        if (!['class','src','alt','href','colspan','rowspan','start'].includes(attribute.name)) node.removeAttribute(attribute.name);
+      }
+      if (node.hasAttribute('src')) {
+        let src = node.getAttribute('src');
+        for (const prefix of [onlineOrigin + '/', 'https://kslhuy.github.io/divergency-reviewer-site/']) {
+          if (src.startsWith(prefix)) src = src.slice(prefix.length);
+        }
+        if (/^imgs\//.test(src) && !src.split('/').includes('..')) node.setAttribute('src',src);
+        else node.removeAttribute('src');
+      }
+      if (node.hasAttribute('href') && !/^(https?:\/\/|mailto:|#)/i.test(node.getAttribute('href'))) node.removeAttribute('href');
+    });
+    const copy = document.createElement('div'); copy.append(template.content);
+    stagePlans.clear(copy);
+    return copy.innerHTML;
+  }
+  function blocks(html) {
+    const copy = document.createElement('div'); copy.innerHTML = normalizedHTML(html);
+    return [...copy.childNodes].filter(n => n.nodeType !== 3 || n.textContent.trim())
+      .map(n => {
+        if (n.nodeType === 1) return n.outerHTML;
+        const escaped = document.createElement('div'); escaped.textContent = n.textContent; return escaped.innerHTML;
+      });
   }
   function storeDraft() {
     clearTimeout(draftTimer);
@@ -11758,11 +12112,12 @@ function createImagePicker({ getSession, onInsert }) {
     }
     const index = tree(roots); index.className = 'toc-tree';
     readerNavigation.refresh('gameplay', index, headings.length);
+    if (!editing) stagePlans.enhance(article);
   }
   function changed() {
     if (!editing) return;
     dirty = true;
-    message('Có thay đổi chưa lưu vào dự án.');
+    message('Có thay đổi chưa lưu. Bấm Lưu khi xong.');
     clearTimeout(draftTimer);
     draftTimer = setTimeout(() => { storeDraft(); refreshIndex(); }, 750);
   }
@@ -11791,11 +12146,13 @@ function createImagePicker({ getSession, onInsert }) {
     changed();
   }
   function editableState(enabled) {
+    if (enabled) stagePlans.clear(article);
     article.contentEditable = String(enabled);
     article.spellcheck = true;
     if (enabled) { article.setAttribute('role', 'textbox'); article.setAttribute('aria-label', 'Nội dung gameplay, chỉnh sửa trực tiếp'); article.setAttribute('aria-multiline', 'true'); }
     else { article.removeAttribute('role'); article.removeAttribute('aria-label'); article.removeAttribute('aria-multiline'); }
     article.querySelectorAll('.heading-link, img').forEach(node => { node.contentEditable = 'false'; });
+    if (!enabled) stagePlans.enhance(article);
   }
   function offerDraft() {
     let draft;
@@ -11804,7 +12161,7 @@ function createImagePicker({ getSession, onInsert }) {
     dialog.innerHTML = '<h2>Có bản nháp chưa lưu</h2><p id="draft-description"></p><button type="button" id="draft-restore">Khôi phục bản nháp</button> <button type="button" id="draft-skip">Giữ bản đang lưu</button>';
     dialog.querySelector('#draft-description').textContent = draft.revision === revision
       ? 'Khôi phục nội dung bạn đã sửa trong lần biên tập trước?'
-      : 'Bản nháp dựa trên phiên bản cũ. Bạn có thể khôi phục để tải bản nháp và đối chiếu; hệ thống sẽ chặn ghi đè bản mới.';
+      : 'Khôi phục phần đang sửa. Khi lưu, trang sẽ giúp bạn gộp với thay đổi mới của nhóm.';
     dialog.querySelector('#draft-restore').onclick = () => {
       // Drafts are plain data in storage, but still sanitize before inserting into the live document.
       const template = document.createElement('template');
@@ -11819,6 +12176,7 @@ function createImagePicker({ getSession, onInsert }) {
         if (node.hasAttribute('href') && !/^(https?:\/\/|mailto:|#)/i.test(node.getAttribute('href'))) node.removeAttribute('href');
       });
       article.replaceChildren(template.content);
+      baseBlocks = draft.revision === revision ? baseBlocks : null;
       revision = draft.revision;
       editableState(true);
       refreshIndex();
@@ -11835,6 +12193,7 @@ function createImagePicker({ getSession, onInsert }) {
     floatingStart.querySelector('.web-edit-fab-label').textContent = editing ? 'Tiếp tục sửa gameplay' : 'Chỉnh sửa gameplay';
   }
   async function beginEditing() {
+    if (!isOnline && !localOptIn && !editing) { help(); return; }
     const wasActive = document.getElementById('pane-gameplay').classList.contains('is-active');
     const keepPosition = wasActive && article.getBoundingClientRect().top < window.innerHeight * 0.6;
     const readingPosition = window.scrollY;
@@ -11850,6 +12209,7 @@ function createImagePicker({ getSession, onInsert }) {
       const current = await request('GET');
       if (!wasActive) activateTab('gameplay', true, false);
       revision = current.revision;
+      baseBlocks = blocks(current.html);
       article.innerHTML = current.html;
       editing = true;
       dirty = false;
@@ -11870,9 +12230,47 @@ function createImagePicker({ getSession, onInsert }) {
   }
   start.addEventListener('click', beginEditing);
   floatingStart.addEventListener('click', beginEditing);
-  async function save() {
+  async function resolveConflict() {
+    const latest = await request('GET');
+    const mine = blocks(cleanHTML()), theirs = blocks(latest.html);
+    const merged = baseBlocks ? mergeGameplayBlocks(baseBlocks, mine, theirs) : [{mine, theirs}];
+    const conflicts = merged.filter(part => !part.blocks);
+    const apply = () => {
+      article.innerHTML = merged.flatMap(part => part.blocks || part[part.choice]).join('\n');
+      revision = latest.revision; baseBlocks = theirs;
+      editableState(true); refreshIndex(); changed(); storeDraft();
+    };
+    if (!conflicts.length) { apply(); return true; }
+    dialog.replaceChildren();
+    const title = document.createElement('h2'); title.textContent = 'Chọn nội dung cho đoạn cùng sửa';
+    const description = document.createElement('p'); description.textContent = 'Các thay đổi khác đã được gộp. Chọn bản muốn giữ cho từng đoạn bên dưới, rồi lưu ngay tại đây.';
+    dialog.append(title, description);
+    for (const [index, conflict] of conflicts.entries()) {
+      const field = document.createElement('fieldset'); field.className = 'editor-conflict';
+      const legend = document.createElement('legend'); legend.textContent = 'Đoạn ' + (index + 1); field.append(legend);
+      for (const [side, label] of [['mine','Phần tôi vừa sửa'],['theirs','Bản nhóm vừa lưu']]) {
+        const option = document.createElement('label');
+        const radio = document.createElement('input'); radio.type = 'radio'; radio.name = 'conflict-' + index;
+        radio.onchange = () => { conflict.choice = side; accept.disabled = conflicts.some(c => !c.choice); };
+        option.append(radio, document.createTextNode(label));
+        const preview = document.createElement('div'); preview.className = 'editor-conflict-preview';
+        const text = document.createElement('div'); text.innerHTML = conflict[side].join('\n');
+        preview.textContent = text.textContent || '(Đoạn đã được xóa)';
+        option.append(preview); field.append(option);
+      }
+      dialog.append(field);
+    }
+    const accept = document.createElement('button'); accept.textContent = 'Gộp và lưu'; accept.className = 'editor-primary'; accept.disabled = true;
+    accept.onclick = () => { apply(); dialog.close(); save(); };
+    const cancel = document.createElement('button'); cancel.textContent = 'Tiếp tục sửa bản nháp'; cancel.onclick = () => dialog.close();
+    dialog.append(accept, cancel); dialog.showModal();
+    message('Bản nháp được giữ. Chọn đoạn muốn giữ trong cửa sổ gộp thay đổi.');
+    return false;
+  }
+  async function save(mergeAttempt = 0) {
+    if (typeof mergeAttempt !== 'number') mergeAttempt = 0;
     if (saving || !editing) return;
-    if (!dirty) { message('Nội dung đã được lưu vào dự án.'); return; }
+    if (!dirty) { message('Nội dung đã được lưu.'); return; }
     saving = true;
     storeDraft();
     const submitted = cleanHTML();
@@ -11883,6 +12281,7 @@ function createImagePicker({ getSession, onInsert }) {
     try {
       const result = await request('PUT', { revision: submittedRevision, html: submitted });
       revision = result.revision;
+      baseBlocks = blocks(result.html || submitted);
       // Keep the cursor and any typing performed while the request was in flight.
       dirty = cleanHTML() !== submitted;
       refreshIndex();
@@ -11896,7 +12295,16 @@ function createImagePicker({ getSession, onInsert }) {
       }
       message(dirty ? 'Đã lưu. Có nội dung bạn vừa sửa thêm; bấm Lưu khi xong.' : (session.online ? 'Đã lưu online cho cả nhóm lúc ' : 'Đã lưu trên máy lúc ') + new Date(result.savedAt).toLocaleTimeString('vi-VN') + '.');
       // Refresh the reader in place after leaving editing; this also refreshes its index.
-    } catch (error) { message(error.message, true); }
+    } catch (error) {
+      if (error.status === 409 && mergeAttempt < 3) {
+        try {
+          if (await resolveConflict()) {
+            saving = false;
+            await save(mergeAttempt + 1);
+          }
+        } catch (mergeError) { message(mergeError.message + ' Bản nháp vẫn được giữ.', true); }
+      } else message(error.status === 409 ? 'Nhóm đang lưu liên tục. Bản nháp đã được giữ; bấm Lưu để thử lại.' : error.message, true);
+    }
     finally { saving = false; saveButton.disabled = false; finishButton.disabled = false; }
   }
   function finish() {
@@ -11933,7 +12341,9 @@ function createImagePicker({ getSession, onInsert }) {
   article.addEventListener('paste', event => {
     if (!editing) return;
     event.preventDefault();
-    document.execCommand('insertText', false, event.clipboardData.getData('text/plain'));
+    const html = event.clipboardData.getData('text/html');
+    if (html) document.execCommand('insertHTML', false, safeFragment(html));
+    else document.execCommand('insertText', false, event.clipboardData.getData('text/plain'));
   });
   article.addEventListener('drop', event => { if (editing) { event.preventDefault(); message('Bấm + Chèn ảnh để chọn ảnh trong thư viện hoặc tải ảnh từ máy.'); } });
   bar.querySelector('#editor-add-row').addEventListener('click', () => {
@@ -11967,7 +12377,7 @@ function createImagePicker({ getSession, onInsert }) {
       figure.append(img);
       if (caption) { const figcaption = document.createElement('figcaption'); figcaption.textContent = caption; figure.append(figcaption); }
       command('insertHTML', figure.outerHTML + '<p><br></p>');
-      message('Đã chèn ảnh. Bấm Lưu vào dự án khi chỉnh sửa xong.');
+      message('Đã chèn ảnh. Bấm Lưu khi chỉnh sửa xong.');
     },
   });
   bar.querySelector('#editor-add-image').addEventListener('click', () => {

@@ -8,6 +8,14 @@
   const isOnline = location.origin === onlineOrigin || (location.hostname === '127.0.0.1' && !isLocalEditor);
   const isPublishedReader = location.hostname === 'kslhuy.github.io';
   const localOptIn = isLocalEditor && new URLSearchParams(location.search).has('local');
+  if ((location.protocol === 'file:' || isLocalEditor) && !localOptIn) {
+    window.addEventListener('hashchange', () => { if (location.hash.startsWith('#gameplay')) location.replace(onlineOrigin + '/' + location.hash); });
+  }
+  if ((location.protocol === 'file:' || isLocalEditor) && !localOptIn &&
+      (location.hash.startsWith('#gameplay') || new URLSearchParams(location.search).has('edit'))) {
+    location.replace(onlineOrigin + '/' + (new URLSearchParams(location.search).has('edit') ? '?edit=1' : '') + (location.hash || '#gameplay'));
+    return;
+  }
   let loadError = '';
   if (!article || !start) return;
   const draftKey = 'divergency-gameplay-web-draft-v1';
@@ -65,19 +73,25 @@
     try {
       if (isOnline || isPublishedReader) {
         note.textContent = 'Đang tải nội dung đã lưu online…';
-        const content = await fetch((isPublishedReader ? onlineOrigin : '') + '/api/gameplay', {signal:AbortSignal.timeout(20000)});
+        article.setAttribute('aria-busy', 'true');
+        if (isPublishedReader) article.hidden = true;
+        const content = await fetch((isPublishedReader ? onlineOrigin : '') + '/api/gameplay', {cache:'no-store',signal:AbortSignal.timeout(20000)});
         if (!content.ok) throw new Error('Chưa tải được bản online. Trang đang hiển thị bản đi kèm giao diện; hãy tải lại.');
         const current = await content.json();
         article.innerHTML = current.html;
+        article.hidden = false;
+        article.removeAttribute('aria-busy');
         if (isPublishedReader) article.querySelectorAll('img[src^="imgs/online/"]').forEach(img => img.src = onlineOrigin + '/' + img.getAttribute('src'));
         refreshIndex();
+        const target = document.getElementById(location.hash.slice(1));
+        if (target && article.contains(target)) readerNavigation.jumpTo(target);
         const metrics = document.querySelectorAll('#pane-gameplay .doc-stats dd');
         if(metrics.length===3) {
           metrics[0].textContent = Math.max(1,Math.ceil(article.textContent.trim().split(/\s+/).length/220))+' min';
           metrics[1].textContent = article.querySelectorAll('h1,h2').length;
           metrics[2].textContent = article.querySelectorAll('table').length;
         }
-        note.textContent = current.savedAt ? 'Bản online đã lưu lúc '+new Date(current.savedAt).toLocaleString('vi-VN') : 'Nội dung đã sẵn sàng để nhóm biên tập online.';
+        note.textContent = 'Nội dung chung · bản ' + current.revision + (current.savedAt ? ' · lưu lúc ' + new Date(current.savedAt).toLocaleString('vi-VN') : '');
         if (isPublishedReader) return;
       }
       const response = await fetch('/api/editor', { signal: AbortSignal.timeout(10000) });
@@ -89,7 +103,8 @@
       }
     } catch (error) {
       loadError = error.message;
-      if(isOnline || isPublishedReader) note.textContent = 'Không tải được bản online. Đang hiển thị bản đi kèm giao diện; hãy tải lại trang.';
+      article.removeAttribute('aria-busy');
+      if (isOnline || isPublishedReader) note.innerHTML = 'Chưa tải được nội dung chung. Hãy tải lại hoặc <a href="' + onlineOrigin + '/#gameplay">mở trang biên tập online</a>.';
     }
   })();
   const onlineControls = createOnlineControls({ getSession: () => session, note, bar, saveButton, dialog,
@@ -109,6 +124,7 @@
   function normalizedHTML(html) {
     const copy = document.createElement('div');
     copy.innerHTML = html;
+    stagePlans.clear(copy);
     copy.querySelectorAll('.heading-link').forEach(node => node.remove());
     copy.querySelectorAll('*').forEach(node => {
       node.removeAttribute('contenteditable');
@@ -120,6 +136,29 @@
     return copy.innerHTML;
   }
   function cleanHTML() { return normalizedHTML(article.innerHTML); }
+  function safeFragment(html) {
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    const allowed = new Set('H1 H2 H3 H4 H5 H6 P BR STRONG B EM I U S UL OL LI BLOCKQUOTE PRE CODE TABLE THEAD TBODY TFOOT TR TH TD FIGURE FIGCAPTION IMG DIV SPAN A HR'.split(' '));
+    template.content.querySelectorAll('*').forEach(node => {
+      if (!allowed.has(node.tagName)) { node.remove(); return; }
+      for (const attribute of [...node.attributes]) {
+        if (!['class','src','alt','href','colspan','rowspan','start'].includes(attribute.name)) node.removeAttribute(attribute.name);
+      }
+      if (node.hasAttribute('src')) {
+        let src = node.getAttribute('src');
+        for (const prefix of [onlineOrigin + '/', 'https://kslhuy.github.io/divergency-reviewer-site/']) {
+          if (src.startsWith(prefix)) src = src.slice(prefix.length);
+        }
+        if (/^imgs\//.test(src) && !src.split('/').includes('..')) node.setAttribute('src',src);
+        else node.removeAttribute('src');
+      }
+      if (node.hasAttribute('href') && !/^(https?:\/\/|mailto:|#)/i.test(node.getAttribute('href'))) node.removeAttribute('href');
+    });
+    const copy = document.createElement('div'); copy.append(template.content);
+    stagePlans.clear(copy);
+    return copy.innerHTML;
+  }
   function blocks(html) {
     const copy = document.createElement('div'); copy.innerHTML = normalizedHTML(html);
     return [...copy.childNodes].filter(n => n.nodeType !== 3 || n.textContent.trim())
@@ -185,6 +224,7 @@
     }
     const index = tree(roots); index.className = 'toc-tree';
     readerNavigation.refresh('gameplay', index, headings.length);
+    if (!editing) stagePlans.enhance(article);
   }
   function changed() {
     if (!editing) return;
@@ -218,11 +258,13 @@
     changed();
   }
   function editableState(enabled) {
+    if (enabled) stagePlans.clear(article);
     article.contentEditable = String(enabled);
     article.spellcheck = true;
     if (enabled) { article.setAttribute('role', 'textbox'); article.setAttribute('aria-label', 'Nội dung gameplay, chỉnh sửa trực tiếp'); article.setAttribute('aria-multiline', 'true'); }
     else { article.removeAttribute('role'); article.removeAttribute('aria-label'); article.removeAttribute('aria-multiline'); }
     article.querySelectorAll('.heading-link, img').forEach(node => { node.contentEditable = 'false'; });
+    if (!enabled) stagePlans.enhance(article);
   }
   function offerDraft() {
     let draft;
@@ -411,7 +453,9 @@
   article.addEventListener('paste', event => {
     if (!editing) return;
     event.preventDefault();
-    document.execCommand('insertText', false, event.clipboardData.getData('text/plain'));
+    const html = event.clipboardData.getData('text/html');
+    if (html) document.execCommand('insertHTML', false, safeFragment(html));
+    else document.execCommand('insertText', false, event.clipboardData.getData('text/plain'));
   });
   article.addEventListener('drop', event => { if (editing) { event.preventDefault(); message('Bấm + Chèn ảnh để chọn ảnh trong thư viện hoặc tải ảnh từ máy.'); } });
   bar.querySelector('#editor-add-row').addEventListener('click', () => {

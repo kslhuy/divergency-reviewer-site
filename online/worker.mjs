@@ -156,7 +156,9 @@ async function handle(request, env) {
     return json(404,{error:'Không tìm thấy chức năng.'});
   }
   if (['/','/Divergency_Reviewer_Tabs.html'].includes(route) && ['GET','HEAD'].includes(request.method)) {
-    return new Response(request.method==='HEAD'?null:page,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
+    const current = request.method === 'HEAD' ? null : await contentStore(env.DB).read();
+    const rendered = current && page.replace(/(<article\b[^>]*data-search-root="gameplay"[^>]*>)[\s\S]*?(<\/article>)/, (_,open,close) => open + current.html + close);
+    return new Response(rendered,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
   }
   if (['/steam-image-tool.html','/rewards-card-poster.html'].includes(route)) return Response.redirect(imageOrigin+route.slice(1),302);
   return json(404,{error:'Không tìm thấy trang.'});

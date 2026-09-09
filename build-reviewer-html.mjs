@@ -2843,6 +2843,7 @@ export function buildPage(docs) {
       }
     }
     ${readFileSync(path.join(here, "scripts/gameplay-editor.css"), "utf8")}
+    ${readFileSync(path.join(here, "scripts/stage-layouts.css"), "utf8")}
   </style>
 </head>
 <body>
@@ -3185,7 +3186,8 @@ export function buildPage(docs) {
     openHash();
     updateProgress();
   </script>
-  <script>${readFileSync(path.join(here, "scripts/online-controls.js"), "utf8")}
+  <script>${readFileSync(path.join(here, "scripts/stage-layouts.js"), "utf8")}
+    ${readFileSync(path.join(here, "scripts/online-controls.js"), "utf8")}
   ${readFileSync(path.join(here, "scripts/image-picker.js"), "utf8")}
   ${readFileSync(path.join(here, "scripts/merge-gameplay.js"), "utf8")}
   ${readFileSync(path.join(here, "scripts/gameplay-editor.js"), "utf8")}</script>
