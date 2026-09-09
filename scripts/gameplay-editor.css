@@ -133,3 +133,6 @@
 .online-member p { overflow-wrap: anywhere; }
 .editor-dialog { max-height: 85vh; overflow: auto; }
 .editor-dialog a { display: inline-block; color: #83cbbc; padding: .75rem; }
+.editor-conflict { margin: 1rem 0; border: 1px solid #667085; border-radius: 8px; }
+.editor-conflict label { display: block; margin: .75rem 0; cursor: pointer; }
+.editor-conflict-preview { white-space: pre-wrap; max-height: 180px; overflow: auto; padding: .75rem; border: 1px solid #667085; margin-top: .4rem; font-size: .9rem; }

@@ -1,3 +1,2 @@
 @echo off
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\start-editor.ps1"
-if errorlevel 1 pause
+start "" "https://divergency-team-editor.huyq1471.chatgpt.site/?edit=1#gameplay"

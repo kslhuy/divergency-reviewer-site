@@ -7,11 +7,13 @@
   const isLocalEditor = location.hostname === '127.0.0.1' && location.port === '4177';
   const isOnline = location.origin === onlineOrigin || (location.hostname === '127.0.0.1' && !isLocalEditor);
   const isPublishedReader = location.hostname === 'kslhuy.github.io';
+  const localOptIn = isLocalEditor && new URLSearchParams(location.search).has('local');
   let loadError = '';
   if (!article || !start) return;
   const draftKey = 'divergency-gameplay-web-draft-v1';
   let session = null;
   let revision = '';
+  let baseBlocks = null;
   let editing = false;
   let dirty = false;
   let saving = false;
@@ -56,12 +58,7 @@
       onlineControls.access();
       return;
     }
-    if (isPublishedReader) {
-      location.href = onlineOrigin + '/?edit=1#gameplay';
-      return;
-    }
-    dialog.innerHTML = '<h2>Chỉnh sửa trên máy của bạn</h2><p>Mở <strong>Open-Gameplay-Editor.cmd</strong> trong thư mục dự án. Trình duyệt sẽ mở trang biên tập; bấm <strong>Chỉnh sửa trực tiếp</strong> để bắt đầu.</p><p>Nút Lưu cập nhật dự án trên máy. Website online được cập nhật khi bạn xuất bản dự án.</p><form method="dialog"><button>Đã hiểu</button></form>';
-    dialog.showModal();
+    location.href = onlineOrigin + '/?edit=1' + (location.hash.startsWith('#gameplay') ? location.hash : '#gameplay');
   }
   const ready = (async () => {
     if (!isOnline && !isLocalEditor && !isPublishedReader) return;
@@ -106,11 +103,12 @@
       signal: AbortSignal.timeout(20000),
     });
     const result = await response.json();
-    if (!response.ok) throw new Error(result.error || 'Không lưu được. Giữ bản nháp và thử lại.');
+    if (!response.ok) throw Object.assign(new Error(result.error || 'Không lưu được. Giữ bản nháp và thử lại.'), {status:response.status});
     return result;
   }
-  function cleanHTML() {
-    const copy = article.cloneNode(true);
+  function normalizedHTML(html) {
+    const copy = document.createElement('div');
+    copy.innerHTML = html;
     copy.querySelectorAll('.heading-link').forEach(node => node.remove());
     copy.querySelectorAll('*').forEach(node => {
       node.removeAttribute('contenteditable');
@@ -120,6 +118,15 @@
       if (!node.className) node.removeAttribute('class');
     });
     return copy.innerHTML;
+  }
+  function cleanHTML() { return normalizedHTML(article.innerHTML); }
+  function blocks(html) {
+    const copy = document.createElement('div'); copy.innerHTML = normalizedHTML(html);
+    return [...copy.childNodes].filter(n => n.nodeType !== 3 || n.textContent.trim())
+      .map(n => {
+        if (n.nodeType === 1) return n.outerHTML;
+        const escaped = document.createElement('div'); escaped.textContent = n.textContent; return escaped.innerHTML;
+      });
   }
   function storeDraft() {
     clearTimeout(draftTimer);
@@ -182,7 +189,7 @@
   function changed() {
     if (!editing) return;
     dirty = true;
-    message('Có thay đổi chưa lưu vào dự án.');
+    message('Có thay đổi chưa lưu. Bấm Lưu khi xong.');
     clearTimeout(draftTimer);
     draftTimer = setTimeout(() => { storeDraft(); refreshIndex(); }, 750);
   }
@@ -224,7 +231,7 @@
     dialog.innerHTML = '<h2>Có bản nháp chưa lưu</h2><p id="draft-description"></p><button type="button" id="draft-restore">Khôi phục bản nháp</button> <button type="button" id="draft-skip">Giữ bản đang lưu</button>';
     dialog.querySelector('#draft-description').textContent = draft.revision === revision
       ? 'Khôi phục nội dung bạn đã sửa trong lần biên tập trước?'
-      : 'Bản nháp dựa trên phiên bản cũ. Bạn có thể khôi phục để tải bản nháp và đối chiếu; hệ thống sẽ chặn ghi đè bản mới.';
+      : 'Khôi phục phần đang sửa. Khi lưu, trang sẽ giúp bạn gộp với thay đổi mới của nhóm.';
     dialog.querySelector('#draft-restore').onclick = () => {
       // Drafts are plain data in storage, but still sanitize before inserting into the live document.
       const template = document.createElement('template');
@@ -239,6 +246,7 @@
         if (node.hasAttribute('href') && !/^(https?:\/\/|mailto:|#)/i.test(node.getAttribute('href'))) node.removeAttribute('href');
       });
       article.replaceChildren(template.content);
+      baseBlocks = draft.revision === revision ? baseBlocks : null;
       revision = draft.revision;
       editableState(true);
       refreshIndex();
@@ -255,6 +263,7 @@
     floatingStart.querySelector('.web-edit-fab-label').textContent = editing ? 'Tiếp tục sửa gameplay' : 'Chỉnh sửa gameplay';
   }
   async function beginEditing() {
+    if (!isOnline && !localOptIn && !editing) { help(); return; }
     const wasActive = document.getElementById('pane-gameplay').classList.contains('is-active');
     const keepPosition = wasActive && article.getBoundingClientRect().top < window.innerHeight * 0.6;
     const readingPosition = window.scrollY;
@@ -270,6 +279,7 @@
       const current = await request('GET');
       if (!wasActive) activateTab('gameplay', true, false);
       revision = current.revision;
+      baseBlocks = blocks(current.html);
       article.innerHTML = current.html;
       editing = true;
       dirty = false;
@@ -290,9 +300,47 @@
   }
   start.addEventListener('click', beginEditing);
   floatingStart.addEventListener('click', beginEditing);
-  async function save() {
+  async function resolveConflict() {
+    const latest = await request('GET');
+    const mine = blocks(cleanHTML()), theirs = blocks(latest.html);
+    const merged = baseBlocks ? mergeGameplayBlocks(baseBlocks, mine, theirs) : [{mine, theirs}];
+    const conflicts = merged.filter(part => !part.blocks);
+    const apply = () => {
+      article.innerHTML = merged.flatMap(part => part.blocks || part[part.choice]).join('\n');
+      revision = latest.revision; baseBlocks = theirs;
+      editableState(true); refreshIndex(); changed(); storeDraft();
+    };
+    if (!conflicts.length) { apply(); return true; }
+    dialog.replaceChildren();
+    const title = document.createElement('h2'); title.textContent = 'Chọn nội dung cho đoạn cùng sửa';
+    const description = document.createElement('p'); description.textContent = 'Các thay đổi khác đã được gộp. Chọn bản muốn giữ cho từng đoạn bên dưới, rồi lưu ngay tại đây.';
+    dialog.append(title, description);
+    for (const [index, conflict] of conflicts.entries()) {
+      const field = document.createElement('fieldset'); field.className = 'editor-conflict';
+      const legend = document.createElement('legend'); legend.textContent = 'Đoạn ' + (index + 1); field.append(legend);
+      for (const [side, label] of [['mine','Phần tôi vừa sửa'],['theirs','Bản nhóm vừa lưu']]) {
+        const option = document.createElement('label');
+        const radio = document.createElement('input'); radio.type = 'radio'; radio.name = 'conflict-' + index;
+        radio.onchange = () => { conflict.choice = side; accept.disabled = conflicts.some(c => !c.choice); };
+        option.append(radio, document.createTextNode(label));
+        const preview = document.createElement('div'); preview.className = 'editor-conflict-preview';
+        const text = document.createElement('div'); text.innerHTML = conflict[side].join('\n');
+        preview.textContent = text.textContent || '(Đoạn đã được xóa)';
+        option.append(preview); field.append(option);
+      }
+      dialog.append(field);
+    }
+    const accept = document.createElement('button'); accept.textContent = 'Gộp và lưu'; accept.className = 'editor-primary'; accept.disabled = true;
+    accept.onclick = () => { apply(); dialog.close(); save(); };
+    const cancel = document.createElement('button'); cancel.textContent = 'Tiếp tục sửa bản nháp'; cancel.onclick = () => dialog.close();
+    dialog.append(accept, cancel); dialog.showModal();
+    message('Bản nháp được giữ. Chọn đoạn muốn giữ trong cửa sổ gộp thay đổi.');
+    return false;
+  }
+  async function save(mergeAttempt = 0) {
+    if (typeof mergeAttempt !== 'number') mergeAttempt = 0;
     if (saving || !editing) return;
-    if (!dirty) { message('Nội dung đã được lưu vào dự án.'); return; }
+    if (!dirty) { message('Nội dung đã được lưu.'); return; }
     saving = true;
     storeDraft();
     const submitted = cleanHTML();
@@ -303,6 +351,7 @@
     try {
       const result = await request('PUT', { revision: submittedRevision, html: submitted });
       revision = result.revision;
+      baseBlocks = blocks(result.html || submitted);
       // Keep the cursor and any typing performed while the request was in flight.
       dirty = cleanHTML() !== submitted;
       refreshIndex();
@@ -316,7 +365,16 @@
       }
       message(dirty ? 'Đã lưu. Có nội dung bạn vừa sửa thêm; bấm Lưu khi xong.' : (session.online ? 'Đã lưu online cho cả nhóm lúc ' : 'Đã lưu trên máy lúc ') + new Date(result.savedAt).toLocaleTimeString('vi-VN') + '.');
       // Refresh the reader in place after leaving editing; this also refreshes its index.
-    } catch (error) { message(error.message, true); }
+    } catch (error) {
+      if (error.status === 409 && mergeAttempt < 3) {
+        try {
+          if (await resolveConflict()) {
+            saving = false;
+            await save(mergeAttempt + 1);
+          }
+        } catch (mergeError) { message(mergeError.message + ' Bản nháp vẫn được giữ.', true); }
+      } else message(error.status === 409 ? 'Nhóm đang lưu liên tục. Bản nháp đã được giữ; bấm Lưu để thử lại.' : error.message, true);
+    }
     finally { saving = false; saveButton.disabled = false; finishButton.disabled = false; }
   }
   function finish() {
@@ -387,7 +445,7 @@
       figure.append(img);
       if (caption) { const figcaption = document.createElement('figcaption'); figcaption.textContent = caption; figure.append(figcaption); }
       command('insertHTML', figure.outerHTML + '<p><br></p>');
-      message('Đã chèn ảnh. Bấm Lưu vào dự án khi chỉnh sửa xong.');
+      message('Đã chèn ảnh. Bấm Lưu khi chỉnh sửa xong.');
     },
   });
   bar.querySelector('#editor-add-image').addEventListener('click', () => {

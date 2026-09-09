@@ -1,71 +1,36 @@
-# Divergency Reviewer Site
+﻿# Divergency Reviewer Site
 
-Public product and reviewer site for Divergency, a dark fantasy tactical brawler by TriLinkage, an independent game studio based in Marseille, France.
+## Chỉnh sửa gameplay
 
-Live site after GitHub Pages deploys:
+Mở **https://divergency-team-editor.huyq1471.chatgpt.site/?edit=1#gameplay** hoặc **Open-Gameplay-Editor.cmd**.
 
-https://kslhuy.github.io/divergency-reviewer-site/
+Sửa trực tiếp rồi bấm **Lưu online** (Ctrl+S). Thành viên khác tải lại trang sẽ thấy thay đổi. Không cần chỉnh Markdown, đồng bộ file hoặc push Git để lưu gameplay.
 
-## Bi?n t?p online cho nh?m
+- Đăng nhập bằng ChatGPT. Thành viên mới gửi yêu cầu quyền sửa; quản trị viên duyệt tại **Thành viên**. Ai có link cũng đọc được tài liệu.
+- **+ Chèn ảnh** cho phép chọn ảnh trong thư viện hoặc tải ảnh mới từ máy (PNG/JPG/GIF/WebP, tối đa 20 MB).
+- **Lịch sử** giữ các phiên bản để xem lại và khôi phục.
+- Khi hai người cùng lưu, các thay đổi không trùng nhau được gộp. Nếu cùng sửa một đoạn, chọn nội dung muốn giữ rồi bấm **Gộp và lưu**, ngay trên trang.
 
-M? https://divergency-team-editor.huyq1471.chatgpt.site/?edit=1#gameplay
+Nội dung online và ảnh tải lên được lưu riêng với code. Push hoặc triển khai lại giao diện không ghi đè gameplay đã lưu online. Đây là biên tập dùng chung có kiểm tra phiên bản; chưa hiển thị con trỏ/gõ đồng thời như Google Docs.
 
-- ??ng nh?p b?ng ChatGPT. T?i kho?n ch? d? ?n l? qu?n tr? vi?n.
-- Th?nh vi?n m?i b?m **Y?u c?u quy?n s?a**. Qu?n tr? vi?n m? **Th?nh vi?n** ?? duy?t ho?c thu h?i quy?n. Website v?n c?ng khai ?? ??c; ??ng nh?p kh?ng t? c?p quy?n s?a.
-- B?m **Ch?nh s?a gameplay**, s?a ch?/b?ng tr?c quan, r?i **L?u online** (Ctrl+S). Ng??i ??c t?i l?i trang s? th?y n?i dung m?i.
-- **+ Ch?n ?nh**: ch?n t? th? vi?n, t?m/l?c th? m?c, ho?c t?i ?nh m?i t? m?y. ?nh t?i l?n l?u online v? d?ng l?i ???c cho c? nh?m (PNG/JPG/GIF/WebP, t?i ?a 20 MB).
-- **L?ch s?** l?u ng??i s?a, th?i gian v? c?c phi?n b?n. Khi ?ang bi?n t?p, c? th? kh?i ph?c phi?n b?n th?nh b?n nh?p, ki?m tra r?i L?u ?? t?o m?t phi?n b?n m?i.
-- Hai ng??i c?ng s?a m?t phi?n b?n: ng??i l?u sau nh?n th?ng b?o xung ??t; n?i dung c?a ng??i l?u tr??c kh?ng b? ghi ??. T?i b?n nh?p c?a m?nh tr??c khi m? l?i trang ?? ??i chi?u. ??y l? ch?nh s?a c? ki?m tra phi?n b?n, ch?a ph?i g? ??ng th?i nh? Google Docs.
+## Development
 
-**Gameplay online n?m trong D1; ?nh t?i l?n n?m trong R2.** C?p nh?t code, build ho?c push n?i dung local kh?ng ghi ?? d? li?u nh?m ?? l?u. `content/gameplay.html` ch? l? b?n nh?p ban ??u/d? ph?ng cho website; kh?ng t? ??ng b? ng??c n?i dung online v?o Git. Website GitHub Pages t?i gameplay t? d?ch v? online v? d?n n?t s?a sang trang bi?n t?p. N?u kh?ng t?i ???c, trang b?o r? ?ang hi?n th? b?n d? ph?ng.
+- `npm ci --ignore-scripts` installs dependencies; `npm test` checks storage, permissions, conflicts, merging and uploads.
+- `npm run dev:online` runs the online app locally. Local authentication uses `seedy@sites.test`; configure `ADMIN_EMAIL` in the ignored `.dev.vars` file.
+- `npm run build:online` builds the Sites Worker. `.openai/hosting.json` identifies the existing project, D1 database and R2 uploads binding. Production migrations are managed by Drizzle; never reseed live content.
+- `node scripts/prepare-online-source.mjs` prepares the small Sites source checkout in `.editor-runtime/site-source`. Build, commit and push this exact source before packaging and publishing through Sites.
+- Gameplay in D1 is authoritative online. `content/gameplay.html` is the initial/fallback content; Markdown is a manual import source. Neither automatically overwrites online content.
+- Other tabs are built from their Markdown files by `node build-reviewer-html.mjs`.
+- For deliberate offline development only: `npm run edit`, then `http://127.0.0.1:4177/?local=1#gameplay`. Local saves do not publish online.
 
-B?n nh?p tr?nh duy?t l? d? ph?ng ri?ng tr?n m?y; ch? **L?u online** m?i l?u cho c? nh?m. C? th? t?i n?i dung c?c phi?n b?n trong L?ch s? ?? sao l?u ??c l?p. Kh?ng s?a tr?c ti?p b?ng d? li?u ho?c ch?y seed ?? l?n d? li?u s?n xu?t.
+## GitHub Pages
 
-### Ph?t tri?n v? tri?n khai ph?n online
+Public reader: https://kslhuy.github.io/divergency-reviewer-site/
 
-- `npm ci --ignore-scripts`, `npm run dev:online` ?? xem th? (Sites m? ph?ng t?i kho?n `seedy@sites.test` ? local).
-- C?u h?nh local trong `.dev.vars`: `ADMIN_EMAIL=seedy@sites.test`. Kh?ng ??a file n?y l?n Git. T?o schema local b?ng Wrangler t? migration trong `drizzle/`, s? d?ng th? m?c l?u `.wrangler/state` c?a project.
-- `npm test` ki?m tra l?u, xung ??t, ph?n quy?n, t?i ?nh v? gi? n?i dung qua c?c l?n tri?n khai.
-- `npm run build:online` t?o Worker. Schema production do migration Drizzle qu?n l?; d? li?u kh?ng n?m trong b?n build.
-- `node scripts/prepare-online-source.mjs` chu?n b? source Sites nh? trong `.editor-runtime/site-source`, bao g?m trang ??c v? danh m?c ?nh ?? t?o. ?nh g?c ti?p t?c ???c ph?c v? t? GitHub Pages; ?nh m?i trong R2. Build l?i trong checkout n?y tr??c khi commit/push, ??ng g?i v? tri?n khai qua Sites.
-- Sites gi? c?u h?nh `ADMIN_EMAIL` ph?a m?y ch? ?? kh?i t?o ch? s? h?u t? danh t?nh ?? x?c th?c. Sau l?n ??u, quy?n g?n v?i user ID ?n ??nh; ng??i ??ng nh?p kh?c ph?i ???c duy?t. Kh?ng thay quy?n d?a tr?n d? li?u client g?i l?n.
-- Push GitHub c?p nh?t trang c?ng khai; thay ??i Worker c?n tri?n khai Sites. Hai ph?n ??u ??c chung gameplay online.
+Change code or other tabs on a branch, open a PR, and merge after checks and review. GitHub Pages rebuilds from main. Its gameplay reader loads shared online content, and edit buttons open the online editor. Worker changes require a Sites deployment as well.
 
-## Bi?n t?p local (t?y ch?n)
-
-M? **Open-Gameplay-Editor.cmd** ?? ch?nh s?a b?n tr?n m?y. **L?u v?o d? ?n** c?p nh?t `content/gameplay.html` v? HTML local, kh?ng c?p nh?t d? li?u online. Markdown gameplay ch? c?n l? t?i li?u tham kh?o/ngu?n nh?p th? c?ng. C?c tab c?n l?i v?n ???c x?y t? Markdown nh? tr??c.
-
-## Publishing / editing other tabs
-
-1. Create a branch from `main`.
-2. Save gameplay in the visual editor, or edit the other tabs' Markdown files in GitHub or locally.
-3. Open a pull request into `main`.
-4. Wait for the build check to pass.
-5. After review, merge the pull request. GitHub Pages will rebuild and publish the site.
-
-## What To Edit
-
-- `Divergency_Kickstarter_Page_Rewrite.md`
-- `Divergency_Story_Short_Summary.md`
-- `Divergency_Complete_Story_VI.md`
-- `content/gameplay.html` — gameplay's authoritative content, saved by the visual editor
-- `Divergency_Gameplay_Level_Design.md` — original import/reference; explicit re-import only
-- `Rewards_Fulfillment_Checklist.md`
-- Web-ready images under `imgs/`
-
-Do not add Unity project files, source code, private planning files, or editable source art files to this repository.
-
-## Local Preview
-
-Run:
-
-```bash
-npm ci --ignore-scripts
-node build-reviewer-html.mjs
-```
-
-Then open `Divergency_Reviewer_Tabs.html` in a browser.
+Do not add Unity project files, private planning files, or editable source art to this repository.
 
 ## Steam Screenshot Formatter
 
-Open `steam-image-tool.html` to batch-convert screenshots to Steam-ready 16:9 PNG or JPG files. The tool supports crop-to-fill or fit-with-bars, exports at 1920x1080 or higher, and processes every image locally in the browser.
+Open `steam-image-tool.html` to batch-convert screenshots to Steam-ready 16:9 PNG or JPG files. It supports crop-to-fill or fit-with-bars and processes images locally in the browser.
