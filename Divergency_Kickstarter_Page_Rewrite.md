@@ -104,7 +104,7 @@ Deep is a heavy melee fighter and former crusader who has survived too many wars
 *   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Heavy charge, ground slam cancels)
 *   **Squad Synergy:** Absorbs frontline pressure, breaks shield formations, and peels enemies off vulnerable teammates.
 
-![Deep character art](<imgs/chars/Deep.png>)
+![Deep character art](<imgs/chars/Deep/Deep.png>)
 
 ### Solei — *The Swift Runner*
 
@@ -225,11 +225,11 @@ Marseille's bright surface hides prisons, gangs, undercity routes, and forbidden
 
 The stages are not just backdrops for arena fights. They include hidden routes, environmental details, puzzle moments, optional secrets, and quieter story beats between combat encounters. Exploration gives the world room to breathe, while each new region changes how battles feel and how the party moves through danger.
 
-![Marseille sewer route](<imgs/Stage1/Sewer2.png>)
+![Marseille sewer route](<imgs/Stage1/chap1/Sewer2.png>)
 
 ![Sakuri bridge route](<imgs/Stage2/Bridge_1.png>)
 
-![Submarine laboratory environment](<imgs/Stage1/lab_3.png>)
+![Submarine laboratory environment](<imgs/Stage1/chap1/lab_3.png>)
 
 Each chapter has its own combat identity. Marseille emphasizes tight industrial spaces, prison escapes, gang pressure, and the research submarine. Sakuri shifts toward sacred routes, hidden doors, identity, and corruption. Calvaria, Akam Meskul, and The Cradle push the campaign into stranger territory, changing the atmosphere, enemy pressure, and route design as the story moves closer to the relics.
 
@@ -284,8 +284,7 @@ The $20,000 base goal is completion funding for the main story campaign. It cove
 
 Budget breakdown:
 
-![Budget breakdown](<imgs\campaign-panels\kick\Bugget.png
->)
+![Budget breakdown](<imgs/campaign-panels/kick/Bugget.png>)
 
 
 <!-- ![Divergency funding distribution campaign panel](<imgs/campaign-panels/divergency-ai-funding-distribution.png>) -->

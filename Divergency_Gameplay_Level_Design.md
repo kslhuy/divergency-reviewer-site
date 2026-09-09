@@ -82,6 +82,8 @@ Khung đề xuất cho phần chơi chính gồm:
 - **Đội dự bị:** có thể đổi tại căn cứ, nơi trú ẩn, điểm nghỉ hoặc trước tình huống lớn.
 - **Nhân vật đồng hành:** Heni không chiếm vị trí chiến đấu. Cô tự tìm chỗ nấp và chỉ tham gia khi câu đố hoặc cộng hưởng cần đến cô.
 
+Đây là quy mô đội hình đề xuất của chiến dịch, không phải giới hạn số NPC của hệ lệnh. Đồng đội AI chỉ xuất hiện trong danh sách chọn khi được cấu hình thành General hợp lệ; hệ lệnh không chuyển quyền điều khiển nhân vật của người chơi khác. Những cảnh cả đội xuất hiện cần cấu hình rõ nhóm nhận lệnh và vai trò của NPC bổ sung.
+
 Một số đoạn truyện có thể chuyển quyền điều khiển tạm thời, chẳng hạn đoạn Ghost tỉnh dậy trong Bastonne. Việc chuyển nhân vật phải phục vụ câu chuyện và dạy một năng lực mới, không dùng chỉ để tạo bất ngờ.
 
 ### 2.2. Hướng phát triển của từng nhân vật
@@ -89,46 +91,101 @@ Một số đoạn truyện có thể chuyển quyền điều khiển tạm th�
 - **Solei** là nhân vật mở đầu vì bộ kỹ năng dễ đọc, nhanh và phù hợp để dạy nền tảng.
 - **Deep và Henry** là hai người mang lịch sử từ cuộc chiến cũ rất xa Marseille. Họ giữ vai trò dẫn dắt, nhưng không được biến Tulas thành người cùng thế hệ hoặc một cựu binh ngang hàng với họ.
 - **Deep** và **Block** cùng mạnh ở tuyến trước nhưng không trùng vai trò: Deep phá thế phòng thủ, Block tạo an toàn.
-- **Henry** làm lệnh phối hợp rõ và hiệu quả hơn, nhưng các lệnh cốt lõi vẫn dùng được khi anh ở vị trí hỗ trợ.
+- **Henry** hướng dẫn chiến thuật qua lời thoại; năng lực hỗ trợ chỉ huy riêng là đề xuất kỹ năng của anh. Free, Regroup, Hold và đổi đội hình thuộc hệ điều khiển chung, không phụ thuộc Henry có trong đội hay không.
 - **Tulas** là bạn đồng lứa với Solei ở Marseille. Anh xuất hiện trong bài tập đầu, trở thành thành viên đầy đủ sau Bastonne và là cầu nối giữa di chuyển, giải đố, phòng thủ và hồi phục. Cách nói chuyện, phản ứng và sai lầm của anh cần mang cảm giác của một người trẻ đang học cách dùng sức mạnh, không phải sự từng trải của Deep hoặc Henry.
 - **Ghost** chỉ chơi được trong một đoạn ngắn tại Bastonne, sau đó mở như thành viên đặc biệt. Anh mạnh trong xâm nhập và cơ chế thần lực, không thay thế Solei trong vai trò nhân vật trung tâm.
 - **Heni** không trở thành nguồn sát thương chính. Giá trị của cô nằm ở nhận thức, ký ức và quyền tự quyết.
 
 ## 3. Các hệ thống cốt lõi
 
-### 3.1. Lệnh phối hợp
+### 3.1. Lệnh phối hợp — hệ thống thực tế
 
-Lệnh phối hợp trả lời câu hỏi: **ai sẽ giữ phần việc nào trong lúc người chơi đang bận chiến đấu?** Đây là hệ thống chiến thuật nhẹ, dùng nhanh và theo ngữ cảnh. Người chơi không phải điều khiển từng bước chân của đồng đội.
+Phần này đối chiếu theo `README_AI_COMMAND_SYSTEM.html` trong `Assets/LF2_multiplayer/GamePlay/Character/AI/Commands/` của dự án game. Tên lệnh và thao tác dưới đây là chức năng được tài liệu hệ thống mô tả. Các liên kết kỹ năng, cơ chế Di Vật và tình huống màn chơi ở những phần sau là **đề xuất thiết kế**; từng kỹ năng và tương tác cần được cấu hình hoặc triển khai trước khi dùng trong màn.
 
-Các lệnh dùng chung:
+Người chơi chọn một NPC có thể nhận lệnh, được hệ thống gọi là **General**, rồi ra lệnh di chuyển, giữ vị trí, đổi đội hình hoặc dùng kỹ năng hỗ trợ. General là vai trò của NPC trong hệ thống, không phải tên lớp nhân vật hay chức danh riêng của Henry. Lệnh có thể tác động một NPC hoặc một nhóm tùy cấu hình; kỹ năng hỗ trợ luôn gửi cho General đang chọn. Máy chủ kiểm tra và áp dụng yêu cầu.
 
-| Lệnh | Công dụng | Ví dụ |
+#### Chọn đồng đội và vào chế độ lệnh
+
+1. Giữ **Shift trái hoặc phải** để vào chế độ lệnh. Nhân vật người chơi tạm ngừng di chuyển; HUD hiện General đang chọn. Đây là thay đổi chế độ điều khiển, không phải chức năng dừng hoặc làm chậm thời gian toàn trận.
+2. Trong khi giữ Shift, nhấn **Tab** để chuyển qua các General hợp lệ trong tầm chọn.
+3. Nhập lệnh bên dưới, rồi thả **Shift** để trở về điều khiển bình thường. Thả Shift không tự hủy lệnh đang có.
+
+Các hướng **Lên, Xuống, Trái, Phải** và các nút **Tấn công, Nhảy, Phòng thủ** dùng thiết lập điều khiển hiện tại của người chơi; không mặc định chúng là phím mũi tên hay một bộ phím chiến đấu cố định.
+
+#### Lệnh di chuyển và đội hình
+
+Mọi thao tác trong bảng đều thực hiện khi đang giữ Shift.
+
+| Thao tác | Lệnh thực tế | Hành vi và cách dùng trong màn |
 |---|---|---|
-| **Giữ** | Duy trì vị trí hoặc vật thể | Block giữ cửa, Tulas giữ màn lọc độc |
-| **Phá** | Tập trung phá vật cản, giáp hoặc nguồn tăng cường | Deep phá vách, Solei phá cột nghi lễ |
-| **Vận hành** | Điều khiển công tắc, van, thang máy hoặc bảng máy | Henry giữ bảng điều khiển khi người chơi đánh trùm phụ |
-| **Bảo vệ** | Che chắn một người hoặc khu vực | Block bảo vệ Heni, Deep giữ đường rút |
-| **Tập trung** | Dồn tấn công vào mục tiêu đã đánh dấu | Cả đội đánh kẻ chỉ huy hoặc điểm yếu của trùm |
-| **Vô hiệu hóa** | Tắt vũ khí hoặc cơ quan nguy hiểm mà không giết người vận hành | Solei cắt nguồn tháp súng, Ghost khóa máy tế |
-| **Ngừng bắn** | Không tấn công dân thường, người bị điều khiển hoặc kẻ đã đầu hàng | Henry ngăn đội truy sát trong Akam Meskul |
-| **Mở đường** | Ưu tiên cửa thoát, cầu hoặc tuyến sơ tán | Solei mở khóa trong khi Block giữ đám đông |
-| **Trấn tĩnh** | Xác nhận lệnh thật và giảm ảnh hưởng của Cái Lưỡi | Henry chặn mệnh lệnh giả trong Calvaria |
+| **Lên** | **Tự do — Free** | Xóa lệnh hiện tại và trả NPC về AI bình thường. Dùng để kết thúc phân công; không có tác dụng ngừng bắn. |
+| **Xuống** | **Tập hợp — Come / Regroup** | NPC đi theo và canh phía sau người chơi. Dùng để gom đội trước khi di chuyển hoặc rút khỏi khu nguy hiểm. |
+| **Trái / Phải** | **Giữ vị trí — Hold** | NPC canh một vị trí cố định ở phía trái hoặc phải của người chơi theo trục thế giới. Người chơi chọn chỗ đứng trước khi ra lệnh; lệnh không chọn một cánh cửa hay điểm bất kỳ bằng con trỏ. |
+| **1** | **Hàng — Line** | Đặt đội hình Line cho phạm vi nhận lệnh đội hình đã cấu hình. |
+| **2** | **Mũi nhọn — Wedge** | Đặt đội hình Wedge cho phạm vi nhận lệnh đội hình đã cấu hình. |
+| **3** | **Vòng tròn — Circle** | Đặt đội hình Circle cho phạm vi nhận lệnh đội hình đã cấu hình. |
 
-Lệnh ngữ cảnh hiện ngay trên mục tiêu. Bánh xe lệnh chỉ mở khi cần chọn giữa nhiều nhiệm vụ. Trò chơi có tùy chọn làm chậm thời gian khi mở bánh xe, nhưng không dừng hoàn toàn trong chế độ nhiều người.
+Lệnh **Lên / Xuống** được gửi khi thả hướng hoặc thả Shift. Chọn đội hình khi chưa có lệnh đang hoạt động sẽ bắt đầu **Regroup**. **Hold** và **Regroup** tồn tại trong thời lượng cấu hình của hồ sơ lệnh; lệnh di chuyển mới thay lệnh cũ, còn **Free** xóa lệnh ngay khi được gửi và chấp nhận. Thiết kế không giả định một thời gian hồi chung cho mọi lệnh.
 
-Lệnh có thời gian hồi ngắn. Ra lệnh sai có thể khiến đồng đội mất vị trí hoặc bị thương, nhưng không được tạo thất bại không thể cứu vãn chỉ vì một lần bấm nhầm.
+Hold giữ **vị trí**, không tự giữ cần gạt, vận hành máy hoặc duy trì kỹ năng. Regroup canh phía sau **người chơi**, không tự chọn Heni hay dân thường làm mục tiêu hộ tống. Cả hai vẫn có hành vi canh gác; không lệnh nào bảo đảm NPC ngừng tấn công.
+
+#### Yêu cầu kỹ năng của General
+
+Mọi thao tác dưới đây vẫn thực hiện trong chế độ giữ Shift.
+
+| Thao tác | Yêu cầu gửi cho General đang chọn |
+|---|---|
+| **Tấn công, rồi 1–9** | Dùng ô kỹ năng tương ứng của NPC. Đây là chọn kỹ năng, không phải lệnh cả đội tập trung đánh một mục tiêu. |
+| **Tấn công, rồi 0** | Dùng hỗ trợ đặc trưng được gán trong hồ sơ lệnh. |
+| **Nhảy** | Dùng hỗ trợ di chuyển được gán trong hồ sơ. |
+| **Nhấn rồi thả Phòng thủ** | Dùng hỗ trợ phòng thủ được gán trong hồ sơ. |
+| **Giữ Phòng thủ + Lên / Xuống, rồi Tấn công / Nhảy** | Yêu cầu combo kỹ năng theo hướng tương ứng của General. |
+
+Sau khi nhấn **Tấn công**, các phím số chọn kỹ năng thay vì đội hình; **1–3** trong chuỗi này không còn là Line/Wedge/Circle. Hỗ trợ chỉ thực hiện được nếu NPC có trạng thái kỹ năng phù hợp, đủ **MP** và đáp ứng thời gian hồi. Không mặc định mọi General có cùng kỹ năng, hoặc ô 0 của mọi nhân vật có cùng tác dụng.
+
+**Tay cầm:** nút vai trái mở chế độ lệnh, nút vai phải chuyển General; D-pad **Lên / Phải / Xuống** chọn **Line / Wedge / Circle**. Đây là các gán nút tay cầm được README xác nhận; không suy ra D-pad Lên/Xuống là Free/Regroup như hướng điều khiển trên bàn phím.
+
+#### Một người hay cả nhóm nhận lệnh?
+
+Lệnh di chuyển, Hold và Free dùng một phạm vi nhận lệnh; đội hình có phạm vi riêng. Kỹ năng hỗ trợ luôn chỉ áp dụng cho General đang chọn.
+
+| Phạm vi cấu hình | Ai nhận lệnh | Hệ quả khi thiết kế màn |
+|---|---|---|
+| **SelectedOnly** | Chỉ General đang chọn | Chọn Block để đặt Hold sẽ không tự đặt Hold cho Tulas hoặc cả đội. |
+| **MatchingSquad** | Các NPC hợp lệ có cùng `SquadId` với General | Những nhóm cần nhiệm vụ riêng phải có mã đội khác nhau. |
+| **ActiveCommandGroup** | Các NPC hợp lệ ở gần, đang có cùng loại Hold hoặc Regroup từ cùng người ra lệnh, theo khoảng cách gom nhóm trong hồ sơ | Nếu General chưa có Hold/Regroup đang hoạt động, chỉ General đó nhận lệnh. |
+
+Mặc định trong mã là **SelectedOnly** cho lệnh di chuyển, **ActiveCommandGroup** cho đội hình và **AnyCommandable** cho quyền ra lệnh. Giá trị Inspector của prefab quyết định cấu hình thực tế. Vì vậy, bài tập đổi đội hình cho hai đồng đội phải cho cả hai nhận Regroup từ cùng người chơi và đứng đủ gần, hoặc cấu hình rõ MatchingSquad; không giả định một lần nhấn Xuống đã gọi toàn đội.
+
+Chính sách **TeamOrOwner** cho phép cùng đội không độc lập, hoặc cùng chủ sở hữu khi cả hai nhân vật độc lập. **AnyCommandable** cho phép NPC đủ điều kiện bất kể đội. Với chiến dịch phối hợp đồng đội, đề xuất dùng TeamOrOwner và kiểm tra prefab; đây là lựa chọn cấu hình cần áp dụng, không phải mặc định sẵn có.
+
+Tầm chọn General ở máy người chơi khác với giới hạn khoảng cách ra lệnh trên máy chủ. Tầm chọn mặc định là **500 đơn vị**, có thể ghi nhớ General đã đi ra ngoài tầm; hồ sơ bật `EnforceCommandRange` mới áp giới hạn khoảng cách riêng trên máy chủ. Cả hai dùng khoảng cách trên mặt phẳng **XZ**. **Free** vẫn dùng được ngoài tầm ra lệnh. Màn chơi cần chỗ tập hợp lại, lối tiếp cận đồng đội và khoảng an toàn để nhập lệnh.
+
+#### Chuyển mục tiêu màn chơi thành thao tác thật
+
+| Ý định trong thiết kế | Cách thể hiện đúng với hệ thống |
+|---|---|
+| **Giữ tuyến, bảo vệ khu vực** | Đứng ở vị trí phù hợp rồi đặt Hold bên trái/phải; gọi hỗ trợ phòng thủ của General nếu hồ sơ có kỹ năng đó. Hộ tống một người cụ thể cần cơ chế riêng. |
+| **Phá vật cản, đánh điểm yếu** | Người chơi trực tiếp đánh hoặc yêu cầu kỹ năng phù hợp của General. Khả năng đánh trúng vật thể cần được thiết kế trong kỹ năng/tương tác; không có lệnh Phá hay Tập trung riêng trong README. |
+| **Vận hành, mở đường, vô hiệu hóa** | Là tương tác của nhân vật, cơ chế vật thể hoặc sự kiện màn chơi cần triển khai. Hold gần bảng máy không tự vận hành bảng máy. |
+| **Ngừng bắn, tha người đầu hàng** | Là mục tiêu cứu hộ cần quy tắc chọn mục tiêu, trạng thái được bảo vệ hoặc sự kiện ngừng giao tranh riêng. Free trả về AI thường; Hold và Regroup không thay thế quy tắc này. |
+| **Trấn tĩnh** | Là kỹ năng hỗ trợ đề xuất cho Henry hoặc hiệu ứng màn chơi, cần trạng thái và gán ô/hỗ trợ trong hồ sơ trước khi gọi. Hệ lệnh hiện tại không tự giảm Độ Nhiễu hay xác thực giọng nói. |
+
+Các từ “bảo vệ”, “mở đường”, “phá” trong những chương dưới mô tả **mục tiêu của tình huống**, không bổ sung nút lệnh mới. Kết quả cứu người, chống Nhiễu và phản ứng của môi trường phải có điều kiện riêng, không được suy ra chỉ từ việc NPC đã nhận Hold/Regroup.
 
 ### 3.2. Liên kết kỹ năng
 
-Liên kết kỹ năng trả lời câu hỏi khác: **hai nhân vật có thể cùng làm điều gì mà một người không thể làm một mình?** Hệ thống này dùng chung cách nhắm mục tiêu với lệnh phối hợp để giao diện không bị tách thành hai lớp khó nhớ.
+Liên kết kỹ năng trả lời câu hỏi khác: **hai nhân vật có thể cùng làm điều gì mà một người không thể làm một mình?** Các liên kết dưới đây là đề xuất nội dung kỹ năng. Người chơi chọn General bằng Shift + Tab, gọi ô kỹ năng hoặc hỗ trợ đã gán, rồi phối hợp bằng nhân vật trực tiếp. Hệ lệnh gửi yêu cầu cho General, không cung cấp sẵn một lớp nhắm vật thể hay tự ghép combo hai nhân vật.
 
-Các liên kết chính:
+Các liên kết cần xây dựng và gán trong hồ sơ nhân vật:
 
 - **Deep và Tulas:** Tulas tạo bệ hoặc cột chất lỏng để Deep lao lên, phá giáp trên cao hoặc đập xuống diện rộng.
 - **Solei và Tulas:** Tulas tạo điểm tựa để Solei chạy tường, vượt bẫy và tiếp cận điểm yếu.
 - **Henry và Tulas:** màn nước làm lệch đường đạn hoặc tạo thấu kính giúp Henry bắn công tắc và điểm yếu ở góc khuất.
 - **Block và Tulas:** Tulas làm đặc chất lỏng quanh khiên của Block, tạo hành lang an toàn cho đội hoặc dân thường.
 - **Ghost và Tulas:** Ghost vượt qua máy nhận diện; Tulas giữ cửa, van hoặc vật thể từ phía bên kia để mở đường cho cả đội.
+
+Ví dụ sau khi đã gán kỹ năng tạo bệ của Tulas vào hỗ trợ di chuyển: giữ Shift, dùng Tab chọn Tulas, nhấn Nhảy rồi thả Shift để Solei chạy lên bệ. Kỹ năng tạo bệ quyết định vị trí, thời lượng và tương tác; Hold chỉ giữ vị trí của Tulas. Nếu chưa có kỹ năng hoặc tương tác phù hợp, màn phải dùng cơ cấu môi trường hay đoạn hướng dẫn được dựng riêng. Gọi hỗ trợ Tulas không đồng thời ra lệnh cho General khác.
 
 Tulas không được giải mọi câu đố một mình. Năng lực của anh cần nguồn chất lỏng, chỉ giữ được hình dạng trong thời gian giới hạn và yếu đi trước điện hoặc nhiệt. Dùng máu sống thay cho nước tạo hiệu quả mạnh hơn nhưng làm tăng Độ Nhiễu và có thể khóa một phần sinh lực tối đa cho đến điểm nghỉ.
 
@@ -162,7 +219,7 @@ Vật nặng làm nhân vật di chuyển chậm. Vật dễ vỡ có thể gây
 - rời khỏi nguồn gây nhiễu và tránh nhận đòn trong vài giây;
 - đứng trong vùng an toàn do Block tạo ra;
 - được Tulas lọc máu hoặc ổn định tuần hoàn;
-- nhận lệnh Trấn tĩnh của Henry;
+- nhận hiệu ứng từ kỹ năng Trấn tĩnh đề xuất của Henry, sau khi kỹ năng được triển khai và gán vào hồ sơ;
 - phá nguồn gây nhiễu như loa, máy phát, cột nghi lễ hoặc mạch liên kết;
 - nghỉ tại trạm điều trị, nơi trú ẩn hoặc Cõi Mộng Sau Cái Chết.
 
@@ -204,7 +261,7 @@ Khi một nhân vật thông thường Bùng Nhiễu, người chơi vẫn giữ
 - Quyền điều khiển chuyển sang Solei. Deep, Henry, Tulas và Block trở thành đồng đội hỗ trợ theo đội hình hiện có.
 - Nếu Stranger đạt 100% trong một đoạn chơi đơn, trạng thái được giữ ở ngưỡng Quá tải và trận trùm bắt đầu ngay khi anh gặp lại đội. Trò chơi không tạo một trận đánh không thể hoàn thành vì thiếu đồng đội.
 - Stranger dùng chính những kỹ năng người chơi đã mở cho anh, đồng thời lặp lại một số thói quen di chuyển và tấn công gần nhất. Luật của mảnh thần trong chương hiện tại sẽ tạo thêm biến thể cho trận đấu.
-- Mục tiêu là **khống chế và cắt nguồn Nhiễu**, không giết Stranger. Solei phá các bóng lặp, Henry dùng Trấn tĩnh, Block tạo vùng an toàn, Tulas kéo Nhiễu khỏi cơ thể anh và Deep chỉ phá thế tấn công thay vì tung đòn kết liễu.
+- Mục tiêu là **khống chế và cắt nguồn Nhiễu**, không giết Stranger. Solei phá các bóng lặp; người chơi chọn từng General để yêu cầu các kỹ năng đã xây dựng: Trấn tĩnh của Henry, phòng thủ của Block hoặc lọc Nhiễu của Tulas. Deep chỉ phá thế tấn công thay vì tung đòn kết liễu. Trận này cần quy tắc sát thương và mục tiêu riêng để bảo đảm khống chế được Stranger; Free, Hold hay Regroup không tự tạo hành vi không sát thương.
 - Ở 80% và 90%, chân dung, lời thoại và hành vi của Stranger phải cảnh báo rõ nguy cơ biến đổi để người chơi có cơ hội xử lý trước khi trận trùm xảy ra.
 
 Trận trùm đầy đủ chỉ kích hoạt một lần trong mỗi lượt chơi. Sau khi được khống chế, Stranger trở lại đội với Độ Nhiễu khoảng 40% và mở một đoạn đối thoại riêng. Nếu anh lại đạt 100%, trò chơi buộc anh rời vị trí chiến đấu cho đến điểm nghỉ thay vì lặp lại toàn bộ trận trùm. Cách xử lý này giữ trọng lượng của ý tưởng mà không biến nó thành một hình phạt lặp đi lặp lại.
@@ -218,15 +275,15 @@ Không dùng Độ Nhiễu để đảo nút điều khiển, xóa thông tin h�
 | **Bastonne** | Hồi thể lực chậm, tác dụng chữa trị giảm, máy quét bám mục tiêu lâu hơn | Mở thông gió, tắt khí mê, dùng trạm điều trị |
 | **Marseille** | Vật phẩm, bóng người, cửa và điểm yếu giả | Tắt camera, kiểm tra bằng vật thể, đọc hồ sơ |
 | **Sakuri** | Tiếng bước chân lặp, thước tiếng động tăng nhanh, nhịp giả gọi Bóng Nhiễu | Giữ im lặng, thay đổi tiết tấu, phá nguồn tụng niệm |
-| **Calvaria** | Tên và mục tiêu bị méo, xuất hiện lệnh giả, giọng người chết khóa kỹ năng | Trấn tĩnh, phá khế ước, xác nhận bằng ký ức thật |
-| **Akam Meskul** | Nộ khí tăng nhanh, đám đông dễ cuồng loạn, trùm mạnh lên khi có người chết | Ngừng bắn, cứu dân, phá loa và giữ đội hình |
+| **Calvaria** | Tín hiệu trong thế giới bị méo, xuất hiện lời ra lệnh giả, giọng người chết khóa kỹ năng | Đọc phản hồi lệnh thật trên HUD; phá khế ước, xác nhận bằng ký ức và kỹ năng Trấn tĩnh đề xuất |
+| **Akam Meskul** | Nộ khí tăng nhanh, đám đông dễ cuồng loạn, trùm mạnh lên khi có người chết | Regroup để tái bố trí, Hold giữ tuyến; cứu dân, phá loa và áp dụng quy tắc bảo vệ người đầu hàng của màn |
 | **Chiếc Nôi** | Luật cũ trộn vào nhau, địa hình lệch, đường giả và Bóng Nhiễu riêng xuất hiện | Heni tìm đường thật, Ghost cắt mạch nối, cả đội tạo vùng ổn định |
 
 #### Khác biệt theo nhân vật
 
 - Solei thoát vùng nguy hiểm nhanh nhưng bóng giả làm khó việc căn phản đòn.
 - Deep chịu đòn tốt nhưng dễ bị Trái Tim khơi lại ký ức chiến tranh; bảo vệ đồng đội giúp anh ổn định.
-- Henry nhận ra cấu trúc của ảo giác nhưng Cái Lưỡi có thể làm nhiễu lệnh của anh.
+- Henry nhận ra cấu trúc của ảo giác nhưng Cái Lưỡi có thể giả lời chỉ huy của anh trong thế giới; phản hồi lệnh thật trên HUD vẫn phải đọc được.
 - Tulas giảm Nhiễu cho người khác nhưng dễ quá tải nếu dùng máu quá nhiều.
 - Block chặn được đòn gây Nhiễu cho đồng đội, đổi lại thể lực của khiên hao nhanh khi bản thân bị nhiễm nặng.
 - Ghost tích Nhiễu chậm hơn, nhưng ở mức cao sẽ tạo một bóng lặp lại chính hành động cũ của anh. Nếu đạt 100%, anh có thể mất kiểm soát và trở thành trùm Stranger.
@@ -317,6 +374,7 @@ Các thư mục hình ảnh hiện có vẫn là nguồn tham chiếu chính:
 - `imgs/UI/settings_menu_sections/`
 - `imgs/UI/character_selected_story_sprites/`
 - `imgs/UI/in_game_hud_ui_skill_set/`
+- `imgs/UI/command_list_sprites/`
 - `imgs/UI/relay_ip_room_sprites/`
 
 ### 5.1. Màn hình chính
@@ -340,20 +398,23 @@ Chỉ đổi nhân vật tại căn cứ, nơi trú ẩn, điểm nghỉ hoặc 
 
 - Góc trên trái: chân dung, sinh lực, năng lượng và Độ Nhiễu.
 - Góc trên phải: mục tiêu ngắn và dấu chỉ đường khi cần.
-- Mép dưới: bốn kỹ năng đang trang bị và thời gian hồi.
-- Bánh xe phối hợp: chỉ hiện khi giữ nút lệnh.
+- Mép dưới: bốn kỹ năng đang trang bị của nhân vật trực tiếp theo bố cục đề xuất. Đây là thanh kỹ năng của người chơi, tách biệt các ô kỹ năng 1–9 và hỗ trợ 0 của General.
+- HUD lệnh: hiện khi giữ Shift, gồm General đang chọn, đội hình và phản hồi lệnh; thả Shift trở về điều khiển thường. Không mô tả thao tác như bánh xe chọn lệnh bằng con trỏ.
+- Gợi ý nhập lệnh: trước Tấn công, 1–3 là đội hình; sau Tấn công, 1–9/0 là kỹ năng và hỗ trợ đặc trưng. Hiển thị theo General và hồ sơ thực tế.
 - Dấu mục tiêu: chỉ hiện cho địch quan trọng, đồng minh cần bảo vệ và vật thể tương tác.
+
+HUD và dấu hiệu trong thế giới phản hồi lệnh đã được máy chủ chấp nhận. Phần thiết kế bổ sung cần làm rõ phạm vi một người/nhóm, thời lượng Hold/Regroup và lý do hỗ trợ không dùng được như thiếu MP, đang hồi hoặc không có trạng thái phù hợp. Không giả định README đã xác nhận đủ các chỉ báo mở rộng này.
 
 Không hiển thị thanh thiện–ác hoặc số lòng tin. Hậu quả được kể bằng thế giới.
 
 ### 5.4. Thiết lập quan trọng
 
-- Mức làm chậm khi mở bánh xe phối hợp: tắt, nhẹ hoặc đầy đủ.
+- Gợi ý lệnh theo thiết bị: Shift/Tab trên bàn phím; nút vai trái/phải trên tay cầm. Hướng, Tấn công, Nhảy và Phòng thủ hiển thị theo phím chiến đấu đã gán. Không liệt kê tùy chọn làm chậm thời gian khi ra lệnh vì README không có chức năng này.
 - Cỡ chữ và cỡ gợi ý tương tác.
 - Phụ đề bật mặc định, có tên người nói và nền mờ.
 - Hỗ trợ tương phản cho độc, máu, nước, Nộ khí và vật ẩn.
 - Thanh điều chỉnh rung màn hình.
-- Chọn giữ hoặc bật/tắt cho chạy, đỡ đòn, khóa mục tiêu và bánh xe phối hợp.
+- Chọn giữ hoặc bật/tắt cho chạy, đỡ đòn và khóa mục tiêu là đề xuất hỗ trợ chơi. Chế độ lệnh hiện dùng giữ Shift; tùy chọn bật/tắt chế độ lệnh chỉ được đưa vào sau khi triển khai và kiểm tra chuỗi nhấn/thả, nhất là combo Phòng thủ.
 - Chế độ giảm chuyển động dùng ảnh tĩnh cho các biểu tượng Độ Nhiễu động.
 
 ### 5.5. Lưu và điểm nghỉ
@@ -369,52 +430,81 @@ Tự động lưu ở đầu phân đoạn, trước và sau trùm, khi vào Cõ
 - Mở đầu bằng Solei và mối quan hệ trong đội.
 - Dạy di chuyển, chuỗi đòn, né, phản đòn, nhặt–ném vật và liên kết kỹ năng.
 - Xác lập Block là đồng đội cần được giải cứu.
-- Giới thiệu Ghost bằng một đoạn ngắn trong nhà tù, không thay anh thành nhân vật chính.
+- Player chơi bất cứ nhân vật nào cũng được
 
 ### Dòng chảy không gian
 
-**Sân tập → phòng chuẩn bị → lối vào Bastonne → khu giam thường → khu biệt giam → phòng giữ Block → cổng thoát.**
+**Sân tập → cut scene đoạn đi đến nhà tù → trong khu giam thường → khu biệt giam → phòng giữ Block → cổng thoát → lối ra Bastonne .**
+
+1. **Trận tập với Deep:** Tutorial cho player , kiểm tra chuỗi đánh, nhảy và đỡ đòn trong , chuổi combo skill .
+
 
 Phần căn cứ sáng và dễ đọc. Bastonne dần chuyển sang hành lang hẹp, khí mê, loa đọc mã tù và cửa tự khóa. Sự tương phản giúp người chơi cảm nhận rõ lúc bài học trở thành hiểm nguy thật.
 
-### Cơ chế và tình huống
+### Cơ chế và tình huống (ko làm , chỉ ý tưởng)
 
 - Deep kiểm tra Solei bằng bài né, chuỗi đòn, chưởng và phản đòn.
-- Tulas tạo bệ và màn nước để dạy liên kết kỹ năng cơ bản.
-- Solei nhặt tạ, chai hoặc lõi máy để đánh công tắc và phá thế đỡ của hình nộm.
+
+
+- Tulas tạo bệ và màn nước để dạy liên kết kỹ năng cơ bản qua tình huống hướng dẫn được dựng riêng. Bài này chỉ dùng hỗ trợ qua hệ lệnh khi kỹ năng và hồ sơ Tulas đã được cấu hình.
 - Sau phần luyện tập, đội đột nhập Bastonne để cứu Block và lấy bằng chứng về thí nghiệm của Jamerson.
+
 - Khí mê giảm hồi thể lực theo chu kỳ. Mở van thông gió tạo khoảng an toàn.
+
+- Trong phòng giam Stranger hoặc Block , có pallet , mirror , có thể đập ra, nhặt,  để dùng làm gì đó
+
 - Máy nhận diện không biết xử lý Ghost vì anh không khớp hồ sơ tù nhân.
+
 - Loa đọc mã số điều khiển nhịp đóng mở cửa và khiến Độ Nhiễu tăng.
 
-Khi nhà tù phong tỏa, quyền điều khiển chuyển sang Ghost. Anh tỉnh dậy trong phòng biệt giam, yếu hơn đội Deep và chỉ có thể dùng vật thể trong phòng để tạo tiếng động. Người chơi có thể đá giường, ném cốc, phá đèn hoặc làm rơi mảnh kim loại. Tạo tiếng vừa đủ giúp đội tìm đến mà không kéo quá nhiều lính; phá hết căn phòng cho vũ khí tạm nhưng làm cuộc thoát ngục khó hơn.
+Khi nhà tù phong tỏa, nhân vật sẽ chuyển sang bắt buộc phải điều khiển chuyển Ghost/Stranger. Anh ta đang ngủ và tỉnh dậy trong phòng biệt giam (chi tiết ở đây là Stranger không bị trúng thuốc mê, chỉ đơn giản yếu vì không ăn gì), yếu đuối , mệt mỏi và chỉ có thể dùng vật thể trong phòng để tạo tiếng động. Người chơi có thể đá giường, ném cốc, phá đèn hoặc làm rơi mảnh kim loại. Tạo tiếng vừa đủ giúp đội tìm đến mà không kéo quá nhiều lính; phá hết căn phòng cho vũ khí tạm nhưng làm cuộc thoát ngục khó hơn.
 
-Henry mở nhầm phòng vì tưởng tiếng động đến từ Block. Lúc này Ghost chỉ có các lựa chọn tự nhiên như chỉ hướng, mở chốt hoặc làm chậm khí. Hệ lệnh phối hợp chưa mở, vì anh chưa có quan hệ đủ gần để ra lệnh cho đội.
+Player mở nhầm phòng vì tưởng tiếng động đến từ Block. Lúc này Ghost chỉ có các lựa chọn tự nhiên như chỉ hướng, mở chốt hoặc làm chậm khí. Thiết kế chiến dịch tạm khóa chế độ lệnh trong đoạn Ghost chưa thuộc đội; điều kiện mở khóa này cần được xử lý bởi tiến trình màn chơi, không phải cơ chế lòng tin có sẵn trong hệ lệnh.
 
 Ghost có thể giúp Block thoát khỏi buồng khí. Nếu không giúp, Solei và đội vẫn cứu được Block, nhưng phải đánh thêm một đợt lính và Block bị thương nặng hơn.
 
 ### Đối đầu cuối chương
 
-1. **Trận tập với Deep:** kiểm tra chuỗi đòn, né và phản đòn trong môi trường an toàn.
-2. **Đơn vị phong tỏa Bastonne:** lính khiên lớn, súng điện và máy bay quét mục tiêu. Trận đấu yêu cầu phá thế đỡ, né điện và bảo vệ Block.
+2. **Đơn vị phong tỏa Bastonne:** lính Sriker, Solider_Gunn . Trận đấu yêu cầu phá đánh bại hêts và bảo vệ Block.
 
-Nếu Ghost đã giúp, Block đủ sức giữ một cửa hoặc đỡ một đòn lớn. Nếu không, đội phải dành một người bảo vệ anh. Đây là hậu quả đầu tiên xuất hiện ngay trong cùng chương.
+jamesm_kid_Avta là Boss màn đấy . 
+
 
 ### Kết quả
 
-Đội thoát khỏi Bastonne cùng Block và Ghost. Hệ lệnh phối hợp mở chính thức sau khi Block trở lại đội. Ghost được đưa về căn cứ trong sự nghi ngờ, tạo cầu nối sang Marseille.
-
+Đội thoát khỏi Bastonne cùng Block và Ghost. 
+Cutscene đội đi tàu skyjet về marseille 
 ## Chương 1 – Marseille và Con Mắt
+
+## 1-0. Cây cầu ở Marseille
+
+Khi về marseille lên cây cầu In_City , Thì lại đụng độ với nhóm đầu gấu ở đó . Nhóm đánh bại và quay về căn cứ. 
+
+Khi về cắn cứ Deep_base :
+Hệ thống phối hợp (Command System) mở chính thức sau khi Block trở lại đội (có nghĩa là có tutorial , dialogue hướng dẫn , nhưng chỉ là popup ko force khóa player). 
+Ghost được đưa về căn cứ trong sự nghi ngờ.
+
+Tại khoảng an toàn sau Bastonne, bài hướng dẫn chính thức dùng đúng chuỗi thao tác ( chỉ là diaglogue )  :
+
+1. Giữ Shift, dùng Tab chọn Block, nhấn rồi thả hướng Xuống để gửi Regroup; thả Shift và di chuyển để quan sát Block theo sau.
+2. Chọn đồng đội AI thứ hai, gửi Regroup từ cùng người chơi và đợi hai NPC đứng đủ gần. Với phạm vi đội hình ActiveCommandGroup, nhấn 1/2/3 trong chế độ lệnh để thử Line/Wedge/Circle cho nhóm đang tập hợp.
+3. Đứng cạnh điểm canh thử, chọn Block và nhấn Trái hoặc Phải trong chế độ lệnh để đặt Hold. Người chơi đi ra xa, quan sát Block giữ điểm cố định thay vì tiếp tục đi theo.
+4. Chọn General có hỗ trợ đã gán; thử Tấn công rồi 0, hoặc Nhảy/nhấn-thả Phòng thủ. Giải thích MP, hồi kỹ năng và việc số sau Tấn công không đổi đội hình.
+5. Nhấn rồi thả Lên để gửi Free cho General đang chọn. Với SelectedOnly, phải giải phóng từng NPC riêng; thả Shift đơn thuần chỉ thoát chế độ nhập lệnh.
+
 
 Chương này phát triển theo chuỗi: **môi trường đô thị → lòng tin phe phái → chia việc chiến thuật → ảo giác**. Người chơi bắt đầu bằng những món nợ rất con người và kết thúc trong phòng thí nghiệm nơi ham muốn bị biến thành vật thể.
 
-## 1-1. Quán Armorlite
+## 1-1. Quán bar Armorlite
 
 ### Mục đích và dòng chảy
+Muốn làm sáng tỏ việc ác của Jameson. 
+Bar Armorlite là nơi lấy thông tin và nơi trú ẩn, không phải một quán chỉ tồn tại để đánh nhau. Đội hỏi Jacques chủ quán về bến cảng, đường cống, cảnh sát mật và những người bị Jameson thí nghiệm và bị đưa ra ngoài khơi. 
+Tuy nhiên đội Deep vẫn có rắc rối với Băng đua xe khác ( ân oán có sẵn kiểu không ưa nhau, Deep làm mất mối làm ăn ).  
+Có một cuộc đột với băng đản ở ngoài phố .
 
-Armorlite là nơi lấy thông tin và nơi trú ẩn, không phải một quán chỉ tồn tại để đánh nhau. Đội hỏi Jacques về bến cảng, đường cống, cảnh sát mật và những người bị đưa ra ngoài khơi. Băng đua xe từng mất tuyến vận chuyển vì đội Deep bám theo họ đến quán, khiến cuộc xung đột tràn từ ngoài phố vào trong.
 
-**Nhà xe của đội → Armorlite → hẻm sau quán → đại lộ ven cảng.**
+**Căn cứ của đội → Armorlite → hẻm sau quán → đại lộ ven cảng.**
 
 ### Cơ chế và tình huống
 
@@ -435,7 +525,7 @@ Armorlite là nơi lấy thông tin và nơi trú ẩn, không phải một quá
 
 ### Mục đích và dòng chảy
 
-Laundel là một trung tâm nhỏ có luật lệ, nhiều phe và đời sống riêng. Không gian mở từ đường cống chật, tối sang một ga ngầm hai tầng đầy quầy hàng, đường ray và lối bảo trì.
+Sau có được thông tin đến quán Bar , nhóm Deep sẽ đến được Laundel là một trung tâm nhỏ có luật lệ, nhiều phe và đời sống riêng. Không gian mở từ đường cống chật, tối sang một ga ngầm hai tầng đầy quầy hàng, đường ray và lối bảo trì.
 
 ### Cơ chế và tình huống
 
@@ -444,7 +534,7 @@ Laundel là một trung tâm nhỏ có luật lệ, nhiều phe và đời sốn
 - Người chơi có thể mua, mặc cả, làm việc đổi thẻ hoặc cướp. Mỗi cách ảnh hưởng lòng tin Laundel.
 - Quầy Xanh Dương bán thuốc và vũ khí tầm xa; Áo Đen bán vũ khí nặng; Áo Ghi bán thông tin và đường tắt.
 - Dòng nước, van, phòng ngập và quái đầu đàn kết nối chiến đấu với kỹ năng của Tulas.
-- Block giữ cần van, Solei vượt cửa trước khi đóng, Henry bắn khóa từ xa.
+- Người chơi đặt Block ở Hold gần lối nguy hiểm để canh, rồi Solei thao tác van và vượt cửa trước khi đóng; Henry bắn khóa qua kỹ năng phù hợp nếu đã được gán. Phương án Block giữ cần van cần tương tác duy trì riêng, không được coi là tác dụng của Hold.
 - Các hình vẽ và lời đồn về GROGER tạo một tuyến điều tra riêng.
 
 ### Đối đầu theo lựa chọn
@@ -467,8 +557,8 @@ Phân đoạn này dạy ưu tiên mục tiêu và mở rộng lệnh phối h�
 - Nước sâu làm đội di chuyển chậm nhưng giúp tấn công quái khi chúng còn bơi.
 - Tia ngắm bắn tỉa buộc người chơi dùng thùng hàng làm chỗ nấp.
 - Mức truy nã quyết định thời điểm và số quân cảnh sát mật xuất hiện.
-- Trong khu cầu cống, Block giữ tuyến, Deep phá vách và Henry đánh dấu kẻ chỉ huy. Đây là bài kiểm tra đầu tiên cho các lệnh Giữ, Phá và Tập trung.
-- Tại bến cảng, người chơi vừa giữ bảng điều khiển thuyền tự động, vừa bảo vệ thuyền và xử lý lính bắn tỉa. Chỉ có tối đa ba mục tiêu cùng lúc để tránh quá tải.
+- Trong khu cầu cống, người chơi đặt Block ở Hold bên trái/phải tại chỗ chặn, gọi hỗ trợ phá giáp của Deep nếu đã cấu hình, rồi chuyển Regroup khi tiến lên. Kẻ chỉ huy được người chơi trực tiếp ưu tiên xử lý; không có lệnh Phá hoặc Tập trung riêng. Các vai trò được chia theo nhân vật trực tiếp và hai General hiện có, không bắt buộc cả ba NPC cùng ra sân.
+- Tại bến cảng, bảng điều khiển thuyền là tương tác riêng của nhân vật trực tiếp. Người chơi bố trí General canh bằng Hold và gọi hỗ trợ thích hợp để đối phó lính bắn tỉa. Hold không vận hành bảng máy hoặc tự hộ tống thuyền đang chạy; cần Regroup để đi theo người chơi hoặc cơ chế thuyền riêng. Chỉ có tối đa ba mục tiêu cùng lúc để tránh quá tải.
 
 ### Trùm: Marius Vane
 
@@ -548,7 +638,7 @@ Rừng tre và thác nước là cầu nối giữa khu cách ly với thủ ph�
 
 - Tre gãy tạo tiếng động, kéo tuần tra hoặc làm Ryozan đổi hướng.
 - Tiếng thác che bước chân và tiếng lệnh, giúp tránh Cái Tai nhưng làm dấu báo đòn khó nghe.
-- Cầu hẹp tăng nguy cơ bị hất ngã. Block giữ cầu, Deep phá chốt đá, Solei vượt dây treo và Henry xử lý kẻ bắn xa.
+- Cầu hẹp tăng nguy cơ bị hất ngã. Người chơi đặt Block ở Hold tại đầu cầu bằng vị trí đứng và hướng Trái/Phải, sau đó dùng Regroup khi cần kéo anh đi tiếp. Phá chốt đá, vượt dây treo và xử lý kẻ bắn xa dùng điều khiển trực tiếp hoặc kỹ năng phù hợp của các General đang có trong đội.
 - Ba mũi yểm nằm dọc cầu kể lại lời thề bị bóp méo của Ryozan.
 
 ### Trùm: Oan hồn Ryozan
@@ -617,13 +707,13 @@ Chương này phát triển theo chuỗi **tiếng gọi → tên riêng → m�
 
 ### Mục đích
 
-Đây là trận công thành đầu tiên dùng đầy đủ lệnh phối hợp. Năng lượng của lá chắn pháo đài đến từ những bình nhốt linh hồn.
+Đây là trận công thành kết hợp Hold, Regroup, đổi đội hình và hỗ trợ kỹ năng. Năng lượng của lá chắn pháo đài đến từ những bình nhốt linh hồn.
 
 ### Ba tháp năng lượng
 
 1. Deep và Block phá cổng, che nhau trước pháo linh hồn.
 2. Solei leo ròng rọc, cắt dây nối và mở điểm yếu từ trên cao.
-3. Cả đội giữ vòng thanh tẩy trong lúc lính phản kích.
+3. Người chơi đặt các General ở Hold quanh vòng thanh tẩy bằng vị trí và khoảng cách đã bố trí cho màn, rồi gọi hỗ trợ phòng thủ khi lính phản kích. Vòng thanh tẩy kiểm tra điều kiện riêng của màn; đội hình Circle không tự kích hoạt thanh tẩy.
 
 Sau khi hạ chỉ huy, người chơi có hai cách xử lý bình linh hồn:
 
@@ -632,12 +722,14 @@ Sau khi hạ chỉ huy, người chơi có hai cách xử lý bình linh hồn:
 
 Lựa chọn này tác động trực tiếp tới trận Dàn Hợp Xướng ở cuối chương.
 
+Đổi từ tiến quân sang phòng thủ cần ra Hold cho từng General nếu dùng SelectedOnly. Khi cần nhóm cùng đổi đội hình, màn phải cấu hình MatchingSquad hoặc bảo đảm các NPC đáp ứng ActiveCommandGroup. Thời lượng Hold/Regroup cần phù hợp từng đợt phản kích; không thiết kế câu đố với giả định lệnh kéo dài vô hạn.
+
 ## 3-4. Lối đi bí mật dưới lòng đất
 
 - Cổng đá tự sập cần người giữ đòn bẩy hoặc vật nặng chèn lại.
 - Khí nóng phun theo chu kỳ, có thể bị Tulas đổi hướng trong thời gian ngắn.
 - Luồng quét năng lượng không nhận diện Ghost nhưng kích bẫy khi nhân vật khác đi qua.
-- Ghost sang phía bên kia để phá máy quét; Tulas tăng áp lực nước; Block giữ cổng; Solei trượt qua cắt van. Đây là một câu đố liên hoàn dùng đủ bốn vai trò nhưng vẫn có điểm dừng giữa các bước.
+- Ghost sang phía bên kia để phá máy quét; Tulas tăng áp lực nước; cơ cấu chèn cổng giữ lối mở để Solei trượt qua cắt van. Block có thể canh gần cổng bằng Hold; phương án anh trực tiếp giữ đòn bẩy cần tương tác riêng. Chuỗi bốn vai trò có điểm nghỉ để đổi đội hoặc vật thay thế, không yêu cầu bốn nhân vật chiến đấu đồng thời trong đội hình chuẩn.
 
 ## 3-5. Sông Oán Hận
 
@@ -647,7 +739,9 @@ Lựa chọn này tác động trực tiếp tới trận Dàn Hợp Xướng �
 - Tulas tạo dòng đẩy để đổi hướng.
 - Henry bắn đứt neo của lính xương trên bờ.
 - Quái nước bám vào bè và phải bị gỡ trước khi tự nổ.
-- Cái Lưỡi phát lệnh giả từ hai bờ. Người chơi phải xác nhận đúng lệnh qua biểu tượng đội, chuẩn bị cho cơ chế mệnh lệnh ở nửa sau chương.
+- Cái Lưỡi phát lời ra lệnh giả từ hai bờ. Người chơi đối chiếu General, đội hình và phản hồi trên HUD để phân biệt với lệnh mình thực sự nhập. Lời giả là cơ chế âm thanh/sự kiện của màn, không tự tạo yêu cầu lệnh hợp lệ gửi lên máy chủ.
+
+Trên bè đang trôi, Hold neo vị trí theo thế giới, không phải theo sàn bè. Dùng Regroup để đồng đội theo người chơi khi có đường di chuyển phù hợp; việc NPC đứng và di chuyển trên bè phải được xử lý bởi cơ chế phương tiện riêng trước khi đưa vào màn. Không dùng Hold như lệnh bám bè.
 
 Khi độ bền bè về 0, đội trở lại điểm lưu gần nhất trong Cõi Mộng thay vì mất toàn bộ tiến trình phân đoạn.
 
@@ -686,11 +780,11 @@ Dàn Hợp Xướng dùng giọng của mẹ Henry, đồng đội cũ của Dee
 - Gọi đúng tên hoặc danh xưng làm nhân vật khựng trong chốc lát.
 - Lệnh như “quỳ”, “im” hoặc “lùi lại” tạo hiệu ứng ngắn, có dấu báo rõ và không tước quyền điều khiển lâu.
 - Đánh thân trùm chỉ làm chậm nó; muốn kết thúc giai đoạn phải phá các nút lời thề quanh đấu trường.
-- Henry dùng Trấn tĩnh để xác nhận lệnh thật.
+- Người chơi đọc phản hồi lệnh thật trên HUD, chọn Henry và gọi kỹ năng Trấn tĩnh nếu đã được xây dựng, gán trong hồ sơ. Hiệu ứng chống Cái Lưỡi thuộc kỹ năng này; thao tác ra lệnh tự nó không xóa hiệu ứng trùm.
 - Deep bị gọi bằng danh hiệu anh hùng cũ; truy sát trong lúc này làm Nộ khí tăng.
 - Ghost chọn cái tên đồng đội đang gọi mình thay vì tên cũ do trùm áp đặt.
 
-Nếu linh hồn ở pháo đài đã được thanh tẩy, họ tạo lá chắn chặn một đợt sóng âm lớn mỗi giai đoạn. Nếu bình bị phá, các vong hồn oán giận xuất hiện, bám vào nhân vật và làm gián đoạn bánh xe phối hợp.
+Nếu linh hồn ở pháo đài đã được thanh tẩy, họ tạo lá chắn chặn một đợt sóng âm lớn mỗi giai đoạn. Nếu bình bị phá, các vong hồn oán giận xuất hiện và gây áp lực lên người đang đứng nhập lệnh. Người chơi tìm khoảng trống, ra lệnh nhanh rồi thả Shift để né. HUD, gán nút và phản hồi lệnh thật vẫn đọc được; hiệu ứng khống chế hoặc khóa kỹ năng của trùm cần được triển khai riêng.
 
 Sau trận, đội giữ mảnh Cái Lưỡi bị cháy và hiểu rằng Thần Sơ Sinh không nguyền rủa thế giới; nó đang gọi mẹ. Mục tiêu chuyển sang tìm Dây Rốn.
 
@@ -711,7 +805,7 @@ Nhịp tim là lớp tăng cường của Độ Nhiễu, không phải một tha
 
 ### Năng lực mở rộng của đội
 
-- **Màng lọc huyết dịch của Tulas:** tạo vùng lọc độc bằng nước hoặc chất lỏng quanh khu vực. Anh có thể giữ vùng này theo lệnh Giữ.
+- **Màng lọc huyết dịch của Tulas:** kỹ năng đề xuất tạo vùng lọc độc bằng nước hoặc chất lỏng quanh khu vực. Người chơi chọn Tulas và gọi ô kỹ năng/hỗ trợ đã gán; thời lượng vùng lọc thuộc kỹ năng. Hold chỉ bố trí vị trí canh của Tulas, không tự tạo hoặc duy trì màng lọc.
 - **Khóa huyết quản của Tulas:** cứu người bị nhiễm độc nặng bằng cách khóa tạm độc tố, đổi lại một phần sinh lực tối đa của anh bị khóa đến điểm nghỉ.
 - **Khiên thành của Block:** Block nhặt mảnh xương sườn rồng làm lá chắn nặng, chặn bão oán niệm và luồng địa nhiệt.
 - **Phá vật neo:** Solei hoặc Ghost vượt hàng phòng thủ để phá cột nghi lễ. Khi vật neo vỡ, người bị điều khiển ngừng chiến đấu.
@@ -726,7 +820,7 @@ Nhịp tim là lớp tăng cường của Độ Nhiễu, không phải một tha
 - Lỗ địa nhiệt phun khí độc theo chu kỳ. Block chặn bằng đá hoặc Tulas tạo màng lọc để đội đi qua.
 - Kẻ thuần quỷ gọi thêm quái; hạ hắn khiến quái mất kiểm soát và quay sang tấn công lính gần nhất.
 - Kẻ chủ tế tăng sức mạnh cho quân và ép họ tập trung vào Solei.
-- Người tị nạn bị dùng làm lá chắn. Henry ra lệnh Ngừng bắn, Solei hoặc Ghost phá vật neo để giải họ khỏi ảo giác.
+- Người tị nạn bị dùng làm lá chắn. Henry cảnh báo đội tránh làm hại họ qua lời thoại. Người chơi dùng Regroup để kéo General về phía mình, bố trí lại bằng Hold, rồi trực tiếp điều khiển Solei hoặc Ghost phá vật neo. Màn cần quy tắc ngăn AI chọn người được bảo vệ làm mục tiêu; Regroup không phải lệnh ngừng bắn.
 
 ### Trùm phụ: Đội Thập tự
 
@@ -764,7 +858,7 @@ Titan là thực thể khổng lồ từ xương rồng, cơ thịt và ống th
 
 ### Giai đoạn 1 – Đấu trường hỗn loạn
 
-Hai phe chém giết quanh dân thường. Henry dùng Ngừng bắn, Block tạo vùng bảo vệ và Solei mở đường sơ tán. Titan quét tay xương qua sân. Giết lính đang rút hoặc để dân chết làm Nộ khí của Titan tăng.
+Hai phe chém giết quanh dân thường. Henry cảnh báo ưu tiên cứu hộ; người chơi gọi từng General về bằng Regroup, bố trí Block bằng Hold ở tuyến sơ tán rồi yêu cầu hỗ trợ phòng thủ đã gán. Solei trực tiếp mở đường thoát. Titan quét tay xương qua sân. Giết lính đang rút hoặc để dân chết làm Nộ khí của Titan tăng. Trạng thái dân thường và người đầu hàng cần quy tắc mục tiêu riêng để AI không tự truy sát họ; Free vẫn cho AI chiến đấu bình thường.
 
 ### Giai đoạn 2 – Rễ oán niệm
 
@@ -822,7 +916,7 @@ Ba thế lực gồm Con Cháu Chiếc Nôi, Tàn Dư Sáu Vương Quốc và Ja
 - Phá tế đàn phụ và ngăn vật tế.
 - Dùng bằng chứng từ Bastonne, Laundel, Calvaria và Akam để làm một số nhóm tự rút lui.
 
-Mỗi phe có một mức áp lực cục bộ. Giết nhiều người làm phe đó cực đoan hơn; cứu tù binh, đưa bằng chứng hoặc mở đường thoát làm áp lực giảm. Các lệnh Ngừng bắn, Bảo vệ, Vô hiệu hóa và Mở đường đạt phiên bản hoàn chỉnh tại đây.
+Mỗi phe có một mức áp lực cục bộ. Giết nhiều người làm phe đó cực đoan hơn; cứu tù binh, đưa bằng chứng hoặc mở đường thoát làm áp lực giảm. Người chơi kết hợp Regroup để tái bố trí, Hold để canh tuyến và hỗ trợ kỹ năng của từng General. Ngừng giao tranh, bảo vệ dân, vô hiệu hóa vũ khí và mở đường là kết quả của quy tắc mục tiêu, tương tác và sự kiện màn chơi đã xây dựng; không xuất hiện như bốn lệnh mới.
 
 Cổng vật tế cần năng lượng từ cả ba phe. Người chơi có thể cướp năng lượng bằng bạo lực, nhưng cách ổn định hơn là khiến từng phe rời khỏi cổng. Mục tiêu không phải chọn một phe đúng, mà phá logic biến con người thành chi phí của cả ba.
 
@@ -844,7 +938,7 @@ Mục tiêu không chỉ là đánh cạn sinh lực. Đội phải cắt từng
 
 - Ghost vượt vùng máy không nhận diện để cắt mạch Con Mắt.
 - Solei phản đòn đúng nhịp để phá vòng lặp của Cái Tai.
-- Henry dùng Trấn tĩnh để vô hiệu lệnh của Cái Lưỡi.
+- Henry dùng kỹ năng Trấn tĩnh đề xuất, được gọi qua ô kỹ năng hoặc hỗ trợ đã gán, để chống hiệu ứng của Cái Lưỡi. Nếu kỹ năng chưa sẵn sàng, cơ chế phá nút lời thề phải cho cách xử lý khác.
 - Deep phá loa và lõi phụ để ngăn Trái Tim bùng Nộ khí.
 - Tulas khóa mạch độc quanh đấu trường, vừa cứu nạn nhân vừa giảm khả năng hồi phục của Jamerson.
 - Block giữ rìa đấu trường và cổng sơ tán không sụp.
@@ -862,10 +956,12 @@ Ghost ngắt liên kết cuối. Jamerson rơi xuống cạnh buồng ngủ đô
 
 Sau trận trùm, người chơi bước thẳng vào một tình huống phòng thủ chiến thuật ngắn thay vì xem một đoạn phim dài. Cả sáu thành viên chiến đấu cùng lúc; mục tiêu là trả các mảnh thần qua Dây Rốn và giữ Heni, Heniana cùng người sống sót an toàn.
 
+Đây là ngoại lệ đội hình được thiết kế cho màn cuối: vẫn một nhân vật trực tiếp, các thành viên chiến đấu còn lại là NPC, Heni là người đồng hành. Màn cần cấu hình General, quyền ra lệnh, phạm vi và nhóm rõ ràng cho số NPC bổ sung. SelectedOnly dùng để phân công từng vị trí; MatchingSquad hoặc ActiveCommandGroup chỉ dùng khi các thành viên thật sự đáp ứng điều kiện nhóm. Hỗ trợ vẫn gọi từng General, không kích hoạt đồng loạt cả đội.
+
 - **Solei và Ghost:** chạy giữa các điểm neo, cắt những mạch đang cố nối lại với Jamerson hoặc Heniana.
 - **Block và Deep:** giữ hướng tấn công chính, kéo người bị thương khỏi vùng sụp và bảo vệ đường rút.
 - **Tulas:** ổn định sinh lực của Heni và Heniana, lọc độc khỏi những người bị nối vào mạch thần.
-- **Henry:** xác nhận lệnh thật, cấm dùng vật tế người và phân chia các vị trí Giữ, Bảo vệ, Tập trung.
+- **Henry:** nhắc ưu tiên và phản hồi qua lời thoại; người chơi phân công bằng Hold, Regroup, Line/Wedge/Circle và hỗ trợ từng General. Cấm dùng vật tế người và bảo vệ người sống sót là điều kiện kịch bản cùng quy tắc mục tiêu riêng.
 - **Heni:** tự chạm Dây Rốn khi khu vực đã đủ an toàn. Gợi ý tương tác phải thể hiện đó là quyết định của cô.
 
 Kết quả tốt nhất vẫn mang vị đắng: Đại Họa giảm dần, Heniana chỉ còn một cơ hội mong manh để sống như người thường, Heni tiếp tục cuộc đời riêng và Jamerson không được tôn vinh.
@@ -875,7 +971,7 @@ Kết quả tốt nhất vẫn mang vị đắng: Đại Họa giảm dần, Hen
 | Cơ chế | Giới thiệu | Mở rộng | Biến đổi | Kiểm tra cuối |
 |---|---|---|---|---|
 | **Nhặt và ném** | Sân tập và phòng giam | Vũ khí môi trường ở Marseille | Tạo tiếng động tại Sakuri, kích bẫy tại Calvaria | Kiểm tra ký ức giả và giữ điểm neo trong Chiếc Nôi |
-| **Lệnh phối hợp** | Tín hiệu đội ở căn cứ | Giữ cầu, vận hành thuyền, đánh dấu mục tiêu | Ngừng bắn và cứu dân trong Akam | Điều phối toàn đội trong nghi lễ đảo chiều |
+| **Lệnh phối hợp** | Bài Shift/Tab, Regroup, Hold, Free và hỗ trợ sau Bastonne | Line/Wedge/Circle cho nhóm hợp lệ; canh cầu và gọi kỹ năng trong Marseille | Tái bố trí, giữ tuyến cứu hộ ở Akam; quy tắc bảo vệ dân thuộc màn | Phân công từng General và nhóm đúng phạm vi trong nghi lễ đảo chiều |
 | **Liên kết kỹ năng** | Tulas tạo bệ cho Solei | Chất lỏng, khiên và góc bắn ở Marseille | Chống độc, mở đường sinh học và bảo vệ dân | Giữ không gian ổn định quanh Dây Rốn |
 | **Độ Nhiễu** | Khí mê Bastonne | Ảo giác, âm thanh và lệnh giả | Nộ khí và nhịp tim khuếch đại | Trộn cả năm biểu hiện trong Chiếc Nôi |
 | **Cứu người** | Giúp Block | Tù nhân, người bệnh, linh hồn, người bị cải đạo | Cứu dân ngay trong trận Titan | Từ chối mọi hình thức vật tế ở trận cuối |
@@ -922,8 +1018,8 @@ Mỗi nhóm phải có một mục tiêu ưu tiên rõ, một dấu hiệu đặ
 
 ## 10. Nhịp học kỹ năng toàn trò chơi
 
-- **Chương 0:** điều khiển Solei, nền tảng chiến đấu, vật thể, liên kết với Tulas, giải cứu Block và đoạn Ghost trong phòng giam.
-- **Chương 1:** chiến đấu theo đội, môi trường đô thị, lòng tin phe phái, ưu tiên chiến thuật và ảo giác của Con Mắt. Từ sau Bastonne, người chơi cũng bắt đầu quản lý nguy cơ Stranger trở thành trùm khi đạt 100% Nhiễu.
+- **Chương 0:** điều khiển Solei, nền tảng chiến đấu, vật thể, liên kết với Tulas, giải cứu Block và đoạn Ghost trong phòng giam. Sau Bastonne mới mở bài chọn General, Free/Regroup/Hold, đổi đội hình và hỗ trợ đã cấu hình.
+- **Chương 1:** chiến đấu theo đội, phân biệt lệnh một General với đổi đội hình nhóm, quản lý MP/hồi hỗ trợ, môi trường đô thị, lòng tin phe phái và ảo giác của Con Mắt. Từ sau Bastonne, người chơi cũng bắt đầu quản lý nguy cơ Stranger trở thành trùm khi đạt 100% Nhiễu.
 - **Chương 2:** tiếng động, lén lút nhẹ, phá thói quen, Heni và Cái Tai.
 - **Chương 3:** tên gọi, lệnh giả, lời người chết, hậu quả của việc giữ hay phá linh hồn.
 - **Chương 4:** chiến trường nhiều mục tiêu, Nộ khí, nhịp tim, cứu hộ trong lúc đánh trùm.
@@ -937,11 +1033,13 @@ Mỗi nhóm phải có một mục tiêu ưu tiên rõ, một dấu hiệu đặ
 - Tulas tham gia bài tập ở Chương 0 và trở thành thành viên đầy đủ sau Bastonne.
 - Khi Stranger đạt 100% Độ Nhiễu lần đầu, anh trở thành một trận trùm có điều kiện và cả đội phải khống chế anh.
 - Heni là nhân vật đồng hành có quyền tự quyết, không phải nguồn sát thương hoặc chìa khóa sống.
-- Lệnh phối hợp và liên kết kỹ năng dùng chung một lớp giao diện theo ngữ cảnh.
+- Hệ lệnh dùng Shift/Tab để chọn General; Free, Regroup, Hold để điều phối vị trí; Line/Wedge/Circle để đổi đội hình; các chuỗi Tấn công/Nhảy/Phòng thủ để yêu cầu kỹ năng theo hồ sơ.
+- Phạm vi lệnh di chuyển và đội hình được cấu hình riêng; hỗ trợ luôn chỉ gửi cho General đang chọn. Mặc định mã không thay thế việc kiểm tra prefab thực tế.
+- Hold canh vị trí cố định theo thế giới; Free trả về AI thường. Vận hành máy, bảo vệ dân khỏi AI, Trấn tĩnh và các liên kết kỹ năng cần nội dung hoặc quy tắc riêng.
 - Mọi nhân vật đều nhặt được vật nhẹ; Deep và Block xử lý vật nặng tốt hơn.
 - Cõi Mộng chỉ mở sau Bastonne và luôn gắn với Ghost cho đến khi Chiếc Nôi làm ranh giới tan vỡ.
 - Không có thanh thiện–ác. Hậu quả được lưu theo từng khu vực và không khóa mạch truyện chính.
 - Kết thúc chính là trả các mảnh thần qua Dây Rốn, không hồi sinh hoặc giết lại Thần Sơ Sinh.
 - Giao diện tiếng Việt là mặc định của bản tài liệu này; tên tệp hình ảnh và tên riêng được giữ nguyên để không làm hỏng liên kết tài nguyên.
 
-Những nội dung còn cần thử nghiệm chỉ là thông số cân bằng: thời gian hồi lệnh, mức giảm sinh lực khi Block bị thương, dung sai của nhịp tim, số quân trong từng đợt và giá trị phần thưởng của tuyến mất điện. Các quyết định nền tảng về nhân vật, hệ thống và tiến trình màn chơi không nên thay đổi trong giai đoạn cân bằng.
+Hệ lệnh được mô tả theo README thực tế; việc tích hợp từng màn vẫn cần xác nhận General, hồ sơ kỹ năng, phạm vi nhận lệnh, quyền điều khiển và tương tác môi trường. Các cơ chế cứu hộ không sát thương, Trấn tĩnh, liên kết kỹ năng và phương tiện là hạng mục cần triển khai hoặc xác minh, không chỉ là thông số cân bằng. Sau khi chúng hoạt động, mới cân bằng thời lượng Hold/Regroup, khoảng cách và giãn đội hình, MP/hồi hỗ trợ, thương tích Block, dung sai nhịp tim, số quân mỗi đợt và phần thưởng tuyến mất điện.

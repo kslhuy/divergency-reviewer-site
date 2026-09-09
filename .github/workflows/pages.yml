@@ -29,6 +29,12 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install content parser
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Check visual editor
+        run: npm test
+
       - name: Build reviewer HTML
         run: node build-reviewer-html.mjs
 
@@ -39,6 +45,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp Divergency_Reviewer_Tabs.html _site/index.html
+          cp Divergency_Reviewer_Tabs.html steam-image-tool.html rewards-card-poster.html _site/
           cp -R imgs _site/imgs
           cp robots.txt sitemap.xml _site/
           touch _site/.nojekyll
