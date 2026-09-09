@@ -3,7 +3,7 @@
   const start = document.getElementById('web-edit-start');
   const floatingStart = document.getElementById('web-edit-fab');
   const note = document.getElementById('web-edit-note');
-  const onlineOrigin = 'https://divergency-team-editor.coral-glade-6347.chatgpt.site';
+  const onlineOrigin = 'https://divergency-team-editor.huyq1471.chatgpt.site';
   const isLocalEditor = location.hostname === '127.0.0.1' && location.port === '4177';
   const isOnline = location.origin === onlineOrigin || (location.hostname === '127.0.0.1' && !isLocalEditor);
   const isPublishedReader = location.hostname === 'kslhuy.github.io';
