@@ -33,6 +33,17 @@ function setup() {
 }
 const owner={id:'owner-id',email:'owner@example.test'};
 const editor={id:'editor-id',email:'writer@example.test'};
+test('existing malformed heading wrappers are repaired for readers without changing revision or body text', async()=>{
+  const {request,sqlite}=setup();
+  const malformed='<h1>Game</h1><h1><p>A whole paragraph accidentally pasted as a title.</p></h1><h2>Laundel</h2>';
+  sqlite.prepare('INSERT INTO documents (id,html,revision,saved_at,saved_by) VALUES (?,?,?,?,?)').run('gameplay',malformed,4,'2026-09-09T09:11:53Z','owner@example.test');
+  const current=await (await request('/api/gameplay')).json();
+  assert.equal(current.revision,4);
+  assert.deepEqual(prepareGameplay(current.html).toc.map(n=>n.text),['Game','Laundel']);
+  assert.match(current.html,/<p>A whole paragraph accidentally pasted as a title\.<\/p>/);
+  assert.equal(sqlite.prepare('SELECT html FROM documents').get().html,malformed);
+  sqlite.close();
+});
 test('reader HTML and public API use the same saved gameplay after an editor save',async()=>{
   const {request,sqlite}=setup();
   await request('/api/editor','GET',null,owner);
