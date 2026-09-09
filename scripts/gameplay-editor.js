@@ -336,7 +336,10 @@
   function closeEditor() {
     dirty = false;
     editing = false;
-    location.hash = 'gameplay';
+    const readerURL = new URL(location.href);
+    readerURL.searchParams.delete('edit');
+    readerURL.hash = 'gameplay';
+    history.replaceState(null, '', readerURL);
     location.reload();
   }
   saveButton.addEventListener('click', save);
