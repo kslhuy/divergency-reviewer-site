@@ -7,8 +7,9 @@ import { prepareGameplay } from '../scripts/web-content.mjs';
 // Exercise the actual Worker handler and SQL against SQLite, with only build-time assets injected.
 const source = readFileSync(new URL('../online/worker.mjs', import.meta.url),'utf8')
   .replace(/^import .*;\r?\n/gm,'');
-const makeWorker = new Function('prepareGameplay','page','initialHTML','library',
+const makeWorkerSource = new Function('prepareGameplay','page','initialHTML','library','assets',
   source.replaceAll('export function ','function ').replace('export default {','return {'));
+const makeWorker = (...args) => makeWorkerSource(...args, { '/scripts/markdown-export.js': 'export-test', '/styles/site.css': 'body{}' });
 function setup() {
   const sqlite = new DatabaseSync(':memory:');
   sqlite.exec(readFileSync(new URL('../drizzle/0000_aberrant_famine.sql',import.meta.url),'utf8'));
@@ -33,6 +34,21 @@ function setup() {
 }
 const owner={id:'owner-id',email:'owner@example.test'};
 const editor={id:'editor-id',email:'writer@example.test'};
+
+test('browser assets are served with correct MIME types while server source stays private', async () => {
+  const { request, sqlite } = setup();
+  const script = await request('/scripts/markdown-export.js');
+  assert.equal(script.status, 200);
+  assert.match(script.headers.get('Content-Type'), /javascript/);
+  assert.equal(await script.text(), 'export-test');
+  const css = await request('/styles/site.css');
+  assert.equal(css.status, 200);
+  assert.match(css.headers.get('Content-Type'), /text\/css/);
+  assert.equal(await css.text(), 'body{}');
+  assert.equal(await (await request('/styles/site.css', 'HEAD')).text(), '');
+  assert.equal((await request('/scripts/editor-server.mjs')).status, 404);
+  sqlite.close();
+});
 test('existing malformed heading wrappers are repaired for readers without changing revision or body text', async()=>{
   const {request,sqlite}=setup();
   const malformed='<h1>Game</h1><h1><p>A whole paragraph accidentally pasted as a title.</p></h1><h2>Laundel</h2>';

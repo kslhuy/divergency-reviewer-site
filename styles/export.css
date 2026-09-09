@@ -1,0 +1,23 @@
+.export-actions, .export-quick-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
+.export-actions { margin-top: 10px; }
+.toolbar .actions { flex-wrap: wrap; }
+.export-quick-actions { flex-basis: 100%; }
+.export-actions button, .export-quick-actions button, .markdown-export-dialog button, .markdown-export-dialog select {
+  font: inherit; font-size: 0.875rem; line-height: 1.25; color: var(--ink); background: var(--panel-strong); border: 1px solid var(--line); border-radius: 5px; padding: 5px 8px; min-height: 30px; cursor: pointer;
+}
+.export-actions button:hover, .export-quick-actions button:hover, .markdown-export-dialog button:hover { border-color: var(--teal); }
+.export-quick-actions button:disabled { opacity: .45; cursor: default; }
+.md-quick-status { flex-basis: 100%; font-size: .875rem; color: var(--teal); }
+.md-quick-status:empty { display: none; }
+.markdown-export-dialog { color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 10px; width: min(900px, calc(100vw - 32px)); max-height: 90dvh; padding: 20px; }
+.markdown-export-dialog::backdrop { background: rgba(0,0,0,.75); }
+.markdown-export-header, .markdown-export-footer { display: flex; align-items: center; gap: 12px; justify-content: space-between; }
+.markdown-export-header { margin-bottom: 16px; }
+.markdown-export-header h2 { margin: 0; font-size: 1.3rem; }
+.markdown-export-dialog label { display: grid; gap: 6px; font-size: 1rem; }
+.markdown-export-dialog select { width: 100%; min-width: 0; }
+.markdown-export-note { font-size: .9rem; color: var(--muted); }
+.markdown-export-dialog textarea { width: 100%; height: min(45dvh, 460px); resize: vertical; color: var(--ink); background: var(--bg); border: 1px solid var(--line); padding: 12px; font: .9rem/1.6 var(--mono); }
+.markdown-export-footer { flex-wrap: wrap; margin-top: 16px; }
+.markdown-export-footer [role="status"] { flex: 1; font-size: .9rem; }
+@media print { .export-actions, .export-quick-actions, .md-quick-status, .markdown-export-dialog { display: none; } }

@@ -31,24 +31,26 @@
   const bar = document.createElement('section');
   bar.className = 'editor-bar';
   bar.hidden = true;
-  bar.setAttribute('aria-label', 'Biên tập gameplay');
+  bar.setAttribute('aria-label', 'Gameplay editor');
   bar.innerHTML = `
-    <div class="editor-bar-row" role="group" aria-label="Định dạng văn bản">
-      <button type="button" data-command="undo" title="Hoàn tác (Ctrl+Z)">↶</button>
-      <button type="button" data-command="redo" title="Làm lại (Ctrl+Y)">↷</button>
-      <button type="button" data-command="bold" title="In đậm (Ctrl+B)"><b>B</b></button>
-      <button type="button" data-command="italic" title="In nghiêng (Ctrl+I)"><i>I</i></button>
-      <label>Kiểu <select id="editor-format"><option value="p">Đoạn văn</option><option value="h1">Tiêu đề chính</option><option value="h2">Tiêu đề 2</option><option value="h3">Tiêu đề 3</option><option value="h4">Tiêu đề 4</option><option value="blockquote">Trích dẫn</option></select></label>
-      <button type="button" data-command="insertUnorderedList">• Danh sách</button>
-      <button type="button" id="editor-add-row">+ Dòng bảng</button>
-      <button type="button" id="editor-add-table">+ Bảng</button>
-      <button type="button" id="editor-add-image">+ Chèn ảnh</button>
+    <div class="editor-bar-row" role="group" aria-label="Text formatting">
+      <button type="button" data-command="undo" title="Undo (Ctrl+Z)">↶</button>
+      <button type="button" data-command="redo" title="Redo (Ctrl+Y)">↷</button>
+      <button type="button" data-command="bold" title="Bold (Ctrl+B)"><b>B</b></button>
+      <button type="button" data-command="italic" title="Italic (Ctrl+I)"><i>I</i></button>
+      <label class="editor-style-label">Style <select id="editor-format" aria-label="Current text style" title="Use the existing document styles"><option value="p">Text</option><option value="h1">Title</option><option value="h2">Header</option><option value="h3">Subheader</option><option value="h4">Small heading</option><option value="h5">Heading 5</option><option value="h6">Heading 6</option><option value="blockquote">Quote</option><option value="pre">Code</option></select></label>
+      <button type="button" data-command="insertUnorderedList">• List</button>
+      <button type="button" id="editor-add-row">+ Row</button>
+      <button type="button" id="editor-add-table">+ Table</button>
+      <button type="button" id="editor-add-image">+ Image</button>
     </div>
     <div class="editor-bar-row">
-      <span class="editor-status" role="status" aria-live="polite">Bấm vào nội dung để sửa. Ctrl+S để lưu.</span>
-      <button type="button" id="editor-download">Tải bản nháp</button>
-      <button type="button" id="editor-finish">Đóng biên tập</button>
-      <button type="button" id="editor-save" class="editor-primary">Lưu vào dự án</button>
+      <span class="editor-status" role="status" aria-live="polite">Click text to edit · Ctrl+S to save</span>
+      <button type="button" id="editor-download">Draft .html</button>
+      <button type="button" data-md-action="copy" data-export-doc="gameplay" title="Copy the current gameplay as Markdown">Copy MD</button>
+      <button type="button" data-md-action="download" data-export-doc="gameplay" title="Download the current gameplay as a Markdown file">Download .md</button>
+      <button type="button" id="editor-finish">Close</button>
+      <button type="button" id="editor-save" class="editor-primary">Save</button>
     </div>`;
   document.body.append(bar);
   const status = bar.querySelector('.editor-status');
@@ -72,11 +74,11 @@
     if (!isOnline && !isLocalEditor && !isPublishedReader) return;
     try {
       if (isOnline || isPublishedReader) {
-        note.textContent = 'Đang tải nội dung đã lưu online…';
+        note.textContent = 'Loading saved content…';
         article.setAttribute('aria-busy', 'true');
         if (isPublishedReader) article.hidden = true;
         const content = await fetch((isPublishedReader ? onlineOrigin : '') + '/api/gameplay', {cache:'no-store',signal:AbortSignal.timeout(20000)});
-        if (!content.ok) throw new Error('Chưa tải được bản online. Trang đang hiển thị bản đi kèm giao diện; hãy tải lại.');
+        if (!content.ok) throw new Error('Could not load the saved document. Reload the page to try again.');
         const current = await content.json();
         article.innerHTML = current.html;
         article.hidden = false;
@@ -91,7 +93,7 @@
           metrics[1].textContent = article.querySelectorAll('h1,h2').length;
           metrics[2].textContent = article.querySelectorAll('table').length;
         }
-        note.textContent = 'Nội dung chung · bản ' + current.revision + (current.savedAt ? ' · lưu lúc ' + new Date(current.savedAt).toLocaleString('vi-VN') : '');
+        note.textContent = 'Shared document · v' + current.revision + (current.savedAt ? ' · saved ' + new Date(current.savedAt).toLocaleString('en-GB') : '');
         if (isPublishedReader) return;
       }
       const response = await fetch('/api/editor', { signal: AbortSignal.timeout(10000) });
@@ -99,12 +101,12 @@
       if (response.ok && result.app === 'divergency-editor') {
         session = result;
         if (session.online) onlineControls.update();
-        else note.textContent = 'Bản trên máy. Lưu ở đây không thay đổi nội dung online của nhóm.';
+        else note.textContent = 'Local copy. Saving here does not update the shared document.';
       }
     } catch (error) {
       loadError = error.message;
       article.removeAttribute('aria-busy');
-      if (isOnline || isPublishedReader) note.innerHTML = 'Chưa tải được nội dung chung. Hãy tải lại hoặc <a href="' + onlineOrigin + '/#gameplay">mở trang biên tập online</a>.';
+      if (isOnline || isPublishedReader) note.innerHTML = 'Could not load the shared document. Reload or <a href="' + onlineOrigin + '/#gameplay">open the online editor</a>.';
     }
   })();
   const onlineControls = createOnlineControls({ getSession: () => session, note, bar, saveButton, dialog,
@@ -118,7 +120,7 @@
       signal: AbortSignal.timeout(20000),
     });
     const result = await response.json();
-    if (!response.ok) throw Object.assign(new Error(result.error || 'Không lưu được. Giữ bản nháp và thử lại.'), {status:response.status});
+    if (!response.ok) throw Object.assign(new Error(result.error || 'Could not save. Keep your draft and try again.'), {status:response.status});
     return result;
   }
   function normalizedHTML(html) {
@@ -175,7 +177,7 @@
       storageFailed = false;
     } catch {
       storageFailed = true;
-      message('Không lưu được bản nháp tự động. Bấm Lưu vào dự án hoặc Tải bản nháp.', true);
+      message('Autosave is unavailable. Save or download your draft.', true);
     }
   }
   function refreshIndex() {
@@ -216,7 +218,7 @@
         if (item.children.length) {
           branch.type = 'button'; branch.setAttribute('aria-expanded', String(depth === 0));
           branch.setAttribute('aria-controls', 'toc-children-' + item.id);
-          branch.setAttribute('aria-label', 'Mở hoặc thu gọn: ' + item.text);
+          branch.setAttribute('aria-label', 'Expand or collapse: ' + item.text);
           branch.innerHTML = '<span aria-hidden="true">›</span>';
         }
         const link = document.createElement('a'); link.className = 'toc-link toc-level-' + item.level;
@@ -237,7 +239,7 @@
   function changed() {
     if (!editing) return;
     dirty = true;
-    message('Có thay đổi chưa lưu. Bấm Lưu khi xong.');
+    message('Unsaved changes · Ctrl+S to save');
     clearTimeout(draftTimer);
     draftTimer = setTimeout(() => { storeDraft(); refreshIndex(); }, 750);
   }
@@ -245,6 +247,18 @@
     const selection = window.getSelection();
     if (selection.rangeCount && article.contains(selection.anchorNode) && article.contains(selection.focusNode)) {
       savedRange = selection.getRangeAt(0).cloneRange();
+      syncTextStyle(selection.anchorNode);
+    }
+  }
+  function syncTextStyle(node) {
+    if (!editing || !node || !article.contains(node)) return;
+    const element = node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+    const block = element?.closest('p,h1,h2,h3,h4,h5,h6,blockquote,pre');
+    const select = bar.querySelector('#editor-format');
+    const value = block && article.contains(block) ? block.tagName.toLowerCase() : 'p';
+    if (document.activeElement !== select) select.value = value;
+    for (const name of ['bold', 'italic']) {
+      bar.querySelector('[data-command="' + name + '"]').setAttribute('aria-pressed', String(document.queryCommandState(name)));
     }
   }
   function restoreSelection() {
@@ -260,6 +274,7 @@
     }
   }
   function command(name, value) {
+    if (name === 'formatBlock' && !['p','h1','h2','h3','h4','h5','h6','blockquote','pre'].includes(value)) return;
     restoreSelection();
     document.execCommand(name, false, value);
     rememberSelection();
@@ -269,7 +284,8 @@
     if (enabled) stagePlans.clear(article);
     article.contentEditable = String(enabled);
     article.spellcheck = true;
-    if (enabled) { article.setAttribute('role', 'textbox'); article.setAttribute('aria-label', 'Nội dung gameplay, chỉnh sửa trực tiếp'); article.setAttribute('aria-multiline', 'true'); }
+    if (enabled) document.execCommand('styleWithCSS', false, false);
+    if (enabled) { article.setAttribute('role', 'textbox'); article.setAttribute('aria-label', 'Editable gameplay document'); article.setAttribute('aria-multiline', 'true'); }
     else { article.removeAttribute('role'); article.removeAttribute('aria-label'); article.removeAttribute('aria-multiline'); }
     article.querySelectorAll('.heading-link, img').forEach(node => { node.contentEditable = 'false'; });
     if (!enabled) stagePlans.enhance(article);
@@ -278,10 +294,10 @@
     let draft;
     try { draft = JSON.parse(localStorage.getItem(draftKey)); } catch { return; }
     if (!draft || draft.root !== session.root || typeof draft.html !== 'string') return;
-    dialog.innerHTML = '<h2>Có bản nháp chưa lưu</h2><p id="draft-description"></p><button type="button" id="draft-restore">Khôi phục bản nháp</button> <button type="button" id="draft-skip">Giữ bản đang lưu</button>';
+    dialog.innerHTML = '<h2>Unsaved draft found</h2><p id="draft-description"></p><button type="button" id="draft-restore">Restore draft</button> <button type="button" id="draft-skip">Keep saved version</button>';
     dialog.querySelector('#draft-description').textContent = draft.revision === revision
-      ? 'Khôi phục nội dung bạn đã sửa trong lần biên tập trước?'
-      : 'Khôi phục phần đang sửa. Khi lưu, trang sẽ giúp bạn gộp với thay đổi mới của nhóm.';
+      ? 'Restore your previous editing session?'
+      : 'Restore your draft. New team changes can be merged when you save.';
     dialog.querySelector('#draft-restore').onclick = () => {
       // Drafts are plain data in storage, but still sanitize before inserting into the live document.
       const template = document.createElement('template');
@@ -310,7 +326,7 @@
     const active = document.getElementById('pane-gameplay').classList.contains('is-active');
     bar.hidden = !editing || !active;
     floatingStart.hidden = editing && active;
-    floatingStart.querySelector('.web-edit-fab-label').textContent = editing ? 'Tiếp tục sửa gameplay' : 'Chỉnh sửa gameplay';
+    floatingStart.querySelector('.web-edit-fab-label').textContent = editing ? 'Resume editing' : 'Edit gameplay';
   }
   async function beginEditing() {
     if (!isOnline && !localOptIn && !editing) { help(); return; }
@@ -337,13 +353,13 @@
       document.body.classList.add('is-editing');
       editableState(true);
       refreshIndex();
-      note.textContent = session.online ? 'Đang biên tập online. Lưu để cả nhóm thấy thay đổi.' : 'Đang biên tập bản trên máy.';
+      note.textContent = session.online ? 'Editing online. Save to share changes with the team.' : 'Editing a local copy.';
       if (keepPosition) window.scrollTo({ top: readingPosition, behavior: 'instant' });
       else readerNavigation.jumpTo(article.querySelector('h1,h2,h3') || article);
-      message('Bấm vào nội dung để sửa. Ctrl+S để lưu.');
+      message('Click text to edit · Ctrl+S to save');
       offerDraft();
     } catch (error) {
-      dialog.innerHTML = '<h2>Chưa mở được trình biên tập</h2><p></p><form method="dialog"><button>Đóng</button></form>';
+      dialog.innerHTML = '<h2>Could not open the editor</h2><p></p><form method="dialog"><button>Close</button></form>';
       dialog.querySelector('p').textContent = error.message;
       dialog.showModal();
     } finally { start.disabled = floatingStart.disabled = false; }
@@ -362,42 +378,42 @@
     };
     if (!conflicts.length) { apply(); return true; }
     dialog.replaceChildren();
-    const title = document.createElement('h2'); title.textContent = 'Chọn nội dung cho đoạn cùng sửa';
-    const description = document.createElement('p'); description.textContent = 'Các thay đổi khác đã được gộp. Chọn bản muốn giữ cho từng đoạn bên dưới, rồi lưu ngay tại đây.';
+    const title = document.createElement('h2'); title.textContent = 'Resolve overlapping changes';
+    const description = document.createElement('p'); description.textContent = 'Other changes have been merged. Choose which version to keep for each passage, then save.';
     dialog.append(title, description);
     for (const [index, conflict] of conflicts.entries()) {
       const field = document.createElement('fieldset'); field.className = 'editor-conflict';
-      const legend = document.createElement('legend'); legend.textContent = 'Đoạn ' + (index + 1); field.append(legend);
-      for (const [side, label] of [['mine','Phần tôi vừa sửa'],['theirs','Bản nhóm vừa lưu']]) {
+      const legend = document.createElement('legend'); legend.textContent = 'Passage ' + (index + 1); field.append(legend);
+      for (const [side, label] of [['mine','My changes'],['theirs','Team version']]) {
         const option = document.createElement('label');
         const radio = document.createElement('input'); radio.type = 'radio'; radio.name = 'conflict-' + index;
         radio.onchange = () => { conflict.choice = side; accept.disabled = conflicts.some(c => !c.choice); };
         option.append(radio, document.createTextNode(label));
         const preview = document.createElement('div'); preview.className = 'editor-conflict-preview';
         const text = document.createElement('div'); text.innerHTML = conflict[side].join('\n');
-        preview.textContent = text.textContent || '(Đoạn đã được xóa)';
+        preview.textContent = text.textContent || '(Deleted passage)';
         option.append(preview); field.append(option);
       }
       dialog.append(field);
     }
-    const accept = document.createElement('button'); accept.textContent = 'Gộp và lưu'; accept.className = 'editor-primary'; accept.disabled = true;
+    const accept = document.createElement('button'); accept.textContent = 'Merge and save'; accept.className = 'editor-primary'; accept.disabled = true;
     accept.onclick = () => { apply(); dialog.close(); save(); };
-    const cancel = document.createElement('button'); cancel.textContent = 'Tiếp tục sửa bản nháp'; cancel.onclick = () => dialog.close();
+    const cancel = document.createElement('button'); cancel.textContent = 'Keep editing draft'; cancel.onclick = () => dialog.close();
     dialog.append(accept, cancel); dialog.showModal();
-    message('Bản nháp được giữ. Chọn đoạn muốn giữ trong cửa sổ gộp thay đổi.');
+    message('Your draft is safe. Choose which passages to keep in the merge window.');
     return false;
   }
   async function save(mergeAttempt = 0) {
     if (typeof mergeAttempt !== 'number') mergeAttempt = 0;
     if (saving || !editing) return;
-    if (!dirty) { message('Nội dung đã được lưu.'); return; }
+    if (!dirty) { message('All changes saved.'); return; }
     saving = true;
     storeDraft();
     const submitted = cleanHTML();
     const submittedRevision = revision;
     saveButton.disabled = true;
     finishButton.disabled = true;
-    message('Đang lưu và cập nhật trang…');
+    message('Saving…');
     try {
       const result = await request('PUT', { revision: submittedRevision, html: submitted });
       revision = result.revision;
@@ -413,7 +429,7 @@
           if (stored?.revision === submittedRevision && stored?.html === submitted) localStorage.removeItem(draftKey);
         } catch { /* Saving to disk does not depend on browser storage. */ }
       }
-      message(dirty ? 'Đã lưu. Có nội dung bạn vừa sửa thêm; bấm Lưu khi xong.' : (session.online ? 'Đã lưu online cho cả nhóm lúc ' : 'Đã lưu trên máy lúc ') + new Date(result.savedAt).toLocaleTimeString('vi-VN') + '.');
+      message(dirty ? 'Saved. New edits are still unsaved.' : (session.online ? 'Saved for the team at ' : 'Saved locally at ') + new Date(result.savedAt).toLocaleTimeString('en-GB') + '.');
       // Refresh the reader in place after leaving editing; this also refreshes its index.
     } catch (error) {
       if (error.status === 409 && mergeAttempt < 3) {
@@ -422,15 +438,15 @@
             saving = false;
             await save(mergeAttempt + 1);
           }
-        } catch (mergeError) { message(mergeError.message + ' Bản nháp vẫn được giữ.', true); }
-      } else message(error.status === 409 ? 'Nhóm đang lưu liên tục. Bản nháp đã được giữ; bấm Lưu để thử lại.' : error.message, true);
+        } catch (mergeError) { message(mergeError.message + ' Your draft is still available.', true); }
+      } else message(error.status === 409 ? 'The team is saving frequent changes. Your draft is safe; click Save to retry.' : error.message, true);
     }
     finally { saving = false; saveButton.disabled = false; finishButton.disabled = false; }
   }
   function finish() {
     if (saving) return;
     if (dirty) {
-      dialog.innerHTML = '<h2>Còn thay đổi chưa lưu</h2><p>Bạn muốn lưu trước khi đóng biên tập?</p><button type="button" id="finish-save">Lưu và đóng</button> <button type="button" id="finish-discard">Đóng, giữ bản nháp</button> <button type="button" id="finish-cancel">Tiếp tục sửa</button>';
+      dialog.innerHTML = '<h2>Unsaved changes</h2><p>Save before closing the editor?</p><button type="button" id="finish-save">Save and close</button> <button type="button" id="finish-discard">Close, keep draft</button> <button type="button" id="finish-cancel">Keep editing</button>';
       dialog.querySelector('#finish-save').onclick = async () => { dialog.close(); await save(); if (!dirty) closeEditor(); };
       dialog.querySelector('#finish-discard').onclick = () => {
         storeDraft();
@@ -465,13 +481,13 @@
     if (html) document.execCommand('insertHTML', false, safeFragment(html));
     else document.execCommand('insertText', false, event.clipboardData.getData('text/plain'));
   });
-  article.addEventListener('drop', event => { if (editing) { event.preventDefault(); message('Bấm + Chèn ảnh để chọn ảnh trong thư viện hoặc tải ảnh từ máy.'); } });
+  article.addEventListener('drop', event => { if (editing) { event.preventDefault(); message('Use + Image to choose from the library or upload an image.'); } });
   bar.querySelector('#editor-add-row').addEventListener('click', () => {
     restoreSelection();
     const selection = window.getSelection();
     const node = selection.anchorNode?.nodeType === Node.ELEMENT_NODE ? selection.anchorNode : selection.anchorNode?.parentElement;
     const row = node?.closest('tr');
-    if (!row || !article.contains(row)) return message('Đặt con trỏ trong bảng cần thêm dòng.');
+    if (!row || !article.contains(row)) return message('Place the cursor in a table to add a row.');
     const table = row.closest('table');
     const next = document.createElement('tr');
     for (const cell of row.cells) {
@@ -484,10 +500,10 @@
     else row.after(next);
     const range = document.createRange(); range.selectNodeContents(next.cells[0]); range.collapse(true);
     selection.removeAllRanges(); selection.addRange(range); rememberSelection(); changed();
-    message('Đã thêm dòng. Thay đổi cấu trúc bảng được giữ trong bản nháp.');
+    message('Row added. Save when ready.');
   });
   bar.querySelector('#editor-add-table').addEventListener('click', () => {
-    command('insertHTML', '<div class="table-wrap"><table><thead><tr><th>Cột 1</th><th>Cột 2</th><th>Cột 3</th></tr></thead><tbody><tr><td>Nội dung</td><td>Nội dung</td><td>Nội dung</td></tr></tbody></table></div><p><br></p>');
+    command('insertHTML', '<div class="table-wrap"><table><thead><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr></thead><tbody><tr><td>Text</td><td>Text</td><td>Text</td></tr></tbody></table></div><p><br></p>');
   });
   const imagePicker = createImagePicker({
     getSession: () => session,
@@ -497,7 +513,7 @@
       figure.append(img);
       if (caption) { const figcaption = document.createElement('figcaption'); figcaption.textContent = caption; figure.append(figcaption); }
       command('insertHTML', figure.outerHTML + '<p><br></p>');
-      message('Đã chèn ảnh. Bấm Lưu khi chỉnh sửa xong.');
+      message('Image inserted. Save when ready.');
     },
   });
   bar.querySelector('#editor-add-image').addEventListener('click', () => {
@@ -505,7 +521,7 @@
     imagePicker.open();
   });
   bar.querySelector('#editor-download').addEventListener('click', () => {
-    const html = '<!doctype html><html lang="vi"><meta charset="utf-8"><title>Divergency — Bản nháp gameplay</title><body>' + cleanHTML() + '</body></html>';
+    const html = '<!doctype html><html lang="vi"><meta charset="utf-8"><title>Divergency — Gameplay draft</title><body>' + cleanHTML() + '</body></html>';
     const url = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }));
     const link = document.createElement('a'); link.href = url; link.download = 'Divergency_Gameplay_Draft.html'; link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
