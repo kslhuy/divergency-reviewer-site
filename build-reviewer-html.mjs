@@ -1118,7 +1118,7 @@ function renderPane(doc, index) {
         <div>
           <p class="eyebrow">${escapeHtml(doc.eyebrow)}</p>
           <h2 id="tab-title-${doc.id}">${escapeHtml(doc.label)}</h2>
-          <p>${escapeHtml(doc.summary)}</p>${doc.id === "gameplay" ? '\n          <button class="web-edit-button" id="web-edit-start" type="button">✎ Chỉnh sửa trực tiếp</button><p class="web-edit-note" id="web-edit-note">Chỉnh sửa trên máy: mở Open-Gameplay-Editor.cmd trong thư mục dự án.</p>' : ''}
+          <p>${escapeHtml(doc.summary)}</p>${doc.id === "gameplay" ? '\n          <button class="web-edit-button" id="web-edit-start" type="button">✎ Chỉnh sửa trực tiếp</button><p class="web-edit-note" id="web-edit-note">Sửa và lưu online cho cả nhóm. Không cần đồng bộ file hoặc push Git.</p>' : ''}
         </div>
         <dl class="doc-stats" aria-label="${escapeAttribute(doc.label)} statistics">
           <div><dt>Read</dt><dd>${doc.readMinutes} min</dd></div>
@@ -2843,6 +2843,7 @@ export function buildPage(docs) {
       }
     }
     ${readFileSync(path.join(here, "scripts/gameplay-editor.css"), "utf8")}
+    ${readFileSync(path.join(here, "scripts/stage-layouts.css"), "utf8")}
   </style>
 </head>
 <body>
@@ -3185,7 +3186,10 @@ export function buildPage(docs) {
     openHash();
     updateProgress();
   </script>
-  <script>${readFileSync(path.join(here, "scripts/image-picker.js"), "utf8")}
+  <script>${readFileSync(path.join(here, "scripts/stage-layouts.js"), "utf8")}
+    ${readFileSync(path.join(here, "scripts/online-controls.js"), "utf8")}
+  ${readFileSync(path.join(here, "scripts/image-picker.js"), "utf8")}
+  ${readFileSync(path.join(here, "scripts/merge-gameplay.js"), "utf8")}
   ${readFileSync(path.join(here, "scripts/gameplay-editor.js"), "utf8")}</script>
 </body>
 </html>`;

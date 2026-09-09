@@ -521,78 +521,211 @@ Có một cuộc đột với băng đản ở ngoài phố .
 - Dưới nửa sinh lực, hắn rút kiếm gia truyền, tăng tốc và gọi đàn em chạy cắt đấu trường.
 - Henry đánh dấu lúc xe quay đầu; Solei phản đòn; Deep phá giáp khi trùm ngã; Block ưu tiên phòng thủ nếu còn bị thương.
 
-## 1-2. Đường cống và chợ ngầm Laundel
+﻿## 1-2. Đường cống và chợ ngầm Laundel
 
-### Mục đích và dòng chảy
+### Một lối thoát đi xuyên qua đời sống của người khác
 
-Sau có được thông tin đến quán Bar , nhóm Deep sẽ đến được Laundel là một trung tâm nhỏ có luật lệ, nhiều phe và đời sống riêng. Không gian mở từ đường cống chật, tối sang một ga ngầm hai tầng đầy quầy hàng, đường ray và lối bảo trì.
+**Mục tiêu của đội:** tới bến cảng mà không đi qua các chốt trên mặt đất. Jacques chỉ đường xuống cống sau Armorlite; người giữ lối ra biển nằm trong chợ ngầm Laundel. Người chơi bắt đầu bằng tìm đường, có một khoảng nghỉ để mua bán và làm việc, rồi tự chọn cách vượt chốt cuối chợ.
 
-### Cơ chế và tình huống
+**Tuyến màn:** phố sau Armorlite → Sewer1 → trạm bơm Sewer2 → ga Laundel → cửa bảo trì phía đông. Chơi tuyến chính khoảng 20–25 phút; ở lại làm việc và tìm GROGER thêm khoảng 10 phút. Đây là hướng dựng thử; thời lượng sẽ điều chỉnh theo bản chơi thực tế.
 
-- Ba phe gồm Áo Đen của Jamerson, Xanh Dương bảo vệ thương nhân và Áo Ghi buôn tin.
-- Cất vũ khí cho phép đi lại và mua bán. Rút vũ khí biến khu chợ thành chiến trường.
-- Người chơi có thể mua, mặc cả, làm việc đổi thẻ hoặc cướp. Mỗi cách ảnh hưởng lòng tin Laundel.
-- Quầy Xanh Dương bán thuốc và vũ khí tầm xa; Áo Đen bán vũ khí nặng; Áo Ghi bán thông tin và đường tắt.
-- Dòng nước, van, phòng ngập và quái đầu đàn kết nối chiến đấu với kỹ năng của Tulas.
-- Người chơi đặt Block ở Hold gần lối nguy hiểm để canh, rồi Solei thao tác van và vượt cửa trước khi đóng; Henry bắn khóa qua kỹ năng phù hợp nếu đã được gán. Phương án Block giữ cần van cần tương tác duy trì riêng, không được coi là tác dụng của Hold.
-- Các hình vẽ và lời đồn về GROGER tạo một tuyến điều tra riêng.
+### 1. Xuống cống — cho người chơi tự thử trước khi gặp nguy hiểm
 
-### Đối đầu theo lựa chọn
+![Phố sau Armorlite — dùng nền Marsile Background Before Finish cho đoạn tìm cửa bảo trì xuống cống](<imgs/Stage1/chap1/marsile background before finish.png>)
 
-- Giữ lời với Xanh Dương hoặc Áo Ghi dẫn tới trận đánh thủ lĩnh Áo Đen.
-- Cướp phá nhiều dẫn đội vào tuyến cống nguy hiểm và thêm một cuộc phục kích.
-- Tìm đủ manh mối cho phép chủ động truy tìm GROGER; lòng tin quá thấp có thể khiến cuộc gặp trở thành một cái bẫy.
+Sau trận ngoài quán, Henry thấy đường xe bị phong tỏa. Người chơi vẫn điều khiển nhân vật đi về cuối phố, mở cửa bảo trì cạnh kho hàng. Camera đi xuống theo thang, tiếng xe và nhạc quán mờ dần thành tiếng nước nhỏ giọt. Chuyển cảnh chỉ khoảng 6–8 giây, kết thúc trên một bờ khô; điểm lưu nằm ngay đây.
 
-**GROGER** lặn dưới nước và chỉ lộ khi có tiếng động hoặc ánh sáng. Thẻ giao dịch rơi trong đấu trường là cám dỗ: nhặt chúng cho lợi ích sau trận nhưng làm GROGER hung hãn hơn. Nếu người Laundel tin đội, họ thả đèn và chỉ điểm yếu. Qua đó, con quái không chỉ là nguồn vật phẩm mà là hậu quả của việc thành phố bỏ mặc một con người.
+![Sewer1 — đi trên bờ khô, qua rãnh nhỏ rồi tới đoạn cống có người canh](<imgs/Stage1/chap1/Sewer1.png>)
+
+Đoạn đầu chưa có địch. Một rãnh cắt ngang lối đi; người chơi có thể nhảy qua hoặc đi vòng qua tấm ván thấp. Bờ bên kia rộng, nên lần thử đầu không đòi căn từng pixel. Có vài hòn đá cạnh vách: nhặt, ném xuống nước, nhìn gợn nước nổi lên. Xa hơn, một con quái ngoi đầu đúng chỗ đá rơi rồi lặn xuống. Không cần popup dài: người chơi vừa tự thấy tiếng động có thể kéo một mối nguy ra khỏi đường đi.
+
+Nước sát bờ chỉ làm chậm. Phần kênh sâu nằm ngoài tuyến đi, có mép vỡ và dòng chảy báo nguy; rơi xuống được đưa về bờ vừa đứng, mất nhẹ máu nhưng không mất đồ nhiệm vụ. Không cần thêm hệ bơi/lặn cho đoạn này.
+
+### 2. Sewer2 — ném một hòn đá để tạo khoảng trống
+
+![Phác thảo Sewer2 — xanh: lối người chơi 1→2→4→5; vàng: ném từ 2 tới 3. 1: vào màn; 2: cột che; 3: tấm sắt tạo tiếng; 4: van cửa; 5: ra chợ. Tấm sắt và vị trí lính là đạo cụ cần đặt thêm](<imgs/Stage1/chap1/Sewer2.png>)
+
+Ở cuối Sewer2, một tay chân Áo Đen đứng gần van cửa chợ, quay qua quay lại giữa cửa và đống phế liệu. Người chơi nhìn thấy hắn từ phía sau cột **2**. Bên kia lối đi có tấm sắt treo lỏng **3**; gõ vào đó sẽ kêu rõ hơn ném xuống nước.
+
+**Một lượt chơi cụ thể:** nhặt đá trước cột → ném vào tấm sắt → tên gác quay đầu, đi tới kiểm tra → đi nhẹ phía sau hắn tới van **4** → mở cửa **5**. Cửa đã mở được chốt lại, cả đội đi qua; không cần để Block đứng giữ van mãi. Lính phát hiện người chơi thì chuyển thành trận nhỏ, đánh xong vẫn mở được cửa. Ném hụt có đá để lấy lại. Chọn lén lút giúp giữ thuốc, không phải điều kiện qua màn.
+
+Đồng đội tự thu đội hình khi chưa giao chiến, không chạy đập đồ làm hỏng bài thử. Nếu muốn đánh, người chơi có thể đặt một General Hold ở chỗ mình chọn để canh rồi tiến lên; **Hold chỉ giữ vị trí**, còn xoay van do nhân vật trực tiếp làm. Đây vẫn là đội một nhân vật trực tiếp và hai hỗ trợ, không gọi cả dàn nhân vật vào cùng một câu đố.
+
+### 3. Qua cửa chợ — thay căng thẳng bằng tò mò
+
+![Phác thảo Laundel — xanh: tuyến dưới 1→3→4→5→6; vàng: nhánh cầu thang 2. 1: cổng cống; 2: phòng bảo trì trên ga; 3: quầy thuốc; 4: quầy vũ khí; 5: người buôn tin; 6: lối sang cống chính](<imgs/Stage1/chap1/RuinedTrainStation_2_Laundel.png>)
+
+Cửa mở ra không phải một bãi quái khác: người chơi nghe tiếng rao, bát đũa và một chiếc radio rè. Máy quay dịch nhẹ để lộ ba quầy dưới ga, cầu thang bên trái và sàn bảo trì ở trên. Nền chợ cao hơn nước cống, có cửa chống ngập và đường thoát nước riêng. Thuốc, thức ăn và chỗ ngủ nằm trên phần khô; người ở đây đang cố giữ một nơi sống được.
+
+Một nhóm Áo Đen nhận ra đội từ lệnh truy nã, chặn ở sân trước các quầy. Trận mở đầu nằm ngoài khu mua bán; tự vệ ở đây không làm thương nhân ghét đội. Sau trận, chủ quầy **Xanh Dương** gọi người chơi tới, cho một ít thuốc và giải thích lối ra cảng phải đi qua cửa bảo trì cuối ga. **Áo Ghi** biết mã cửa; **Áo Đen** giữ chìa của chốt hàng phía sau. Ba phe có vai trò cụ thể ngay trong đường đi, không cần ba thanh danh tiếng.
+
+Từ đây người chơi được nghỉ, đổi đội, mua đồ và nói chuyện. Vũ khí được hạ trong vùng trung lập. Muốn cướp quầy phải chủ động chọn hành động có cảnh báo; một cú bấm nhầm không biến cả chợ thành kẻ thù. Nếu gây hấn, dân đóng cửa và một nhóm bảo vệ đến, không sinh lính vô hạn.
+
+### 4. Lấy lối ra — một việc chính, vài lý do để ở lại
+
+Người buôn tin Áo Ghi đưa ra một trao đổi: **bơm thoát nước của chợ bị kẹt, giúp họ sửa thì được mã cửa và chỉ đường**. Người chơi không cần chứng minh lòng tốt bằng hàng loạt việc vặt. Chỉ hoàn thành việc này là đủ đi tiếp.
+
+**Việc chính: Khơi lại dòng nước.** Lấy bộ lọc dự phòng trên sàn bảo trì của ga, rồi mở cửa tắt từ phòng đó về trạm bơm Sewer2. Chuyến quay lại dưới nửa phút, đi qua góc đã thấy từ lần đầu. Tại bơm có hai nhánh ống nhìn được trên cùng màn: một về ga, một tới bể trữ bỏ không. Dấu mực nước cho thấy nhánh về ga đang đầy. Người chơi lắp bộ lọc, xoay cần chuyển dòng sang bể trữ rồi bật bơm. Chọn nhầm thì kim áp suất lên vùng gạch chéo và máy tự ngắt; đổi cần là thử lại được. Khi nước rút, lộ bậc thang dẫn thẳng về quầy. Hoàn thành mở mã cửa, một ít Token và thái độ thân thiện của dân chợ.
+
+**Nếu không muốn làm việc:** mua mã từ Áo Ghi bằng Token, hoặc ép qua chốt hàng của Áo Đen và lấy chìa trên thủ lĩnh. Tuyến bạo lực có một trận khó hơn và dân bớt giúp đỡ; chìa tự vào túi nhiệm vụ khi trùm bị hạ. Người chơi hết tiền vẫn có tuyến sửa bơm miễn phí. Mọi cách đều ra cùng cửa **6**, không phải ba nhánh cốt truyện lớn.
+
+Hai việc phụ dùng lại chính ga và cống vừa đi qua:
+
+- **Kiện hàng chưa tới quầy thuốc:** tìm kiện bị giấu sau kiosk trên ga; thấy bên trong là thuốc và giấy ghi người nhận. Trả quầy Xanh Dương được thuốc dùng ngay và giảm giá nhỏ; bán Áo Đen được nhiều Token hơn nhưng quầy thuốc không tặng đồ nữa. Không có lựa chọn khiến tuyến chính bị khóa.
+- **Tiếng gõ dưới đường ray:** một người già nhờ tìm dấu người mất tích. Graffiti ở Sewer2, sổ tên sau kiosk và vết kéo gần cửa cống nối thành ba manh mối về GROGER. Chúng hiện trong nhật ký để người chơi biết mình còn thiếu gì; mỗi dấu chỉ tính một lần.
+
+**RPG vừa đủ:** giữ Token là tiền mua thuốc và nâng một kỹ năng đang có. Mốc thử: các trận trước chợ cho tổng 12 Token, thuốc giá 4, một nâng cấp nhỏ giá 8; làm việc chính giúp đi tiếp mà không phải mua mã. Việc phụ trả khoảng 4–6 Token. Muốn kiếm thêm, nhận việc dọn một bãi hàng với hai đợt quái ngắn; trả thưởng tối đa hai lượt, sau đó chỉ còn luyện tập. Không đặt yêu cầu cấp độ ở cửa cảng hoặc SheMal.
+
+### GROGER — mang điều đã học xuống một chỗ đáng sợ hơn
+
+Đủ manh mối, ông già mở cửa xuống bể dưới ga. Người chơi thấy thang quay về trước khi bước vào; đây là cuộc điều tra tự chọn. Nếu đội đã cướp chợ, một lời chỉ đường giả có thể đưa tới bể này, nhưng vẫn được rút về tìm cửa chính. Hậu quả không biến boss ẩn thành phí bắt buộc để qua màn.
+
+GROGER nghe rung động mặt nước. Ném đá vào khoảng nước sáng để dụ hắn lao lên; gợn nước chạy về điểm chạm báo đường lao. Né khỏi đó, đánh khi hắn mắc người ở mép bờ, rồi lùi trước cú quét tay. Nửa sau trận thêm một cú quét sau khi trồi, vẫn giữ quy luật cũ. Dân tin đội sẽ thả đèn giúp thấy gợn; không có trợ giúp thì vệt sóng vẫn đọc được.
+
+Vài Token mắc trên tấm lưới trong bể là cám dỗ: kéo lưới tạo tiếng, GROGER quay sang trước khi người chơi nhặt xong. Có thể để sau trận mới lấy. Phần thưởng chính là vật tư nâng cấp và một mẩu hồ sơ giải thích người mất tích, đủ để nhánh này có ý nghĩa ngoài chuyện đánh thêm một trùm.
+
+### Âm thanh dùng thế nào để vui mà dễ làm?
+
+Chỉ cần một quy tắc: **địch nghe tiếng ở nơi nó phát ra, không tự biết ai gây ra tiếng**. Đi nhẹ giúp qua sát địch đang quay lưng; chạy trên lưới sắt, đáp mạnh hoặc đập chai gây chú ý. Ném đá xuống nước dụ quái; ném vào sắt dụ lính ở xa hơn. Khi lính đã nhìn thấy và đánh nhau, ném thêm đá không khiến hắn quên người chơi.
+
+Phản hồi gồm dấu hỏi khi nghe, mũi hướng nhìn khi kiểm tra, dấu chấm than khi thấy người. Tường kín chặn tiếng, cửa mở nối hai phòng; chưa cần mô phỏng âm học thật. Máy bơm và tiếng chợ chủ yếu tạo không khí, không thêm bài canh nhịp bắt buộc. Mỗi tiếng quan trọng đều có gợn nước, động tác hoặc ký hiệu tương ứng để chơi tắt âm vẫn hiểu. Cơ chế nghe siêu nhiên, ghi nhớ thói quen được để dành cho Cái Tai ở chương sau.
+
+### Ra khỏi Laundel
+
+Ở cửa **6**, Henry nhận bản đồ vẽ đường cống chính. Phe còn tin đội nhắc vị trí cửa xả và điểm hẹn thuyền. Đội nghỉ chờ đổi ca tuần tra rồi đi cuối chiều: một dòng chuyển cảnh báo thời gian đã trôi qua, nối hợp lý với hoàng hôn bến cảng. Tiếng radio chợ nhỏ dần, tiếng nước lớn lên; lưu ở bờ khô Sewer3 trước khi trả quyền điều khiển.
 
 ## 1-3. Đường cống chính và bến cảng hoàng hôn
 
-### Mục đích và dòng chảy
+### Tưởng đã tới đường thoát
 
-Phân đoạn này dạy ưu tiên mục tiêu và mở rộng lệnh phối hợp trong không gian lớn. Người chơi rời cống, có một khoảng lặng ngắn ở bến cảng rồi bị lực lượng của Marius phục kích.
+**Mục tiêu ban đầu:** ra cửa xả, tìm thuyền của người quen Henry và rời Marseille. **Tuyến màn:** Sewer3 → các bệ Sewer4 → bến cảng → phục kích Marius → chiếm thuyền cảnh sát mật. Nhịp khoảng 20 phút: cống căng ngắn, bến cảng yên, rồi một trận lớn có mục tiêu rõ.
 
-### Cơ chế và tình huống
+![Sewer3 — quái bơi dưới kênh, lối khô và cửa phòng sơ tán bên đường](<imgs/Stage1/chap1/Sewer3.png>)
 
-- Quái đầu đàn tăng sức mạnh cho cả bầy; hạ chúng làm đám còn lại chậm và dễ choáng.
-- Nước sâu làm đội di chuyển chậm nhưng giúp tấn công quái khi chúng còn bơi.
-- Tia ngắm bắn tỉa buộc người chơi dùng thùng hàng làm chỗ nấp.
-- Mức truy nã quyết định thời điểm và số quân cảnh sát mật xuất hiện.
-- Trong khu cầu cống, người chơi đặt Block ở Hold bên trái/phải tại chỗ chặn, gọi hỗ trợ phá giáp của Deep nếu đã cấu hình, rồi chuyển Regroup khi tiến lên. Kẻ chỉ huy được người chơi trực tiếp ưu tiên xử lý; không có lệnh Phá hoặc Tập trung riêng. Các vai trò được chia theo nhân vật trực tiếp và hai General hiện có, không bắt buộc cả ba NPC cùng ra sân.
-- Tại bến cảng, bảng điều khiển thuyền là tương tác riêng của nhân vật trực tiếp. Người chơi bố trí General canh bằng Hold và gọi hỗ trợ thích hợp để đối phó lính bắn tỉa. Hold không vận hành bảng máy hoặc tự hộ tống thuyền đang chạy; cần Regroup để đi theo người chơi hoặc cơ chế thuyền riêng. Chỉ có tối đa ba mục tiêu cùng lúc để tránh quá tải.
+### 1. Cống chính — chọn đánh lúc địch còn yếu
 
-### Trùm: Marius Vane
+Lối khô thu hẹp, người chơi thấy một con đầu đàn gọi hai quái bơi tới. Chúng chưa đánh được khi đang trèo lên bờ; đòn trúng lúc này gây choáng tốt hơn. Người chơi có thể ném đá kéo cả nhóm tới mép cạn dễ đánh, hoặc chạy lên hạ đầu đàn trước. Hạ nó làm đàn mất tăng sức. Chỉ một nhóm nhỏ xuất hiện, đủ để nhận ra lợi thế của việc quan sát thay vì chờ cả bầy lên bờ mới giao chiến.
 
-Marius không dùng thần lực. Hắn dùng khói, dao, súng ngắn và hỏa lực bắn tỉa. Ở giai đoạn cuối, số quân tiếp viện phụ thuộc mức truy nã. Trận đấu là phép thử chiến thuật trước khi chương chuyển hẳn sang kinh dị siêu nhiên.
+Sau trận có một cửa phòng sơ tán hé mở: vali, giấy nhập thành và một túi thuốc. Nhánh này mất khoảng hai phút, quay ra gần bậc thang kế tiếp. Không khóa chìa chính trong phòng phụ, không làm người chỉ muốn tiến tiếp phải lục mọi góc.
+
+### 2. Sewer4 — nhảy để mở đường cho cả đội
+
+![Phác thảo Sewer4 — xanh: đường nhảy 1→2→3→4; vàng: vị trí cầu bảo trì mở đường theo sau. 1: vào; 2: bệ thấp nghỉ; 3: cần hạ cầu; 4: thang ra cảng. Đường nối được dựng theo tầm nhảy thực tế, không lấy tỷ lệ ảnh làm khoảng nhảy](<imgs/Stage1/chap1/Sewer4.png>)
+
+Các mảng sàn trong ảnh trở thành một đoạn ngắn có hai khe. Nhảy từ **1** xuống bệ nghỉ **2**, rồi qua bệ **3** để kéo cần hạ cầu. Cầu nối lại lối dưới cho hai đồng đội đi tới; cả đội lên thang **4**. Chỉ nhân vật đang điều khiển phải thực hiện bài nhảy, không bắt AI làm chính xác một chuỗi platform.
+
+Khe ngắn hơn tầm nhảy của nhân vật kém cơ động nhất, bệ đủ rộng để đứng lại. Nếu không muốn nhảy, van ngay bệ đầu rút nước khỏi lối thấp, cho đi vòng tới tay quay cầu. Tulas tạo bệ là cách tiện hơn khi có kỹ năng, không phải người bắt buộc trong đội. Cầu đã hạ giữ nguyên; hụt chân trở lại bệ gần nhất, không giải lại cả đoạn.
+
+Thang kết thúc tại cánh cửa xả. Người chơi tương tác mở cửa, ánh cam tràn vào nền cống, camera theo đội bước ra bến. Không cắt cảnh teleport từ bóng tối sang giữa sân cảng.
+
+### 3. Khoảng lặng — để người chơi tin rằng mình sắp thoát
+
+Khoảng 30 giây đầu trên bến không có địch. Solei nói nửa câu về việc được ngủ mà không nghe còi truy đuổi; Deep nhìn mặt nước, Ghost nhìn mặt trời. Người chơi vẫn đi được, nhạc nhẹ và tiếng gió thay tiếng máy. Chiếc thuyền nằm trong tầm nhìn, nhưng không có người đón.
+
+Đến gần cầu tàu, một chấm laser lướt qua thùng hàng rồi dừng trên sàn trước chân đội. Tiếng lên đạn, đèn kho bật. Camera chỉ đường tới chỗ nấp trong một nhịp ngắn rồi trả điều khiển **trước phát súng đầu tiên**. Marius bước ra từ sau container; phục kích bắt đầu từ những vị trí đã có trong cảnh, không thả địch sát lưng vô cớ.
+
+### 4. Bến cảng — đánh để tới được bảng cầu tàu
+
+![Phác thảo bến cảng — xanh: cửa xả 1→chỗ nấp 2→bảng cầu 3→thuyền 4; đỏ: tuyến bắn từ chòi 5, sân Marius tại 6. Container cản đạn; cầu thang bên kho cho đường tiếp cận lính bắn tỉa](<imgs/Stage1/chap1/Harbor_Sunset_Battle_Map.png>)
+
+Mục tiêu hiện tại chỉ là **hạ cầu tàu và lấy lại quyền khởi động thuyền**. Có một lính bắn tỉa trên chòi **5**, hai lính áp sát ở sân, còn Marius giữ bộ điều khiển. Người chơi nấp sau container **2**, xử lý lính gần, rồi chọn lên cầu thang hạ bắn tỉa hoặc gọi kỹ năng tầm xa phù hợp. Laser rà, dừng rồi lóe nòng trước khi bắn; tia ngắm không gây sát thương và container thật sự chặn viên đạn.
+
+**Ví dụ chia việc:** nhân vật trực tiếp chạy tới bảng **3**, Block nhận Hold ở mép container để canh một phía, Henry dùng hỗ trợ bắn nếu đã gán kỹ năng đó. Không có họ thì dọn đợt lính đầu rồi tự đi tới máy. Bảng cần một tương tác ngắn; bị đánh thì ngắt, các chốt đã mở được giữ lại. Hold không vận hành máy, Regroup mới gọi General theo khi đội rút về cầu.
+
+Hạ cầu xong vẫn phải lấy bộ điều khiển trên Marius. Thuyền vì thế có lý do chưa rời bến, thay vì xuất hiện một tường vô hình chờ đánh hết quái. Mức truy nã cao từ trước thêm **một** đợt tiếp viện hữu hạn, đến sớm hơn; không cộng máu trùm hoặc sinh quân liên tục trong lúc dùng máy.
+
+### Marius Vane — ít chiêu nhưng buộc đổi vị trí
+
+Trận này giữ ba đòn dễ nhớ: hai nhát dao rồi thu tay; rút súng bắn theo hướng đã khóa; ném khói để đổi phía. Người chơi né hết chuỗi dao mới phản công, rời đường súng hoặc nấp sau thùng. Khói che thân Marius nhưng không che laser và dấu chân ở mép khói, nên vẫn đọc được phía hắn ra.
+
+Nửa sau, hắn nối một cú lao dao sau loạt súng và thu hồi chậm hơn. Không thêm câu đố trong lúc đang né ba hệ khác. Nếu lính bắn tỉa đã bị hạ thì không tự xuất hiện lại; việc xử lý hắn sớm thật sự làm trận dễ hơn. Điểm lưu nằm trước phục kích, sau chiến thắng có điểm nghỉ để hồi sức và đổi đội.
+
+### 5. Vì sao đội lại tới tàu ngầm?
+
+Trên người Marius có lệnh điều chuyển ghi tên đồng minh Henry và mã của trạm nghiên cứu ngoài khơi. Một lính sống sót xác nhận người đó vẫn còn ở tàu; nếu lính không còn, radio trên thuyền chứa cùng thông tin. Mục tiêu đổi rõ ràng: **“Tới trạm nghiên cứu — tìm người bị bắt và hồ sơ của Jamerson.”** Việc cứu người xuất phát từ điều đội vừa biết, không phải lạc đường tới một boss mới.
+
+Cảnh chuyển khoảng 20–25 giây, gồm ba nhịp: Henry bật tuyến tự lái bằng bộ điều khiển Marius; thuyền chạy tới một trạm đo áp lực giữa biển; đội cập sàn trạm rồi xuống giếng dịch vụ khô nối tới tàu ngầm đang neo bên dưới. Hai cửa khoang vào mở lần lượt. Không bơm nước vào khoang có người, không cần thêm hệ lái thuyền. Lưu khi cả đội đã xuống tàu; bỏ qua cutscene vẫn đặt đủ đội và vật nhiệm vụ tại đó.
 
 ## 1-4. Tàu ngầm nghiên cứu và SheMal
 
-### Mục đích và dòng chảy
+### Biết mình ở đâu, nhưng không chắc mình đang thấy gì
 
-Tàu ngầm là mê cung phòng thí nghiệm nơi Con Mắt biến ham muốn và sợ hãi thành ảo giác. Mỗi lần mở một cửa áp suất có thể khóa một khu khác, buộc người chơi chia việc.
+**Mục tiêu:** cứu người của Henry, lấy bằng chứng và tìm cách vào khu nghiên cứu kín. Tàu ngầm là điểm cuối Chương 1, nơi các việc quen thuộc — nhìn đường, ném một vật, chọn lúc mở cửa — bắt đầu bị Con Mắt làm sai lệch. Tuyến chính khoảng 25–30 phút, không tính đọc hồ sơ và thử lại trùm.
 
-### Hai tuyến điện
+![Bản đồ tàu ngầm — dùng map_submarine_lab làm khung chia khoang. Sơ đồ hành trình bên dưới là bố trí gameplay đề xuất; các số viết sẵn trên ảnh chưa phải mã phòng nhiệm vụ](<imgs/Stage1/chap1/map_submarine_lab.png>)
 
-- **Giữ điện ổn định:** dùng ba bảng máy để mở lò phản ứng. Khu vực sáng hơn, bản đồ rõ, hồ sơ còn nguyên và đòn trùm dễ đọc hơn.
-- **Phá máy phát:** phá hai máy phát phụ để mở cửa trùm sớm. Tuyến này tối, khó hơn và có ít dấu hiệu báo đòn, nhưng chặn được một phần thí nghiệm và cho phần thưởng mạnh hơn.
+**Cách nhớ tàu:** khoang vào ở đuôi → một hành lang chính → cửa lò lớn → buồng SheMal phía mũi. Ba phòng nhỏ mở từ hành lang; tuyến máy phát nằm ở tầng dưới và vòng trở lại trước cửa lò. Khi hoàn thành một phòng, mở cửa tắt về trục chính. Không bắt chạy ngược hết tàu ba lần.
 
-Không tuyến nào được xem là lựa chọn hoàn hảo. Giữ điện giúp điều tra nhưng để máy thí nghiệm tiếp tục hoạt động; phá điện cứu một số vật thí nghiệm khỏi quy trình nhưng làm những thứ đã thoát ra nguy hiểm hơn.
+| Đi từ hành lang chính | Việc ở phòng | Khi quay lại thấy gì thay đổi? |
+|---|---|---|
+| Phòng trưởng gác | Lấy quyền bảo trì, bật bảng thứ nhất | Đèn “Quyền truy cập” ở cửa lò sáng |
+| Kho dữ liệu và buồng giam | Chọn cửa thật, lấy hồ sơ, cứu người, bật bảng thứ hai | Đèn “Dữ liệu” sáng; người được cứu chờ ở khoang vào |
+| Phòng áp suất | Khóa chỗ rò rồi cân bằng khoang, bật bảng thứ ba | Đèn “Khoang an toàn” sáng |
+| Cầu thang kỹ thuật | Tới máy phụ A, rồi phòng máy B | Tuyến phá điện hội lại ở cửa lò, thay ba đèn bằng chốt mở tay |
 
-### Cơ chế và tình huống
+### 1. Một món đồ không có thật
 
-- Bình thí nghiệm vỡ nếu đánh bừa và thả thêm quái.
-- Vật phẩm, cửa và bóng Jamerson có thể là giả; người chơi kiểm tra bằng ánh sáng, vật ném và hồ sơ.
-- Đòn đánh văng vào vách tàu khiến địch bật lại, trở thành vật thể gây sát thương cho mục tiêu khác.
-- Cứu tù nhân làm đồng hồ báo động khắt khe hơn nhưng tăng bằng chứng chống Jamerson.
-- Đọc đủ hồ sơ Heniana làm yếu một đợt ảo giác trong trận trùm.
+Ngay hành lang đầu có một thùng thuốc. Bên cạnh là bu lông nhặt được. Ném thử: bu lông xuyên hình thùng rồi kêu vào vách phía sau; hình ảnh nhòe đi. Vài bước sau là thùng thật, bu lông bật lại ở đúng mặt thùng. Hai vật ở cùng vùng sáng, lần học này không có địch hoặc hình phạt.
 
-### Trùm: SheMal
+Luật của câu đố là **ảo ảnh không có va chạm vật lý**. Có thể kiểm chứng bằng cú ném, bóng tiếp đất hoặc dấu va chạm; không bắt nghe bằng tai. Luật này lặp lại tại cửa kho dữ liệu: cửa giả che một hốc cụt, cửa thật có khung, bản lề và lối đi. Chọn sai vẫn quay ra được. Mỗi điểm kiểm tra có vật nhỏ lấy lại, nên không thể hết đá rồi kẹt.
 
-- Giai đoạn đầu là cận chiến nặng: móng vuốt, khóa người, lao tường và chuỗi đánh ba nhịp.
-- Giai đoạn hai, Con Mắt tạo hình Heniana và Jamerson. Đánh nhầm bóng giả giúp SheMal hồi phục hoặc đổi thế đánh.
-- Ở tuyến mất điện, đấu trường tối hơn và dấu báo đòn ngắn hơn, nhưng điểm yếu phát sáng theo nhịp.
-- Mỗi lần SheMal hút năng lượng, một số buồng phụ mở ra. Tuyến ổn định thả nhiều vật thí nghiệm yếu; tuyến phá điện thả ít hơn nhưng hung hãn hơn.
+### 2. Tuyến thường — vào ba phòng, hiểu dần chuyện đang xảy ra
 
-Sau trận, đội tìm thấy bản đồ bán đảo Sakuri, ký hiệu Cái Tai và ghi chú về “tiếng bệnh trong dòng máu ngủ đông”.
+**Phòng trưởng gác** dùng lại bài ném vật: dụ một lính khỏi bàn để lấy thẻ, hoặc đánh lấy thẻ. Khi có thẻ, dùng bảng ngay trong phòng. Thẻ nhiệm vụ không bán được và tự thu nếu lính bị đánh văng khỏi khu đi lại.
+
+**Kho dữ liệu** kiểm tra cửa thật/giả trước khi giao chiến. Bên trong là hồ sơ Heniana và người của Henry bị nối vào máy. Để cứu, người chơi ngắt hai khóa trên cùng bảng đầu giường rồi mở buồng. Một đợt lính nhỏ tới; bảo vệ lối ra, người được cứu tự đi theo hành lang đã dọn về khoang vào. Không thêm nhân vật chiến đấu thứ tư hoặc bắt Hold nhắm vào người hộ tống.
+
+**Phòng áp suất** có một đường khí rò chắn bảng điều khiển. Vòi và van nằm trong cùng khung hình: chờ hơi ngừng, tới van khóa nó, đợi hai kim trên bảng vào cùng vùng “An toàn”, rồi nhấn cân bằng. Bấm sớm máy từ chối, không làm ngập hoặc nổ tàu. Đây là khoang khí khô ở trong thân tàu, không phải một van nhỏ thay đổi áp suất ngoài biển.
+
+Ba bảng có thể bật theo thứ tự tự chọn, sáng rồi không tắt khi rời phòng. Trên đường về cửa lò, người chơi luôn thấy tiến độ bằng ba đèn có tên. Nếu chưa cứu người, bảng nhiệm vụ và lời Henry nhắc trước cửa một chiều, cho quay lại. Người được cứu là lý do đội tới đây; bỏ lại phải là lựa chọn chủ động, không do bước nhầm qua trigger.
+
+### 3. Tuyến phá điện — nhanh hơn về khóa cửa, nguy hiểm hơn về đường đi
+
+Ở cầu thang kỹ thuật có sơ đồ điện: ba bảng chứng thực mở cửa lò khi tàu hoạt động bình thường; mất cả hai nguồn **điện thí nghiệm** sẽ nhả chốt để nhân viên thoát bằng tay. Pin khẩn cấp riêng vẫn cấp cho đèn sàn, cửa thoát và duy trì sự sống. Vì vậy phá máy không khiến mọi cửa thành một bức tường khóa chết.
+
+Người chơi xuống phá lõi máy phụ A và B, bỏ qua việc chứng thực ba bảng. Phá là tương tác tại nắp bảo trì có cảnh báo, không do đòn combo lạc vào hậu cảnh. Sau máy đầu có cầu dao dự phòng để đổi ý; phá máy thứ hai mới chốt tuyến. Lúc cửa lò đã mở bằng một cách, phần thưởng và trạng thái tuyến được chốt một lần.
+
+![Phác thảo máy phát B — xanh: cửa vào 1→van hơi 2→bảng lõi 3→cửa tắt 4; đỏ: đoạn sàn có hơi nóng. Khối động cơ là hậu cảnh, người chơi đi trên sàn trước máy](<imgs/Stage1/chap1/submarine_backup_generator_b_engine_heat_room.png>)
+
+Tại máy B, hơi nóng cắt ngang sàn. Ống rung và rít trước khi phun; đợi khoảng nghỉ rồi tới van **2** khóa hẳn. Sau đó mới thao tác lõi **3**. Máy ngừng, tiếng quạt biến mất, đèn thường tắt; nghe rõ một buồng giam vừa nhả khóa. Hai vật thí nghiệm bò ra, tạo trận rút ngắn qua cửa **4** về hành lang. Không đặt nhảy khe, bắn tỉa và hơi nóng lên cùng một bài thử.
+
+**Đổi lại điều gì?** Giữ điện cho đường sáng, đầy đủ hồ sơ số và ít buồng tự mở, nhưng quy trình thí nghiệm vẫn chạy tới khi được tắt tại chỗ. Phá điện ngừng quy trình cưỡng bức, mất một phần bản ghi phụ và thả quái hung hãn hơn; cuối tuyến nhận thêm vật tư tốt. Cả hai vẫn cứu được người bằng khóa cơ và lấy được bằng chứng chính. Tuyến khó không bán một kỹ năng bắt buộc để qua chương sau.
+
+### 4. Trước cửa lớn — gom những gì cần hiểu
+
+![Central Reactor Access — cửa lớn là điểm hội hai tuyến; bảng giữa cho biết đã đủ ba trạm hay đang dùng chốt mở tay](<imgs/Stage1/chap1/submarine_central_reactor_access.png>)
+
+Trước cửa lò có chỗ nghỉ, đổi đội và điểm lưu. Đây là lúc xem hồ sơ, không phải giữa một đồng hồ đếm ngược. Ba mẩu tài liệu — ảnh Heniana, bản ghi giọng nói bên giường và ghi chú cộng hưởng — giải thích vì sao SheMal lặp lời một đứa trẻ. Thu đủ giúp đội nhận ra và rút ngắn một đợt ảo ảnh trong trận, không tự bỏ cả cơ chế trùm.
+
+Cửa mở vào hành lang ngắn rồi tới bình giam. Có vết móng trong kính. SheMal mở mắt, bước xuống sàn; loa phát “Cha ơi, đừng đóng cửa.” Cutscene khoảng 10 giây, trả quyền trước đòn đầu. Cô là người bị ép vào một cơ thể sai, nên chiến đấu phải nặng, gần và có những khoảng mất tự chủ rõ.
+
+### 5. SheMal — đánh thật trước, đánh lừa sau
+
+![Phác thảo SheMal — xanh: cửa vào 1 và cửa ra 5; đỏ: sân cận chiến 3; vàng: máy cấp trái 2 và phải 4. Điểm tương tác nằm trước máy, không buộc leo lên bình hậu cảnh](<imgs/Stage1/chap1/submarine_shemal_containment_chamber.png>)
+
+**Nửa đầu: đọc người thật.** SheMal có chuỗi hai nhát vuốt rồi một nhát nặng; đòn chộp mở hai tay trước khi lao; cú lao tường có động tác ghì chân báo hướng. Người chơi né/đỡ các nhát đầu, tránh nhát cuối rồi đánh vào khoảng thu tay. Dụ cô lao trượt vào vách mở cơ hội dài hơn. Không cần bấm QTE khi bị chộp; đồng đội có thể phá thế bằng kỹ năng đã gán, hoặc người chơi chịu một cú quăng rồi có thời gian đứng dậy.
+
+**Nửa sau: một bóng giả chen vào nhịp cũ.** Con Mắt tạo một hình SheMal lệch sang bên, đôi lúc hình Heniana/Jamerson lướt qua sau kính. Bóng giả thiếu tiếp đất và không có gợn va chạm; vật ném đi xuyên như bài học đầu tàu. Chỉ một bóng xuất hiện mỗi đợt. Đánh nhầm làm nó vỡ, SheMal thật có cơ hội đổi phía; lần giới thiệu đầu không đánh úp ngay. Không cần thêm cơ chế hồi máu khi đánh nhầm khiến trận kéo dài và AI hỗ trợ bị phạt oan.
+
+**Nhịp nghỉ có mục tiêu:** Hai máy cạnh bình dùng tụ tích năng lượng còn dư, kể cả khi điện thí nghiệm đã bị cắt. SheMal lùi về bình hút năng lượng, một dây sáng nối tới máy **2** hoặc **4**. Người chơi chạy tới ngắt máy đang sáng, hoặc ném vào công tắc phía trước nó. Cô không đồng thời áp sát trong nhịp này. Một buồng phụ mở thả ít quái; xử lý xong cô trở lại chuỗi cận chiến. Chỉ dùng nhịp hút tối đa hai lần, không tạo nguồn sinh quái vô hạn.
+
+Tuyến mất điện thêm một nhát quét sau cú lao và làm góc sân tối hơn; **vẫn giữ báo đòn, bóng chân và đèn sàn đọc được**. Tuyến sáng dễ quan sát hơn và có quái phụ yếu hơn. Độ khó đến từ phải phản ứng thêm một việc quen thuộc, không đến từ giấu thông tin rồi bắt đoán.
+
+### 6. Hồ sơ, sự cố và đường sang Sakuri
+
+Sau trận, liên kết thí nghiệm bị phá làm khu phản ứng quá tải ở cả hai tuyến. Điện pin còn mở được đường thoát nhưng không cứu được khu máy. Cửa **5** mở tới bàn hồ sơ; đội tự nhận bản đồ Sakuri, ký hiệu Cái Tai và ghi chú về “tiếng bệnh trong dòng máu ngủ đông” trước khi chạy. Lưu ngay sau trận để thất bại khi rút không bắt đánh lại SheMal.
+
+Đường thoát dùng lại hành lang chính tới khoang vào, khoảng một phút. Sập và hơi nóng xảy ra theo các mốc đội đi tới, có cảnh báo; bản đầu không cần đồng hồ chết cứng. Người đã cứu chờ sẵn ở khoang, lên giếng dịch vụ cùng đội. Các phòng phụ đóng cửa hướng người chơi ra ngoài, tuyến chính luôn thông.
+
+Ba nhịp kết cảnh: Jamerson nói qua loa về con gái; đội thấy một bóng giống ông sau kính bị lửa che; thuyền rời trạm khi biển phía sau sáng lên. Đội tin ông đã chết, nhưng một cảnh riêng cho người xem thấy Jamerson thật thoát bằng ống phóng với mẫu máu và bản đồ. Hồ sơ khiến Henry muốn đưa bằng chứng ra ngoài, Solei muốn tìm Heniana; bản đồ chuyển vùng dẫn chuyến đi phía đông tới Sakuri. Heni chưa gia nhập trong Chương 1.
+
+### Những gì cần giữ khi dựng màn
+
+Chỉ bổ sung ba kiểu tương tác dùng lại: **ném vật tạo tiếng/kiểm chứng, van hoặc bảng máy có trạng thái, cầu/thang nối hai sàn**. Lén lút là lựa chọn tiết kiệm sức; đánh trực tiếp vẫn giải được đường chính. Đồng đội có lối theo an toàn, Hold không thay thao tác giữ máy, và mọi kỹ năng riêng đều có cách môi trường thay thế.
+
+Chết hoặc tải lại phải giữ đúng cửa đã mở, việc đã trả, phần thưởng đã nhận, người đã cứu và tuyến điện đã chọn. Bỏ qua cutscene vẫn nhận hồ sơ và đứng ở đúng cửa ra. Tất cả chú thích đường đi trên ảnh là lớp phác thảo để dựng thử; đạo cụ, vùng va chạm và khoảng nhảy còn phải đặt vào game.
+
+
 
 ## Chương 2 – Sakuri và Cái Tai
 

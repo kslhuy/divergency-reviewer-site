@@ -6,3 +6,9 @@ Thumbs.db
 .editor-backups/
 .editor-runtime/
 *.pending
+dist/
+.wrangler/
+.env
+.env.local
+.dev.vars
+online/generated/
