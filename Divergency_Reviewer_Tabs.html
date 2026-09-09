@@ -1677,6 +1677,13 @@
   .image-picker-status { font-size: 0.85rem; }
 }
 @media print { .web-edit-fab, .image-picker { display: none !important; } }
+.online-account { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; margin: .75rem 0; font-size: .95rem; }
+.online-account[hidden] { display: none; }
+.online-account a, .online-account button { color: var(--accent, #83cbbc); background: #152821; border: 1px solid #507267; border-radius: .4rem; padding: .6rem .8rem; font: inherit; cursor: pointer; }
+.online-member { border-top: 1px solid #507267; padding: .75rem 0; }
+.online-member p { overflow-wrap: anywhere; }
+.editor-dialog { max-height: 85vh; overflow: auto; }
+.editor-dialog a { display: inline-block; color: #83cbbc; padding: .75rem; }
 
   </style>
 </head>
@@ -1758,7 +1765,7 @@
         <dl class="doc-stats" aria-label="Kickstarter Page statistics">
           <div><dt>Read</dt><dd>26 min</dd></div>
           <div><dt>Sections</dt><dd>10</dd></div>
-          <div><dt>Tables</dt><dd>5</dd></div>
+          <div><dt>Tables</dt><dd>0</dd></div>
         </dl>
       </div>
 
@@ -6178,7 +6185,7 @@
         </div>
         <dl class="doc-stats" aria-label="Gallery statistics">
           <div><dt>Folders</dt><dd>14</dd></div>
-          <div><dt>Images</dt><dd>364</dd></div>
+          <div><dt>Images</dt><dd>365</dd></div>
           <div><dt>Order</dt><dd>Folder</dd></div>
         </dl>
       </div>
@@ -6290,7 +6297,7 @@
       <section class="gallery-section" id="gallery-stage1" tabindex="-1" aria-labelledby="gallery-stage1-title">
         <div class="gallery-section-head">
           <h3 id="gallery-stage1-title">Stage 1</h3>
-          <span>66 images</span>
+          <span>67 images</span>
         </div>
         <div class="gallery-grid" data-gallery-grid="Stage1">
 
@@ -6365,6 +6372,12 @@
               <img src="imgs/Stage1/chap1/marsile background before finish.png" alt="Stage1 / Chap1 - Marsile Background Before Finish" loading="lazy">
             </button>
             <figcaption>Stage1 / Chap1 - Marsile Background Before Finish</figcaption>
+          </figure>
+          <figure class="gallery-slot">
+            <button class="gallery-image-button" type="button" data-lightbox-src="imgs/Stage1/chap1/RuinedTrainStation_2_Laundel.png" data-lightbox-alt="Stage1 / Chap1 - RuinedTrainStation 2 Laundel" data-lightbox-caption="Stage1 / Chap1 - RuinedTrainStation 2 Laundel" aria-label="View larger image: Stage1 / Chap1 - RuinedTrainStation 2 Laundel">
+              <img src="imgs/Stage1/chap1/RuinedTrainStation_2_Laundel.png" alt="Stage1 / Chap1 - RuinedTrainStation 2 Laundel" loading="lazy">
+            </button>
+            <figcaption>Stage1 / Chap1 - RuinedTrainStation 2 Laundel</figcaption>
           </figure>
           <figure class="gallery-slot">
             <button class="gallery-image-button" type="button" data-lightbox-src="imgs/Stage1/chap1/Sewer1.png" data-lightbox-alt="Stage1 / Chap1 - Sewer1" data-lightbox-caption="Stage1 / Chap1 - Sewer1" aria-label="View larger image: Stage1 / Chap1 - Sewer1">
@@ -9862,6 +9875,11 @@
             "caption": "chap1 - Marsile Background Before Finish"
       },
       {
+            "src": "imgs/Stage1/chap1/RuinedTrainStation_2_Laundel.png",
+            "alt": "chap1 - RuinedTrainStation 2 Laundel",
+            "caption": "chap1 - RuinedTrainStation 2 Laundel"
+      },
+      {
             "src": "imgs/Stage1/chap1/Sewer1.png",
             "alt": "chap1 - Sewer1",
             "caption": "chap1 - Sewer1"
@@ -11269,7 +11287,88 @@ const readerNavigation = (() => {
     openHash();
     updateProgress();
   </script>
-  <script>// Embedded in the reader. Images are read from the project's library, not only the current page.
+  <script>function createOnlineControls({getSession,note,bar,saveButton,dialog,restore,isEditing,hasChanges}) {
+  const controls = document.createElement('div'); controls.className='online-account'; controls.hidden=true;
+  note.after(controls);
+  function button(text, action, parent=controls) {
+    const b=document.createElement('button'); b.type='button'; b.textContent=text; b.onclick=action; parent.append(b); return b;
+  }
+  function link(text,path,parent=controls) {
+    const a=document.createElement('a'); a.textContent=text; a.href=path; a.target='_top'; parent.append(a); return a;
+  }
+  function modal(title,description) {
+    dialog.replaceChildren(); const h=document.createElement('h2');h.textContent=title;dialog.append(h);
+    if(description){const p=document.createElement('p');p.textContent=description;dialog.append(p);}
+    button('Đóng',()=>dialog.close(),dialog); if(!dialog.open)dialog.showModal();
+  }
+  function error(e) { const p=document.createElement('p');p.className='is-error';p.setAttribute('role','alert');p.textContent=e.message;dialog.append(p); }
+  async function api(path,method='GET',data) {
+    const r=await fetch(path,{method,headers:{'Content-Type':'application/json','X-Editor-Token':'same-origin'},body:data?JSON.stringify(data):undefined,signal:AbortSignal.timeout(20000)});
+    const result=await r.json();if(!r.ok)throw new Error(result.error||'Không thực hiện được.');return result;
+  }
+  function access() {
+    const s=getSession();
+    if(!s){modal('Chưa kết nối được','Tải lại trang rồi thử lại.');return;}
+    if(!s.user){
+      modal('Đăng nhập để chỉnh sửa','Dùng tài khoản ChatGPT của bạn. Quản trị viên sẽ duyệt quyền sửa; khách vẫn đọc được tài liệu.');
+      link('Đăng nhập bằng ChatGPT','/signin-with-chatgpt?return_to='+encodeURIComponent('/?edit=1#gameplay'),dialog);return;
+    }
+    modal('Quyền biên tập',s.role==='pending'?'Yêu cầu của bạn đang chờ quản trị viên duyệt. Sau khi được duyệt, tải lại trang.':'Bạn đã đăng nhập với '+s.user.email+'. Gửi yêu cầu để được thêm vào nhóm biên tập.');
+    if(s.role!=='pending')button('Gửi yêu cầu quyền sửa',async e=>{
+      e.target.disabled=true;
+      try{await api('/api/access','POST',{});s.role='pending';update();access();}catch(err){error(err);e.target.disabled=false;}
+    },dialog);
+  }
+  async function team() {
+    modal('Thành viên biên tập','Thành viên mở trang, đăng nhập và gửi yêu cầu. Bạn duyệt quyền sửa tại đây.');
+    try {
+      const {members}=await api('/api/members');
+      for(const m of members){
+        const row=document.createElement('div');row.className='online-member';
+        const p=document.createElement('p');p.textContent=m.email+' · '+({admin:'Quản trị viên',editor:'Được sửa',pending:'Chờ duyệt',revoked:'Đã thu hồi'}[m.role]||m.role);row.append(p);
+        if(m.role!=='admin')button(m.role==='editor'?'Thu hồi quyền sửa':'Duyệt quyền sửa',async e=>{
+          e.target.disabled=true;
+          try{await api('/api/members','PUT',{userId:m.userId,role:m.role==='editor'?'revoked':'editor'});team();}catch(err){error(err);e.target.disabled=false;}
+        },row);
+        dialog.append(row);
+      }
+    }catch(e){error(e);}
+  }
+  async function history() {
+    modal('Lịch sử gameplay','Mỗi lần lưu là một phiên bản. Khôi phục tạo bản nháp để bạn xem lại rồi bấm Lưu; các phiên bản cũ vẫn được giữ.');
+    try {
+      const {revisions}=await api('/api/history');
+      if(!revisions.length){const p=document.createElement('p');p.textContent='Chưa có lần lưu online nào.';dialog.append(p);}
+      for(const r of revisions){
+        const row=document.createElement('div');row.className='online-member';
+        const p=document.createElement('p');p.textContent='Bản '+r.revision+' · '+new Date(r.savedAt).toLocaleString('vi-VN')+' · '+r.savedBy;row.append(p);
+        button('Tải bản này',async()=>{
+          try{const data=await api('/api/history?revision='+r.revision);const url=URL.createObjectURL(new Blob([data.html],{type:'text/html;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='gameplay-v'+r.revision+'.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch(e){error(e);}
+        },row);
+        if(isEditing())button('Khôi phục vào bản nháp',async()=>{
+          if(hasChanges()){error(new Error('Lưu hoặc tải bản nháp đang sửa trước khi khôi phục phiên bản khác.'));return;}
+          try{const data=await api('/api/history?revision='+r.revision);restore(data.html);dialog.close();}catch(e){error(e);}
+        },row);
+        dialog.append(row);
+      }
+    }catch(e){error(e);}
+  }
+  function update() {
+    const s=getSession();if(!s?.online)return;
+    controls.hidden=false;controls.replaceChildren();saveButton.textContent='Lưu online';
+    if(!s.user){link('Đăng nhập để chỉnh sửa','/signin-with-chatgpt?return_to='+encodeURIComponent('/?edit=1#gameplay'));return;}
+    const label=document.createElement('span');label.textContent=s.user.email;controls.append(label);
+    if(s.canEdit){
+      button('Lịch sử',history);
+      if(!bar.querySelector('[data-online-history]')){const b=button('Lịch sử',history,bar.querySelector('.editor-bar-row:last-child'));b.dataset.onlineHistory='true';}
+    }else button(s.role==='pending'?'Đang chờ quyền sửa':'Yêu cầu quyền sửa',access);
+    if(s.role==='admin')button('Thành viên',team);
+    link('Đăng xuất','/signout-with-chatgpt?return_to=/');
+  }
+  return {update,access};
+}
+
+  // Embedded in the reader. Images are read from the project's library, not only the current page.
 function createImagePicker({ getSession, onInsert }) {
   const dialog = document.createElement('dialog');
   dialog.className = 'image-picker';
@@ -11484,6 +11583,11 @@ function createImagePicker({ getSession, onInsert }) {
   const start = document.getElementById('web-edit-start');
   const floatingStart = document.getElementById('web-edit-fab');
   const note = document.getElementById('web-edit-note');
+  const onlineOrigin = 'https://divergency-team-editor.coral-glade-6347.chatgpt.site';
+  const isLocalEditor = location.hostname === '127.0.0.1' && location.port === '4177';
+  const isOnline = location.origin === onlineOrigin || (location.hostname === '127.0.0.1' && !isLocalEditor);
+  const isPublishedReader = location.hostname === 'kslhuy.github.io';
+  let loadError = '';
   if (!article || !start) return;
   const draftKey = 'divergency-gameplay-web-draft-v1';
   let session = null;
@@ -11528,20 +11632,53 @@ function createImagePicker({ getSession, onInsert }) {
     status.classList.toggle('is-error', error);
   }
   function help() {
+    if (isOnline) {
+      onlineControls.access();
+      return;
+    }
+    if (isPublishedReader) {
+      location.href = onlineOrigin + '/?edit=1#gameplay';
+      return;
+    }
     dialog.innerHTML = '<h2>Chỉnh sửa trên máy của bạn</h2><p>Mở <strong>Open-Gameplay-Editor.cmd</strong> trong thư mục dự án. Trình duyệt sẽ mở trang biên tập; bấm <strong>Chỉnh sửa trực tiếp</strong> để bắt đầu.</p><p>Nút Lưu cập nhật dự án trên máy. Website online được cập nhật khi bạn xuất bản dự án.</p><form method="dialog"><button>Đã hiểu</button></form>';
     dialog.showModal();
   }
   const ready = (async () => {
-    if (location.hostname !== '127.0.0.1') return;
+    if (!isOnline && !isLocalEditor && !isPublishedReader) return;
     try {
-      const response = await fetch('/api/editor', { signal: AbortSignal.timeout(2500) });
+      if (isOnline || isPublishedReader) {
+        note.textContent = 'Đang tải nội dung đã lưu online…';
+        const content = await fetch((isPublishedReader ? onlineOrigin : '') + '/api/gameplay', {signal:AbortSignal.timeout(20000)});
+        if (!content.ok) throw new Error('Chưa tải được bản online. Trang đang hiển thị bản đi kèm giao diện; hãy tải lại.');
+        const current = await content.json();
+        article.innerHTML = current.html;
+        if (isPublishedReader) article.querySelectorAll('img[src^="imgs/online/"]').forEach(img => img.src = onlineOrigin + '/' + img.getAttribute('src'));
+        refreshIndex();
+        const metrics = document.querySelectorAll('#pane-gameplay .doc-stats dd');
+        if(metrics.length===3) {
+          metrics[0].textContent = Math.max(1,Math.ceil(article.textContent.trim().split(/\s+/).length/220))+' min';
+          metrics[1].textContent = article.querySelectorAll('h1,h2').length;
+          metrics[2].textContent = article.querySelectorAll('table').length;
+        }
+        note.textContent = current.savedAt ? 'Bản online đã lưu lúc '+new Date(current.savedAt).toLocaleString('vi-VN') : 'Nội dung đã sẵn sàng để nhóm biên tập online.';
+        if (isPublishedReader) return;
+      }
+      const response = await fetch('/api/editor', { signal: AbortSignal.timeout(10000) });
       const result = await response.json();
       if (response.ok && result.app === 'divergency-editor') {
         session = result;
-        note.textContent = 'Sửa trực quan rồi lưu vào dự án trên máy. Mỗi lần lưu đều có bản sao lưu.';
+        if (session.online) onlineControls.update();
+        else note.textContent = 'Bản trên máy. Lưu ở đây không thay đổi nội dung online của nhóm.';
       }
-    } catch { /* The exported reader continues to work without the local editor. */ }
+    } catch (error) {
+      loadError = error.message;
+      if(isOnline || isPublishedReader) note.textContent = 'Không tải được bản online. Đang hiển thị bản đi kèm giao diện; hãy tải lại trang.';
+    }
   })();
+  const onlineControls = createOnlineControls({ getSession: () => session, note, bar, saveButton, dialog,
+    restore: html => { article.innerHTML = html; editableState(true); refreshIndex(); changed(); },
+    isEditing: () => editing, hasChanges: () => dirty,
+  });
   async function request(method, data) {
     const response = await fetch('/api/gameplay', {
       method, headers: { 'Content-Type': 'application/json', 'X-Editor-Token': session.token },
@@ -11708,7 +11845,8 @@ function createImagePicker({ getSession, onInsert }) {
     start.disabled = floatingStart.disabled = true;
     try {
       await ready;
-      if (!session) { help(); return; }
+      if (isOnline && loadError) throw new Error(loadError);
+      if (!session || (session.online && !session.canEdit)) { help(); return; }
       const current = await request('GET');
       if (!wasActive) activateTab('gameplay', true, false);
       revision = current.revision;
@@ -11719,7 +11857,7 @@ function createImagePicker({ getSession, onInsert }) {
       document.body.classList.add('is-editing');
       editableState(true);
       refreshIndex();
-      note.textContent = 'Đang biên tập. Bấm vào chữ hoặc ô bảng để sửa; Lưu cập nhật cả nội dung và trang.';
+      note.textContent = session.online ? 'Đang biên tập online. Lưu để cả nhóm thấy thay đổi.' : 'Đang biên tập bản trên máy.';
       if (keepPosition) window.scrollTo({ top: readingPosition, behavior: 'instant' });
       else readerNavigation.jumpTo(article.querySelector('h1,h2,h3') || article);
       message('Bấm vào nội dung để sửa. Ctrl+S để lưu.');
@@ -11756,7 +11894,7 @@ function createImagePicker({ getSession, onInsert }) {
           if (stored?.revision === submittedRevision && stored?.html === submitted) localStorage.removeItem(draftKey);
         } catch { /* Saving to disk does not depend on browser storage. */ }
       }
-      message(dirty ? 'Đã lưu. Có nội dung bạn vừa sửa thêm; bấm Lưu khi xong.' : 'Đã lưu vào dự án lúc ' + new Date(result.savedAt).toLocaleTimeString('vi-VN') + '. Trang HTML đã cập nhật.');
+      message(dirty ? 'Đã lưu. Có nội dung bạn vừa sửa thêm; bấm Lưu khi xong.' : (session.online ? 'Đã lưu online cho cả nhóm lúc ' : 'Đã lưu trên máy lúc ') + new Date(result.savedAt).toLocaleTimeString('vi-VN') + '.');
       // Refresh the reader in place after leaving editing; this also refreshes its index.
     } catch (error) { message(error.message, true); }
     finally { saving = false; saveButton.disabled = false; finishButton.disabled = false; }
@@ -11851,6 +11989,7 @@ function createImagePicker({ getSession, onInsert }) {
   document.querySelectorAll('[data-tab]').forEach(button => button.addEventListener('click', syncEditorControls));
   window.addEventListener('hashchange', syncEditorControls);
   syncEditorControls();
+  ready.then(() => { if (isOnline && new URLSearchParams(location.search).get('edit') === '1') beginEditing(); });
 })();
 </script>
 </body>

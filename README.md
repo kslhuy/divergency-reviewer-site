@@ -6,31 +6,34 @@ Live site after GitHub Pages deploys:
 
 https://kslhuy.github.io/divergency-reviewer-site/
 
-## Chỉnh sửa gameplay trực tiếp trên web
+## Bi?n t?p online cho nh?m
 
-1. Mở **`Open-Gameplay-Editor.cmd`** trong thư mục dự án (nhấp đúp trên Windows).
-2. Trình duyệt mở `http://127.0.0.1:4177/#gameplay`. Nút nổi **Chỉnh sửa gameplay** luôn nằm ở góc dưới bên phải, kể cả khi cuộn trang. Có thể dùng **Ctrl+Shift+E**. Khi đang đọc gameplay, bật sửa sẽ giữ vị trí đang đọc.
-3. Bấm vào chữ, tiêu đề hoặc ô bảng để sửa. Thanh công cụ có in đậm, in nghiêng, tiêu đề, danh sách, thêm bảng/dòng và **+ Chèn ảnh**.
-4. Bấm **Lưu vào dự án** hoặc **Ctrl+S**. Nội dung và `Divergency_Reviewer_Tabs.html` được cập nhật cùng lúc; không cần sửa Markdown hay chạy đồng bộ.
-5. Bấm **Đóng biên tập** để đọc lại trang đã lưu. Mục lục cũng cập nhật khi sửa tiêu đề.
+M? https://divergency-team-editor.coral-glade-6347.chatgpt.site/?edit=1#gameplay
 
-Máy cần Node.js 22 trở lên; trình mở tự cài thư viện ở lần đầu nếu thiếu. Có thể chạy `npm run edit` thay cho nhấp đúp. Chỉ máy đang chạy chương trình mới truy cập được trình biên tập.
+- ??ng nh?p b?ng ChatGPT. T?i kho?n ch? d? ?n l? qu?n tr? vi?n.
+- Th?nh vi?n m?i b?m **Y?u c?u quy?n s?a**. Qu?n tr? vi?n m? **Th?nh vi?n** ?? duy?t ho?c thu h?i quy?n. Website v?n c?ng khai ?? ??c; ??ng nh?p kh?ng t? c?p quy?n s?a.
+- B?m **Ch?nh s?a gameplay**, s?a ch?/b?ng tr?c quan, r?i **L?u online** (Ctrl+S). Ng??i ??c t?i l?i trang s? th?y n?i dung m?i.
+- **+ Ch?n ?nh**: ch?n t? th? vi?n, t?m/l?c th? m?c, ho?c t?i ?nh m?i t? m?y. ?nh t?i l?n l?u online v? d?ng l?i ???c cho c? nh?m (PNG/JPG/GIF/WebP, t?i ?a 20 MB).
+- **L?ch s?** l?u ng??i s?a, th?i gian v? c?c phi?n b?n. Khi ?ang bi?n t?p, c? th? kh?i ph?c phi?n b?n th?nh b?n nh?p, ki?m tra r?i L?u ?? t?o m?t phi?n b?n m?i.
+- Hai ng??i c?ng s?a m?t phi?n b?n: ng??i l?u sau nh?n th?ng b?o xung ??t; n?i dung c?a ng??i l?u tr??c kh?ng b? ghi ??. T?i b?n nh?p c?a m?nh tr??c khi m? l?i trang ?? ??i chi?u. ??y l? ch?nh s?a c? ki?m tra phi?n b?n, ch?a ph?i g? ??ng th?i nh? Google Docs.
 
-**Chèn ảnh:** đặt con trỏ vào nội dung rồi bấm **+ Chèn ảnh**. Thư viện hiển thị ảnh thu nhỏ từ toàn bộ `imgs/`, có tìm theo tên và lọc thư mục. Chọn ảnh để xem trước, chỉnh chú thích nếu muốn rồi bấm **Chèn ảnh đã chọn**. Để dùng ảnh mới, bấm **Tải ảnh từ máy** hoặc kéo thả một ảnh vào cửa sổ thư viện. Hỗ trợ PNG, JPG, GIF, WebP, tối đa 20 MB/ảnh. Ảnh mới được sao chép vào `imgs/uploads/`, không thay đổi file gốc, và xuất hiện trong mục **Ảnh tải lên** để dùng lại. Đóng hộp chèn ảnh không xóa ảnh đã tải vào thư viện; bấm **Lưu vào dự án** để lưu vị trí ảnh trong tài liệu.
+**Gameplay online n?m trong D1; ?nh t?i l?n n?m trong R2.** C?p nh?t code, build ho?c push n?i dung local kh?ng ghi ?? d? li?u nh?m ?? l?u. `content/gameplay.html` ch? l? b?n nh?p ban ??u/d? ph?ng cho website; kh?ng t? ??ng b? ng??c n?i dung online v?o Git. Website GitHub Pages t?i gameplay t? d?ch v? online v? d?n n?t s?a sang trang bi?n t?p. N?u kh?ng t?i ???c, trang b?o r? ?ang hi?n th? b?n d? ph?ng.
 
-**Bản chính của gameplay là `content/gameplay.html`.** Markdown hiện có được giữ làm bản nhập ban đầu. Việc build hoặc xuất bản sau này dùng nội dung web đã lưu, không ghi đè bằng Markdown cũ. Các tab khác tiếp tục dùng Markdown như trước.
+B?n nh?p tr?nh duy?t l? d? ph?ng ri?ng tr?n m?y; ch? **L?u online** m?i l?u cho c? nh?m. C? th? t?i n?i dung c?c phi?n b?n trong L?ch s? ?? sao l?u ??c l?p. Kh?ng s?a tr?c ti?p b?ng d? li?u ho?c ch?y seed ?? l?n d? li?u s?n xu?t.
 
-Mỗi lần lưu tạo bản sao trước thay đổi trong `.editor-backups/`. Bản nháp tự lưu trong trình duyệt để khôi phục sau khi đóng nhầm; bản nháp chỉ nằm trên trình duyệt đó cho đến khi bấm **Lưu vào dự án**. Nút **Tải bản nháp** xuất nội dung HTML để dự phòng; hình vẫn tham chiếu thư mục `imgs/`. Hai cửa sổ sửa cùng lúc sẽ được kiểm tra phiên bản để tránh ghi đè.
+### Ph?t tri?n v? tri?n khai ph?n online
 
-**Lưu trên máy không tự xuất bản lên website online.** Khi muốn cập nhật GitHub Pages, đưa thay đổi của dự án (đặc biệt `content/gameplay.html`) qua quy trình pull request bên dưới. Không thể ghi ngược vào dự án chỉ bằng cách mở file HTML hoặc trang GitHub Pages; các trang đó có hướng dẫn mở trình biên tập trên máy.
+- `npm ci --ignore-scripts`, `npm run dev:online` ?? xem th? (Sites m? ph?ng t?i kho?n `seedy@sites.test` ? local).
+- C?u h?nh local trong `.dev.vars`: `ADMIN_EMAIL=seedy@sites.test`. Kh?ng ??a file n?y l?n Git. T?o schema local b?ng Wrangler t? migration trong `drizzle/`, s? d?ng th? m?c l?u `.wrangler/state` c?a project.
+- `npm test` ki?m tra l?u, xung ??t, ph?n quy?n, t?i ?nh v? gi? n?i dung qua c?c l?n tri?n khai.
+- `npm run build:online` t?o Worker. Schema production do migration Drizzle qu?n l?; d? li?u kh?ng n?m trong b?n build.
+- `node scripts/prepare-online-source.mjs` chu?n b? source Sites nh? trong `.editor-runtime/site-source`, bao g?m trang ??c v? danh m?c ?nh ?? t?o. ?nh g?c ti?p t?c ???c ph?c v? t? GitHub Pages; ?nh m?i trong R2. Build l?i trong checkout n?y tr??c khi commit/push, ??ng g?i v? tri?n khai qua Sites.
+- Sites gi? c?u h?nh `ADMIN_EMAIL` ph?a m?y ch? ?? kh?i t?o ch? s? h?u t? danh t?nh ?? x?c th?c. Sau l?n ??u, quy?n g?n v?i user ID ?n ??nh; ng??i ??ng nh?p kh?c ph?i ???c duy?t. Kh?ng thay quy?n d?a tr?n d? li?u client g?i l?n.
+- Push GitHub c?p nh?t trang c?ng khai; thay ??i Worker c?n tri?n khai Sites. Hai ph?n ??u ??c chung gameplay online.
 
-Nếu chủ động muốn thay toàn bộ gameplay bằng một bản Markdown mới, chạy lệnh nhập lại sau. Lệnh này sao lưu bản web trước khi thay thế:
+## Bi?n t?p local (t?y ch?n)
 
-```bash
-node build-reviewer-html.mjs --import-gameplay-from-md
-```
-
-Muốn khôi phục một bản sao lưu: sao chép file tương ứng từ `.editor-backups/` thành `content/gameplay.html`, rồi chạy `npm run build`.
+M? **Open-Gameplay-Editor.cmd** ?? ch?nh s?a b?n tr?n m?y. **L?u v?o d? ?n** c?p nh?t `content/gameplay.html` v? HTML local, kh?ng c?p nh?t d? li?u online. Markdown gameplay ch? c?n l? t?i li?u tham kh?o/ngu?n nh?p th? c?ng. C?c tab c?n l?i v?n ???c x?y t? Markdown nh? tr??c.
 
 ## Publishing / editing other tabs
 

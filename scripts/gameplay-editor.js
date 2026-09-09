@@ -3,6 +3,11 @@
   const start = document.getElementById('web-edit-start');
   const floatingStart = document.getElementById('web-edit-fab');
   const note = document.getElementById('web-edit-note');
+  const onlineOrigin = 'https://divergency-team-editor.coral-glade-6347.chatgpt.site';
+  const isLocalEditor = location.hostname === '127.0.0.1' && location.port === '4177';
+  const isOnline = location.origin === onlineOrigin || (location.hostname === '127.0.0.1' && !isLocalEditor);
+  const isPublishedReader = location.hostname === 'kslhuy.github.io';
+  let loadError = '';
   if (!article || !start) return;
   const draftKey = 'divergency-gameplay-web-draft-v1';
   let session = null;
@@ -47,20 +52,53 @@
     status.classList.toggle('is-error', error);
   }
   function help() {
+    if (isOnline) {
+      onlineControls.access();
+      return;
+    }
+    if (isPublishedReader) {
+      location.href = onlineOrigin + '/?edit=1#gameplay';
+      return;
+    }
     dialog.innerHTML = '<h2>Chỉnh sửa trên máy của bạn</h2><p>Mở <strong>Open-Gameplay-Editor.cmd</strong> trong thư mục dự án. Trình duyệt sẽ mở trang biên tập; bấm <strong>Chỉnh sửa trực tiếp</strong> để bắt đầu.</p><p>Nút Lưu cập nhật dự án trên máy. Website online được cập nhật khi bạn xuất bản dự án.</p><form method="dialog"><button>Đã hiểu</button></form>';
     dialog.showModal();
   }
   const ready = (async () => {
-    if (location.hostname !== '127.0.0.1') return;
+    if (!isOnline && !isLocalEditor && !isPublishedReader) return;
     try {
-      const response = await fetch('/api/editor', { signal: AbortSignal.timeout(2500) });
+      if (isOnline || isPublishedReader) {
+        note.textContent = 'Đang tải nội dung đã lưu online…';
+        const content = await fetch((isPublishedReader ? onlineOrigin : '') + '/api/gameplay', {signal:AbortSignal.timeout(20000)});
+        if (!content.ok) throw new Error('Chưa tải được bản online. Trang đang hiển thị bản đi kèm giao diện; hãy tải lại.');
+        const current = await content.json();
+        article.innerHTML = current.html;
+        if (isPublishedReader) article.querySelectorAll('img[src^="imgs/online/"]').forEach(img => img.src = onlineOrigin + '/' + img.getAttribute('src'));
+        refreshIndex();
+        const metrics = document.querySelectorAll('#pane-gameplay .doc-stats dd');
+        if(metrics.length===3) {
+          metrics[0].textContent = Math.max(1,Math.ceil(article.textContent.trim().split(/\s+/).length/220))+' min';
+          metrics[1].textContent = article.querySelectorAll('h1,h2').length;
+          metrics[2].textContent = article.querySelectorAll('table').length;
+        }
+        note.textContent = current.savedAt ? 'Bản online đã lưu lúc '+new Date(current.savedAt).toLocaleString('vi-VN') : 'Nội dung đã sẵn sàng để nhóm biên tập online.';
+        if (isPublishedReader) return;
+      }
+      const response = await fetch('/api/editor', { signal: AbortSignal.timeout(10000) });
       const result = await response.json();
       if (response.ok && result.app === 'divergency-editor') {
         session = result;
-        note.textContent = 'Sửa trực quan rồi lưu vào dự án trên máy. Mỗi lần lưu đều có bản sao lưu.';
+        if (session.online) onlineControls.update();
+        else note.textContent = 'Bản trên máy. Lưu ở đây không thay đổi nội dung online của nhóm.';
       }
-    } catch { /* The exported reader continues to work without the local editor. */ }
+    } catch (error) {
+      loadError = error.message;
+      if(isOnline || isPublishedReader) note.textContent = 'Không tải được bản online. Đang hiển thị bản đi kèm giao diện; hãy tải lại trang.';
+    }
   })();
+  const onlineControls = createOnlineControls({ getSession: () => session, note, bar, saveButton, dialog,
+    restore: html => { article.innerHTML = html; editableState(true); refreshIndex(); changed(); },
+    isEditing: () => editing, hasChanges: () => dirty,
+  });
   async function request(method, data) {
     const response = await fetch('/api/gameplay', {
       method, headers: { 'Content-Type': 'application/json', 'X-Editor-Token': session.token },
@@ -227,7 +265,8 @@
     start.disabled = floatingStart.disabled = true;
     try {
       await ready;
-      if (!session) { help(); return; }
+      if (isOnline && loadError) throw new Error(loadError);
+      if (!session || (session.online && !session.canEdit)) { help(); return; }
       const current = await request('GET');
       if (!wasActive) activateTab('gameplay', true, false);
       revision = current.revision;
@@ -238,7 +277,7 @@
       document.body.classList.add('is-editing');
       editableState(true);
       refreshIndex();
-      note.textContent = 'Đang biên tập. Bấm vào chữ hoặc ô bảng để sửa; Lưu cập nhật cả nội dung và trang.';
+      note.textContent = session.online ? 'Đang biên tập online. Lưu để cả nhóm thấy thay đổi.' : 'Đang biên tập bản trên máy.';
       if (keepPosition) window.scrollTo({ top: readingPosition, behavior: 'instant' });
       else readerNavigation.jumpTo(article.querySelector('h1,h2,h3') || article);
       message('Bấm vào nội dung để sửa. Ctrl+S để lưu.');
@@ -275,7 +314,7 @@
           if (stored?.revision === submittedRevision && stored?.html === submitted) localStorage.removeItem(draftKey);
         } catch { /* Saving to disk does not depend on browser storage. */ }
       }
-      message(dirty ? 'Đã lưu. Có nội dung bạn vừa sửa thêm; bấm Lưu khi xong.' : 'Đã lưu vào dự án lúc ' + new Date(result.savedAt).toLocaleTimeString('vi-VN') + '. Trang HTML đã cập nhật.');
+      message(dirty ? 'Đã lưu. Có nội dung bạn vừa sửa thêm; bấm Lưu khi xong.' : (session.online ? 'Đã lưu online cho cả nhóm lúc ' : 'Đã lưu trên máy lúc ') + new Date(result.savedAt).toLocaleTimeString('vi-VN') + '.');
       // Refresh the reader in place after leaving editing; this also refreshes its index.
     } catch (error) { message(error.message, true); }
     finally { saving = false; saveButton.disabled = false; finishButton.disabled = false; }
@@ -370,4 +409,5 @@
   document.querySelectorAll('[data-tab]').forEach(button => button.addEventListener('click', syncEditorControls));
   window.addEventListener('hashchange', syncEditorControls);
   syncEditorControls();
+  ready.then(() => { if (isOnline && new URLSearchParams(location.search).get('edit') === '1') beginEditing(); });
 })();
