@@ -44,7 +44,7 @@ Năm mảnh có vai trò trong cốt truyện chính:
 
 Ở một nơi xa xôi khác, Deep từng là biểu tượng chiến tranh, một người được đưa lên làm anh hùng khi các thành phố cần niềm tin. Nhưng mọi bức tượng đài đều được xây bằng xác người. Sau nhiều cuộc chiến, Deep mệt mỏi vì bị biến thành biểu tượng, không muốn tiếp tục sống như một huyền thoại lang thang nữa.
 
-![Deep](<imgs/chars/Deep.png>)
+![Deep](<imgs/chars/Deep/Deep.png>)
 Khi nhận nuôi Solei, anh đưa cô đến Marseille để có một đời sống ít nhất trông giống bình thường: làm việc lặt vặt, sửa đồ, tránh chính quyền, đôi khi va vào băng nhóm địa phương nhưng không để rắc rối lớn tới gia đình nhỏ. Anh không giả vờ mình là dân thường hoàn toàn; anh chỉ cố để Solei lớn lên với nhiều thứ hơn là chiến trận, xung đột.
 
 Hành trình của Deep không phải là đánh bại kẻ mạnh hơn. Đó là học cách dùng sức mạnh mà không để người khác dùng tên mình để hợp thức hóa chiến tranh.
@@ -151,7 +151,7 @@ Henry, Deep, Solei và một nhóm nhỏ đột nhập Bastonne. Tulas có thể
 
 ![Dãy giam đặc biệt Bastonne](<imgs/Stage1/Special_Jail.png>)
 
-![Dãy giam đặc biệt Bastonne - detailed strip](<imgs/Stage1/Special_Jail_stage0_detail_strip.png>)
+![Dãy giam đặc biệt Bastonne - bản chi tiết](<imgs/Stage1/Special_Jail_detailed_source.png>)
 
 Dãy giam đặc biệt là khu màn hình ngang dài, thấp và nặng, nối giữa pháo đài cũ và phần phòng thí nghiệm cải tạo. Hình ảnh nên giữ cùng ngôn ngữ với Bastonne: tường đá xám bẩn, khung sắt đen, ánh đèn lạnh bị cắt thành từng mảng nhỏ, hơi nước và khí mê chạy sát sàn, các chi tiết cơ khí lộ ra nhưng không biến khu này thành sci-fi sạch sẽ. Đây vẫn là nhà tù cổ bị ép thành cơ sở nghiên cứu, nên mọi thứ phải có cảm giác chắp vá, ẩm, rỉ, và bị dùng quá lâu.
 
@@ -166,7 +166,7 @@ Kế hoạch của đội vỡ trận khi nhà tù bị khóa khẩn cấp, khí
 
 
 
-![Outside_Marseille_city](<imgs/Stage1/In_thecity_Fix.png>)
+![Outside_Marseille_city](<imgs/Stage1/chap1/In_thecity_Fix.png>)
 
 
 Ở đây, góc nhìn chuyển sang Stranger. Anh tỉnh dậy trong phòng biệt giam của mình sau vài giờ bất tỉnh. Mùi máu khô vẫn nghẹn ở sống mũi, hơi thở bị kéo qua cổ họng đau rát, và ngoài khe cửa có khói trắng đặc tràn qua hành lang. Đây không phải lý do duy nhất anh kháng khí mê, nhưng nó là chi tiết đầu tiên người chơi hiểu được: cơ thể Stranger đã bị tra tấn và thí nghiệm đến mức phản ứng khác người thường.
@@ -217,7 +217,7 @@ Boss là thủ lĩnh băng đua xe, cưỡi một chiếc xe máy lớn. Pha đ�
 Cuối màn, cả nhóm phát hiện gara an toàn đã bị lộ. Henry chuyển sang phương án B: đi xuống cống ngầm.
 
 ### 1-2. Đường cống và chợ ngầm Laundel
-![Sewer](<imgs/Stage1/Sewer1.png>)
+![Sewer](<imgs/Stage1/chap1/Sewer1.png>)
 
 Đường cống dưới Marseille không chỉ dẫn nước thải. Nó là tầng ruột của thành phố, nơi những dự án metro, đường hầm bảo trì và kênh vận chuyển bị bỏ dở trở thành nhà cửa, chợ đen, kho hàng, và trạm trung chuyển người nhập cư. Đoạn đầu hẹp, lát gạch và tối; khoảng một phần ba lối đi bị nước che, làm nhân vật chậm lại nhưng cũng khiến quái dưới nước dễ bị choáng nặng nếu bị đánh trúng khi còn đang bơi.
 
@@ -245,7 +245,7 @@ Một số con đầu đàn có thể tăng sức cho đàn nhỏ; khi bị hạ
 
 Sau khi ra khỏi cống, người chơi có một đoạn đi bộ khoảng 30 giây không giao chiến. Hoàng hôn trải dài trên bến cảng. Nhạc nhẹ hơn. Cả nhóm nói về việc nếu thoát được Marseille, họ có thể đến phía đông lánh nạn, sống một thời gian không bị gọi là tội phạm. Solei đùa nửa câu, Deep nói rằng tự do không phải một nơi trên bản đồ, Henry im lặng lâu hơn bình thường, còn Ghost chỉ nhìn mặt trời.
 
-![Harbor_Sunset_Battle_Map](<imgs/Stage1/Harbor_Sunset_Battle_Map.png>)
+![Harbor_Sunset_Battle_Map](<imgs/Stage1/chap1/Harbor_Sunset_Battle_Map.png>)
 
 Tại điểm hẹn, chiếc thuyền trống rỗng. Khi cả nhóm đi đến giữa màn, cảnh sát mật phục kích. Bến cảng mở rộng thành một chiến trường nhiều điểm: cầu nâng, container, bảng điều khiển thuyền, lính bắn tỉa trên cao, và quái cống còn đuổi theo từ phía sau. Đây là nơi COMMAND bắt đầu có cảm giác gần một trận chiến thuật thời gian thực thu nhỏ: Block giữ tuyến cầu, Deep phá khóa container hoặc giáp máy, Henry đánh dấu lính bắn tỉa/thủ lĩnh đàn, Solei chạy cắt mục tiêu yếu, hoặc nhảy xuống nước phá vòng vây đằng sau. Người chơi vẫn đánh trực tiếp, nhưng phải chia việc để không bị bao vây.
 
@@ -267,18 +267,18 @@ Tuyến tàu ngầm có hai cách tiến. Cách thường là dùng ba trạm đ
 
 
 
-![shemale_chamber](<imgs/Stage1/lab_3.png>)
+![shemale_chamber](<imgs/Stage1/chap1/lab_3.png>)
 
 Địa hình tàu ngầm cũng trở thành vũ khí. Nhiều phòng có đường ống khí và vách kim loại cong; kẻ địch bị đánh bay mạnh vào tường có thể bật lại như một vật thể va chạm, gây sát thương cho mục tiêu đầu tiên va phải. Hiệu ứng này chỉ xảy ra theo nhịp giới hạn để tránh biến đấu trường thành hỗn loạn, nhưng đủ để người chơi chủ động dùng Deep/Block hoặc vật ném mạnh trong không gian hẹp.
 
-![shemale_chamber_AI](<imgs/Stage1/submarine_shemal_containment_chamber.png>)
+![shemale_chamber_AI](<imgs/Stage1/chap1/submarine_shemal_containment_chamber.png>)
 
 Boss chính là **SheMal**, một "thất bại hoàn hảo". SheMal từng là một tù nhân nữ vô danh, bị sử dụng làm nền cho cơ thể nhân tạo. Cô không phải thần, không phải người theo nghĩa cũ, nhưng cũng không phải quái vật vô tri. Trong những khoảnh khắc ngắn, cô lặp lại những câu của Heniana mà Jamerson bắt máy móc phát bên cạnh buồng ngủ đông: "Cha ơi, đừng đóng cửa."
 
 SheMal chiến đấu thiên về cận chiến hơn là một quái vật đứng xa phóng ảo giác. Cô cao và nặng ngang Deep, di chuyển như một võ sĩ bị ép vào cơ thể sai, hai tay mọc móng vuốt dài đủ để cào rách kim loại mỏng. Những lúc Con Mắt chưa chiếm trọn, cô đánh bằng bản năng: áp sát, khóa tay, đập vào tường, phản đòn khi người chơi tham combo. Khi Con Mắt mở ra, các ảo ảnh Heniana/Jamerson mới trộn vào nhịp đánh, khiến người chơi khó biết cú chém nào là thật.
 
 SheMal liên kết trực tiếp với Con Mắt. Trên cơ thể cô có dấu vết của một nghi thức phương Đông: bản đồ đến bán đảo Sakuri, ký hiệu Cái Tai, và ghi chú về khả năng "nghe tiếng bệnh trong dòng máu của Heniana khi cô đang ngủ đông".
-![submarine_backup_generator_b_engine_heat_room](<imgs/Stage1/submarine_backup_generator_b_engine_heat_room.png>)
+![submarine_backup_generator_b_engine_heat_room](<imgs/Stage1/chap1/submarine_backup_generator_b_engine_heat_room.png>)
 
 Nếu `SubmarinePowerRoute = Sabotage`, tàu ngầm chuyển sang tuyến khó hơn. Quái và SheMal nguy hiểm hơn, nhưng rơi vật phẩm và kỹ năng có phẩm chất cao hơn. Về mặt truyện, điều này thể hiện nhóm chọn phá hủy hạ tầng để ngăn thí nghiệm, chấp nhận tự đẩy mình vào nguy cơ lớn hơn.
 

@@ -1,6 +1,7 @@
-import { readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { prepareGameplay } from "./scripts/web-content.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const outputFile = path.join(here, "Divergency_Reviewer_Tabs.html");
@@ -100,12 +101,12 @@ const imageSlots = {
       caption: "Story panel: The Cradle bargain",
     },
     {
-      src: "imgs/Stage1/In_thecity_Fix.png",
+      src: "imgs/Stage1/chap1/In_thecity_Fix.png",
       alt: "Marseille city environment",
       caption: "Marseille city mood capture",
     },
     {
-      src: "imgs/Stage1/Sewer1.png",
+      src: "imgs/Stage1/chap1/Sewer1.png",
       alt: "Marseille sewer environment",
       caption: "Stage 1 sewer exploration",
     },
@@ -179,7 +180,7 @@ const imageSlots = {
       caption: "Bastonne rescue setup",
     },
     {
-      src: "imgs/Stage1/In_thecity_Fix.png",
+      src: "imgs/Stage1/chap1/In_thecity_Fix.png",
       alt: "Marseille city environment",
       caption: "Marseille escape pressure",
     },
@@ -861,7 +862,7 @@ function renderRewardItemShowcase() {
 </section>`;
 }
 
-function renderMarkdown(markdown, docId) {
+export function renderMarkdown(markdown, docId) {
   const lines = markdown
     .normalize("NFC")
     .replace(/\r\n/g, "\n")
@@ -952,7 +953,7 @@ function renderMarkdown(markdown, docId) {
       continue;
     }
 
-    const heading = trimmed.match(/^(#{1,4})\s+(.+)$/);
+    const heading = trimmed.match(/^(#{1,6})\s+(.+)$/);
     if (heading) {
       flushParagraph();
       closeList();
@@ -961,7 +962,7 @@ function renderMarkdown(markdown, docId) {
       const id = `${docId}-${slugify(text, usedSlugs)}`;
       toc.push({ id, level, text });
       parts.push(
-        `<h${level} id="${id}"><a class="heading-link" href="#${id}" aria-label="Link to section">#</a>${inlineMarkdown(heading[2])}</h${level}>`,
+        `<h${level} id="${id}" tabindex="-1"><a class="heading-link" href="#${id}" aria-label="Link to section">#</a>${inlineMarkdown(heading[2])}</h${level}>`,
       );
       continue;
     }
@@ -1021,10 +1022,14 @@ function countTables(markdown) {
   return (markdown.match(/\n\|[^\n]+\|\n\|?\s*:?-{3,}/g) || []).length;
 }
 
-function buildDocs() {
+export function buildDocs(gameplayOverride) {
   return documents.map((doc) => {
     const markdown = readFileSync(path.join(here, doc.file), "utf8");
     const rendered = renderMarkdown(markdown, doc.id);
+    const webFile = path.join(here, "content/gameplay.html");
+    if (doc.id === "gameplay" && (gameplayOverride !== undefined || existsSync(webFile))) {
+      return { ...doc, markdown, ...prepareGameplay(gameplayOverride ?? readFileSync(webFile, "utf8")) };
+    }
     return {
       ...doc,
       markdown,
@@ -1060,17 +1065,50 @@ function renderHeroStats() {
 }
 
 function renderToc(doc) {
-  const links = doc.toc
-    .filter((item) => item.level <= 3)
-    .map(
-      (item) => `
-        <a class="toc-link toc-level-${item.level}" href="#${item.id}">
-          ${escapeHtml(item.text)}
-        </a>`,
-    )
-    .join("");
+  const roots = [];
+  const stack = [];
+  for (const item of doc.toc) {
+    const node = { ...item, children: [] };
+    while (stack.length && stack.at(-1).level >= item.level) stack.pop();
+    (stack.length ? stack.at(-1).children : roots).push(node);
+    stack.push(node);
+  }
+  function renderNodes(nodes, depth = 0) {
+    return nodes.map((item) => {
+      const expanded = depth === 0;
+      const childrenId = `toc-children-${item.id}`;
+      return `<li class="toc-item">
+        <div class="toc-row" style="--toc-depth: ${depth}">
+          ${item.children.length
+            ? `<button class="toc-branch-toggle" type="button" aria-expanded="${expanded}" aria-controls="${childrenId}" aria-label="Mở hoặc thu gọn: ${escapeAttribute(item.text)}"><span aria-hidden="true">›</span></button>`
+            : '<span class="toc-leaf-spacer" aria-hidden="true"></span>'}
+          <a class="toc-link toc-level-${item.level}" href="#${item.id}">${escapeHtml(item.text)}</a>
+        </div>
+        ${item.children.length ? `<ol id="${childrenId}"${expanded ? "" : " hidden"}>${renderNodes(item.children, depth + 1)}</ol>` : ""}
+      </li>`;
+    }).join("");
+  }
+  return roots.length ? `<ol class="toc-tree">${renderNodes(roots)}</ol>` : '<p class="empty-note">Chưa có mục.</p>';
+}
 
-  return links || '<p class="empty-note">No sections found.</p>';
+function renderIndex(doc) {
+  return `<aside class="toc-panel" aria-label="Mục lục: ${escapeAttribute(doc.label)}">
+    <button class="toc-mobile-toggle" type="button" aria-expanded="false" aria-controls="toc-content-${doc.id}">
+      <span>Mục lục</span><span class="toc-current">${escapeHtml(doc.label)}</span><span class="toc-mobile-chevron" aria-hidden="true">⌄</span>
+    </button>
+    <div class="toc-content" id="toc-content-${doc.id}">
+      <div class="toc-header"><p class="toc-title">Mục lục</p><span>${doc.toc.length} mục</span></div>
+      <label class="toc-filter-label">Tìm mục
+        <input class="toc-filter" type="search" placeholder="Tên mục hoặc chương…" autocomplete="off">
+      </label>
+      <div class="toc-actions">
+        <button type="button" data-toc-expand="true">Mở tất cả</button>
+        <button type="button" data-toc-expand="false">Thu gọn</button>
+      </div>
+      <nav class="toc-scroll" aria-label="Các mục trong ${escapeAttribute(doc.label)}">${renderToc(doc)}</nav>
+      <p class="toc-empty" role="status" hidden>Không tìm thấy mục phù hợp.</p>
+    </div>
+  </aside>`.replace(/[ \t]+$/gm, "");
 }
 
 function renderPane(doc, index) {
@@ -1080,7 +1118,7 @@ function renderPane(doc, index) {
         <div>
           <p class="eyebrow">${escapeHtml(doc.eyebrow)}</p>
           <h2 id="tab-title-${doc.id}">${escapeHtml(doc.label)}</h2>
-          <p>${escapeHtml(doc.summary)}</p>
+          <p>${escapeHtml(doc.summary)}</p>${doc.id === "gameplay" ? '\n          <button class="web-edit-button" id="web-edit-start" type="button">✎ Chỉnh sửa trực tiếp</button><p class="web-edit-note" id="web-edit-note">Chỉnh sửa trên máy: mở Open-Gameplay-Editor.cmd trong thư mục dự án.</p>' : ''}
         </div>
         <dl class="doc-stats" aria-label="${escapeAttribute(doc.label)} statistics">
           <div><dt>Read</dt><dd>${doc.readMinutes} min</dd></div>
@@ -1107,12 +1145,7 @@ function renderPane(doc, index) {
       </section>
 
       <div class="doc-layout">
-        <aside class="toc-panel" aria-label="${escapeAttribute(doc.label)} section navigation">
-          <div class="toc-sticky">
-            <p class="toc-title">Sections</p>
-            <nav>${renderToc(doc)}</nav>
-          </div>
-        </aside>
+        ${renderIndex(doc)}
         <article class="markdown-body" data-search-root="${doc.id}">
           ${doc.html}
         </article>
@@ -1185,19 +1218,10 @@ function renderGalleryImage(slot) {
 
 function renderGalleryPane(groups) {
   const imageCount = groups.reduce((total, group) => total + group.slots.length, 0);
-  const groupLinks = groups
-    .map(
-      (group) => `
-          <a class="gallery-jump" href="#${group.id}">
-            <span>${escapeHtml(group.label)}</span>
-            <small>${group.slots.length}</small>
-          </a>`,
-    )
-    .join("");
   const sections = groups
     .map(
       (group) => `
-      <section class="gallery-section" id="${group.id}" aria-labelledby="${group.id}-title">
+      <section class="gallery-section" id="${group.id}" tabindex="-1" aria-labelledby="${group.id}-title">
         <div class="gallery-section-head">
           <h3 id="${group.id}-title">${escapeHtml(group.label)}</h3>
           <span>${group.slots.length} images</span>
@@ -1224,17 +1248,16 @@ ${group.slots.map(renderGalleryImage).join("")}
         </dl>
       </div>
 
-      <nav class="gallery-jumps" aria-label="Gallery folder jumps">
-        ${groupLinks}
-      </nav>
-
-      <div class="gallery-body">
-        ${sections || '<p class="empty-note">No images found.</p>'}
+      <div class="doc-layout">
+        ${renderIndex({ ...galleryTab, toc: groups.map(group => ({ id: group.id, level: 2, text: group.label })) })}
+        <div class="gallery-body">
+${sections || '<p class="empty-note">No images found.</p>'}
+        </div>
       </div>
     </section>`;
 }
 
-function buildPage(docs) {
+export function buildPage(docs) {
   const galleryGroups = collectGalleryGroups();
   const tabs = renderTabs([...docs, galleryTab]);
   const panes = [...docs.map(renderPane), renderGalleryPane(galleryGroups)].join("\n");
@@ -1305,6 +1328,8 @@ function buildPage(docs) {
       --shadow: rgba(0, 0, 0, 0.28);
       --radius: 8px;
       --max: 1280px;
+      --reader-top: 110px;
+      --heading-offset: 126px;
       --mono: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
       --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --serif: Georgia, "Times New Roman", serif;
@@ -1889,48 +1914,154 @@ function buildPage(docs) {
 
     .toc-panel {
       min-width: 0;
-    }
-
-    .toc-sticky {
       position: sticky;
-      top: 98px;
-      max-height: calc(100vh - 120px);
-      overflow: auto;
-      padding: 16px;
-      background: rgba(33, 31, 27, 0.7);
+      top: var(--reader-top);
+      align-self: start;
+      z-index: 9;
+      background: #211f1b;
       border: 1px solid var(--line-soft);
       border-radius: var(--radius);
     }
 
+    .toc-content {
+      display: flex;
+      flex-direction: column;
+      max-height: calc(100vh - var(--reader-top) - 16px);
+      max-height: calc(100dvh - var(--reader-top) - 16px);
+      padding: 14px 8px 8px;
+    }
+
+    .toc-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 0 6px;
+    }
+
+    .toc-header > span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
     .toc-title {
-      margin: 0 0 10px;
+      margin: 0;
       color: var(--amber);
-      font-family: var(--mono);
-      font-size: 0.78rem;
+      font-size: 0.9rem;
+      font-weight: 700;
       text-transform: uppercase;
     }
 
+    .toc-filter-label {
+      margin: 10px 6px 0;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .toc-filter {
+      display: block;
+      width: 100%;
+      min-height: 40px;
+      margin-top: 4px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: var(--bg);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .toc-actions {
+      display: flex;
+      gap: 8px;
+      padding: 6px;
+    }
+
+    .toc-actions button {
+      min-height: 32px;
+      padding: 3px 6px;
+      border: 0;
+      background: transparent;
+      color: var(--teal);
+      font: inherit;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+
+    .toc-actions button:disabled { color: var(--soft); cursor: default; }
+
+    .toc-scroll {
+      min-height: 0;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+      scrollbar-color: var(--line) transparent;
+      scrollbar-gutter: stable;
+    }
+
+    .toc-tree, .toc-tree ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toc-row {
+      display: flex;
+      align-items: start;
+      padding-left: calc(var(--toc-depth) * 10px);
+      border-radius: 5px;
+    }
+
+    .toc-branch-toggle, .toc-leaf-spacer {
+      flex: 0 0 28px;
+      width: 28px;
+      min-height: 36px;
+    }
+
+    .toc-branch-toggle {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      font-size: 1.2rem;
+    }
+
+    .toc-branch-toggle span { display: inline-block; }
+    .toc-branch-toggle[aria-expanded="true"] span { transform: rotate(90deg); }
+
     .toc-link {
       display: block;
-      padding: 6px 0;
-      border-top: 1px solid rgba(255,255,255,0.04);
+      flex: 1;
+      min-width: 0;
+      padding: 9px 6px;
       color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.3;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
       text-decoration: none;
     }
 
-    .toc-link:hover,
-    .toc-link:focus-visible {
+    .toc-row:hover { background: rgba(255,255,255,0.04); }
+    .toc-link:hover { color: var(--ink); }
+    .toc-level-1, .toc-level-2 { font-weight: 650; }
+
+    .toc-link[aria-current="location"] {
       color: var(--ink);
-      outline: none;
+      background: rgba(216,166,77,0.14);
+      box-shadow: inset 3px 0 var(--amber);
+      border-radius: 4px;
     }
 
-    .toc-level-3 {
-      padding-left: 14px;
-      color: var(--soft);
-      font-size: 0.82rem;
+    .toc-panel :focus-visible {
+      outline: 2px solid var(--amber);
+      outline-offset: -2px;
     }
+
+    .toc-mobile-toggle { display: none; }
+    .toc-empty { margin: 8px; color: var(--muted); font-size: 0.875rem; }
+    .gallery-body { min-width: 0; }
+    .gallery-section { scroll-margin-top: var(--heading-offset); }
 
     .markdown-body {
       min-width: 0;
@@ -1941,12 +2072,14 @@ function buildPage(docs) {
     .markdown-body h1,
     .markdown-body h2,
     .markdown-body h3,
-    .markdown-body h4 {
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
       position: relative;
       margin: 2.1em 0 0.6em;
       line-height: 1.15;
       letter-spacing: 0;
-      scroll-margin-top: 110px;
+      scroll-margin-top: var(--heading-offset);
     }
 
     .markdown-body h1 {
@@ -1970,6 +2103,8 @@ function buildPage(docs) {
       color: var(--teal);
       font-size: 1.05rem;
     }
+
+    .markdown-body h5, .markdown-body h6 { font-size: 1rem; }
 
     .heading-link {
       position: absolute;
@@ -2507,9 +2642,7 @@ function buildPage(docs) {
         align-items: stretch;
       }
 
-      .doc-layout {
-        grid-template-columns: 1fr;
-      }
+      .doc-layout { display: block; }
 
       .reward-item-showcase {
         display: block;
@@ -2524,11 +2657,37 @@ function buildPage(docs) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .toc-sticky {
-        position: relative;
-        top: auto;
-        max-height: 250px;
+      .toc-panel { margin-bottom: 20px; box-shadow: 0 10px 24px var(--shadow); }
+      .toc-content { display: none; max-height: calc(100dvh - var(--reader-top) - 72px); }
+      .toc-panel.is-open .toc-content { display: flex; }
+      .toc-mobile-toggle {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        min-height: 48px;
+        padding: 10px 14px;
+        border: 0;
+        border-radius: var(--radius);
+        background: var(--panel);
+        color: var(--amber);
+        font: inherit;
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-align: left;
+        cursor: pointer;
       }
+      .toc-current {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: var(--muted);
+        font-weight: 400;
+      }
+      .toc-panel.is-open .toc-mobile-chevron { transform: rotate(180deg); }
+      .toc-link, .toc-branch-toggle { min-height: 44px; }
 
       .media-slot {
         flex-basis: calc((100% - 12px) / 2);
@@ -2545,7 +2704,6 @@ function buildPage(docs) {
         padding-top: 22px;
       }
 
-      .tabs,
       .hero-stats,
       .doc-stats {
         grid-template-columns: 1fr;
@@ -2625,13 +2783,22 @@ function buildPage(docs) {
         height: 100%;
       }
 
-      .toolbar {
-        position: static;
-      }
+      .toolbar { padding: 8px; gap: 8px; }
+      .tabs { display: flex; overflow-x: auto; gap: 6px; scrollbar-width: thin; }
+      .tab-button { flex: 0 0 auto; min-height: 42px; padding: 7px 10px; }
+      .tab-button small { display: none; }
+      .actions { display: flex; gap: 8px; min-width: 0; }
+      .search-wrap { flex: 1; min-width: 0; }
+      .search-wrap input { width: 100%; }
+      .toc-filter { font-size: 1rem; }
 
       .heading-link {
         display: none;
       }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
 
     @media print {
@@ -2675,6 +2842,7 @@ function buildPage(docs) {
         color: #222;
       }
     }
+    ${readFileSync(path.join(here, "scripts/gameplay-editor.css"), "utf8")}
   </style>
 </head>
 <body>
@@ -2716,6 +2884,8 @@ function buildPage(docs) {
 
     ${panes}
   </main>
+
+  <button class="web-edit-fab" id="web-edit-fab" type="button" title="Chỉnh sửa gameplay (Ctrl+Shift+E)"><span aria-hidden="true">✎</span> <span class="web-edit-fab-label">Chỉnh sửa gameplay</span></button>
 
   <div class="lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-label="Expanded image viewer" hidden>
     <div class="lightbox-panel">
@@ -2916,6 +3086,8 @@ function buildPage(docs) {
       searchCount.textContent = hits + (hits === 1 ? " hit" : " hits");
     }
 
+    ${readFileSync(path.join(here, "scripts/reader-navigation.js"), "utf8")}
+
     function activateTab(docId, updateHash = true, scrollTop = true) {
       if (!DOC_IDS.includes(docId)) docId = DOC_IDS[0];
       tabButtons.forEach((button) => {
@@ -2924,18 +3096,21 @@ function buildPage(docs) {
       panes.forEach((pane) => {
         pane.classList.toggle("is-active", pane.dataset.doc === docId);
       });
+      readerNavigation.activate(docId);
       runSearch();
       if (updateHash) {
         history.replaceState(null, "", "#" + docId);
       }
       if (scrollTop) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? "instant" : "smooth" });
       }
       requestAnimationFrame(() => updateMediaControls(docId));
     }
 
     function openHash() {
-      const hash = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+      let hash;
+      try { hash = decodeURIComponent(window.location.hash.replace(/^#/, "")); }
+      catch { return activateTab(DOC_IDS[0], false, false); }
       if (!hash) return activateTab(DOC_IDS[0], false, false);
       if (DOC_IDS.includes(hash)) return activateTab(hash, false, false);
       const target = document.getElementById(hash);
@@ -2943,7 +3118,7 @@ function buildPage(docs) {
       const pane = target.closest(".doc-pane");
       if (pane) {
         activateTab(pane.dataset.doc, false, false);
-        requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+        readerNavigation.jumpTo(target);
       }
     }
 
@@ -3010,10 +3185,27 @@ function buildPage(docs) {
     openHash();
     updateProgress();
   </script>
+  <script>${readFileSync(path.join(here, "scripts/image-picker.js"), "utf8")}
+  ${readFileSync(path.join(here, "scripts/gameplay-editor.js"), "utf8")}</script>
 </body>
 </html>`;
 }
 
-const docs = buildDocs();
-writeFileSync(outputFile, buildPage(docs), "utf8");
-console.log(`Wrote ${path.relative(process.cwd(), outputFile)}`);
+export function buildReviewer() {
+  writeFileSync(outputFile, buildPage(buildDocs()), "utf8");
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  if (process.argv.includes("--import-gameplay-from-md")) {
+    const source = path.join(here, "content/gameplay.html");
+    if (existsSync(source)) {
+      const backups = path.join(here, ".editor-backups");
+      mkdirSync(backups, { recursive: true });
+      writeFileSync(path.join(backups, `gameplay-${Date.now()}-before-import.html`), readFileSync(source));
+    }
+    mkdirSync(path.dirname(source), { recursive: true });
+    writeFileSync(source, prepareGameplay(renderMarkdown(readFileSync(path.join(here, "Divergency_Gameplay_Level_Design.md"), "utf8"), "gameplay").html).html, "utf8");
+  }
+  buildReviewer();
+  console.log(`Wrote ${path.relative(process.cwd(), outputFile)}`);
+}
