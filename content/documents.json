@@ -1,0 +1,32 @@
+[
+  {
+    "id": "kickstarter",
+    "label": "Kickstarter Page",
+    "eyebrow": "Campaign pitch",
+    "summary": "Reviewer-ready campaign copy: hook, gameplay, story, funding, timeline, rewards, shipping, and risks."
+  },
+  {
+    "id": "story-summary",
+    "label": "Story Short Summary",
+    "eyebrow": "Quick narrative read",
+    "summary": "Condensed causal story pass covering Jamerson, Bastonne, Marseille, each later stage, the final ritual, and epilogue themes."
+  },
+  {
+    "id": "story",
+    "label": "Complete Story",
+    "eyebrow": "Narrative bible",
+    "summary": "Full Divergency story structure with premise, themes, central cast, five major stages, ending, and gameplay notes."
+  },
+  {
+    "id": "gameplay",
+    "label": "Lối chơi & Thiết kế màn",
+    "eyebrow": "Chuyển hóa thiết kế",
+    "summary": "Kế hoạch lối chơi theo từng chương, gồm cơ chế, câu đố, tình huống chiến đấu, trùm, nhóm kẻ địch và nhịp học kỹ năng."
+  },
+  {
+    "id": "rewards",
+    "label": "Rewards Checklist",
+    "eyebrow": "Launch readiness",
+    "summary": "Reward tiers, clear mockup/product visuals, EU shipping rules, creative tier scope, pledge manager setup, reviewer questions, and launch blockers."
+  }
+]

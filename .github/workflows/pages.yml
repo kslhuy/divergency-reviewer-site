@@ -47,6 +47,9 @@ jobs:
           cp Divergency_Reviewer_Tabs.html _site/index.html
           cp Divergency_Reviewer_Tabs.html steam-image-tool.html rewards-card-poster.html _site/
           cp -R imgs _site/imgs
+          mkdir -p _site/scripts
+          cp -R styles _site/styles
+          cp scripts/*.js scripts/*.css _site/scripts/
           cp robots.txt sitemap.xml _site/
           touch _site/.nojekyll
           test -s _site/index.html

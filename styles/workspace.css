@@ -1,0 +1,98 @@
+/* Shared reading controls: full-width tabs, then a single aligned action row. */
+.toolbar {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 10px;
+}
+.toolbar .tabs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+  overflow: visible;
+}
+.toolbar .tab-button {
+  min-width: 0;
+  min-height: 48px;
+  padding: 6px 10px;
+  font-size: .875rem;
+  line-height: 1.3;
+  gap: 3px;
+}
+.toolbar .tab-button span, .toolbar .tab-button small {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.toolbar .actions {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) auto auto;
+  gap: 8px;
+  align-items: center;
+  min-width: 0;
+}
+.toolbar .search-wrap { width: auto; min-width: 0; }
+.toolbar .search-wrap input { height: 32px; min-height: 32px; border-radius: 5px; }
+.toolbar .search-count { min-width: 44px; text-align: center; }
+.toolbar .export-quick-actions {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 6px;
+}
+.toolbar .export-quick-actions button { height: 32px; white-space: nowrap; }
+.toolbar .md-quick-status { grid-column: 1 / -1; margin: 0; line-height: 1.3; }
+
+/* Keep the title and metrics together; editor controls occupy one shared row. */
+.doc-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px 24px;
+  padding: 16px 0;
+}
+.doc-heading { min-width: 0; }
+.doc-intro .eyebrow { margin: 0 0 5px; }
+.doc-intro h2 { font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.2; }
+.doc-intro .doc-summary { margin: 8px 0 0; max-width: none; color: var(--muted); font-size: 1rem; line-height: 1.5; }
+.doc-intro .doc-stats { min-width: 0; grid-template-columns: repeat(3, minmax(76px, 1fr)); gap: 6px; margin: 0; }
+.doc-intro .doc-stats div { padding: 8px 10px; border-radius: 5px; }
+.doc-intro .doc-stats dt { font-size: .75rem; }
+.doc-intro .doc-stats dd { margin-top: 4px; font-size: 1.05rem; white-space: nowrap; }
+.doc-editor-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px 12px;
+}
+.doc-editor-row .web-edit-button { margin: 0; min-height: 32px; white-space: nowrap; }
+.doc-editor-row .web-edit-note { margin: 0; max-width: none; font-size: .875rem; line-height: 1.4; }
+.doc-editor-row .online-account { margin: 0; gap: 6px; justify-content: flex-end; }
+.doc-editor-row .online-account a, .doc-editor-row .online-account button { display: inline-flex; align-items: center; min-height: 32px; line-height: 1.2; white-space: nowrap; }
+.doc-editor-row .online-account > span { overflow-wrap: anywhere; }
+.media-band { margin: 12px 0 20px; padding: 10px 0 16px; }
+
+@media (max-width: 1040px) {
+  .doc-editor-row { grid-template-columns: auto minmax(0, 1fr); }
+  .doc-editor-row .online-account { grid-column: 1 / -1; justify-content: flex-start; }
+}
+@media (max-width: 760px) {
+  .toolbar { padding: 8px; }
+  .toolbar .tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .toolbar .tab-button { min-height: 34px; padding: 6px 8px; }
+  .toolbar .tab-button small { display: none; }
+  .doc-intro { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 14px 0; }
+  .doc-intro .doc-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .toolbar .actions { grid-template-columns: minmax(0, 1fr) auto; gap: 6px; }
+  .toolbar .export-quick-actions { grid-column: 1 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .doc-editor-row .online-account > span { flex-basis: 100%; }
+}
+@media print {
+  .toolbar, .doc-editor-row { display: none; }
+  .doc-intro { display: block; }
+}
