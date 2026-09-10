@@ -23,7 +23,7 @@ Nhịp chơi cơ bản gồm sáu bước:
 
 #### Sống sót nhờ tin nhau
 
-Divergency không mở đầu bằng câu chuyện về một “người được chọn”. Nhân vật trung tâm là một đội gồm nhiều thế hệ. **Deep và Henry** từng cùng đi qua một cuộc chiến ở vùng đất rất xa Marseille; đó là quá khứ của hai người lớn tuổi trong đội, không phải quá khứ của Tulas. **Solei và Tulas cùng lứa**, lớn lên trong cùng giai đoạn và bước vào những nhiệm vụ lớn dưới sự dẫn dắt của Deep và Henry. Block là đồng minh lâu năm mà cả đội tin cậy. Ghost bước vào câu chuyện tại Bastonne như một biến số, còn Heni gia nhập sau đó với tư cách một con người có ý chí riêng.
+Divergency không mở đầu bằng câu chuyện về một “người được chọn”. Nhân vật trung tâm là một đội gồm nhiều thế hệ. **Deep và Mark** từng cùng đi qua một cuộc chiến ở vùng đất rất xa Marseille; đó là quá khứ của hai người lớn tuổi trong đội, không phải quá khứ của Tulas. **Solei và Tulas cùng lứa**, lớn lên trong cùng giai đoạn và bước vào những nhiệm vụ lớn dưới sự dẫn dắt của Deep và Mark. Block là đồng minh lâu năm mà cả đội tin cậy. Ghost bước vào câu chuyện tại Bastonne như một biến số, còn Heni gia nhập sau đó với tư cách một con người có ý chí riêng.
 
 Lối chơi phải thể hiện được mối quan hệ này:
 
@@ -67,7 +67,7 @@ Nhờ vậy, chương sau không thay thế chương trước. Nó mở rộng v
 |---|---|---|---|
 | **Solei** | Cơ động, phản đòn, áp sát mục tiêu quan trọng | Lướt nhanh, chuỗi đòn ngắn, phản đòn đúng nhịp, chạy tường, đọc dấu nghi lễ | Tôi thuộc về đâu? |
 | **Deep** | Tuyến trước, phá giáp, sát thương nặng | Phá thế đỡ, đánh vỡ vật cản, giữ vị trí trước đòn lớn, đẩy lùi đám đông | Sức mạnh của tôi có phải chỉ để người khác sử dụng? |
-| **Henry** | Chỉ huy, đánh dấu mục tiêu, tấn công tầm xa | Bắn tỉa, xác nhận lệnh thật, phân chia nhiệm vụ, ngăn đội tấn công người đầu hàng | Tôi có thể chiến đấu mà không trở thành kẻ mình căm ghét không? |
+| **Mark** | Chỉ huy, đánh dấu mục tiêu, tấn công tầm xa | Bắn tỉa, xác nhận lệnh thật, phân chia nhiệm vụ, ngăn đội tấn công người đầu hàng | Tôi có thể chiến đấu mà không trở thành kẻ mình căm ghét không? |
 | **Tulas** | Thành viên thế hệ trẻ, đồng lứa với Solei; hỗ trợ và điều khiển chất lỏng | Tạo bệ, khiên và cầu; lọc độc; khóa dòng chảy; ổn định máu và Độ Nhiễu | Sức mạnh đáng sợ có thể cứu người mà không biến tôi thành quái vật không? |
 | **Block** | Phòng thủ, giữ tuyến, bảo vệ dân thường | Khiên chắn, giữ cửa, kéo cần, chặn luồng khí và tạo vùng an toàn | Lòng trung thành khác gì sự phục tùng? |
 | **Ghost** | Xâm nhập, phá nhận diện, cắt liên kết thần lực | Lướt xuyên vùng nguy hiểm, ít bị hệ thống nhận diện, kháng gọi tên, bước vào Cõi Mộng Sau Cái Chết | Tôi là ai nếu quá khứ đã bị xóa? |
@@ -89,10 +89,10 @@ Một số đoạn truyện có thể chuyển quyền điều khiển tạm th�
 ### 2.2. Hướng phát triển của từng nhân vật
 
 - **Solei** là nhân vật mở đầu vì bộ kỹ năng dễ đọc, nhanh và phù hợp để dạy nền tảng.
-- **Deep và Henry** là hai người mang lịch sử từ cuộc chiến cũ rất xa Marseille. Họ giữ vai trò dẫn dắt, nhưng không được biến Tulas thành người cùng thế hệ hoặc một cựu binh ngang hàng với họ.
+- **Deep và Mark** là hai người mang lịch sử từ cuộc chiến cũ rất xa Marseille. Họ giữ vai trò dẫn dắt, nhưng không được biến Tulas thành người cùng thế hệ hoặc một cựu binh ngang hàng với họ.
 - **Deep** và **Block** cùng mạnh ở tuyến trước nhưng không trùng vai trò: Deep phá thế phòng thủ, Block tạo an toàn.
-- **Henry** hướng dẫn chiến thuật qua lời thoại; năng lực hỗ trợ chỉ huy riêng là đề xuất kỹ năng của anh. Free, Regroup, Hold và đổi đội hình thuộc hệ điều khiển chung, không phụ thuộc Henry có trong đội hay không.
-- **Tulas** là bạn đồng lứa với Solei ở Marseille. Anh xuất hiện trong bài tập đầu, trở thành thành viên đầy đủ sau Bastonne và là cầu nối giữa di chuyển, giải đố, phòng thủ và hồi phục. Cách nói chuyện, phản ứng và sai lầm của anh cần mang cảm giác của một người trẻ đang học cách dùng sức mạnh, không phải sự từng trải của Deep hoặc Henry.
+- **Mark** hướng dẫn chiến thuật qua lời thoại; năng lực hỗ trợ chỉ huy riêng là đề xuất kỹ năng của anh. Free, Regroup, Hold và đổi đội hình thuộc hệ điều khiển chung, không phụ thuộc Mark có trong đội hay không.
+- **Tulas** là bạn đồng lứa với Solei ở Marseille. Anh xuất hiện trong bài tập đầu, trở thành thành viên đầy đủ sau Bastonne và là cầu nối giữa di chuyển, giải đố, phòng thủ và hồi phục. Cách nói chuyện, phản ứng và sai lầm của anh cần mang cảm giác của một người trẻ đang học cách dùng sức mạnh, không phải sự từng trải của Deep hoặc Mark.
 - **Ghost** chỉ chơi được trong một đoạn ngắn tại Bastonne, sau đó mở như thành viên đặc biệt. Anh mạnh trong xâm nhập và cơ chế thần lực, không thay thế Solei trong vai trò nhân vật trung tâm.
 - **Heni** không trở thành nguồn sát thương chính. Giá trị của cô nằm ở nhận thức, ký ức và quyền tự quyết.
 
@@ -102,7 +102,7 @@ Một số đoạn truyện có thể chuyển quyền điều khiển tạm th�
 
 Phần này đối chiếu theo `README_AI_COMMAND_SYSTEM.html` trong `Assets/LF2_multiplayer/GamePlay/Character/AI/Commands/` của dự án game. Tên lệnh và thao tác dưới đây là chức năng được tài liệu hệ thống mô tả. Các liên kết kỹ năng, cơ chế Di Vật và tình huống màn chơi ở những phần sau là **đề xuất thiết kế**; từng kỹ năng và tương tác cần được cấu hình hoặc triển khai trước khi dùng trong màn.
 
-Người chơi chọn một NPC có thể nhận lệnh, được hệ thống gọi là **General**, rồi ra lệnh di chuyển, giữ vị trí, đổi đội hình hoặc dùng kỹ năng hỗ trợ. General là vai trò của NPC trong hệ thống, không phải tên lớp nhân vật hay chức danh riêng của Henry. Lệnh có thể tác động một NPC hoặc một nhóm tùy cấu hình; kỹ năng hỗ trợ luôn gửi cho General đang chọn. Máy chủ kiểm tra và áp dụng yêu cầu.
+Người chơi chọn một NPC có thể nhận lệnh, được hệ thống gọi là **General**, rồi ra lệnh di chuyển, giữ vị trí, đổi đội hình hoặc dùng kỹ năng hỗ trợ. General là vai trò của NPC trong hệ thống, không phải tên lớp nhân vật hay chức danh riêng của Mark. Lệnh có thể tác động một NPC hoặc một nhóm tùy cấu hình; kỹ năng hỗ trợ luôn gửi cho General đang chọn. Máy chủ kiểm tra và áp dụng yêu cầu.
 
 #### Chọn đồng đội và vào chế độ lệnh
 
@@ -169,7 +169,7 @@ Tầm chọn General ở máy người chơi khác với giới hạn khoảng c
 | **Phá vật cản, đánh điểm yếu** | Người chơi trực tiếp đánh hoặc yêu cầu kỹ năng phù hợp của General. Khả năng đánh trúng vật thể cần được thiết kế trong kỹ năng/tương tác; không có lệnh Phá hay Tập trung riêng trong README. |
 | **Vận hành, mở đường, vô hiệu hóa** | Là tương tác của nhân vật, cơ chế vật thể hoặc sự kiện màn chơi cần triển khai. Hold gần bảng máy không tự vận hành bảng máy. |
 | **Ngừng bắn, tha người đầu hàng** | Là mục tiêu cứu hộ cần quy tắc chọn mục tiêu, trạng thái được bảo vệ hoặc sự kiện ngừng giao tranh riêng. Free trả về AI thường; Hold và Regroup không thay thế quy tắc này. |
-| **Trấn tĩnh** | Là kỹ năng hỗ trợ đề xuất cho Henry hoặc hiệu ứng màn chơi, cần trạng thái và gán ô/hỗ trợ trong hồ sơ trước khi gọi. Hệ lệnh hiện tại không tự giảm Độ Nhiễu hay xác thực giọng nói. |
+| **Trấn tĩnh** | Là kỹ năng hỗ trợ đề xuất cho Mark hoặc hiệu ứng màn chơi, cần trạng thái và gán ô/hỗ trợ trong hồ sơ trước khi gọi. Hệ lệnh hiện tại không tự giảm Độ Nhiễu hay xác thực giọng nói. |
 
 Các từ “bảo vệ”, “mở đường”, “phá” trong những chương dưới mô tả **mục tiêu của tình huống**, không bổ sung nút lệnh mới. Kết quả cứu người, chống Nhiễu và phản ứng của môi trường phải có điều kiện riêng, không được suy ra chỉ từ việc NPC đã nhận Hold/Regroup.
 
@@ -181,7 +181,7 @@ Các liên kết cần xây dựng và gán trong hồ sơ nhân vật:
 
 - **Deep và Tulas:** Tulas tạo bệ hoặc cột chất lỏng để Deep lao lên, phá giáp trên cao hoặc đập xuống diện rộng.
 - **Solei và Tulas:** Tulas tạo điểm tựa để Solei chạy tường, vượt bẫy và tiếp cận điểm yếu.
-- **Henry và Tulas:** màn nước làm lệch đường đạn hoặc tạo thấu kính giúp Henry bắn công tắc và điểm yếu ở góc khuất.
+- **Mark và Tulas:** màn nước làm lệch đường đạn hoặc tạo thấu kính giúp Mark bắn công tắc và điểm yếu ở góc khuất.
 - **Block và Tulas:** Tulas làm đặc chất lỏng quanh khiên của Block, tạo hành lang an toàn cho đội hoặc dân thường.
 - **Ghost và Tulas:** Ghost vượt qua máy nhận diện; Tulas giữ cửa, van hoặc vật thể từ phía bên kia để mở đường cho cả đội.
 
@@ -219,7 +219,7 @@ Vật nặng làm nhân vật di chuyển chậm. Vật dễ vỡ có thể gây
 - rời khỏi nguồn gây nhiễu và tránh nhận đòn trong vài giây;
 - đứng trong vùng an toàn do Block tạo ra;
 - được Tulas lọc máu hoặc ổn định tuần hoàn;
-- nhận hiệu ứng từ kỹ năng Trấn tĩnh đề xuất của Henry, sau khi kỹ năng được triển khai và gán vào hồ sơ;
+- nhận hiệu ứng từ kỹ năng Trấn tĩnh đề xuất của Mark, sau khi kỹ năng được triển khai và gán vào hồ sơ;
 - phá nguồn gây nhiễu như loa, máy phát, cột nghi lễ hoặc mạch liên kết;
 - nghỉ tại trạm điều trị, nơi trú ẩn hoặc Cõi Mộng Sau Cái Chết.
 
@@ -258,10 +258,10 @@ Khi một nhân vật thông thường Bùng Nhiễu, người chơi vẫn giữ
 **Stranger là ngoại lệ của trạng thái Bùng Nhiễu.** Khi Độ Nhiễu của Ghost/Stranger đạt 100%, anh không chỉ chịu một hiệu ứng nguy cấp ngắn mà có thể mất hoàn toàn điểm neo với đội và trở thành một trận trùm. Đây là phần giữ lại ý tưởng ban đầu của nhân vật: người sống sót mà đội vừa cứu cũng có thể trở thành mối nguy lớn nhất nếu sức mạnh trong anh vượt khỏi tầm kiểm soát.
 
 - Giao diện gọi anh là **Stranger** trong trận này, thay vì Ghost, để thể hiện rằng Độ Nhiễu đang xóa cái tên và mối quan hệ anh đã chọn.
-- Quyền điều khiển chuyển sang Solei. Deep, Henry, Tulas và Block trở thành đồng đội hỗ trợ theo đội hình hiện có.
+- Quyền điều khiển chuyển sang Solei. Deep, Mark, Tulas và Block trở thành đồng đội hỗ trợ theo đội hình hiện có.
 - Nếu Stranger đạt 100% trong một đoạn chơi đơn, trạng thái được giữ ở ngưỡng Quá tải và trận trùm bắt đầu ngay khi anh gặp lại đội. Trò chơi không tạo một trận đánh không thể hoàn thành vì thiếu đồng đội.
 - Stranger dùng chính những kỹ năng người chơi đã mở cho anh, đồng thời lặp lại một số thói quen di chuyển và tấn công gần nhất. Luật của mảnh thần trong chương hiện tại sẽ tạo thêm biến thể cho trận đấu.
-- Mục tiêu là **khống chế và cắt nguồn Nhiễu**, không giết Stranger. Solei phá các bóng lặp; người chơi chọn từng General để yêu cầu các kỹ năng đã xây dựng: Trấn tĩnh của Henry, phòng thủ của Block hoặc lọc Nhiễu của Tulas. Deep chỉ phá thế tấn công thay vì tung đòn kết liễu. Trận này cần quy tắc sát thương và mục tiêu riêng để bảo đảm khống chế được Stranger; Free, Hold hay Regroup không tự tạo hành vi không sát thương.
+- Mục tiêu là **khống chế và cắt nguồn Nhiễu**, không giết Stranger. Solei phá các bóng lặp; người chơi chọn từng General để yêu cầu các kỹ năng đã xây dựng: Trấn tĩnh của Mark, phòng thủ của Block hoặc lọc Nhiễu của Tulas. Deep chỉ phá thế tấn công thay vì tung đòn kết liễu. Trận này cần quy tắc sát thương và mục tiêu riêng để bảo đảm khống chế được Stranger; Free, Hold hay Regroup không tự tạo hành vi không sát thương.
 - Ở 80% và 90%, chân dung, lời thoại và hành vi của Stranger phải cảnh báo rõ nguy cơ biến đổi để người chơi có cơ hội xử lý trước khi trận trùm xảy ra.
 
 Trận trùm đầy đủ chỉ kích hoạt một lần trong mỗi lượt chơi. Sau khi được khống chế, Stranger trở lại đội với Độ Nhiễu khoảng 40% và mở một đoạn đối thoại riêng. Nếu anh lại đạt 100%, trò chơi buộc anh rời vị trí chiến đấu cho đến điểm nghỉ thay vì lặp lại toàn bộ trận trùm. Cách xử lý này giữ trọng lượng của ý tưởng mà không biến nó thành một hình phạt lặp đi lặp lại.
@@ -283,7 +283,7 @@ Không dùng Độ Nhiễu để đảo nút điều khiển, xóa thông tin h�
 
 - Solei thoát vùng nguy hiểm nhanh nhưng bóng giả làm khó việc căn phản đòn.
 - Deep chịu đòn tốt nhưng dễ bị Trái Tim khơi lại ký ức chiến tranh; bảo vệ đồng đội giúp anh ổn định.
-- Henry nhận ra cấu trúc của ảo giác nhưng Cái Lưỡi có thể giả lời chỉ huy của anh trong thế giới; phản hồi lệnh thật trên HUD vẫn phải đọc được.
+- Mark nhận ra cấu trúc của ảo giác nhưng Cái Lưỡi có thể giả lời chỉ huy của anh trong thế giới; phản hồi lệnh thật trên HUD vẫn phải đọc được.
 - Tulas giảm Nhiễu cho người khác nhưng dễ quá tải nếu dùng máu quá nhiều.
 - Block chặn được đòn gây Nhiễu cho đồng đội, đổi lại thể lực của khiên hao nhanh khi bản thân bị nhiễm nặng.
 - Ghost tích Nhiễu chậm hơn, nhưng ở mức cao sẽ tạo một bóng lặp lại chính hành động cũ của anh. Nếu đạt 100%, anh có thể mất kiểm soát và trở thành trùm Stranger.
@@ -508,7 +508,7 @@ Có một cuộc đột với băng đản ở ngoài phố .
 
 ### Cơ chế và tình huống
 
-- Người chơi kiểm tra thương tích của Block, đổi đội hình và nghe Henry thống nhất mục tiêu.
+- Người chơi kiểm tra thương tích của Block, đổi đội hình và nghe Mark thống nhất mục tiêu.
 - Hỏi đủ thông tin từ Jacques mở một đường cống an toàn hơn.
 - Chai, ghế, bàn bi-da, thùng đá và cửa kính vừa là vũ khí vừa thay đổi đường đi.
 - Phá quá nhiều tài sản hoặc để trận kéo dài làm tăng mức truy nã.
@@ -519,7 +519,7 @@ Có một cuộc đột với băng đản ở ngoài phố .
 - Giai đoạn đầu, hắn lao ngang, quay xe và để lại vệt lửa. Người chơi dùng vật ném hoặc phản đòn để hất hắn khỏi xe.
 - Khi đi bộ, hắn dùng chuỗi chém nặng và đòn hất ngăn người chơi liên tục nhảy vào.
 - Dưới nửa sinh lực, hắn rút kiếm gia truyền, tăng tốc và gọi đàn em chạy cắt đấu trường.
-- Henry đánh dấu lúc xe quay đầu; Solei phản đòn; Deep phá giáp khi trùm ngã; Block ưu tiên phòng thủ nếu còn bị thương.
+- Mark đánh dấu lúc xe quay đầu; Solei phản đòn; Deep phá giáp khi trùm ngã; Block ưu tiên phòng thủ nếu còn bị thương.
 
 ﻿## 1-2. Đường cống và chợ ngầm Laundel
 
@@ -533,7 +533,7 @@ Có một cuộc đột với băng đản ở ngoài phố .
 
 ![Phố sau Armorlite — dùng nền Marsile Background Before Finish cho đoạn tìm cửa bảo trì xuống cống](<imgs/Stage1/chap1/marsile background before finish.png>)
 
-Sau trận ngoài quán, Henry thấy đường xe bị phong tỏa. Người chơi vẫn điều khiển nhân vật đi về cuối phố, mở cửa bảo trì cạnh kho hàng. Camera đi xuống theo thang, tiếng xe và nhạc quán mờ dần thành tiếng nước nhỏ giọt. Chuyển cảnh chỉ khoảng 6–8 giây, kết thúc trên một bờ khô; điểm lưu nằm ngay đây.
+Sau trận ngoài quán, Mark thấy đường xe bị phong tỏa. Người chơi vẫn điều khiển nhân vật đi về cuối phố, mở cửa bảo trì cạnh kho hàng. Camera đi xuống theo thang, tiếng xe và nhạc quán mờ dần thành tiếng nước nhỏ giọt. Chuyển cảnh chỉ khoảng 6–8 giây, kết thúc trên một bờ khô; điểm lưu nằm ngay đây.
 
 ![Sewer1 — đi trên bờ khô, qua rãnh nhỏ rồi tới đoạn cống có người canh](<imgs/Stage1/chap1/Sewer1.png>)
 
@@ -592,13 +592,13 @@ Phản hồi gồm dấu hỏi khi nghe, mũi hướng nhìn khi kiểm tra, d�
 
 ### Ra khỏi Laundel
 
-Ở cửa **6**, Henry nhận bản đồ vẽ đường cống chính. Phe còn tin đội nhắc vị trí cửa xả và điểm hẹn thuyền. Đội nghỉ chờ đổi ca tuần tra rồi đi cuối chiều: một dòng chuyển cảnh báo thời gian đã trôi qua, nối hợp lý với hoàng hôn bến cảng. Tiếng radio chợ nhỏ dần, tiếng nước lớn lên; lưu ở bờ khô Sewer3 trước khi trả quyền điều khiển.
+Ở cửa **6**, Mark nhận bản đồ vẽ đường cống chính. Phe còn tin đội nhắc vị trí cửa xả và điểm hẹn thuyền. Đội nghỉ chờ đổi ca tuần tra rồi đi cuối chiều: một dòng chuyển cảnh báo thời gian đã trôi qua, nối hợp lý với hoàng hôn bến cảng. Tiếng radio chợ nhỏ dần, tiếng nước lớn lên; lưu ở bờ khô Sewer3 trước khi trả quyền điều khiển.
 
 ## 1-3. Đường cống chính và bến cảng hoàng hôn
 
 ### Tưởng đã tới đường thoát
 
-**Mục tiêu ban đầu:** ra cửa xả, tìm thuyền của người quen Henry và rời Marseille. **Tuyến màn:** Sewer3 → các bệ Sewer4 → bến cảng → phục kích Marius → chiếm thuyền cảnh sát mật. Nhịp khoảng 20 phút: cống căng ngắn, bến cảng yên, rồi một trận lớn có mục tiêu rõ.
+**Mục tiêu ban đầu:** ra cửa xả, tìm thuyền của người quen Mark và rời Marseille. **Tuyến màn:** Sewer3 → các bệ Sewer4 → bến cảng → phục kích Marius → chiếm thuyền cảnh sát mật. Nhịp khoảng 20 phút: cống căng ngắn, bến cảng yên, rồi một trận lớn có mục tiêu rõ.
 
 ![Sewer3 — quái bơi dưới kênh, lối khô và cửa phòng sơ tán bên đường](<imgs/Stage1/chap1/Sewer3.png>)
 
@@ -630,7 +630,7 @@ Khoảng 30 giây đầu trên bến không có địch. Solei nói nửa câu v
 
 Mục tiêu hiện tại chỉ là **hạ cầu tàu và lấy lại quyền khởi động thuyền**. Có một lính bắn tỉa trên chòi **5**, hai lính áp sát ở sân, còn Marius giữ bộ điều khiển. Người chơi nấp sau container **2**, xử lý lính gần, rồi chọn lên cầu thang hạ bắn tỉa hoặc gọi kỹ năng tầm xa phù hợp. Laser rà, dừng rồi lóe nòng trước khi bắn; tia ngắm không gây sát thương và container thật sự chặn viên đạn.
 
-**Ví dụ chia việc:** nhân vật trực tiếp chạy tới bảng **3**, Block nhận Hold ở mép container để canh một phía, Henry dùng hỗ trợ bắn nếu đã gán kỹ năng đó. Không có họ thì dọn đợt lính đầu rồi tự đi tới máy. Bảng cần một tương tác ngắn; bị đánh thì ngắt, các chốt đã mở được giữ lại. Hold không vận hành máy, Regroup mới gọi General theo khi đội rút về cầu.
+**Ví dụ chia việc:** nhân vật trực tiếp chạy tới bảng **3**, Block nhận Hold ở mép container để canh một phía, Mark dùng hỗ trợ bắn nếu đã gán kỹ năng đó. Không có họ thì dọn đợt lính đầu rồi tự đi tới máy. Bảng cần một tương tác ngắn; bị đánh thì ngắt, các chốt đã mở được giữ lại. Hold không vận hành máy, Regroup mới gọi General theo khi đội rút về cầu.
 
 Hạ cầu xong vẫn phải lấy bộ điều khiển trên Marius. Thuyền vì thế có lý do chưa rời bến, thay vì xuất hiện một tường vô hình chờ đánh hết quái. Mức truy nã cao từ trước thêm **một** đợt tiếp viện hữu hạn, đến sớm hơn; không cộng máu trùm hoặc sinh quân liên tục trong lúc dùng máy.
 
@@ -642,15 +642,15 @@ Nửa sau, hắn nối một cú lao dao sau loạt súng và thu hồi chậm h
 
 ### 5. Vì sao đội lại tới tàu ngầm?
 
-Trên người Marius có lệnh điều chuyển ghi tên đồng minh Henry và mã của trạm nghiên cứu ngoài khơi. Một lính sống sót xác nhận người đó vẫn còn ở tàu; nếu lính không còn, radio trên thuyền chứa cùng thông tin. Mục tiêu đổi rõ ràng: **“Tới trạm nghiên cứu — tìm người bị bắt và hồ sơ của Jamerson.”** Việc cứu người xuất phát từ điều đội vừa biết, không phải lạc đường tới một boss mới.
+Trên người Marius có lệnh điều chuyển ghi tên đồng minh Mark và mã của trạm nghiên cứu ngoài khơi. Một lính sống sót xác nhận người đó vẫn còn ở tàu; nếu lính không còn, radio trên thuyền chứa cùng thông tin. Mục tiêu đổi rõ ràng: **“Tới trạm nghiên cứu — tìm người bị bắt và hồ sơ của Jamerson.”** Việc cứu người xuất phát từ điều đội vừa biết, không phải lạc đường tới một boss mới.
 
-Cảnh chuyển khoảng 20–25 giây, gồm ba nhịp: Henry bật tuyến tự lái bằng bộ điều khiển Marius; thuyền chạy tới một trạm đo áp lực giữa biển; đội cập sàn trạm rồi xuống giếng dịch vụ khô nối tới tàu ngầm đang neo bên dưới. Hai cửa khoang vào mở lần lượt. Không bơm nước vào khoang có người, không cần thêm hệ lái thuyền. Lưu khi cả đội đã xuống tàu; bỏ qua cutscene vẫn đặt đủ đội và vật nhiệm vụ tại đó.
+Cảnh chuyển khoảng 20–25 giây, gồm ba nhịp: Mark bật tuyến tự lái bằng bộ điều khiển Marius; thuyền chạy tới một trạm đo áp lực giữa biển; đội cập sàn trạm rồi xuống giếng dịch vụ khô nối tới tàu ngầm đang neo bên dưới. Hai cửa khoang vào mở lần lượt. Không bơm nước vào khoang có người, không cần thêm hệ lái thuyền. Lưu khi cả đội đã xuống tàu; bỏ qua cutscene vẫn đặt đủ đội và vật nhiệm vụ tại đó.
 
 ## 1-4. Tàu ngầm nghiên cứu và SheMal
 
 ### Biết mình ở đâu, nhưng không chắc mình đang thấy gì
 
-**Mục tiêu:** cứu người của Henry, lấy bằng chứng và tìm cách vào khu nghiên cứu kín. Tàu ngầm là điểm cuối Chương 1, nơi các việc quen thuộc — nhìn đường, ném một vật, chọn lúc mở cửa — bắt đầu bị Con Mắt làm sai lệch. Tuyến chính khoảng 25–30 phút, không tính đọc hồ sơ và thử lại trùm.
+**Mục tiêu:** cứu người của Mark, lấy bằng chứng và tìm cách vào khu nghiên cứu kín. Tàu ngầm là điểm cuối Chương 1, nơi các việc quen thuộc — nhìn đường, ném một vật, chọn lúc mở cửa — bắt đầu bị Con Mắt làm sai lệch. Tuyến chính khoảng 25–30 phút, không tính đọc hồ sơ và thử lại trùm.
 
 ![Bản đồ tàu ngầm — dùng map_submarine_lab làm khung chia khoang. Sơ đồ hành trình bên dưới là bố trí gameplay đề xuất; các số viết sẵn trên ảnh chưa phải mã phòng nhiệm vụ](<imgs/Stage1/chap1/map_submarine_lab.png>)
 
@@ -673,11 +673,11 @@ Luật của câu đố là **ảo ảnh không có va chạm vật lý**. Có t
 
 **Phòng trưởng gác** dùng lại bài ném vật: dụ một lính khỏi bàn để lấy thẻ, hoặc đánh lấy thẻ. Khi có thẻ, dùng bảng ngay trong phòng. Thẻ nhiệm vụ không bán được và tự thu nếu lính bị đánh văng khỏi khu đi lại.
 
-**Kho dữ liệu** kiểm tra cửa thật/giả trước khi giao chiến. Bên trong là hồ sơ Heniana và người của Henry bị nối vào máy. Để cứu, người chơi ngắt hai khóa trên cùng bảng đầu giường rồi mở buồng. Một đợt lính nhỏ tới; bảo vệ lối ra, người được cứu tự đi theo hành lang đã dọn về khoang vào. Không thêm nhân vật chiến đấu thứ tư hoặc bắt Hold nhắm vào người hộ tống.
+**Kho dữ liệu** kiểm tra cửa thật/giả trước khi giao chiến. Bên trong là hồ sơ Heniana và người của Mark bị nối vào máy. Để cứu, người chơi ngắt hai khóa trên cùng bảng đầu giường rồi mở buồng. Một đợt lính nhỏ tới; bảo vệ lối ra, người được cứu tự đi theo hành lang đã dọn về khoang vào. Không thêm nhân vật chiến đấu thứ tư hoặc bắt Hold nhắm vào người hộ tống.
 
 **Phòng áp suất** có một đường khí rò chắn bảng điều khiển. Vòi và van nằm trong cùng khung hình: chờ hơi ngừng, tới van khóa nó, đợi hai kim trên bảng vào cùng vùng “An toàn”, rồi nhấn cân bằng. Bấm sớm máy từ chối, không làm ngập hoặc nổ tàu. Đây là khoang khí khô ở trong thân tàu, không phải một van nhỏ thay đổi áp suất ngoài biển.
 
-Ba bảng có thể bật theo thứ tự tự chọn, sáng rồi không tắt khi rời phòng. Trên đường về cửa lò, người chơi luôn thấy tiến độ bằng ba đèn có tên. Nếu chưa cứu người, bảng nhiệm vụ và lời Henry nhắc trước cửa một chiều, cho quay lại. Người được cứu là lý do đội tới đây; bỏ lại phải là lựa chọn chủ động, không do bước nhầm qua trigger.
+Ba bảng có thể bật theo thứ tự tự chọn, sáng rồi không tắt khi rời phòng. Trên đường về cửa lò, người chơi luôn thấy tiến độ bằng ba đèn có tên. Nếu chưa cứu người, bảng nhiệm vụ và lời Mark nhắc trước cửa một chiều, cho quay lại. Người được cứu là lý do đội tới đây; bỏ lại phải là lựa chọn chủ động, không do bước nhầm qua trigger.
 
 ### 3. Tuyến phá điện — nhanh hơn về khóa cửa, nguy hiểm hơn về đường đi
 
@@ -717,7 +717,7 @@ Sau trận, liên kết thí nghiệm bị phá làm khu phản ứng quá tải
 
 Đường thoát dùng lại hành lang chính tới khoang vào, khoảng một phút. Sập và hơi nóng xảy ra theo các mốc đội đi tới, có cảnh báo; bản đầu không cần đồng hồ chết cứng. Người đã cứu chờ sẵn ở khoang, lên giếng dịch vụ cùng đội. Các phòng phụ đóng cửa hướng người chơi ra ngoài, tuyến chính luôn thông.
 
-Ba nhịp kết cảnh: Jamerson nói qua loa về con gái; đội thấy một bóng giống ông sau kính bị lửa che; thuyền rời trạm khi biển phía sau sáng lên. Đội tin ông đã chết, nhưng một cảnh riêng cho người xem thấy Jamerson thật thoát bằng ống phóng với mẫu máu và bản đồ. Hồ sơ khiến Henry muốn đưa bằng chứng ra ngoài, Solei muốn tìm Heniana; bản đồ chuyển vùng dẫn chuyến đi phía đông tới Sakuri. Heni chưa gia nhập trong Chương 1.
+Ba nhịp kết cảnh: Jamerson nói qua loa về con gái; đội thấy một bóng giống ông sau kính bị lửa che; thuyền rời trạm khi biển phía sau sáng lên. Đội tin ông đã chết, nhưng một cảnh riêng cho người xem thấy Jamerson thật thoát bằng ống phóng với mẫu máu và bản đồ. Hồ sơ khiến Mark muốn đưa bằng chứng ra ngoài, Solei muốn tìm Heniana; bản đồ chuyển vùng dẫn chuyến đi phía đông tới Sakuri. Heni chưa gia nhập trong Chương 1.
 
 ### Những gì cần giữ khi dựng màn
 
@@ -825,7 +825,7 @@ Chương này phát triển theo chuỗi **tiếng gọi → tên riêng → m�
 - Sương dày giảm tầm nhìn và hiệu quả bắn xa, buộc Solei do thám hoặc đội tiến gần.
 - Vong hồn lang thang không bị đòn vật lý nặng tác động tốt; cần chưởng năng lượng hoặc đạn đặc biệt.
 - Bia mộ có thể chứa tài nguyên nhưng một số là bẫy. Solei đánh dấu đường an toàn trước khi đội đi qua.
-- Tại kết giới tụ linh, đội bảo vệ Henry trong lúc anh xác định ba viên linh đá ngụy trang.
+- Tại kết giới tụ linh, đội bảo vệ Mark trong lúc anh xác định ba viên linh đá ngụy trang.
 - Những tiếng gọi đầu tiên dùng mã tù và tên cũ của Ghost, nhưng chưa giải thích toàn bộ quá khứ.
 
 ## 3-2. Rừng Đồ Tể
@@ -870,7 +870,7 @@ Lựa chọn này tác động trực tiếp tới trận Dàn Hợp Xướng �
 
 - Deep phá đá lớn trước khi bè va vào.
 - Tulas tạo dòng đẩy để đổi hướng.
-- Henry bắn đứt neo của lính xương trên bờ.
+- Mark bắn đứt neo của lính xương trên bờ.
 - Quái nước bám vào bè và phải bị gỡ trước khi tự nổ.
 - Cái Lưỡi phát lời ra lệnh giả từ hai bờ. Người chơi đối chiếu General, đội hình và phản hồi trên HUD để phân biệt với lệnh mình thực sự nhập. Lời giả là cơ chế âm thanh/sự kiện của màn, không tự tạo yêu cầu lệnh hợp lệ gửi lên máy chủ.
 
@@ -885,7 +885,7 @@ Khi độ bền bè về 0, đội trở lại điểm lưu gần nhất trong C
 - Người ghi tên thu phí cho từng cái chết và có thể sửa hoặc xóa danh tính.
 - Muốn mở cửa mộ, người chơi có thể mua tên, trộm sổ hoặc giúp thân nhân tìm bằng chứng.
 - Một người nghèo xin nghe lời cuối mà không có tiền. Giúp họ mở manh mối về cách giáo hội làm giả giọng nói.
-- Các buồng thú tội cho tăng cường tạm thời nhưng cung cấp dữ liệu để trùm dùng lời nói cá nhân hóa chống Deep và Henry.
+- Các buồng thú tội cho tăng cường tạm thời nhưng cung cấp dữ liệu để trùm dùng lời nói cá nhân hóa chống Deep và Mark.
 
 ## 3-7. Chợ xương và hầm mộ sống
 
@@ -908,12 +908,12 @@ Khi độ bền bè về 0, đội trở lại điểm lưu gần nhất trong C
 
 ### Trùm: Dàn Hợp Xướng
 
-Dàn Hợp Xướng dùng giọng của mẹ Henry, đồng đội cũ của Deep, người thân Solei, Heniana và cuối cùng là giọng quen thuộc với người chơi. Mỗi giọng tạo một kiểu đòn và một mệnh lệnh.
+Dàn Hợp Xướng dùng giọng của mẹ Mark, đồng đội cũ của Deep, người thân Solei, Heniana và cuối cùng là giọng quen thuộc với người chơi. Mỗi giọng tạo một kiểu đòn và một mệnh lệnh.
 
 - Gọi đúng tên hoặc danh xưng làm nhân vật khựng trong chốc lát.
 - Lệnh như “quỳ”, “im” hoặc “lùi lại” tạo hiệu ứng ngắn, có dấu báo rõ và không tước quyền điều khiển lâu.
 - Đánh thân trùm chỉ làm chậm nó; muốn kết thúc giai đoạn phải phá các nút lời thề quanh đấu trường.
-- Người chơi đọc phản hồi lệnh thật trên HUD, chọn Henry và gọi kỹ năng Trấn tĩnh nếu đã được xây dựng, gán trong hồ sơ. Hiệu ứng chống Cái Lưỡi thuộc kỹ năng này; thao tác ra lệnh tự nó không xóa hiệu ứng trùm.
+- Người chơi đọc phản hồi lệnh thật trên HUD, chọn Mark và gọi kỹ năng Trấn tĩnh nếu đã được xây dựng, gán trong hồ sơ. Hiệu ứng chống Cái Lưỡi thuộc kỹ năng này; thao tác ra lệnh tự nó không xóa hiệu ứng trùm.
 - Deep bị gọi bằng danh hiệu anh hùng cũ; truy sát trong lúc này làm Nộ khí tăng.
 - Ghost chọn cái tên đồng đội đang gọi mình thay vì tên cũ do trùm áp đặt.
 
@@ -953,7 +953,7 @@ Nhịp tim là lớp tăng cường của Độ Nhiễu, không phải một tha
 - Lỗ địa nhiệt phun khí độc theo chu kỳ. Block chặn bằng đá hoặc Tulas tạo màng lọc để đội đi qua.
 - Kẻ thuần quỷ gọi thêm quái; hạ hắn khiến quái mất kiểm soát và quay sang tấn công lính gần nhất.
 - Kẻ chủ tế tăng sức mạnh cho quân và ép họ tập trung vào Solei.
-- Người tị nạn bị dùng làm lá chắn. Henry cảnh báo đội tránh làm hại họ qua lời thoại. Người chơi dùng Regroup để kéo General về phía mình, bố trí lại bằng Hold, rồi trực tiếp điều khiển Solei hoặc Ghost phá vật neo. Màn cần quy tắc ngăn AI chọn người được bảo vệ làm mục tiêu; Regroup không phải lệnh ngừng bắn.
+- Người tị nạn bị dùng làm lá chắn. Mark cảnh báo đội tránh làm hại họ qua lời thoại. Người chơi dùng Regroup để kéo General về phía mình, bố trí lại bằng Hold, rồi trực tiếp điều khiển Solei hoặc Ghost phá vật neo. Màn cần quy tắc ngăn AI chọn người được bảo vệ làm mục tiêu; Regroup không phải lệnh ngừng bắn.
 
 ### Trùm phụ: Đội Thập tự
 
@@ -978,7 +978,7 @@ Một lính khiên lớn, hai thương thủ cơ động và một kẻ chủ t�
 
 Heni sốt cao vì cộng hưởng. Tulas phải dùng Khóa huyết quản, khiến một phần sinh lực tối đa của anh bị khóa trong phân đoạn. Người chơi chọn thứ tự tiếp cận hai tuyến, nhưng cuối cùng vẫn có thể giải quyết cả hai:
 
-- **Tuyến Tàn Dư của Kaelen:** thành phố kính có máy quét và thiết bị canh gác. Ghost xâm nhập để mở phòng giam; Solei cắt nguồn điện; Henry giữ lối rút.
+- **Tuyến Tàn Dư của Kaelen:** thành phố kính có máy quét và thiết bị canh gác. Ghost xâm nhập để mở phòng giam; Solei cắt nguồn điện; Mark giữ lối rút.
 - **Tuyến Con Cháu của Vanya:** ca động đầy lửa tế và người bị ép hiến. Solei phản đòn trong không gian hẹp; Tulas dùng chất lỏng dập lửa; Block bảo vệ trẻ em.
 
 Cứu tù nhân ở thành phố kính mở hỏa lực hỗ trợ trong trận Titan. Cứu trẻ em tại ca động giúp các tế sư hoàn trả một phần sinh lực bị khóa của Tulas. Hai phần thưởng khác nhau nhưng đều hữu ích, tránh tạo một tuyến “đúng” duy nhất.
@@ -991,7 +991,7 @@ Titan là thực thể khổng lồ từ xương rồng, cơ thịt và ống th
 
 ### Giai đoạn 1 – Đấu trường hỗn loạn
 
-Hai phe chém giết quanh dân thường. Henry cảnh báo ưu tiên cứu hộ; người chơi gọi từng General về bằng Regroup, bố trí Block bằng Hold ở tuyến sơ tán rồi yêu cầu hỗ trợ phòng thủ đã gán. Solei trực tiếp mở đường thoát. Titan quét tay xương qua sân. Giết lính đang rút hoặc để dân chết làm Nộ khí của Titan tăng. Trạng thái dân thường và người đầu hàng cần quy tắc mục tiêu riêng để AI không tự truy sát họ; Free vẫn cho AI chiến đấu bình thường.
+Hai phe chém giết quanh dân thường. Mark cảnh báo ưu tiên cứu hộ; người chơi gọi từng General về bằng Regroup, bố trí Block bằng Hold ở tuyến sơ tán rồi yêu cầu hỗ trợ phòng thủ đã gán. Solei trực tiếp mở đường thoát. Titan quét tay xương qua sân. Giết lính đang rút hoặc để dân chết làm Nộ khí của Titan tăng. Trạng thái dân thường và người đầu hàng cần quy tắc mục tiêu riêng để AI không tự truy sát họ; Free vẫn cho AI chiến đấu bình thường.
 
 ### Giai đoạn 2 – Rễ oán niệm
 
@@ -1071,7 +1071,7 @@ Mục tiêu không chỉ là đánh cạn sinh lực. Đội phải cắt từng
 
 - Ghost vượt vùng máy không nhận diện để cắt mạch Con Mắt.
 - Solei phản đòn đúng nhịp để phá vòng lặp của Cái Tai.
-- Henry dùng kỹ năng Trấn tĩnh đề xuất, được gọi qua ô kỹ năng hoặc hỗ trợ đã gán, để chống hiệu ứng của Cái Lưỡi. Nếu kỹ năng chưa sẵn sàng, cơ chế phá nút lời thề phải cho cách xử lý khác.
+- Mark dùng kỹ năng Trấn tĩnh đề xuất, được gọi qua ô kỹ năng hoặc hỗ trợ đã gán, để chống hiệu ứng của Cái Lưỡi. Nếu kỹ năng chưa sẵn sàng, cơ chế phá nút lời thề phải cho cách xử lý khác.
 - Deep phá loa và lõi phụ để ngăn Trái Tim bùng Nộ khí.
 - Tulas khóa mạch độc quanh đấu trường, vừa cứu nạn nhân vừa giảm khả năng hồi phục của Jamerson.
 - Block giữ rìa đấu trường và cổng sơ tán không sụp.
@@ -1094,7 +1094,7 @@ Sau trận trùm, người chơi bước thẳng vào một tình huống phòng
 - **Solei và Ghost:** chạy giữa các điểm neo, cắt những mạch đang cố nối lại với Jamerson hoặc Heniana.
 - **Block và Deep:** giữ hướng tấn công chính, kéo người bị thương khỏi vùng sụp và bảo vệ đường rút.
 - **Tulas:** ổn định sinh lực của Heni và Heniana, lọc độc khỏi những người bị nối vào mạch thần.
-- **Henry:** nhắc ưu tiên và phản hồi qua lời thoại; người chơi phân công bằng Hold, Regroup, Line/Wedge/Circle và hỗ trợ từng General. Cấm dùng vật tế người và bảo vệ người sống sót là điều kiện kịch bản cùng quy tắc mục tiêu riêng.
+- **Mark:** nhắc ưu tiên và phản hồi qua lời thoại; người chơi phân công bằng Hold, Regroup, Line/Wedge/Circle và hỗ trợ từng General. Cấm dùng vật tế người và bảo vệ người sống sót là điều kiện kịch bản cùng quy tắc mục tiêu riêng.
 - **Heni:** tự chạm Dây Rốn khi khu vực đã đủ an toàn. Gợi ý tương tác phải thể hiện đó là quyết định của cô.
 
 Kết quả tốt nhất vẫn mang vị đắng: Đại Họa giảm dần, Heniana chỉ còn một cơ hội mong manh để sống như người thường, Heni tiếp tục cuộc đời riêng và Jamerson không được tôn vinh.
@@ -1162,7 +1162,7 @@ Mỗi nhóm phải có một mục tiêu ưu tiên rõ, một dấu hiệu đặ
 
 - Đội hình chuẩn gồm một nhân vật trực tiếp và hai vị trí hỗ trợ; đổi đội tại điểm an toàn.
 - Solei là nhân vật mở đầu. Ghost chỉ xuất hiện như nhân vật điều khiển tạm ở Bastonne rồi mới được mở.
-- Deep và Henry là hai người có lịch sử chung từ cuộc chiến cũ; Tulas cùng lứa với Solei và không được viết như một cựu binh ngang hàng với họ.
+- Deep và Mark là hai người có lịch sử chung từ cuộc chiến cũ; Tulas cùng lứa với Solei và không được viết như một cựu binh ngang hàng với họ.
 - Tulas tham gia bài tập ở Chương 0 và trở thành thành viên đầy đủ sau Bastonne.
 - Khi Stranger đạt 100% Độ Nhiễu lần đầu, anh trở thành một trận trùm có điều kiện và cả đội phải khống chế anh.
 - Heni là nhân vật đồng hành có quyền tự quyết, không phải nguồn sát thương hoặc chìa khóa sống.

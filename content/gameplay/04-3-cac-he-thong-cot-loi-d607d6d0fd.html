@@ -1,7 +1,7 @@
 <h2 id="gameplay-3-cac-he-thong-cot-loi" tabindex="-1"><a class="heading-link" href="#gameplay-3-cac-he-thong-cot-loi" aria-label="Link to section">#</a>3. Các hệ thống cốt lõi</h2>
 <h3 id="gameplay-3-1-lenh-phoi-hop-he-thong-thuc-te" tabindex="-1"><a class="heading-link" href="#gameplay-3-1-lenh-phoi-hop-he-thong-thuc-te" aria-label="Link to section">#</a>3.1. Lệnh phối hợp — hệ thống thực tế</h3>
 <p>Phần này đối chiếu theo <code>README_AI_COMMAND_SYSTEM.html</code> trong <code>Assets/LF2_multiplayer/GamePlay/Character/AI/Commands/</code> của dự án game. Tên lệnh và thao tác dưới đây là chức năng được tài liệu hệ thống mô tả. Các liên kết kỹ năng, cơ chế Di Vật và tình huống màn chơi ở những phần sau là <strong>đề xuất thiết kế</strong>; từng kỹ năng và tương tác cần được cấu hình hoặc triển khai trước khi dùng trong màn.</p>
-<p>Người chơi chọn một NPC có thể nhận lệnh, được hệ thống gọi là <strong>General</strong>, rồi ra lệnh di chuyển, giữ vị trí, đổi đội hình hoặc dùng kỹ năng hỗ trợ. General là vai trò của NPC trong hệ thống, không phải tên lớp nhân vật hay chức danh riêng của Henry. Lệnh có thể tác động một NPC hoặc một nhóm tùy cấu hình; kỹ năng hỗ trợ luôn gửi cho General đang chọn. Máy chủ kiểm tra và áp dụng yêu cầu.</p>
+<p>Người chơi chọn một NPC có thể nhận lệnh, được hệ thống gọi là <strong>General</strong>, rồi ra lệnh di chuyển, giữ vị trí, đổi đội hình hoặc dùng kỹ năng hỗ trợ. General là vai trò của NPC trong hệ thống, không phải tên lớp nhân vật hay chức danh riêng của Mark. Lệnh có thể tác động một NPC hoặc một nhóm tùy cấu hình; kỹ năng hỗ trợ luôn gửi cho General đang chọn. Máy chủ kiểm tra và áp dụng yêu cầu.</p>
 <h4 id="gameplay-chon-ong-oi-va-vao-che-o-lenh" tabindex="-1"><a class="heading-link" href="#gameplay-chon-ong-oi-va-vao-che-o-lenh" aria-label="Link to section">#</a>Chọn đồng đội và vào chế độ lệnh</h4>
 <ol>
 <li>Giữ <strong>Shift trái hoặc phải</strong> để vào chế độ lệnh. Nhân vật người chơi tạm ngừng di chuyển; HUD hiện General đang chọn. Đây là thay đổi chế độ điều khiển, không phải chức năng dừng hoặc làm chậm thời gian toàn trận.</li>
@@ -41,7 +41,7 @@
 <tr><td><strong>Phá vật cản, đánh điểm yếu</strong></td><td>Người chơi trực tiếp đánh hoặc yêu cầu kỹ năng phù hợp của General. Khả năng đánh trúng vật thể cần được thiết kế trong kỹ năng/tương tác; không có lệnh Phá hay Tập trung riêng trong README.</td></tr>
 <tr><td><strong>Vận hành, mở đường, vô hiệu hóa</strong></td><td>Là tương tác của nhân vật, cơ chế vật thể hoặc sự kiện màn chơi cần triển khai. Hold gần bảng máy không tự vận hành bảng máy.</td></tr>
 <tr><td><strong>Ngừng bắn, tha người đầu hàng</strong></td><td>Là mục tiêu cứu hộ cần quy tắc chọn mục tiêu, trạng thái được bảo vệ hoặc sự kiện ngừng giao tranh riêng. Free trả về AI thường; Hold và Regroup không thay thế quy tắc này.</td></tr>
-<tr><td><strong>Trấn tĩnh</strong></td><td>Là kỹ năng hỗ trợ đề xuất cho Henry hoặc hiệu ứng màn chơi, cần trạng thái và gán ô/hỗ trợ trong hồ sơ trước khi gọi. Hệ lệnh hiện tại không tự giảm Độ Nhiễu hay xác thực giọng nói.</td></tr></tbody></table></div>
+<tr><td><strong>Trấn tĩnh</strong></td><td>Là kỹ năng hỗ trợ đề xuất cho Mark hoặc hiệu ứng màn chơi, cần trạng thái và gán ô/hỗ trợ trong hồ sơ trước khi gọi. Hệ lệnh hiện tại không tự giảm Độ Nhiễu hay xác thực giọng nói.</td></tr></tbody></table></div>
 <p>Các từ “bảo vệ”, “mở đường”, “phá” trong những chương dưới mô tả <strong>mục tiêu của tình huống</strong>, không bổ sung nút lệnh mới. Kết quả cứu người, chống Nhiễu và phản ứng của môi trường phải có điều kiện riêng, không được suy ra chỉ từ việc NPC đã nhận Hold/Regroup.</p>
 <h3 id="gameplay-3-2-lien-ket-ky-nang" tabindex="-1"><a class="heading-link" href="#gameplay-3-2-lien-ket-ky-nang" aria-label="Link to section">#</a>3.2. Liên kết kỹ năng</h3>
 <p>Liên kết kỹ năng trả lời câu hỏi khác: <strong>hai nhân vật có thể cùng làm điều gì mà một người không thể làm một mình?</strong> Các liên kết dưới đây là đề xuất nội dung kỹ năng. Người chơi chọn General bằng Shift + Tab, gọi ô kỹ năng hoặc hỗ trợ đã gán, rồi phối hợp bằng nhân vật trực tiếp. Hệ lệnh gửi yêu cầu cho General, không cung cấp sẵn một lớp nhắm vật thể hay tự ghép combo hai nhân vật.</p>
@@ -49,7 +49,7 @@
 <ul>
 <li><strong>Deep và Tulas:</strong> Tulas tạo bệ hoặc cột chất lỏng để Deep lao lên, phá giáp trên cao hoặc đập xuống diện rộng.</li>
 <li><strong>Solei và Tulas:</strong> Tulas tạo điểm tựa để Solei chạy tường, vượt bẫy và tiếp cận điểm yếu.</li>
-<li><strong>Henry và Tulas:</strong> màn nước làm lệch đường đạn hoặc tạo thấu kính giúp Henry bắn công tắc và điểm yếu ở góc khuất.</li>
+<li><strong>Mark và Tulas:</strong> màn nước làm lệch đường đạn hoặc tạo thấu kính giúp Mark bắn công tắc và điểm yếu ở góc khuất.</li>
 <li><strong>Block và Tulas:</strong> Tulas làm đặc chất lỏng quanh khiên của Block, tạo hành lang an toàn cho đội hoặc dân thường.</li>
 <li><strong>Ghost và Tulas:</strong> Ghost vượt qua máy nhận diện; Tulas giữ cửa, van hoặc vật thể từ phía bên kia để mở đường cho cả đội.</li>
 </ul>
@@ -80,7 +80,7 @@
 <li>rời khỏi nguồn gây nhiễu và tránh nhận đòn trong vài giây;</li>
 <li>đứng trong vùng an toàn do Block tạo ra;</li>
 <li>được Tulas lọc máu hoặc ổn định tuần hoàn;</li>
-<li>nhận hiệu ứng từ kỹ năng Trấn tĩnh đề xuất của Henry, sau khi kỹ năng được triển khai và gán vào hồ sơ;</li>
+<li>nhận hiệu ứng từ kỹ năng Trấn tĩnh đề xuất của Mark, sau khi kỹ năng được triển khai và gán vào hồ sơ;</li>
 <li>phá nguồn gây nhiễu như loa, máy phát, cột nghi lễ hoặc mạch liên kết;</li>
 <li>nghỉ tại trạm điều trị, nơi trú ẩn hoặc Cõi Mộng Sau Cái Chết.</li>
 </ul>
@@ -108,10 +108,10 @@
 <p><strong>Stranger là ngoại lệ của trạng thái Bùng Nhiễu.</strong> Khi Độ Nhiễu của Ghost/Stranger đạt 100%, anh không chỉ chịu một hiệu ứng nguy cấp ngắn mà có thể mất hoàn toàn điểm neo với đội và trở thành một trận trùm. Đây là phần giữ lại ý tưởng ban đầu của nhân vật: người sống sót mà đội vừa cứu cũng có thể trở thành mối nguy lớn nhất nếu sức mạnh trong anh vượt khỏi tầm kiểm soát.</p>
 <ul>
 <li>Giao diện gọi anh là <strong>Stranger</strong> trong trận này, thay vì Ghost, để thể hiện rằng Độ Nhiễu đang xóa cái tên và mối quan hệ anh đã chọn.</li>
-<li>Quyền điều khiển chuyển sang Solei. Deep, Henry, Tulas và Block trở thành đồng đội hỗ trợ theo đội hình hiện có.</li>
+<li>Quyền điều khiển chuyển sang Solei. Deep, Mark, Tulas và Block trở thành đồng đội hỗ trợ theo đội hình hiện có.</li>
 <li>Nếu Stranger đạt 100% trong một đoạn chơi đơn, trạng thái được giữ ở ngưỡng Quá tải và trận trùm bắt đầu ngay khi anh gặp lại đội. Trò chơi không tạo một trận đánh không thể hoàn thành vì thiếu đồng đội.</li>
 <li>Stranger dùng chính những kỹ năng người chơi đã mở cho anh, đồng thời lặp lại một số thói quen di chuyển và tấn công gần nhất. Luật của mảnh thần trong chương hiện tại sẽ tạo thêm biến thể cho trận đấu.</li>
-<li>Mục tiêu là <strong>khống chế và cắt nguồn Nhiễu</strong>, không giết Stranger. Solei phá các bóng lặp; người chơi chọn từng General để yêu cầu các kỹ năng đã xây dựng: Trấn tĩnh của Henry, phòng thủ của Block hoặc lọc Nhiễu của Tulas. Deep chỉ phá thế tấn công thay vì tung đòn kết liễu. Trận này cần quy tắc sát thương và mục tiêu riêng để bảo đảm khống chế được Stranger; Free, Hold hay Regroup không tự tạo hành vi không sát thương.</li>
+<li>Mục tiêu là <strong>khống chế và cắt nguồn Nhiễu</strong>, không giết Stranger. Solei phá các bóng lặp; người chơi chọn từng General để yêu cầu các kỹ năng đã xây dựng: Trấn tĩnh của Mark, phòng thủ của Block hoặc lọc Nhiễu của Tulas. Deep chỉ phá thế tấn công thay vì tung đòn kết liễu. Trận này cần quy tắc sát thương và mục tiêu riêng để bảo đảm khống chế được Stranger; Free, Hold hay Regroup không tự tạo hành vi không sát thương.</li>
 <li>Ở 80% và 90%, chân dung, lời thoại và hành vi của Stranger phải cảnh báo rõ nguy cơ biến đổi để người chơi có cơ hội xử lý trước khi trận trùm xảy ra.</li>
 </ul>
 <p>Trận trùm đầy đủ chỉ kích hoạt một lần trong mỗi lượt chơi. Sau khi được khống chế, Stranger trở lại đội với Độ Nhiễu khoảng 40% và mở một đoạn đối thoại riêng. Nếu anh lại đạt 100%, trò chơi buộc anh rời vị trí chiến đấu cho đến điểm nghỉ thay vì lặp lại toàn bộ trận trùm. Cách xử lý này giữ trọng lượng của ý tưởng mà không biến nó thành một hình phạt lặp đi lặp lại.</p>
@@ -127,7 +127,7 @@
 <ul>
 <li>Solei thoát vùng nguy hiểm nhanh nhưng bóng giả làm khó việc căn phản đòn.</li>
 <li>Deep chịu đòn tốt nhưng dễ bị Trái Tim khơi lại ký ức chiến tranh; bảo vệ đồng đội giúp anh ổn định.</li>
-<li>Henry nhận ra cấu trúc của ảo giác nhưng Cái Lưỡi có thể giả lời chỉ huy của anh trong thế giới; phản hồi lệnh thật trên HUD vẫn phải đọc được.</li>
+<li>Mark nhận ra cấu trúc của ảo giác nhưng Cái Lưỡi có thể giả lời chỉ huy của anh trong thế giới; phản hồi lệnh thật trên HUD vẫn phải đọc được.</li>
 <li>Tulas giảm Nhiễu cho người khác nhưng dễ quá tải nếu dùng máu quá nhiều.</li>
 <li>Block chặn được đòn gây Nhiễu cho đồng đội, đổi lại thể lực của khiên hao nhanh khi bản thân bị nhiễm nặng.</li>
 <li>Ghost tích Nhiễu chậm hơn, nhưng ở mức cao sẽ tạo một bóng lặp lại chính hành động cũ của anh. Nếu đạt 100%, anh có thể mất kiểm soát và trở thành trùm Stranger.</li>

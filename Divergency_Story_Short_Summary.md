@@ -8,7 +8,7 @@ Thế giới đã trải qua nhiều đợt **Đại Họa**, một căn bệnh/
 
 **Jamerson Obsworth**, một cựu sĩ quan của Marseille, mất gần như tất cả sau khi con gái **Heniana** mắc bệnh và phải ngủ đông. Ông tìm được **Con Mắt**, một mảnh của Thần Sơ Sinh, rồi tin rằng mình có thể cứu con bằng cách dùng tù nhân, người tị nạn và người bệnh làm vật liệu thí nghiệm. Jamerson không nghĩ mình là quái vật. Ông tin mọi tội ác đều có thể được biện minh nếu nó đưa Heniana trở lại.
 
-Đội của **Deep**, **Henry**, **Solei**, **Tulas** và **Block** bị kéo vào bí mật này khi Block bị Jamerson bắt. Trong Bastonne, họ cứu Block và gặp một tù nhân vô danh về sau được gọi là **Ghost/Stranger**, người có khả năng kháng lại một phần ảnh hưởng của các mảnh thần. Từ đây, câu chuyện không còn là một cuộc trốn chạy khỏi Marseille, mà thành hành trình ngăn con người biến đau khổ thành lý do để hi sinh người khác.
+Đội của **Deep**, **Mark**, **Solei**, **Tulas** và **Block** bị kéo vào bí mật này khi Block bị Jamerson bắt. Trong Bastonne, họ cứu Block và gặp một tù nhân vô danh về sau được gọi là **Ghost/Stranger**, người có khả năng kháng lại một phần ảnh hưởng của các mảnh thần. Từ đây, câu chuyện không còn là một cuộc trốn chạy khỏi Marseille, mà thành hành trình ngăn con người biến đau khổ thành lý do để hi sinh người khác.
 
 ## Mạch nhân quả chính
 
@@ -36,13 +36,13 @@ Sau Bastonne, Stranger không còn là một tù nhân bình thường. Đội g
 
 Sau khi cứu Block, cả nhóm không định lao vào phòng nghiên cứu. Họ định **cắt đuôi, giấu xe, nghỉ tạm ở Armorlite, rồi rời Marseille trước bình minh**. Nhưng Jamerson đã phản ứng nhanh hơn. Cảnh sát mật treo thưởng trong thế giới ngầm, các băng nhóm canh lối ra, và garage an toàn bị lần ra.
 
-Ở **Armorlite**, Jacques giúp Henry kiểm tra đường thoát. Nhưng băng đua xe và tay chân của thế giới ngầm tấn công quán. Sau trận, nhóm hiểu rằng đi đường mặt đất sẽ bị bắt hoặc bị bán đứng. Henry chuyển sang phương án B: **đi xuống cống ngầm**.
+Ở **Armorlite**, Jacques giúp Mark kiểm tra đường thoát. Nhưng băng đua xe và tay chân của thế giới ngầm tấn công quán. Sau trận, nhóm hiểu rằng đi đường mặt đất sẽ bị bắt hoặc bị bán đứng. Mark chuyển sang phương án B: **đi xuống cống ngầm**.
 
 Cống dưới Marseille không chỉ là đường nước thải. Nó là tầng ruột của thành phố: đường bảo trì cũ, metro bỏ dở, chợ đen và nơi người nhập cư bị đẩy xuống sống. Nhóm đi qua **Laundel**, một thành phố ngầm có luật riêng, phe phái riêng và những người vừa sợ Jamerson vừa phải sống nhờ hệ thống của ông.
 
 Từ Laundel, nhóm tìm được đường ra bến cảng. Tại đây có một khoảng lặng: mọi người nói về khả năng rời Marseille, bắt đầu lại ở phía đông, và thoát khỏi danh phận tội phạm. Nhưng chiếc thuyền hẹn trước trống rỗng. Cảnh sát mật phục kích. Boss là **Marius Vane**, cánh tay phải của Jamerson trong bộ máy mật, người xem tù nhân, người bệnh và dân nhập cư như chi phí vận hành.
 
-Sau trận, nhóm tra hỏi lính cuối cùng và biết một đồng minh của Henry đã bị đưa xuống một **tàu ngầm nghiên cứu** ngoài khơi. Thuyền của cảnh sát mật có autopilot đến đó. Từ đây, họ không còn chỉ trốn nữa: nếu bỏ đi, bằng chứng và những người bị bắt sẽ chìm xuống biển.
+Sau trận, nhóm tra hỏi lính cuối cùng và biết một đồng minh của Mark đã bị đưa xuống một **tàu ngầm nghiên cứu** ngoài khơi. Thuyền của cảnh sát mật có autopilot đến đó. Từ đây, họ không còn chỉ trốn nữa: nếu bỏ đi, bằng chứng và những người bị bắt sẽ chìm xuống biển.
 
 Trong tàu ngầm, nhóm thấy sự thật về Jamerson: tù nhân bị nối vào máy móc, cơ thể lai, mẫu tế bào mang ký hiệu Heniana, và các thí nghiệm dùng cấu trúc sinh học của Thần Sơ Sinh để tạo vật chứa mới. Boss là **SheMal**, một thất bại hoàn hảo: không còn là người bình thường, nhưng cũng không phải quái vật vô tri.
 
@@ -68,13 +68,13 @@ Heni quyết định đi cùng nhóm. Cô không muốn bị Jamerson lấy lạ
 
 Ban đầu, giáo hội dùng Cái Lưỡi để an ủi người mất thân. Nhưng an ủi dần thành dịch vụ, dịch vụ thành quyền lực, quyền lực thành nhà tù. Người giàu mua lời tha thứ. Người nghèo bán xương, bán tên, bán cả nỗi đau để được nghe một câu cuối cùng.
 
-Stage này nên là nơi đào sâu nhất vào **Deep** và **Henry**. Cái Lưỡi không chỉ giả giọng người chết; nó nói thẳng vào tim gan ruột của người nghe. Nó nhắc Deep về những cuộc chiến xưa, những đồng đội đã chết, những bức tượng anh hùng xây bằng xác người, và câu hỏi liệu đời anh còn ý nghĩa gì nếu anh không còn làm biểu tượng. Với Henry, nó moi lại các quyết định bẩn, những người anh không cứu được, sự mệt mỏi vì cứ phải làm người tỉnh táo sau mỗi thảm họa, và nỗi sợ rằng anh chỉ đang tiếp tục chiến đấu vì không biết sống kiểu khác.
+Stage này nên là nơi đào sâu nhất vào **Deep** và **Mark**. Cái Lưỡi không chỉ giả giọng người chết; nó nói thẳng vào tim gan ruột của người nghe. Nó nhắc Deep về những cuộc chiến xưa, những đồng đội đã chết, những bức tượng anh hùng xây bằng xác người, và câu hỏi liệu đời anh còn ý nghĩa gì nếu anh không còn làm biểu tượng. Với Mark, nó moi lại các quyết định bẩn, những người anh không cứu được, sự mệt mỏi vì cứ phải làm người tỉnh táo sau mỗi thảm họa, và nỗi sợ rằng anh chỉ đang tiếp tục chiến đấu vì không biết sống kiểu khác.
 
-Calvaria vì vậy không chỉ là stage về cái chết, mà là stage về **sự kiệt sức sau chiến tranh**. Deep phải đối diện việc sức mạnh của mình từng bị người khác dùng để hợp thức hóa bạo lực. Henry phải đối diện việc lòng trách nhiệm có thể trở thành một dạng tự trừng phạt. Cái Lưỡi thắng nếu nó khiến họ tin rằng người chết có quyền ra lệnh cho người sống tiếp tục đổ máu.
+Calvaria vì vậy không chỉ là stage về cái chết, mà là stage về **sự kiệt sức sau chiến tranh**. Deep phải đối diện việc sức mạnh của mình từng bị người khác dùng để hợp thức hóa bạo lực. Mark phải đối diện việc lòng trách nhiệm có thể trở thành một dạng tự trừng phạt. Cái Lưỡi thắng nếu nó khiến họ tin rằng người chết có quyền ra lệnh cho người sống tiếp tục đổ máu.
 
 Jamerson đến trước nhóm và bắt Cái Lưỡi nói bằng giọng Heniana. Khi giọng ấy hỏi liệu Heniana tỉnh dậy có còn nhận ra cha không, Jamerson vượt qua ranh giới cuối cùng: ông không còn chỉ muốn cứu con gái, mà muốn sở hữu một phiên bản không thể từ chối mình.
 
-Boss Stage 3 là **Dàn Hợp Xướng**, một cơ thể xương khổng lồ ghép từ giọng nói, hài cốt và lời cầu nguyện. Nó thử từng nhân vật bằng giọng người chết: Henry bị kéo về tội lỗi cũ, Deep bị gọi lại làm biểu tượng chiến tranh, Solei bị ép chọn một căn tính duy nhất, Heni bị buộc biến mất để trả chỗ cho Heniana, và Ghost bị gọi bằng một cái tên cũ chưa chắc còn thuộc về anh.
+Boss Stage 3 là **Dàn Hợp Xướng**, một cơ thể xương khổng lồ ghép từ giọng nói, hài cốt và lời cầu nguyện. Nó thử từng nhân vật bằng giọng người chết: Mark bị kéo về tội lỗi cũ, Deep bị gọi lại làm biểu tượng chiến tranh, Solei bị ép chọn một căn tính duy nhất, Heni bị buộc biến mất để trả chỗ cho Heniana, và Ghost bị gọi bằng một cái tên cũ chưa chắc còn thuộc về anh.
 
 Với Ghost, Stage 3 chỉ nên mở thêm một khe hở, chưa giải thích hết. Cái Lưỡi có thể gọi một tên cũ, nhắc đến một phòng trắng, một mã hồ sơ bị xóa, hoặc một câu nói mà Ghost chưa từng kể với ai. Người chơi hiểu rằng Ghost có quá khứ thật, nhưng chưa biết đó là quá khứ của nạn nhân, vật thí nghiệm, hay một thứ gì phức tạp hơn.
 
@@ -98,7 +98,7 @@ Deep vẫn nhận ra truyền thuyết anh hùng Aramut đã bị cắt sửa đ
 
 **Trái Tim** của Thần Sơ Sinh bị gắn vào một cỗ máy chiến tranh: **Titan Trái Tim**. Nó không phải pin năng lượng. Nó khuếch đại cảm xúc: thù hận thành bạo động, sợ hãi thành diệt trừ, tình yêu của Jamerson thành quyền sở hữu.
 
-Jamerson đến đúng lúc hai phe giao chiến. Ông dùng dữ liệu từ Con Mắt, Cái Tai và Cái Lưỡi để làm Trái Tim đập theo nhịp Heniana. Trận Titan nên buộc đội chia việc rõ: Tulas cứu người và kiểm soát máu độc giữa chiến trường, Block giữ tuyến rút lui và bảo vệ dân thường, Deep phá hủy loa tuyên truyền, Henry ra lệnh không truy sát người đầu hàng, Solei cứu trẻ bị hai phe đánh dấu.
+Jamerson đến đúng lúc hai phe giao chiến. Ông dùng dữ liệu từ Con Mắt, Cái Tai và Cái Lưỡi để làm Trái Tim đập theo nhịp Heniana. Trận Titan nên buộc đội chia việc rõ: Tulas cứu người và kiểm soát máu độc giữa chiến trường, Block giữ tuyến rút lui và bảo vệ dân thường, Deep phá hủy loa tuyên truyền, Mark ra lệnh không truy sát người đầu hàng, Solei cứu trẻ bị hai phe đánh dấu.
 
 Sau trận Titan, Jamerson lấy được Trái Tim và bỏ lại hàng trăm người đang chết để tiếp tục đưa Heniana vào vùng cấm. Cú đánh này khiến Tulas và Block nhìn thấy mặt trái của "cứu một người bằng mọi giá": một người dùng cơ thể kẻ khác làm nguyên liệu, người còn lại dùng sức mạnh của mình để giữ những cơ thể ấy còn sống.
 
@@ -122,7 +122,7 @@ Trong trận cuối, Jamerson trở thành vật chứa của các mảnh thần
 
 Ghost cắt liên kết giữa các mảnh thần và cơ thể Jamerson. Nhóm không chọn phá hủy các mảnh, cũng không hồi sinh Thần Sơ Sinh. Canon chọn cách thứ ba: **trả các mảnh về qua Dây Rốn**, tức là không sở hữu, không giết lại, không biến thần thành công cụ, mà tháo nút lời gọi đã bị con người bóp méo quá lâu.
 
-Đoạn cuối là một nghi lễ ngược. Ghost cắt Con Mắt vì anh là lỗi sai hệ thống không đọc được. Solei gọi Heni bằng tên riêng, không phải bản sao. Henry ra lệnh cuối cùng: không ai được chết để trả phí cho phép màu. Deep giữ đường rút thay vì đứng làm biểu tượng chiến thắng. Tulas dùng máu để cứu người, không mở khóa nghi lễ. Block giữ cổng cho người sống rời đi. Heni và Heniana cùng chạm vào mạch sáng, nhưng không ai thay thế ai.
+Đoạn cuối là một nghi lễ ngược. Ghost cắt Con Mắt vì anh là lỗi sai hệ thống không đọc được. Solei gọi Heni bằng tên riêng, không phải bản sao. Mark ra lệnh cuối cùng: không ai được chết để trả phí cho phép màu. Deep giữ đường rút thay vì đứng làm biểu tượng chiến thắng. Tulas dùng máu để cứu người, không mở khóa nghi lễ. Block giữ cổng cho người sống rời đi. Heni và Heniana cùng chạm vào mạch sáng, nhưng không ai thay thế ai.
 
 Các mảnh thần tan ra, The Cradle ngừng mơ. Jamerson dùng phần sức cuối giữ Con Mắt không bám vào Heniana. Đó là hành động đúng đầu tiên của ông sau rất nhiều tội ác, nhưng không xóa những gì ông đã làm. Không ai trong nhóm gọi ông là anh hùng. Ông chết như một người cha thất bại, cuối cùng đã dừng ra lệnh.
 
@@ -134,7 +134,7 @@ Sakuri trở thành cảnh báo về việc biến trẻ em thành thánh nhân.
 
 Heniana còn sống hay không được để mở theo hướng bittersweet: cô có thể thở một mình trong thời gian ngắn, được Heni nắm tay, và được nghe lần đầu không phải tiếng máy móc. Heni không thay thế Heniana. Heni sống tiếp như một con người riêng, mang khuôn mặt giống Heniana nhưng không còn bị định nghĩa bởi khuôn mặt đó.
 
-Ghost rời The Cradle cùng đồng đội. Khi Henry hỏi anh có muốn tìm lại tên cũ không, Ghost đáp rằng nếu ngày nào đó cần, anh sẽ tìm. Hôm nay, anh đã có người gọi.
+Ghost rời The Cradle cùng đồng đội. Khi Mark hỏi anh có muốn tìm lại tên cũ không, Ghost đáp rằng nếu ngày nào đó cần, anh sẽ tìm. Hôm nay, anh đã có người gọi.
 
 ## Chủ đề kết lại
 
@@ -152,7 +152,7 @@ Dưới đây là bảng tra cứu chi tiết tên gọi của các nhân vật,
 | :--- | :--- | :--- |
 | **Deep** | "Sâu thẳm" / "Trầm lặng" | Phản ánh nội tâm sâu sắc, sự chịu đựng và quá khứ đầy vết thương chiến tranh. Anh muốn chôn vùi danh vọng anh hùng cũ để sống một cuộc đời bình dị, bảo vệ Solei. |
 | **Solei** | Gốc từ *"Soleil"* (tiếng Pháp nghĩa là Mặt Trời) | Tượng trưng cho ánh sáng mặt trời rực rỡ, nhiệt huyết tuổi trẻ và hy vọng ấm áp chiếu rọi vào cuộc đời u tối của Deep. Cô tìm kiếm căn tính độc lập của mình. |
-| **Henry** | Gốc Đức cổ (*Heimeric* - "Người bảo hộ gia quyến") | Thể hiện vai trò là người dẫn dắt, lập kế hoạch, giữ sự tỉnh táo và gánh vác trách nhiệm bảo vệ sự an toàn cho cả nhóm. |
+| **Mark** | Gốc Đức cổ (*Heimeric* - "Người bảo hộ gia quyến") | Thể hiện vai trò là người dẫn dắt, lập kế hoạch, giữ sự tỉnh táo và gánh vác trách nhiệm bảo vệ sự an toàn cho cả nhóm. |
 | **Tulas** | Gốc từ *"Tulasi"* (cây Hương Nhu / Thánh Thảo chữa lành) | Đại diện cho sự thanh lọc và cứu chữa. Năng lực điều khiển chất lỏng/máu của anh vừa hữu ích vừa đáng sợ, đặt ra câu hỏi về ranh giới giữa cứu người và cấm thuật. |
 | **Block** | "Khối chắn" / "Tấm khiên" | Đúng như tên gọi, anh là người cản hậu kiên cường, tấm khiên bảo vệ đồng đội bằng cơ thể vững chãi, tượng trưng cho lòng tin vững chắc trong đội. |
 | **Ghost / Sarrasin** | *Ghost*: Bóng ma vô hình<br>*Sarrasin*: Kiên cường như lúa mạch đen | **Ghost** là biệt danh do đội đặt vì hệ thống không nhận diện được anh. Tên thật của anh là **Sarrasin** (loại lúa mạch đen hoang dã, có thể sinh trưởng kiên cường ở những vùng đất sỏi đá khắc nghiệt nhất) – tượng trưng cho việc anh là "lỗi sai hệ thống" sống sót qua các thí nghiệm tàn bạo nhất của Jamerson. |

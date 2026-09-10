@@ -57,9 +57,9 @@ Khi bước vào hành trình của câu chuyện, Solei dần trưởng thành 
 
 Qua hành trình, Solei không tìm thấy một "quê hương đúng nghĩa" để gắn mình vào. Cô tìm thấy một điều khác: mình có thể đứng giữa nhiều nền văn hóa mà không cần xin phép ai để được tồn tại.
 
-### Henry
+### Mark
 
-Trước Marseille rất lâu, Henry, Deep và vài đồng đội từng được gọi là anh hùng ở một vùng đất xa. Họ đã cứu nơi đó khỏi một thế lực hắc ám, và cuộc chiến ấy thật sự kết thúc bằng chiến thắng. Nhưng chiến thắng không trả lại người đã chết, không xóa được những quyết định bẩn, và không cho Henry cảm giác mình có quyền nghỉ ngơi. Vì vậy khi Deep cố sống bình thường ở Marseille, Henry chọn con đường ẩn danh hơn: đi trong các mạng lưới tin tức, bảo vệ những ai tình cờ rơi vào tầm tay mình, và cố giữ phần "anh hùng" còn lại không biến thành quyền lực.
+Trước Marseille rất lâu, Mark, Deep và vài đồng đội từng được gọi là anh hùng ở một vùng đất xa. Họ đã cứu nơi đó khỏi một thế lực hắc ám, và cuộc chiến ấy thật sự kết thúc bằng chiến thắng. Nhưng chiến thắng không trả lại người đã chết, không xóa được những quyết định bẩn, và không cho Mark cảm giác mình có quyền nghỉ ngơi. Vì vậy khi Deep cố sống bình thường ở Marseille, Mark chọn con đường ẩn danh hơn: đi trong các mạng lưới tin tức, bảo vệ những ai tình cờ rơi vào tầm tay mình, và cố giữ phần "anh hùng" còn lại không biến thành quyền lực.
 
 
 ### Tulas
@@ -147,7 +147,7 @@ Cutscene beat: Team Deep leaves the base by jet ski, crosses the dark harbor, an
 
 ![Bastonne](<imgs/Stage1/Bastonne.png>)
 
-Henry, Deep, Solei và một nhóm nhỏ đột nhập Bastonne. Tulas có thể đi cùng để hỗ trợ, hoặc ở ngoài giữ tuyến rút lui, tùy quy mô đội hình mà thiết kế chọn. Trước đó, Henry chỉ mua được thông tin về **dãy giam đặc biệt** của Block, không mua được số phòng. Block biết điều này: nếu đêm giải cứu xảy ra và lính gác ngoài cửa gục xuống vì khí mê, anh phải gây tiếng động lớn để đội tìm đúng phòng.
+Mark, Deep, Solei và một nhóm nhỏ đột nhập Bastonne. Tulas có thể đi cùng để hỗ trợ, hoặc ở ngoài giữ tuyến rút lui, tùy quy mô đội hình mà thiết kế chọn. Trước đó, Mark chỉ mua được thông tin về **dãy giam đặc biệt** của Block, không mua được số phòng. Block biết điều này: nếu đêm giải cứu xảy ra và lính gác ngoài cửa gục xuống vì khí mê, anh phải gây tiếng động lớn để đội tìm đúng phòng.
 
 ![Dãy giam đặc biệt Bastonne](<imgs/Stage1/Special_Jail.png>)
 
@@ -175,7 +175,7 @@ Trong phòng có vài vật thể nhỏ để tương tác: đèn treo thấp, h
 
 Loa thông báo đọc mã số tù nhân, cửa sắt tự động khóa lại, khí trắng tràn vào hành lang. Nhưng Stranger vẫn thở được. Anh không nhớ tên mình, chỉ nhớ những đoạn ánh sáng trắng, mùi sắt, và một giọng nói hỏi: "Nếu không ai gọi tên ngươi, ngươi có còn là người không?"
 
-Tiếng động kéo Henry đến phá khóa. Cánh cửa mở ra, nhưng người đứng trước mặt ông không phải Block mà là một tù nhân lạ vẫn còn tỉnh. Hành lang vang lên tiếng giày dồn dập. Henry vội hỏi Stranger có biết ai tên Block không. Stranger có thể chỉ về phòng bên cạnh, hoặc im lặng chạy theo đội.
+Tiếng động kéo Mark đến phá khóa. Cánh cửa mở ra, nhưng người đứng trước mặt ông không phải Block mà là một tù nhân lạ vẫn còn tỉnh. Hành lang vang lên tiếng giày dồn dập. Mark vội hỏi Stranger có biết ai tên Block không. Stranger có thể chỉ về phòng bên cạnh, hoặc im lặng chạy theo đội.
 
 Trong lúc tìm đường thoát, Stranger có thể nhìn thấy Block bị kẹt sau một cửa thủy lực hoặc trong một buồng đang bị bơm khí. Lựa chọn lúc này rất đơn giản nhưng nặng tay: giúp Block trong cơn hỗn loạn, hay để đội tự tìm anh trong lúc bị bao vây.
 
@@ -184,9 +184,9 @@ Trong lúc tìm đường thoát, Stranger có thể nhìn thấy Block bị k�
 
 Nếu Stranger giúp Block, anh mở khóa cố định, làm chậm khí, hoặc phá một chốt cửa đủ để Block sống sót lâu hơn. Khi Solei và đội tới nơi, Block vẫn cần được kéo ra, nhưng thương tích nhẹ hơn. Block nhớ rằng Stranger đã không bỏ mặc mình.
 
-Nếu Stranger không giúp Block, Solei và đội vẫn cứu được Block, nhưng phải đánh thêm một trận trong khu khí mê. Block bị thương nặng hơn, Stage 1 có thể bắt đầu với máu tối đa thấp hơn hoặc một bất lợi tạm thời. Henry và Solei cũng có lý do nghi Stranger hơn.
+Nếu Stranger không giúp Block, Solei và đội vẫn cứu được Block, nhưng phải đánh thêm một trận trong khu khí mê. Block bị thương nặng hơn, Stage 1 có thể bắt đầu với máu tối đa thấp hơn hoặc một bất lợi tạm thời. Mark và Solei cũng có lý do nghi Stranger hơn.
 
-Stranger gặp đội Deep trong lúc cả hai bên đều tìm lối thoát. Henry để ý Stranger không bị thuốc mê ảnh hưởng, không bị máy đo sinh học nhận diện như tù nhân thông thường, và có phản xạ kỳ lạ trước các thiết bị của Jamerson. Henry không tin Stranger, nhưng anh cần Stranger.
+Stranger gặp đội Deep trong lúc cả hai bên đều tìm lối thoát. Mark để ý Stranger không bị thuốc mê ảnh hưởng, không bị máy đo sinh học nhận diện như tù nhân thông thường, và có phản xạ kỳ lạ trước các thiết bị của Jamerson. Mark không tin Stranger, nhưng anh cần Stranger.
 
 Cả nhóm đụng đơn vị khóa khẩn cấp của Bastonne: khiên lớn, súng điện, drone khóa mục tiêu và một quản ngục trung thành với nhà Obsworth. Sau khi chiến thắng, cả nhóm thoát khỏi Bastonne, nhưng Jamerson đã biết có một người sống sót ngoài dữ liệu. Con Mắt trong cánh tay ông mở ra và thì thầm: "Kẻ không có tên có thể đi qua những cánh cửa mà người có tên không đi được."
 
@@ -197,9 +197,9 @@ Stage 1 dùng một số trạng thái nhỏ để nối truyện với gameplay
 ### 1-1. Quán bar Armorlite
 ![Armorlite bar concept](<imgs/Stage1/bar.png>)
 
-Sau Bastonne, cả nhóm cắt đuôi xe truy đuổi bằng cách giấu xe trong một gara đã chuẩn bị trước ở rìa khu công nghiệp cũ (hoặc quay về cơ sở nhỏ của đội Deep lúc đầu). Nơi này nằm trên tuyến đường phụ nối các kho hàng cảng với những khu phố hẹp kiểu Noailles/Capucins: đủ gần trung tâm để có người qua lại, đủ tối để biến mất nếu biết đúng cửa sau. Henry kiểm tra radio, Deep nhìn lại vết thương của Block, và Solei cố hiểu vì sao họ phải giữ Ghost ở lại dù chưa thể tin anh hoàn toàn.
+Sau Bastonne, cả nhóm cắt đuôi xe truy đuổi bằng cách giấu xe trong một gara đã chuẩn bị trước ở rìa khu công nghiệp cũ (hoặc quay về cơ sở nhỏ của đội Deep lúc đầu). Nơi này nằm trên tuyến đường phụ nối các kho hàng cảng với những khu phố hẹp kiểu Noailles/Capucins: đủ gần trung tâm để có người qua lại, đủ tối để biến mất nếu biết đúng cửa sau. Mark kiểm tra radio, Deep nhìn lại vết thương của Block, và Solei cố hiểu vì sao họ phải giữ Ghost ở lại dù chưa thể tin anh hoàn toàn.
 
-Từ gara, Henry dẫn cả nhóm đi bộ qua lối sau đến **Armorlite** để tìm hiểu thông tin. Armorlite là một quán rượu nhỏ trong mạng lưới các điểm nghỉ của thế giới ngầm: đèn tím thấp, nhạc jazz cũ, quầy gỗ hẹp, một bộ sofa sát tường cho người bị thương, và **Jacques**, bartender đứng tuổi có đôi mắt xanh gần như phát sáng trong bóng tối. Jacques ít nói nhưng nhớ mọi tuyến cống, bến cảng, cửa kiểm soát và tên người gác nào đã bị Jamerson mua. Vì vậy Henry tin ông hơn nhiều người có quân hàm.
+Từ gara, Mark dẫn cả nhóm đi bộ qua lối sau đến **Armorlite** để tìm hiểu thông tin. Armorlite là một quán rượu nhỏ trong mạng lưới các điểm nghỉ của thế giới ngầm: đèn tím thấp, nhạc jazz cũ, quầy gỗ hẹp, một bộ sofa sát tường cho người bị thương, và **Jacques**, bartender đứng tuổi có đôi mắt xanh gần như phát sáng trong bóng tối. Jacques ít nói nhưng nhớ mọi tuyến cống, bến cảng, cửa kiểm soát và tên người gác nào đã bị Jamerson mua. Vì vậy Mark tin ông hơn nhiều người có quân hàm.
 
 Tại đây, nhóm bàn kế hoạch ra bến cảng: nghỉ chưa đến hai giờ, dùng xe đổi biển số ở gara B, men theo tuyến kho hàng xuống cảng, rồi lên phà trước bình minh để rời Marseille. Block bị thương nên nếu được chơi, máu tối đa của anh chỉ còn 75% khi `BlockInjuryState` chưa ổn định. Jacques đưa Stimpack và cảnh báo rằng tất cả trạm kiểm soát đang tìm "một tù nhân không ngủ".
 
@@ -214,7 +214,7 @@ Trận chiến bắt đầu khi tay chân của chúng đập cửa, dọa Jacqu
 
 Boss là thủ lĩnh băng đua xe, cưỡi một chiếc xe máy lớn. Pha đầu dùng những cú lao ngang, quay xe, vạch lửa và hai đàn em chở người cầm vũ khí sau lưng. Khi bị đánh ngã, hắn chỉ nằm mở một cửa sổ sát thương ngắn rồi lại leo lên xe. Dưới 50% máu, hắn rút thanh kiếm gia truyền của băng, không còn dễ bị hất khỏi xe, gọi đàn em chạy cắt màn hình, và tạo đường lửa bằng mũi kiếm kéo trên mặt đường. Khi phải đi bộ, hắn dùng chém dọc, chém ngang, chém hất để chống lặp đòn nhảy đánh, rồi lao nhanh áp sát.
 
-Cuối màn, cả nhóm phát hiện gara an toàn đã bị lộ. Henry chuyển sang phương án B: đi xuống cống ngầm.
+Cuối màn, cả nhóm phát hiện gara an toàn đã bị lộ. Mark chuyển sang phương án B: đi xuống cống ngầm.
 
 ### 1-2. Đường cống và chợ ngầm Laundel
 ![Sewer](<imgs/Stage1/chap1/Sewer1.png>)
@@ -235,7 +235,7 @@ Nếu người chơi giữ quan hệ tốt và nói chuyện đủ, Áo Ghi kể
 
 Ở tầng 0 của Laundel, quán bar giải trí biến thành đấu trường. Boss phụ thuộc vào quan hệ với các phe. Nếu giữ lời hứa với Xanh Dương, cả nhóm đánh thủ lĩnh Áo Đen. Nếu phản bội họ, người nhập cư sợ hãi chính quyền sẽ dẫn nhóm vào bẫy, và GROGER có thể trở thành hình phạt.
 
-Kết thúc màn, phe còn tin nhóm chỉ cho họ một đường hầm ra bến cảng. Henry nhận ra một điều đáng lo: Jamerson không chỉ có cảnh sát. Ông có mắt ở cả chợ đen, cống ngầm, và những nơi thành phố giả vờ không nhìn thấy.
+Kết thúc màn, phe còn tin nhóm chỉ cho họ một đường hầm ra bến cảng. Mark nhận ra một điều đáng lo: Jamerson không chỉ có cảnh sát. Ông có mắt ở cả chợ đen, cống ngầm, và những nơi thành phố giả vờ không nhìn thấy.
 
 ### 1-3. Đường cống chính và hoàng hôn bến cảng
 
@@ -243,19 +243,19 @@ Cống chính dẫn ra biển rộng hơn, nước sâu hơn, và quái vật nh
 
 Một số con đầu đàn có thể tăng sức cho đàn nhỏ; khi bị hạ, đàn nhỏ bị chậm và dễ choáng. Những phòng ẩn cho thấy Marseille đã từng có những đợt sơ tán thất bại: vali mốc meo, giấy tờ nhập thành, đồ chơi trẻ em, bản đồ cũ ghi những lối đi đã bị bít kín, và vài căn phòng trú chân của người từng cố vào Laundel mà không bao giờ đến nơi. Ở một số phòng, tàn dư Áo Đen hoặc người tuyệt vọng có thể phục kích nhóm; phần còn lại là quái cống và các dấu vết GROGER.
 
-Sau khi ra khỏi cống, người chơi có một đoạn đi bộ khoảng 30 giây không giao chiến. Hoàng hôn trải dài trên bến cảng. Nhạc nhẹ hơn. Cả nhóm nói về việc nếu thoát được Marseille, họ có thể đến phía đông lánh nạn, sống một thời gian không bị gọi là tội phạm. Solei đùa nửa câu, Deep nói rằng tự do không phải một nơi trên bản đồ, Henry im lặng lâu hơn bình thường, còn Ghost chỉ nhìn mặt trời.
+Sau khi ra khỏi cống, người chơi có một đoạn đi bộ khoảng 30 giây không giao chiến. Hoàng hôn trải dài trên bến cảng. Nhạc nhẹ hơn. Cả nhóm nói về việc nếu thoát được Marseille, họ có thể đến phía đông lánh nạn, sống một thời gian không bị gọi là tội phạm. Solei đùa nửa câu, Deep nói rằng tự do không phải một nơi trên bản đồ, Mark im lặng lâu hơn bình thường, còn Ghost chỉ nhìn mặt trời.
 
 ![Harbor_Sunset_Battle_Map](<imgs/Stage1/chap1/Harbor_Sunset_Battle_Map.png>)
 
-Tại điểm hẹn, chiếc thuyền trống rỗng. Khi cả nhóm đi đến giữa màn, cảnh sát mật phục kích. Bến cảng mở rộng thành một chiến trường nhiều điểm: cầu nâng, container, bảng điều khiển thuyền, lính bắn tỉa trên cao, và quái cống còn đuổi theo từ phía sau. Đây là nơi COMMAND bắt đầu có cảm giác gần một trận chiến thuật thời gian thực thu nhỏ: Block giữ tuyến cầu, Deep phá khóa container hoặc giáp máy, Henry đánh dấu lính bắn tỉa/thủ lĩnh đàn, Solei chạy cắt mục tiêu yếu, hoặc nhảy xuống nước phá vòng vây đằng sau. Người chơi vẫn đánh trực tiếp, nhưng phải chia việc để không bị bao vây.
+Tại điểm hẹn, chiếc thuyền trống rỗng. Khi cả nhóm đi đến giữa màn, cảnh sát mật phục kích. Bến cảng mở rộng thành một chiến trường nhiều điểm: cầu nâng, container, bảng điều khiển thuyền, lính bắn tỉa trên cao, và quái cống còn đuổi theo từ phía sau. Đây là nơi COMMAND bắt đầu có cảm giác gần một trận chiến thuật thời gian thực thu nhỏ: Block giữ tuyến cầu, Deep phá khóa container hoặc giáp máy, Mark đánh dấu lính bắn tỉa/thủ lĩnh đàn, Solei chạy cắt mục tiêu yếu, hoặc nhảy xuống nước phá vòng vây đằng sau. Người chơi vẫn đánh trực tiếp, nhưng phải chia việc để không bị bao vây.
 
 Có lính bắn tỉa với tia ngắm laser, buộc người chơi di chuyển liên tục và không đứng yên dồn combo quá lâu. Lính cận chiến dùng dao và súng ngắn; mỗi lần chuyển sang bắn đều có tín hiệu hình ảnh và âm thanh trước khi rút súng. `Heat` càng cao từ Armorlite/Laundel thì viện binh ở bến cảng càng đến sớm.
 
 Boss là **Marius Vane**, cánh tay phải của Jamerson trong bộ máy mật. Marius không tin vào Thần Sơ Sinh, cũng không yêu mến Jamerson. Gã chỉ phục vụ vì Marseille cần những kẻ như Jamerson để giữ thành phố không vỡ tung. Với Marius, người nhập cư, tù nhân, và những kẻ bị bệnh đều là chi phí vận hành.
 
-Sau trận chiến, nhóm tra hỏi tên lính cuối cùng. Họ biết một đồng minh của Henry đã bị bắt đưa xuống cơ sở bí mật ngoài khơi: một tàu ngầm nghiên cứu. Chiếc thuyền của cảnh sát mật có chế độ tự lái đến đó. Kế hoạch trốn khỏi Marseille bị thay bằng một quyết định khác: nếu bỏ đi bây giờ, những bằng chứng và người bị bắt sẽ chìm xuống biển.
+Sau trận chiến, nhóm tra hỏi tên lính cuối cùng. Họ biết một đồng minh của Mark đã bị bắt đưa xuống cơ sở bí mật ngoài khơi: một tàu ngầm nghiên cứu. Chiếc thuyền của cảnh sát mật có chế độ tự lái đến đó. Kế hoạch trốn khỏi Marseille bị thay bằng một quyết định khác: nếu bỏ đi bây giờ, những bằng chứng và người bị bắt sẽ chìm xuống biển.
 
-Henry chọn quay lại vào bóng tối.
+Mark chọn quay lại vào bóng tối.
 
 ### 1-4. Tàu ngầm nghiên cứu và SheMal
 
@@ -290,7 +290,7 @@ Cả nhóm thấy bóng Jamerson sau lớp kính trước khi vụ nổ nuốt p
 
 Nhưng Con Mắt đã cảnh báo Jamerson sớm hơn vài giây. Thứ bị thiêu trong phòng là một thân xác thế mạng được nuôi từ mô thí nghiệm. Jamerson thật sự thoát bằng ống phóng khẩn cấp, mang theo máu SheMal và bản đồ đến Sakuri. Khi biển bốc cháy phía sau, ông ôm hộp dữ liệu vào ngực và thì thầm với Con Mắt: "Nếu Con Mắt không đủ, ta sẽ tìm Cái Tai."
 
-Kết thúc Stage 1, nhóm tìm thấy ảnh chân dung Heniana, hồ sơ ngủ đông, và bằng chứng rằng có một đứa trẻ vô tội đang nằm giữa mọi tội ác của Jamerson. Deep muốn truy đuổi Jamerson. Henry muốn đưa bằng chứng ra ngoài. Solei nói nếu Heniana còn sống, cô bé không đáng bị bỏ lại trong tay cha mình.
+Kết thúc Stage 1, nhóm tìm thấy ảnh chân dung Heniana, hồ sơ ngủ đông, và bằng chứng rằng có một đứa trẻ vô tội đang nằm giữa mọi tội ác của Jamerson. Deep muốn truy đuổi Jamerson. Mark muốn đưa bằng chứng ra ngoài. Solei nói nếu Heniana còn sống, cô bé không đáng bị bỏ lại trong tay cha mình.
 
 Họ lên đường về phía đông.
 
@@ -323,7 +323,7 @@ Sau trận, Sakura có thể nói chuyện với Solei thay vì gục xuống nh
 ### 2-1. Làng chài và bé gái bán hàng rong
 ![J_1_sakuri](<imgs/Stage2/J_1_sakuri.png>)
 
-Trong làng, nhóm gặp một bé gái bán thuốc, bán cá khô, và những vật nhỏ cho người đi đường. Mặt cô bé giống Heniana đến mức Ghost nhận ra trước cả khi Henry lấy ảnh đối chiếu.
+Trong làng, nhóm gặp một bé gái bán thuốc, bán cá khô, và những vật nhỏ cho người đi đường. Mặt cô bé giống Heniana đến mức Ghost nhận ra trước cả khi Mark lấy ảnh đối chiếu.
 
 Người dân gọi cô bé là **Heni**. Cha cô, một người đàn ông hiền lành, thật ra là điệp viên của Jamerson. Ông ghi chép sức khỏe của Heni mỗi ngày, gửi mẫu máu qua các thương nhân, và cho cô sống giữa bệnh dịch để xem cơ thể nhân bản chịu đựng được đến đâu.
 
@@ -426,13 +426,13 @@ Trận chiến với boss Sakuri diễn ra theo ba trục chính:
 - **Trạng thái cuồng loạn (Frenzy Phase)**: Cơn khát máu bộc phát khiến Sakuri tháo dải băng bịt mắt, lao vào tấn công áp sát chớp nhoáng bằng móng vuốt sắc nhọn, dây kim loại mảnh và những nhịp tấn công tàn bạo mang phong cách của một "ma cà rồng". Đây là lúc sát thương của cô cực kỳ lớn nhưng bù lại cô cũng dễ bị sơ hở nhất.
 - **Dư âm lời thề Ryozan**: Đây là cơ chế giải quyết cuộc chiến giàu cảm xúc. Nếu ở cây cầu đá, người chơi đã chọn phá yểm để giải phóng cho tướng quân Ryozan, ký ức thiêng liêng giữa ông và cô bé Sakuri ngày xưa sẽ hiện về dưới dạng một khúc ca thanh bình. Giai điệu yên ả này sẽ làm dịu đi những tiếng thì thầm điên loạn trong đầu Sakuri, khiến cô dao động và mở ra cơ hội để người chơi nói chuyện, làm gián đoạn nhịp tấn công hoặc vô hiệu hóa các ảo ảnh của cô. Ngược lại, nếu Ryozan bị tiêu diệt trước đó, bộ giáp đỏ của ông chỉ còn là một cỗ máy chiến đấu rỗng tuếch bị Cái Tai điều khiển để tấn công phụ trợ cho Sakuri một cách lạnh lùng.
 
-Trong trận, Sakuri phơi bày nỗi sợ của từng người. Henry sợ mình sẽ lặp lại tội ác của những kẻ anh từng chống. Deep sợ mình chỉ là vũ khí cũ được đặt tên "anh hùng". Solei sợ không nơi nào chấp nhận mình. Ghost gần như không có tiếng nói nội tâm để Sakuri nghe, chỉ có một khoảng trống làm cô sợ hãi.
+Trong trận, Sakuri phơi bày nỗi sợ của từng người. Mark sợ mình sẽ lặp lại tội ác của những kẻ anh từng chống. Deep sợ mình chỉ là vũ khí cũ được đặt tên "anh hùng". Solei sợ không nơi nào chấp nhận mình. Ghost gần như không có tiếng nói nội tâm để Sakuri nghe, chỉ có một khoảng trống làm cô sợ hãi.
 
 Khi bị đánh bại, Sakuri không xin tha, không phải vì kiêu ngạo mà vì cô không còn biết phải xin ai. Cô cười vì lần đầu tiên quanh mình im lặng. Trước khi chết hoặc rơi vào trạng thái vô thức, cô nói: "Mắt đã thấy. Tai đã nghe. Lưỡi sẽ nói điều các ngươi không muốn tin."
 
 Jamerson xuất hiện qua một kênh ngầm đã chuẩn bị trước, cướp dữ liệu từ Cái Tai và mang Heniana rời khỏi đền. Ông không cần cướp trọn Cái Tai nữa; Con Mắt đã học đủ từ nó để lần theo mảnh tiếp theo. Trước khi biến mất, dư âm của Cái Tai còn để lại một chuỗi âm thanh rất lạ: tiếng chuông tang, tiếng mũi khắc cào tên lên xương, và một giọng nói không thuộc về người sống.
 
-Henry ghép những manh mối đó với tuyến vận chuyển xác người ở biên giới phía tây và nhận ra Jamerson đang hướng đến **Calvaria**, thành phố mộ. Kết thúc Stage 2, Heni quyết định đi cùng nhóm. Cô không muốn bị Jamerson lấy lại, cũng không muốn tiếp tục sống như mẫu thử nghiệm. Solei là người đầu tiên gọi cô là "em" mà không thêm bất cứ điều kiện nào.
+Mark ghép những manh mối đó với tuyến vận chuyển xác người ở biên giới phía tây và nhận ra Jamerson đang hướng đến **Calvaria**, thành phố mộ. Kết thúc Stage 2, Heni quyết định đi cùng nhóm. Cô không muốn bị Jamerson lấy lại, cũng không muốn tiếp tục sống như mẫu thử nghiệm. Solei là người đầu tiên gọi cô là "em" mà không thêm bất cứ điều kiện nào.
 
 ## Stage 3 - Calvaria: xương, mộ, tôn giáo, và cái chết bị rao bán
 
@@ -446,25 +446,25 @@ Giáo hội **Hơi Thở Cuối** nắm giữ **Cái Lưỡi**. Nó có thể n�
 
 Ở Calvaria, cái chết cũng có giá. Người giàu mua quan tài bằng bạc, mua lễ cầu siêu riêng, mua "lời nhắn từ người chết". Người nghèo bán xương của người thân làm thánh tích, bán tên trong sổ, hoặc làm phu mộ cho đến ngày chính họ rơi xuống hầm. Vì vậy Stage 3 không mở ra bằng một trận đánh lớn, mà bằng cảm giác bị kéo chậm vào một nơi ai cũng đang đau khổ và ai cũng học cách kiếm lợi từ đau khổ đó.
 
-Đây là giai đoạn Cái Lưỡi đào sâu nhất vào **Deep** và **Henry**. Nó không chỉ nói bằng giọng người chết; nó đánh thẳng vào ruột gan người nghe, dùng một phần sự thật để buộc họ quỳ xuống. Với Deep, Calvaria kéo lại những cuộc chiến xưa, những đồng đội đã chết, và nỗi mệt mỏi của một người từng bị biến thành biểu tượng. Với Henry, nó moi lại các quyết định bẩn, những người anh không cứu được, và nỗi sợ rằng anh tiếp tục chiến đấu không phải vì còn hy vọng, mà vì anh không biết cách nghỉ ngơi.
+Đây là giai đoạn Cái Lưỡi đào sâu nhất vào **Deep** và **Mark**. Nó không chỉ nói bằng giọng người chết; nó đánh thẳng vào ruột gan người nghe, dùng một phần sự thật để buộc họ quỳ xuống. Với Deep, Calvaria kéo lại những cuộc chiến xưa, những đồng đội đã chết, và nỗi mệt mỏi của một người từng bị biến thành biểu tượng. Với Mark, nó moi lại các quyết định bẩn, những người anh không cứu được, và nỗi sợ rằng anh tiếp tục chiến đấu không phải vì còn hy vọng, mà vì anh không biết cách nghỉ ngơi.
 
 Vì vậy mạch Stage 3 đi từ yên tĩnh đến ngột ngạt: con đường hoang vắng ngoài biên giới, khu rừng bị giáo hội dùng làm bãi săn, pháo đài chắn lối vào, hầm ngầm dưới thành phố, dòng sông oán hận, rồi cuối cùng mới tới con đường hành hương và trung tâm Calvaria. Mỗi act nhỏ đẩy nhóm đến gần Cái Lưỡi hơn, nhưng cũng buộc họ bước sâu hơn vào câu hỏi của vùng đất này: người chết có được tưởng nhớ, hay đang bị biến thành công cụ để điều khiển người sống?
 
 ### 3-1. Con đường đơn độc (Solitary Road)
 ![Solitary Road](<imgs/Stage3/solitary road.png>)
 
-Nhóm rời vùng núi của Sakuri mà gần như không có thời gian hồi sức. Jamerson đã đi trước bằng tuyến xe tang và thương nhân xương, còn các cổng chính vào Calvaria đều nằm dưới quyền Giáo hội Hơi Thở Cuối. Henry không thể đưa cả nhóm đi theo một đoàn hành hương chính thức vì Heni quá dễ bị nhận ra, nên họ chọn con đường cũ dành cho dân tị nạn: **Con đường đơn độc**.
+Nhóm rời vùng núi của Sakuri mà gần như không có thời gian hồi sức. Jamerson đã đi trước bằng tuyến xe tang và thương nhân xương, còn các cổng chính vào Calvaria đều nằm dưới quyền Giáo hội Hơi Thở Cuối. Mark không thể đưa cả nhóm đi theo một đoàn hành hương chính thức vì Heni quá dễ bị nhận ra, nên họ chọn con đường cũ dành cho dân tị nạn: **Con đường đơn độc**.
 
 Con đường đất cằn cỗi bị bao phủ bởi sương mù xám lạnh và những hàng cây trơ trụi lá. Rải rác hai bên đường là xe ngựa đổ nát, bảng tên mộ bị cạo sạch, và những vòng đá dựng vội cho người chết không đủ tiền vào Calvaria. Đây là đoạn giảm nhịp sau Stage 2, nhưng không hề nhẹ: cả nhóm lần đầu đi cùng Heni như một thành viên thật sự, trong khi phía trước là nơi có thể bắt cô nói bằng giọng của một người khác.
 
-Henry bước chậm hơn vì vết thương cũ ở chân nhức lên trong gió lạnh. Deep luôn giữ tay gần chuôi kiếm, nhưng sự im lặng của anh không còn giống cảnh giác đơn thuần; nó giống một người đang nghe lại tiếng bước chân của những đồng đội đã mất. Ghost đi phía sau cùng, cảm nhận một dao động mơ hồ từ Calvaria vọng lại. Đó không phải âm thanh vật lý, mà là áp lực của Cái Lưỡi đang thử gọi từng cái tên trong đầu họ.
+Mark bước chậm hơn vì vết thương cũ ở chân nhức lên trong gió lạnh. Deep luôn giữ tay gần chuôi kiếm, nhưng sự im lặng của anh không còn giống cảnh giác đơn thuần; nó giống một người đang nghe lại tiếng bước chân của những đồng đội đã mất. Ghost đi phía sau cùng, cảm nhận một dao động mơ hồ từ Calvaria vọng lại. Đó không phải âm thanh vật lý, mà là áp lực của Cái Lưỡi đang thử gọi từng cái tên trong đầu họ.
 
 Cuối con đường, nhóm bắt gặp một đoàn linh hồn lang thang lướt qua các mộ đá như đang tìm cổng vào thành phố. Một người hành hương già cảnh báo rằng ai không có dấu ghi tên của giáo hội sẽ bị "thợ gặt" săn trong rừng. Cảnh báo này đẩy nhóm sang lựa chọn đầu tiên của Stage 3: đi thẳng vào quốc lộ của Calvaria và để giáo hội nhận diện Heni, hoặc rẽ vào Rừng Đồ Tể để tránh các trạm kiểm soát.
 
 ### 3-2. Rừng Đồ Tể (Slayer Jungle)
 ![Slayer Jungle](<imgs/Stage3/slayer jungle.png>)
 
-Henry đề xuất rẽ vào Rừng Đồ Tể vì đây là khoảng trống duy nhất trên bản đồ tuần tra của giáo hội. Nhưng "khoảng trống" không có nghĩa là an toàn. Khu rừng là một vùng đầm lầy hóa đá u ám, nơi những thân cây gai khổng lồ mọc đan chéo nhau như xương sườn gãy, còn mặt đất phủ đầy hài cốt của những người từng nghĩ mình có thể vào Calvaria mà không trả phí.
+Mark đề xuất rẽ vào Rừng Đồ Tể vì đây là khoảng trống duy nhất trên bản đồ tuần tra của giáo hội. Nhưng "khoảng trống" không có nghĩa là an toàn. Khu rừng là một vùng đầm lầy hóa đá u ám, nơi những thân cây gai khổng lồ mọc đan chéo nhau như xương sườn gãy, còn mặt đất phủ đầy hài cốt của những người từng nghĩ mình có thể vào Calvaria mà không trả phí.
 
 Nơi đây là lãnh địa săn bắn của các **Slayer** thuộc Giáo hội. Họ đeo mặt nạ sắt hình đầu lâu, cầm lưỡi hái lớn và di chuyển lặng lẽ như những cái bóng để hành hình bất cứ ai không có giấy thông hành. Cả nhóm phải tận dụng địa hình gai góc để lẩn trốn, cắt đứt các bẫy chông xương, và đối phó với những đợt phục kích chớp nhoáng. Tulas lần đầu phải sử dụng năng lực của mình để hóa lỏng chất độc chảy ra từ rễ cây hóa đá, tạo rào chắn tạm thời hoặc ăn mòn giáp sắt của kẻ địch.
 
@@ -477,7 +477,7 @@ Vượt qua cánh rừng, nhóm không tìm thấy lối thoát mà đụng th�
 
 Pháo đài được vận hành bởi các **Bình chứa Linh hồn** (Spirit Batteries): những chiếc lồng kim loại giam giữ hàng trăm linh hồn oán hận của bệnh nhân, kẻ phản loạn, dân nghèo không trả nổi phí tang lễ, và cả những người bị Slayer giết trong rừng. Năng lượng từ tiếng thét của họ được chuyển hóa thành lá chắn ánh sáng xanh lam bao bọc toàn bộ pháo đài và kích hoạt các khẩu pháo linh hồn tầm xa.
 
-Cả nhóm phải thực hiện một chiến dịch tấn công trực diện đầy nguy hiểm. Henry điều phối chỉ dẫn Block giương khiên sắt bảo vệ nhóm trước những đợt đạn pháo oán khí, trong khi Deep dùng đao nặng đập vỡ các cổng phụ. Solei leo lên các tháp gác cao để tìm cách ngắt kết nối các đường truyền năng lượng. Tại đây, nhóm phải đối mặt với lựa chọn đạo đức lớn: phá hủy trực tiếp các bình linh hồn để ép hệ thống lá chắn sụp đổ nhanh chóng (làm tiêu tán các linh hồn vĩnh viễn), hay dùng Ghost và Tulas để từ từ giải thoát họ một cách an toàn nhưng phải đối đầu với các đợt lính gác đông đảo hơn.
+Cả nhóm phải thực hiện một chiến dịch tấn công trực diện đầy nguy hiểm. Mark điều phối chỉ dẫn Block giương khiên sắt bảo vệ nhóm trước những đợt đạn pháo oán khí, trong khi Deep dùng đao nặng đập vỡ các cổng phụ. Solei leo lên các tháp gác cao để tìm cách ngắt kết nối các đường truyền năng lượng. Tại đây, nhóm phải đối mặt với lựa chọn đạo đức lớn: phá hủy trực tiếp các bình linh hồn để ép hệ thống lá chắn sụp đổ nhanh chóng (làm tiêu tán các linh hồn vĩnh viễn), hay dùng Ghost và Tulas để từ từ giải thoát họ một cách an toàn nhưng phải đối đầu với các đợt lính gác đông đảo hơn.
 
 Dù lựa chọn thế nào, pháo đài sụp một phần cũng khiến cổng chính của Calvaria báo động. Nhóm không thể tiếp tục đi trên mặt đất. Một linh hồn được giải thoát, hoặc một tù nhân còn sống trong pháo đài, chỉ cho họ ký hiệu của một lối mộ đạo cũ nằm dưới chân tường thành.
 
@@ -498,7 +498,7 @@ Không gian bên dưới cực kỳ chật hẹp, tối tăm và chứa đầy n
 
 Lối đi ngầm vỡ ra trên một hang động khổng lồ, nơi **Sông Oán Hận** chảy cuồn cuộn dưới lòng đất. Dòng sông là một vũng lầy đen ngòm, ăn mòn da thịt, tích tụ nước thải độc hại từ các tuyến thành phố, dịch bệnh của Calvaria, và oán khí của những người bị chôn cất sai cách. Đây không phải đường vào thành phố; đây là thứ Calvaria cố giấu dưới nền đá của mình.
 
-Cả nhóm phải đứng trên một chiếc bè gỗ lớn ghép vội và trôi tự do dọc theo dòng nước xiết. Họ phải liên tục chiến đấu để bảo vệ chiếc bè khỏi sự tấn công của lũ quái vật xương kéo từ lòng sông và những linh hồn bay lượn phun độc từ trần hang. Deep phải liên tục đập tan các tảng đá nhọn trôi nổi trên sông trước khi chúng đâm sầm vào bè, trong khi Tulas tập trung kiểm soát dòng nước đen để giữ cho bè thăng bằng và Henry bắn hạ các xạ thủ xương từ hai bên bờ đá.
+Cả nhóm phải đứng trên một chiếc bè gỗ lớn ghép vội và trôi tự do dọc theo dòng nước xiết. Họ phải liên tục chiến đấu để bảo vệ chiếc bè khỏi sự tấn công của lũ quái vật xương kéo từ lòng sông và những linh hồn bay lượn phun độc từ trần hang. Deep phải liên tục đập tan các tảng đá nhọn trôi nổi trên sông trước khi chúng đâm sầm vào bè, trong khi Tulas tập trung kiểm soát dòng nước đen để giữ cho bè thăng bằng và Mark bắn hạ các xạ thủ xương từ hai bên bờ đá.
 
 Dòng sông cuốn nhóm qua những cửa xả bên dưới khu hành hương. Khi thoát được lên bờ, họ không còn ở ngoài Calvaria nữa, nhưng cũng chưa vào trung tâm. Trước mặt họ là con đường mà mọi người hành hương đều phải đi: nơi người sống xếp hàng để xin người chết nói chuyện.
 
@@ -507,7 +507,7 @@ Dòng sông cuốn nhóm qua những cửa xả bên dưới khu hành hương. 
 
 Sau khi thoát khỏi Sông Oán Hận, nhóm phải hòa vào dòng người hành hương thay vì tiếp tục đánh thẳng. Đây là lần đầu Stage 3 cho người chơi nhìn Calvaria từ phía người dân: những đoàn người ôm tro cốt, bó xương, di ảnh, búp bê giữ tóc người đã mất, và những lá thư chưa kịp gửi. Không ai ở đây nghĩ mình đang bước vào một cái bẫy. Họ chỉ muốn đau ít hơn.
 
-Nhóm đến Calvaria để tìm Cái Lưỡi, nhưng mỗi người bước trên đường hành hương với một lý do riêng. Henry muốn biết liệu những giọng nói trong quá khứ có thật là người chết hay chỉ là ký ức bị lợi dụng. Deep thấy dấu vết của những đội viễn chinh cũ. Heni nghe tin giáo hội có thể "cho người chết nói", nên âm thầm tự hỏi nếu mình nói bằng giọng Heniana, mình có còn là mình không.
+Nhóm đến Calvaria để tìm Cái Lưỡi, nhưng mỗi người bước trên đường hành hương với một lý do riêng. Mark muốn biết liệu những giọng nói trong quá khứ có thật là người chết hay chỉ là ký ức bị lợi dụng. Deep thấy dấu vết của những đội viễn chinh cũ. Heni nghe tin giáo hội có thể "cho người chết nói", nên âm thầm tự hỏi nếu mình nói bằng giọng Heniana, mình có còn là mình không.
 
 Trên đường, người chơi gặp dân hành hương, kẻ trộm mộ, lính đánh thuê của giáo hội, và những **người ghi tên** chuyên thu phí từ từng cái chết. Đây là giai đoạn kể về mặt trái của niềm an ủi: khi đau khổ quá lớn, con người sẵn sàng trả bất cứ giá nào để nghe một lời nói dối dịu dàng. Dòng người này dẫn nhóm vào nơi Calvaria lộ bộ mặt thật rõ nhất: chợ xương và hầm mộ sống.
 
@@ -539,7 +539,7 @@ Jamerson đập vỡ bàn thờ, giết những giáo sĩ cản đường, và q
 
 Boss cuối Stage 3 là một hợp xướng xương khổng lồ được gọi là **Dàn Hợp Xướng**, gồm những hài cốt, giọng nói, và lời cầu nguyện bị giáo hội khâu lại thành một "thánh thân". Cái Lưỡi nằm trong miệng của nó. Nó không chỉ nhại âm thanh; nó chọn những giọng từng có quyền làm người sống nghe lời, rồi biến chúng thành mệnh lệnh.
 
-Với Henry, nó dùng giọng mẹ anh và những người anh từng không cứu được. Họ không mắng anh là hèn. Họ nói điều tàn nhẫn hơn: nếu Henry dừng lại, cái chết của họ sẽ vô nghĩa; nếu anh không giết tiếp, anh đã phản bội họ. Trong pha này, COMMAND của Henry có thể bị nhiễu, biến lệnh bảo vệ thành lệnh truy sát nếu người chơi không phá các chuông xương quanh đấu trường. Henry vượt qua khi hiểu rằng người chết có thể được tưởng nhớ, nhưng không được dùng làm giấy phép để giết thêm người.
+Với Mark, nó dùng giọng mẹ anh và những người anh từng không cứu được. Họ không mắng anh là hèn. Họ nói điều tàn nhẫn hơn: nếu Mark dừng lại, cái chết của họ sẽ vô nghĩa; nếu anh không giết tiếp, anh đã phản bội họ. Trong pha này, COMMAND của Mark có thể bị nhiễu, biến lệnh bảo vệ thành lệnh truy sát nếu người chơi không phá các chuông xương quanh đấu trường. Mark vượt qua khi hiểu rằng người chết có thể được tưởng nhớ, nhưng không được dùng làm giấy phép để giết thêm người.
 
 Với Deep, Dàn Hợp Xướng dùng giọng những đồng đội cũ và những bài ca về các anh hùng trong quá khứ. Họ gọi anh bằng danh hiệu cũ, bảo anh cầm cờ, đứng trước quân lính, và trở lại làm biểu tượng để người khác tiếp tục chiến tranh. Điều làm Deep đau không phải vì đó hoàn toàn là lời nói dối, mà vì nó đúng một phần: đã có lúc anh để người khác dùng tên mình như một thứ vũ khí. Deep không kết luận rằng mọi anh hùng đều giả dối. Anh chấp nhận điều khó hơn: ngay cả những người từng cứu thế giới cũng có thể sai, có thể bị quyền lực viết lại, và ký ức về họ không được phép trở thành mệnh lệnh.
 
@@ -555,7 +555,7 @@ Khi Dàn Hợp Xướng sụp đổ, phần lõi của Cái Lưỡi lộ ra tron
 
 > "Nó không nguyền rủa các ngươi. Nó đang gọi mẹ. Tiếng gọi của nó quá lớn đối với thế giới này, nên các ngươi gọi đó là Đại Họa."
 
-Mảnh cháy không nói như một nhà tiên tri. Nó nói như một vết thương nhớ lại khoảnh khắc bị cắt khỏi cơ thể. Từ những câu rời rạc của nó, Henry ghép được một điều đáng sợ: Thần Sơ Sinh không chủ động nguyền rủa thế giới theo cách con người vẫn kể. Các mảnh thân thể của nó bị giữ lại quá lâu, mỗi mảnh tiếp tục phát ra một phần của tiếng gọi cũ. Con Mắt nhìn, Cái Tai nghe, Cái Lưỡi gọi, Trái Tim đập. Khi những tín hiệu đó chạm vào con người, chúng biến thành bệnh, ảo giác, cuồng tín, và ham muốn hồi sinh.
+Mảnh cháy không nói như một nhà tiên tri. Nó nói như một vết thương nhớ lại khoảnh khắc bị cắt khỏi cơ thể. Từ những câu rời rạc của nó, Mark ghép được một điều đáng sợ: Thần Sơ Sinh không chủ động nguyền rủa thế giới theo cách con người vẫn kể. Các mảnh thân thể của nó bị giữ lại quá lâu, mỗi mảnh tiếp tục phát ra một phần của tiếng gọi cũ. Con Mắt nhìn, Cái Tai nghe, Cái Lưỡi gọi, Trái Tim đập. Khi những tín hiệu đó chạm vào con người, chúng biến thành bệnh, ảo giác, cuồng tín, và ham muốn hồi sinh.
 
 Vì vậy mục tiêu của nhóm thay đổi. Nếu chỉ phá hủy từng mảnh thần, tiếng gọi sẽ bị xé nhỏ hơn, yếu đi ở chỗ này nhưng méo mó ở chỗ khác. Nếu gom các mảnh lại để hồi sinh Thần Sơ Sinh, thế giới có thể bị nuốt bởi một sinh thể không thuộc về nó. Cách duy nhất còn lại là tìm nơi tiếng gọi bắt đầu: **Dây Rốn**, đầu nối giữa Thần Sơ Sinh và thứ đang lắng nghe ngoài thế giới.
 
@@ -628,7 +628,7 @@ Jamerson đến đây cùng lúc hai phe giao chiến. Con Mắt, Cái Tai, và 
 
 Jamerson khóc. Rồi ông ra lệnh kích hoạt.
 
-Boss của Stage 4 là **Titan Trái Tim**, một cỗ máy chiến tranh nối với xác rồng và Trái Tim thần. Trong trận, người chơi vừa đánh boss vừa ngăn hai phe giết dân thường. Deep phá hủy các loa tuyên truyền thay vì truy sát lính rút lui. Solei cứu những đứa trẻ bị cả hai phe đánh dấu. Henry buộc phải ra lệnh không giết những kẻ đã đầu hàng, dù điều đó làm trận chiến khó hơn. Tulas phải dùng năng lực máu/chất lỏng để khóa vết thương, lọc độc, mở đường qua vùng nhiễm và kéo người còn sống khỏi chiến trường. Block giữ tuyến rút lui, che chắn, vác người bị thương, và chứng minh rằng sức mạnh không chỉ để đánh bại ai đó mà còn để giữ người khác còn đứng được.
+Boss của Stage 4 là **Titan Trái Tim**, một cỗ máy chiến tranh nối với xác rồng và Trái Tim thần. Trong trận, người chơi vừa đánh boss vừa ngăn hai phe giết dân thường. Deep phá hủy các loa tuyên truyền thay vì truy sát lính rút lui. Solei cứu những đứa trẻ bị cả hai phe đánh dấu. Mark buộc phải ra lệnh không giết những kẻ đã đầu hàng, dù điều đó làm trận chiến khó hơn. Tulas phải dùng năng lực máu/chất lỏng để khóa vết thương, lọc độc, mở đường qua vùng nhiễm và kéo người còn sống khỏi chiến trường. Block giữ tuyến rút lui, che chắn, vác người bị thương, và chứng minh rằng sức mạnh không chỉ để đánh bại ai đó mà còn để giữ người khác còn đứng được.
 
 Sau khi Titan sụp đổ, Trái Tim rơi vào tay Jamerson trong một màn đánh đổi tàn khốc: ông bỏ lại hàng trăm người đang chết, chỉ để mang buồng ngủ đông của Heniana tiếp tục đi sâu vào vùng cấm. Cú đánh này chạm mạnh vào Tulas và Block: Jamerson dùng cơ thể người khác làm nguyên liệu để cứu một người, còn họ phải dùng chính những năng lực bị xem là thô bạo nhất để giữ càng nhiều cơ thể sống càng tốt.
 
@@ -671,7 +671,7 @@ Ba thế lực này cũng là ba kết thúc sai đã được gieo từ trướ
 
 Người chơi không chọn phe nào làm chân lý cuối. Mục tiêu của nhóm là mở lối đến Dây Rốn, bảo vệ những người không muốn chiến đấu, và ngăn cả ba phe biến thế giới thành vật tế.
 
-Henry cuối cùng nói với Ghost: "Lệnh duy nhất của tôi cho cậu là đừng để bất kỳ ai nói rằng cái chết của người khác là cái giá phải trả."
+Mark cuối cùng nói với Ghost: "Lệnh duy nhất của tôi cho cậu là đừng để bất kỳ ai nói rằng cái chết của người khác là cái giá phải trả."
 
 ### 5-3. Jamerson và Heniana
 
@@ -707,7 +707,7 @@ Jamerson vỡ tung. Trong một khoảnh khắc, người cha trở lại. Nhưn
 
 Trận cuối kết thúc khi Ghost cắt liên kết giữa các mảnh thần và cơ thể Jamerson. Jamerson rơi xuống bên buồng ngủ đông, không được tha thứ, nhưng lần đầu tiên không còn ra lệnh. Ông đặt bàn tay trái lên kính và nói với Heniana: "Cha đã không để con được sợ cha. Cha chỉ sợ mất con."
 
-Không ai trong nhóm đáp lại bằng lời tha thứ. Henry hạ súng nhưng không cúi đầu. Deep chỉ kéo những người bị thương ra xa khỏi Dây Rốn. Solei đứng cạnh Heni. Tulas kiểm tra nhịp thở của những nạn nhân còn sống. Block giữ cánh cổng đang sụp. Điều đúng cuối cùng của Jamerson không xóa Bastonne, Marseille, tàu ngầm hay tất cả những cái tên đã mất.
+Không ai trong nhóm đáp lại bằng lời tha thứ. Mark hạ súng nhưng không cúi đầu. Deep chỉ kéo những người bị thương ra xa khỏi Dây Rốn. Solei đứng cạnh Heni. Tulas kiểm tra nhịp thở của những nạn nhân còn sống. Block giữ cánh cổng đang sụp. Điều đúng cuối cùng của Jamerson không xóa Bastonne, Marseille, tàu ngầm hay tất cả những cái tên đã mất.
 
 ### Lựa chọn kết thúc chính tuyến
 
@@ -725,7 +725,7 @@ Heni là người bước lên đầu tiên, vì cô mang tế bào Heniana, t�
 
 - **Ghost** cắt Con Mắt vì anh là lỗi sai mà hệ thống không đọc được. Anh không cần tên cũ để chứng minh mình có quyền tồn tại.
 - **Solei** giữ Heni bằng chính cái tên Heni đã chọn, không gọi cô là bản sao, em gái thay thế, hay bằng chứng huyết thống.
-- **Henry** dùng mệnh lệnh cuối cùng để cấm vật tế: không ai được chết chỉ để một phép màu có vẻ sạch sẽ hơn.
+- **Mark** dùng mệnh lệnh cuối cùng để cấm vật tế: không ai được chết chỉ để một phép màu có vẻ sạch sẽ hơn.
 - **Deep** không đứng ở trung tâm như biểu tượng chiến thắng. Anh giữ đường rút, đỡ những người còn sống ra khỏi vùng mơ đang sụp.
 - **Tulas** dùng máu và chất lỏng để khóa vết thương, lọc độc, kéo người bị thương ra khỏi mạch thần, không dùng cơ thể ai làm chìa khóa.
 - **Block** giữ cổng cho cả kẻ từng là địch rút lui, vì lòng trung thành của anh cuối cùng không còn là phục tùng một phe mà là giữ chỗ cho người sống.
@@ -744,7 +744,7 @@ Sakuri trở thành cảnh báo về việc biến trẻ em thành thánh nhân.
 
 Heniana còn sống hay không có thể để mở theo hướng vừa buồn vừa có hy vọng. Bản chính tuyến để lại cơ hội: cô bé thở được một mình trong thời gian ngắn, được Heni nắm tay, và được nghe lần đầu tiên không phải tiếng máy móc. Heni không thay thế Heniana. Heni sống tiếp như một con người riêng.
 
-Ghost rời The Cradle cùng đồng đội. Khi Henry hỏi liệu anh có muốn tìm lại tên cũ không, Ghost đáp: "Nếu ngày nào đó tôi cần, tôi sẽ tìm. Hôm nay, tôi đã có người gọi."
+Ghost rời The Cradle cùng đồng đội. Khi Mark hỏi liệu anh có muốn tìm lại tên cũ không, Ghost đáp: "Nếu ngày nào đó tôi cần, tôi sẽ tìm. Hôm nay, tôi đã có người gọi."
 
 Cảnh cuối là cả nhóm đi qua bộ xương rồng Akam Meskul lúc bình minh. Bên dưới, những người sống sót của hai phe đang cùng nhau mở đường cho trẻ em và người bị thương. Không ai chiến thắng trọn vẹn. Không có vị thần nào hiện xuống ban phước. Nhưng lần đầu tiên sau rất lâu, thế giới im lặng đủ để con người nghe thấy nhau.
 
@@ -762,11 +762,11 @@ Thông điệp đọng lại cho người chơi: cứu thế giới không phả
 
 - **Bản đồ ngủ mơ khi chết**: đây có thể là không gian giữa giấc mơ của Thần Sơ Sinh và ý thức Ghost. Người chơi hồi sinh tại đây, đổi kỹ năng, đặt lại bộ trang bị, hoặc trả tiền để đổi kỹ năng. Về truyện, mỗi lần chết là mỗi lần Ghost nghe tiếng gọi của Dây Rốn rõ hơn.
 - **Mở đầu bằng Solei**: phần hướng dẫn nên diễn ra ở căn cứ của đội Deep. Deep kiểm tra Solei trước nhiệm vụ giải cứu Block, từ đó dạy di chuyển, combo, chưởng, né, phản đòn, cầm-ném vật thể, và phối hợp đồng đội.
-- **Tulas và phối hợp đội hình**: Tulas có thể là thành viên đội hoặc nhân vật hỗ trợ từ sớm. Năng lực máu/chất lỏng của anh nên dùng để tạo bệ, khiên, cầu tạm, màn chắn vật thể bay, hoặc khóa dòng nước/bẫy; hiệu quả nhất khi phối hợp với Deep, Solei, Henry, Block hoặc Ghost thay vì giải mọi thứ một mình.
+- **Tulas và phối hợp đội hình**: Tulas có thể là thành viên đội hoặc nhân vật hỗ trợ từ sớm. Năng lực máu/chất lỏng của anh nên dùng để tạo bệ, khiên, cầu tạm, màn chắn vật thể bay, hoặc khóa dòng nước/bẫy; hiệu quả nhất khi phối hợp với Deep, Solei, Mark, Block hoặc Ghost thay vì giải mọi thứ một mình.
 - **Vật thể cầm-ném**: dùng cho cả chiến đấu và giải đố. Người chơi có thể ném vật vào công tắc, khóa, chuông, bánh răng, bàn ép, hoặc dùng vật thể làm nguồn chất lỏng/điểm neo cho Tulas.
-- **Block trong Bastonne**: Block luôn được đội cứu theo chính tuyến, nhưng Stranger có thể giúp hoặc bỏ qua anh trong lúc nhà tù náo loạn. Lựa chọn này không quyết định Block sống chết, mà quyết định mức thương tích, lòng tin của Block, và mức nghi ngờ của Henry/Solei với Stranger.
+- **Block trong Bastonne**: Block luôn được đội cứu theo chính tuyến, nhưng Stranger có thể giúp hoặc bỏ qua anh trong lúc nhà tù náo loạn. Lựa chọn này không quyết định Block sống chết, mà quyết định mức thương tích, lòng tin của Block, và mức nghi ngờ của Mark/Solei với Stranger.
 - **COMMAND sau khi Block trở lại đội**: không nên bắt Stranger ra lệnh cho Block ngay lần đầu gặp. COMMAND nên mở khi Block đã được cứu và người chơi dùng anh như một đồng đội thật sự.
 - **Lựa chọn mua/phá ở Laundel**: dùng để tạo câu hỏi đạo đức nhỏ trước khi vào các lựa chọn lớn hơn. Lợi trước mắt có thể làm hành trình về sau độc hơn.
 - **GROGER**: boss ẩn nên là sản phẩm phụ của Laundel và lời nguyền, không chỉ là quái vật. Nó có thể là một người nhập cư bị bỏ lại trong cống, ăn token, rác thải, và xác chết đến khi thành truyền thuyết.
 - **Tuyến mất điện tàu ngầm**: tuyến này khó hơn và thưởng tốt hơn, đồng thời cho người chơi cảm giác mình chủ động phá cơ sở Jamerson thay vì chỉ trốn chạy.
-- **Mỗi nhân vật có một câu hỏi riêng**: Ghost là "tôi là ai nếu quá khứ bị xóa?", Solei là "tôi thuộc về đâu?", Deep là "sức mạnh của tôi có phải chỉ để người khác dùng?", Henry là "tôi có thể chiến đấu mà không biến thành kẻ mình ghét?", Tulas là "sức mạnh đáng sợ có thể cứu người mà không biến tôi thành quái vật không?", Block là "lòng trung thành khác gì phục tùng?"
+- **Mỗi nhân vật có một câu hỏi riêng**: Ghost là "tôi là ai nếu quá khứ bị xóa?", Solei là "tôi thuộc về đâu?", Deep là "sức mạnh của tôi có phải chỉ để người khác dùng?", Mark là "tôi có thể chiến đấu mà không biến thành kẻ mình ghét?", Tulas là "sức mạnh đáng sợ có thể cứu người mà không biến tôi thành quái vật không?", Block là "lòng trung thành khác gì phục tùng?"
