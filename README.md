@@ -36,13 +36,14 @@ Gameplay online vẫn dùng bản đã lưu trong cơ sở dữ liệu. Các ch�
 ## Development
 
 - `npm ci --ignore-scripts` installs dependencies; `npm test` checks storage, permissions, conflicts, merging and uploads.
-- `npm run dev:online` runs the online app locally. Local authentication uses `seedy@sites.test`; configure `ADMIN_EMAIL` in the ignored `.dev.vars` file.
+- `npm run dev:online` runs the online app locally. Existing artwork is served directly from local `imgs/`; uploaded images use the local R2 binding. Local authentication uses `seedy@sites.test`; configure `ADMIN_EMAIL` in the ignored `.dev.vars` file.
 - `npm run build:online` builds the Sites Worker. `.openai/hosting.json` identifies the existing project, D1 database and R2 uploads binding. Production migrations are managed by Drizzle; never reseed live content.
 - `node scripts/prepare-online-source.mjs` prepares the small Sites source checkout in `.editor-runtime/site-source`. Build, commit and push this exact source before packaging and publishing through Sites.
 - Gameplay in D1 is authoritative online. `content/gameplay/index.json` and its HTML chapters provide the initial/fallback content and never overwrite saved online content.
 - All tabs are built from their HTML chapters by `node build-reviewer-html.mjs`. The optional legacy Markdown parser is retained only for compatibility checks; it is not imported by the build.
 - Browser CSS and JavaScript are separate files. The local server, GitHub Pages workflow and Sites Worker serve only the declared browser assets in `src/asset-files.mjs`.
 - For deliberate offline development only: `npm run edit`, then `http://127.0.0.1:4177/?local=1#gameplay`. Local saves do not publish online.
+- Reading a local HTML copy or the offline server stays local, including when switching to Gameplay. Without `?local=1`, the edit button still opens the shared editor.
 
 ## GitHub Pages
 

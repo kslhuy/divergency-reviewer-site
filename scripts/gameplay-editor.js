@@ -8,14 +8,8 @@
   const isOnline = location.origin === onlineOrigin || (location.hostname === '127.0.0.1' && !isLocalEditor);
   const isPublishedReader = location.hostname === 'kslhuy.github.io';
   const localOptIn = isLocalEditor && new URLSearchParams(location.search).has('local');
-  if ((location.protocol === 'file:' || isLocalEditor) && !localOptIn) {
-    window.addEventListener('hashchange', () => { if (location.hash.startsWith('#gameplay')) location.replace(onlineOrigin + '/' + location.hash); });
-  }
-  if ((location.protocol === 'file:' || isLocalEditor) && !localOptIn &&
-      (location.hash.startsWith('#gameplay') || new URLSearchParams(location.search).has('edit'))) {
-    location.replace(onlineOrigin + '/' + (new URLSearchParams(location.search).has('edit') ? '?edit=1' : '') + (location.hash || '#gameplay'));
-    return;
-  }
+  // Reading a local copy stays local. The edit button still opens the shared
+  // editor unless local editing was explicitly selected with ?local=1.
   let loadError = '';
   if (!article || !start) return;
   const draftKey = 'divergency-gameplay-web-draft-v1';

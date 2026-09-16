@@ -8,6 +8,7 @@ import { prepareGameplay } from './web-content.mjs';
 import { readContent, writeContent } from './chapter-content.mjs';
 import { assetFiles } from '../src/asset-files.mjs';
 import { listImages, MAX_IMAGE_BYTES, saveImage } from './editor-images.mjs';
+import { serveLocalImage } from './local-images.mjs';
 
 export const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const revisionOf = value => createHash('sha256').update(value).digest('hex');
@@ -111,6 +112,7 @@ export function createEditorServer({ root = projectRoot, renderPage = html => bu
         return json(res, 200, store.save(body || {}));
       }
       if (req.method !== 'GET' && req.method !== 'HEAD') return json(res, 405, { error: 'Method not supported.' });
+      if (await serveLocalImage(req, res, root)) return;
       const relative = pathname === '/' || pathname === '/Divergency_Reviewer_Tabs.html'
         ? 'Divergency_Reviewer_Tabs.html' : decodeURIComponent(pathname.slice(1));
       if (!publicFiles.has(relative) && !relative.startsWith('imgs/')) return json(res, 404, { error: 'Not found.' });
@@ -138,5 +140,5 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const port = Number(process.env.DIVERGENCY_EDITOR_PORT || 4177);
   const server = createEditorServer();
   server.on('error', error => { console.error(`Editor could not start: ${error.message}`); process.exitCode = 1; });
-  server.listen(port, '127.0.0.1', () => console.log(`Divergency editor: http://127.0.0.1:${port}/#gameplay`));
+  server.listen(port, '127.0.0.1', () => console.log(`Divergency editor: http://127.0.0.1:${port}/?local=1#gameplay`));
 }
