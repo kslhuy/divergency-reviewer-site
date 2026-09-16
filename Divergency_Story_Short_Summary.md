@@ -38,7 +38,7 @@ Sau khi cứu Block, cả nhóm không định lao vào phòng nghiên cứu. H�
 
 Ở **Armorlite**, Jacques giúp Mark kiểm tra đường thoát. Nhưng băng đua xe và tay chân của thế giới ngầm tấn công quán. Sau trận, nhóm hiểu rằng đi đường mặt đất sẽ bị bắt hoặc bị bán đứng. Mark chuyển sang phương án B: **đi xuống cống ngầm**.
 
-Cống dưới Marseille không chỉ là đường nước thải. Nó là tầng ruột của thành phố: đường bảo trì cũ, metro bỏ dở, chợ đen và nơi người nhập cư bị đẩy xuống sống. Nhóm đi qua **Laundel**, một thành phố ngầm có luật riêng, phe phái riêng và những người vừa sợ Jamerson vừa phải sống nhờ hệ thống của ông.
+Cống dưới Marseille không chỉ là đường nước thải. Nó là tầng ruột của thành phố: đường bảo trì cũ, metro bỏ dở, chợ đen và người nhập cư bị đẩy xuống sống. Nhóm đi qua **Laundel**, một thành phố ngầm có luật riêng, phe phái riêng và những người vừa sợ Jamerson vừa phải sống nhờ hệ thống của ông.
 
 Từ Laundel, nhóm tìm được đường ra bến cảng. Tại đây có một khoảng lặng: mọi người nói về khả năng rời Marseille, bắt đầu lại ở phía đông, và thoát khỏi danh phận tội phạm. Nhưng chiếc thuyền hẹn trước trống rỗng. Cảnh sát mật phục kích. Boss là **Marius Vane**, cánh tay phải của Jamerson trong bộ máy mật, người xem tù nhân, người bệnh và dân nhập cư như chi phí vận hành.
 
@@ -50,31 +50,34 @@ Tàu ngầm sụp đổ. Nhóm tưởng Jamerson chết, nhưng ông đã thoát
 
 ## Stage 2 - Sakuri
 
-Nhóm đến một bán đảo phía đông, nơi **Cái Tai** được thờ như quyền năng của thánh nữ **Sakuri**. Cái Tai nghe được tiếng nói, ý nghĩ, âm mưu và cả tiếng bệnh trong máu. Jamerson tin nó có thể nghe ra tần số của căn bệnh trong Heniana.
+Nhóm cập bến bán đảo phía đông, nơi **Cái Tai** được thờ phụng như quyền năng của "Thánh Công Chúa" **Sakuri**. Tuy nhiên, mảnh đất cội nguồn của mẹ Solei không hề thanh tịnh mà là một chiến trường **cung đấu ngầm** khốc liệt giữa ba thế lực:
+- **Phe Lãnh Chúa & Quan Nhiếp Chính (Nội Đình Masatomo):** Tôn sùng Sakuri nhưng giam lỏng cô như một tù nhân quý giá. Họ thắp **Hắc Trầm Hương (Poisoned Incense)** tẩm độc dược để làm tê liệt cảm xúc của Sakuri, ép cô nghe lén đối thủ để tước đoạt mỏ bạc và đất đai, đồng thời ngấm ngầm thỏa thuận bán mẫu máu của cô cho Jamerson để đổi lấy vũ khí cơ giới phương Tây.
+- **Phe Giáo Sĩ Tế Lễ (Đền Ngầm Kanzaki):** Tôn sùng "Thánh Huyết" trích xuất từ Cái Tai để thanh lọc dịch bệnh, bí mật giam giữ và thủ tiêu các thánh nữ tiền nhiệm phát điên dưới sàn gỗ sân khấu kịch Noh hoang phế.
+- **Tàn Dư Gia Tộc Ryozan (Võ Tướng):** Lực lượng thị vệ trung trinh từng muốn cứu đứa trẻ Sakuri thoát khỏi lồng giam cung đình nhưng bị vu oan tội mưu phản và hành quyết.
 
-Ở làng chài, nhóm gặp **Heni**, một bé gái có khuôn mặt giống Heniana. Cha nuôi của cô là điệp viên của Jamerson, đã âm thầm ghi chép sức khỏe và gửi mẫu máu về Marseille. Heni không biết mình là thí nghiệm nhân bản. Cô chỉ biết mình hay mơ thấy phòng trắng và một người cha chưa từng gặp.
+Nhóm đặt chân đến đúng 3 ngày trước **Đại Lễ Trích Huyết Mùa Thu**. Tại làng chài ven biển, nhóm gặp **Heni**, cô bé có gương mặt giống hệt Heniana. Khi thân phận bị lộ, tên mật vụ của Jamerson đốt chòi phi tang và vu khống nhóm là "cướp biển Marseille bắt cóc trẻ hiến tế", kích động dân làng cùng lính huyện nha truy đuổi nhóm vào núi đá. Bị quan ải chính cự tuyệt nhục mạ là "kẻ lai căng", nhóm rẽ vào trại cách ly (nơi Solei cứu chữa cho hai bà cháu người bệnh và nhận được mảnh lụa cung đình cháy sém của mẹ), rồi tiến vào **Rừng Tre Đen (Kurotake)**. Bằng bài thuốc lá tre non giã bùn khoáng gia truyền của mẹ, Solei cứu mạng thủ lĩnh bộ tộc Kurotake, hóa giải hiểu lầm và được dẫn đường vượt thác nước, đánh bại thực thể nòng nọc bóng tối / vong hồn Tướng quân Ryozan trên cầu đá cổ.
 
-Trên đường lên thủ phủ, Solei gặp những người có liên hệ với dòng máu của mẹ mình, nhưng họ không chấp nhận cô như người trở về. Stage này là gương của Solei: cô phải hiểu rằng mình không cần một nơi duy nhất công nhận mới có quyền tồn tại.
+Khi lên chợ trung tâm thủ phủ, Heni bàng hoàng nhìn thấy những đứa trẻ quý tộc tranh nhau mua búp bê sứ mang gương mặt mình như một món đồ chơi đem lại may mắn. Lần đầu tiên, Heni cảm nhận sâu sắc nỗi nhục nhã khi một sinh mạng vô tội bị thương phẩm hóa. Trong khi đó, Solei bị chính tộc nhân của mẹ xua đuổi là "kẻ lai căng ngoại lai". Nhưng khi đột nhập tàng thư các cũ của cung điện, Solei tìm thấy chiếc chuông gió bằng ngọc và nhật ký của mẹ: **Mẹ Solei từng là dưỡng mẫu nuôi nấng Sakuri từ thuở ẵm ngửa**. Chính bà đã liều mạng phản đối nghi lễ niêm phong mắt tàn bạo năm Sakuri lên sáu tuổi và bị khép tội mưu phản phải vượt biển trốn sang Marseille. Khoảnh khắc này giúp Solei trưởng thành vượt bậc về tâm lý: cô rũ bỏ mặc cảm thân phận con lai, nhận ra giá trị của bản thân nằm ở sự thấu cảm và bảo vệ kẻ yếu thế, coi Sakuri như người em gái chịu nhiều bi kịch cần được chở che.
 
-Sakuri không phải kẻ ác bẩm sinh. Cô là một đứa trẻ bị bịt mắt, nhốt trong cung điện, bị ép dùng Cái Tai để phục vụ gia tộc và lãnh chúa. Khi quyền năng làm cô nghe quá nhiều lời nói dối, cầu cứu và âm mưu, cô muốn phá hủy thế giới để được im lặng.
+Sakuri bị Cái Tai tra tấn tinh thần suốt mười năm ròng rã vì phải nghe khoảng cách ghê tởm giữa lời nịnh bợ bên ngoài và ý nghĩ toan tính mưu sát bên trong. Khi vượt qua đền ngầm (hạ gục Rết Song Kiếm) và tiến lên đỉnh núi tuyết, nhóm đối đầu với Sakuri trong cơn khát máu điên cuồng vì quá tải bởi hàng triệu lời dối trá. 
 
-Nhóm đánh bại Sakuri. Jamerson xuất hiện qua đường ngầm, lấy dữ liệu từ Cái Tai và mang Heniana rời đi. Cái Tai vẫn để lại lời gọi dẫn cả nhóm đến **Calvaria**, nơi Cái Lưỡi đang nằm trong tay một giáo hội thờ cái chết.
+Đỉnh điểm xúc động diễn ra khi Sakuri đọc thấu tâm trí cả đội: cô thấy nỗi sợ sai lầm của Mark, sự mệt mỏi của Deep, sự hư vô của Ghost. Nhưng khi chạm vào **Solei**, lần đầu tiên trong đời Sakuri nghe thấy một tâm hồn **hoàn toàn không có lời nói dối**! Solei hạ kiếm, cất tiếng hát ru của người mẹ dưỡng mẫu hòa cùng âm vang chuông gió ngọc và lời dặn của Tướng quân Ryozan (*"Trên đỉnh núi tuyết, khi vạn vật chìm vào im lặng, cháu có thể nghe thấy cả tiếng thở của chính mình"*). Sakuri rơi lệ, buông rơi móng vuốt và ngã vào vòng tay của Solei trong sự thanh thản tuyệt đối. Cả hai cùng giải thoát khỏi xiềng xích của dòng tộc và định kiến xã hội.
 
-Heni quyết định đi cùng nhóm. Cô không muốn bị Jamerson lấy lại, cũng không muốn sống như mẫu thử. Solei gọi cô là em mà không đặt điều kiện.
+Jamerson bất ngờ xuất hiện qua kênh ngầm, cướp dữ liệu Cái Tai và mang Heniana rời đi hướng **Calvaria (Cái Lưỡi)**. Heni kiên quyết nắm chặt tay Solei bước tiếp cùng đội của Deep.
 
 ## Stage 3 - Calvaria
 
 **Calvaria** là thành phố mộ, nơi người sống trả tiền để nghe người chết nói. Giáo hội **Hơi Thở Cuối** nắm giữ **Cái Lưỡi**, mảnh thần có thể giả giọng người chết, dịch ngôn ngữ cổ và biến lời nói thành mệnh lệnh.
 
-Ban đầu, giáo hội dùng Cái Lưỡi để an ủi người mất thân. Nhưng an ủi dần thành dịch vụ, dịch vụ thành quyền lực, quyền lực thành nhà tù. Người giàu mua lời tha thứ. Người nghèo bán xương, bán tên, bán cả nỗi đau để được nghe một câu cuối cùng.
+Ban đầu, giáo hội dùng Cái Lưỡi để an ủi người mất thân. Nhưng an ủi dần thành dịch vụ, dịch vụ thành quyền lực, quyền lực thành nhà tù. Người giàu mua lời tha thứ. Người nghèo bán xương, bán tên, bán cả nỗi đau để được nghe một câu cuối cùng. Tại Chợ Xương, bên cạnh những quầy bùa chú kinh dị, nhóm bắt gặp **Tiệm Hòm "Đổi Vận Cầu May"** – nơi một lão thợ đóng hòm ế ẩm cho người sống chui vào quan tài ngủ qua đêm và làm lễ thắp nhang "giả chết" để xả xui, kháng dịch bệnh (chi tiết kể chuyện môi trường kiêm trạm hồi máu / Easter Egg tếu táo của Deep).
 
 Stage này nên là nơi đào sâu nhất vào **Deep** và **Mark**. Cái Lưỡi không chỉ giả giọng người chết; nó nói thẳng vào tim gan ruột của người nghe. Nó nhắc Deep về những cuộc chiến xưa, những đồng đội đã chết, những bức tượng anh hùng xây bằng xác người, và câu hỏi liệu đời anh còn ý nghĩa gì nếu anh không còn làm biểu tượng. Với Mark, nó moi lại các quyết định bẩn, những người anh không cứu được, sự mệt mỏi vì cứ phải làm người tỉnh táo sau mỗi thảm họa, và nỗi sợ rằng anh chỉ đang tiếp tục chiến đấu vì không biết sống kiểu khác.
 
-Calvaria vì vậy không chỉ là stage về cái chết, mà là stage về **sự kiệt sức sau chiến tranh**. Deep phải đối diện việc sức mạnh của mình từng bị người khác dùng để hợp thức hóa bạo lực. Mark phải đối diện việc lòng trách nhiệm có thể trở thành một dạng tự trừng phạt. Cái Lưỡi thắng nếu nó khiến họ tin rằng người chết có quyền ra lệnh cho người sống tiếp tục đổ máu.
+Calvaria vì vậy không chỉ là stage về cái chết, mà là stage về **sự kiệt sức sau chiến tranh**. Điểm sáng cảm xúc đắt giá nhất của Deep nằm ở **khoảng lặng bên Sông Oán Hận (âm hưởng chuyến du hành cõi âm Odyssey / Nekyia)**: anh tình cờ hội ngộ linh hồn của đúng 2 người đồng đội/anh hùng đã khuất bên ngọn lửa ma trơi. Người thứ nhất là **Vance "Mắt Chim"** – tay thiện xạ lém lỉnh, vừa gặp đã cười hề hề ("hé hé") trêu Deep giải ngũ đi làm "bảo mẫu" dắt con nít và xóa nợ chầu rượu cũ vì mừng thấy bạn lành lặn. Người thứ hai là **Đại úy Balthazar** – người anh cả từng chết thay Deep, nay vạch trần thói buôn thần bán thánh của Giáo hội và giải thoát Deep khỏi mặc cảm sống sót: *"Người chết đã xong phận sự, hãy sống vì người sống và đập nát cái mồm dối trá của Cái Lưỡi"*.
 
 Jamerson đến trước nhóm và bắt Cái Lưỡi nói bằng giọng Heniana. Khi giọng ấy hỏi liệu Heniana tỉnh dậy có còn nhận ra cha không, Jamerson vượt qua ranh giới cuối cùng: ông không còn chỉ muốn cứu con gái, mà muốn sở hữu một phiên bản không thể từ chối mình.
 
-Boss Stage 3 là **Dàn Hợp Xướng**, một cơ thể xương khổng lồ ghép từ giọng nói, hài cốt và lời cầu nguyện. Nó thử từng nhân vật bằng giọng người chết: Mark bị kéo về tội lỗi cũ, Deep bị gọi lại làm biểu tượng chiến tranh, Solei bị ép chọn một căn tính duy nhất, Heni bị buộc biến mất để trả chỗ cho Heniana, và Ghost bị gọi bằng một cái tên cũ chưa chắc còn thuộc về anh.
+Boss Stage 3 là **Dàn Hợp Xướng**, một cơ thể xương khổng lồ ghép từ giọng nói, hài cốt và lời cầu nguyện. Nó thử từng nhân vật bằng giọng người chết: Mark bị kéo về tội lỗi cũ, Solei bị ép chọn một căn tính duy nhất, Heni bị buộc biến mất để trả chỗ cho Heniana, và Ghost bị gọi bằng một cái tên cũ chưa chắc còn thuộc về anh. Riêng với Deep, khi quái vật mượn giọng Balthazar và Vance để ép anh cầm cờ tử đạo, anh nhếch mép cười vì đã thấu hiểu tâm nguyện của họ, rồi tung đòn tất sát đập tan ảo ảnh.
 
 Với Ghost, Stage 3 chỉ nên mở thêm một khe hở, chưa giải thích hết. Cái Lưỡi có thể gọi một tên cũ, nhắc đến một phòng trắng, một mã hồ sơ bị xóa, hoặc một câu nói mà Ghost chưa từng kể với ai. Người chơi hiểu rằng Ghost có quá khứ thật, nhưng chưa biết đó là quá khứ của nạn nhân, vật thí nghiệm, hay một thứ gì phức tạp hơn.
 
@@ -82,49 +85,33 @@ Sau chiến thắng, nhóm hiểu sự thật lớn hơn: Thần Sơ Sinh có th
 
 Nhóm nhận ra không thể chỉ phá từng mảnh, cũng không thể hồi sinh thần. Họ phải tìm nơi tiếng gọi bắt đầu: **Dây Rốn**. Nhưng trước đó, họ phải đi qua **Akam Meskul**, nơi **Trái Tim** đang đập.
 
-## Stage 4 - Akam Meskul
+## Stage 4 - Akam Meskul: Huyết Lộ & Khe Nứt Cõi Mộng
 
-**Akam Meskul** là vùng núi bị nguyền, nơi nghi lễ giết Thần Sơ Sinh từng diễn ra. Xác thánh long Akam Meskul, từng chở anh hùng Aramut vào vùng cấm, giờ trở thành đường hầm cho con người đi sâu vào lời nguyền.
+**Akam Meskul** không chỉ là vùng núi tử địa nơi thánh long gục ngã, mà là **Vực Thẳm Tiền Mộng (The Liminal Threshold)** – ranh giới mong manh nơi thực tại bắt đầu rạn nứt trước sóng ý thức của Thần Sơ Sinh. Xác thánh long Akam Meskul đâm xuyên núi đá, hóa thạch thành con đường độc đạo dẫn vào vùng cấm.
 
-Ở đây có hai phe chính. **Con Cháu Chiếc Nôi** tin thế giới đã giết thần của họ nên phải bị thanh tẩy. **Tàn Dư Sáu Vương Quốc** tin họ có thể dùng khoa học để hồi sinh thần rồi đẩy nó ra khỏi thế giới. Một phe biến phục thù thành thánh chiến. Phe kia biến sinh tồn thành thí nghiệm và bạo lực có tổ chức.
+Ở đây có hai phe lớn đối đầu trong một cuộc chiến biến dạng: **Con Cháu Chiếc Nôi** (biến phục thù thành thánh chiến cuồng tín) và **Tàn Dư Sáu Vương Quốc** (biến sinh tồn thành bạo lực kỹ trị). Nhưng đáng sợ hơn cả vũ khí là hiện tượng **Mộng Du Tập Thể (Somnambulism)**: nhịp đập từ Trái Tim thần ru ngủ hàng ngàn binh sĩ, biến họ thành những con rối vừa chém giết vừa lẩm bẩm đồng dao cổ với đôi mắt phát sáng xanh.
 
-Stage này vẫn có tiếng vọng cho Deep và Solei, nhưng trọng tâm cảm xúc nên chuyển nhiều hơn sang **Tulas** và **Block**.
+Tại đây, thân thế của **Stranger / Ghost** dần phát lộ: những kẻ mộng du quỳ rạp trước anh, xem anh là một thực thể thức giấc sớm hơn cả Chiếc Nôi. Trong lòng xác rồng, khi không gian bị bẻ cong, Ghost vô thức bước xuyên qua vách xương đá như một bóng ma ngoài vũ trụ với ánh mắt hố đen vô tận. Đồng thời, tại phòng lưu trữ của Tàn Dư, anh phát hiện hồ sơ mật về **Dự án STRANGER - Prototype Zero**, xác nhận thể xác mình từng bị một thực thể lang thang ngoài không gian xâm nhập.
 
-Với Tulas, Akam Meskul không cần phải là quê hương hay tín ngưỡng của anh. Nó liên quan gián tiếp qua cách cả vùng đất này ám ảnh bởi máu, huyết thống, độc tố và cơ thể sống. Năng lực điều khiển máu/chất lỏng của Tulas trở nên vừa hữu ích vừa đáng sợ: anh có thể khóa vết thương, kéo máu độc ra khỏi người bị nhiễm, dựng khiên từ chất lỏng ô nhiễm, mở đường qua vùng khí độc bằng màng lọc tạm, hoặc dùng máu trên chiến trường làm điểm neo cứu người. Nhưng mỗi lần làm vậy, anh càng chạm vào ranh giới giữa cứu chữa và xâm phạm thân thể. Stage 4 hỏi Tulas rõ hơn: một sức mạnh khiến người khác sợ có thể được dùng để bảo vệ họ mà không biến anh thành thứ họ ghê tởm hay không.
+Trọng tâm cảm xúc của Stage 4 gắn chặt với **Tulas** và **Block**. Tulas đối mặt với ranh giới cấm kỵ khi dùng thuật máu để thanh tẩy chất độc mộng mị trong huyết quản đồng đội, chấp nhận bị kinh sợ để cứu lấy sinh mạng. Block trở thành trụ cột kiên cường nhất, dùng khiên và thân mình chống đỡ vòm xương sụp đổ, bảo vệ dân thường và biến sức mạnh thành nơi trú ẩn an toàn.
 
-Với Block, Akam Meskul là nơi những bộ lạc và phe phái nói rất nhiều về anh hùng, sức mạnh, cơ thể, tốc độ, huyết thống và chiến công. Block không nhanh nhất, không hào nhoáng nhất, cũng không phải kiểu anh hùng được kể trong bài ca. Nhưng ở Stage này, anh nhận ra giá trị của mình: đứng vững khi người khác cần đường rút, giữ cầu cho dân chạy, che khiên cho người bị thương, vác người qua vùng độc, hoặc chặn một cánh cửa đủ lâu để cả nhóm sống sót. Sự trưởng thành của Block không phải là trở thành biểu tượng, mà là hiểu rằng sức mạnh có thể là một nơi trú tạm cho người khác.
+Trong khi đó, **Heni** rơi vào cơn sốt mê man và kết nối ngoại cảm trong mơ với **Heniana** (đang nằm trong buồng ngủ đông), nghe được lời cảnh báo về bản chất thật của sự hồi sinh mà Jamerson mù quáng theo đuổi.
 
-Deep vẫn nhận ra truyền thuyết anh hùng Aramut đã bị cắt sửa để che thất bại của các vua. Solei vẫn thấy cả hai phe đều muốn dùng máu của cô để chứng minh điều gì đó. Nhưng hai ý này nên làm nền cho Tulas và Block: một người đối diện câu hỏi về máu, một người đối diện câu hỏi về cơ thể và che chở.
+Tại đỉnh Kardias, **Trái Tim** bị Tàn Dư gắn vào cỗ máy **Titan Trái Tim**. Khi Jamerson dùng Con Mắt, Cái Tai và Cái Lưỡi cưỡng ép Trái Tim đập theo nhịp Heniana, cỗ máy biến thành Quái Vật Mộng Nộ tàn sát tất cả. Cả đội phối hợp dập tắt cỗ máy chiến tranh: Block chặn đòn, Tulas hóa giải máu độc, Solei chém đứt xích neo, Deep phá hủy lõi bộc phát.
 
-**Trái Tim** của Thần Sơ Sinh bị gắn vào một cỗ máy chiến tranh: **Titan Trái Tim**. Nó không phải pin năng lượng. Nó khuếch đại cảm xúc: thù hận thành bạo động, sợ hãi thành diệt trừ, tình yêu của Jamerson thành quyền sở hữu.
+Khi Titan sụp đổ, một tiếng nổ siêu thanh xé toạc bầu trời đỉnh núi, mở ra **Khe Nứt Xanh Lam (The Blue Rift)** dẫn thẳng vào **The Cradle (Cõi Mộng Của Thần)**. Jamerson ôm buồng ngủ đông nhảy qua miệng vực. Giữa cơn bão không gian, Ghost cất tiếng nói đầu tiên bằng giọng nói cổ xưa của thực thể Stranger: *"Cõi Mộng đã mở... và kẻ lạ mặt phải trở về."* Deep đã kịp lao tới nắm chặt cổ tay anh, dùng tình người để kéo nhân tính của Ghost trở lại trước khi anh bị nuốt chửng. Cả đội nắm chặt tay nhau, cùng nhảy qua khe nứt ánh sáng xanh, chính thức bước vào thế giới siêu thực của Stage 5.
 
-Jamerson đến đúng lúc hai phe giao chiến. Ông dùng dữ liệu từ Con Mắt, Cái Tai và Cái Lưỡi để làm Trái Tim đập theo nhịp Heniana. Trận Titan nên buộc đội chia việc rõ: Tulas cứu người và kiểm soát máu độc giữa chiến trường, Block giữ tuyến rút lui và bảo vệ dân thường, Deep phá hủy loa tuyên truyền, Mark ra lệnh không truy sát người đầu hàng, Solei cứu trẻ bị hai phe đánh dấu.
+## Stage 5 - The Cradle: Cõi Mộng Xanh & Sự Thức Tỉnh Của Stranger
 
-Sau trận Titan, Jamerson lấy được Trái Tim và bỏ lại hàng trăm người đang chết để tiếp tục đưa Heniana vào vùng cấm. Cú đánh này khiến Tulas và Block nhìn thấy mặt trái của "cứu một người bằng mọi giá": một người dùng cơ thể kẻ khác làm nguyên liệu, người còn lại dùng sức mạnh của mình để giữ những cơ thể ấy còn sống.
+**The Cradle (Chiếc Nôi)** là một không gian siêu thực nằm ngoài ranh giới vật lý, ngập tràn sắc xanh lam - ngọc bích của biển sao vô tận. Các mảnh vỡ ký ức từ Marseille, Sakuri, Calvaria và Akam Meskul trôi nổi lơ lửng, tạo thành một bài kiểm tra tâm linh cuối cùng cho cả đội qua 3 tầng ảo mộng:
 
-Mảnh Cái Lưỡi còn lại nhắc nhóm: người chết có thể gọi, nhưng người sống phải được chọn có đáp lại hay không. Con đường cuối cùng mở ra qua xương sống Akam Meskul, dẫn đến **The Cradle**.
+- **Tầng 1 - Ký Ức Đảo Chiều:** Từng nhân vật đối mặt với những ảo ảnh hạnh phúc giả tạo quyến rũ. Đội kiên định từ chối các lối tắt dối trá; Ghost sử dụng thể trạng dị thường của *Prototype Zero* để mở toang cánh cổng không hồ sơ dẫn vào tầng sâu.
+- **Tầng 2 - Phòng Gương Tâm Trí:** Ý thức của Heni hòa nhập vào tâm trí buồng ngủ đông của Heniana qua mặt nước phản chiếu dải ngân hà. Hai cô bé tìm thấy sự thấu hiểu sâu sắc và cùng khẳng định quyền tự quyết của bản thân. Đồng thời, nhóm dập tắt bạo lực giữa Con Cháu Chiếc Nôi và Tàn Dư dưới chân đài tế.
+- **Tầng 3 - Dây Rốn Vũ Trụ & Jamerson:** Jamerson hợp nhất 5 mảnh thần để hồi sinh Heniana, nhưng nhận ra mình chỉ đang tạo cánh cửa cho thần linh nuốt chửng thế giới. Khi Heniana tỉnh lại và từ chối sống bằng cái giá hủy diệt, Jamerson suy sụp và bị Con Mắt chiếm đoạt thành *The Father-Eye* trước khi bị cả đội đánh bại.
 
-## Stage 5 - The Cradle
+**Boss Ẩn Tối Thượng – THE DREAM SOVEREIGN (Stranger Thức Tỉnh):** Nếu Ghost đạt Độ Nhiễu 100% hoặc người chơi kích hoạt tài liệu *Dự Án STRANGER*, năng lượng Dây Rốn Vũ Trụ đánh thức thực thể cổ xưa ngoài không gian bên trong anh. Ghost bị tước quyền kiểm soát, biến thành The Dream Sovereign bẻ cong thực tại cõi mộng. Không dùng bạo lực tiêu diệt, cả đội phối hợp sử dụng các lệnh COMMAND để tạo kết giới tình đồng đội (*The Tether of Humanity*), lần lượt gọi tên thật và nhắc lại ký ức hành trình để thức tỉnh nhân tính của Ghost, trục xuất thực thể Stranger trở lại cõi hư không.
 
-**The Cradle** là nơi nằm giữa hiện thực và giấc mơ, nơi Dây Rốn của Thần Sơ Sinh vẫn nối với thứ gì đó ngoài thế giới. Ký ức của các Stage trước xuất hiện chồng lên nhau: Armorlite, Laundel, làng chài, Calvaria, xác rồng, phòng ngủ đông của Heniana.
-
-The Cradle không chỉ là địa điểm cuối. Nó là bài kiểm tra cuối của toàn bộ hành trình. Mỗi vùng ký ức ép nhóm quay lại một cám dỗ cũ: Marseille hỏi họ có bỏ người khác để tự thoát không, Sakuri hỏi họ có dùng một đứa trẻ làm công cụ không, Calvaria hỏi họ có để người chết ra lệnh cho người sống không, Akam Meskul hỏi họ có biến lịch sử và máu thành lý do giết người không.
-
-Tại đây, các phe kéo đến cùng lúc. **Con Cháu Chiếc Nôi** muốn hồi sinh thần để thanh tẩy nhân loại. **Tàn Dư Sáu Vương Quốc** muốn hồi sinh thần để đẩy nó về nơi cũ. **Jamerson** muốn dùng thần để cứu Heniana. Ba lực này chính là ba lựa chọn sai đã được gieo từ trước: phá hủy bằng thù hận, dùng thần như công cụ sinh tồn, hoặc biến một đứa trẻ thành cái cớ cho phép màu.
-
-Đến đây, tuyến bí ẩn của **Ghost** mới rõ hơn. Những mảnh ký ức rải từ Bastonne, Calvaria và Akam Meskul ghép lại: anh từng là một thí nghiệm thất bại, một người không phù hợp làm vật chứa và không dễ bị điều khiển. Vẫn có thể để mở một phần câu hỏi ai đã xóa hồ sơ của anh, ai là người đầu tiên thử nghiệm trên anh, và vì sao anh sống sót. Điều chắc chắn là anh không phải người được chọn. Anh là người sống sót từ một lỗi sai, và có quyền chọn mình là ai.
-
-Heni yếu đi khi đến gần Dây Rốn vì cơ thể cô cộng hưởng với Heniana. Nhưng điều đó không biến cô thành chìa khóa vô tri. Càng nghe thấy giấc mơ của Heniana, Heni càng hiểu mình không phải phần thay thế cho ai. Cô có quyền sợ, quyền từ chối, và quyền tự chọn hành động cuối cùng của mình.
-
-Jamerson đặt buồng ngủ đông của Heniana vào Dây Rốn. Con Mắt, Cái Tai, Cái Lưỡi và Trái Tim cùng hướng về cô bé. Nhưng sự thật lộ ra: nếu nghi lễ thành công, Heniana có thể tỉnh dậy trong cơ thể thần, nhưng ký ức, ý chí và nhân tính của cô sẽ bị Thần Sơ Sinh nhấn chìm. Jamerson không cứu con. Ông đang dùng hình ảnh con làm cửa cho một thứ khác bước vào.
-
-Trong trận cuối, Jamerson trở thành vật chứa của các mảnh thần. Khi Heniana tỉnh lại trong vài phút ngắn, cô không hiểu hết chiến tranh hay lời nguyền, nhưng cô thấy Heni, thấy những người lạ đang chảy máu vì mình, và thấy cha mình đã biến nỗi sợ mất con thành quyền sở hữu. Cô nói rằng nếu phải sống bằng cách làm mọi người khác ngủ mãi, cô không muốn. Câu nói đó làm Jamerson vỡ ra. Nhưng Con Mắt chiếm lấy phần ham muốn còn lại trong ông, biến ông thành **The Father-Eye**.
-
-Ghost cắt liên kết giữa các mảnh thần và cơ thể Jamerson. Nhóm không chọn phá hủy các mảnh, cũng không hồi sinh Thần Sơ Sinh. Canon chọn cách thứ ba: **trả các mảnh về qua Dây Rốn**, tức là không sở hữu, không giết lại, không biến thần thành công cụ, mà tháo nút lời gọi đã bị con người bóp méo quá lâu.
-
-Đoạn cuối là một nghi lễ ngược. Ghost cắt Con Mắt vì anh là lỗi sai hệ thống không đọc được. Solei gọi Heni bằng tên riêng, không phải bản sao. Mark ra lệnh cuối cùng: không ai được chết để trả phí cho phép màu. Deep giữ đường rút thay vì đứng làm biểu tượng chiến thắng. Tulas dùng máu để cứu người, không mở khóa nghi lễ. Block giữ cổng cho người sống rời đi. Heni và Heniana cùng chạm vào mạch sáng, nhưng không ai thay thế ai.
-
-Các mảnh thần tan ra, The Cradle ngừng mơ. Jamerson dùng phần sức cuối giữ Con Mắt không bám vào Heniana. Đó là hành động đúng đầu tiên của ông sau rất nhiều tội ác, nhưng không xóa những gì ông đã làm. Không ai trong nhóm gọi ông là anh hùng. Ông chết như một người cha thất bại, cuối cùng đã dừng ra lệnh.
+Hành trình khép lại bằng **Nghi Lễ Ngược**: Heni hát khúc ca ru an ủi Thần Sơ Sinh, Ghost cắt mạch Con Mắt, Dây Rốn tan thành ánh sáng sao bay về vũ trụ. Thế giới thoát khỏi bóng ma Đại Họa, Heniana thở được nhịp thở đầu tiên của một con người bình thường, và Ghost bước đi tự do cùng những người bạn đã cứu rỗi linh hồn anh.
 
 ## Epilogue
 
