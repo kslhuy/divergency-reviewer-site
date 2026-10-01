@@ -11,7 +11,7 @@ function imageInfo(root, file) {
   return {
     src: relative.split('/').map(encodeURIComponent).join('/'),
     name: path.basename(file),
-    folder: path.posix.dirname(relative).replace(/^imgs\/?/, '') || 'Khác',
+    folder: path.posix.dirname(relative).replace(/^imgs\/?/, '') || 'Other',
     bytes: statSync(file).size,
   };
 }
@@ -19,7 +19,7 @@ function imageInfo(root, file) {
 export function listImages(root) {
   const base = path.join(root, 'imgs');
   if (!existsSync(base)) return [];
-  if (!realpathSync(base).startsWith(realpathSync(root) + path.sep)) throw fail('Thư viện ảnh nằm ngoài dự án.', 403);
+  if (!realpathSync(base).startsWith(realpathSync(root) + path.sep)) throw fail('The image library is outside the project.', 403);
   const images = [];
   function visit(directory) {
     for (const entry of readdirSync(directory, { withFileTypes: true })) {
@@ -38,11 +38,11 @@ function imageExtension(bytes) {
   if (bytes.length >= 4 && bytes[0] === 255 && bytes[1] === 216 && bytes[2] === 255 && bytes.at(-2) === 255 && bytes.at(-1) === 217) return '.jpg';
   if (bytes.length >= 14 && ['GIF87a', 'GIF89a'].includes(bytes.toString('ascii', 0, 6))) return '.gif';
   if (bytes.length >= 20 && bytes.toString('ascii', 0, 4) === 'RIFF' && bytes.toString('ascii', 8, 12) === 'WEBP') return '.webp';
-  throw fail('Chọn ảnh PNG, JPG, GIF hoặc WebP hợp lệ.');
+  throw fail('Choose a valid PNG, JPG, GIF or WebP image.');
 }
 
 export function saveImage(root, originalName, bytes) {
-  if (!bytes.length || bytes.length > MAX_IMAGE_BYTES) throw fail('Mỗi ảnh cần nhỏ hơn hoặc bằng 20 MB.', 413);
+  if (!bytes.length || bytes.length > MAX_IMAGE_BYTES) throw fail('Each image must be 20 MB or smaller.', 413);
   const extension = imageExtension(bytes);
   const basename = path.posix.basename(String(originalName || 'anh').replaceAll('\\', '/'));
   const stem = path.parse(basename).name.normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/[đĐ]/g, 'd')
@@ -50,10 +50,10 @@ export function saveImage(root, originalName, bytes) {
   const digest = createHash('sha256').update(bytes).digest('hex');
   const directory = path.join(root, 'imgs', 'uploads');
   for (const target of [path.join(root, 'imgs'), directory]) {
-    if (existsSync(target) && !realpathSync(target).startsWith(realpathSync(root) + path.sep)) throw fail('Thư mục tải ảnh không hợp lệ.', 403);
+    if (existsSync(target) && !realpathSync(target).startsWith(realpathSync(root) + path.sep)) throw fail('Invalid upload folder.', 403);
   }
   mkdirSync(directory, { recursive: true });
-  if (!realpathSync(directory).startsWith(realpathSync(root) + path.sep)) throw fail('Thư mục tải ảnh không hợp lệ.', 403);
+  if (!realpathSync(directory).startsWith(realpathSync(root) + path.sep)) throw fail('Invalid upload folder.', 403);
   const file = path.join(directory, `${stem}-${digest.slice(0, 16)}${extension}`);
   try { writeFileSync(file, bytes, { flag: 'wx' }); }
   catch (error) {

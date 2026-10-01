@@ -9,6 +9,6 @@ for(const name of readdirSync(root)) {
   if (/\.(md|html)$/.test(name) || ['build-reviewer-html.mjs','package.json','package-lock.json','vite.config.mjs','drizzle.config.ts','.gitignore','.env.example'].includes(name))
     cpSync(path.join(root,name),path.join(target,name));
 }
-for(const name of ['.openai','scripts','content','online','db','drizzle','tests'])
+for(const name of ['.openai','scripts','src','styles','content','online','db','drizzle','tests'])
   cpSync(path.join(root,name),path.join(target,name),{recursive:true});
 console.log('Sites source prepared in '+target);

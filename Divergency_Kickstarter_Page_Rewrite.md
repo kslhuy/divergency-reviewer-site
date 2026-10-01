@@ -83,7 +83,7 @@ Quickly select a nearby ally and issue orders to coordinate attacks or protect y
 - **Come:** Instantly regroup around the player's position.
 - **Hold Left / Hold Right:** Hold a specific flank to control lane pressure.
 - **Line / Wedge / Circle:** Shift the party's formation dynamically.
-- **Synchronized Assist:** Call a selected ally to trigger their signature support action (e.g., calling Block to drop a shield wall or Henry to throw smoke bombs).
+- **Synchronized Assist:** Call a selected ally to trigger their signature support action (e.g., calling Block to drop a shield wall or Mark to throw smoke bombs).
 
 While you brawl in real-time, the command system adds a satisfying layer of tactician control—pulling allies out of danger zones, locking down choke points, or calling in synchronized strikes exactly when a boss reveals a weak spot.
 
@@ -117,11 +117,11 @@ Solei is young, fast, and confident when she moves, even when she still doubts h
 *   **Movement Mechanic:** *[Developer Note: Replace this placeholder with your character details file data]* (e.g., Dash cancels, multi-directional air dashes)
 *   **Squad Synergy:** High single-target DPS, executes high-priority targets, and moves swiftly across lanes to assist allies in distress.
 
-### Henry — *The Tactical Scout*
+### Mark — *The Tactical Scout*
 
 > *"Knowing where the enemy will be tomorrow is worth more than a thousand soldiers today."*
 
-Henry is a tactical veteran who works from the shadows. He reads the battlefield, gathers information, and supports the team when brute force is not enough.
+Mark is a tactical veteran who works from the shadows. He reads the battlefield, gathers information, and supports the team when brute force is not enough.
 
 *   **Combat Style:** Ranged Support / Battlefield Disruption
 *   **Signature Weapon:** Silent Crossbow & Smoke Bombs

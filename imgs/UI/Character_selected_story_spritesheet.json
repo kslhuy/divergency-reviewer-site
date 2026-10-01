@@ -233,7 +233,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "character_card_henry": {
+    "character_card_Mark": {
       "group": "character_cards",
       "frame": {
         "x": 3117,
@@ -318,7 +318,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "character_art_henry_card": {
+    "character_art_Mark_card": {
       "group": "character_art",
       "frame": {
         "x": 3756,
@@ -403,7 +403,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "role_icon_henry_target": {
+    "role_icon_Mark_target": {
       "group": "icons",
       "frame": {
         "x": 228,
@@ -1151,7 +1151,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "bottom_reserve_card_henry": {
+    "bottom_reserve_card_Mark": {
       "group": "bottom_panels",
       "frame": {
         "x": 1583,
@@ -1321,7 +1321,7 @@
       "rotated": false,
       "trimmed": false
     },
-    "bottom_portrait_henry": {
+    "bottom_portrait_Mark": {
       "group": "bottom_portraits",
       "frame": {
         "x": 3340,

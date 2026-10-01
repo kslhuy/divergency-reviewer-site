@@ -1,7 +1,11 @@
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { buildReviewer } from '../build-reviewer-html.mjs';
 import { listImages } from '../scripts/editor-images.mjs';
+import { readContent } from '../scripts/chapter-content.mjs';
+import { assetFiles } from '../src/asset-files.mjs';
 if (existsSync('imgs')) buildReviewer();
 mkdirSync('online/generated', { recursive: true });
+writeFileSync('online/generated/gameplay.html', readContent(process.cwd(), 'gameplay'));
+writeFileSync('online/generated/assets.json', JSON.stringify(Object.fromEntries(assetFiles.map(file => ['/' + file, readFileSync(file, 'utf8')]))));
 if (existsSync('imgs')) writeFileSync('online/generated/images.json', JSON.stringify(listImages(process.cwd())));
 else if (!existsSync('online/generated/images.json')) throw new Error('Missing deployment image manifest');
