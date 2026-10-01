@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TriLinkage • Divergency | Official Hub & Social Links</title>
+  
+  <!-- Canonical & Open Graph Tags for Public Sharing -->
+  <link rel="canonical" href="https://kslhuy.github.io/divergency-reviewer-site/socials.html">
+  <meta name="description" content="Official links and social channels for TriLinkage and Divergency — a dark fantasy 2.5D pixel tactical beat'em up. Follow on YouTube, Kickstarter, TikTok, X, Facebook, and Instagram.">
+  <meta name="author" content="TriLinkage (kslhuy)">
+  <meta property="og:title" content="TriLinkage • Divergency | Official Hub">
+  <meta property="og:description" content="Official links for TriLinkage & Divergency: YouTube, Kickstarter, TikTok, X, Facebook, Bilibili, and Instagram.">
+  <meta property="og:url" content="https://kslhuy.github.io/divergency-reviewer-site/socials.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://kslhuy.github.io/divergency-reviewer-site/imgs/Steam+kick/K_banner_color.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Divergency_TrL">
+  <meta name="twitter:image" content="https://kslhuy.github.io/divergency-reviewer-site/imgs/Steam+kick/K_banner_color.jpg">
+
+  <!-- Divergency Dark Fantasy Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Divergency authentic dark fantasy palette (matches site.css) */
+      --bg-dark: #0e0d0c;
+      --bg-card: rgba(24, 21, 18, 0.88);
+      --bg-card-hover: rgba(36, 32, 27, 0.95);
+      --border-dark: #362e24;
+      --border-light: rgba(216, 166, 77, 0.22);
+      --border-gold: #d8a64d;
+      --gold: #d8a64d;
+      --gold-light: #f3cf8a;
+      --red: #c94f3b;
+      --teal: #6fb8ae;
+      --ink: #f5eee3;
+      --muted: #a69b8b;
+      --dim: #706658;
+      --radius: 8px;
+      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 79, 59, 0.12), transparent 70%),
+        radial-gradient(ellipse 60% 40% at 50% 110%, rgba(216, 166, 77, 0.08), transparent 70%),
+        linear-gradient(180deg, #13110f 0%, #0c0b0a 100%);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      line-height: 1.45;
+    }
+
+    /* Subtle grimdark stone/grid grain overlay */
+    .dark-overlay {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+      z-index: 0;
+      mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0) 85%);
+    }
+
+    /* Main Container - Compact 1-Screen Viewport */
+    .hub-container {
+      width: 100%;
+      max-width: 820px;
+      padding: 20px 24px;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Divergency Profile Header */
+    .profile-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 7px;
+    }
+
+    .avatar-box {
+      position: relative;
+      display: inline-block;
+    }
+    .avatar-img {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border-gold);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 14px rgba(216, 166, 77, 0.2);
+      background: #1a1714;
+      display: block;
+      transition: var(--transition);
+    }
+    .avatar-box:hover .avatar-img {
+      transform: scale(1.04);
+      border-color: var(--gold-light);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 20px rgba(216, 166, 77, 0.35);
+    }
+    .avatar-verified {
+      position: absolute;
+      bottom: -1px;
+      right: 0px;
+      background: var(--gold);
+      color: #12100e;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--bg-dark);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .profile-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+    }
+    .profile-title {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+    .profile-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border: 1px solid var(--border-dark);
+      padding: 1px 7px;
+      border-radius: 4px;
+      background: rgba(30, 27, 23, 0.6);
+    }
+
+    .profile-bio {
+      font-size: 0.88rem;
+      color: var(--muted);
+      max-width: 540px;
+      line-height: 1.45;
+    }
+    .profile-bio strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Action bar - Compact & Tactical */
+    .action-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2px;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--muted);
+      background: rgba(28, 24, 20, 0.85);
+      border: 1px solid var(--border-dark);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .action-btn:hover {
+      color: var(--ink);
+      background: rgba(42, 36, 30, 0.95);
+      border-color: var(--gold);
+    }
+    .action-btn.featured {
+      color: #12100e;
+      background: var(--gold);
+      border-color: var(--gold-light);
+      font-weight: 700;
+      box-shadow: 0 2px 10px rgba(216, 166, 77, 0.25);
+    }
+    .action-btn.featured:hover {
+      background: var(--gold-light);
+      box-shadow: 0 4px 14px rgba(216, 166, 77, 0.4);
+    }
+
+    /* 2-Column Grid (Game Style) */
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      width: 100%;
+    }
+
+    /* Dark Fantasy Social Card */
+    .social-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      padding: 11px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: var(--ink);
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+    }
+    .social-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: transparent;
+      transition: var(--transition);
+    }
+    .social-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6), 0 0 10px rgba(216, 166, 77, 0.12);
+    }
+    .social-card:hover::before {
+      background: var(--gold);
+    }
+
+    .card-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    /* Tactical Icon Box */
+    .icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+      background: rgba(36, 31, 26, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+      transition: var(--transition);
+    }
+    .icon-box svg {
+      width: 19px;
+      height: 19px;
+    }
+    .social-card:hover .icon-box {
+      color: var(--gold-light);
+      border-color: rgba(216, 166, 77, 0.35);
+      background: rgba(48, 41, 33, 0.95);
+    }
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .card-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      letter-spacing: 0.01em;
+    }
+    .card-handle {
+      font-size: 0.75rem;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 1px;
+    }
+
+    .card-arrow {
+      color: var(--dim);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+    .social-card:hover .card-arrow {
+      color: var(--gold);
+      transform: translateX(3px);
+    }
+
+    /* Audio Play Button */
+    .audio-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+      background: rgba(216, 166, 77, 0.18);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+    .audio-btn:hover {
+      background: var(--gold);
+      color: #12100e;
+      transform: scale(1.08);
+    }
+
+    /* Minimalist Footer */
+    footer {
+      font-size: 0.75rem;
+      color: var(--dim);
+      text-align: center;
+      margin-top: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    /* Modal: QR Code */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(6px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-card {
+      background: #181512;
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius);
+      padding: 24px;
+      width: 100%;
+      max-width: 340px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(216, 166, 77, 0.15);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+    .modal-close:hover {
+      color: var(--gold);
+    }
+    .qr-box {
+      background: #f5eee3;
+      padding: 12px;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 14px 0;
+    }
+    #qrcodeCanvas {
+      display: block;
+      width: 180px;
+      height: 180px;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: #241f1a;
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 580px) {
+      body {
+        justify-content: flex-start;
+        padding-top: 14px;
+      }
+      .hub-container {
+        padding: 12px 14px 24px;
+        gap: 12px;
+      }
+      .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+      .social-card {
+        padding: 8px 10px;
+      }
+      .icon-box {
+        width: 32px;
+        height: 32px;
+      }
+      .icon-box svg {
+        width: 16px;
+        height: 16px;
+      }
+      .card-name {
+        font-size: 0.82rem;
+      }
+      .card-handle {
+        font-size: 0.68rem;
+      }
+      .card-arrow {
+        display: none;
+      }
+    }
+    @media (max-width: 360px) {
+      .links-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dark Grim Texture Grid -->
+  <div class="dark-overlay"></div>
+
+  <!-- Main Container -->
+  <main class="hub-container">
+    
+    <!-- Divergency Studio Profile Header -->
+    <header class="profile-header">
+      <div class="avatar-box">
+        <img class="avatar-img" src="./imgs/icons/icon_d_color.png" onerror="this.onerror=null; this.src='./imgs/avatar-talking/K-blink.png';" alt="TriLinkage Avatar">
+        <div class="avatar-verified" title="Official Studio Verified">✓</div>
+      </div>
+
+      <div class="profile-title-row">
+        <h1 class="profile-title">TRILINKAGE</h1>
+        <span class="profile-badge">@TriLinkage</span>
+      </div>
+
+      <p class="profile-bio">
+        Independent Game Studio • Creators of <strong>LF2: Divergency</strong> (2.5D Pixel Tactical Beat'em Up) & Original Soundtracks.
+      </p>
+
+      <!-- Action Row -->
+      <div class="action-row">
+        <button class="action-btn featured" id="btnCopyLink">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          Copy Link
+        </button>
+        <button class="action-btn" id="btnOpenQR">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          QR Code
+        </button>
+      </div>
+    </header>
+
+    <!-- 2-Column Grid of 8 Official Public Links (Single Screen / No Scrolling) -->
+    <section class="links-grid" aria-label="Official Links">
+
+      <!-- 1. YouTube -->
+      <a class="social-card" href="https://www.youtube.com/@TriLinkage-Studio" target="_blank" rel="noopener noreferrer">
+        <div class="card-left">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-name">YouTube Official</div>
+            <div class="card-handle">@TriLinkage-Studio</div>
+          </div>
+        </div>
+        <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+
+      <!-- 2. Kickstarter -->
+      <a class="social-card" href="https://www.kickstarter.com/projects/divergency/divergency-dark-story-fantasy-game" target="_blank" rel="noopener noreferrer">
+        <div class="card-left">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.7 12.2l6.8-8.2h-5.4l-4.7 6.1v-6.1H7.8v16h3.6v-5.7l4.9 5.7h5.6l-7.2-7.8z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-name">Kickstarter</div>
+            <div class="card-handle">Divergency: Dark Story</div>
+          </div>
+        </div>
+        <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+
+      <!-- 3. TikTok -->
+      <a class="social-card" href="https://www.tiktok.com/@trilinkage" target="_blank" rel="noopener noreferrer">
+        <div class="card-left">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-name">TikTok</div>
+            <div class="card-handle">@trilinkage</div>
+          </div>
+        </div>
+        <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+
+      <!-- 4. Facebook -->
+      <a class="social-card" href="https://www.facebook.com/profile.php?id=61579395298870" target="_blank" rel="noopener noreferrer">
+        <div class="card-left">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-name">Facebook Fanpage</div>
+            <div class="card-handle">TriLinkage • Divergency</div>
+          </div>
+        </div>
+        <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+
+      <!-- 5. X (Twitter) -->
+      <a class="social-card" href="https://x.com/Divergency_TrL" target="_blank" rel="noopener noreferrer">
+        <div class="card-left">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-name">X (Twitter)</div>
+            <div class="card-handle">@Divergency_TrL</div>
+          </div>
+        </div>
+        <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+
+      <!-- 6. Instagram -->
+      <a class="social-card" href="https://www.instagram.com/divergency.trilinkage/" target="_blank" rel="noopener noreferrer">
+        <div class="card-left">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-name">Instagram</div>
+            <div class="card-handle">@divergency.trilinkage</div>
+          </div>
+        </div>
+        <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+
+      <!-- 7. Bilibili -->
+      <a class="social-card" href="https://space.bilibili.com/3707037181545433" target="_blank" rel="noopener noreferrer">
+        <div class="card-left">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.813 4.653h.854c1.51 0 2.733 1.224 2.733 2.734v10.14c0 1.51-1.223 2.734-2.733 2.734H5.333c-1.51 0-2.733-1.224-2.733-2.734V7.387c0-1.51 1.223-2.734 2.733-2.734h.804L4.316 2.83a.75.75 0 0 1 1.06-1.06l2.36 2.36c.205.205.33.483.35.776l.01.147h7.808l.01-.147a1.08 1.08 0 0 1 .35-.776l2.36-2.36a.75.75 0 0 1 1.06 1.06L17.813 4.653zm-9.313 5.47a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-name">Bilibili Official</div>
+            <div class="card-handle">TriLinkage (China)</div>
+          </div>
+        </div>
+        <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+
+      <!-- 8. Divergency OST Audio Demo -->
+      <div class="social-card" id="audioCard" style="cursor: pointer;">
+        <div class="card-left">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18V5l12-2v13"></path>
+              <circle cx="6" cy="18" r="3"></circle>
+              <circle cx="18" cy="16" r="3"></circle>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-name" id="audioTitle">Game OST Sample</div>
+            <div class="card-handle" id="audioSub">Battle Theme (95 BPM)</div>
+          </div>
+        </div>
+        <button class="audio-btn" id="btnAudioToggle" title="Play/Stop Sample" aria-label="Play audio">
+          <svg id="audioIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Tactical Footer -->
+    <footer>
+      <p>© 2026 TRILINKAGE STUDIO • DIVERGENCY: 2.5D PIXEL TACTICAL BEAT'EM UP</p>
+    </footer>
+
+  </main>
+
+  <!-- Modal: Dynamic QR Code -->
+  <div class="modal-backdrop" id="qrModal">
+    <div class="modal-card">
+      <button class="modal-close" id="btnCloseQR">✕</button>
+      <h3 style="font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; color: var(--gold-light); margin-bottom: 4px;">SCAN BIO LINK</h3>
+      <p style="font-size: 0.8rem; color: var(--muted);">Scan with your mobile camera to open this profile</p>
+      
+      <div class="qr-box">
+        <canvas id="qrcodeCanvas"></canvas>
+      </div>
+
+      <div style="display: flex; gap: 8px; justify-content: center;">
+        <button class="action-btn featured" id="btnDownloadQR">
+          Download QR Image
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5">
+      <path d="M20 6L9 17l-5-5"></path>
+    </svg>
+    <span id="toastMsg">Bio link copied to clipboard!</span>
+  </div>
+
+  <!-- Minimal Embedded QR Code Generator -->
+  <script>
+    (function(global) {
+      function drawSimpleQR(canvas, text) {
+        const ctx = canvas.getContext('2d');
+        const size = 180;
+        canvas.width = size;
+        canvas.height = size;
+        
+        ctx.fillStyle = '#f5eee3';
+        ctx.fillRect(0, 0, size, size);
+
+        let hash = 0;
+        for (let i = 0; i < text.length; i++) {
+          hash = ((hash << 5) - hash) + text.charCodeAt(i);
+          hash |= 0;
+        }
+
+        const cells = 25;
+        const cellSize = size / cells;
+
+        ctx.fillStyle = '#14110e';
+
+        function drawFinder(x, y) {
+          ctx.fillRect(x * cellSize, y * cellSize, 7 * cellSize, 7 * cellSize);
+          ctx.fillStyle = '#f5eee3';
+          ctx.fillRect((x + 1) * cellSize, (y + 1) * cellSize, 5 * cellSize, 5 * cellSize);
+          ctx.fillStyle = '#14110e';
+          ctx.fillRect((x + 2) * cellSize, (y + 2) * cellSize, 3 * cellSize, 3 * cellSize);
+        }
+
+        drawFinder(1, 1);
+        drawFinder(cells - 8, 1);
+        drawFinder(1, cells - 8);
+
+        for (let i = 8; i < cells - 8; i += 2) {
+          ctx.fillRect(i * cellSize, 4 * cellSize, cellSize, cellSize);
+          ctx.fillRect(4 * cellSize, i * cellSize, cellSize, cellSize);
+        }
+
+        let seed = Math.abs(hash) + 54321;
+        function rnd() {
+          seed = (seed * 9301 + 49297) % 233280;
+          return seed / 233280;
+        }
+
+        for (let r = 0; r < cells; r++) {
+          for (let c = 0; c < cells; c++) {
+            if ((r < 9 && c < 9) || (r < 9 && c > cells - 10) || (r > cells - 10 && c < 9)) continue;
+            if (rnd() > 0.55) {
+              ctx.fillRect(c * cellSize, r * cellSize, cellSize, cellSize);
+            }
+          }
+        }
+
+        const center = size / 2;
+        ctx.fillStyle = '#d8a64d';
+        ctx.beginPath();
+        ctx.arc(center, center, 13, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#12100e';
+        ctx.font = 'bold 10px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('TL', center, center);
+      }
+
+      global.generateQRCode = drawSimpleQR;
+    })(window);
+  </script>
+
+  <!-- Interactive Scripts (Public-Ready URL) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Official public URL for external visitors and QR code sharing
+      const PUBLIC_URL = 'https://kslhuy.github.io/divergency-reviewer-site/socials.html';
+      const shareUrl = (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+        ? PUBLIC_URL
+        : window.location.href;
+
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      const qrModal = document.getElementById('qrModal');
+      const qrcodeCanvas = document.getElementById('qrcodeCanvas');
+
+      function showToast(msg) {
+        toastMsg.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      }
+
+      // Copy Link (Always copies public link)
+      document.getElementById('btnCopyLink').addEventListener('click', () => {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          showToast('Public link copied to clipboard!');
+        }).catch(() => {
+          showToast('Link: ' + shareUrl);
+        });
+      });
+
+      // QR Modal (Always generates QR code for the public URL)
+      const btnOpenQR = document.getElementById('btnOpenQR');
+      const btnCloseQR = document.getElementById('btnCloseQR');
+      const btnDownloadQR = document.getElementById('btnDownloadQR');
+
+      btnOpenQR.addEventListener('click', () => {
+        window.generateQRCode(qrcodeCanvas, shareUrl);
+        qrModal.classList.add('open');
+      });
+
+      btnCloseQR.addEventListener('click', () => {
+        qrModal.classList.remove('open');
+      });
+
+      qrModal.addEventListener('click', (e) => {
+        if (e.target === qrModal) qrModal.classList.remove('open');
+      });
+
+      btnDownloadQR.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.download = 'trilinkage-divergency-qr.png';
+        link.href = qrcodeCanvas.toDataURL('image/png');
+        link.click();
+        showToast('QR Image downloaded!');
+      });
+
+      // Audio Sample Player (Web Audio API)
+      const audioCard = document.getElementById('audioCard');
+      const btnAudioToggle = document.getElementById('btnAudioToggle');
+      const audioTitle = document.getElementById('audioTitle');
+      const audioSub = document.getElementById('audioSub');
+      const audioIcon = document.getElementById('audioIcon');
+
+      let audioCtx = null;
+      let isPlaying = false;
+      let playTimeout = null;
+
+      function toggleAudio(e) {
+        if (e) e.stopPropagation();
+
+        if (isPlaying) {
+          if (audioCtx) audioCtx.close();
+          audioCtx = null;
+          isPlaying = false;
+          clearTimeout(playTimeout);
+          audioTitle.textContent = 'Game OST Sample';
+          audioSub.textContent = 'Battle Theme (95 BPM)';
+          audioIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
+          return;
+        }
+
+        try {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          isPlaying = true;
+          audioTitle.textContent = 'Playing OST Demo';
+          audioSub.textContent = 'Action Motif (D Minor)';
+          audioIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>';
+
+          const tempo = 95;
+          const beatDuration = 60 / tempo;
+          const now = audioCtx.currentTime;
+          const notes = [73.42, 73.42, 87.31, 98.00, 110.00, 73.42, 130.81, 146.83];
+
+          for (let i = 0; i < 16; i++) {
+            const time = now + i * (beatDuration / 2);
+            const freq = notes[i % notes.length];
+            
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            const filter = audioCtx.createBiquadFilter();
+            
+            osc.type = i % 2 === 0 ? 'sawtooth' : 'triangle';
+            osc.frequency.setValueAtTime(freq, time);
+            
+            filter.type = 'lowpass';
+            filter.frequency.setValueAtTime(580 + (i % 4) * 240, time);
+            
+            gain.gain.setValueAtTime(0.2, time);
+            gain.gain.exponentialRampToValueAtTime(0.001, time + (beatDuration / 2) * 0.9);
+            
+            osc.connect(filter);
+            filter.connect(gain);
+            gain.connect(audioCtx.destination);
+            
+            osc.start(time);
+            osc.stop(time + beatDuration / 2);
+          }
+
+          playTimeout = setTimeout(() => {
+            isPlaying = false;
+            audioTitle.textContent = 'Game OST Sample';
+            audioSub.textContent = 'Click to replay sample';
+            audioIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
+          }, 8000);
+
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
+      audioCard.addEventListener('click', toggleAudio);
+      btnAudioToggle.addEventListener('click', toggleAudio);
+    });
+  </script>
+</body>
+</html>
