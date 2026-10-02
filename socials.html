@@ -257,8 +257,23 @@
       transform: translateY(-2px);
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6), 0 0 10px rgba(216, 166, 77, 0.12);
     }
-    .social-card:hover::before {
+    .social-card:hover::before,
+    .social-card.is-playing::before {
       background: var(--gold);
+    }
+    .social-card.is-playing {
+      border-color: var(--border-gold);
+      background: var(--bg-card-hover);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7), 0 0 14px rgba(216, 166, 77, 0.22);
+    }
+    .social-card.is-playing .icon-box {
+      color: var(--gold-light);
+      border-color: rgba(216, 166, 77, 0.6);
+      animation: pulseAudio 1.8s infinite alternate ease-in-out;
+    }
+    @keyframes pulseAudio {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(216, 166, 77, 0.4); }
+      100% { transform: scale(1.08); box-shadow: 0 0 10px 2px rgba(216, 166, 77, 0.25); }
     }
 
     .card-left {
@@ -662,10 +677,10 @@
         </svg>
       </a>
 
-      <!-- 8. Divergency OST Audio Demo -->
+      <!-- 8. Divergency Official OST -->
       <div class="social-card" id="audioCard" style="cursor: pointer;">
         <div class="card-left">
-          <div class="icon-box">
+          <div class="icon-box" id="audioIconBox">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M9 18V5l12-2v13"></path>
               <circle cx="6" cy="18" r="3"></circle>
@@ -673,15 +688,19 @@
             </svg>
           </div>
           <div class="card-info">
-            <div class="card-name" id="audioTitle">Game OST Sample</div>
-            <div class="card-handle" id="audioSub">Battle Theme (95 BPM)</div>
+            <div class="card-name" id="audioTitle">Official OST Theme</div>
+            <div class="card-handle" id="audioSub">Trailer Theme Original</div>
           </div>
         </div>
-        <button class="audio-btn" id="btnAudioToggle" title="Play/Stop Sample" aria-label="Play audio">
+        <button class="audio-btn" id="btnAudioToggle" title="Play/Pause Official Soundtrack" aria-label="Play official audio">
           <svg id="audioIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
             <polygon points="5 3 19 12 5 21 5 3"></polygon>
           </svg>
         </button>
+        <audio id="officialAudio" preload="metadata">
+          <source src="./audio/Music_Trailler_Original.mp3" type="audio/mpeg">
+          <source src="./content/gameplay/audio/Music_Trailler_Original.mp3" type="audio/mpeg">
+        </audio>
       </div>
 
     </section>
@@ -846,79 +865,48 @@
         showToast('QR Image downloaded!');
       });
 
-      // Audio Sample Player (Web Audio API)
+      // Divergency Official OST Audio Player
       const audioCard = document.getElementById('audioCard');
       const btnAudioToggle = document.getElementById('btnAudioToggle');
       const audioTitle = document.getElementById('audioTitle');
       const audioSub = document.getElementById('audioSub');
       const audioIcon = document.getElementById('audioIcon');
+      const officialAudio = document.getElementById('officialAudio');
 
-      let audioCtx = null;
-      let isPlaying = false;
-      let playTimeout = null;
+      function setAudioUI(playing) {
+        if (playing) {
+          audioCard.classList.add('is-playing');
+          audioTitle.textContent = '▶ Playing Official OST';
+          audioSub.textContent = 'Trailer Theme Original';
+          audioIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>';
+        } else {
+          audioCard.classList.remove('is-playing');
+          audioTitle.textContent = 'Official OST Theme';
+          audioSub.textContent = 'Trailer Theme Original';
+          audioIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
+        }
+      }
 
       function toggleAudio(e) {
         if (e) e.stopPropagation();
+        if (!officialAudio) return;
 
-        if (isPlaying) {
-          if (audioCtx) audioCtx.close();
-          audioCtx = null;
-          isPlaying = false;
-          clearTimeout(playTimeout);
-          audioTitle.textContent = 'Game OST Sample';
-          audioSub.textContent = 'Battle Theme (95 BPM)';
-          audioIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
-          return;
-        }
-
-        try {
-          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-          isPlaying = true;
-          audioTitle.textContent = 'Playing OST Demo';
-          audioSub.textContent = 'Action Motif (D Minor)';
-          audioIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>';
-
-          const tempo = 95;
-          const beatDuration = 60 / tempo;
-          const now = audioCtx.currentTime;
-          const notes = [73.42, 73.42, 87.31, 98.00, 110.00, 73.42, 130.81, 146.83];
-
-          for (let i = 0; i < 16; i++) {
-            const time = now + i * (beatDuration / 2);
-            const freq = notes[i % notes.length];
-            
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            const filter = audioCtx.createBiquadFilter();
-            
-            osc.type = i % 2 === 0 ? 'sawtooth' : 'triangle';
-            osc.frequency.setValueAtTime(freq, time);
-            
-            filter.type = 'lowpass';
-            filter.frequency.setValueAtTime(580 + (i % 4) * 240, time);
-            
-            gain.gain.setValueAtTime(0.2, time);
-            gain.gain.exponentialRampToValueAtTime(0.001, time + (beatDuration / 2) * 0.9);
-            
-            osc.connect(filter);
-            filter.connect(gain);
-            gain.connect(audioCtx.destination);
-            
-            osc.start(time);
-            osc.stop(time + beatDuration / 2);
-          }
-
-          playTimeout = setTimeout(() => {
-            isPlaying = false;
-            audioTitle.textContent = 'Game OST Sample';
-            audioSub.textContent = 'Click to replay sample';
-            audioIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
-          }, 8000);
-
-        } catch (err) {
-          console.error(err);
+        if (!officialAudio.paused && !officialAudio.ended) {
+          officialAudio.pause();
+          setAudioUI(false);
+        } else {
+          officialAudio.play().then(() => {
+            setAudioUI(true);
+          }).catch((err) => {
+            console.error('Audio play error:', err);
+            showToast('Tap again to play audio');
+          });
         }
       }
+
+      officialAudio.addEventListener('play', () => setAudioUI(true));
+      officialAudio.addEventListener('pause', () => setAudioUI(false));
+      officialAudio.addEventListener('ended', () => setAudioUI(false));
 
       audioCard.addEventListener('click', toggleAudio);
       btnAudioToggle.addEventListener('click', toggleAudio);
