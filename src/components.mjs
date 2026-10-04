@@ -85,7 +85,7 @@ export function renderPane(doc, index) {
 ${doc.id === "gameplay" ? '        <div class="doc-editor-row"><button class="web-edit-button" id="web-edit-start" type="button">✎ Edit document</button><p class="web-edit-note" id="web-edit-note">Edit and save for the team.</p></div>' : ''}
       </div>
 
-      <section class="media-band" aria-label="${escapeAttribute(doc.label)} image slots">
+${doc.showMedia === false ? '' : `      <section class="media-band" aria-label="${escapeAttribute(doc.label)} image slots">
         <div class="media-head">
           <div class="media-head-text">
             <h3>Visual Slots</h3>
@@ -100,7 +100,7 @@ ${doc.id === "gameplay" ? '        <div class="doc-editor-row"><button class="we
         <div class="media-strip">
           <div class="media-grid" data-media-grid="${doc.id}"></div>
         </div>
-      </section>
+      </section>`}
 
       <div class="doc-layout">
         ${renderIndex(doc)}

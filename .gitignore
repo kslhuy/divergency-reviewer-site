@@ -1,4 +1,4 @@
-﻿_site/
+_site/
 node_modules/
 npm-debug.log*
 .DS_Store
@@ -12,3 +12,4 @@ dist/
 .env.local
 .dev.vars
 online/generated/
+tmp/

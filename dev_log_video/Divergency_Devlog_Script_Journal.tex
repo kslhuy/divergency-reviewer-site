@@ -1,0 +1,430 @@
+% !TEX program = xelatex
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\IfFontExistsTF{TeX Gyre Heros}{\setmainfont{TeX Gyre Heros}}{\setmainfont{Arial}}
+\usepackage[margin=20mm]{geometry}
+\usepackage{xcolor}
+\usepackage{array,longtable,booktabs}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{parskip}
+\usepackage{hyperref}
+
+\definecolor{divergencynavy}{RGB}{18, 30, 49}
+\definecolor{divergencyaccent}{RGB}{196, 77, 88}
+\definecolor{codebg}{RGB}{245, 247, 250}
+\definecolor{boxborder}{RGB}{210, 218, 226}
+\definecolor{subtext}{RGB}{85, 95, 110}
+\definecolor{journalgold}{RGB}{160, 100, 30}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=divergencynavy,
+    urlcolor=divergencyaccent,
+    pdftitle={Kịch bản Devlog Divergency - Phiên bản Nhật Ký Sáng Tạo (Dev Journal)},
+    pdfauthor={Divergency Team (Huy, Khoa, Nghĩa)}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}
+\setcounter{tocdepth}{2}
+\renewcommand{\contentsname}{Mục lục Kịch bản}
+\renewcommand{\arraystretch}{1.25}
+\setlist[itemize]{leftmargin=*,itemsep=3pt,topsep=3pt}
+
+\newcommand{\tickbox}{\fbox{\rule{0pt}{0.75em}\hspace{0.75em}}}
+
+\newcommand{\shot}[3]{%
+  \Needspace{10\baselineskip}%
+  \vspace{0.8em}%
+  \noindent\fcolorbox{boxborder}{codebg}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+      \textbf{\large #1 \quad #2} \hfill {\small\color{subtext} #3}%
+    }%
+  }\par\nopagebreak\vspace{0.4em}%
+}
+
+\newcommand{\field}[2]{\textbf{\color{divergencynavy}#1:} #2\par\vspace{2pt}}
+\newcommand{\voBox}[2]{%
+  \vspace{3pt}%
+  \noindent\colorbox{codebg}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep}{%
+      \textbf{\color{divergencynavy}#1:}\\
+      \textit{#2}%
+    }%
+  }\par\vspace{3pt}%
+}
+
+\begin{document}
+
+{\LARGE\bfseries\color{divergencynavy} Kịch bản Devlog Divergency}\par
+{\large\bfseries\color{divergencyaccent} Phiên bản Nhật Ký Tự Sự (Dev Journal Edition) · Thời lượng: 08:15 · Song ngữ (VI / EN)}\par
+\vspace{0.2em}
+{\small Định hướng lấy cảm hứng từ: \textit{"I Spent 5 Years Building the Game I Always Wanted to Play"} (SpaceFudge / Wildaria)\quad | \quad Đội ngũ: Huy, Khoa, Nghĩa}
+
+\vspace{0.8em}
+\hrule height 1pt
+\vspace{0.8em}
+
+\textbf{Điểm mới trong Phiên bản Nhật Ký (Dev Journal Edition):}
+Kịch bản được nâng cấp chiều sâu cảm xúc và nhịp dẫn chuyện theo phong cách nhật ký cá nhân:
+\begin{itemize}
+    \item \textbf{Cơn khát chưa được giải tỏa 15 năm (The Gamer's Void):} Khởi đầu không đơn thuần là "thích Little Fighter 2", mà nói lên nỗi khắc khoải của thế hệ game thủ 8x/9x khi dòng game 2D brawler đối kháng nhiều người dần biến mất khỏi thị trường hiện đại, nhường chỗ cho đồ họa 3D và gacha. Dự án sinh ra để tự tay lấp đầy khoảng trống đó.
+    \item \textbf{Vực thẳm đời thực \& Giọng tự sự chân thành (The Vulnerable Valley):} Tái hiện chân thực khoảnh khắc mệt mỏi lúc 1 giờ sáng sau giờ làm việc hành chính, sự ức chế khi thuật toán phân kỳ (Divergence) ở chỗ làm kẹp giữa lỗi bug in-game, và cảm giác nản lòng khi thấy dự án dậm chân tại chỗ. Điểm mấu chốt là tiếng chuông Discord của Khoa và Nghĩa vào nửa đêm đã giữ cho ngọn lửa không bao giờ tắt.
+    \item \textbf{Kể chuyện kỹ thuật dưới dạng "Nỗi ám ảnh tìm kiếm Game Feel":} Biến các bước kỹ thuật khô cứng (Photoshop $\rightarrow$ Aseprite $\rightarrow$ Pivot chân $\rightarrow$ Hitbox) thành câu chuyện vật lộn của người thợ rèn: Cuộc chiến 3 tuần chỉ để tìm điểm neo gót chân không bị trượt như trên băng, và ma thuật đóng băng 2 frame hình (\textit{Hitstop}) để tạo nên nhát chém "đã tay".
+    \item \textbf{Lời mời đồng hành Kickstarter ấm áp (Finishing the Dream Together):} Không mang nặng tính kêu gọi thương mại, mà định vị như một lời mời những người bạn cùng chung niềm đam mê bước vào cuốn nhật ký, đồng hành hoàn thành 20\% chặng đường cuối cùng của một giấc mơ 6 năm.
+\end{itemize}
+
+\tableofcontents
+
+\newpage
+\section{Bảng tổng hợp mạch video (Timeline Overview)}
+
+\begin{longtable}{@{}p{.15\textwidth}p{.32\textwidth}p{.48\textwidth}@{}}
+\toprule
+\textbf{Thời gian} & \textbf{Chương} & \textbf{Trọng tâm câu chuyện Nhật Ký (Journal Flow)} \\
+\midrule
+\endhead
+00:00 -- 01:00 & \textbf{01. Dưới tán Sakura} & Khoảnh khắc tĩnh lặng trên đỉnh đồi; tiếng thở của nhân vật sau 6 năm; đối chiếu với bản prototype ngô nghê 2018. \\
+01:00 -- 02:15 & \textbf{02. Cơn khát 15 năm \& Đồng đội} & Ký ức quán net chen chúc bàn phím LF2; khoảng trống thị trường; bước ngoặt gặp gỡ Khoa \& Nghĩa (2023). \\
+02:15 -- 03:45 & \textbf{03. Divergency \& Vực thẳm đời thực} & Toán học điều khiển (Convergence vs. Divergency); 1 giờ sáng sau giờ làm; tiếng chuông Discord cứu sống dự án. \\
+03:45 -- 05:45 & \textbf{04. Nỗi ám ảnh Một Đòn Đánh} & Nhật ký người thợ rèn: Aseprite $\rightarrow$ Cuộc chiến 3 tuần chỉnh Pivot gót chân $\rightarrow$ Logic Hitbox $\rightarrow$ Ma thuật 2 frame Hitstop. \\
+05:45 -- 06:45 & \textbf{05. Để Game Tự Lên Tiếng} & 30 giây combat thuần khiết không lời bình; sự ăn khớp chiến thuật của Solei \& Deep sau ngàn giờ gọt giũa. \\
+06:45 -- 08:15 & \textbf{06. Sáu năm \& Lời mời đồng hành} & Ý nghĩa của sự chậm rãi kiên định; lời mời tham gia Kickstarter; trở về dưới bóng cây Sakura khép lại hành trình. \\
+\bottomrule
+\end{longtable}
+
+\newpage
+\section{Kịch bản chi tiết từng phân cảnh}
+
+% -------------------------------------------------------------------------------------------------
+\subsection*{Chương 1: Dưới tán Sakura -- Dừng lại để nhìn lại (00:00 -- 01:00)}
+
+\shot{S01}{Khoảnh khắc tĩnh lặng trên đỉnh đồi gió}{00:00 -- 00:22 · 22 giây · Tư liệu: F01, F02}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Trong suốt sáu năm qua, đây là khoảnh khắc mà mình trân trọng nhất. Không phải những chuỗi combo rực lửa hay những pha giao tranh nghẹt thở... mà là khoảnh khắc nhân vật được dừng lại. Đứng cạnh nhau dưới tán hoa anh đào cổ thụ trên một mỏm đồi lộng gió, ngắm những cánh hoa rơi. Tựa game này tên là Divergency — một dự án hành động pixel art mà tụi mình đã lặng lẽ xây dựng suốt hơn sáu năm cuộc đời.}
+
+\voBox{English Voiceover}{In over six years of development, this is the exact moment I cherish most. Not the high-octane combos, nor the chaotic screen-shaking battles... but the quiet moments when the characters can simply stop and breathe. Standing side by side beneath an ancient blooming sakura on a windswept cliff, watching petals drift away. This is Divergency — an indie action pixel brawler that we’ve been quietly building for over six years of our lives.}
+
+\field{Hình cần lấy}{Toàn cảnh góc rộng (cinematic wide shot): mỏm đồi gió, cây sakura cổ thụ với tán hồng xòe rộng, cánh hoa rơi lả tả. Deep và Solei đứng cạnh nhau nghỉ ngơi yên bình. Khung thoại in-game xuất hiện: \textit{deep\_b: "My legs stopped. My head hasn't."} Camera giữ tĩnh 15 giây, sau đó từ từ zoom chậm vào hai nhân vật.}
+
+\field{Dựng}{Mở đầu nhẹ nhàng từ màn hình đen (fade in). Không chèn logo studio hay hiệu ứng giật. Giữ khung hình tĩnh cho người xem cảm nhận không khí trong lành, lắng đọng.}
+
+\field{Âm thanh}{Tiếng gió thổi vi vu qua rặng cây, tiếng lá xào xạc, tiếng chim hót xa xăm. Nhạc nền lofi acoustic nhẹ nhàng, ấm áp nổi lên từ từ dưới giọng đọc.}
+
+\field{Chữ trên hình}{\textsc{Divergency} · Dự án hành động pixel art}
+
+\field{Ghi chú sản xuất}{Khung cảnh khớp hoàn toàn với ảnh screenshot in-game thực tế (Deep \& Solei dưới gốc cây Sakura).}
+
+% ---
+\shot{S02}{Đối chiếu sự ngô nghê 6 năm trước}{00:22 -- 00:42 · 20 giây · Tư liệu: F02, F06}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Để hai nhân vật này có thể đứng yên vững chãi và thực sự thở trong thế giới này... tụi mình đã đi qua một hành trình dài hơn bản thân từng tưởng tượng. Sáu năm trước, nhân vật đầu tiên thậm chí còn không biết đứng trên mặt đất. Lúc đó, mọi thứ chỉ là những đoạn code vụng về, nhảy lên là rơi xuyên sàn hoặc bay thẳng ra ngoài màn hình.}
+
+\voBox{English Voiceover}{To get these two characters to stand firmly and truly breathe in this world... took a journey far longer than we ever dared imagine. Six years ago, our very first prototype character didn't even know how to touch the ground. Back then, everything was just clumsy code snippets: jumping meant clipping through the floor or launching uncontrollably off-screen.}
+
+\field{Hình cần lấy}{Từ cảnh hoa anh đào, dissolve nhẹ sang clip lưu trữ cũ từ 2018–2019: sprite nhân vật đơn sơ màu xám/xanh, chân trượt trên mặt phẳng xám, nhảy lên bị rơi xuyên qua sàn hoặc văng ra ngoài màn hình. So sánh cạnh nhau 3 giây giữa bản thử nghiệm cũ và dáng đứng vững chãi hiện tại.}
+
+\field{Dựng}{Cắt mềm mại giữa hai thời kỳ. Không chế giễu bản cũ, mà thể hiện sự hoài niệm và đối chiếu chân thực của một cuốn nhật ký phát triển.}
+
+\field{Âm thanh}{Nhạc nền chuyển nhẹ sang giai điệu tò mò, xen kẽ tiếng click chuột và âm thanh va chạm pixel mộc mạc của bản build cũ.}
+
+\field{Chữ trên hình}{Bản thử nghiệm đầu tiên (6 năm trước) \(\rightarrow\) Bản build hiện tại}
+
+% ---
+\shot{S03}{Mở trang nhật ký sáng tạo}{00:42 -- 01:00 · 18 giây · Tư liệu: F01, F06}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Hôm nay, mình muốn mở cuốn nhật ký này ra và kể cho các bạn nghe câu chuyện thật nhất phía sau Divergency: từ cơn khát của một game thủ mê Little Fighter 2 suốt 15 năm, bước ngoặt đồng đội năm 2023, trò đùa trớ trêu của toán học đằng sau cái tên game, và cuộc chiến điên rồ để tạo ra một nhát chém 'đã tay' đúng nghĩa.}
+
+\voBox{English Voiceover}{Today, I want to open our dev journal and share the honest, unvarnished story behind Divergency: the 15-year void left by Little Fighter 2, the turning point when our team united in 2023, the ironic math joke behind our title, and the obsessive battle to craft a combat strike that feels truly visceral.}
+
+\field{Hình cần lấy}{Chuyển cảnh nhanh: góc quay bàn làm việc, màn hình Unity sáng đèn, tay bấm phím Play \(\rightarrow\) 3 giây combat chớp nhoáng của Deep \(\rightarrow\) logo Divergency hiện lên sắc nét.}
+
+\field{Dựng}{Nhịp dựng bắt đầu tăng tốc độ nhẹ, tạo sự tò mò và hào hứng cho người xem.}
+
+\field{Âm thanh}{Tiếng gõ bàn phím cơ dứt khoát, tiếng vung kiếm ngọt lịm của game, nhạc nền có thêm nhịp trống lo-fi nhẹ nhàng cuốn hút.}
+
+\field{Chữ trên hình}{Nhật ký hành trình tạo nên Divergency}
+
+% -------------------------------------------------------------------------------------------------
+\newpage
+\subsection*{Chương 2: Cơn khát 15 năm \& Những người đồng đội (01:00 -- 02:15)}
+
+\shot{S04}{Cơn khát Little Fighter 2 suốt 15 năm}{01:00 -- 01:25 · 25 giây · Tư liệu: F03, F06}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Mọi thứ bắt nguồn từ một khoảng trống chưa bao giờ được lấp đầy. Hơn mười lăm năm trước, tuổi thơ của tụi mình gắn liền với Little Fighter 2 — những buổi chiều bốn đứa trẻ chen chúc chung một chiếc bàn phím ở quán net, gõ lách cách đến mỏi nhừ tay vì những pha combat hỗn loạn. Nhưng theo thời gian, ngành công nghiệp game chuyển hết sang thế giới 3D rộng lớn hay những tựa game gacha bóng bẩy. Cảm giác một tựa game brawler 2D thuần chất, có chiều sâu chiến thuật và một không khí tăm tối... dường như đã biến mất. Nếu không ai làm tựa game đó cho mình chơi, thì tụi mình sẽ tự tay xây dựng nó.}
+
+\voBox{English Voiceover}{Everything started from a void that never truly healed. Over fifteen years ago, our childhood was defined by Little Fighter 2 — four kids crammed around a single sticky keyboard in a smoky internet cafe, yelling over chaotic brawls. But as years passed, the industry shifted toward massive 3D worlds and flashy gacha games. That raw, tactile feeling of a pure 2D tactical brawler set in an atmospheric world completely vanished. And so we realized: if nobody is making the game we desperately want to play... we’ll have to build it ourselves.}
+
+\field{Hình cần lấy}{Gameplay LF2 cổ điển (đoạn giao tranh 4 người trên cùng một màn hình). Sau đó là cảnh tác giả ngồi gõ những dòng code di chuyển đầu tiên trên Unity, thử nghiệm di chuyển 8 hướng.}
+
+\field{Dựng}{Dùng khung hình 4:3 cổ điển cho đoạn LF2, sau đó mở rộng ra khung hình 16:9 hiện đại khi chuyển sang cảnh màn hình code Unity.}
+
+\field{Âm thanh}{Tiếng gõ phím lách cách của game cổ, âm thanh giao tranh quen thuộc của LF2 lồng nhẹ dưới lời dẫn.}
+
+\field{Chữ trên hình}{Cơn khát 15 năm · Little Fighter 2 và khoảng trống bị lãng quên}
+
+% ---
+\shot{S05}{Vực thẳm làm game một mình \& Bước ngoặt 2023}{01:25 -- 01:50 · 25 giây · Tư liệu: F04, F08, F09}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Nhưng làm game một mình là một cái bẫy cô độc khủng khiếp. Mình vừa phải viết code, vừa tự vẽ những sprite méo mó vụng về. Dự án cứ thế trôi đi trong vô định. Cho tới năm 2023, bước ngoặt thực sự đã gõ cửa. Mình tình cờ thấy những bức tranh pixel art của Khoa — một nét vẽ u tối, ma mị và đầy tính tự sự của Dark Fantasy. Cùng lúc đó, mình thấy hệ thống hội thoại mà Nghĩa xây dựng — cực kỳ mượt mà, sâu lắng và thông minh. Mình đánh bạo rủ cả hai cùng tham gia. Và năm 2023, Divergency chính thức có một gia đình.}
+
+\voBox{English Voiceover}{Yet solo game development is a lonely trap. Juggling complex code while drawing amateurish, warped sprites nearly burned me out. The project was drifting in purgatory. Then came 2023 — the real turning point. I stumbled upon Khoa’s pixel artwork — haunting, moody, and steeped in rich dark fantasy. Around the same time, I discovered an interactive dialogue system crafted by Nghĩa that felt remarkably organic and deep. I took a chance and reached out to both. In 2023, Divergency finally found its family.}
+
+\field{Hình cần lấy}{Hiện song song hai tư liệu chân thực: Nửa màn hình là các bức vẽ concept art, sprite chi tiết của Khoa (nhân vật Deep, Solei, các boss bóng tối). Nửa màn hình là demo hệ thống hội thoại (player dialogue system) do Nghĩa lập trình: hộp thoại hiện mượt mà, phân nhánh tương tác. Cuối cảnh hiện timeline: \textbf{Chính thức hợp tác -- 2023}.}
+
+\field{Dựng}{Chia màn hình tinh tế (split-screen), sau đó hai phần hòa vào nhau thành một khung hình chung của project.}
+
+\field{Âm thanh}{Nhạc nền ấm dần lên, thể hiện sự đồng điệu và năng lượng sáng tạo mới.}
+
+\field{Chữ trên hình}{Năm 2023 · Khoa (Pixel Art) \& Nghĩa (Narrative \& Dialogue)}
+
+% ---
+\shot{S06}{Khi nhân vật bắt đầu có linh hồn}{01:50 -- 02:15 · 25 giây · Tư liệu: F01, F08, F21}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Có Khoa chăm chút phần hồn hình ảnh và Nghĩa thổi tính cách vào từng câu thoại, Divergency rũ bỏ hoàn toàn lớp áo của một bản tech-demo vô danh. Nhân vật không chỉ vung kiếm theo lệnh phím, mà họ bắt đầu có nội tâm, có sự mệt mỏi và những suy tư của riêng mình. Thế nhưng, giữa một thế giới đầy vết thương đó... bọn mình lại loay hoay vì chưa tìm được một cái tên.}
+
+\voBox{English Voiceover}{With Khoa shaping the visual soul and Nghĩa giving a poignant voice to every interaction, Divergency completely shed its identity as a cold tech demo. The characters weren't just executing inputs; they had quiet exhaustion, personal burdens, and inner lives. Yet, standing in this wounded world... we were still stuck on a fundamental question: what do we call this game?}
+
+\field{Hình cần lấy}{Cảnh in-game kết hợp trọn vẹn: nhân vật của Khoa di chuyển trong bối cảnh, khi tương tác hiện câu thoại thông minh của Nghĩa (chẳng hạn câu thoại dưới cây hoa anh đào: \textit{"My legs stopped. My head hasn't."}).}
+
+\field{Dựng}{Chuyển cảnh mượt mà giữa artwork tĩnh sang nhân vật tương tác động.}
+
+\field{Âm thanh}{Tiếng pop nhẹ của khung thoại, tiếng gió thoảng qua dưới nền nhạc.}
+
+\field{Chữ trên hình}{Thổi hồn vào nhân vật · Thế giới bắt đầu thở}
+
+% -------------------------------------------------------------------------------------------------
+\newpage
+\subsection*{Chương 3: Divergency, Mô phỏng Toán học \& Đời thực (02:15 -- 03:45)}
+
+\shot{S07}{Trò đùa trớ trêu của Toán học: Convergence vs. Divergency}{02:15 -- 02:45 · 30 giây · Tư liệu: F07, F08, F23}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Cái tên Divergency thực ra bắt nguồn từ một sự bất lực rất khôi hài. Công việc nghiên cứu ban ngày của mình là về hệ thống điều khiển tự động: ngày nào cũng thiết kế Controller và Observer để tìm kiếm sự 'hội tụ' — Convergence. Nhưng khi chạy mô phỏng trên máy tính, trong khi mình điên đầu tìm kiếm sự hội tụ, thì màn hình cứ liên tục báo... Phân kỳ — Divergency! Đúng lúc đó cả nhóm ngồi chọn tên game. Nhìn vào thế giới u tối của Khoa — nơi trật tự vỡ vụn, các mảnh vỡ lịch sử trôi dạt và phân kỳ khỏi thực tại... Ba đứa nhìn nhau bật cười: Nếu ban ngày cuộc đời không cho ta hội tụ, thì hãy biến sự phân kỳ ấy thành tên của tựa game!}
+
+\voBox{English Voiceover}{The name Divergency actually was born from a hilarious stroke of academic frustration. In my daytime research on control systems, my daily mission is designing controllers and observers to mathematically achieve 'Convergence'. But in my simulations, while I was desperately fighting for convergence... the output graphs kept blasting into divergence! Right around then, we were brainstorming titles. Looking at Khoa’s art — a world fractured at its seams, diverging from order — we all burst out laughing. If daytime reality refuses to converge, let’s turn that relentless Divergency into our game's title!}
+
+\field{Hình cần lấy}{Bên trái: Màn hình mô phỏng MATLAB/Python với đồ thị đường cong phân kỳ vọt ra ngoài khung hình (Divergence graph). Bên phải: Concept art thế giới Dark Fantasy hoang tàn, bất ổn của Khoa. Ở giữa: Hai dòng chữ so sánh: \textit{Convergence (Hội tụ) \(\rightarrow\) Divergency (Phân kỳ)}.}
+
+\field{Dựng}{Đồ thị toán học chuyển động vẽ nét vọt ra khỏi viền, rồi hòa tan thành logo rạn nứt chữ \textbf{DIVERGENCY}.}
+
+\field{Âm thanh}{Tiếng glitch điện tử nhỏ hoặc tiếng nốt nhạc trượt dốc hài hước khi đường cong vọt ra ngoài, sau đó là tiếng chuông trầm ngân của logo game.}
+
+\field{Chữ trên hình}{Convergence vs. Divergency · Khi sự thất bại toán học trở thành cái tên}
+
+% ---
+\shot{S08}{Vực thẳm đời thực: 1 giờ sáng sau giờ làm}{02:45 -- 03:15 · 30 giây · Tư liệu: F06, F22}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Nhưng sau cái tên hào sảng đó là một thực tế tàn khốc: tụi mình vẫn phải mưu sinh. Divergency là một dự án nằm kẹp giữa những khe hẹp của cuộc sống thường nhật. Đi làm về mệt lả, cơm nước xong chỉ còn một hai tiếng lúc đêm muộn khi đầu óc đã kiệt sức. Có những giai đoạn công việc cuốn đi, cả nhóm nhiều tháng trời không thể mở project. Ngồi một mình trước màn hình lúc một giờ sáng, nhìn dòng commit git nằm yên suốt hàng tuần, một cảm giác bất lực dâng lên: 'Liệu mình có đang phí hoài tuổi trẻ không?'}
+
+\voBox{English Voiceover}{Behind that proud name lay an exhausting reality: we all had to survive. Divergency existed in the narrow fractures of everyday life. Commuting back exhausted, finishing dinner, leaving only a fragile hour or two late at night when our brains were already fried. There were stretches of months where nobody had the energy to touch the repository. Sitting alone in front of a frozen screen at 1 AM, staring at empty commit logs, that creeping self-doubt hit hard: 'Am I just wasting my prime years on an impossible dream?'}
+
+\field{Hình cần lấy}{Góc bàn làm việc đêm khuya: ánh đèn bàn hắt lên bàn phím, đồng hồ chỉ 01:15, màn hình hiển thị commit git thưa thớt trong quá khứ hoặc thư mục dự án cũ. Không khí tĩnh lặng, chân thực.}
+
+\field{Dựng}{Dựng các shot tĩnh, nhịp thở chậm rãi, thể hiện gánh nặng đời thường mà ai làm indie game cũng thấu hiểu.}
+
+\field{Âm thanh}{Tiếng kim đồng hồ tích tắc khe khẽ, tiếng thở dài nhẹ hoặc tiếng nhấp chuột đơn độc trong đêm.}
+
+\field{Chữ trên hình}{Sau giờ làm việc · Dự án kẹp giữa đời thực}
+
+% ---
+\shot{S09}{Tiếng chuông Discord lúc nửa đêm: May mắn vì không ai bỏ cuộc}{03:15 -- 03:45 · 30 giây · Tư liệu: F04, F06, F01}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Thế nhưng, điều kỳ diệu nhất của Divergency chính là tinh thần của cả ba đứa. Mỗi khi mình thấy mệt mỏi và muốn buông xuôi, thì đúng nửa đêm, tiếng chuông Discord lại reo lên. Khoa gửi sang một frame sprite mới toanh của Solei; Nghĩa thả vào nhóm một đoạn hội thoại mới đầy ám ảnh. Nhìn hai người anh em vẫn miệt mài vẽ từng pixel trong đêm, ngọn lửa trong lòng lại bùng cháy. Tụi mình có thể đi rất chậm, nhưng điều may mắn nhất suốt sáu năm qua... là không một ai bỏ cuộc. Tụi mình lại mở máy lên, và tiếp tục bước đi.}
+
+\voBox{English Voiceover}{Yet the true miracle of Divergency was the stubborn grit of three friends. Whenever I felt like throwing in the towel, a late-night Discord ding would break the silence. Khoa would drop a mesmerizing new combat sprite for Solei; Nghĩa would share a haunting line of dialogue. Seeing them push through their own exhaustion reignited the fire every single time. We may have moved excruciatingly slow, but the greatest blessing of the past six years... is that none of us ever gave up. We reopened the project, and kept walking forward.}
+
+\field{Hình cần lấy}{Ảnh chụp màn hình chat nhóm: Khoa gửi file sprite mới, Nghĩa gửi kịch bản thoại mới, tác giả phản hồi emoji hào hứng. Con trỏ chuột bấm nút 'Play' trong Unity, game lại bừng sáng.}
+
+\field{Dựng}{Cắt từ không gian tối của bàn làm việc sang màn hình game rực rỡ sắc màu, nhịp điệu phấn khởi trở lại.}
+
+\field{Âm thanh}{Tiếng ping Discord quen thuộc, nhạc nền vút lên giai điệu ấm áp, hy vọng; tiếng click 'Play' vang lên đầy tự tin.}
+
+\field{Chữ trên hình}{May mắn là không ai bỏ cuộc · Lại mở máy và bước tiếp}
+
+% -------------------------------------------------------------------------------------------------
+\newpage
+\subsection*{Chương 4: Nhật ký Một Đòn Đánh -- Nỗi ám ảnh tìm kiếm "Game Feel" (03:45 -- 05:45)}
+
+\shot{S10}{Cuộc chiến Pixel: Từ Photoshop sang Aseprite}{03:45 -- 04:15 · 30 giây · Tư liệu: F10, F11, F12}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Vậy làm thế nào để biến một hình vẽ tĩnh thành một cú chém mà người chơi thực sự 'cảm nhận' được? Nó bắt đầu từ một nỗi ám ảnh khôn nguôi về từng pixel. Hồi đầu, tụi mình vẽ trên Photoshop. Nhưng mỗi nhát chém có hàng chục frame, file PSD nặng trịch, timeline giật cục đến mức sửa một chi tiết nhỏ cũng mất cả tiếng. Chỉ đến khi chuyển sang Aseprite, cuộc chiến mới thực sự thông suốt: timeline nằm ngay trước mắt, xem loop tức thì, quãng đường từ việc thấy 'mũi kiếm này chém hơi cùn' đến 'sửa xong' chỉ mất vỏn vẹn vài giây.}
+
+\voBox{English Voiceover}{So how do you turn a static sprite into a sword slash that a player can physically feel through their controller? It begins with an obsessive battle over every individual pixel. Early on, we worked in Photoshop. But frame-by-frame combat animation created monstrous PSD files with laggy timelines, turning minor tweaks into hour-long slogs. Switching to Aseprite broke the bottleneck: the timeline was instant, previews were real-time, and tweaking the arc of a blade took seconds instead of painful minutes.}
+
+\field{Hình cần lấy}{Dòng chảy trực quan (Visual Pipeline):
+\begin{enumerate}
+    \item Bản phác thảo động tác vung kiếm trên giấy/tablet (Idea).
+    \item Giao diện Photoshop: nhiều layer cồng kềnh, timeline kéo giật.
+    \item Chuyển sang Aseprite: timeline trực quan, bấm Play xem loop mượt mà, con trỏ chỉnh sửa 2–3 pixel ở gót chân và mũi kiếm rồi preview ngay.
+\end{enumerate}}
+
+\field{Dựng}{Match cut giữa cùng một tư thế nhân vật từ Photoshop sang Aseprite.}
+
+\field{Âm thanh}{Tiếng click Play/Pause dồn dập trong Aseprite, nhạc nền chuyển sang phong cách lo-fi up-tempo sáng tạo.}
+
+\field{Chữ trên hình}{Ý tưởng \(\rightarrow\) Photoshop \(\rightarrow\) Aseprite (Tối ưu hóa từng frame hình)}
+
+% ---
+\shot{S11}{Cuộc chiến với Trọng lực: Căn Pivot \& Bài toán tiếp đất}{04:15 -- 04:45 · 30 giây · Tư liệu: F13, F16}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Xuất sprite sang Unity mới là lúc bài toán vật lý bắt đầu hành hạ tụi mình. Nhảy lên thì dễ, nhưng đáp đất mới là ác mộng. Một cái chấm tròn Pivot ở giữa hai bàn chân nếu lệch đi đúng 2 pixel, nhân vật khi rơi xuống sẽ trượt trên mặt sàn như đang đi giày trượt băng. Tụi mình mất gần ba tuần chỉ để lập trình lại hệ thống Ground Check và điều chỉnh gia tốc rơi, sao cho khi người chơi thả tay, nhân vật phải cắm chặt gót chân xuống nền đá với một độ nảy đàn hồi vững chãi.}
+
+\voBox{English Voiceover}{Importing the spritesheet into Unity is where physics truly humbled us. Jumping into the air is trivial — landing convincingly is a nightmare. If the tiny Pivot point between the feet is offset by even two pixels, the character slides upon landing like he's wearing ice skates. We spent nearly three grueling weeks rewriting the Ground Check logic and tuning falling gravity just so that when you touch down, the stance absorbs the impact cleanly with rock-solid stability.}
+
+\field{Hình cần lấy}{Giao diện Unity Sprite Editor: phóng to điểm Pivot tròn nhỏ được kéo chính xác về đáy giữa hai bàn chân. Tiếp theo là cảnh kiểm tra vật lý in-game: nhân vật nhảy lên, chạm đất mượt mà; đối chiếu với clip lỗi trước đây khi chân bị trôi hoặc lún xuống sàn.}
+
+\field{Dựng}{Overlay mũi tên và đường viền xanh tại gót chân để người xem dễ hình dung điểm neo (Pivot) và mặt sàn (Ground).}
+
+\field{Âm thanh}{Tiếng 'Bịch!' tiếp đất dứt khoát, âm thanh game trung thực.}
+
+\field{Chữ trên hình}{Unity Importer · Điểm neo Pivot · Ground Check tiếp đất}
+
+% ---
+\shot{S12}{Logic đòn đánh: Kiểm soát từng mili-giây va chạm}{04:45 -- 05:15 · 30 giây · Tư liệu: F14, F15}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Một đòn đánh đẹp mắt mà không đánh trúng thì cũng vô nghĩa. Trong Unity, tụi mình bóc tách đòn đánh thành ba giai đoạn nghiêm ngặt: Lấy đà (Anticipation), Ra đòn (Active) và Thu hồi (Recovery). Hộp xanh Hurtbox bao bọc lấy cơ thể để nhận sát thương. Còn hộp đỏ Hitbox — lưỡi kiếm chết người — chỉ được phép lóe sáng đúng ba frame duy nhất khi thanh kiếm chém rách không khí. Kiểm soát chính xác từng mili-giây va chạm như vậy mới tạo nên sự sòng phẳng trong một tựa game đối kháng.}
+
+\voBox{English Voiceover}{A gorgeous animation is worthless if attacks don't connect with surgical precision. Inside Unity, we dissect every strike into three strict phases: Anticipation, Active swing, and Recovery. The green Hurtbox hugs the body to register incoming damage. Meanwhile, the lethal red Hitbox is granted permission to exist for exactly three frames as the blade cuts through the air. Controlling collision down to the millisecond is what makes combat feel brutally fair.}
+
+\field{Hình cần lấy}{Khung cảnh Unity Animation Tool với hai hộp va chạm hiển thị rõ ràng:
+\begin{itemize}
+    \item Hộp màu xanh lục (Hurtbox) bao quanh thân người Deep.
+    \item Hộp màu đỏ rực (Hitbox) xuất hiện đúng 3 frame khi lưỡi kiếm chém vòng cung.
+\end{itemize}
+Chạy tua chậm (slow-motion 30\%) để người xem thấy rõ khoảnh khắc Hitbox chạm vào Hurtbox của kẻ địch.}
+
+\field{Dựng}{Dùng nhãn chú thích rõ ràng: \textbf{Lấy đà (Anticipation) \(\rightarrow\) Ra đòn (Active) \(\rightarrow\) Thu hồi (Recovery)}.}
+
+\field{Âm thanh}{Ba tiếng tick nhỏ ở từng giai đoạn, sau đó là tiếng 'Chém!' vang lên giòn giã ở tốc độ chuẩn 100\%.}
+
+\field{Chữ trên hình}{Hitbox (Vùng tấn công) · Hurtbox (Vùng nhận đòn) · Ba giai đoạn đòn đánh}
+
+% ---
+\shot{S13}{Ma thuật 2 frame Hitstop: Linh hồn của Game Feel}{05:15 -- 05:45 · 30 giây · Tư liệu: F15, F18}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Nhưng bí mật lớn nhất để một đòn đánh trở nên 'đã tay' không nằm ở hiệu ứng màu mè hay âm thanh thật to. Nó nằm ở hai frame hình: Hitstop. Đúng khoảnh khắc lưỡi kiếm cắn vào da thịt kẻ thù, thời gian bị đông cứng lại trong hai phần sáu mươi giây. Màn hình hơi rung nhẹ, kẻ địch giật nảy người vì quán tính, rồi văng ra sau. Khoảnh khắc cả thế giới khựng lại đó... chính là ma thuật biến những mẩu pixel vô tri thành một cú đánh mà bạn có thể cảm nhận râm ran nơi đầu ngón tay.}
+
+\voBox{English Voiceover}{Yet the deepest secret of game feel isn’t flashy particle effects or loud noise. It hides inside two single frames of time: Hitstop. The instant steel bites into an enemy, time literally freezes for two-sixtieths of a second. The camera shudders subtly, the target flinches from raw momentum, then recoils backward. That microscopic pause... is the pure magic that transforms flat pixels into a strike you physically feel in the bone of your thumb.}
+
+\field{Hình cần lấy}{So sánh hai lần đánh:
+\begin{itemize}
+    \item Lần 1: Không có hiệu ứng (đánh trúng trôi tuột, không khựng, kẻ địch không phản ứng -- nhìn vô hồn).
+    \item Lần 2: Có đầy đủ Game Feel: Tia lửa lóe sáng, khựng hình 2 frame (Hitstop), rung camera nhẹ (Screen shake), kẻ địch bật ngửa ra sau (Knockback).
+\end{itemize}}
+
+\field{Dựng}{Chèn hiệu ứng text 'Chưa chỉnh Game Feel' vs 'Đã hoàn thiện Game Feel'.}
+
+\field{Âm thanh}{Âm thanh chém 'Xoẹt!' đanh thép, tiếng va chạm nặng đô, rung sub bass sâu lắng.}
+
+\field{Chữ trên hình}{Hitstop (Khựng hình 2 frame) · Screen Shake · Linh hồn Game Feel}
+
+% -------------------------------------------------------------------------------------------------
+\newpage
+\subsection*{Chương 5: Hãy để Game tự lên tiếng (Showcase) (05:45 -- 06:45)}
+
+\shot{S14}{30 giây chiến đấu thuần túy: Không lời bình}{05:45 -- 06:15 · 30 giây · Tư liệu: F01}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Và sau sáu năm gọt giũa từng pixel, từng mili-giây va chạm... đây là cảm giác khi mọi thứ thực sự bắt đầu vận hành. \textit{(Im lặng hoàn toàn trong 27 giây còn lại. Để âm thanh trò chơi và các pha giao tranh thực tế tự nói lên tất cả.)}}
+
+\voBox{English Voiceover}{And after six years of chiseling every pixel and tuning every microsecond of impact... this is what it feels like when the world truly comes alive. \textit{(Complete silence for the remaining 27 seconds. Pure gameplay audio and combat flow speak for themselves.)}}
+
+\field{Hình cần lấy}{Gameplay thực chiến không có UI debug: Deep di chuyển lả lướt qua các bục địa hình, tiếp cận 3 kẻ địch, tung combo chém thường 3 hit, lướt né đòn đánh của địch, hất tung đối thủ lên không trung và tung đòn kết liễu đẹp mắt.}
+
+\field{Dựng}{Dựng liền mạch, không cắt vụn vặt, góc máy sạch sẽ để người xem chiêm ngưỡng trọn vẹn nhịp độ chiến đấu mượt mà của game.}
+
+\field{Âm thanh}{Tiếng bước chân trên nền đá, tiếng vung kiếm, tiếng đòn trúng 'Keng! Xoẹt!', tiếng kẻ địch ngã, nhạc nền chiến đấu hào hùng vang lên đầy kiêu hãnh.}
+
+\field{Chữ trên hình}{\textsc{Divergency} · Gameplay chiến đấu thực tế}
+
+% ---
+\shot{S15}{Hợp chiêu Solei + Deep: Hai cá tính, một nhịp đập}{06:15 -- 06:45 · 30 giây · Tư liệu: F01, F18}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Nhưng Divergency không chỉ là cuộc độc diễn của một người. Khi Solei và Deep cùng sát cánh, đó là lúc trò chơi chạm đến đỉnh cao: Solei kiểm soát không gian bằng hỏa lực tầm xa, còn Deep lao vào dứt điểm mục tiêu trong chớp mắt. Hai cá tính đối lập, nhưng hòa thành một nhịp đập chiến thuật ăn ý.}
+
+\voBox{English Voiceover}{Yet Divergency was never meant to be a solo performance. When Solei and Deep stand back to back, combat reaches its peak: Solei controls space with ranged elemental magic, while Deep dives in to execute staggered foes in a blink. Two contrasting combat doctrines, harmonized into a seamless tactical rhythm.}
+
+\field{Hình cần lấy}{Pha phối hợp đồng đội đặc trưng của Divergency: Solei tung chiêu thức khống chế diện rộng hoặc đòn hỏa lực ép góc đối thủ, Deep từ trên cao lao xuống bồi đòn kiếm dứt điểm (Team Synergy / Combo phối hợp).}
+
+\field{Dựng}{Giữ nhịp hành động liên tục, kết thúc phân đoạn bằng pose thắng trận hoặc hai nhân vật quay lưng tựa vào nhau.}
+
+\field{Âm thanh}{Tiếng hiệu ứng phép thuật kết hợp tiếng kiếm chém, âm nhạc cao trào rồi hòa dần vào giai điệu trầm ấm.}
+
+\field{Chữ trên hình}{Team Synergy · Phối hợp đồng đội chiến thuật}
+
+% -------------------------------------------------------------------------------------------------
+\newpage
+\subsection*{Chương 6: Sáu năm kiên định \& Lời mời đồng hành (06:45 -- 08:15)}
+
+\shot{S16}{Ý nghĩa của sự chậm rãi kiên định}{06:45 -- 07:15 · 30 giây · Tư liệu: F02, F01, F19}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Nhìn lại sáu năm qua, từ những dòng code cô độc ban đầu cho tới khi có Khoa và Nghĩa đồng hành từ năm 2023, tụi mình đã đi một quãng đường xa hơn bản thân từng nghĩ. Trong một thế giới luôn hối hả mà ai cũng muốn mọi thứ thật nhanh, dành sáu năm để chăm chút từng frame cho một tựa game đôi khi khiến tụi mình thấy mình quá chậm. Nhưng nhìn Deep và Solei thực sự sống, thực sự thở trong thế giới này... tụi mình biết sự kiên trì đó là xứng đáng.}
+
+\voBox{English Voiceover}{Looking back at the past six years — from solitary prototype tests to building a real brotherhood with Khoa and Nghĩa in 2023 — we’ve journeyed farther than we ever dared imagine. In a hyper-fast world where everything is rushed, dedicating six years to perfecting individual frames can make you feel agonizingly slow. But seeing Deep and Solei truly live and breathe in this world... we know every late night was worth it.}
+
+\field{Hình cần lấy}{So sánh trực tiếp: Khung hình chia đôi hoặc wipe chuyển đổi giữa bản vẽ phác thảo đầu tiên 6 năm trước và khung cảnh Deep \& Solei thở nhịp nhàng trong bản build hiện tại. Cắt thoáng qua ảnh ba anh em thảo luận trong nhóm.}
+
+\field{Dựng}{Nhịp dựng lắng đọng, giàu cảm xúc, kết thúc chu kỳ câu chuyện.}
+
+\field{Âm thanh}{Nhạc nền acoustic/piano trầm ấm, truyền cảm hứng.}
+
+\field{Chữ trên hình}{6 năm kiên định · Từ ý tưởng phôi thai thành thế giới sống động}
+
+% ---
+\shot{S17}{Kickstarter: Cùng nhau hoàn thành giấc mơ}{07:15 -- 07:50 · 35 giây · Tư liệu: F20, F21}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Bọn mình đã đi được 80\% chặng đường bằng đam mê thuần khiết. Nhưng 20\% còn lại — để biến Divergency thành một kiệt tác hoàn chỉnh với những bối cảnh đồ sộ, các trận đấu boss quy mô và âm nhạc được đầu tư bài bản — tụi mình cần sự tiếp sức của các bạn. Tụi mình sắp khởi động chiến dịch Kickstarter cho Divergency. Nếu bạn cũng là một người đang khao khát tìm lại cảm giác chiến đấu nảy lửa của những tựa game tuổi thơ, hãy nhấn theo dõi trang Kickstarter của tụi mình ở đường link bên dưới. Sự đồng hành của các bạn chính là mảnh ghép cuối cùng để đưa giấc mơ này về đích.}
+
+\voBox{English Voiceover}{We’ve carried Divergency across 80\% of the finish line through pure obsession and late-night passion. But the remaining 20\% — expanding this into a fully realized world with grand boss encounters, rich biomes, and an orchestrated soundtrack — is where we need your help. We are launching our Kickstarter campaign soon. If you, too, have been longing for that tactical, tactile brawler we grew up loving, please click 'Notify me on launch' on our Kickstarter page below. Your support is the final piece that will carry this dream to completion.}
+
+\field{Hình cần lấy}{Giao diện trang Kickstarter Pre-launch của Divergency: nút \textbf{"Notify me on launch"} (Nhận thông báo khi ra mắt) được con trỏ bấm vào. Sau đó lướt nhanh qua các mốc nội dung cam kết: Thiết kế thêm nhân vật mới, Boss ẩn, Chế độ Co-op nhiều người.}
+
+\field{Dựng}{Khung hình rõ ràng, nút CTA (Call to Action) nổi bật, chân thành, không mang tính chào hàng thương mại thô ráp.}
+
+\field{Âm thanh}{Nhạc nền tươi sáng, tràn đầy năng lượng tích cực và sự gắn kết.}
+
+\field{Chữ trên hình}{Chiến dịch Kickstarter · Hãy cùng tụi mình hoàn thành giấc mơ này}
+
+% ---
+\shot{S18}{Lời chào \& Trở lại dưới bóng Sakura}{07:50 -- 08:15 · 25 giây · Tư liệu: F01, F21}
+
+\voBox{Lời dẫn (Tiếng Việt)}{Cảm ơn các bạn đã lắng nghe câu chuyện nhật ký của tụi mình. Giờ thì... tụi mình quay lại làm việc đây. Hẹn gặp lại các bạn trong bản devlog tiếp theo của Divergency!}
+
+\voBox{English Voiceover}{Thank you for listening to our dev journal. Now... it’s time to get back to work. See you in the next Divergency devlog!}
+
+\field{Hình cần lấy}{Quay trở lại đúng khung cảnh mở đầu: Deep và Solei đứng cạnh nhau dưới bóng cây hoa anh đào sakura cổ thụ trên đỉnh đồi gió. Cánh hoa rơi lả tả. Deep khẽ vung thanh kiếm chào người xem rồi tra kiếm vào bao. Màn hình fade đen dần với logo Divergency trắng bạc nổi bật.}
+
+\field{Dựng}{Kết thúc trọn vẹn vòng lặp câu chuyện (Full Circle Ending). Chữ hẹn gặp lại lưu lại 4 giây cuối.}
+
+\field{Âm thanh}{Tiếng gió thổi nhẹ, tiếng kiếm tra vào vỏ 'Cách!', nhạc kết êm ái ngân dài rồi tan dần vào tĩnh lặng.}
+
+\field{Chữ trên hình}{\textsc{Divergency} · Cảm ơn các bạn · Hẹn gặp lại ở bản devlog tiếp theo!}
+
+% -------------------------------------------------------------------------------------------------
+\newpage
+\section{Checklist tư liệu cần thu thập (Materials Checklist)}
+
+\begin{itemize}[label=\tickbox]
+    \item \textbf{F01 Cảnh hoa anh đào Sakura (Deep \& Solei chill trên đồi):} Cảnh in-game góc rộng đẹp, cánh hoa rơi, Solei \& Deep đứng cạnh nhau nghỉ ngơi, câu thoại \textit{"My legs stopped. My head hasn't."} (Ưu tiên 1).
+    \item \textbf{F02 Tư liệu build cũ \& Sprite thử nghiệm 2018–2020:} Ảnh/clip nhân vật phôi thai, các pha lỗi vật lý, nhảy trôi mặt sàn, vung đòn vụng về (Ưu tiên 1).
+    \item \textbf{F03 Gameplay Little Fighter 2:} 10–15s clip LF2 chơi 4 người trên 1 bàn phím, giao tranh hỗn loạn vui nhộn (Ưu tiên 2).
+    \item \textbf{F04 Ảnh/tin nhắn thành lập nhóm 2023:} Khoa gửi tranh pixel art dark fantasy; Nghĩa gửi demo player dialogue system; tin nhắn rủ nhau làm game (Ưu tiên 1).
+    \item \textbf{F06 Bàn làm việc \& Màn hình Unity đêm muộn:} Bàn phím cơ, màn hình project Unity, góc làm việc sau giờ hành chính lúc 1h sáng (Ưu tiên 2).
+    \item \textbf{F07 Đồ thị mô phỏng Control Systems (Toán học):} Đồ thị MATLAB / Python mô phỏng bài toán Controller \& Observer, đường cong phân kỳ Divergence vọt ra ngoài khung hình (Ưu tiên 1).
+    \item \textbf{F08 Concept Art Dark Fantasy của Khoa:} Bộ sưu tập concept thế giới hoang tàn, bất ổn, bối cảnh tăm tối và quái vật (Ưu tiên 1).
+    \item \textbf{F09 Sprite Deep \& Solei hoàn chỉnh:} Bản vẽ sprite độ phân giải cao và các frame animation tuyển chọn của hai nhân vật chính (Ưu tiên 1).
+    \item \textbf{F10 Phác thảo ý tưởng đòn đánh:} Sketch nhịp động tác vung kiếm trên giấy hoặc tablet (Ưu tiên 2).
+    \item \textbf{F11 Màn hình Photoshop cũ:} File PSD sprite cũ với hàng chục layer cồng kềnh (Ưu tiên 2).
+    \item \textbf{F12 Màn hình Aseprite:} Timeline animation mượt mà, thao tác chỉnh sửa vài pixel frame-by-frame và xem preview tức thì (Ưu tiên 1).
+    \item \textbf{F13 Unity Sprite Editor:} Căn chỉnh Canvas và kéo điểm Pivot về vị trí gót chân nhân vật (Ưu tiên 1).
+    \item \textbf{F14 Unity Hitbox \& Hurtbox Tool:} Bật overlay hộp xanh (Hurtbox) và hộp đỏ (Hitbox) từng frame của đòn chém (Ưu tiên 1).
+    \item \textbf{F15 Clip so sánh Game Feel:} So sánh đòn đánh thô (không hiệu ứng) vs. Đòn đánh có Hitstop, Screen shake, Knockback (Ưu tiên 1).
+    \item \textbf{F16 Cảnh test tiếp đất (Ground Check):} Nhảy lên và tiếp đất vững chãi; đối chiếu với cảnh trượt chân/lún sàn cũ (Ưu tiên 1).
+    \item \textbf{F18 Gameplay combat liền mạch của Deep:} 30s giao tranh sạch không debug UI, combo đẹp mắt (Ưu tiên 1).
+    \item \textbf{F19 Combo phối hợp Solei \& Deep:} Cảnh 2 nhân vật tung chiêu hỗ trợ lẫn nhau trong trận đấu (Ưu tiên 1).
+    \item \textbf{F20 Trang Kickstarter Pre-launch:} Screenshot/quay màn hình trang chiến dịch và nút bấm theo dõi (Ưu tiên 1).
+    \item \textbf{F21 Logo Divergency:} File logo độ phân giải cao trên nền trong suốt (Ưu tiên 1).
+\end{itemize}
+
+\end{document}

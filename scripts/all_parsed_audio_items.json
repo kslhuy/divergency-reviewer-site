@@ -1,0 +1,947 @@
+[
+  {
+    "category": "Music",
+    "section": "Music prompts",
+    "stem": "mus_devlogs_practice_loop",
+    "file_name": "mus_devlogs_practice_loop.wav",
+    "target": "32 bars, 64 seconds at 120 BPM",
+    "prompt": "Original instrumental music loop for a pixel-art arcade brawler's combat practice room in a damp industrial sewer. 120 BPM, 4/4, D minor. Restrained analog bass pulse, light syncopated breakbeat, muted metallic percussion, sparse two-note FM synth motif, quiet atmospheric harmony. Focused, gritty, curious and slightly tense, comfortable during repeated practice. Low musical density with space for weapon impacts and command cues. Stable groove from the first bar, 32-bar cyclic arrangement, no introduction, no final cadence, no fade-out. No vocals, choir, spoken words, sound effects, literal water sounds, gunshots, or cinematic trailer booms. End harmonically and rhythmically ready to return to bar one.",
+    "type": "music"
+  },
+  {
+    "category": "Music",
+    "section": "Music prompts",
+    "stem": "mus_devlogs_combat_loop",
+    "file_name": "mus_devlogs_combat_loop.wav",
+    "target": "32 bars, 64 seconds",
+    "prompt": "Original instrumental combat loop for a fast pixel-art sewer brawler. 120 BPM, 4/4, D minor. Tight energetic breakbeat, punchy controlled bass, short rhythmic synth stabs, restrained metallic percussion, and a memorable sparse motif. Street-level determination and forward movement, medium-high energy without frantic treble or oversized bass. Preserve room for arrows, rifle shots, blade hits and ally commands. Keep the same musical palette and motif as the supplied practice reference if provided. Consistent 32-bar cyclic arrangement; no long build, dramatic silence, ending cadence, intro, outro, vocals, environmental recordings, combat effects, or trailer impacts. Seamless return to the opening groove.",
+    "type": "music"
+  },
+  {
+    "category": "Music",
+    "section": "Music prompts",
+    "stem": "mus_devlogs_bigmm_loop",
+    "file_name": "mus_devlogs_bigmm_loop.wav",
+    "target": "32 bars, 64 seconds",
+    "prompt": "Original instrumental boss combat loop for a large aggressive sewer enforcer in a pixel-art brawler. 120 BPM, 4/4, D minor. Weighty syncopated bass, firmer breakbeat, low tom accents, rough restrained synth growl and a threatening variation of the supplied combat motif if available. More pressure and authority than ordinary combat while keeping the same tempo. No constant risers or orchestral wall of sound. Leave openings for attack telegraphs and short boss taunts. 32-bar loop with stable intensity and compatible loop boundaries. No vocals, choir, sound effects, gunshots, giant cinematic booms, fade-out or final cadence.",
+    "type": "music"
+  },
+  {
+    "category": "Music",
+    "section": "Music prompts",
+    "stem": "mus_devlogs_boss_release",
+    "file_name": "mus_devlogs_boss_release.wav",
+    "target": "1–2 seconds",
+    "prompt": "One original short instrumental boss engagement accent in D minor at 120 BPM: a low tom strike and compact dark synth chord, a brief upward tension movement, then a clean short tail. Threatening and decisive, suitable over a continuing electronic combat groove. No voice, explosion, trailer boom, long riser, or second musical phrase. Keep the midrange sparse so the final boss taunt remains understandable.",
+    "type": "music"
+  },
+  {
+    "category": "Music",
+    "section": "Music prompts",
+    "stem": "mus_devlogs_victory",
+    "file_name": "mus_devlogs_victory.wav",
+    "target": "4–6 seconds",
+    "prompt": "Original short instrumental victory cue for a gritty arcade sewer fight, 120 BPM. Resolve the D minor combat motif toward a warm D major ending with restrained synth notes, one compact drum fill and a satisfying bass resolution. Earned relief, confident but modest. No orchestral fanfare, applause, vocals, game sound effects, or long sustain. One clear ending with a complete natural tail.",
+    "type": "music"
+  },
+  {
+    "category": "Music",
+    "section": "Music prompts",
+    "stem": "mus_devlogs_defeat",
+    "file_name": "mus_devlogs_defeat.wav",
+    "target": "3–4 seconds",
+    "prompt": "Original short instrumental defeat cue for an arcade combat practice room. A subdued descending three-note synth figure in D minor, soft low percussion, and a brief unresolved bass decay. Clear setback without tragedy, mockery or horror. Leave space for a retry interface. No voice, heartbeat alarm, cinematic boom, game effects or long ending.",
+    "type": "music"
+  },
+  {
+    "category": "Music",
+    "section": "Music prompts",
+    "stem": "mus_devlogs_start",
+    "file_name": "mus_devlogs_start.wav",
+    "target": "1 second",
+    "prompt": "One original short instrumental combat-start accent at 120 BPM in D minor: a tight two-beat metallic percussion pickup and a restrained bass pulse, ready to hand off to a continuous electronic groove. Alert and purposeful, no melody fanfare, voice, alarm or explosion. Complete compact tail.",
+    "type": "music"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_step_concrete",
+    "file_name": "sfx_step_concrete.wav",
+    "target": "0.18 s",
+    "prompt": "One boot footfall on damp rough concrete: firm rubber sole contact, tiny grit scrape, dry low-mid body, no splash.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_step_metal",
+    "file_name": "sfx_step_metal.wav",
+    "target": "0.22 s",
+    "prompt": "One boot footfall on a heavy steel walkway: a tight shoe thud and short muted plate resonance, no exaggerated hollow clang.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_step_water",
+    "file_name": "sfx_step_water.wav",
+    "target": "0.25 s",
+    "prompt": "One boot footfall through ankle-deep water over concrete: compact shallow splash, firm sole contact and a few falling droplets.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_jump_takeoff",
+    "file_name": "sfx_jump_takeoff.wav",
+    "target": "0.2 s",
+    "prompt": "One athletic jump push-off: short rubber scrape and compact clothing swish, no landing or vocal effort.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_land_concrete",
+    "file_name": "sfx_land_concrete.wav",
+    "target": "0.35 s",
+    "prompt": "One two-foot landing on damp concrete: rounded shoe thump, brief gritty contact and small clothing movement.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_land_metal",
+    "file_name": "sfx_land_metal.wav",
+    "target": "0.4 s",
+    "prompt": "One two-foot landing on a heavy steel platform: weighty boot contact and a short controlled sheet-metal resonance.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_land_water",
+    "file_name": "sfx_land_water.wav",
+    "target": "0.5 s",
+    "prompt": "One two-foot landing in shallow water: broad compact splash over a low foot impact, then short falling droplets.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_dash",
+    "file_name": "sfx_dash.wav",
+    "target": "0.22 s",
+    "prompt": "One fast athletic dash: compact low air displacement, a tight cloth snap and very short sole scrape, no magical teleport sound.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_roll",
+    "file_name": "sfx_roll.wav",
+    "target": "0.45 s",
+    "prompt": "One quick evasive body roll on rough concrete: tight cloth brush and soft sequential body contact within a single compact rolling movement.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_body_fall",
+    "file_name": "sfx_body_fall.wav",
+    "target": "0.45 s",
+    "prompt": "One clothed fighter falls onto concrete: weighty low body thud and brief fabric skid, no bone crack or voice.",
+    "type": "sfx"
+  },
+  {
+    "category": "Movement",
+    "section": "Movement and physical reactions",
+    "stem": "sfx_body_wall",
+    "file_name": "sfx_body_wall.wav",
+    "target": "0.35 s",
+    "prompt": "One clothed body strikes a solid concrete wall: compact deep thump, small grit tick and brief cloth slap, no collapsing wall.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_fist_swing",
+    "file_name": "sfx_fist_swing.wav",
+    "target": "0.18 s",
+    "prompt": "One fast gloved punch through air: tight sleeve snap and short light whoosh, no contact.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_kick_swing",
+    "file_name": "sfx_kick_swing.wav",
+    "target": "0.25 s",
+    "prompt": "One strong kick through air: wider lower whoosh than a fist, with a brief trouser cloth snap, no impact.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_blunt_hit_light",
+    "file_name": "sfx_blunt_hit_light.wav",
+    "target": "0.22 s",
+    "prompt": "One quick gloved strike against a clothed torso: crisp cloth smack over a compact low thump, non-gory and dry.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_blunt_hit_heavy",
+    "file_name": "sfx_blunt_hit_heavy.wav",
+    "target": "0.35 s",
+    "prompt": "One powerful finishing strike into a padded torso: dense rounded body thud, short clothing crack and controlled low-end weight, no gunshot.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_launch_uppercut",
+    "file_name": "sfx_launch_uppercut.wav",
+    "target": "0.35 s",
+    "prompt": "One forceful upward blow launching a fighter: a focused heavy impact with a short rising air displacement, no landing and no voice.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_deep_sword_light",
+    "file_name": "sfx_deep_sword_light.wav",
+    "target": "0.25 s",
+    "prompt": "One fast steel sword cut through air: tight mid-low whoosh with a restrained bright cutting edge, no impact or prolonged ring.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_deep_sword_heavy",
+    "file_name": "sfx_deep_sword_heavy.wav",
+    "target": "0.4 s",
+    "prompt": "One forceful broad steel sword sweep: heavier low air displacement with a clean sharp edge and short decay, no contact.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_mark_knife_swing",
+    "file_name": "sfx_mark_knife_swing.wav",
+    "target": "0.16 s",
+    "prompt": "One quick short knife slash through air: narrow dry cutting swish, lighter and faster than a sword, no impact.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_blade_hit_cloth",
+    "file_name": "sfx_blade_hit_cloth.wav",
+    "target": "0.25 s",
+    "prompt": "One blade contact on a padded opponent: firm body thud, brief fabric tear texture and tiny steel tick, non-gory, no wet splatter.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_blade_hit_armor",
+    "file_name": "sfx_blade_hit_armor.wav",
+    "target": "0.3 s",
+    "prompt": "One steel blade strikes protective metal armor: sharp compact clack, dense low body and a short damped metallic ring.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_blade_hit_concrete",
+    "file_name": "sfx_blade_hit_concrete.wav",
+    "target": "0.3 s",
+    "prompt": "One steel blade clips concrete: hard dry tick, short gritty scrape and tiny stone chips, no sustained grinding.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_guard_blunt",
+    "file_name": "sfx_guard_blunt.wav",
+    "target": "0.23 s",
+    "prompt": "One punch stopped by a braced forearm guard: dense padded knock and short leather creak, less open and lower than a clean body hit.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_guard_blade",
+    "file_name": "sfx_guard_blade.wav",
+    "target": "0.3 s",
+    "prompt": "One steel weapon deflects another: clear compact metal clash with a short low ringing tail, no repeated sword fight.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_guard_break",
+    "file_name": "sfx_guard_break.wav",
+    "target": "0.45 s",
+    "prompt": "One fighter's guard is forcefully broken: hard contact, short dry strained crack and a descending air release, no literal glass shatter.",
+    "type": "sfx"
+  },
+  {
+    "category": "Melee",
+    "section": "Melee attacks and defense",
+    "stem": "sfx_knockback_air",
+    "file_name": "sfx_knockback_air.wav",
+    "target": "0.28 s",
+    "prompt": "One short rush of air from a clothed body flying backward, low soft whoosh and cloth flutter, no impact or landing.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_mark_arrow_nock",
+    "file_name": "sfx_mark_arrow_nock.wav",
+    "target": "0.25 s",
+    "prompt": "One arrow seats against a bowstring: a small dry shaft click and slight glove movement, delicate and precise.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_mark_bow_draw",
+    "file_name": "sfx_mark_bow_draw.wav",
+    "target": "0.45 s",
+    "prompt": "One bow is drawn to tension: short wood flex, taut fiber creak and restrained glove movement, ending held without release.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_mark_bow_release",
+    "file_name": "sfx_mark_bow_release.wav",
+    "target": "0.3 s",
+    "prompt": "One powerful bow shot: crisp taut string snap, compact woody twang and a brief outgoing air flick, no arrow impact.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_arrow_pass",
+    "file_name": "sfx_arrow_pass.wav",
+    "target": "0.22 s",
+    "prompt": "One arrow passes close by: a thin fast feathered air hiss with a brief tonal edge, no bow, ricochet or impact.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_arrow_hit_cloth",
+    "file_name": "sfx_arrow_hit_cloth.wav",
+    "target": "0.3 s",
+    "prompt": "One arrow hits a padded target: focused dry tuck, soft body thud and short shaft vibration, no gore or voice.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_arrow_hit_metal",
+    "file_name": "sfx_arrow_hit_metal.wav",
+    "target": "0.3 s",
+    "prompt": "One arrow deflects from heavy steel: small sharp tip ping followed by a muted shaft rattle, short and restrained.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_arrow_hit_concrete",
+    "file_name": "sfx_arrow_hit_concrete.wav",
+    "target": "0.3 s",
+    "prompt": "One arrow strikes concrete: sharp brittle tip tick, short wood chatter and a tiny grit scatter, no large debris.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_grenade_prepare",
+    "file_name": "sfx_grenade_prepare.wav",
+    "target": "0.25 s",
+    "prompt": "One small grenade safety mechanism is prepared: compact metal pin click, short lever tension and glove rustle, no throw or blast.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_grenade_throw",
+    "file_name": "sfx_grenade_throw.wav",
+    "target": "0.25 s",
+    "prompt": "One hand throws a compact metal grenade: brief sleeve swish and a tiny metallic release click, no landing or explosion.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_grenade_bounce",
+    "file_name": "sfx_grenade_bounce.wav",
+    "target": "0.3 s",
+    "prompt": "One small heavy metal grenade bounces against concrete: dense compact clonk with short internal rattle, no rolling sequence or explosion.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_grenade_explode",
+    "file_name": "sfx_grenade_explode.wav",
+    "target": "0.9 s",
+    "prompt": "One small arcade grenade detonates: sharp initial crack, tight low pressure thump and short gritty debris tail. Forceful but compact, no building collapse or long cinematic rumble.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Mark arrows and grenades",
+    "stem": "sfx_grenade_water_entry",
+    "file_name": "sfx_grenade_water_entry.wav",
+    "target": "0.45 s",
+    "prompt": "One small heavy object falls into shallow water: focused plop, short splash crown and a few droplets, no underwater explosion.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Gun soldiers and bullet contacts",
+    "stem": "sfx_soldier_gun_ready",
+    "file_name": "sfx_soldier_gun_ready.wav",
+    "target": "0.25 s",
+    "prompt": "One compact firearm is raised into a firing grip: dry grip adjustment, tiny metal mechanism click and short equipment strap movement.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Gun soldiers and bullet contacts",
+    "stem": "sfx_soldier_gun_shot",
+    "file_name": "sfx_soldier_gun_shot.wav",
+    "target": "0.45 s",
+    "prompt": "One stylized compact service-rifle shot for an arcade brawler: crisp controlled muzzle crack, tight low-mid punch and short mechanical action texture, no tail echo, automatic burst or shell landing.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Gun soldiers and bullet contacts",
+    "stem": "sfx_bullet_pass",
+    "file_name": "sfx_bullet_pass.wav",
+    "target": "0.15 s",
+    "prompt": "One small fast projectile passes nearby: very brief focused zip, restrained bright edge, no exaggerated cinematic whistle.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Gun soldiers and bullet contacts",
+    "stem": "sfx_bullet_hit_cloth",
+    "file_name": "sfx_bullet_hit_cloth.wav",
+    "target": "0.2 s",
+    "prompt": "One small projectile hits a padded opponent: sharp dry fabric snap with compact body thump, no gore, voice or gunshot.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Gun soldiers and bullet contacts",
+    "stem": "sfx_bullet_hit_metal",
+    "file_name": "sfx_bullet_hit_metal.wav",
+    "target": "0.25 s",
+    "prompt": "One small projectile strikes thick steel: bright compact tick, low metallic body and short damped ring, no prolonged ricochet whistle.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Gun soldiers and bullet contacts",
+    "stem": "sfx_bullet_hit_concrete",
+    "file_name": "sfx_bullet_hit_concrete.wav",
+    "target": "0.25 s",
+    "prompt": "One small projectile hits concrete: tight brittle crack and tiny gritty chip scatter, short and dry.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Gun soldiers and bullet contacts",
+    "stem": "sfx_bullet_hit_water",
+    "file_name": "sfx_bullet_hit_water.wav",
+    "target": "0.2 s",
+    "prompt": "One small fast projectile hits shallow water: tiny sharp splash with a short wet flick, no explosion or deep plunge.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ranged",
+    "section": "Gun soldiers and bullet contacts",
+    "stem": "sfx_gun_reload",
+    "file_name": "sfx_gun_reload.wav",
+    "target": "0.9 s",
+    "prompt": "One compact firearm reload motion: magazine seating clack and short bolt action within a single restrained mechanical sequence, no firing or voice.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_deep_energy_charge",
+    "file_name": "sfx_deep_energy_charge.wav",
+    "target": "0.6 s",
+    "prompt": "One compact martial sword-energy charge: low focused air pressure gathers with a restrained metallic harmonic rising in tension, ending ready without release.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_deep_energy_release",
+    "file_name": "sfx_deep_energy_release.wav",
+    "target": "0.35 s",
+    "prompt": "One sword launches a cutting energy wave: sharp blade swish joined to a focused low air pulse, clean and forceful, no impact or explosion.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_deep_energy_hit",
+    "file_name": "sfx_deep_energy_hit.wav",
+    "target": "0.45 s",
+    "prompt": "One concentrated cutting energy wave strikes a target: firm dry impact, short airy burst and tiny metallic shimmer, controlled low end.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_deep_ground_strike",
+    "file_name": "sfx_deep_ground_strike.wav",
+    "target": "0.65 s",
+    "prompt": "One energized heavy sword strike hits concrete: clear steel contact, deep compact ground thump and short radial grit burst, no earthquake or collapsing building.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_skill_end",
+    "file_name": "sfx_skill_end.wav",
+    "target": "0.25 s",
+    "prompt": "One small residual energy effect dissipates: quick downward airy release and a soft fading harmonic, no explosion or success melody.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_solei_ignite",
+    "file_name": "sfx_solei_ignite.wav",
+    "target": "0.35 s",
+    "prompt": "One small controlled magical flame ignites around a fighter's hand: warm compact ignition puff and short dry crackle, no impact or large fire roar.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_solei_fire_release",
+    "file_name": "sfx_solei_fire_release.wav",
+    "target": "0.35 s",
+    "prompt": "One compact fire projectile is launched: tight warm pressure puff and fast fiery whoosh, no target impact, no huge explosion.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_solei_fire_hit",
+    "file_name": "sfx_solei_fire_hit.wav",
+    "target": "0.45 s",
+    "prompt": "One small magical fire pulse hits a padded target: rounded ignition thump followed by a short hot hiss and dry crackle, no scream or wet burning texture.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_solei_fire_burst",
+    "file_name": "sfx_solei_fire_burst.wav",
+    "target": "0.75 s",
+    "prompt": "One stronger radial magical fire burst: deep compact ignition, brief expanding flame breath and short ember crackle, powerful but readable and not a cinematic detonation.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_energy_travel_loop",
+    "file_name": "sfx_energy_travel_loop.wav",
+    "target": "1.5 s",
+    "prompt": "Seamless mono loop of a small cutting energy projectile in flight: focused airy hiss and restrained low harmonic, stable level and pitch, quiet enough for several concurrent projectiles. No impact, launch, voice, music, room ambience, intro or fade. Clean matching loop boundaries.",
+    "type": "sfx"
+  },
+  {
+    "category": "Skills",
+    "section": "Deep energy attacks and optional Solei fire",
+    "stem": "sfx_fire_travel_loop",
+    "file_name": "sfx_fire_travel_loop.wav",
+    "target": "1.5 s",
+    "prompt": "Seamless mono loop of a small magical fireball in flight: quiet narrow flame flutter and soft dry crackle, stable texture, no ignition, blast, impact, voice, music, intro or outro. Clean loop boundaries and restrained treble.",
+    "type": "sfx"
+  },
+  {
+    "category": "Boss",
+    "section": "Big MM attack identity",
+    "stem": "sfx_bigmm_windup",
+    "file_name": "sfx_bigmm_windup.wav",
+    "target": "0.5 s",
+    "prompt": "One large fighter prepares a heavy cutting attack: low clothing strain, compact equipment creak and a restrained rising air movement, clearly telegraphing weight without voice.",
+    "type": "sfx"
+  },
+  {
+    "category": "Boss",
+    "section": "Big MM attack identity",
+    "stem": "sfx_bigmm_slice",
+    "file_name": "sfx_bigmm_slice.wav",
+    "target": "0.4 s",
+    "prompt": "One massive heavy blade sweep through air: broad low whoosh with a coarse steel edge and strong short acceleration, no target impact.",
+    "type": "sfx"
+  },
+  {
+    "category": "Boss",
+    "section": "Big MM attack identity",
+    "stem": "sfx_bigmm_slice_hit",
+    "file_name": "sfx_bigmm_slice_hit.wav",
+    "target": "0.45 s",
+    "prompt": "One heavy cutting weapon hits a padded armored opponent: dense low body impact, brief hard metal contact and short cloth crack, non-gory and controlled.",
+    "type": "sfx"
+  },
+  {
+    "category": "Boss",
+    "section": "Big MM attack identity",
+    "stem": "sfx_bigmm_projectile_release",
+    "file_name": "sfx_bigmm_projectile_release.wav",
+    "target": "0.4 s",
+    "prompt": "One heavy stone-like projectile is forcefully launched: compact low air displacement and a short gritty stone scrape, no gunshot, explosion or landing.",
+    "type": "sfx"
+  },
+  {
+    "category": "Boss",
+    "section": "Big MM attack identity",
+    "stem": "sfx_bigmm_projectile_hit",
+    "file_name": "sfx_bigmm_projectile_hit.wav",
+    "target": "0.65 s",
+    "prompt": "One heavy stone-like projectile hits concrete: focused deep stone impact and a short coarse grit burst, no massive collapse or sustained earthquake.",
+    "type": "sfx"
+  },
+  {
+    "category": "Boss",
+    "section": "Big MM attack identity",
+    "stem": "sfx_bigmm_fall",
+    "file_name": "sfx_bigmm_fall.wav",
+    "target": "0.7 s",
+    "prompt": "One very heavy clothed fighter collapses onto concrete: a deep compact body thud, short equipment clatter and slight fabric slide, no scream or musical sting.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_stranger_supply_draw",
+    "file_name": "sfx_stranger_supply_draw.wav",
+    "target": "0.4 s",
+    "prompt": "One gloved hand pulls a small object from a worn canvas bag: tight cloth tug, muted strap creak and tiny hardware rattle.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_stranger_supply_release",
+    "file_name": "sfx_stranger_supply_release.wav",
+    "target": "0.25 s",
+    "prompt": "One compact underhand supply throw: brief sleeve swish and small dry release click, light and accurate, no voice.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_scrap_redirect",
+    "file_name": "sfx_scrap_redirect.wav",
+    "target": "0.35 s",
+    "prompt": "One forceful weapon strike redirects a hollow steel scrap object: solid low-mid contact followed by a short hollow metallic clank.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_cylinder_redirect",
+    "file_name": "sfx_cylinder_redirect.wav",
+    "target": "0.4 s",
+    "prompt": "One powerful strike redirects a sealed small metal pressure cylinder: dense rounded metal thunk and short resonant ping, heavier than scrap, no explosion.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_scrap_bounce",
+    "file_name": "sfx_scrap_bounce.wav",
+    "target": "0.3 s",
+    "prompt": "One hollow steel scrap object bounces on damp concrete: light compact clatter with thin short metal resonance, much softer than a combat hit.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_cylinder_bounce",
+    "file_name": "sfx_cylinder_bounce.wav",
+    "target": "0.35 s",
+    "prompt": "One sealed metal pressure cylinder bounces on concrete: weighty muted clonk and tiny internal rattle, no glass or explosion.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_metal_object_water",
+    "file_name": "sfx_metal_object_water.wav",
+    "target": "0.45 s",
+    "prompt": "One small metal object drops into shallow water: compact plop and short splash with a tiny muffled metal tick against the bed.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_shield_plate_break",
+    "file_name": "sfx_shield_plate_break.wav",
+    "target": "0.9 s",
+    "prompt": "One rusted sheet-metal barricade breaks under a heavy projectile: sharp clank, compact buckle and tear, then a few fragments settling, no stone crumble.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_power_lock_break",
+    "file_name": "sfx_power_lock_break.wav",
+    "target": "0.85 s",
+    "prompt": "One industrial electrical lock is struck and snaps: metal crack, brief gritty electrical arc and a tiny power-down relay click, no sustained alarm.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_target_reject",
+    "file_name": "sfx_target_reject.wav",
+    "target": "0.2 s",
+    "prompt": "One object glances off an intact heavy industrial plate: dull compact metal deflection, clearly weaker than successful destruction.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_rebound_reset",
+    "file_name": "sfx_rebound_reset.wav",
+    "target": "0.45 s",
+    "prompt": "One tactile industrial reset switch operates: soft button click, brief mechanical rewind texture and a muted positive pulse, no melody.",
+    "type": "sfx"
+  },
+  {
+    "category": "Rebound",
+    "section": "Optional Stranger rebound exercise",
+    "stem": "sfx_rebound_complete",
+    "file_name": "sfx_rebound_complete.wav",
+    "target": "0.6 s",
+    "prompt": "One restrained arcade task-complete confirmation: warm low mechanical pulse resolving into a soft brighter click, satisfying and compact, no fanfare.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_select_ally",
+    "file_name": "ui_select_ally.wav",
+    "target": "0.12 s",
+    "prompt": "One tiny rounded selection tick: dry tactile click with a soft low tonal body, clear but gentle.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_command_hold",
+    "file_name": "ui_command_hold.wav",
+    "target": "0.2 s",
+    "prompt": "One concise hold-position confirmation: a firm muted mechanical latch and warm level tonal pulse, stable and settled.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_command_regroup",
+    "file_name": "ui_command_regroup.wav",
+    "target": "0.22 s",
+    "prompt": "One short regroup confirmation: two very soft converging tonal ticks resolving into one centered warm pulse, precise and restrained.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_command_release",
+    "file_name": "ui_command_release.wav",
+    "target": "0.2 s",
+    "prompt": "One command-release confirmation: a light latch release and soft falling air puff, calm and brief.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_formation_change",
+    "file_name": "ui_formation_change.wav",
+    "target": "0.25 s",
+    "prompt": "One formation-change confirmation: a short soft double mechanical latch, organized and precise, no tune.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_unavailable",
+    "file_name": "ui_unavailable.wav",
+    "target": "0.18 s",
+    "prompt": "One gentle unavailable cue: rounded muted knock with a very short downward tone, no buzzer, alarm or harsh beep.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_interact_ready",
+    "file_name": "ui_interact_ready.wav",
+    "target": "0.12 s",
+    "prompt": "One subtle interaction-ready cue: tiny soft click and faint rising tonal glint, unobtrusive during combat.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_confirm",
+    "file_name": "ui_confirm.wav",
+    "target": "0.18 s",
+    "prompt": "One clean interface confirmation: tactile soft click and short warm upward tone, confident and gentle.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_cancel",
+    "file_name": "ui_cancel.wav",
+    "target": "0.16 s",
+    "prompt": "One clean interface cancel cue: soft latch click and short falling tone, quieter than a confirmation.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_character_spawn",
+    "file_name": "ui_character_spawn.wav",
+    "target": "0.45 s",
+    "prompt": "One restrained arcade character arrival cue: compact airy arrival puff with a soft bright resolving pulse, no explosive teleport or fanfare.",
+    "type": "sfx"
+  },
+  {
+    "category": "UI",
+    "section": "Command and interface feedback",
+    "stem": "ui_dialogue_tick",
+    "file_name": "ui_dialogue_tick.wav",
+    "target": "0.05 s",
+    "prompt": "One tiny warm nonverbal text-display tick, rounded and soft with no piercing high frequency, no intelligible syllable.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ambience",
+    "section": "Sewer ambience",
+    "stem": "amb_sewer_room_loop",
+    "file_name": "amb_sewer_room_loop.wav",
+    "target": "30–45 s",
+    "prompt": "Seamless stereo ambience inside a medium industrial brick sewer. Quiet broad water movement, faint ventilation and a low stable room tone. Damp enclosed space, calm underlying tension. No prominent individual drips, music, voices, creatures, combat, footsteps, alarms, sudden bangs or cinematic drone. Stable restrained level, no introduction or ending, matching loop boundaries. Leave generous space for foreground gameplay.",
+    "type": "ambient"
+  },
+  {
+    "category": "Ambience",
+    "section": "Sewer ambience",
+    "stem": "amb_channel_flow_loop",
+    "file_name": "amb_channel_flow_loop.wav",
+    "target": "15–20 s",
+    "prompt": "Seamless mono loop of a modest shallow sewer water channel flowing past concrete edges. Detailed steady low rippling texture, no huge waterfall, discrete splashes, voices, music or dramatic reverb. Stable level with no intro, outro or obvious repeated rhythmic pattern.",
+    "type": "ambient"
+  },
+  {
+    "category": "Ambience",
+    "section": "Sewer ambience",
+    "stem": "amb_pipe_trickle_loop",
+    "file_name": "amb_pipe_trickle_loop.wav",
+    "target": "10–15 s",
+    "prompt": "Seamless mono loop of a narrow trickle leaving a small industrial pipe and reaching shallow water. Close delicate liquid texture, quiet and steady, no large gush, voice, music, startling drip or dramatic reverb. Clean matching loop boundaries.",
+    "type": "ambient"
+  },
+  {
+    "category": "Ambience",
+    "section": "Sewer ambience",
+    "stem": "amb_sewer_drip",
+    "file_name": "amb_sewer_drip.wav",
+    "target": "0.7 s",
+    "prompt": "One isolated small droplet hits shallow water in a brick sewer: rounded plink and short natural room tail. No second drop, background flow, music or voice.",
+    "type": "sfx"
+  },
+  {
+    "category": "Ambience",
+    "section": "Sewer ambience",
+    "stem": "amb_pipe_creak",
+    "file_name": "amb_pipe_creak.wav",
+    "target": "1 s",
+    "prompt": "One distant quiet heavy industrial pipe creak: low restrained metal tension and short settling sound, subtle and natural. No bang, jump scare, alarm, music or voice.",
+    "type": "sfx"
+  },
+  {
+    "category": "Voice",
+    "section": "Optional character effort and boss voice",
+    "stem": "vox_fighter_attack",
+    "file_name": "vox_fighter_attack.wav",
+    "target": "0.2–0.35 s",
+    "prompt": "One brief original adult action-fighter exertion on a strike: controlled breathy huh, determined and natural, no shouted word or name. Close dry mono recording, no music, weapon sound, ambience or reverb. One vocal effort only.",
+    "type": "voice"
+  },
+  {
+    "category": "Voice",
+    "section": "Optional character effort and boss voice",
+    "stem": "vox_fighter_hurt_light",
+    "file_name": "vox_fighter_hurt_light.wav",
+    "target": "0.2–0.4 s",
+    "prompt": "One short restrained adult fighter pain grunt after a light hit, human and immediate, no scream or speech. Close dry mono voice, no impact, music, ambience or reverb.",
+    "type": "voice"
+  },
+  {
+    "category": "Voice",
+    "section": "Optional character effort and boss voice",
+    "stem": "vox_fighter_hurt_heavy",
+    "file_name": "vox_fighter_hurt_heavy.wav",
+    "target": "0.4–0.6 s",
+    "prompt": "One stronger adult fighter winded grunt after a heavy hit: brief forceful breath loss, controlled and non-melodramatic. Close dry mono voice, no words, impact, music or reverb.",
+    "type": "voice"
+  },
+  {
+    "category": "Voice",
+    "section": "Optional character effort and boss voice",
+    "stem": "vox_fighter_defeat",
+    "file_name": "vox_fighter_defeat.wav",
+    "target": "0.6–0.9 s",
+    "prompt": "One adult fighter defeat exhale: short exhausted grunt falling into a breath, no prolonged scream, spoken line or comic effect. Dry mono, isolated voice only.",
+    "type": "voice"
+  },
+  {
+    "category": "Voice",
+    "section": "Optional character effort and boss voice",
+    "stem": "vox_bigmm_taunt_01",
+    "file_name": "vox_bigmm_taunt_01.wav",
+    "target": "under 2.5 s",
+    "prompt": "Original fictional adult male sewer enforcer voice, low rough chest tone, commanding and aggressive, clear words rather than screaming. Say exactly: \"Come on! Make them bleed!\" One take, dry mono voice only, no music, effects or room reverb.",
+    "type": "voice"
+  },
+  {
+    "category": "Voice",
+    "section": "Optional character effort and boss voice",
+    "stem": "vox_bigmm_taunt_02",
+    "file_name": "vox_bigmm_taunt_02.wav",
+    "target": "under 2 s",
+    "prompt": "Use the same original fictional adult male enforcer voice as the approved reference. Low rough tone, taunting confidence and a short contemptuous delivery. Say exactly: \"Is that all you've got?\" Dry mono voice only, no music, effects or reverb.",
+    "type": "voice"
+  },
+  {
+    "category": "Voice",
+    "section": "Optional character effort and boss voice",
+    "stem": "vox_bigmm_taunt_03",
+    "file_name": "vox_bigmm_taunt_03.wav",
+    "target": "about 2 s",
+    "prompt": "Use the same original fictional adult male enforcer voice as the approved reference. Low rough tone, decisive irritation, preparing to enter the fight. Say exactly: \"Enough. I'll handle this myself!\" Dry mono voice only, no music, effects or reverb.",
+    "type": "voice"
+  }
+]

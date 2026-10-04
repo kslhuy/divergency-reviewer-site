@@ -3,7 +3,7 @@ import { escapeHtml, escapeAttribute } from './html.mjs';
 import { renderTabs, renderPane, renderHeroStats } from './components.mjs';
 import { collectGalleryGroups, renderGalleryPane } from './gallery.mjs';
 import { collectImageSlots, imageSlots } from './images.mjs';
-const { siteUrl, siteTitle, siteDescription, siteImage, facebookUrl, bilibiliUrl, youtubeUrl, xUrl, instagramUrl, kickstarterUrl, galleryTab } = config;
+const { siteUrl, siteTitle, siteDescription, siteImage, facebookUrl, bilibiliUrl, youtubeUrl, xUrl, instagramUrl, tiktokUrl, kickstarterUrl, galleryTab } = config;
 
 export function buildPage(docs) {
   const galleryGroups = collectGalleryGroups();
@@ -37,7 +37,7 @@ export function buildPage(docs) {
         "@id": `${siteUrl}#organization`,
         name: "TriLinkage",
         url: siteUrl,
-        sameAs: [facebookUrl, bilibiliUrl, youtubeUrl, xUrl, instagramUrl],
+        sameAs: [facebookUrl, bilibiliUrl, youtubeUrl, xUrl, instagramUrl, tiktokUrl],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Marseille",
@@ -81,6 +81,7 @@ export function buildPage(docs) {
           <a class="hero-link" href="${youtubeUrl}" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a class="hero-link" href="${xUrl}" target="_blank" rel="noopener noreferrer">X</a>
           <a class="hero-link" href="${instagramUrl}" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="hero-link" href="${tiktokUrl}" target="_blank" rel="noopener noreferrer">TikTok</a>
           <a class="hero-link" href="${kickstarterUrl}" target="_blank" rel="noopener noreferrer">Kickstarter</a>
           <a class="hero-link" href="steam-image-tool.html">Steam image formatter</a>
         </div>

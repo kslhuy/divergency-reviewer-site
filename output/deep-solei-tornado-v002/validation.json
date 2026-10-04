@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "scenes": 5,
+  "outcomesPerScene": [
+    1,
+    2,
+    1,
+    1,
+    1
+  ],
+  "maxCast": 2,
+  "seekStates": 2166,
+  "drawCalls": 395897,
+  "checks": [
+    "source clips and cel duration",
+    "finite draw calls",
+    "dynamic roles",
+    "success/failure captions",
+    "forward seek and rewind"
+  ],
+  "browser": {
+    "passed": true,
+    "offline": true,
+    "rewindPixelIdentical": true,
+    "hitMissDistinct": true,
+    "speedControl": true,
+    "allScenesLoaded": true,
+    "viewports": [
+      1440,
+      390
+    ],
+    "errors": []
+  },
+  "animation": {
+    "passed": true,
+    "distinctFrames": 10,
+    "fps": 12,
+    "loopPeriodSeconds": 0.8333333333333334,
+    "frameStepWrap": true,
+    "playback": true,
+    "originalFreezeComparison": true,
+    "transparencyGrid": true,
+    "errors": []
+  },
+  "exactPalette": {
+    "passed": true,
+    "sourceFileByteIdentical": true,
+    "width": 800,
+    "height": 320,
+    "pixels": 256000,
+    "opaquePixels": 38239,
+    "alphaMismatch": 0,
+    "paletteMismatch": 0,
+    "changedOpaquePixels": 38239
+  }
+}

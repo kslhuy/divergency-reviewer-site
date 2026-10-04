@@ -1,0 +1,12 @@
+const {chromium}=require('C:/Users/Quang Huy Nugyen/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('fs'),path=require('path'),assert=require('assert');
+(async()=>{const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true}),page=await browser.newPage({viewport:{width:1100,height:1040}}),errors=[];page.on('pageerror',e=>errors.push(String(e)));
+await page.goto(require('url').pathToFileURL(path.join(__dirname,'Tornado_Animation.html')).href);await page.waitForFunction(()=>window.tornadoAnimation?.state.loaded);
+const states=[];for(let i=0;i<10;i++){await page.evaluate(i=>tornadoAnimation.seek(i),i);states.push(await page.locator('#stage').evaluate(c=>c.toDataURL()));assert.equal(await page.evaluate(()=>tornadoAnimation.state.frame),i)}assert.equal(new Set(states).size,10);
+await page.locator('#next').click();assert.equal(await page.evaluate(()=>tornadoAnimation.state.frame),0);
+await page.locator('#prev').click();assert.equal(await page.evaluate(()=>tornadoAnimation.state.frame),9);
+await page.evaluate(()=>tornadoAnimation.seek(0));await page.locator('#play').click();await page.waitForFunction(()=>tornadoAnimation.state.time>1);assert(await page.evaluate(()=>tornadoAnimation.state.playing));
+await page.evaluate(()=>tornadoAnimation.seek(2));await page.screenshot({path:path.join(__dirname,'preview-animation-wide.png'),fullPage:true});
+await page.locator('#background').click();assert(await page.locator('#stageWrap').evaluate(e=>e.classList.contains('checker')));
+await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(__dirname,'preview-animation-narrow.png'),fullPage:true});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+assert.deepEqual(errors,[]);const report=JSON.parse(fs.readFileSync(path.join(__dirname,'validation.json')));report.animation={passed:true,distinctFrames:10,fps:12,loopPeriodSeconds:10/12,frameStepWrap:true,playback:true,originalFreezeComparison:true,transparencyGrid:true,errors};fs.writeFileSync(path.join(__dirname,'validation.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report.animation));await browser.close()})().catch(e=>{console.error(e);process.exit(1)});

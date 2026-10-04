@@ -7,6 +7,7 @@ export const bilibiliUrl = "https://space.bilibili.com/3707037181545433";
 export const youtubeUrl = "https://www.youtube.com/@TriLinkage-Studio";
 export const xUrl = "https://x.com/Divergency_TrL";
 export const instagramUrl = "https://www.instagram.com/divergency.trilinkage/";
+export const tiktokUrl = "https://www.tiktok.com/@trilinkage";
 export const kickstarterUrl = "https://www.kickstarter.com/projects/divergency/divergency-dark-story-fantasy-game";
 export const heroBackground = "imgs/UI/K_banner/K_baner_animated.gif";
 
@@ -17,4 +18,3 @@ export const galleryTab = {
   summary:
     "Main image assets grouped by source folder, so stage art, direct UI images, rewards, items, characters, and other references stay easy to scan.",
 };
-

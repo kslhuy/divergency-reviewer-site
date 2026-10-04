@@ -1,0 +1,38 @@
+<h2 id="marketing-tracking" tabindex="-1">Cài đặt và kiểm tra tracking</h2>
+<h3 id="marketing-ga4" tabindex="-1">1. Google Analytics</h3>
+<ol>
+<li>Trong GA4, tạo/chọn property cho Divergency và Web data stream. Dùng URL chính của project Kickstarter.</li>
+<li>Vào <strong>Admin → Data streams → chọn stream</strong>; sao chép Measurement ID dạng <code>G-…</code>, dán vào Tracking ID ở Kickstarter → Promotion.</li>
+<li>Trong cùng stream, mở <strong>Measurement Protocol API secrets → Create</strong>; dán Secret value vào ô API secret trên Kickstarter.</li>
+</ol>
+<p>Nguồn: <a href="https://help.kickstarter.com/en-us/articles/16236686-what-is-google-analytics-and-how-do-i-set-it-up">Kickstarter: cài GA4</a>; <a href="https://developers.google.com/analytics/devguides/collection/protocol/ga4/sending-events">Google: tạo API secret</a>.</p>
+<h3 id="marketing-meta" tabindex="-1">2. Meta Pixel và Conversions API</h3>
+<ol>
+<li>Trong Meta Events Manager, tạo/chọn nguồn Web cho Divergency. Nếu tạo mới, chọn kết nối thủ công với Meta Pixel và Conversions API.</li>
+<li>Ở Settings, lấy Dataset/Pixel ID và dán vào ô Pixel ID của Kickstarter. Kickstarter đã có phần tích hợp code.</li>
+<li>Vẫn nguồn đó: <strong>Settings → Conversions API → Set up direct integration → Generate access token</strong>. Dán token vào ô tương ứng trên Kickstarter. Nếu không thấy nút, kiểm tra quyền quản trị.</li>
+</ol>
+<p>Nguồn: <a href="https://help.kickstarter.com/en-us/articles/16236735-what-is-meta-pixel-and-how-do-i-set-it-up-on-my-project">Kickstarter: Pixel</a> và <a href="https://help.kickstarter.com/en-us/articles/16236737-what-is-meta-conversions-api-and-how-do-i-set-it-up-on-my-project">Kickstarter: CAPI</a>. Token phải thuộc nguồn dữ liệu dùng với Pixel đã chọn.</p>
+<p><strong>Giữ API secret và access token trong tài khoản quản trị.</strong> Không dán chúng vào tài liệu public, HTML, Git hoặc ảnh chụp chia sẻ. Tab này chỉ chứa hướng dẫn. <a href="https://developers.google.com/analytics/devguides/collection/protocol/ga4/sending-events">Google yêu cầu giữ API secret riêng tư</a>.</p>
+<h3 id="marketing-verify" tabindex="-1">3. Kiểm chứng bằng hành động thực tế</h3>
+<p>Mở trang pre-launch công khai bằng trình duyệt, ghi giờ và URL vừa mở; kiểm tra GA4 Realtime/Events và Meta Events Manager. Khi thử “Notify me on launch”, dùng tài khoản người xem chưa follow và tự chọn đồng ý tracking. Dữ liệu có thể đến chậm: GA4 tối đa 24 giờ; Meta từ vài phút đến vài giờ. Không tự đánh dấu hoàn tất chỉ vì đã bấm Save.</p>
+<table>
+<thead><tr><th>Hành động</th><th>Tín hiệu cần tìm</th><th>Hiểu đúng</th></tr></thead>
+<tbody>
+<tr><td>Xem trang pre-launch</td><td>GA4: page_view trên web; Meta: ViewContent.</td><td>Có người xem chưa có nghĩa có người muốn ủng hộ.</td></tr>
+<tr><td>Notify me on launch</td><td>Meta Pixel: Lead.</td><td>Schema hiện tại không liệt kê Lead ở CAPI/GA4; đừng giả định cả ba nơi đều có.</td></tr>
+<tr><td>Hoàn tất pledge khi chiến dịch live</td><td>Sự kiện mua/pledge ở GA4 và Meta.</td><td>Đối chiếu tên sự kiện thực nhận; pledge chưa đồng nghĩa tiền cuối cùng đã thu.</td></tr>
+</tbody></table>
+<p>Nguồn: <a href="https://help.kickstarter.com/en-us/articles/16236739-google-and-meta-marketing-event-types-and-schemas">Schema sự kiện Kickstarter</a>. Chỉ xác nhận bước pledge sau một giao dịch thật; không cần tự tạo pledge để thử trước launch.</p>
+<p>Nếu chưa thấy dữ liệu: kiểm tra đúng property/dataset, ID, trang đang mở, consent và trình chặn quảng cáo; sau đó chờ đủ thời gian rồi kiểm tra lại. CAPI vẫn tuân theo lựa chọn tracking của người xem. Nếu thấy pledge bị đếm đôi, xem Diagnostics của Meta và nhờ Kickstarter kiểm tra tích hợp; chưa tăng ngân sách khi số liệu còn bất thường.</p>
+<h3 id="marketing-links" tabindex="-1">4. Link riêng cho mỗi kênh</h3>
+<p>Tạo custom referral tag trong Promotion trước launch hoặc Dashboard khi live; lưu đúng URL Kickstarter sinh ra. Báo cáo referral cho biết pledge và số tiền, không có lượt click. Dùng GA4 để bổ sung traffic. <a href="https://help.kickstarter.com/hc/es/articles/115005138933">Hướng dẫn referral tags của Kickstarter</a>.</p>
+<table>
+<thead><tr><th>Nhãn đề xuất</th><th>Nơi dùng</th><th>UTM gợi ý nếu cần GA4</th></tr></thead>
+<tbody>
+<tr><td>yt_combo_prelaunch</td><td>YouTube: link hồ sơ kênh/trailer</td><td>source=youtube; medium=organic_social</td></tr>
+<tr><td>ig_squad_prelaunch</td><td>Reel về ra lệnh đồng đội</td><td>source=instagram; medium=organic_social</td></tr>
+<tr><td>creator_ten_launch</td><td>Một creator, một link</td><td>source=ten_creator; medium=creator</td></tr>
+<tr><td>meta_combo_test01</td><td>Một mẫu quảng cáo thử</td><td>source=facebook; medium=paid_social</td></tr>
+</tbody></table>
+<p>Đây là nhãn dự kiến, chưa phải link đã tạo. Khi thêm UTM, giữ nguyên tham số <code>ref</code> của link Kickstarter; dùng tên đầy đủ <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign=divergency_prelaunch</code> và <code>utm_content=combo_a</code>. Mở thử link cuối để xác nhận đúng trang và tham số còn nguyên. Không dùng chung một link cho toàn bộ chiến dịch.</p>
