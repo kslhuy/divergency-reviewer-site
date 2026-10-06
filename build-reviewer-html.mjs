@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { prepareGameplay } from "./scripts/web-content.mjs";
+import { publicContent, isLocalOnlyPath } from './src/public-content.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const outputFile = path.join(here, "Divergency_Reviewer_Tabs.html");
@@ -1170,7 +1171,7 @@ function galleryGroupForSlot(slot) {
   };
 }
 
-function collectGalleryGroups() {
+function collectGalleryGroups({ local = false } = {}) {
   const groups = new Map();
   const gallerySlots = collectImageSlots({
     includeExcluded: true,
@@ -1180,6 +1181,7 @@ function collectGalleryGroups() {
 
   gallerySlots
     .filter((slot) => (
+      (local || !isLocalOnlyPath(slot.src)) &&
       !excludedGalleryImageSlots.has(slot.src) &&
       !excludedGalleryImageFolders.some((folder) => slot.src.startsWith(folder))
     ))
@@ -1257,12 +1259,21 @@ ${sections || '<p class="empty-note">No images found.</p>'}
     </section>`;
 }
 
-export function buildPage(docs) {
-  const galleryGroups = collectGalleryGroups();
+export function buildPage(docs, { local = false } = {}) {
+  if (!local) docs = docs.filter(doc => doc.id !== 'rewards').map(doc => {
+    const html = publicContent(doc.html, { documentId: doc.id });
+    const toc = doc.toc.filter(item => html.includes(`id="${item.id}"`));
+    return { ...doc, html, toc, sections: toc.filter(item => item.level <= 2).length,
+      summary: doc.id === 'kickstarter' ? 'Campaign pitch: gameplay, story, funding, timeline, and risks.' : doc.summary };
+  });
+  const galleryGroups = collectGalleryGroups({ local });
   const tabs = renderTabs([...docs, galleryTab]);
   const panes = [...docs.map(renderPane), renderGalleryPane(galleryGroups)].join("\n");
   const docIds = [...docs.map((doc) => doc.id), galleryTab.id];
-  const allImageSlots = collectImageSlots();
+  const allImageSlots = collectImageSlots().filter(slot => local || !isLocalOnlyPath(slot.src));
+  const visibleImageSlots = Object.fromEntries(Object.entries(imageSlots)
+    .filter(([id]) => local || id !== 'rewards')
+    .map(([id, slots]) => [id, slots.filter(slot => local || !isLocalOnlyPath(slot.src))]));
 
   return `<!doctype html>
 <html lang="en">
@@ -2909,7 +2920,7 @@ export function buildPage(docs) {
   -->
   <script>
     const DOC_IDS = ${JSON.stringify(docIds)};
-    const IMAGE_SLOTS = ${JSON.stringify(imageSlots, null, 6)};
+    const IMAGE_SLOTS = ${JSON.stringify(visibleImageSlots, null, 6)};
     const ALL_IMAGE_SLOTS = ${JSON.stringify(allImageSlots, null, 6)};
 
     const tabButtons = Array.from(document.querySelectorAll(".tab-button"));
@@ -3197,8 +3208,8 @@ export function buildPage(docs) {
 </html>`;
 }
 
-export function buildReviewer() {
-  writeFileSync(outputFile, buildPage(buildDocs()), "utf8");
+export function buildReviewer({ local = false } = {}) {
+  writeFileSync(outputFile, buildPage(buildDocs(), { local }), "utf8");
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -3212,6 +3223,6 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     mkdirSync(path.dirname(source), { recursive: true });
     writeFileSync(source, prepareGameplay(renderMarkdown(readFileSync(path.join(here, "Divergency_Gameplay_Level_Design.md"), "utf8"), "gameplay").html).html, "utf8");
   }
-  buildReviewer();
+  buildReviewer({ local: process.argv.includes('--local') });
   console.log(`Wrote ${path.relative(process.cwd(), outputFile)}`);
 }
