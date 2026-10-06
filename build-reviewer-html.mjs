@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { prepareGameplay } from "./scripts/web-content.mjs";
 import { publicContent, isLocalOnlyPath } from './src/public-content.mjs';
+import { publicCampaignPage } from './src/public-campaign.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const outputFile = path.join(here, "Divergency_Reviewer_Tabs.html");
@@ -1260,7 +1261,7 @@ ${sections || '<p class="empty-note">No images found.</p>'}
 }
 
 export function buildPage(docs, { local = false } = {}) {
-  if (!local) docs = docs.filter(doc => doc.id !== 'rewards').map(doc => {
+  if (!local) docs = docs.filter(doc => doc.id === 'kickstarter').map(doc => {
     const html = publicContent(doc.html, { documentId: doc.id });
     const toc = doc.toc.filter(item => html.includes(`id="${item.id}"`));
     return { ...doc, html, toc, sections: toc.filter(item => item.level <= 2).length,
@@ -1275,7 +1276,7 @@ export function buildPage(docs, { local = false } = {}) {
     .filter(([id]) => local || id !== 'rewards')
     .map(([id, slots]) => [id, slots.filter(slot => local || !isLocalOnlyPath(slot.src))]));
 
-  return `<!doctype html>
+  const html = `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -3206,6 +3207,7 @@ export function buildPage(docs, { local = false } = {}) {
   ${readFileSync(path.join(here, "scripts/gameplay-editor.js"), "utf8")}</script>
 </body>
 </html>`;
+  return local ? html : publicCampaignPage(html);
 }
 
 export function buildReviewer({ local = false } = {}) {
