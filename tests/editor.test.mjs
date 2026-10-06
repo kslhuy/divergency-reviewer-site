@@ -165,11 +165,11 @@ test('HTTP editor saves, reloads, enforces origin and token, and does not serve 
 
 test('build uses the web source and includes working scripts and valid gameplay index targets', () => {
   const override = '<h1>Bản chính trên web</h1><h2>Mục trùng</h2><p>Nội dung</p><h2>Mục trùng</h2>';
-  const docs = buildDocs(override);
+  const docs = buildDocs(override, { local: true });
   const gameplay = docs.find(doc => doc.id === 'gameplay');
   assert.equal(gameplay.toc.length, 3);
   assert.notEqual(gameplay.toc[1].id, gameplay.toc[2].id);
-  const page = buildPage(docs);
+  const page = buildPage(docs, { local: true });
   let scripts = 0;
   walk(parse(page), node => {
     if (node.tagName !== 'script' || node.attrs.some(attr => attr.name === 'type' && attr.value === 'application/ld+json')) return;

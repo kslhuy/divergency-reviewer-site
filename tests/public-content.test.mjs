@@ -3,6 +3,26 @@ import assert from 'node:assert/strict';
 import { buildDocs, buildPage } from '../build-reviewer-html.mjs';
 import { isLocalOnlyPath, publicContent, preserveLocalContent } from '../src/public-content.mjs';
 import { prepareGameplay } from '../scripts/web-content.mjs';
+import { parse } from 'parse5';
+import { campaignAssetPaths } from '../src/public-campaign.mjs';
+
+test('public reader contains only the English campaign; local reader retains other tabs and editing', () => {
+  const html = buildPage(buildDocs());
+  assert.deepEqual([...html.matchAll(/data-doc="([^"]+)"/g)].map(m => m[1]), ['kickstarter']);
+  assert.doesNotMatch(html, /ALL_IMAGE_SLOTS|IMAGE_SLOTS|id="web-edit|data-md-action|src="[^"]*gameplay-editor|Mục lục|Chưa|Tìm mục/);
+  assert.match(html, /<html lang="en">/);
+  assert.match(html, /Kickstarter Campaign/);
+  assert.match(html, /Contents/);
+  const assets = campaignAssetPaths(html);
+  assert.ok(assets.includes('imgs/UI/K_banner/K_baner_animated.gif'));
+  assert.ok(!assets.some(isLocalOnlyPath));
+  const local = buildPage(buildDocs(undefined, {local:true}), {local:true});
+  for (const tab of ['story', 'gameplay', 'rewards', 'gallery']) assert.ok(local.includes(`data-doc="${tab}"`));
+  const texts = [];
+  function visit(node) { if(node.nodeName === '#text' && !['script','style'].includes(node.parentNode?.tagName)) texts.push(node.value); for(const child of node.childNodes || []) visit(child); }
+  visit(parse(html));
+  assert.doesNotMatch(texts.join(' '), /[àáảãạăằắẳẵặâầấẩẫậđèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵ]/i);
+});
 
 test('public builds omit private chapters, rewards and image manifests; local retains them', () => {
   const publicPage = buildPage(buildDocs());

@@ -11,7 +11,7 @@ const outputFile = path.join(here, 'Divergency_Reviewer_Tabs.html');
 
 export function buildDocs(gameplayOverride, { local = false } = {}) {
   const documents = JSON.parse(readFileSync(path.join(here, 'content/documents.json'), 'utf8'));
-  return documents.filter(doc => local || doc.id !== 'rewards').map(doc => {
+  return documents.filter(doc => local || doc.id === 'kickstarter').map(doc => {
     const source = doc.id === 'gameplay' && gameplayOverride !== undefined ? gameplayOverride : readContent(here, doc.id);
     const html = local ? source : publicContent(source, { documentId: doc.id });
     if (!local && doc.id === 'kickstarter') doc.summary = 'Campaign pitch: hook, gameplay, story, funding, timeline, and risks.';

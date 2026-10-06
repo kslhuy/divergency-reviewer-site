@@ -35,6 +35,8 @@ Gameplay online vẫn dùng bản đã lưu trong cơ sở dữ liệu. Các ch�
 
 ## Development
 
+- The public internet version contains only the English Kickstarter campaign and its referenced media. Other documents, galleries, editors, exports, standalone tools, and gameplay APIs are local-only. Stage 5 and rewards remain excluded from the public campaign.
+
 - Stage 5 and campaign rewards are local-only. Public HTML, galleries, image manifests, Pages files, and online API/history responses omit them; direct hosted artwork URLs return 404. `?local=1` cannot unlock published content.
 - Use `npm run edit`, `npm run dev:online`, or `npm run build:local` for the complete local version. `npm run build` creates public HTML; `npm run build:pages` prepares the filtered `_site/` deployment. Online builds use a separate generated page, leaving the local HTML untouched.
 - Hidden gameplay blocks already saved online are retained in storage when editing the public document. Only filtered content is returned online.

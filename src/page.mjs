@@ -4,9 +4,11 @@ import { renderTabs, renderPane, renderHeroStats } from './components.mjs';
 import { collectGalleryGroups, renderGalleryPane } from './gallery.mjs';
 import { collectImageSlots, imageSlots } from './images.mjs';
 import { isLocalOnlyPath } from './public-content.mjs';
+import { publicCampaignPage } from './public-campaign.mjs';
 const { siteUrl, siteTitle, siteDescription, siteImage, facebookUrl, bilibiliUrl, youtubeUrl, xUrl, instagramUrl, tiktokUrl, kickstarterUrl, galleryTab } = config;
 
 export function buildPage(docs, { local = false } = {}) {
+  if (!local) docs = docs.filter(doc => doc.id === 'kickstarter');
   const galleryGroups = collectGalleryGroups({ local });
   const tabs = renderTabs([...docs, galleryTab]);
   const panes = [...docs.map(renderPane), renderGalleryPane(galleryGroups)].join("\n");
@@ -16,7 +18,7 @@ export function buildPage(docs, { local = false } = {}) {
     .filter(([id]) => local || id !== 'rewards')
     .map(([id, slots]) => [id, slots.filter(slot => local || !isLocalOnlyPath(slot.src))]));
 
-  return `<!doctype html>
+  const html = `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -149,4 +151,5 @@ export function buildPage(docs, { local = false } = {}) {
   <script defer src="scripts/markdown-export.js"></script>
 </body>
 </html>`;
+  return local ? html : publicCampaignPage(html);
 }

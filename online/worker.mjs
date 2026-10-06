@@ -87,6 +87,19 @@ export function imageType(bytes) {
 }
 async function handle(request, env) {
   const url = new URL(request.url); const route = url.pathname;
+  // Production exposes only the English campaign and its referenced media.
+  // No public URL, query parameter, login or export can open local documents.
+  if (!visibility.local) {
+    if (!['GET', 'HEAD'].includes(request.method)) return json(404, {error:'Page not found.'});
+    if (['/', '/index.html', '/Divergency_Reviewer_Tabs.html'].includes(route)) {
+      return new Response(request.method === 'HEAD' ? null : page, {headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
+    }
+    let file; try { file = decodeURIComponent(route.slice(1)); } catch { return json(404, {error:'Page not found.'}); }
+    if (!visibility.allowedAssets?.includes(file) || isLocalOnlyPath(file)) return json(404, {error:'Page not found.'});
+    if (file.startsWith('imgs/') || file.startsWith('audio/')) return Response.redirect(new URL(route.slice(1), imageOrigin).href, 302);
+    if (Object.hasOwn(assets, route)) return new Response(request.method === 'HEAD' ? null : assets[route], {headers:{'Content-Type':'text/css; charset=utf-8','Cache-Control':'no-cache'}});
+    return json(404, {error:'Page not found.'});
+  }
   const visible = html => visibility.local ? html : publicContent(html, { documentId: 'gameplay' });
   if (!visibility.local && isLocalOnlyPath(route)) return json(404, {error:'Page not found.'});
   if (Object.hasOwn(assets, route) && ['GET', 'HEAD'].includes(request.method)) {
