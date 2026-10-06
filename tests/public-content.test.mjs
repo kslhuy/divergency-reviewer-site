@@ -54,3 +54,20 @@ test('section filtering removes bodies, subchapters, inline references and priva
   const savedAgain = prepareGameplay(preserveLocalContent(saved, output, {documentId:'gameplay'})).html;
   assert.equal((savedAgain.match(/Secret finale/g) || []).length, 1);
 });
+
+test('Pages artifact includes the public Social Hub bio page and its media assets', async () => {
+  const root = new URL('../', import.meta.url);
+  const siteDir = new URL('../_site/', import.meta.url);
+  const { existsSync, readFileSync } = await import('node:fs');
+  assert.equal(existsSync(new URL('socials.html', root)), true);
+  assert.equal(existsSync(new URL('links.html', root)), true);
+  const socials = readFileSync(new URL('socials.html', root), 'utf8');
+  assert.match(socials, /TRILINKAGE/);
+  assert.match(socials, /Music_Trailler_Original\.mp3/);
+  if (existsSync(new URL('socials.html', siteDir))) {
+    assert.equal(existsSync(new URL('links.html', siteDir)), true);
+    assert.equal(existsSync(new URL('audio/Music_Trailler_Original.mp3', siteDir)), true);
+    assert.equal(existsSync(new URL('imgs/icons/icon_d_color.png', siteDir)), true);
+  }
+});
+
