@@ -3,14 +3,18 @@ import { escapeHtml, escapeAttribute } from './html.mjs';
 import { renderTabs, renderPane, renderHeroStats } from './components.mjs';
 import { collectGalleryGroups, renderGalleryPane } from './gallery.mjs';
 import { collectImageSlots, imageSlots } from './images.mjs';
+import { isLocalOnlyPath } from './public-content.mjs';
 const { siteUrl, siteTitle, siteDescription, siteImage, facebookUrl, bilibiliUrl, youtubeUrl, xUrl, instagramUrl, tiktokUrl, kickstarterUrl, galleryTab } = config;
 
-export function buildPage(docs) {
-  const galleryGroups = collectGalleryGroups();
+export function buildPage(docs, { local = false } = {}) {
+  const galleryGroups = collectGalleryGroups({ local });
   const tabs = renderTabs([...docs, galleryTab]);
   const panes = [...docs.map(renderPane), renderGalleryPane(galleryGroups)].join("\n");
   const docIds = [...docs.map((doc) => doc.id), galleryTab.id];
-  const allImageSlots = collectImageSlots();
+  const allImageSlots = collectImageSlots().filter(slot => local || !isLocalOnlyPath(slot.src));
+  const visibleImageSlots = Object.fromEntries(Object.entries(imageSlots)
+    .filter(([id]) => local || id !== 'rewards')
+    .map(([id, slots]) => [id, slots.filter(slot => local || !isLocalOnlyPath(slot.src))]));
 
   return `<!doctype html>
 <html lang="en">
@@ -73,7 +77,7 @@ export function buildPage(docs) {
         <p>
           A dark fantasy 2.5D tactical brawler from TriLinkage, a small independent
           game studio based in Marseille, France. This site separates the game,
-          the studio, the campaign pitch, story, gameplay, rewards, and production notes.
+          the studio, the campaign pitch, story, gameplay, and production notes.
         </p>
         <div class="hero-links" aria-label="Official links">
           <a class="hero-link" href="${facebookUrl}" target="_blank" rel="noopener noreferrer">Facebook</a>
@@ -131,7 +135,7 @@ export function buildPage(docs) {
   -->
   <script>
     const DOC_IDS = ${JSON.stringify(docIds)};
-    const IMAGE_SLOTS = ${JSON.stringify(imageSlots)};
+    const IMAGE_SLOTS = ${JSON.stringify(visibleImageSlots)};
     const ALL_IMAGE_SLOTS = ${JSON.stringify(allImageSlots)};
   </script>
   <script defer src="scripts/reader-core.js"></script>

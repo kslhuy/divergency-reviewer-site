@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "build": "node build-reviewer-html.mjs",
+    "build:local": "node build-reviewer-html.mjs --local",
+    "build:pages": "node scripts/prepare-pages.mjs",
     "build:online": "node online/prepare.mjs && vite build",
-    "dev:online": "node online/prepare.mjs && vite --host 127.0.0.1",
+    "dev:online": "node online/prepare.mjs --local && vite --host 127.0.0.1",
     "db:generate": "drizzle-kit generate",
     "edit": "node scripts/editor-server.mjs",
     "test": "node --test tests/*.test.mjs"

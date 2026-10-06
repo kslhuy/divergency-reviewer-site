@@ -1,6 +1,7 @@
 import { galleryTab } from './site-config.mjs';
 import { escapeHtml, escapeAttribute } from './html.mjs';
 import { renderIndex } from './components.mjs';
+import { isLocalOnlyPath } from './public-content.mjs';
 import { collectImageSlots, galleryFolderOrder, galleryFolderLabels, readableName, excludedGalleryImageSlots, excludedGalleryImageFolders } from './images.mjs';
 export function galleryGroupId(key) {
   return `gallery-${key.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
@@ -19,7 +20,7 @@ export function galleryGroupForSlot(slot) {
   };
 }
 
-export function collectGalleryGroups() {
+export function collectGalleryGroups({ local = false } = {}) {
   const groups = new Map();
   const gallerySlots = collectImageSlots({
     includeExcluded: true,
@@ -29,6 +30,7 @@ export function collectGalleryGroups() {
 
   gallerySlots
     .filter((slot) => (
+      (local || !isLocalOnlyPath(slot.src)) &&
       !excludedGalleryImageSlots.has(slot.src) &&
       !excludedGalleryImageFolders.some((folder) => slot.src.startsWith(folder))
     ))
@@ -105,4 +107,3 @@ ${sections || '<p class="empty-note">No images found.</p>'}
       </div>
     </section>`;
 }
-

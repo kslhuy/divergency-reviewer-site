@@ -57,7 +57,7 @@ export function createContentStore(root, renderPage) {
   };
 }
 
-export function createEditorServer({ root = projectRoot, renderPage = html => buildPage(buildDocs(html)) } = {}) {
+export function createEditorServer({ root = projectRoot, renderPage = html => buildPage(buildDocs(html, { local: true }), { local: true }) } = {}) {
   const store = createContentStore(root, renderPage);
   const token = randomBytes(32).toString('hex');
   const mime = { '.html': 'text/html; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif', '.webp': 'image/webp', '.svg': 'image/svg+xml' };
@@ -136,7 +136,7 @@ export function createEditorServer({ root = projectRoot, renderPage = html => bu
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  buildReviewer();
+  buildReviewer({ local: true });
   const port = Number(process.env.DIVERGENCY_EDITOR_PORT || 4177);
   const server = createEditorServer();
   server.on('error', error => { console.error(`Editor could not start: ${error.message}`); process.exitCode = 1; });

@@ -3,13 +3,14 @@ import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync } from 'node:fs';
 import { prepareGameplay } from '../scripts/web-content.mjs';
+import { publicContent, isLocalOnlyPath, preserveLocalContent } from '../src/public-content.mjs';
 
 // Exercise the actual Worker handler and SQL against SQLite, with only build-time assets injected.
 const source = readFileSync(new URL('../online/worker.mjs', import.meta.url),'utf8')
   .replace(/^import .*;\r?\n/gm,'');
-const makeWorkerSource = new Function('prepareGameplay','page','initialHTML','library','assets',
+const makeWorkerSource = new Function('prepareGameplay','page','initialHTML','library','assets','visibility','publicContent','isLocalOnlyPath','preserveLocalContent',
   source.replaceAll('export function ','function ').replace('export default {','return {'));
-const makeWorker = (...args) => makeWorkerSource(...args, { '/scripts/markdown-export.js': 'export-test', '/styles/site.css': 'body{}' });
+const makeWorker = (...args) => makeWorkerSource(...args, { '/scripts/markdown-export.js': 'export-test', '/styles/site.css': 'body{}' }, {local: false}, publicContent, isLocalOnlyPath, preserveLocalContent);
 function setup() {
   const sqlite = new DatabaseSync(':memory:');
   sqlite.exec(readFileSync(new URL('../drizzle/0000_aberrant_famine.sql',import.meta.url),'utf8'));
@@ -34,6 +35,27 @@ function setup() {
 }
 const owner={id:'owner-id',email:'owner@example.test'};
 const editor={id:'editor-id',email:'writer@example.test'};
+
+test('public routes, history and manifests hide local-only content even with local=1; edits retain hidden originals', async () => {
+  const {request,sqlite}=setup();
+  const html='<h1>Gameplay</h1><h2>Stage 4</h2><p>Public chapter</p><h2>Chương 5</h2><p>SECRET FINALE</p><h2>5-1. Dream</h2><p>SECRET DREAM</p><h2>7. Mechanics</h2><p>Public systems</p>';
+  sqlite.prepare('INSERT INTO documents (id,html,revision,saved_at,saved_by) VALUES (?,?,?,?,?)').run('gameplay',html,1,'2026-10-06T10:00:00Z','owner@example.test');
+  for (const route of ['/api/gameplay','/api/gameplay?local=1','/?local=1']) {
+    const response=await request(route); assert.equal(response.status,200);
+    const text=await response.text(); assert.doesNotMatch(text,/SECRET/); assert.match(text,/Public chapter/);
+  }
+  for (const route of ['/imgs/Stage5/a.gif','/imgs/%53tage5/a.gif','/imgs/rewards/a.png','/imgs/campaign-panels/kick/Reward.png','/rewards-card-poster.html','/rewards-proofs-showcase.html']) {
+    assert.equal((await request(route+'?local=1')).status,404,route);
+  }
+  const current=await (await request('/api/gameplay')).json();
+  const save=await request('/api/gameplay','PUT',{...current,html:current.html.replace('Public chapter','Edited chapter')},owner);
+  assert.equal(save.status,200);
+  assert.match(sqlite.prepare('SELECT html FROM documents').get().html,/SECRET FINALE/);
+  for (const route of ['/api/gameplay','/api/history?revision=1','/api/history?revision=2']) {
+    assert.doesNotMatch(await (await request(route,'GET',null,owner)).text(),/SECRET/);
+  }
+  sqlite.close();
+});
 
 test('browser assets are served with correct MIME types while server source stays private', async () => {
   const { request, sqlite } = setup();

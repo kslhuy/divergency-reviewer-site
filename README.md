@@ -35,6 +35,10 @@ Gameplay online vẫn dùng bản đã lưu trong cơ sở dữ liệu. Các ch�
 
 ## Development
 
+- Stage 5 and campaign rewards are local-only. Public HTML, galleries, image manifests, Pages files, and online API/history responses omit them; direct hosted artwork URLs return 404. `?local=1` cannot unlock published content.
+- Use `npm run edit`, `npm run dev:online`, or `npm run build:local` for the complete local version. `npm run build` creates public HTML; `npm run build:pages` prepares the filtered `_site/` deployment. Online builds use a separate generated page, leaving the local HTML untouched.
+- Hidden gameplay blocks already saved online are retained in storage when editing the public document. Only filtered content is returned online.
+
 - `npm ci --ignore-scripts` installs dependencies; `npm test` checks storage, permissions, conflicts, merging and uploads.
 - `npm run dev:online` runs the online app locally. Existing artwork is served directly from local `imgs/`; uploaded images use the local R2 binding. Local authentication uses `seedy@sites.test`; configure `ADMIN_EMAIL` in the ignored `.dev.vars` file.
 - `npm run build:online` builds the Sites Worker. `.openai/hosting.json` identifies the existing project, D1 database and R2 uploads binding. Production migrations are managed by Drizzle; never reseed live content.

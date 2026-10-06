@@ -1,8 +1,10 @@
-import page from '../Divergency_Reviewer_Tabs.html?raw';
+import page from './generated/page.html?raw';
 import initialHTML from './generated/gameplay.html?raw';
 import assets from './generated/assets.json';
 import library from './generated/images.json';
 import { prepareGameplay } from '../scripts/web-content.mjs';
+import visibility from './generated/visibility.json';
+import { publicContent, isLocalOnlyPath, preserveLocalContent } from '../src/public-content.mjs';
 
 const publicOrigin = 'https://kslhuy.github.io';
 const imageOrigin = publicOrigin + '/divergency-reviewer-site/';
@@ -50,7 +52,8 @@ export function contentStore(db, seed = initialHTML) {
     async save(input, user) {
       if (typeof input.html !== 'string' || !input.html.trim() || input.html.length > 3_000_000 || !Number.isSafeInteger(input.revision) || input.revision < 0)
         throw fail(400, 'Invalid content or version.');
-      const prepared = prepareGameplay(input.html);
+      const current = await this.read();
+      const prepared = prepareGameplay(visibility.local ? input.html : preserveLocalContent(current.html, input.html, { documentId: 'gameplay' }));
       if (!prepared.toc.length) throw fail(400, 'Keep at least one heading in the document.');
       const at = new Date().toISOString();
       // One atomic transaction: compare-and-swap and record exactly that saved revision.
@@ -84,6 +87,8 @@ export function imageType(bytes) {
 }
 async function handle(request, env) {
   const url = new URL(request.url); const route = url.pathname;
+  const visible = html => visibility.local ? html : publicContent(html, { documentId: 'gameplay' });
+  if (!visibility.local && isLocalOnlyPath(route)) return json(404, {error:'Page not found.'});
   if (Object.hasOwn(assets, route) && ['GET', 'HEAD'].includes(request.method)) {
     return new Response(request.method === 'HEAD' ? null : assets[route], { headers: {
       'Content-Type': route.endsWith('.css') ? 'text/css; charset=utf-8' : 'text/javascript; charset=utf-8',
@@ -92,7 +97,7 @@ async function handle(request, env) {
   }
   if (route === '/api/gameplay' && request.method === 'GET') {
     const { savedBy, ...content } = await contentStore(env.DB).read();
-    return json(200, content, true);
+    return json(200, { ...content, html: visible(content.html) }, true);
   }
   if (route.startsWith('/imgs/online/')) {
     if (!['GET','HEAD'].includes(request.method)) return json(405, {error:'Method not supported.'});
@@ -129,7 +134,7 @@ async function handle(request, env) {
         if (!/^\d+$/.test(revision)) throw fail(400,'Invalid version.');
         const record = await env.DB.prepare('SELECT html, revision, saved_at AS savedAt, saved_by AS savedBy FROM revisions WHERE revision = ?').bind(Number(revision)).first();
         if (!record) throw fail(404,'Version not found.');
-        return json(200,record);
+        return json(200,{...record, html: visible(record.html)});
       }
       const rows = await env.DB.prepare('SELECT revision, saved_at AS savedAt, saved_by AS savedBy FROM revisions ORDER BY revision DESC LIMIT 100').all();
       return json(200,{revisions:rows.results});
@@ -148,7 +153,7 @@ async function handle(request, env) {
     if (route === '/api/images') {
       if (request.method === 'GET') {
         const rows = await env.DB.prepare('SELECT key, name, bytes FROM images ORDER BY uploaded_at DESC').all();
-        return json(200,{images:[...rows.results.map(i=>({src:'imgs/online/'+i.key,name:i.name,bytes:i.bytes,folder:'uploads'})),...library]});
+        return json(200,{images:[...rows.results.map(i=>({src:'imgs/online/'+i.key,name:i.name,bytes:i.bytes,folder:'uploads'})),...library].filter(i => visibility.local || (!isLocalOnlyPath(i.src) && !isLocalOnlyPath(i.name)))});
       }
       if (request.method === 'POST') {
         const bytes = await body(request,20*1024*1024); const [ext,type] = imageType(bytes);
@@ -165,7 +170,7 @@ async function handle(request, env) {
   }
   if (['/','/Divergency_Reviewer_Tabs.html'].includes(route) && ['GET','HEAD'].includes(request.method)) {
     const current = request.method === 'HEAD' ? null : await contentStore(env.DB).read();
-    const rendered = current && page.replace(/(<article\b[^>]*data-search-root="gameplay"[^>]*>)[\s\S]*?(<\/article>)/, (_,open,close) => open + current.html + close);
+    const rendered = current && page.replace(/(<article\b[^>]*data-search-root="gameplay"[^>]*>)[\s\S]*?(<\/article>)/, (_,open,close) => open + visible(current.html) + close);
     return new Response(rendered,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
   }
   if (['/steam-image-tool.html','/rewards-card-poster.html'].includes(route)) return Response.redirect(imageOrigin+route.slice(1),302);
