@@ -6,8 +6,7 @@ import { assetFiles } from '../src/asset-files.mjs';
 import { isLocalOnlyPath, publicContent } from '../src/public-content.mjs';
 const local = process.argv.includes('--local');
 mkdirSync('online/generated', { recursive: true });
-if (existsSync('imgs')) buildReviewer({ local, output: 'online/generated/page.html' });
-else if (!existsSync('online/generated/page.html')) throw new Error('Missing deployment page');
+buildReviewer({ local, output: 'online/generated/page.html' });
 // A reduced deployment checkout must carry public output, never a local preview.
 if (!local && /imgs\/Stage5\/|imgs\/rewards\/|data-tab="rewards"/.test(readFileSync('online/generated/page.html', 'utf8'))) throw new Error('Refusing to publish a local-only preview');
 const gameplay = readContent(process.cwd(), 'gameplay');

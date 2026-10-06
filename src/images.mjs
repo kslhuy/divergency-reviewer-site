@@ -1,4 +1,4 @@
-import { readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const here = fileURLToPath(new URL('../', import.meta.url));
@@ -54,15 +54,11 @@ export const imageSlots = {
       alt: "Animated Stage 4 view",
       caption: "Animated world / set-piece preview",
     },
-    {
-      src: "imgs/rewards/beacon-bracelet-marseille-mockup.png",
-      alt: "Marseille-inspired Beacon bracelet product mockup",
-      caption: "Concept mockup: Marseille Beacon Bracelet -- final materials may differ; staging props not included",
-    },
+
     {
       src: "imgs/rewards/pixel-character-patch-keychain-set-mockup.png",
       alt: "Pixel character patch and keychain set product mockup",
-      caption: "Concept mockup: Pixel Character Patch & Keychain Set -- final materials may differ; staging props not included",
+      caption: "Patch concept: three embroidered patches only; keychains, stickers and props not included",
     },
     {
       src: "imgs/rewards/a3-poster-product-mockup.png",
@@ -167,80 +163,77 @@ export const imageSlots = {
     },
   ],
   rewards: [
+    { src: "imgs/rewards/divergency-mini-figures-concept-90mm-v2.png", alt: "90 mm painted resin figure concept", caption: "One character of your choice — painted figure €65 target; sample pending" },
     {
       src: "imgs/campaign-panels/kick/reward/reward 1.png",
-      alt: "Suspicious side-eye mutation portrait for the $5 Side-Eye Supporter tier",
-      caption: "Tier face: $5 Side-Eye Supporter",
+      alt: "Tier portrait: €5 Side-Eye Recognition",
+      caption: "Tier portrait: €5 Side-Eye Recognition",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 2.png",
-      alt: "Furious red-eyed mutation portrait for the $10 Red-Eye Signal Pack tier",
-      caption: "Tier face: $10 Red-Eye Signal Pack",
+      alt: "Tier portrait: €15 Red-Eye Attention",
+      caption: "Tier portrait: €15 Red-Eye Attention",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 3.png",
-      alt: "Crooked-grin mutation portrait for the $20 Crooked-Grin Early Bird tier",
-      caption: "Tier face: $20 Crooked-Grin Early Bird",
+      alt: "Tier portrait: €25 Crooked-Grin Adventurer",
+      caption: "Tier portrait: €25 Crooked-Grin Adventurer",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 4.png",
-      alt: "Grim-faced mutation portrait for the $25 Grim-Faced Recruit tier",
-      caption: "Tier face: $25 Grim-Faced Recruit",
+      alt: "Tier portrait: €45 Grim-Face Wanted",
+      caption: "Tier portrait: €45 Grim-Face Wanted",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 5.png",
-      alt: "Skull-grin mutation portrait for the $40 Skullgrin Deluxe tier",
-      caption: "Tier face: $40 Skullgrin Deluxe",
+      alt: "Tier portrait: €70 Open-Mind Insider (Early Bird)",
+      caption: "Tier portrait: €70 Open-Mind Insider (Early Bird)",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 6.gif",
-      alt: "Animated exposed-mind portrait for the $60 Open-Mind Insider tier",
-      caption: "Tier face: $60 Open-Mind Insider",
+      alt: "Tier portrait: €75 Brainrot Test Subject",
+      caption: "Tier portrait: €75 Brainrot Test Subject",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 7.gif",
-      alt: "Animated brainrot host portrait for the $70 Brainrot Test Subject tier",
-      caption: "Tier face: $70 Brainrot Test Subject",
+      alt: "Tier portrait: €99 Glitched-Out Scout",
+      caption: "Tier portrait: €99 Glitched-Out Scout",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 8.gif",
-      alt: "Animated reality-glitch portrait for the $95 Glitched-Out Scout tier",
-      caption: "Tier face: $95 Glitched-Out Scout, EU only",
+      alt: "Tier portrait: €199 Full-Meltdown Collector (proposal)",
+      caption: "Tier portrait: €199 Full-Meltdown Collector (proposal)",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 9.gif",
-      alt: "Animated screaming mutation portrait for the $120 Full-Meltdown Collector tier",
-      caption: "Tier face: $120 Full-Meltdown Collector, EU only",
+      alt: "Tier portrait: €333 Mind-Blown Scribbler",
+      caption: "Tier portrait: €333 Mind-Blown Scribbler",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 10.gif",
-      alt: "Animated mind-blown mutation portrait for the $250 Mind-Blown Scribbler tier",
-      caption: "Tier face: $250 Mind-Blown Scribbler",
+      alt: "Tier portrait: €777 Flesh-Binder Architect",
+      caption: "Tier portrait: €777 Flesh-Binder Architect",
     },
     {
       src: "imgs/campaign-panels/kick/reward/reward 11.gif",
-      alt: "Animated final mutation portrait for the $500 Final-Form Architect tier",
-      caption: "Tier face: $500 Final-Form Architect",
+      alt: "Tier portrait: €1,111 Nightmare Harbinger",
+      caption: "Tier portrait: €1,111 Nightmare Harbinger",
     },
     {
       src: "imgs/rewards/a3-poster-product-mockup.png",
       alt: "A3 Divergency poster product mockup",
       caption: "Physical reward mockup: A3 poster",
     },
-    {
-      src: "imgs/rewards/beacon-bracelet-marseille-mockup.png",
-      alt: "Marseille-inspired Beacon bracelet product mockup",
-      caption: "Concept mockup: Marseille Beacon Bracelet -- final materials may differ; staging props not included",
-    },
+
     {
       src: "imgs/rewards/pixel-character-patch-keychain-set-mockup.png",
       alt: "Pixel character patch and keychain set product mockup",
-      caption: "Physical reward mockup: Pixel Character Patch & Keychain Set",
+      caption: "Patch concept: three patches only; other accessories not included",
     },
     {
       src: "imgs/rewards/bastonne-cell-key-cap-mockup.png",
       alt: "Bastonne cell key cap mockup",
-      caption: "Potential add-on concept -- not included: Bastonne cell key cap",
+      caption: "Bastonne cap concept: Scout choice or Collector proposal; extra cap €35",
     },
     {
       src: "imgs/rewards/bastonne-cell-key-keychain-mockup.png",
@@ -412,6 +405,19 @@ export function collectImageSlots(options = {}) {
   } = options;
   const root = path.join(here, "imgs");
   const slots = [];
+
+  // Reduced Sites checkouts keep a manifest instead of duplicating the artwork.
+  if (!existsSync(root)) {
+    const manifest = path.join(here, 'online/generated/images.json');
+    if (!existsSync(manifest)) return slots;
+    return JSON.parse(readFileSync(manifest, 'utf8'))
+      .map(image => decodeURIComponent(image.src))
+      .filter(src => (includeExcluded || !isExcludedAutoImageSlot(src)) && (includeNestedUi || !isNestedUiImage(src)))
+      .map(src => {
+        const caption = galleryCaptions ? galleryCaptionFromImagePath(src) : captionFromImagePath(src);
+        return { src, alt: caption, caption };
+      });
+  }
 
   function walk(dir) {
     let entries = [];
