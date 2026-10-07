@@ -13,15 +13,43 @@ Sửa trực tiếp rồi bấm **Lưu online** (Ctrl+S). Thành viên khác t�
 
 Nội dung online và ảnh tải lên được lưu riêng với code. Push hoặc triển khai lại giao diện không ghi đè gameplay đã lưu online. Đây là biên tập dùng chung có kiểm tra phiên bản; chưa hiển thị con trỏ/gõ đồng thời như Google Docs.
 
+## Nội dung và xuất Markdown
+
+Thanh điều khiển và đầu mỗi tab có **Copy MD** và **Download .md** để dùng ngay. **Choose section… / Sections…** mở bản xem trước và cho phép chọn riêng từng mục/chương. Các nút copy/tải cũng có trong thanh chỉnh sửa. Bản xuất lấy nội dung đang hiển thị, gồm cả thay đổi chưa lưu; ảnh dùng đường dẫn đầy đủ. Bảng có ô gộp được giữ dưới dạng HTML trong Markdown để không mất cấu trúc.
+
+Thanh chỉnh sửa dùng tiếng Anh và các nút nhỏ gọn. **Style** tự nhận kiểu tại con trỏ: Text, Title, Header, Subheader, Small heading, Heading 5/6, Quote hoặc Code. Các lựa chọn dùng thẻ HTML và CSS có sẵn của tài liệu, không thay đổi font, màu hay kích thước chữ hiện tại.
+
+Web không đọc hay gom các file Markdown để tạo nội dung nữa. Các file `.md` cũ chỉ giữ làm tư liệu; sửa chúng không thay đổi web.
+
+| Cần sửa | Nơi sửa |
+| --- | --- |
+| Tên và mô tả tab | `content/documents.json` |
+| Nội dung từng chương | `content/<tên-tab>/*.html`; `index.json` quyết định thứ tự |
+| Khung trang | `src/page.mjs` |
+| Tab, mục lục, khung đọc | `src/components.mjs` |
+| Gallery và danh sách ảnh | `src/gallery.mjs`, `src/images.mjs` |
+| Kiểu trang và cửa sổ xuất | `styles/site.css`, `styles/export.css` |
+| Chức năng đọc và xuất | `scripts/reader-*.js`, `scripts/markdown-export.js` |
+
+Gameplay online vẫn dùng bản đã lưu trong cơ sở dữ liệu. Các chương trong `content/gameplay/` là bản dự phòng và nguồn biên tập local. Lưu local cập nhật danh sách chương và giữ bản sao khôi phục; không ghi đè nội dung online. `Divergency_Reviewer_Tabs.html` là kết quả tạo tự động, không sửa trực tiếp. Khi mang web sang thư mục khác, mang theo `scripts/`, `styles/` và `imgs/`.
+
 ## Development
 
+- The public internet version contains only the English Kickstarter campaign and its referenced media. Other documents, galleries, editors, exports, standalone tools, and gameplay APIs are local-only. Stage 5 and rewards remain excluded from the public campaign.
+
+- Stage 5 and campaign rewards are local-only. Public HTML, galleries, image manifests, Pages files, and online API/history responses omit them; direct hosted artwork URLs return 404. `?local=1` cannot unlock published content.
+- Use `npm run edit`, `npm run dev:online`, or `npm run build:local` for the complete local version. `npm run build` creates public HTML; `npm run build:pages` prepares the filtered `_site/` deployment. Online builds use a separate generated page, leaving the local HTML untouched.
+- Hidden gameplay blocks already saved online are retained in storage when editing the public document. Only filtered content is returned online.
+
 - `npm ci --ignore-scripts` installs dependencies; `npm test` checks storage, permissions, conflicts, merging and uploads.
-- `npm run dev:online` runs the online app locally. Local authentication uses `seedy@sites.test`; configure `ADMIN_EMAIL` in the ignored `.dev.vars` file.
+- `npm run dev:online` runs the online app locally. Existing artwork is served directly from local `imgs/`; uploaded images use the local R2 binding. Local authentication uses `seedy@sites.test`; configure `ADMIN_EMAIL` in the ignored `.dev.vars` file.
 - `npm run build:online` builds the Sites Worker. `.openai/hosting.json` identifies the existing project, D1 database and R2 uploads binding. Production migrations are managed by Drizzle; never reseed live content.
 - `node scripts/prepare-online-source.mjs` prepares the small Sites source checkout in `.editor-runtime/site-source`. Build, commit and push this exact source before packaging and publishing through Sites.
-- Gameplay in D1 is authoritative online. `content/gameplay.html` is the initial/fallback content; Markdown is a manual import source. Neither automatically overwrites online content.
-- Other tabs are built from their Markdown files by `node build-reviewer-html.mjs`.
+- Gameplay in D1 is authoritative online. `content/gameplay/index.json` and its HTML chapters provide the initial/fallback content and never overwrite saved online content.
+- All tabs are built from their HTML chapters by `node build-reviewer-html.mjs`. The optional legacy Markdown parser is retained only for compatibility checks; it is not imported by the build.
+- Browser CSS and JavaScript are separate files. The local server, GitHub Pages workflow and Sites Worker serve only the declared browser assets in `src/asset-files.mjs`.
 - For deliberate offline development only: `npm run edit`, then `http://127.0.0.1:4177/?local=1#gameplay`. Local saves do not publish online.
+- Reading a local HTML copy or the offline server stays local, including when switching to Gameplay. Without `?local=1`, the edit button still opens the shared editor.
 
 ## GitHub Pages
 

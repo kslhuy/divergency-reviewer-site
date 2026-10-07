@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divergency: Waning Aspiration • Easy Pitch & Speech Coach</title>
+  <meta name="description" content="Simple, natural spoken English pitch guide for Divergency: Waning Aspiration. Designed for easy speaking, live presentations, audio practice, and Vietnamese parallel reference.">
+  
+  <!-- Divergency Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0b0a09;
+      --bg-surface: #141210;
+      --bg-card: rgba(24, 21, 18, 0.94);
+      --bg-card-hover: rgba(34, 30, 25, 0.98);
+      --border-dark: #2a241c;
+      --border-gold: #d8a64d;
+      --border-gold-subtle: rgba(216, 166, 77, 0.28);
+      --gold: #d8a64d;
+      --gold-light: #f5cf8e;
+      --red: #c94f3b;
+      --red-soft: rgba(201, 79, 59, 0.18);
+      --teal: #6fb8ae;
+      --teal-soft: rgba(111, 184, 174, 0.15);
+      --ink: #f7efe4;
+      --muted: #a89c8b;
+      --dim: #706556;
+      --viet-text: #6fb8ae;
+      --radius: 10px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(ellipse 70% 40% at 50% 0%, rgba(201, 79, 59, 0.12), transparent 70%),
+        radial-gradient(ellipse 60% 40% at 85% 60%, rgba(216, 166, 77, 0.06), transparent 70%),
+        linear-gradient(180deg, rgba(11, 10, 9, 0.96) 0%, rgba(11, 10, 9, 1) 100%);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 90px;
+      min-height: 100vh;
+    }
+
+    /* TOP HEADER & HUD */
+    header.pitch-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(14, 12, 10, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-gold-subtle);
+      padding: 12px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .header-branding {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      background: var(--red-soft);
+      border: 1px solid var(--red);
+      color: #ff9180;
+      border-radius: 4px;
+    }
+
+    .game-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .game-subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    /* CONTROLS TOOLBAR */
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      appearance: none;
+      border: 1px solid var(--border-gold-subtle);
+      background: rgba(28, 24, 20, 0.85);
+      color: var(--ink);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn:hover {
+      background: rgba(45, 38, 30, 0.95);
+      border-color: var(--gold);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #c49137 0%, #d8a64d 100%);
+      color: #120e09;
+      border-color: #ffd688;
+      font-weight: 700;
+    }
+    .btn-gold:hover {
+      background: linear-gradient(135deg, #dfaa47 0%, #f5cf8e 100%);
+      color: #0b0906;
+      border-color: #fff;
+    }
+
+    .btn-red {
+      background: var(--red-soft);
+      border-color: var(--red);
+      color: #ff9d8f;
+    }
+    .btn-red:hover {
+      background: var(--red);
+      color: #fff;
+    }
+
+    .btn-active {
+      background: var(--gold);
+      color: #120e09;
+      border-color: var(--gold-light);
+    }
+
+    /* PRACTICE TIMER & AUDIO HUD */
+    .timer-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #191612;
+      border: 1px solid var(--border-dark);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+    }
+    .timer-time {
+      font-weight: 700;
+      color: var(--gold-light);
+      min-width: 48px;
+    }
+
+    .speed-select {
+      background: #191612;
+      border: 1px solid var(--border-dark);
+      color: var(--muted);
+      font-size: 0.8rem;
+      padding: 5px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .speed-select:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: 28px auto;
+      padding: 0 20px;
+    }
+
+    /* INTRO HERO BANNER */
+    .pitch-hero {
+      background: linear-gradient(135deg, rgba(28, 22, 17, 0.95) 0%, rgba(18, 14, 11, 0.9) 100%);
+      border: 1px solid var(--border-gold-subtle);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .pitch-hero::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(216, 166, 77, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+    .pitch-hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pitch-hero p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 780px;
+    }
+    .pitch-tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .tip-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.84rem;
+      color: #ded5c8;
+    }
+    .tip-item .tip-icon {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    /* NAVIGATION TABS */
+    .tabs-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-dark);
+      scrollbar-width: thin;
+    }
+    .tab-btn {
+      padding: 10px 18px;
+      background: rgba(22, 19, 15, 0.7);
+      border: 1px solid transparent;
+      border-radius: 8px 8px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tab-btn:hover {
+      color: var(--ink);
+      background: rgba(34, 29, 23, 0.9);
+    }
+    .tab-btn.active {
+      color: var(--gold-light);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-gold-subtle);
+      border-bottom: 2px solid var(--gold);
+    }
+
+    /* TAB CONTENT PANELS */
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+      animation: fadeIn 0.25s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* PITCH CARD */
+    .pitch-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      position: relative;
+      transition: border-color 0.2s ease;
+    }
+    .pitch-card:hover {
+      border-color: rgba(216, 166, 77, 0.4);
+    }
+    .pitch-card.highlight {
+      border-left: 4px solid var(--gold);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .card-title-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gold);
+      background: rgba(216, 166, 77, 0.1);
+      border: 1px solid rgba(216, 166, 77, 0.3);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .card-duration {
+      font-size: 0.8rem;
+      color: var(--dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* SPEECH CUE BOXES (SENTENCE CHUNKS) */
+    .speech-cue {
+      background: rgba(18, 15, 12, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+    .speech-cue:hover {
+      background: rgba(26, 21, 16, 0.85);
+      border-color: rgba(216, 166, 77, 0.25);
+    }
+    .speech-cue.is-speaking {
+      border-color: var(--gold);
+      background: rgba(216, 166, 77, 0.08);
+      box-shadow: 0 0 16px rgba(216, 166, 77, 0.15);
+    }
+
+    .cue-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .cue-intent {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .cue-english {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.5;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    /* Stress and pauses styling */
+    .cue-english strong {
+      color: var(--gold-light);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(216, 166, 77, 0.4);
+      text-underline-offset: 3px;
+    }
+    .pause-mark {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #ff9180;
+      background: rgba(201, 79, 59, 0.2);
+      border: 1px solid rgba(201, 79, 59, 0.4);
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin: 0 4px;
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: 500;
+    }
+
+    .phonetic-hint {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #ffd688;
+      background: rgba(216, 166, 77, 0.15);
+      padding: 0 5px;
+      border-radius: 3px;
+      margin-left: 2px;
+      font-weight: 500;
+    }
+
+    .cue-viet {
+      font-size: 0.88rem;
+      color: var(--viet-text);
+      background: rgba(111, 184, 174, 0.08);
+      border-left: 3px solid var(--teal);
+      padding: 6px 12px;
+      border-radius: 0 4px 4px 0;
+      line-height: 1.45;
+      display: block;
+      transition: opacity 0.2s;
+    }
+    .cue-viet.hidden-viet {
+      display: none !important;
+    }
+
+    .speak-btn {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s;
+    }
+    .speak-btn:hover {
+      color: var(--gold-light);
+      border-color: var(--gold);
+      background: rgba(216, 166, 77, 0.1);
+    }
+
+    /* CHARACTER GRID */
+    .character-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .hero-card {
+      background: #171410;
+      border: 1px solid var(--border-dark);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+    .hero-card:hover {
+      border-color: var(--border-gold-subtle);
+    }
+    .hero-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .hero-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+    .hero-tag {
+      font-size: 0.75rem;
+      color: var(--red);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .hero-quote {
+      font-style: italic;
+      color: #ded5c8;
+      font-size: 0.88rem;
+      border-left: 2px solid var(--gold);
+      padding-left: 8px;
+    }
+
+    /* QA SECTION */
+    .qa-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+    .qa-question {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ff9d8f;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .qa-answer {
+      font-size: 1.05rem;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    /* TELEPROMPTER OVERLAY */
+    #teleprompter-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(8, 7, 6, 0.98);
+      z-index: 9999;
+      display: none;
+      flex-direction: column;
+      padding: 30px 40px;
+      overflow: hidden;
+    }
+    #teleprompter-modal.active {
+      display: flex;
+    }
+    .prompter-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .prompter-viewport {
+      flex: 1;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      padding: 40px 10% 200px 10%;
+    }
+    .prompter-text {
+      font-size: 2.2rem;
+      line-height: 1.6;
+      color: #f7efe4;
+      font-weight: 600;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .prompter-text p {
+      margin-bottom: 2rem;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .prompter-text p.current-highlight {
+      color: #ffd27d;
+      transform: scale(1.02);
+    }
+    .prompter-text .viet-hint {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--teal);
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    /* TEAM CALLOUT */
+    .team-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 14px;
+      background: rgba(20, 17, 14, 0.8);
+      border: 1px solid var(--border-dark);
+      padding: 12px 16px;
+      border-radius: 8px;
+    }
+    .team-avatars {
+      display: flex;
+      gap: 8px;
+    }
+    .avatar-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: #111;
+      object-fit: cover;
+    }
+
+    /* FLOATING BOTTOM BAR FOR QUICK ACCESS */
+    .floating-bar {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(22, 19, 15, 0.95);
+      border: 1px solid var(--border-gold);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      padding: 8px 16px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 90;
+      backdrop-filter: blur(10px);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .pitch-header { padding: 10px 14px; }
+      .cue-english { font-size: 1rem; }
+      .container { padding: 0 12px; margin: 16px auto; }
+      .prompter-text { font-size: 1.4rem; }
+      .prompter-viewport { padding: 20px 4% 150px 4%; }
+      .floating-bar { width: 92%; justify-content: space-between; bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="pitch-header">
+    <div class="header-branding">
+      <span class="badge-tag">Voice & Pitch Coach</span>
+      <div>
+        <div class="game-title">
+          <span>DIVERGENCY</span>
+          <span style="color:var(--gold); font-size:0.9rem;">• Waning Aspiration</span>
+        </div>
+        <div class="game-subtitle">Spoken English Made Simple for Pitching & Devlogs</div>
+      </div>
+    </div>
+
+    <div class="toolbar-actions">
+      <!-- VIETNAMESE TOGGLE -->
+      <button class="btn" id="toggle-viet-btn" onclick="toggleVietnamese()">
+        <span id="viet-btn-icon">🇻🇳</span>
+        <span id="viet-btn-label">Hide Vietnamese Hints</span>
+      </button>
+
+      <!-- AUDIO SPEED SELECTOR -->
+      <div style="display:flex; align-items:center; gap:6px;">
+        <span style="font-size:0.75rem; color:var(--muted);">Audio:</span>
+        <select class="speed-select" id="speech-rate-select" title="Speaking voice speed">
+          <option value="0.8">0.8x (Slow practice)</option>
+          <option value="0.95" selected>1.0x (Natural pitch)</option>
+          <option value="1.15">1.2x (Fast pace)</option>
+        </select>
+      </div>
+
+      <!-- TIMER -->
+      <div class="timer-pill" title="Pitch practice stopwatch">
+        <span>⏱️</span>
+        <span class="timer-time" id="timer-display">00:00</span>
+        <button class="speak-btn" onclick="toggleTimer()" id="timer-toggle-btn">Start</button>
+        <button class="speak-btn" onclick="resetTimer()">Reset</button>
+      </div>
+
+      <!-- TELEPROMPTER BUTTON -->
+      <button class="btn btn-gold" onclick="openTeleprompter()">
+        <span>🎙️</span>
+        <span>Teleprompter Mode</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+
+    <!-- INTRO HERO -->
+    <section class="pitch-hero">
+      <h1>
+        <span>⚔️</span>
+        <span>Confidence First: Speak Simply, Win Backers</span>
+      </h1>
+      <p>
+        You do <strong>not</strong> need complex English or big academic words to pitch a great game. 
+        Native English listeners prefer <strong>short sentences</strong>, <strong>heavy verbs</strong>, and <strong>clear pauses</strong>. 
+        Below is your complete pitch rewritten into bite-sized, rhythm-friendly lines. Click <strong>🔊 Listen</strong> to hear native pronunciation anytime!
+      </p>
+
+      <div class="pitch-tips-grid">
+        <div class="tip-item">
+          <span class="tip-icon">🫁</span>
+          <div><strong>Rule 1: Breath at [pause]</strong><br><span style="color:var(--muted);">Take 1 second to inhale. Never rush your words.</span></div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">✨</span>
+          <div><strong>Rule 2: Stress Underlined Words</strong><br><span style="color:var(--muted);">Emphasize the bold words. They carry all the energy.</span></div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">🎧</span>
+          <div><strong>Rule 3: Pronounce Game Names</strong><br><span style="color:var(--muted);">Vesliction = <code style="color:var(--gold);">[VESS-lik-shun]</code>, Marseille = <code style="color:var(--gold);">[mar-SAY]</code></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVIGATION TABS -->
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('tab-elevator', this)">
+        <span>⚡</span> 30-Sec Elevator Pitch
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-gameplay', this)">
+        <span>⏱️</span> 2-Minute Gameplay Pitch
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-slides', this)">
+        <span>📜</span> Full 10-Chapter Pitch Deck
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-heroes', this)">
+        <span>👥</span> The 5 Heroes & Villain
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-qa', this)">
+        <span>💡</span> Q&A Survival Answers
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-script', this)">
+        <span>📋</span> Raw Script & Copy
+      </button>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- TAB 1: 30-SECOND ELEVATOR PITCH -->
+    <!-- ========================================== -->
+    <section id="tab-elevator" class="tab-pane active">
+      <div class="pitch-card highlight">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">30s PITCH</span>
+            <h2 class="card-title">The 30-Second Elevator Pitch</h2>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="card-duration">~45 Words • Target: 25-30s</span>
+            <button class="btn btn-red" onclick="speakBlock('elevator-block')">🔊 Play Full Pitch</button>
+          </div>
+        </div>
+
+        <div id="elevator-block">
+          <!-- Sentence 1 -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Hook & Genre</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              <strong>Divergency</strong> is a fast, <strong>dark fantasy pixel-art brawler</strong>. <span class="pause-mark">[pause]</span>
+            </div>
+            <div class="cue-viet">
+              (Divergency là một tựa game brawler hành động pixel 2.5D đen tối, tốc độ cao.)
+            </div>
+          </div>
+
+          <!-- Sentence 2 -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Unique Twist 1: Skill Deck</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              You build a <strong>custom 4-skill deck</strong> before each mission. <span class="pause-mark">[pause]</span>
+            </div>
+            <div class="cue-viet">
+              (Trước mỗi nhiệm vụ, bạn tự build một bộ bài 4 kỹ năng chủ động.)
+            </div>
+          </div>
+
+          <!-- Sentence 3 -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Unique Twist 2: Squad Control</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              And while you fight, you <strong>command your squad</strong> in real-time. <span class="pause-mark">[pause]</span>
+            </div>
+            <div class="cue-viet">
+              (Và ngay trong lúc đánh nhau, bạn chỉ huy đồng đội theo thời gian thực.)
+            </div>
+          </div>
+
+          <!-- Sentence 4 -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Combat Punch</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              Every strike feels <strong>heavy</strong>, <strong>fast</strong>, and <strong>satisfying</strong>. <span class="pause-mark">[pause]</span>
+            </div>
+            <div class="cue-viet">
+              (Mỗi đòn đánh đều mang lại cảm giác nặng đô, nhanh và cực kỳ đã tay.)
+            </div>
+          </div>
+
+          <!-- Sentence 5 -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Call to Action</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              We are <strong>TriLinkage Studio</strong> <span class="phonetic-hint">[TRY-link-age]</span>, and we are live on <strong>Kickstarter</strong>!
+            </div>
+            <div class="cue-viet">
+              (Chúng tôi là TriLinkage Studio, và dự án đang khởi động trên Kickstarter!)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Delivery Tip -->
+      <div style="background:rgba(216, 166, 77, 0.08); border:1px dashed var(--border-gold-subtle); border-radius:8px; padding:14px; font-size:0.88rem; color:#ded5c8;">
+        💡 <strong>Practice Goal:</strong> Say these 5 sentences without rushing. Look straight ahead, smile, and pause after each sentence. If you finish in 25-28 seconds, your speed is perfect!
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: 2-MINUTE GAMEPLAY PITCH -->
+    <!-- ========================================== -->
+    <section id="tab-gameplay" class="tab-pane">
+      <div class="pitch-card highlight">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">2-MIN PITCH</span>
+            <h2 class="card-title">The 2-Minute Gameplay & Hook Pitch</h2>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="card-duration">~180 Words • Target: 1:45 - 2:05</span>
+            <button class="btn btn-red" onclick="speakBlock('gameplay-block')">🔊 Play Full Pitch</button>
+          </div>
+        </div>
+
+        <div id="gameplay-block">
+          <!-- Section A: Welcome & Combat Feel -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Welcome & Hook</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              Welcome to <strong>Divergency: Waning Aspiration</strong>. <span class="pause-mark">[pause]</span>
+              At its heart, this is a <strong>pure combat experience</strong>.
+            </div>
+            <div class="cue-viet">
+              (Chào mừng bạn đến với Divergency: Waning Aspiration. Cốt lõi của tựa game này là trải nghiệm chiến đấu thuần túy.)
+            </div>
+          </div>
+
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Core Mechanics</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              You <strong>dash</strong>, you <strong>parry</strong>, and you <strong>cancel your attacks</strong> to stay alive. <span class="pause-mark">[pause]</span>
+              Every sword slash has heavy <strong>hit-stop</strong>, screen shake, and real weight.
+            </div>
+            <div class="cue-viet">
+              (Bạn lướt, đỡ đòn và hủy hoạt ảnh đánh để sống sót. Mỗi nhát kiếm đều có cảm giác khựng đòn nặng, rung màn hình và độ đầm chân thực.)
+            </div>
+          </div>
+
+          <!-- Section B: Deck System -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Innovation 1: The 4-Skill Deck</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              Here is our first twist: <strong>The Skill Deck</strong>. <span class="pause-mark">[pause]</span>
+              Each fighter has over <strong>ten unique skills</strong>, but you can only equip <strong>four</strong>.
+            </div>
+            <div class="cue-viet">
+              (Đây là điểm đột phá đầu tiên: Bộ bài Kỹ năng. Mỗi đấu sĩ có hơn 10 kỹ năng riêng, nhưng bạn chỉ được mang đúng 4 chiêu vào màn.)
+            </div>
+          </div>
+
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Deck Tactics</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              Do you need <strong>crowd control</strong> for large crowds? <span class="pause-mark">[pause]</span>
+              <strong>High mobility</strong>? Or <strong>heavy shield-breakers</strong>? <span class="pause-mark">[pause]</span>
+              You choose your build before every stage.
+            </div>
+            <div class="cue-viet">
+              (Bạn cần khống chế diện rộng cho đám đông? Độ cơ động cao? Hay đòn phá khiên nặng? Bạn tự quyết định lối build trước mỗi trận.)
+            </div>
+          </div>
+
+          <!-- Section C: Squad Wheel -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Innovation 2: Squad Command Wheel</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              And you never fight alone. <span class="pause-mark">[pause]</span>
+              Our <strong>Command Wheel</strong> lets you give quick orders to your squad without pausing the action.
+            </div>
+            <div class="cue-viet">
+              (Và bạn không bao giờ chiến đấu một mình. Vòng quay Lệnh giúp bạn điều phối đồng đội ngay lập tức mà không cần tạm dừng game.)
+            </div>
+          </div>
+
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Commands in Action</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              Tell allies to <strong>Hold the lane</strong>, change <strong>formation</strong>, or call them in for a <strong>team combo assist</strong>.
+            </div>
+            <div class="cue-viet">
+              (Bảo đồng đội giữ cánh, đổi đội hình, hoặc gọi họ vào tung đòn combo hỗ trợ ăn khớp.)
+            </div>
+          </div>
+
+          <!-- Section D: World & Cursed Relics -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Lore & Cursed Relics</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              Across the world, you discover <strong>Vesliction</strong> <span class="phonetic-hint">[VESS-lik-shun]</span>. <span class="pause-mark">[pause]</span>
+              These are cursed relics. They give <strong>huge power</strong>, but always demand a <strong>dangerous price</strong>.
+            </div>
+            <div class="cue-viet">
+              (Khắp thế giới, bạn sẽ tìm thấy Vesliction. Đó là những cổ vật bị nguyền rủa: ban sức mạnh khổng lồ nhưng luôn đi kèm cái giá nguy hiểm.)
+            </div>
+          </div>
+
+          <!-- Section E: Outro -->
+          <div class="speech-cue">
+            <div class="cue-top">
+              <span class="cue-intent">Team & Kickstarter Call</span>
+              <button class="speak-btn" onclick="speakLine(this)">🔊 Listen</button>
+            </div>
+            <div class="cue-english">
+              We are three friends building this dream, frame by frame. <span class="pause-mark">[pause]</span>
+              Please <strong>back us on Kickstarter</strong> and join our journey!
+            </div>
+            <div class="cue-viet">
+              (Chúng tôi là 3 người bạn cùng xây đắp giấc mơ này từng khung hình một. Hãy ủng hộ chúng tôi trên Kickstarter và đồng hành cùng chúng tôi!)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: FULL 10-CHAPTER PITCH DECK -->
+    <!-- ========================================== -->
+    <section id="tab-slides" class="tab-pane">
+      <div style="margin-bottom:16px; display:flex; justify-content:space-between; align-items:center;">
+        <h3 style="font-family:'Cinzel', serif; color:var(--gold-light);">The Complete 10-Chapter Breakdown</h3>
+        <span style="font-size:0.85rem; color:var(--muted);">Use this when presenting slide-by-slide or answering specific questions</span>
+      </div>
+
+      <!-- CHAPTER 1 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 01</span>
+            <h3 class="card-title">What is Divergency?</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch1-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch1-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              <strong>Divergency</strong> is a fast <strong>2.5D pixel-art brawler</strong> set in a dark fantasy world. <span class="pause-mark">[pause]</span>
+              It combines the fun chaos of classic arcade beat'em ups with modern tactical choices.
+            </div>
+            <div class="cue-viet">
+              (Divergency là tựa game brawler pixel 2.5D trong thế giới dark fantasy. Game kết hợp sự hỗn loạn đã tay của arcade cổ điển với chiều sâu chiến thuật hiện đại.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              Every fight depends on three things: <span class="pause-mark">[pause]</span>
+              your <strong>fighter</strong>, your <strong>skill deck</strong>, and your <strong>squad commands</strong>.
+            </div>
+            <div class="cue-viet">
+              (Mỗi trận đánh phụ thuộc vào 3 yếu tố: đấu sĩ bạn chọn, bộ bài kỹ năng bạn build, và mệnh lệnh đồng đội của bạn.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 2 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 02</span>
+            <h3 class="card-title">The Combat Feeling: Heavy & Fast</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch2-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch2-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              We want combat to feel <strong>fast</strong>, <strong>heavy</strong>, and completely in your control. <span class="pause-mark">[pause]</span>
+              You can <strong>cancel attack animations</strong> with quick dashes to dodge danger.
+            </div>
+            <div class="cue-viet">
+              (Chúng tôi muốn chiến đấu phải nhanh, nặng đô và hoàn toàn trong tầm kiểm soát. Bạn có thể cancel hoạt ảnh đánh bằng cú lướt nhanh để né đòn hiểm.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              Every blow has <strong>hit-stop</strong>, screen shake, and impact particles. <span class="pause-mark">[pause]</span>
+              You really feel the weight of your sword and fists.
+            </div>
+            <div class="cue-viet">
+              (Mỗi nhát đòn đều có hiệu ứng khựng lực (hit-stop), rung màn hình và hạt va chạm. Bạn sẽ cảm nhận rõ độ nặng của kiếm và nắm đấm.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 3 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 03</span>
+            <h3 class="card-title">The 4-Skill Deck (Attunement)</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch3-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch3-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              Each hero has over <strong>ten active skills</strong>, but you can only take <strong>four</strong> into battle. <span class="pause-mark">[pause]</span>
+              This creates high tactical freedom without slowing down the action.
+            </div>
+            <div class="cue-viet">
+              (Mỗi tướng có hơn 10 kỹ năng chủ động, nhưng bạn chỉ mang đúng 4 chiêu vào màn. Điều này tạo ra chiều sâu chiến thuật mà không làm chậm nhịp hành động.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              You can build for <strong>Crowd Control</strong>, <strong>High Mobility</strong>, <strong>Shield Breaking</strong>, or <strong>Boss Burst Damage</strong>. <span class="pause-mark">[pause]</span>
+              As you level up, skills can be upgraded for lower cooldowns and extra effects.
+            </div>
+            <div class="cue-viet">
+              (Bạn có thể build theo hướng Quét Đám Đông, Cơ Động Cao, Phá Khiên, hoặc Sát Thương Dồn Boss. Khi lên cấp, kỹ năng có thể nâng cấp giảm hồi chiêu và thêm hiệu ứng.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 4 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 04</span>
+            <h3 class="card-title">Real-Time Squad Command Wheel</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch4-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch4-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              You do not fight alone. You lead a squad with a seamless <strong>command wheel</strong>. <span class="pause-mark">[pause]</span>
+              Issue orders in real time without stopping your brawler combos.
+            </div>
+            <div class="cue-viet">
+              (Bạn không cô độc. Bạn dẫn dắt một tiểu đội bằng vòng lệnh mượt mà. Ra lệnh ngay trong trận mà không làm gián đoạn chuỗi combo.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              Give simple commands: <strong>"Free"</strong>, <strong>"Come"</strong>, <strong>"Hold Left"</strong> or <strong>"Hold Right"</strong>. <span class="pause-mark">[pause]</span>
+              Or shift formations to <strong>Wedge</strong> or <strong>Circle</strong>, and call <strong>synchronized assist strikes</strong>.
+            </div>
+            <div class="cue-viet">
+              (Ra các lệnh trực quan: "Tự do", "Lại đây", "Giữ cánh trái/phải". Hoặc đổi đội hình Nêm nhọn, Vòng tròn, và gọi đòn trợ chiến đồng bộ.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 5 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 05</span>
+            <h3 class="card-title">Cursed Relics: Vesliction</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch5-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch5-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              Throughout the world are cursed relics called <strong>Vesliction</strong> <span class="phonetic-hint">[VESS-lik-shun]</span>. <span class="pause-mark">[pause]</span>
+              Power in Divergency always comes at a price.
+            </div>
+            <div class="cue-viet">
+              (Khắp thế giới rải rác những cổ vật bị nguyền rủa tên là Vesliction. Sức mạnh trong Divergency luôn phải trả giá.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              They grant powerful perks, but also dangerous curses. <span class="pause-mark">[pause]</span>
+              You can equip them, collect them, or uncover their forgotten lore.
+            </div>
+            <div class="cue-viet">
+              (Chúng cho chỉ số cực mạnh nhưng cũng mang lời nguyền nguy hiểm. Bạn có thể trang bị, sưu tầm hoặc giải mã cốt truyện cổ xưa của chúng.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 6 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 06</span>
+            <h3 class="card-title">The Story & Dark Conflict</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch6-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch6-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              The veteran crusader <strong>Deep</strong> brings his young niece <strong>Solei</strong> <span class="phonetic-hint">[soh-LAY]</span> to the city of <strong>Marseille</strong> <span class="phonetic-hint">[mar-SAY]</span>. <span class="pause-mark">[pause]</span>
+              He is seeking peace after years of war.
+            </div>
+            <div class="cue-viet">
+              (Cựu chiến binh Deep đưa cô cháu gái Solei đến thành phố Marseille để tìm kiếm sự bình yên sau nhiều năm chinh chiến đẫm máu.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              But the city commander, <strong>Jamerson Obsworth</strong>, conducts cruel experiments on refugees to cure his sick daughter. <span class="pause-mark">[pause]</span>
+              When their comrade is captured, Deep's crew attacks <strong>Bastonne Prison</strong> <span class="phonetic-hint">[bass-TON]</span>.
+            </div>
+            <div class="cue-viet">
+              (Nhưng chỉ huy Jamerson Obsworth âm thầm thí nghiệm tàn nhẫn trên người tị nạn để cứu con gái hôn mê. Khi đồng đội bị bắt, nhóm của Deep đột kích ngục Bastonne.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              Branded as fugitives, your squad must fight across broken lands to stop him before his obsession destroys the continent.
+            </div>
+            <div class="cue-viet">
+              (Bị coi là tội phạm trốn chạy, tiểu đội phải chiến đấu qua những vùng đất đổ nát để ngăn chặn hắn trước khi sự ám ảnh hủy diệt cả lục địa.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 7 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 07</span>
+            <h3 class="card-title">Over 80 Handcrafted Enemies</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch7-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch7-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              You will fight over <strong>eighty unique enemies</strong>, all animated by hand. <span class="pause-mark">[pause]</span>
+              They fight in tactical formations, forcing you to reposition constantly.
+            </div>
+            <div class="cue-viet">
+              (Bạn sẽ đối đầu với hơn 80 loại kẻ thù độc nhất, tất cả đều được vẽ tay. Chúng chiến đấu theo đội hình chiến thuật, buộc bạn phải liên tục đổi góc đứng.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              Smart <strong>Human soldiers</strong> coordinate together. <span class="pause-mark">[pause]</span>
+              Feral <strong>Mutants</strong> adapt and resist direct attacks. <span class="pause-mark">[pause]</span>
+              And brutal <strong>Demons</strong> attack relentlessly with dark power.
+            </div>
+            <div class="cue-viet">
+              (Lính người thông minh phối hợp cùng nhau. Sinh vật biến dị thích nghi và chịu đòn cực trâu. Và ác quỷ tàn bạo tấn công không ngừng nghỉ bằng ma thuật bóng tối.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 8 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 08</span>
+            <h3 class="card-title">Stages: Secrets & Exploration</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch8-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch8-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              Divergency is more than simple arenas. <span class="pause-mark">[pause]</span>
+              Our stages feature <strong>hidden branching paths</strong>, environmental puzzles, and optional lore secrets.
+            </div>
+            <div class="cue-viet">
+              (Divergency không chỉ là đấu trường đơn thuần. Các màn chơi có nhánh đường ẩn, giải đố môi trường và những bí mật cốt truyện tùy chọn.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 9 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 09</span>
+            <h3 class="card-title">Who We Are: TriLinkage Studio</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch9-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch9-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              We started as <strong>three high school friends</strong>. <span class="pause-mark">[pause]</span>
+              In 2021, we stopped dreaming and started building the game ourselves.
+            </div>
+            <div class="cue-viet">
+              (Chúng tôi khởi đầu là 3 người bạn thân từ thời cấp 3. Năm 2021, chúng tôi quyết định ngừng mơ mộng và bắt tay tự làm ra trò chơi.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              Two of us code and animate every single pixel frame. <span class="pause-mark">[pause]</span>
+              One of us shapes the story and lore. <span class="pause-mark">[pause]</span>
+              We make every single frame count.
+            </div>
+            <div class="cue-viet">
+              (Hai người chúng tôi lập trình và vẽ từng khung hình pixel. Một người xây dựng cốt truyện và thế giới. Chúng tôi chăm chút cho từng khung hình một.)
+            </div>
+          </div>
+
+          <div class="team-badge-row">
+            <div class="team-avatars">
+              <img src="imgs/avatar-talking/K-talking.gif" alt="K" class="avatar-img" onerror="this.style.display='none'">
+              <img src="imgs/avatar-talking/H-talking.gif" alt="H" class="avatar-img" onerror="this.style.display='none'">
+              <img src="imgs/avatar-talking/N-talking.gif" alt="N" class="avatar-img" onerror="this.style.display='none'">
+            </div>
+            <div>
+              <div style="font-weight:700; color:var(--gold-light);">TriLinkage Team (K, H, N)</div>
+              <div style="font-size:0.82rem; color:var(--muted);">Built with mutual trust, late-night calls, and enduring passion.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 10 -->
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">CH 10</span>
+            <h3 class="card-title">The Core Message & Kickstarter</h3>
+          </div>
+          <button class="speak-btn" onclick="speakBlock('ch10-block')">🔊 Listen Chapter</button>
+        </div>
+        <div id="ch10-block">
+          <div class="speech-cue">
+            <div class="cue-english">
+              Divergency is a story about <strong>refusing to sacrifice innocent people for someone else's miracle</strong>. <span class="pause-mark">[pause]</span>
+              With your support on Kickstarter, we can finish the campaign, polish the combat, and bring Divergency to release.
+            </div>
+            <div class="cue-viet">
+              (Divergency là câu chuyện về việc kiên quyết không hy sinh sinh mạng người vô tội cho phép màu của kẻ khác. Với sự ủng hộ trên Kickstarter, chúng tôi sẽ hoàn thiện chiến dịch, trau chuốt chiến đấu và phát hành game.)
+            </div>
+          </div>
+          <div class="speech-cue">
+            <div class="cue-english">
+              Thank you so much for your time and belief in our team!
+            </div>
+            <div class="cue-viet">
+              (Cảm ơn bạn rất nhiều vì thời gian quý báu và niềm tin dành cho nhóm chúng tôi!)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: THE 5 HEROES & THE VILLAIN -->
+    <!-- ========================================== -->
+    <section id="tab-heroes" class="tab-pane">
+      <div style="margin-bottom:16px;">
+        <h3 style="font-family:'Cinzel', serif; color:var(--gold-light);">Character Pitch Cues</h3>
+        <p style="color:var(--muted); font-size:0.9rem;">How to introduce each hero in 2 simple sentences with confidence</p>
+      </div>
+
+      <div class="character-cards-grid">
+        <!-- DEEP -->
+        <div class="hero-card">
+          <div class="hero-header">
+            <div class="hero-name">Deep</div>
+            <div class="hero-tag">The Unforgiving</div>
+          </div>
+          <div class="speech-cue" style="margin-bottom:0;">
+            <div class="cue-english">
+              <strong>Deep</strong> is a battle-hardened veteran crusader. <span class="pause-mark">[pause]</span>
+              He is a heavy melee fighter who shows zero mercy to demons.
+            </div>
+            <div class="cue-viet">
+              (Deep là cựu hiệp sĩ thập tự chinh dạn dày trận mạc. Anh là đấu sĩ cận chiến hạng nặng, không bao giờ nương tay với quỷ dữ.)
+            </div>
+          </div>
+          <div class="hero-quote">
+            "Feel my mercy. Through death, I grant you pardon."
+          </div>
+          <button class="speak-btn" onclick="speakText('Deep is a battle-hardened veteran crusader. He is a heavy melee fighter who shows zero mercy to demons. Feel my mercy. Through death, I grant you pardon.')">🔊 Hear Character Line</button>
+        </div>
+
+        <!-- SOLEI -->
+        <div class="hero-card">
+          <div class="hero-header">
+            <div class="hero-name">Solei <span class="phonetic-hint" style="font-size:0.75rem;">[soh-LAY]</span></div>
+            <div class="hero-tag">The Wandering Petal</div>
+          </div>
+          <div class="speech-cue" style="margin-bottom:0;">
+            <div class="cue-english">
+              <strong>Solei</strong> is Deep’s adopted niece. <span class="pause-mark">[pause]</span>
+              With her unique mechanical leg, she fights with agile and unpredictable technique.
+            </div>
+            <div class="cue-viet">
+              (Solei là cô cháu gái nuôi của Deep. Với chiếc chân kỳ lạ, cô bé chiến đấu bằng phong cách nhanh nhẹn và khó lường.)
+            </div>
+          </div>
+          <div class="hero-quote">
+            "I'm still young. But when I run, I know exactly who I am."
+          </div>
+          <button class="speak-btn" onclick="speakText('Solei is Deep’s adopted niece. With her unique mechanical leg, she fights with agile and unpredictable technique. When I run, I know exactly who I am.')">🔊 Hear Character Line</button>
+        </div>
+
+        <!-- MARK -->
+        <div class="hero-card">
+          <div class="hero-header">
+            <div class="hero-name">Mark</div>
+            <div class="hero-tag">The Tactical Scout</div>
+          </div>
+          <div class="speech-cue" style="margin-bottom:0;">
+            <div class="cue-english">
+              <strong>Mark</strong> is Deep’s oldest comrade and a master weapon crafter. <span class="pause-mark">[pause]</span>
+              He speaks rarely, but fights with perfect precision.
+            </div>
+            <div class="cue-viet">
+              (Mark là người bạn chiến đấu lâu năm nhất của Deep và là bậc thầy chế tác vũ khí. Anh ít nói, nhưng ra chiêu với độ chính xác tuyệt đối.)
+            </div>
+          </div>
+          <div class="hero-quote">
+            "Fools count soldiers. I count footsteps."
+          </div>
+          <button class="speak-btn" onclick="speakText('Mark is Deep’s oldest comrade and a master weapon crafter. He speaks rarely, but fights with perfect precision. Fools count soldiers. I count footsteps.')">🔊 Hear Character Line</button>
+        </div>
+
+        <!-- TULAS -->
+        <div class="hero-card">
+          <div class="hero-header">
+            <div class="hero-name">Tulas <span class="phonetic-hint" style="font-size:0.75rem;">[TOO-lahs]</span></div>
+            <div class="hero-tag">The Crimson Salvation</div>
+          </div>
+          <div class="speech-cue" style="margin-bottom:0;">
+            <div class="cue-english">
+              <strong>Tulas</strong> is a mysterious young boy with no memory of his past. <span class="pause-mark">[pause]</span>
+              He wields devastating dark blood sorcery in battle.
+            </div>
+            <div class="cue-viet">
+              (Tulas là cậu bé bí ẩn mất hết ký ức quá khứ. Cậu sử dụng huyết thuật bóng tối hủy diệt trên chiến trường.)
+            </div>
+          </div>
+          <div class="hero-quote">
+            "Great authority demands an ultimate sacrifice."
+          </div>
+          <button class="speak-btn" onclick="speakText('Tulas is a mysterious young boy with no memory of his past. He wields devastating dark blood sorcery in battle. Great authority demands an ultimate sacrifice.')">🔊 Hear Character Line</button>
+        </div>
+
+        <!-- BLOCK -->
+        <div class="hero-card">
+          <div class="hero-header">
+            <div class="hero-name">Block</div>
+            <div class="hero-tag">The Unyielding Bulwark</div>
+          </div>
+          <div class="speech-cue" style="margin-bottom:0;">
+            <div class="cue-english">
+              <strong>Block</strong> is a loyal bodyguard and boxer. <span class="pause-mark">[pause]</span>
+              He protects the young ones and fights with heavy bare fists.
+            </div>
+            <div class="cue-viet">
+              (Block là vệ sĩ kiên cường và võ sĩ quyền anh. Anh bảo vệ những đứa trẻ và đấm bằng nắm đấm trần đầy uy lực.)
+            </div>
+          </div>
+          <div class="hero-quote">
+            "I'll stand on my own two feet and fight with my fists."
+          </div>
+          <button class="speak-btn" onclick="speakText('Block is a loyal bodyguard and boxer. He protects the young ones and fights with heavy bare fists. I will stand on my own two feet and fight with my fists.')">🔊 Hear Character Line</button>
+        </div>
+
+        <!-- JAMERSON OBSWORTH -->
+        <div class="hero-card" style="border-color:rgba(201, 79, 59, 0.4);">
+          <div class="hero-header">
+            <div class="hero-name" style="color:#ff9180;">Jamerson Obsworth</div>
+            <div class="hero-tag">The Desperate Villain</div>
+          </div>
+          <div class="speech-cue" style="margin-bottom:0;">
+            <div class="cue-english">
+              <strong>Jamerson</strong> is the ruthless commander of Marseille <span class="phonetic-hint">[mar-SAY]</span>. <span class="pause-mark">[pause]</span>
+              Obsessed with curing his dying daughter, he turns innocent refugees into test subjects.
+            </div>
+            <div class="cue-viet">
+              (Jamerson là chỉ huy tàn nhẫn của thành Marseille. Quá tuyệt vọng muốn chữa bệnh cho con gái sắp chết, hắn biến người tị nạn thành vật thí nghiệm.)
+            </div>
+          </div>
+          <div class="hero-quote" style="border-left-color:var(--red);">
+            "A desperate father will burn the world for his daughter."
+          </div>
+          <button class="speak-btn" onclick="speakText('Jamerson is the ruthless commander of Marseille. Obsessed with curing his dying daughter, he turns innocent refugees into test subjects.')">🔊 Hear Character Line</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 5: Q&A SURVIVAL ANSWERS -->
+    <!-- ========================================== -->
+    <section id="tab-qa" class="tab-pane">
+      <div style="margin-bottom:16px;">
+        <h3 style="font-family:'Cinzel', serif; color:var(--gold-light);">Pitch Q&A Survival Guide</h3>
+        <p style="color:var(--muted); font-size:0.9rem;">Short, confident answers to common questions asked by backers, publishers, or streamers.</p>
+      </div>
+
+      <!-- Q1 -->
+      <div class="qa-card">
+        <div class="qa-question">
+          <span>❓</span> "What inspired Divergency?"
+        </div>
+        <div class="qa-answer">
+          "We love classic brawlers like <strong>Little Fighter 2</strong> and <strong>Streets of Rage</strong>, combined with the loadout depth of modern action RPGs."
+        </div>
+        <div class="cue-viet">
+          (Chúng tôi lấy cảm hứng từ game brawler kinh điển như Little Fighter 2 và Streets of Rage, kết hợp chiều sâu tùy biến của game nhập vai hành động hiện đại.)
+        </div>
+        <button class="speak-btn" style="margin-top:8px;" onclick="speakText('We love classic brawlers like Little Fighter 2 and Streets of Rage, combined with the loadout depth of modern action RPGs.')">🔊 Listen Answer</button>
+      </div>
+
+      <!-- Q2 -->
+      <div class="qa-card">
+        <div class="qa-question">
+          <span>❓</span> "Why limit players to only 4 skills?"
+        </div>
+        <div class="qa-answer">
+          "Four skills make gamepad controls clean and responsive, while making your tactical choices truly matter before every stage."
+        </div>
+        <div class="cue-viet">
+          (Giới hạn 4 chiêu giúp thao tác tay cầm gọn gàng, đồng thời khiến lựa chọn chiến thuật trước mỗi màn thực sự có ý nghĩa.)
+        </div>
+        <button class="speak-btn" style="margin-top:8px;" onclick="speakText('Four skills make gamepad controls clean and responsive, while making your tactical choices truly matter before every stage.')">🔊 Listen Answer</button>
+      </div>
+
+      <!-- Q3 -->
+      <div class="qa-card">
+        <div class="qa-question">
+          <span>❓</span> "Is the squad AI hard to control while fighting?"
+        </div>
+        <div class="qa-answer">
+          "Not at all. You just flick the wheel or tap one shortcut to regroup, hold a lane, or trigger a team assist."
+        </div>
+        <div class="cue-viet">
+          (Không hề khó. Bạn chỉ cần gạt nhẹ vòng lệnh hoặc bấm một phím tắt để tập hợp, giữ cánh, hay tung đòn trợ chiến.)
+        </div>
+        <button class="speak-btn" style="margin-top:8px;" onclick="speakText('Not at all. You just flick the wheel or tap one shortcut to regroup, hold a lane, or trigger a team assist.')">🔊 Listen Answer</button>
+      </div>
+
+      <!-- Q4 -->
+      <div class="qa-card">
+        <div class="qa-question">
+          <span>❓</span> "What platforms are you releasing on?"
+        </div>
+        <div class="qa-answer">
+          "We are launching <strong>PC first on Steam</strong>, and we plan to bring it to consoles after launch."
+        </div>
+        <div class="cue-viet">
+          (Chúng tôi phát hành PC đầu tiên trên Steam, và có kế hoạch đưa lên hệ máy console sau đó.)
+        </div>
+        <button class="speak-btn" style="margin-top:8px;" onclick="speakText('We are launching PC first on Steam, and we plan to bring it to consoles after launch.')">🔊 Listen Answer</button>
+      </div>
+
+      <!-- Q5 -->
+      <div class="qa-card">
+        <div class="qa-question">
+          <span>❓</span> "What will the Kickstarter funds be used for?"
+        </div>
+        <div class="qa-answer">
+          "Funding will help us finish the full story campaign, polish the combat, add more boss encounters, and complete sound design."
+        </div>
+        <div class="cue-viet">
+          (Kinh phí giúp chúng tôi hoàn thiện toàn bộ chiến dịch cốt truyện, mài sắc chiến đấu, bổ sung trùm và hoàn thiện thiết kế âm thanh.)
+        </div>
+        <button class="speak-btn" style="margin-top:8px;" onclick="speakText('Funding will help us finish the full story campaign, polish the combat, add more boss encounters, and complete sound design.')">🔊 Listen Answer</button>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 6: RAW SCRIPT & 1-CLICK COPY -->
+    <!-- ========================================== -->
+    <section id="tab-script" class="tab-pane">
+      <div class="pitch-card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="card-number">COPY TOOLS</span>
+            <h3 class="card-title">Clean Scripts for Video Voiceovers or Email Pitches</h3>
+          </div>
+        </div>
+
+        <p style="color:var(--muted); font-size:0.9rem; margin-bottom:14px;">
+          Use these clean text versions to copy directly into YouTube descriptions, Discord chats, publisher pitch emails, or teleprompter apps.
+        </p>
+
+        <div style="display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+          <button class="btn btn-gold" onclick="copyText('copy-elevator')">📋 Copy 30-Sec Pitch</button>
+          <button class="btn" onclick="copyText('copy-gameplay')">📋 Copy 2-Min Pitch</button>
+          <button class="btn" onclick="copyText('copy-lore')">📋 Copy Characters & Story</button>
+        </div>
+
+        <div style="background:#110f0d; border:1px solid var(--border-dark); border-radius:6px; padding:16px;">
+          <h4 style="color:var(--gold); font-size:0.9rem; margin-bottom:8px;">30-Second Clean English Script:</h4>
+          <pre id="copy-elevator" style="font-family:'Inter', sans-serif; white-space:pre-wrap; color:#f0e6d8; line-height:1.6; font-size:0.95rem;">Divergency is a fast, dark fantasy pixel-art brawler.
+You build a custom 4-skill deck before each mission.
+And while you fight, you command your squad in real-time.
+Every strike feels heavy, fast, and satisfying.
+We are TriLinkage Studio, and we are live on Kickstarter!</pre>
+
+          <hr style="border:none; border-top:1px solid var(--border-dark); margin:18px 0;">
+
+          <h4 style="color:var(--gold); font-size:0.9rem; margin-bottom:8px;">2-Minute Clean English Script:</h4>
+          <pre id="copy-gameplay" style="font-family:'Inter', sans-serif; white-space:pre-wrap; color:#f0e6d8; line-height:1.6; font-size:0.95rem;">Welcome to Divergency: Waning Aspiration.
+At its heart, this is a pure combat experience.
+You dash, you parry, and you cancel your attacks to stay alive. Every sword slash has heavy hit-stop, screen shake, and real weight.
+
+Here is our first twist: The Skill Deck.
+Each fighter has over ten unique skills, but you can only equip four.
+Do you need crowd control for large crowds? High mobility? Or heavy shield-breakers? You choose your build before every stage.
+
+And you never fight alone.
+Our Command Wheel lets you give quick orders to your squad without pausing the action.
+Tell allies to hold the lane, change formation, or call them in for a team combo assist.
+
+Across the world, you discover Vesliction. These are cursed relics. They give huge power, but always demand a dangerous price.
+
+We are three friends building this dream, frame by frame.
+Please back us on Kickstarter and join our journey!</pre>
+
+          <hr style="border:none; border-top:1px solid var(--border-dark); margin:18px 0;">
+
+          <h4 style="color:var(--gold); font-size:0.9rem; margin-bottom:8px;">Characters & Story Pitch Summary:</h4>
+          <pre id="copy-lore" style="font-family:'Inter', sans-serif; white-space:pre-wrap; color:#f0e6d8; line-height:1.6; font-size:0.95rem;">The veteran crusader Deep brings his young niece Solei to the fortified city of Marseille, seeking peace after years of bloodshed.
+Behind the city's gleaming walls, ruthless commander Jamerson Obsworth conducts dark experiments on refugees to save his comatose daughter.
+When a comrade is captured, Deep's squad storms Bastonne Prison, uncovering a secret that threatens the entire realm.
+Branded as fugitives, your squad must fight across broken lands to stop him before his obsession destroys everything.
+Divergency is a story about refusing to sacrifice innocent people for someone else's miracle.</pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FLOATING QUICK BAR -->
+  <!-- ========================================== -->
+  <aside class="floating-bar">
+    <button class="btn btn-gold" style="padding:6px 12px; font-size:0.8rem;" onclick="openTeleprompter()">
+      🎙️ Teleprompter
+    </button>
+    <button class="btn" style="padding:6px 12px; font-size:0.8rem;" onclick="speakBlock(getActiveTabBlockId())">
+      🔊 Speak Active Tab
+    </button>
+    <button class="btn btn-red" style="padding:6px 12px; font-size:0.8rem;" onclick="window.speechSynthesis.cancel()">
+      ⏹️ Stop Audio
+    </button>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- FULLSCREEN TELEPROMPTER MODAL -->
+  <!-- ========================================== -->
+  <div id="teleprompter-modal">
+    <div class="prompter-nav">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <span style="font-family:'Cinzel', serif; font-size:1.4rem; color:var(--gold-light); font-weight:800;">DIVERGENCY PROMPTER</span>
+        <span class="badge-tag" id="prompter-mode-label">Elevator Pitch</span>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <!-- Auto scroll toggle -->
+        <button class="btn btn-gold" onclick="togglePrompterScroll()" id="prompter-scroll-btn">
+          ▶️ Auto Scroll
+        </button>
+        <!-- Scroll speed -->
+        <label style="font-size:0.8rem; color:var(--muted); display:flex; align-items:center; gap:6px;">
+          Speed:
+          <input type="range" id="prompter-speed-slider" min="1" max="10" value="3" style="width:80px; accent-color:var(--gold);">
+        </label>
+        <!-- Font size -->
+        <label style="font-size:0.8rem; color:var(--muted); display:flex; align-items:center; gap:6px;">
+          Text Size:
+          <button class="speak-btn" onclick="adjustPrompterFontSize(-2)">A-</button>
+          <button class="speak-btn" onclick="adjustPrompterFontSize(2)">A+</button>
+        </label>
+        <!-- Voice read -->
+        <button class="btn" onclick="speakPrompterCurrent()">🔊 Read Aloud</button>
+        <!-- Close -->
+        <button class="btn btn-red" onclick="closeTeleprompter()">✕ Close</button>
+      </div>
+    </div>
+
+    <div class="prompter-viewport" id="prompter-viewport">
+      <div class="prompter-text" id="prompter-content">
+        <!-- Injected dynamically via JS based on current active tab -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    let showVietnamese = true;
+    let timerInterval = null;
+    let timerSeconds = 0;
+    let isPrompterScrolling = false;
+    let prompterScrollInterval = null;
+    let prompterFontSize = 2.2;
+
+    // SPEECH SYNTHESIS ENGINE
+    function getSpeechRate() {
+      const select = document.getElementById('speech-rate-select');
+      return select ? parseFloat(select.value) : 1.0;
+    }
+
+    function cleanTextForSpeech(text) {
+      return text
+        .replace(/\[pause\]/gi, ', ')
+        .replace(/\[breath\]/gi, ', ')
+        .replace(/\[.*?\]/g, '') // remove phonetics in brackets
+        .replace(/\(.*?\)/g, '') // remove parenthetical comments
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    function speakText(rawText, onEndCallback) {
+      if (!('speechSynthesis' in window)) {
+        alert("Your browser doesn't support Web Speech API. Try Chrome or Edge!");
+        return;
+      }
+      window.speechSynthesis.cancel(); // Stop any previous speech
+
+      const cleaned = cleanTextForSpeech(rawText);
+      const utterance = new SpeechSynthesisUtterance(cleaned);
+      utterance.rate = getSpeechRate();
+      utterance.lang = 'en-US';
+
+      // Pick a high-quality English voice if available
+      const voices = window.speechSynthesis.getVoices();
+      const engVoice = voices.find(v => (v.lang === 'en-US' || v.lang === 'en-GB') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Guy') || v.name.includes('David') || v.name.includes('Samantha')));
+      if (engVoice) {
+        utterance.voice = engVoice;
+      }
+
+      if (onEndCallback) {
+        utterance.onend = onEndCallback;
+      }
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function speakLine(button) {
+      const cue = button.closest('.speech-cue');
+      if (!cue) return;
+      const engTextEl = cue.querySelector('.cue-english');
+      if (!engTextEl) return;
+
+      document.querySelectorAll('.speech-cue').forEach(c => c.classList.remove('is-speaking'));
+      cue.classList.add('is-speaking');
+
+      speakText(engTextEl.innerText, () => {
+        cue.classList.remove('is-speaking');
+      });
+    }
+
+    function speakBlock(blockId) {
+      const block = document.getElementById(blockId);
+      if (!block) return;
+      const cues = Array.from(block.querySelectorAll('.speech-cue'));
+      if (cues.length === 0) return;
+
+      let currentIndex = 0;
+      function playNext() {
+        if (currentIndex >= cues.length) {
+          document.querySelectorAll('.speech-cue').forEach(c => c.classList.remove('is-speaking'));
+          return;
+        }
+        document.querySelectorAll('.speech-cue').forEach(c => c.classList.remove('is-speaking'));
+        const cue = cues[currentIndex];
+        cue.classList.add('is-speaking');
+        cue.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        const engText = cue.querySelector('.cue-english').innerText;
+        speakText(engText, () => {
+          cue.classList.remove('is-speaking');
+          currentIndex++;
+          setTimeout(playNext, 450); // Natural pause between sentences
+        });
+      }
+      playNext();
+    }
+
+    // TAB SWITCHING
+    function switchTab(tabId, tabButton) {
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
+      if (tabButton) tabButton.classList.add('active');
+      window.speechSynthesis.cancel();
+    }
+
+    function getActiveTabBlockId() {
+      const activePane = document.querySelector('.tab-pane.active');
+      if (!activePane) return 'elevator-block';
+      if (activePane.id === 'tab-elevator') return 'elevator-block';
+      if (activePane.id === 'tab-gameplay') return 'gameplay-block';
+      if (activePane.id === 'tab-slides') return 'ch1-block';
+      return 'elevator-block';
+    }
+
+    // VIETNAMESE TOGGLE
+    function toggleVietnamese() {
+      showVietnamese = !showVietnamese;
+      const viets = document.querySelectorAll('.cue-viet, .viet-hint');
+      viets.forEach(el => {
+        if (showVietnamese) {
+          el.classList.remove('hidden-viet');
+        } else {
+          el.classList.add('hidden-viet');
+        }
+      });
+
+      const label = document.getElementById('viet-btn-label');
+      if (label) {
+        label.innerText = showVietnamese ? "Hide Vietnamese Hints" : "Show Vietnamese Hints";
+      }
+    }
+
+    // TIMER LOGIC
+    function toggleTimer() {
+      const btn = document.getElementById('timer-toggle-btn');
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        if (btn) btn.innerText = "Start";
+      } else {
+        timerInterval = setInterval(() => {
+          timerSeconds++;
+          renderTimer();
+        }, 1000);
+        if (btn) btn.innerText = "Pause";
+      }
+    }
+
+    function resetTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      timerSeconds = 0;
+      renderTimer();
+      const btn = document.getElementById('timer-toggle-btn');
+      if (btn) btn.innerText = "Start";
+    }
+
+    function renderTimer() {
+      const mins = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+      const secs = (timerSeconds % 60).toString().padStart(2, '0');
+      const display = document.getElementById('timer-display');
+      if (display) {
+        display.innerText = `${mins}:${secs}`;
+        // Color coding for milestones
+        if (timerSeconds <= 30) {
+          display.style.color = "var(--teal)";
+        } else if (timerSeconds <= 120) {
+          display.style.color = "var(--gold-light)";
+        } else {
+          display.style.color = "var(--red)";
+        }
+      }
+    }
+
+    // COPY TO CLIPBOARD
+    function copyText(elementId) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      navigator.clipboard.writeText(el.innerText).then(() => {
+        alert("Copied to clipboard! Ready to paste into your notes or video script.");
+      }).catch(() => {
+        alert("Please select and copy manually.");
+      });
+    }
+
+    // TELEPROMPTER LOGIC
+    function openTeleprompter() {
+      const modal = document.getElementById('teleprompter-modal');
+      const container = document.getElementById('prompter-content');
+      const activePane = document.querySelector('.tab-pane.active');
+      const modeLabel = document.getElementById('prompter-mode-label');
+
+      let sourceElements = [];
+      if (activePane && activePane.id === 'tab-gameplay') {
+        modeLabel.innerText = "2-Minute Gameplay Pitch";
+        sourceElements = Array.from(document.querySelectorAll('#gameplay-block .speech-cue'));
+      } else if (activePane && activePane.id === 'tab-slides') {
+        modeLabel.innerText = "10-Chapter Full Pitch Deck";
+        sourceElements = Array.from(document.querySelectorAll('#tab-slides .speech-cue'));
+      } else {
+        modeLabel.innerText = "30-Second Elevator Pitch";
+        sourceElements = Array.from(document.querySelectorAll('#elevator-block .speech-cue'));
+      }
+
+      // Build content
+      let html = '';
+      sourceElements.forEach((cue, idx) => {
+        const engText = cue.querySelector('.cue-english').innerHTML;
+        const vietText = cue.querySelector('.cue-viet') ? cue.querySelector('.cue-viet').innerText : '';
+        html += `<p id="prompter-p-${idx}">
+          ${engText}
+          <span class="viet-hint ${showVietnamese ? '' : 'hidden-viet'}">${vietText}</span>
+        </p>`;
+      });
+
+      container.innerHTML = html;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeTeleprompter() {
+      const modal = document.getElementById('teleprompter-modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+      stopPrompterScroll();
+      window.speechSynthesis.cancel();
+    }
+
+    function adjustPrompterFontSize(delta) {
+      prompterFontSize = Math.max(1.2, Math.min(3.6, prompterFontSize + (delta * 0.2)));
+      const content = document.getElementById('prompter-content');
+      if (content) content.style.fontSize = prompterFontSize + 'rem';
+    }
+
+    function togglePrompterScroll() {
+      if (isPrompterScrolling) {
+        stopPrompterScroll();
+      } else {
+        startPrompterScroll();
+      }
+    }
+
+    function startPrompterScroll() {
+      isPrompterScrolling = true;
+      const btn = document.getElementById('prompter-scroll-btn');
+      if (btn) btn.innerText = "⏸️ Pause Scroll";
+      const viewport = document.getElementById('prompter-viewport');
+      const slider = document.getElementById('prompter-speed-slider');
+
+      prompterScrollInterval = setInterval(() => {
+        const speed = slider ? parseInt(slider.value, 10) : 3;
+        viewport.scrollTop += (speed * 0.7);
+        if (viewport.scrollTop + viewport.clientHeight >= viewport.scrollHeight - 10) {
+          stopPrompterScroll();
+        }
+      }, 30);
+    }
+
+    function stopPrompterScroll() {
+      isPrompterScrolling = false;
+      const btn = document.getElementById('prompter-scroll-btn');
+      if (btn) btn.innerText = "▶️ Auto Scroll";
+      if (prompterScrollInterval) {
+        clearInterval(prompterScrollInterval);
+        prompterScrollInterval = null;
+      }
+    }
+
+    function speakPrompterCurrent() {
+      const paragraphs = Array.from(document.querySelectorAll('#prompter-content p'));
+      if (paragraphs.length === 0) return;
+
+      let idx = 0;
+      function playNext() {
+        if (idx >= paragraphs.length) {
+          paragraphs.forEach(p => p.classList.remove('current-highlight'));
+          return;
+        }
+        paragraphs.forEach(p => p.classList.remove('current-highlight'));
+        const p = paragraphs[idx];
+        p.classList.add('current-highlight');
+        p.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        const engOnly = p.innerText.split('(')[0];
+        speakText(engOnly, () => {
+          idx++;
+          setTimeout(playNext, 400);
+        });
+      }
+      playNext();
+    }
+
+    // Keyboard controls in prompter
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('teleprompter-modal');
+      if (modal && modal.classList.contains('active')) {
+        if (e.code === 'Space') {
+          e.preventDefault();
+          togglePrompterScroll();
+        } else if (e.code === 'Escape') {
+          closeTeleprompter();
+        }
+      }
+    });
+
+    // Preload voice list
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        window.speechSynthesis.getVoices();
+      };
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,837 @@
+{
+  "mus_devlogs_practice_loop": {
+    "status": "success",
+    "file": "mus_devlogs_practice_loop.wav",
+    "category": "Music",
+    "reused": true,
+    "size_kb": 23997
+  },
+  "mus_devlogs_combat_loop": {
+    "status": "success",
+    "file": "mus_devlogs_combat_loop.wav",
+    "category": "Music",
+    "size_kb": 23997
+  },
+  "mus_devlogs_bigmm_loop": {
+    "status": "success",
+    "file": "mus_devlogs_bigmm_loop.wav",
+    "category": "Music",
+    "size_kb": 23997
+  },
+  "mus_devlogs_boss_release": {
+    "status": "success",
+    "file": "mus_devlogs_boss_release.wav",
+    "category": "Music",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2152
+  },
+  "mus_devlogs_victory": {
+    "status": "success",
+    "file": "mus_devlogs_victory.wav",
+    "category": "Music",
+    "size_kb": 861,
+    "duration": 5.0,
+    "rms": 0.1237
+  },
+  "mus_devlogs_defeat": {
+    "status": "success",
+    "file": "mus_devlogs_defeat.wav",
+    "category": "Music",
+    "size_kb": 689,
+    "duration": 4.0,
+    "rms": 0.158
+  },
+  "mus_devlogs_start": {
+    "status": "success",
+    "file": "mus_devlogs_start.wav",
+    "category": "Music",
+    "size_kb": 344,
+    "duration": 2.0,
+    "rms": 0.0492
+  },
+  "amb_sewer_room_loop": {
+    "status": "success",
+    "file": "amb_sewer_room_loop.wav",
+    "category": "Ambience",
+    "size_kb": 2584,
+    "duration": 15.0,
+    "rms": 0.1529
+  },
+  "amb_channel_flow_loop": {
+    "status": "success",
+    "file": "amb_channel_flow_loop.wav",
+    "category": "Ambience",
+    "size_kb": 2584,
+    "duration": 15.0,
+    "rms": 0.1472
+  },
+  "amb_pipe_trickle_loop": {
+    "status": "success",
+    "file": "amb_pipe_trickle_loop.wav",
+    "category": "Ambience",
+    "size_kb": 2584,
+    "duration": 15.0,
+    "rms": 0.0861
+  },
+  "amb_sewer_drip": {
+    "status": "success",
+    "file": "amb_sewer_drip.wav",
+    "category": "Ambience",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1241
+  },
+  "amb_pipe_creak": {
+    "status": "success",
+    "file": "amb_pipe_creak.wav",
+    "category": "Ambience",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1197
+  },
+  "sfx_step_concrete": {
+    "status": "success",
+    "file": "sfx_step_concrete.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1192
+  },
+  "sfx_step_metal": {
+    "status": "success",
+    "file": "sfx_step_metal.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1263
+  },
+  "sfx_step_water": {
+    "status": "success",
+    "file": "sfx_step_water.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.0978
+  },
+  "sfx_jump_takeoff": {
+    "status": "success",
+    "file": "sfx_jump_takeoff.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1978
+  },
+  "sfx_land_concrete": {
+    "status": "success",
+    "file": "sfx_land_concrete.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2
+  },
+  "sfx_land_metal": {
+    "status": "success",
+    "file": "sfx_land_metal.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1801
+  },
+  "sfx_land_water": {
+    "status": "success",
+    "file": "sfx_land_water.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1231
+  },
+  "sfx_dash": {
+    "status": "success",
+    "file": "sfx_dash.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1158
+  },
+  "sfx_roll": {
+    "status": "success",
+    "file": "sfx_roll.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1386
+  },
+  "sfx_body_fall": {
+    "status": "success",
+    "file": "sfx_body_fall.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1279
+  },
+  "sfx_body_wall": {
+    "status": "success",
+    "file": "sfx_body_wall.wav",
+    "category": "Movement",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1525
+  },
+  "sfx_fist_swing": {
+    "status": "success",
+    "file": "sfx_fist_swing.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1864
+  },
+  "sfx_kick_swing": {
+    "status": "success",
+    "file": "sfx_kick_swing.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.145
+  },
+  "sfx_blunt_hit_light": {
+    "status": "success",
+    "file": "sfx_blunt_hit_light.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1509
+  },
+  "sfx_blunt_hit_heavy": {
+    "status": "success",
+    "file": "sfx_blunt_hit_heavy.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1555
+  },
+  "sfx_launch_uppercut": {
+    "status": "success",
+    "file": "sfx_launch_uppercut.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1757
+  },
+  "sfx_deep_sword_light": {
+    "status": "success",
+    "file": "sfx_deep_sword_light.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1485
+  },
+  "sfx_deep_sword_heavy": {
+    "status": "success",
+    "file": "sfx_deep_sword_heavy.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1834
+  },
+  "sfx_mark_knife_swing": {
+    "status": "success",
+    "file": "sfx_mark_knife_swing.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1621
+  },
+  "sfx_blade_hit_cloth": {
+    "status": "success",
+    "file": "sfx_blade_hit_cloth.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.186
+  },
+  "sfx_blade_hit_armor": {
+    "status": "success",
+    "file": "sfx_blade_hit_armor.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1807
+  },
+  "sfx_blade_hit_concrete": {
+    "status": "success",
+    "file": "sfx_blade_hit_concrete.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1247
+  },
+  "sfx_guard_blunt": {
+    "status": "success",
+    "file": "sfx_guard_blunt.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1135
+  },
+  "sfx_guard_blade": {
+    "status": "success",
+    "file": "sfx_guard_blade.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.164
+  },
+  "sfx_guard_break": {
+    "status": "success",
+    "file": "sfx_guard_break.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1706
+  },
+  "sfx_knockback_air": {
+    "status": "success",
+    "file": "sfx_knockback_air.wav",
+    "category": "Melee",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1671
+  },
+  "sfx_mark_arrow_nock": {
+    "status": "success",
+    "file": "sfx_mark_arrow_nock.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1552
+  },
+  "sfx_mark_bow_draw": {
+    "status": "success",
+    "file": "sfx_mark_bow_draw.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.107
+  },
+  "sfx_mark_bow_release": {
+    "status": "success",
+    "file": "sfx_mark_bow_release.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1553
+  },
+  "sfx_arrow_pass": {
+    "status": "success",
+    "file": "sfx_arrow_pass.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1916
+  },
+  "sfx_arrow_hit_cloth": {
+    "status": "success",
+    "file": "sfx_arrow_hit_cloth.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1686
+  },
+  "sfx_arrow_hit_metal": {
+    "status": "success",
+    "file": "sfx_arrow_hit_metal.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2096
+  },
+  "sfx_arrow_hit_concrete": {
+    "status": "success",
+    "file": "sfx_arrow_hit_concrete.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1809
+  },
+  "sfx_grenade_prepare": {
+    "status": "success",
+    "file": "sfx_grenade_prepare.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1227
+  },
+  "sfx_grenade_throw": {
+    "status": "success",
+    "file": "sfx_grenade_throw.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1689
+  },
+  "sfx_grenade_bounce": {
+    "status": "success",
+    "file": "sfx_grenade_bounce.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1591
+  },
+  "sfx_grenade_explode": {
+    "status": "success",
+    "file": "sfx_grenade_explode.wav",
+    "category": "Ranged",
+    "size_kb": 654,
+    "duration": 3.8,
+    "rms": 0.8669
+  },
+  "sfx_grenade_water_entry": {
+    "status": "success",
+    "file": "sfx_grenade_water_entry.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.0994
+  },
+  "sfx_soldier_gun_ready": {
+    "status": "success",
+    "file": "sfx_soldier_gun_ready.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1048
+  },
+  "sfx_soldier_gun_shot": {
+    "status": "success",
+    "file": "sfx_soldier_gun_shot.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2147
+  },
+  "sfx_bullet_pass": {
+    "status": "success",
+    "file": "sfx_bullet_pass.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1812
+  },
+  "sfx_bullet_hit_cloth": {
+    "status": "success",
+    "file": "sfx_bullet_hit_cloth.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1527
+  },
+  "sfx_bullet_hit_metal": {
+    "status": "success",
+    "file": "sfx_bullet_hit_metal.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1743
+  },
+  "sfx_bullet_hit_concrete": {
+    "status": "success",
+    "file": "sfx_bullet_hit_concrete.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1869
+  },
+  "sfx_bullet_hit_water": {
+    "status": "success",
+    "file": "sfx_bullet_hit_water.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1409
+  },
+  "sfx_gun_reload": {
+    "status": "success",
+    "file": "sfx_gun_reload.wav",
+    "category": "Ranged",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1194
+  },
+  "sfx_deep_energy_charge": {
+    "status": "success",
+    "file": "sfx_deep_energy_charge.wav",
+    "category": "Skills",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1307
+  },
+  "sfx_deep_energy_release": {
+    "status": "success",
+    "file": "sfx_deep_energy_release.wav",
+    "category": "Skills",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2103
+  },
+  "sfx_deep_energy_hit": {
+    "status": "success",
+    "file": "sfx_deep_energy_hit.wav",
+    "category": "Skills",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1714
+  },
+  "sfx_deep_ground_strike": {
+    "status": "success",
+    "file": "sfx_deep_ground_strike.wav",
+    "category": "Skills",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1735
+  },
+  "sfx_skill_end": {
+    "status": "success",
+    "file": "sfx_skill_end.wav",
+    "category": "Skills",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2227
+  },
+  "sfx_solei_ignite": {
+    "status": "success",
+    "file": "sfx_solei_ignite.wav",
+    "category": "Skills",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1495
+  },
+  "sfx_solei_fire_release": {
+    "status": "success",
+    "file": "sfx_solei_fire_release.wav",
+    "category": "Skills",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1673
+  },
+  "sfx_solei_fire_hit": {
+    "status": "success",
+    "file": "sfx_solei_fire_hit.wav",
+    "category": "Skills",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2141
+  },
+  "sfx_solei_fire_burst": {
+    "status": "success",
+    "file": "sfx_solei_fire_burst.wav",
+    "category": "Skills",
+    "size_kb": 654,
+    "duration": 3.8,
+    "rms": 0.8347
+  },
+  "sfx_energy_travel_loop": {
+    "status": "success",
+    "file": "sfx_energy_travel_loop.wav",
+    "category": "Skills",
+    "size_kb": 602,
+    "duration": 3.5,
+    "rms": 0.1713
+  },
+  "sfx_fire_travel_loop": {
+    "status": "success",
+    "file": "sfx_fire_travel_loop.wav",
+    "category": "Skills",
+    "size_kb": 602,
+    "duration": 3.5,
+    "rms": 0.2089
+  },
+  "sfx_bigmm_windup": {
+    "status": "success",
+    "file": "sfx_bigmm_windup.wav",
+    "category": "Boss",
+    "size_kb": 482,
+    "duration": 2.8,
+    "rms": 0.8421
+  },
+  "sfx_bigmm_slice": {
+    "status": "success",
+    "file": "sfx_bigmm_slice.wav",
+    "category": "Boss",
+    "size_kb": 482,
+    "duration": 2.8,
+    "rms": 0.8425
+  },
+  "sfx_bigmm_slice_hit": {
+    "status": "success",
+    "file": "sfx_bigmm_slice_hit.wav",
+    "category": "Boss",
+    "size_kb": 482,
+    "duration": 2.8,
+    "rms": 0.8406
+  },
+  "sfx_bigmm_projectile_release": {
+    "status": "success",
+    "file": "sfx_bigmm_projectile_release.wav",
+    "category": "Boss",
+    "size_kb": 482,
+    "duration": 2.8,
+    "rms": 0.8395
+  },
+  "sfx_bigmm_projectile_hit": {
+    "status": "success",
+    "file": "sfx_bigmm_projectile_hit.wav",
+    "category": "Boss",
+    "size_kb": 482,
+    "duration": 2.8,
+    "rms": 0.8328
+  },
+  "sfx_bigmm_fall": {
+    "status": "success",
+    "file": "sfx_bigmm_fall.wav",
+    "category": "Boss",
+    "size_kb": 482,
+    "duration": 2.8,
+    "rms": 0.8535
+  },
+  "sfx_stranger_supply_draw": {
+    "status": "success",
+    "file": "sfx_stranger_supply_draw.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.0937
+  },
+  "sfx_stranger_supply_release": {
+    "status": "success",
+    "file": "sfx_stranger_supply_release.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1381
+  },
+  "sfx_scrap_redirect": {
+    "status": "success",
+    "file": "sfx_scrap_redirect.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1447
+  },
+  "sfx_cylinder_redirect": {
+    "status": "success",
+    "file": "sfx_cylinder_redirect.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2149
+  },
+  "sfx_scrap_bounce": {
+    "status": "success",
+    "file": "sfx_scrap_bounce.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1464
+  },
+  "sfx_cylinder_bounce": {
+    "status": "success",
+    "file": "sfx_cylinder_bounce.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1603
+  },
+  "sfx_metal_object_water": {
+    "status": "success",
+    "file": "sfx_metal_object_water.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1687
+  },
+  "sfx_shield_plate_break": {
+    "status": "success",
+    "file": "sfx_shield_plate_break.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1319
+  },
+  "sfx_power_lock_break": {
+    "status": "success",
+    "file": "sfx_power_lock_break.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1825
+  },
+  "sfx_target_reject": {
+    "status": "success",
+    "file": "sfx_target_reject.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2302
+  },
+  "sfx_rebound_reset": {
+    "status": "success",
+    "file": "sfx_rebound_reset.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1814
+  },
+  "sfx_rebound_complete": {
+    "status": "success",
+    "file": "sfx_rebound_complete.wav",
+    "category": "Rebound",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1499
+  },
+  "ui_select_ally": {
+    "status": "success",
+    "file": "ui_select_ally.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1833
+  },
+  "ui_command_hold": {
+    "status": "success",
+    "file": "ui_command_hold.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1457
+  },
+  "ui_command_regroup": {
+    "status": "success",
+    "file": "ui_command_regroup.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1886
+  },
+  "ui_command_release": {
+    "status": "success",
+    "file": "ui_command_release.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2176
+  },
+  "ui_formation_change": {
+    "status": "success",
+    "file": "ui_formation_change.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1742
+  },
+  "ui_unavailable": {
+    "status": "success",
+    "file": "ui_unavailable.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1767
+  },
+  "ui_interact_ready": {
+    "status": "success",
+    "file": "ui_interact_ready.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1873
+  },
+  "ui_confirm": {
+    "status": "success",
+    "file": "ui_confirm.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2098
+  },
+  "ui_cancel": {
+    "status": "success",
+    "file": "ui_cancel.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1787
+  },
+  "ui_character_spawn": {
+    "status": "success",
+    "file": "ui_character_spawn.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2003
+  },
+  "ui_dialogue_tick": {
+    "status": "success",
+    "file": "ui_dialogue_tick.wav",
+    "category": "UI",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1823
+  },
+  "vox_fighter_attack": {
+    "status": "success",
+    "file": "vox_fighter_attack.wav",
+    "category": "Voice",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2202
+  },
+  "vox_fighter_hurt_light": {
+    "status": "success",
+    "file": "vox_fighter_hurt_light.wav",
+    "category": "Voice",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.2456
+  },
+  "vox_fighter_hurt_heavy": {
+    "status": "success",
+    "file": "vox_fighter_hurt_heavy.wav",
+    "category": "Voice",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.203
+  },
+  "vox_fighter_defeat": {
+    "status": "success",
+    "file": "vox_fighter_defeat.wav",
+    "category": "Voice",
+    "size_kb": 430,
+    "duration": 2.5,
+    "rms": 0.1611
+  },
+  "vox_bigmm_taunt_01": {
+    "status": "success",
+    "file": "vox_bigmm_taunt_01.wav",
+    "category": "Voice",
+    "size_kb": 482,
+    "duration": 2.8,
+    "rms": 0.8381
+  },
+  "vox_bigmm_taunt_02": {
+    "status": "success",
+    "file": "vox_bigmm_taunt_02.wav",
+    "category": "Voice",
+    "size_kb": 482,
+    "duration": 2.8,
+    "rms": 0.8323
+  },
+  "vox_bigmm_taunt_03": {
+    "status": "success",
+    "file": "vox_bigmm_taunt_03.wav",
+    "category": "Voice",
+    "size_kb": 482,
+    "duration": 2.8,
+    "rms": 0.8443
+  }
+}

@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Divergency — Kickstarter Reward Redesign & Visual Proofs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-darkest: #07090b;
+      --bg-dark: #0d1116;
+      --bg-card: rgba(18, 24, 32, 0.88);
+      --bg-card-hover: rgba(26, 35, 47, 0.96);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-relic: rgba(0, 245, 184, 0.25);
+      --border-relic-glow: rgba(0, 245, 184, 0.5);
+      
+      --relic-teal: #00f5b8;
+      --relic-teal-dim: #059669;
+      --amber-gold: #f59e0b;
+      --amber-light: #fde68a;
+      --crimson-bastonne: #ef4444;
+      
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      
+      --font-display: 'Cinzel', Georgia, serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-darkest);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(0, 245, 184, 0.04), transparent 45%),
+        radial-gradient(circle at 85% 25%, rgba(239, 68, 68, 0.03), transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(245, 158, 11, 0.03), transparent 50%),
+        linear-gradient(180deg, #07090b 0%, #0d1116 100%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 48px;
+      position: relative;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(0, 245, 184, 0.08);
+      border: 1px solid var(--border-relic);
+      border-radius: 9999px;
+      color: var(--relic-teal);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .header-badge .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--relic-teal);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--relic-teal);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    h1.hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 4.2vw, 50px);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffffff 30%, #9ca3af 70%, var(--relic-teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: var(--text-muted);
+      max-width: 900px;
+      margin: 0 auto 32px;
+      font-weight: 300;
+    }
+
+    /* KPI Highlights */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-relic);
+    }
+
+    .kpi-card .kpi-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--relic-teal);
+      margin-bottom: 4px;
+    }
+
+    .kpi-card .kpi-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .kpi-card .kpi-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 16px;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+    }
+
+    .tab-btn.active {
+      background: rgba(0, 245, 184, 0.12);
+      border-color: var(--relic-teal);
+      color: var(--relic-teal);
+      box-shadow: 0 0 15px rgba(0, 245, 184, 0.15);
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      margin-bottom: 32px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-top: 6px;
+    }
+
+    /* PROOFS GRID */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    .proof-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(16px);
+      transition: all 0.3s ease;
+    }
+
+    .proof-card:hover {
+      border-color: var(--border-relic);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px -10px rgba(0, 245, 184, 0.15);
+    }
+
+    .proof-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 11;
+      overflow: hidden;
+      background: #000;
+      cursor: pointer;
+    }
+
+    .proof-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .proof-card:hover .proof-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .proof-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(13, 17, 22, 0.9);
+      border: 1px solid var(--border-relic);
+      color: var(--relic-teal);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      backdrop-filter: blur(8px);
+      letter-spacing: 0.05em;
+    }
+
+    .zoom-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+      font-family: var(--font-mono);
+    }
+
+    .proof-img-wrap:hover .zoom-hint {
+      opacity: 1;
+    }
+
+    .proof-info {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proof-tier-tag {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--amber-gold);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .proof-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .proof-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .proof-specs {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .spec-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      font-size: 11px;
+      color: var(--text-dim);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+    }
+
+    .spec-pill.highlight {
+      border-color: rgba(0, 245, 184, 0.3);
+      color: var(--relic-teal);
+      background: rgba(0, 245, 184, 0.05);
+    }
+
+    /* TIER BOXES */
+    .tier-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .tier-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 240px 1fr 280px;
+      gap: 28px;
+      align-items: start;
+      backdrop-filter: blur(16px);
+      transition: all 0.25s;
+      position: relative;
+    }
+
+    .tier-box.featured {
+      border-color: var(--border-relic-glow);
+      background: linear-gradient(135deg, rgba(0, 245, 184, 0.04) 0%, rgba(18, 24, 32, 0.92) 100%);
+      box-shadow: 0 0 25px rgba(0, 245, 184, 0.08);
+    }
+
+    .tier-ribbon {
+      position: absolute;
+      top: -10px;
+      right: 28px;
+      background: var(--relic-teal);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .tier-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tier-price {
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .tier-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--relic-teal);
+      margin-bottom: 12px;
+    }
+
+    .tier-type-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .tier-content h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--amber-light);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tier-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tier-items li {
+      font-size: 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .tier-items li .check {
+      color: var(--relic-teal);
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .tier-items li.highlight-item {
+      color: var(--relic-teal);
+      font-weight: 500;
+    }
+
+    .tier-items li.highlight-item .check {
+      color: var(--amber-gold);
+    }
+
+    .tier-preview-thumb {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      background: #000;
+      aspect-ratio: 4 / 3;
+      position: relative;
+    }
+
+    .tier-preview-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumb-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.75);
+      color: var(--text-muted);
+      font-size: 10px;
+      padding: 4px 8px;
+      text-align: center;
+      font-family: var(--font-mono);
+    }
+
+    /* COMPARISON TABLE */
+    .compare-table-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      margin-bottom: 40px;
+    }
+
+    table.compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    table.compare-table th, 
+    table.compare-table td {
+      padding: 18px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    table.compare-table th {
+      background: rgba(13, 17, 22, 0.9);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    table.compare-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .old-status {
+      color: #f87171;
+      font-weight: 500;
+    }
+
+    .new-status {
+      color: var(--relic-teal);
+      font-weight: 600;
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 1000px;
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-relic);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      animation: modalZoom 0.25s ease;
+    }
+
+    @keyframes modalZoom {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-img-wrap {
+      width: 100%;
+      max-height: 70vh;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .modal-img-wrap img {
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+    }
+
+    .modal-info {
+      padding: 20px 24px;
+      background: #0d1116;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background 0.2s;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--crimson-bastonne);
+    }
+
+    @media (max-width: 960px) {
+      .tier-box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .tier-preview-thumb {
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-badge">
+        <span class="pulse-dot"></span>
+        Divergency Tactical Brawler — Kickstarter Rewards Redesign
+      </div>
+      <h1 class="hero-title">Đề Xuất Hệ Thống Phần Thưởng Mới &amp; Visual Proofs</h1>
+      <p class="hero-subtitle">
+        Khắc phục tình trạng "lặp lại và thiếu độc đáo" bằng cách bám sát bản sắc Brawler đối kháng: Sổ Tay Kỹ Năng &amp; Bảng Combo Đấu Sĩ, Áp Phích Lệnh Truy Nã In-Game, Trang Phục Độc Quyền Relic-Touched, và Gói Sưu Tầm Bastonne Box.
+      </p>
+
+      <!-- KPI HIGHLIGHTS -->
+      <div class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-num">7 Tiers</div>
+          <div class="kpi-label">Thu gọn &amp; Rõ ràng</div>
+          <div class="kpi-desc">Rút gọn từ 11 bậc micro-tier gây mệt mỏi thành 7 bậc giá trị tăng vọt.</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">$45 &amp; $135</div>
+          <div class="kpi-label">2 Bậc Trọng Tâm (Sweet-Spot)</div>
+          <div class="kpi-desc">Tier $45 (Digital + Skin) và $135 (Collector Box) thúc đẩy 75% doanh thu.</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">100% Brawler</div>
+          <div class="kpi-label">Bám sát Bản Sắc Game</div>
+          <div class="kpi-desc">Gắn liền với cơ chế chọn 4 kỹ năng trước trận, ngục Bastonne và thành phố Calvaria.</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">Worldwide</div>
+          <div class="kpi-label">Mở Rộng Quốc Tế</div>
+          <div class="kpi-desc">Bỏ giới hạn "EU Only", sử dụng PledgeBox thu phí ship sau chiến dịch.</div>
+        </div>
+      </div>
+
+      <!-- NAV TABS -->
+      <div class="nav-tabs">
+        <button class="tab-btn active" onclick="switchTab('proofs')">
+          <span>🖼️</span> Visual Proofs Mockups (5 Món Mới)
+        </button>
+        <button class="tab-btn" onclick="switchTab('ladder')">
+          <span>⚔️</span> Thang Thưởng Mới (7 Tiers)
+        </button>
+        <button class="tab-btn" onclick="switchTab('compare')">
+          <span>⚖️</span> So Sánh Đối Chiếu (Cũ vs Mới)
+        </button>
+        <button class="tab-btn" onclick="switchTab('fulfillment')">
+          <span>📦</span> Chiến Lược Giao Hàng Toàn Cầu
+        </button>
+      </div>
+    </header>
+
+    <!-- ==============================================================
+         TAB 1: VISUAL PROOFS SHOWCASE
+         ============================================================== -->
+    <section id="pane-proofs" class="tab-pane active">
+      <div class="section-header">
+        <h2><span>🔮</span> Bộ Proofs Minh Họa Các Phần Thưởng Độc Bản</h2>
+        <p>Bấm vào từng hình để phóng to độ phân giải cao và xem chi tiết hoàn thiện sản phẩm.</p>
+      </div>
+
+      <div class="proof-grid">
+
+        <!-- PROOF 1: COMBATANT MOVE-LIST MANUAL -->
+        <div class="proof-card">
+          <div class="proof-img-wrap" onclick="openModal('imgs/rewards/proofs/brawler_combat_manual.jpg', 'Divergency Combat Manual & Move-List Guide', 'Cuốn sổ tay hướng dẫn đòn thế, tổ hợp combo và hướng dẫn chọn 4 kỹ năng loadout cho từng đấu sĩ.')">
+            <span class="proof-badge">BRAWLER HERITAGE ITEM</span>
+            <img src="imgs/rewards/proofs/brawler_combat_manual.jpg" alt="Combat Manual proof" loading="lazy">
+            <span class="zoom-hint">🔍 Bấm để phóng to</span>
+          </div>
+          <div class="proof-info">
+            <div class="proof-tier-tag">Có mặt tại: Tier $135 Collector's Box &amp; Add-on ($25)</div>
+            <h3 class="proof-title">Combat Manual &amp; Move-List Guide</h3>
+            <p class="proof-desc">
+              Tôn vinh cội nguồn game đối kháng/brawler (Little Fighter 2, Hero Fighter, Streets of Rage): Một cuốn sổ tay đóng gáy da cổ điển in màu toàn bộ bảng đòn đánh, tổ hợp phím combo, biểu đồ hitbox/cancels, và <strong>hướng dẫn phối hợp 4 kỹ năng (4-Skill Loadout)</strong> mang tính thực chiến cao cho 5 đấu sĩ (Deep, Solei, Mark, Tulas, Block).
+            </p>
+            <div class="proof-specs">
+              <span class="spec-pill highlight">Bìa da vintage dập chìm</span>
+              <span class="spec-pill">Bảng combo &amp; inputs phím bấm</span>
+              <span class="spec-pill">Hướng dẫn phối hợp 4 kỹ năng</span>
+              <span class="spec-pill">Vật phẩm biểu tượng của fan Brawler</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROOF 2: MARSEILLE WANTED POSTER -->
+        <div class="proof-card">
+          <div class="proof-img-wrap" onclick="openModal('imgs/rewards/proofs/wanted_poster.jpg', 'Avis de Recherche — Áp Phích Truy Nã In-Game', 'Chân dung pixel 16-bit và tên của Backer xuất hiện trên tường ngục Bastonne hoặc hẻm Marseille.')">
+            <span class="proof-badge">IN-GAME FOOTPRINT</span>
+            <img src="imgs/rewards/proofs/wanted_poster.jpg" alt="Wanted Poster proof" loading="lazy">
+            <span class="zoom-hint">🔍 Bấm để phóng to</span>
+          </div>
+          <div class="proof-info">
+            <div class="proof-tier-tag">Có mặt tại: Tier $250 Marseille Wanted Outlaw</div>
+            <h3 class="proof-title">Avis De Recherche — In-Game Wanted Poster</h3>
+            <p class="proof-desc">
+              Thay vì chỉ khắc 40 ký tự chữ thô sơ trên tường đá, backer được vẽ một <strong>chân dung pixel 16-bit độc quyền</strong> và đặt biệt hiệu tội phạm trên Lệnh Truy Nã (Wanted Poster) ngục Bastonne dán trong các con hẻm ngầm Marseille mà người chơi có thể tương tác đọc được.
+            </p>
+            <div class="proof-specs">
+              <span class="spec-pill highlight">Vẽ Chân Dung Pixel Custom</span>
+              <span class="spec-pill">Tên &amp; Tội danh do Backer chọn</span>
+              <span class="spec-pill">Xuất hiện vĩnh viễn trong game</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROOF 3: KICKSTARTER EXCLUSIVE RELIC-TOUCHED SKIN -->
+        <div class="proof-card">
+          <div class="proof-img-wrap" onclick="openModal('imgs/rewards/proofs/relic_skin_preview.jpg', 'Kickstarter Exclusive: Relic-Touched Skin Pack', 'So sánh giáp sắt thường vs Giáp obsidian phát sáng ngọc bích Relic với vệt tàn ảnh khói ma thuật.')">
+            <span class="proof-badge">COSMETIC VIP</span>
+            <img src="imgs/rewards/proofs/relic_skin_preview.jpg" alt="Relic Touched Skin Pack proof" loading="lazy">
+            <span class="zoom-hint">🔍 Bấm để phóng to</span>
+          </div>
+          <div class="proof-info">
+            <div class="proof-tier-tag">Có mặt tại: Bắt đầu từ Tier $45 Relic Hunter Deluxe</div>
+            <h3 class="proof-title">"Relic-Touched" Cosmetic Skin Pack</h3>
+            <p class="proof-desc">
+              Học hỏi điểm mạnh của <em>Lightspeed Lina</em>: Backer muốn thứ gì đó khoác lên nhân vật trong game! Gói Skin Độc Quyền biến chiến giáp của Solei &amp; Deep thành chất liệu đá Obsidian phát ra quầng sáng ngọc bích Relic và hiệu ứng hạt tàn ảnh (spectral particles). Hoàn toàn thuần thẩm mỹ, không pay-to-win.
+            </p>
+            <div class="proof-specs">
+              <span class="spec-pill highlight">Độc quyền Kickstarter</span>
+              <span class="spec-pill">Hiệu ứng quầng sáng Relic Glow</span>
+              <span class="spec-pill">Áp dụng cho Solei &amp; Deep</span>
+              <span class="spec-pill">Chi phí sản xuất $0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROOF 4: BASTONNE COLLECTOR'S BOX BUNDLE -->
+        <div class="proof-card">
+          <div class="proof-img-wrap" onclick="openModal('imgs/rewards/proofs/collectors_box.jpg', 'Divergency: Bastonne Collector\'s Box Bundle Hero Shot', 'Trọn bộ hộp sưu tầm, bìa hồ sơ mật, chìa khóa Bastonne sắt, bản đồ Marseille sáp niêm phong, sách tranh và thẻ bài.')">
+            <span class="proof-badge">DELUXE PHYSICAL BUNDLE</span>
+            <img src="imgs/rewards/proofs/collectors_box.jpg" alt="Collector Box Bundle proof" loading="lazy">
+            <span class="zoom-hint">🔍 Bấm để phóng to</span>
+          </div>
+          <div class="proof-info">
+            <div class="proof-tier-tag">Có mặt tại: Tier $135 Bastonne Collector's Box</div>
+            <h3 class="proof-title">Bastonne Collector's Box Hero Shot</h3>
+            <p class="proof-desc">
+              Một bức ảnh flatlay sắp đặt đậm chất điện ảnh: Hộp đen cao cấp ép nhũ xanh ngọc lục bảo, bìa hồ sơ mật vintage đóng dấu "CONFIDENTIAL", chìa khóa ngục Bastonne đúc kim loại giả cổ, bản đồ Marseille cuộn tròn niêm phong sáp, sách Field Artbook in màu và bộ sổ tay kỹ năng.
+            </p>
+            <div class="proof-specs">
+              <span class="spec-pill highlight">Hộp cứng nam châm dập foil</span>
+              <span class="spec-pill">Chìa khóa ngục đúc hợp kim</span>
+              <span class="spec-pill">Bản đồ Marseille giấy da</span>
+              <span class="spec-pill">Sách Artbook bìa cứng</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROOF 5: CALVARIA MEMORIAL EPITAPH -->
+        <div class="proof-card">
+          <div class="proof-img-wrap" onclick="openModal('imgs/rewards/proofs/calvaria_memorial.jpg', 'Calvaria Memorial Epitaph (Văn Bia Thành Phố Mộ Calvaria)', 'Bia đá cổ kính giữa hoa quỷ và linh hồn thì thầm tại Stage 3 Calvaria.')">
+            <span class="proof-badge">IN-GAME LORE TIER</span>
+            <img src="imgs/rewards/proofs/calvaria_memorial.jpg" alt="Calvaria Memorial proof" loading="lazy">
+            <span class="zoom-hint">🔍 Bấm để phóng to</span>
+          </div>
+          <div class="proof-info">
+            <div class="proof-tier-tag">Tùy chọn Creative / Add-on ($120)</div>
+            <h3 class="proof-title">Calvaria Memorial Inscription</h3>
+            <p class="proof-desc">
+              Tại Stage 3 (Thành phố mộ Calvaria - nơi lưu giữ giọng nói của người đã khuất), backer có thể gửi một văn bia tưởng niệm hoặc một thông điệp tri ân ngắn (tối đa 40 ký tự) khắc bằng chữ bạc phát sáng trên một tấm bia đá cổ kính ven đường, giữa cành liễu rủ và hoa quỷ.
+            </p>
+            <div class="proof-specs">
+              <span class="spec-pill highlight">Khắc văn bia vĩnh viễn</span>
+              <span class="spec-pill">Phù hợp hoàn hảo với Dark Lore</span>
+              <span class="spec-pill">Không ảnh hưởng gameplay balance</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         TAB 2: REWARD LADDER (7 TIERS)
+         ============================================================== -->
+    <section id="pane-ladder" class="tab-pane">
+      <div class="section-header">
+        <h2><span>⚔️</span> Thang Thưởng Mới 7 Bậc (Tinh Gọn &amp; Bùng Nổ Giá Trị)</h2>
+        <p>Gom các món nhỏ lẻ thành các mốc giá trị rõ ràng, đưa những quyền lợi khao khát nhất (Skins, Beta, Sổ tay đòn thế vật lý) vào đúng điểm rơi giá.</p>
+      </div>
+
+      <div class="tier-list">
+
+        <!-- TIER 1: $5 -->
+        <div class="tier-box">
+          <div class="tier-meta">
+            <div class="tier-price">$5</div>
+            <div class="tier-name">Side-Eye Supporter</div>
+            <span class="tier-type-badge">DIGITAL TIP JAR</span>
+          </div>
+          <div class="tier-content">
+            <h4>Quyền lợi bao gồm:</h4>
+            <ul class="tier-items">
+              <li><span class="check">✓</span> 01 Tên hoặc bí danh vinh danh trên <strong>Digital Supporter Wall</strong></li>
+              <li><span class="check">✓</span> Toàn bộ bản cập nhật tiến độ chiến dịch định kỳ (Backer Updates)</li>
+              <li><span class="check">✓</span> <strong>Bộ Wallpaper 4K / Ultrawide</strong> độ phân giải cao cho PC &amp; Mobile</li>
+              <li><span class="check">✓</span> Vai trò độc quyền (Backer Role) tại máy chủ Discord chính thức</li>
+            </ul>
+          </div>
+          <div class="tier-preview-thumb">
+            <img src="imgs/campaign-panels/kick/reward/reward 1.png" alt="Side-Eye Supporter Mascot">
+            <div class="thumb-label">Side-Eye Mutation Mascot</div>
+          </div>
+        </div>
+
+        <!-- TIER 2: $20 / $25 -->
+        <div class="tier-box">
+          <div class="tier-meta">
+            <div class="tier-price">$20 / $25</div>
+            <div class="tier-name">The Escapee (Core Game)</div>
+            <span class="tier-type-badge">CORE DIGITAL TIER</span>
+          </div>
+          <div class="tier-content">
+            <h4>Quyền lợi bao gồm:</h4>
+            <ul class="tier-items">
+              <li><span class="check">✓</span> <strong>01 Mã kích hoạt game Divergency trên PC (Steam Key)</strong></li>
+              <li><span class="check">✓</span> <em>(Giảm giá $20 cho 200 suất Early Bird đầu tiên)</em></li>
+              <li><span class="check">✓</span> Tập tài liệu sơ lược Mini Lore Dossier (PDF)</li>
+              <li><span class="check">✓</span> Quyền truy cập kênh thảo luận kín dành riêng cho Backer trên Discord</li>
+              <li><span class="check">✓</span> Toàn bộ quyền lợi từ bậc Side-Eye Supporter ($5)</li>
+            </ul>
+          </div>
+          <div class="tier-preview-thumb">
+            <img src="imgs/campaign-panels/kick/reward/reward 4.png" alt="Core Game Mascot">
+            <div class="thumb-label">Fighter Recruit Mascot</div>
+          </div>
+        </div>
+
+        <!-- TIER 3: $45 (FEATURED SWEET SPOT) -->
+        <div class="tier-box featured">
+          <div class="tier-ribbon">⭐ GÓI BÁN CHẠY NHẤT (SWEET SPOT)</div>
+          <div class="tier-meta">
+            <div class="tier-price">$45</div>
+            <div class="tier-name">Relic Hunter Deluxe</div>
+            <span class="tier-type-badge">DIGITAL DELUXE VIP</span>
+          </div>
+          <div class="tier-content">
+            <h4>Quyền lợi bao gồm:</h4>
+            <ul class="tier-items">
+              <li><span class="check">✓</span> Toàn bộ quyền lợi của bậc The Escapee ($25)</li>
+              <li class="highlight-item"><span class="check">★</span> <strong>ĐỘC QUYỀN KICKSTARTER: "Relic-Touched" Skin Pack</strong> (Trang phục obsidian phát quang cho Solei &amp; Deep)</li>
+              <li class="highlight-item"><span class="check">★</span> <strong>Tên vinh danh trong Credits chính thức của Game</strong> (Gom vào đây thay vì bắt trả $60)</li>
+              <li><span class="check">✓</span> <strong>Nhạc game gốc chất lượng cao (Full Digital OST - FLAC &amp; MP3)</strong></li>
+              <li><span class="check">✓</span> <strong>Digital Field Artbook (PDF hơn 100 trang)</strong> phác thảo pixel art &amp; concept</li>
+              <li><span class="check">✓</span> <strong>Digital Evidence Dossier Pack (PDF)</strong> hồ sơ mật Marseille</li>
+            </ul>
+          </div>
+          <div class="tier-preview-thumb">
+            <img src="imgs/rewards/proofs/relic_skin_preview.jpg" alt="Relic Touched Skin Preview">
+            <div class="thumb-label">Kèm Skin In-Game Độc Quyền</div>
+          </div>
+        </div>
+
+        <!-- TIER 4: $70 -->
+        <div class="tier-box">
+          <div class="tier-meta">
+            <div class="tier-price">$70</div>
+            <div class="tier-name">Combat Vanguard (Beta)</div>
+            <span class="tier-type-badge">EARLY ACCESS / PLAYTEST</span>
+          </div>
+          <div class="tier-content">
+            <h4>Quyền lợi bao gồm:</h4>
+            <ul class="tier-items">
+              <li><span class="check">✓</span> Toàn bộ quyền lợi từ bậc Relic Hunter Deluxe ($45)</li>
+              <li class="highlight-item"><span class="check">★</span> <strong>Quyền tham gia Closed Beta / Combat Playtest</strong> trải nghiệm các bản dựng thử nghiệm sớm</li>
+              <li class="highlight-item"><span class="check">★</span> Quyền gửi phản hồi trực tiếp qua phòng Discord kín cùng đội ngũ phát triển</li>
+              <li class="highlight-item"><span class="check">★</span> Vinh danh đặc biệt tại mục <strong>"Beta Combat Division Credits"</strong></li>
+              <li><span class="check">✓</span> Gói tài liệu Print-at-Home DIY Kit (file chuẩn in chất lượng cao cho ai muốn tự in tại nhà)</li>
+            </ul>
+          </div>
+          <div class="tier-preview-thumb">
+            <img src="imgs/campaign-panels/kick/reward/reward 7.gif" alt="Beta Mascot">
+            <div class="thumb-label">Brainrot Beta Test Subject</div>
+          </div>
+        </div>
+
+        <!-- TIER 5: $135 -->
+        <div class="tier-box featured">
+          <div class="tier-ribbon">⭐ BẬC VẬT LÝ CAO CẤP (WORLDWIDE SHIPPING)</div>
+          <div class="tier-meta">
+            <div class="tier-price">$135</div>
+            <div class="tier-name">Bastonne Collector's Box</div>
+            <span class="tier-type-badge">PHYSICAL COLLECTOR'S EDITION</span>
+          </div>
+          <div class="tier-content">
+            <h4>Quyền lợi bao gồm:</h4>
+            <ul class="tier-items">
+              <li><span class="check">✓</span> Toàn bộ quyền lợi Số hóa &amp; Closed Beta của bậc Combat Vanguard ($70)</li>
+              <li class="highlight-item"><span class="check">★</span> <strong>Hộp Sưu Tầm Cứng Bọc Nam Châm (Divergency: Bastonne Box) ép nhũ xanh ngọc</strong></li>
+              <li class="highlight-item"><span class="check">★</span> <strong>Sách Hướng Dẫn Kỹ Năng &amp; Đòn Thế Vật Lý (Combatant Move-List Manual) bìa vintage</strong></li>
+              <li class="highlight-item"><span class="check">★</span> <strong>Chìa Khóa Ngục Bastonne Đúc Hợp Kim Giả Cổ (Bastonne Iron Key Charm)</strong></li>
+              <li><span class="check">✓</span> <strong>Sách Divergency Field Artbook in màu bìa cứng</strong></li>
+              <li><span class="check">✓</span> <strong>Bản đồ Marseille cuộn tròn niêm phong sáp đỏ</strong></li>
+              <li><span class="check">✓</span> 01 Poster A3 Divergency &amp; Bộ Patch ủi vải / Sticker nhân vật pixel</li>
+              <li><span class="check">✓</span> <em>(Phí vận chuyển quốc tế được tính sau chiến dịch qua PledgeBox)</em></li>
+            </ul>
+          </div>
+          <div class="tier-preview-thumb">
+            <img src="imgs/rewards/proofs/brawler_combat_manual.jpg" alt="Combat Manual proof">
+            <div class="thumb-label">Brawler Combat Manual</div>
+          </div>
+        </div>
+
+        <!-- TIER 6: $250 -->
+        <div class="tier-box">
+          <div class="tier-meta">
+            <div class="tier-price">$250</div>
+            <div class="tier-name">Marseille Wanted Outlaw</div>
+            <span class="tier-type-badge">IN-GAME FOOTPRINT (LIMITED 30 SUẤT)</span>
+          </div>
+          <div class="tier-content">
+            <h4>Quyền lợi bao gồm:</h4>
+            <ul class="tier-items">
+              <li><span class="check">✓</span> Toàn bộ bộ sản phẩm vật lý <strong>Bastonne Collector's Box ($135)</strong></li>
+              <li class="highlight-item"><span class="check">★</span> <strong>Họa sĩ vẽ riêng 01 Chân dung Pixel Art 16-bit độc quyền của bạn</strong></li>
+              <li class="highlight-item"><span class="check">★</span> <strong>Lệnh Truy Nã (Wanted Poster) mang tên, biệt danh và tội danh của bạn</strong> xuất hiện trên tường ngục Bastonne hoặc các góc hẻm ngầm Marseille</li>
+              <li><span class="check">✓</span> 01 File in độ phân giải cao của bức Lệnh Truy Nã để bạn có thể tự in treo tường</li>
+              <li><span class="check">✓</span> Tên vinh danh tại mục <strong>"Bastonne Infamous Outlaws"</strong> trong Credits</li>
+            </ul>
+          </div>
+          <div class="tier-preview-thumb">
+            <img src="imgs/rewards/proofs/wanted_poster.jpg" alt="Wanted Poster Preview">
+            <div class="thumb-label">In-Game Wanted Poster</div>
+          </div>
+        </div>
+
+        <!-- TIER 7: $500 -->
+        <div class="tier-box">
+          <div class="tier-meta">
+            <div class="tier-price">$500</div>
+            <div class="tier-name">Relic Architect</div>
+            <span class="tier-type-badge">CO-CREATION (LIMITED 10 SUẤT)</span>
+          </div>
+          <div class="tier-content">
+            <h4>Quyền lợi bao gồm:</h4>
+            <ul class="tier-items">
+              <li><span class="check">✓</span> Toàn bộ quyền lợi từ bậc Marseille Wanted Outlaw ($250)</li>
+              <li class="highlight-item"><span class="check">★</span> <strong>Đồng thiết kế 01 Cổ Vật / Trang Bị (Trinket / Relic) trong Game:</strong> Bạn được đặt tên, chọn biểu tượng và viết đoạn lore mô tả cho một món cổ vật nhặt được trong các rương bí mật</li>
+              <li class="highlight-item"><span class="check">★</span> <em>Hoặc:</em> <strong>Đồng thiết kế 01 NPC phụ (Tù nhân Bastonne, Thương nhân chợ đen)</strong> với lời thoại riêng</li>
+              <li><span class="check">✓</span> Họp trực tuyến 1-1 cùng Giám đốc Sáng tạo và Trưởng nhóm Game Design</li>
+              <li><span class="check">✓</span> Vinh danh trang trọng tại mục <strong>"Honorary Lore Architects"</strong> trong Credits</li>
+            </ul>
+          </div>
+          <div class="tier-preview-thumb">
+            <img src="imgs/campaign-panels/kick/reward/reward 11.gif" alt="Final Form Architect Mascot">
+            <div class="thumb-label">Final Mutation Architect</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         TAB 3: COMPARISON TABLE
+         ============================================================== -->
+    <section id="pane-compare" class="tab-pane">
+      <div class="section-header">
+        <h2><span>⚖️</span> Đối Chiếu: Thang Cũ (11 Tiers) vs Thang Mới (7 Tiers)</h2>
+        <p>Bảng phân tích sự khác biệt về trải nghiệm của backer và tiềm năng chuyển đổi gây quỹ.</p>
+      </div>
+
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th style="width: 20%;">Tiêu chí</th>
+              <th style="width: 40%;">Thang Reward Cũ (Hiện Tại)</th>
+              <th style="width: 40%;">Thang Reward Mới (Đề Xuất)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Số lượng Tiers</strong></td>
+              <td class="old-status">11 Tiers (Quá nhiều bậc micro-increment $5, $10, $20, $25, $40, $60, $70...)</td>
+              <td class="new-status">7 Tiers (Rõ ràng, dứt khoát, mỗi bậc là một bước nhảy giá trị lớn)</td>
+            </tr>
+            <tr>
+              <td><strong>In-Game Rewards</strong></td>
+              <td class="old-status">Không có skin hay tính năng in-game nào cho người ủng hộ sớm.</td>
+              <td class="new-status">Exclusive "Relic-Touched" Skin Pack (Solei &amp; Deep) và Wanted Poster in-game.</td>
+            </tr>
+            <tr>
+              <td><strong>Vị trí Tên Credits</strong></td>
+              <td class="old-status">Bắt trả tận $60 chỉ để có tên trong Credits (chênh $20 so với $40).</td>
+              <td class="new-status">Gom luôn vào Tier $45 Deluxe (tạo động lực cực lớn để backer nâng từ $25 lên $45).</td>
+            </tr>
+            <tr>
+              <td><strong>Món Physical chủ lực</strong></td>
+              <td class="old-status">Poster A3 + Vòng đeo tay + Móc khóa (khá đại trà, dễ chìm nghỉm).</td>
+              <td class="new-status">Sách Hướng Dẫn Đòn Thế &amp; Combo (Combat Manual) + Chìa khóa đúc + Hộp Box cao cấp.</td>
+            </tr>
+            <tr>
+              <td><strong>Phạm vi Vận chuyển</strong></td>
+              <td class="old-status">Ghi nhãn "EU only" (Đánh mất 75% lượng backer từ US, CA, JP, ASIA).</td>
+              <td class="new-status">Mở Worldwide Shipping, thu phí ship sau chiến dịch qua PledgeBox/BackerKit.</td>
+            </tr>
+            <tr>
+              <td><strong>Creative Tier ($250)</strong></td>
+              <td class="old-status">Khắc 40 ký tự chữ thô sơ trên tường đá Bastonne (thiếu tính trực quan).</td>
+              <td class="new-status">Lệnh truy nã Marseille với chân dung Pixel Art vẽ riêng cho backer + chữ ký.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         TAB 4: FULFILLMENT STRATEGY
+         ============================================================== -->
+    <section id="pane-fulfillment" class="tab-pane">
+      <div class="section-header">
+        <h2><span>📦</span> Chiến Lược Vận Chuyển Toàn Cầu (Bỏ nhãn "EU Only")</h2>
+        <p>Cách các chiến dịch triệu đô giải quyết bài toán giao hàng mà không bị lỗ chi phí ship.</p>
+      </div>
+
+      <div class="proof-grid">
+        <div class="proof-card">
+          <div class="proof-info">
+            <h3 class="proof-title">1. Thu Phí Vận Chuyển Sau (Post-Campaign Pledge Manager)</h3>
+            <p class="proof-desc">
+              Không bao giờ thu tiền ship cố định ngay trên Kickstarter. Hãy ghi chú rõ: <em>"Shipping will be calculated and charged after the campaign via PledgeBox"</em>. 
+              Điều này giúp bạn tránh việc Kickstarter cắn 8-10% phí trên tiền ship, đồng thời tính đúng giá cước theo trọng lượng thực tế khi đã đóng gói.
+            </p>
+          </div>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-info">
+            <h3 class="proof-title">2. Lợi thế kích thước của Sổ Tay Combat &amp; Chìa Khóa</h3>
+            <p class="proof-desc">
+              Một cuốn sổ tay kỹ năng khổ A5 kết hợp chìa khóa đúc kẽm có trọng lượng nhẹ (dưới 350 gram). Nó có thể nhét vừa hộp cứng tiêu chuẩn với cước bưu điện quốc tế rẻ hơn 50% so với gửi tượng hay mô hình cồng kềnh, giảm thiểu tối đa nguy cơ móp méo khi vận chuyển.
+            </p>
+          </div>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-info">
+            <h3 class="proof-title">3. Tùy chọn Digital DIY Kit (Print-at-Home)</h3>
+            <p class="proof-desc">
+              Cung cấp toàn bộ file PDF chuẩn in ấn thương mại (bleed 3mm, CMYK 300DPI) cho sổ tay combat, bản đồ và poster ở Tier $70. Backer ở các quốc gia xa xôi (Úc, Nam Mỹ, Châu Á) có thể tải về tự in tại tiệm in địa phương mà không mất 1 đồng phí vận chuyển xuyên biên giới.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- MODAL / LIGHTBOX -->
+  <div id="imageModal" class="modal-overlay" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+      <div class="modal-img-wrap">
+        <img id="modalImg" src="" alt="Proof high-res view">
+      </div>
+      <div class="modal-info">
+        <div>
+          <h3 id="modalTitle" style="font-family: var(--font-display); color: var(--relic-teal); font-size: 18px; margin-bottom: 4px;"></h3>
+          <p id="modalDesc" style="color: var(--text-muted); font-size: 13px;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      const targetPane = document.getElementById('pane-' + tabId);
+      if (targetPane) targetPane.classList.add('active');
+      
+      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    function openModal(src, title, desc) {
+      const modal = document.getElementById('imageModal');
+      document.getElementById('modalImg').src = src;
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = desc;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

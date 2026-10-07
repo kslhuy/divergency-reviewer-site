@@ -1,0 +1,32 @@
+{
+  "previewTimingOverrides": [
+    {
+      "actor": "enemy",
+      "clip": "Idle",
+      "frame": 0,
+      "sourceTicks": 0,
+      "previewTicks": 6
+    },
+    {
+      "actor": "enemy",
+      "clip": "hurt_1",
+      "frame": 0,
+      "sourceTicks": 0,
+      "previewTicks": 6
+    },
+    {
+      "actor": "enemy",
+      "clip": "hurt_1",
+      "frame": 1,
+      "sourceTicks": 0,
+      "previewTicks": 6
+    },
+    {
+      "actor": "enemy",
+      "clip": "hurt_1",
+      "frame": 2,
+      "sourceTicks": 0,
+      "previewTicks": 6
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<h2 id="devlog-production" tabindex="-1">Tận dụng tư liệu và quay bổ sung</h2>
+<h3 id="devlog-materials" tabindex="-1">Kho tư liệu: cái gì dùng vào việc gì?</h3>
+<div class="table-wrap"><table><thead><tr><th>Tư liệu</th><th>Cách dùng</th><th>Việc cần làm trước khi dựng</th></tr></thead><tbody>
+<tr><td>Call online và discussion<br><strong>Bạn cho biết đang có</strong></td><td>Điểm mở câu chuyện, câu hỏi thật, phản ứng hoặc quyết định của nhóm.</td><td>Nghe lại, đánh dấu 3 đoạn 5–12 giây có nghĩa khi tách ra. Bỏ thời gian chết. Cắt/che thông tin riêng; hỏi thành viên có mặt về đoạn được đưa lên video.</td></tr>
+<tr><td>Ảnh cũ của quá trình<br><strong>Bạn cho biết đang có</strong></td><td>Trước/sau, tiến trình tư duy, lựa chọn bị bỏ.</td><td>Ghép đúng cùng đối tượng; xác nhận thứ tự và lý do thay đổi. Không biết ngày thì ghi “bản cũ”, không tự đặt mốc.</td></tr>
+<tr><td>Một ít video vẽ<br><strong>Bạn cho biết đang có</strong></td><td>5–10 giây chuyển đoạn hoặc một tập bóc tách chi tiết.</td><td>Chọn phần có thay đổi thấy được. Thu lời bình mới để bù đoạn thiếu; không cần tạo timelapse dài.</td></tr>
+<tr><td>Artwork, UI, portrait<br><strong>Có trong repository</strong></td><td>Nhân vật, art direction, sơ đồ, thumbnail.</td><td>Chọn 4–6 hình phục vụ đúng chủ đề. Phân biệt concept, UI mockup và ảnh chụp gameplay.</td></tr>
+<tr><td>GIF/animation<br><strong>Có trong repository</strong></td><td>Một pose hoặc đòn đánh để đọc chi tiết.</td><td>Mở xem từng GIF trước khi dùng; kiểm tra khung hình, độ nét và nội dung. Không coi tên file là bằng chứng về gameplay.</td></tr>
+<tr><td>Synergy preview<br><strong>Hai HTML local</strong></td><td>Giải thích thứ tự động tác, khoảng cách và ý tưởng phối hợp.</td><td>Quay màn hình preview, giữ nhãn “minh họa ý tưởng”; kiểm chứng lại bằng build nếu muốn giới thiệu cơ chế thực.</td></tr>
+<tr><td>Gameplay mới<br><strong>Cần quay theo tình huống</strong></td><td>Bằng chứng hành vi, so sánh A/B, payoff cuối video.</td><td>Quay để trả lời một câu hỏi, lưu build/ngày quay và giữ tiếng game sạch.</td></tr>
+</tbody></table></div>
+<h3 id="devlog-asset-pointers" tabindex="-1">Điểm bắt đầu trong thư mục dự án</h3>
+<p>Các đường dẫn dưới đây là chỉ mục tư liệu local, chưa phải đánh giá chất lượng hoặc xác nhận tính năng. Tra đúng hình trước khi thu lời.</p>
+<ul>
+<li><code>imgs/chars/Deep/Deep.png</code>, <code>deep_sword_1.gif</code> và <code>deep_sword_2.gif</code> trong cùng thư mục: bắt đầu tuyển hình cho Deep.</li>
+<li><code>imgs/UI/character_selected_story_sprites/character_art_block_card.png</code> và <code>character_art_tulas_card.png</code> trong cùng thư mục: art nhân vật trong UI, cần crop phù hợp.</li>
+<li><code>imgs/Stage1/Bastonne.png</code>, <code>Bastonne_rescue_approach.png</code> trong cùng thư mục: nguồn cho tập không khí và thiết kế màn.</li>
+<li><code>imgs/campaign-panels/kick/tulas_atk.gif</code> và <code>tulas_atk_2.gif</code> trong cùng thư mục: xem trước để chọn beat animation phù hợp.</li>
+<li><code>Tulas_Block_Synergy_Preview.html</code>, <code>Tulas_Deep_Synergy_Preview.html</code>: hoạt cảnh local dùng cho trao đổi ý tưởng.</li>
+</ul>
+<h3 id="devlog-capture" tabindex="-1">Một buổi quay 30–45 phút cho hệ lệnh</h3>
+<p><strong>Mục tiêu đầu ra:</strong> 6–8 clip ngắn, có cả player, đồng đội và thao tác rõ ràng. Đây là ngân sách thời gian gợi ý; nếu cơ chế chưa ổn thì chuyển buổi quay thành ghi nhận prototype, không cố dựng một kết quả thành công.</p>
+<div class="table-wrap"><table><thead><tr><th>Clip</th><th>Quay gì?</th><th>Tiêu chí chọn</th></tr></thead><tbody>
+<tr><td>A · Toàn cảnh</td><td>10–15s giao tranh dễ đọc, camera giữ cả nhóm.</td><td>Người xem hiểu vì sao cần chia vị trí.</td></tr>
+<tr><td>B · Chọn đồng đội</td><td>5–10s chọn General và thấy HUD phản hồi.</td><td>Biết ai sẽ nhận lệnh.</td></tr>
+<tr><td>C · Hold</td><td>10–15s gửi lệnh và NPC vào vị trí.</td><td>Thấy quan hệ vị trí player/NPC, không cắt giữa lúc lệnh chưa thực hiện.</td></tr>
+<tr><td>D · Regroup</td><td>10–15s gọi tập hợp rồi di chuyển.</td><td>NPC theo hành vi của build, UI đọc được.</td></tr>
+<tr><td>E · Chuỗi đầy đủ</td><td>20–30s chọn → Hold → giao tranh → Regroup liền mạch.</td><td>Có kết quả dễ hiểu và tiếng game sạch.</td></tr>
+<tr><td>F · Đối chiếu</td><td>Cùng encounter, thử cách xử lý khác hoặc giữ lần thất bại.</td><td>Không đổi độ khó/địch rồi coi đó là bằng chứng duy nhất cho hiệu quả lệnh.</td></tr>
+<tr><td>G · Cảnh đệm</td><td>5–10s idle/di chuyển trong khu vực, một khung kết đẹp.</td><td>Có khoảng trống cho chữ; không cần thêm lời.</td></tr>
+</tbody></table></div>
+<p><strong>Thiết lập gợi ý:</strong> quay ngang 1920×1080, 60 fps nếu máy giữ ổn định; ưu tiên hình rõ và frame rate ổn định. Giữ bản gốc không caption và vài giây đầu/cuối mỗi take. Với Short 1080×1920, có thể đặt nguyên khung gameplay ngang giữa nền dọc và dùng phần trống cho chữ; crop chỉ khi cả tình huống vẫn nhìn thấy.</p>
+<h3 id="devlog-workflow" tabindex="-1">Flow dựng một video</h3>
+<ol>
+<li>Chọn một câu hỏi và trạng thái: <strong>gameplay kiểm chứng / prototype / ý tưởng thiết kế</strong>.</li>
+<li>Gom 4–6 hình hoặc clip trả lời câu hỏi. Mỗi clip ghi tên file, mốc vào/ra, build và điều nó chứng minh.</li>
+<li>Viết lời kể theo tư liệu; thay toàn bộ ngoặc mẫu. Thu bản nháp để nghe nhịp.</li>
+<li>Dựng bản thô bằng lời kể và hình chính; thêm call khi nó cung cấp điều lời dẫn chưa có.</li>
+<li>Thêm âm thanh, nhãn trạng thái, phụ đề Việt/Anh phù hợp. Xem trên màn hình điện thoại.</li>
+<li>Xuất bản dài; dựng Short riêng từ một luận điểm, giữ phần kết tự đủ nghĩa.</li>
+</ol>
+<p>Khung này có thể dùng làm đầu vào cho quy trình dựng tự động sau: lời kể, timecode, clip, caption và shot list. Tab hiện tại là kế hoạch và kịch bản, chưa tự tạo giọng đọc hoặc xuất MP4.</p>

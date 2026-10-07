@@ -1,0 +1,29 @@
+[
+  {
+    "name": "K",
+    "file": "K-talking.gif",
+    "width": 468,
+    "height": 468,
+    "frames": 44,
+    "durationMs": 5680,
+    "loop": 0
+  },
+  {
+    "name": "H",
+    "file": "H-talking.gif",
+    "width": 468,
+    "height": 468,
+    "frames": 44,
+    "durationMs": 6110,
+    "loop": 0
+  },
+  {
+    "name": "N",
+    "file": "N-talking.gif",
+    "width": 468,
+    "height": 468,
+    "frames": 44,
+    "durationMs": 5440,
+    "loop": 0
+  }
+]

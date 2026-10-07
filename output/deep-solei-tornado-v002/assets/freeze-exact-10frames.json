@@ -1,0 +1,166 @@
+{
+  "image": "freeze-ww-reference.png",
+  "colorTransform": "../freeze-palette.js",
+  "columns": 5,
+  "rows": 2,
+  "frameWidth": 160,
+  "frameHeight": 160,
+  "frameCount": 10,
+  "fps": 12,
+  "loop": true,
+  "ticks": 50,
+  "frames": [
+    {
+      "r": [
+        0,
+        0,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    },
+    {
+      "r": [
+        160,
+        0,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    },
+    {
+      "r": [
+        320,
+        0,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    },
+    {
+      "r": [
+        480,
+        0,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    },
+    {
+      "r": [
+        640,
+        0,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    },
+    {
+      "r": [
+        0,
+        160,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    },
+    {
+      "r": [
+        160,
+        160,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    },
+    {
+      "r": [
+        320,
+        160,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    },
+    {
+      "r": [
+        480,
+        160,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    },
+    {
+      "r": [
+        640,
+        160,
+        160,
+        160
+      ],
+      "p": [
+        80,
+        160
+      ],
+      "t": 5,
+      "atlas": "tornado",
+      "u": 1
+    }
+  ],
+  "notes": "Original frames and bottom-center pivots from freeze_ww.png.meta. Preview playback 12 FPS; original gameplay timing not inferred.",
+  "exportedImage": "freeze-red-mint-exact.png"
+}

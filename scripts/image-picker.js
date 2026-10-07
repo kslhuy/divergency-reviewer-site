@@ -5,36 +5,36 @@ function createImagePicker({ getSession, onInsert }) {
   dialog.setAttribute('aria-labelledby', 'image-picker-title');
   dialog.innerHTML = `
     <header class="image-picker-header">
-      <div><h2 id="image-picker-title">Chèn hình minh họa</h2><p>Chọn ảnh trong thư viện hoặc thêm ảnh từ máy.</p></div>
-      <button type="button" class="image-picker-close" aria-label="Đóng thư viện ảnh">×</button>
+      <div><h2 id="image-picker-title">Insert image</h2><p>Choose from the library or upload an image.</p></div>
+      <button type="button" class="image-picker-close" aria-label="Close image library">×</button>
     </header>
     <div class="image-picker-tools">
-      <label class="image-picker-search">Tìm ảnh<input type="search" placeholder="Tên ảnh hoặc thư mục…" autocomplete="off"></label>
-      <label class="image-picker-folder">Thư mục<select><option value="">Tất cả thư mục</option></select></label>
-      <button class="image-upload-button" type="button">↑ Tải ảnh từ máy</button>
-      <input class="image-upload-input" type="file" accept="image/png,image/jpeg,image/gif,image/webp,.png,.jpg,.jpeg,.gif,.webp" aria-label="Chọn ảnh từ máy" hidden>
+      <label class="image-picker-search">Find image<input type="search" placeholder="Image name or folder…" autocomplete="off"></label>
+      <label class="image-picker-folder">Folder<select><option value="">All folders</option></select></label>
+      <button class="image-upload-button" type="button">↑ Upload</button>
+      <input class="image-upload-input" type="file" accept="image/png,image/jpeg,image/gif,image/webp,.png,.jpg,.jpeg,.gif,.webp" aria-label="Choose an image to upload" hidden>
     </div>
-    <div class="image-drop-hint">Kéo thả ảnh vào cửa sổ này để thêm vào thư viện · PNG, JPG, GIF, WebP · tối đa 20 MB/ảnh</div>
+    <div class="image-drop-hint">Drop an image here · PNG, JPG, GIF, WebP · up to 20 MB</div>
     <div class="image-picker-body">
-      <section class="image-library" aria-label="Thư viện ảnh dự án">
-        <div class="image-library-heading"><span class="image-result-count" role="status" aria-live="polite">Đang tải thư viện…</span><button class="image-library-retry" type="button" hidden>Thử lại</button></div>
-        <div class="image-library-scroll" tabindex="0" aria-label="Các ảnh trong thư viện">
+      <section class="image-library" aria-label="Project image library">
+        <div class="image-library-heading"><span class="image-result-count" role="status" aria-live="polite">Loading library…</span><button class="image-library-retry" type="button" hidden>Retry</button></div>
+        <div class="image-library-scroll" tabindex="0" aria-label="Library images">
           <div class="image-library-grid"></div>
-          <p class="image-library-empty" hidden>Không tìm thấy ảnh. Thử tên khác hoặc chọn tất cả thư mục.</p>
-          <button class="image-library-more" type="button" hidden>Xem thêm ảnh</button>
+          <p class="image-library-empty" hidden>No images found. Try another name or select all folders.</p>
+          <button class="image-library-more" type="button" hidden>Load more</button>
         </div>
       </section>
-      <aside class="image-selection" aria-label="Ảnh đang chọn">
-        <div class="image-selection-placeholder">Chọn một ảnh để xem trước</div>
+      <aside class="image-selection" aria-label="Selected image">
+        <div class="image-selection-placeholder">Select an image to preview</div>
         <img class="image-selection-preview" alt="" hidden>
         <p class="image-selection-name"></p>
         <p class="image-selection-details"></p>
-        <label>Chú thích <span>(không bắt buộc)</span><input class="image-selection-caption" placeholder="Nhập chú thích cho hình…" disabled></label>
+        <label>Caption <span>(optional)</span><input class="image-selection-caption" placeholder="Image caption…" disabled></label>
       </aside>
     </div>
     <footer class="image-picker-footer">
-      <p class="image-picker-status" role="status" aria-live="polite">Ảnh được chèn tại vị trí con trỏ trong nội dung.</p>
-      <div><button class="image-picker-cancel" type="button">Hủy</button><button class="image-picker-insert" type="button" disabled>Chèn ảnh đã chọn</button></div>
+      <p class="image-picker-status" role="status" aria-live="polite">The image is inserted at the cursor.</p>
+      <div><button class="image-picker-cancel" type="button">Cancel</button><button class="image-picker-insert" type="button" disabled>Insert image</button></div>
     </footer>`;
   document.body.append(dialog);
   const find = selector => dialog.querySelector(selector);
@@ -62,14 +62,14 @@ function createImagePicker({ getSession, onInsert }) {
   const normalize = text => text.normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/[đĐ]/g, 'd').toLowerCase();
   const displayName = name => name.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ');
   const groupOf = image => image.folder.split('/')[0];
-  const groupLabel = group => group === 'uploads' ? 'Ảnh tải lên' : group;
+  const groupLabel = group => group === 'uploads' ? 'Uploads' : group;
   function message(text, error = false) {
     status.textContent = text;
     status.classList.toggle('is-error', error);
   }
   function updateFolders() {
     const previous = folder.value;
-    folder.replaceChildren(new Option('Tất cả thư mục', ''));
+    folder.replaceChildren(new Option('All folders', ''));
     [...new Set(images.map(groupOf))].sort().forEach(group => folder.add(new Option(groupLabel(group), group)));
     if ([...folder.options].some(option => option.value === previous)) folder.value = previous;
   }
@@ -78,14 +78,14 @@ function createImagePicker({ getSession, onInsert }) {
     const matches = images.filter(image => (!folder.value || groupOf(image) === folder.value)
       && normalize(image.name + ' ' + image.folder).includes(query));
     const shown = matches.slice(0, limit);
-    count.textContent = matches.length + ' ảnh' + (shown.length < matches.length ? ' · đang hiện ' + shown.length : '');
+    count.textContent = matches.length + ' images' + (shown.length < matches.length ? ' · showing ' + shown.length : '');
     empty.hidden = Boolean(matches.length);
     more.hidden = shown.length === matches.length;
     grid.replaceChildren();
     for (const image of shown) {
       const button = document.createElement('button');
       button.type = 'button'; button.className = 'image-library-card';
-      button.setAttribute('aria-label', 'Chọn ảnh ' + image.name);
+      button.setAttribute('aria-label', 'Select image ' + image.name);
       button.setAttribute('aria-pressed', String(selected?.src === image.src));
       button.dataset.src = image.src;
       const thumb = document.createElement('img');
@@ -106,8 +106,8 @@ function createImagePicker({ getSession, onInsert }) {
     placeholder.hidden = true;
     preview.hidden = false;
     preview.alt = label;
-    preview.onload = () => { if (selected === image) { insert.disabled = uploading; message('Ảnh đã chọn. Bấm Chèn ảnh để thêm vào nội dung.'); } };
-    preview.onerror = () => { if (selected === image) { insert.disabled = true; message('Không đọc được ảnh này. Chọn ảnh khác hoặc tải ảnh mới.', true); } };
+    preview.onload = () => { if (selected === image) { insert.disabled = uploading; message('Image selected. Click Insert image to add it.'); } };
+    preview.onerror = () => { if (selected === image) { insert.disabled = true; message('Could not load this image. Choose another or upload a new one.', true); } };
     preview.src = image.src;
     find('.image-selection-name').textContent = image.name;
     find('.image-selection-details').textContent = groupLabel(image.folder) + ' · ' + (image.bytes < 1024 * 1024 ? Math.ceil(image.bytes / 1024) + ' KB' : (image.bytes / 1024 / 1024).toFixed(1) + ' MB');
@@ -117,43 +117,43 @@ function createImagePicker({ getSession, onInsert }) {
   async function load() {
     const current = generation;
     retry.hidden = true;
-    count.textContent = 'Đang tải thư viện…';
+    count.textContent = 'Loading library…';
     try {
       const response = await fetch('/api/images', { headers: { 'X-Editor-Token': getSession().token }, signal: AbortSignal.timeout(15000) });
       const data = await response.json();
-      if (!response.ok) throw new Error(data.error || 'Không tải được thư viện.');
+      if (!response.ok) throw new Error(data.error || 'Could not load the library.');
       if (current !== generation || !dialog.open) return;
       images = data.images;
       if (selected && !images.some(image => image.src === selected.src)) images.unshift(selected);
       updateFolders(); render();
     } catch (error) {
       if (current !== generation || !dialog.open) return;
-      count.textContent = 'Chưa tải được thư viện'; retry.hidden = false;
-      message(error.message + ' Bạn có thể thử lại hoặc tải ảnh từ máy.', true);
+      count.textContent = 'Library unavailable'; retry.hidden = false;
+      message(error.message + ' Retry or upload an image from your computer.', true);
     }
   }
   async function upload(file) {
     if (!file || uploading) return;
-    if (file.size > 20 * 1024 * 1024) return message('Mỗi ảnh cần nhỏ hơn hoặc bằng 20 MB.', true);
-    if (!/\.(png|jpe?g|gif|webp)$/i.test(file.name)) return message('Chọn ảnh PNG, JPG, GIF hoặc WebP.', true);
+    if (file.size > 20 * 1024 * 1024) return message('Each image must be 20 MB or smaller.', true);
+    if (!/\.(png|jpe?g|gif|webp)$/i.test(file.name)) return message('Choose a PNG, JPG, GIF or WebP image.', true);
     uploading = true; uploadButton.disabled = true; insert.disabled = true;
     dialog.setAttribute('aria-busy', 'true');
-    message('Đang thêm ảnh vào thư viện…');
+    message('Uploading image…');
     const objectURL = URL.createObjectURL(file);
     try {
       const check = new Image(); check.src = objectURL;
-      try { await check.decode(); } catch { throw new Error('Không đọc được ảnh. Chọn một tệp ảnh khác.'); }
+      try { await check.decode(); } catch { throw new Error('Could not read the image. Choose another file.'); }
       const response = await fetch('/api/images', {
         method: 'POST', headers: { 'X-Editor-Token': getSession().token, 'X-Image-Name': encodeURIComponent(file.name), 'Content-Type': file.type || 'application/octet-stream' },
         body: file, signal: AbortSignal.timeout(60000),
       });
       const data = await response.json();
-      if (!response.ok) throw new Error(data.error || 'Không tải được ảnh. Hãy thử lại.');
+      if (!response.ok) throw new Error(data.error || 'Could not upload the image. Try again.');
       images = [data.image, ...images.filter(image => image.src !== data.image.src)];
       updateFolders(); search.value = ''; folder.value = 'uploads'; limit = 60;
       render(); scroll.scrollTop = 0;
       choose(data.image, displayName(file.name));
-      message('Đã thêm ảnh vào thư viện. Bấm Chèn ảnh để đưa vào nội dung.');
+      message('Image uploaded. Click Insert image to add it.');
     } catch (error) { message(error.message, true); }
     finally {
       URL.revokeObjectURL(objectURL);
@@ -163,12 +163,12 @@ function createImagePicker({ getSession, onInsert }) {
     }
   }
   function close() {
-    if (uploading) { message('Đang lưu ảnh vào thư viện. Vui lòng đợi hoàn tất.'); return; }
+    if (uploading) { message('Uploading image. Please wait.'); return; }
     dialog.close();
   }
   find('.image-picker-close').onclick = close;
   find('.image-picker-cancel').onclick = close;
-  dialog.addEventListener('cancel', event => { if (uploading) { event.preventDefault(); message('Đang lưu ảnh vào thư viện. Vui lòng đợi hoàn tất.'); } });
+  dialog.addEventListener('cancel', event => { if (uploading) { event.preventDefault(); message('Uploading image. Please wait.'); } });
   dialog.addEventListener('close', () => { generation++; dialog.classList.remove('is-dragging'); });
   search.addEventListener('input', () => { limit = 60; render(); scroll.scrollTop = 0; });
   folder.addEventListener('change', () => { limit = 60; render(); scroll.scrollTop = 0; });
@@ -184,7 +184,7 @@ function createImagePicker({ getSession, onInsert }) {
   dialog.addEventListener('dragleave', () => { dragDepth = Math.max(0, dragDepth - 1); if (!dragDepth) dialog.classList.remove('is-dragging'); });
   dialog.addEventListener('drop', event => {
     event.preventDefault(); dragDepth = 0; dialog.classList.remove('is-dragging');
-    if (event.dataTransfer.files.length !== 1) return message('Thêm từng ảnh để xem trước và chọn vị trí chèn.', true);
+    if (event.dataTransfer.files.length !== 1) return message('Add one image at a time to preview it and choose its position.', true);
     upload(event.dataTransfer.files[0]);
   });
   insert.onclick = () => {
@@ -200,7 +200,7 @@ function createImagePicker({ getSession, onInsert }) {
       preview.hidden = true; preview.removeAttribute('src'); preview.onload = preview.onerror = null;
       placeholder.hidden = false; insert.disabled = true;
       find('.image-selection-name').textContent = ''; find('.image-selection-details').textContent = '';
-      message('Ảnh được chèn tại vị trí con trỏ trong nội dung.');
+      message('The image is inserted at the cursor.');
       dialog.showModal();
       if (images.length) render();
       load(); search.focus();

@@ -1,0 +1,6 @@
+interface:
+  display_name: "LF2 Synergy Preview"
+  short_description: "Dựng combo nhiều nhân vật thành HTML có animation"
+  default_prompt: "Dùng $lf2-synergy-preview để dựng ý tưởng kết hợp các nhân vật thành HTML chạy được, giữ style/màu và cách xem như bản Solei × Tulas."
+policy:
+  allow_implicit_invocation: true

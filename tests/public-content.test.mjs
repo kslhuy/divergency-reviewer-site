@@ -31,7 +31,7 @@ test('public builds omit private chapters, rewards and image manifests; local re
   const local = buildPage(buildDocs(undefined, {local:true}), {local:true});
   assert.match(local, /data-tab="rewards"/);
   assert.match(local, /imgs\/Stage5\//);
-  assert.match(local, /imgs\/rewards\//);
+  assert.match(local, /Side-Eye Recognition/);
   assert.match(local, /gameplay-5-3/);
 });
 

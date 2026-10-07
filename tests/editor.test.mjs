@@ -8,7 +8,8 @@ import http from 'node:http';
 import { parse, parseFragment } from 'parse5';
 import { prepareGameplay } from '../scripts/web-content.mjs';
 import { createContentStore, createEditorServer, projectRoot } from '../scripts/editor-server.mjs';
-import { buildDocs, buildPage, renderMarkdown } from '../build-reviewer-html.mjs';
+import { buildDocs, buildPage } from '../build-reviewer-html.mjs';
+import { renderMarkdown } from '../scripts/legacy-markdown.mjs';
 import { listImages, MAX_IMAGE_BYTES, saveImage } from '../scripts/editor-images.mjs';
 
 function walk(node, callback) { callback(node); for (const child of node.childNodes || []) walk(child, callback); }
@@ -172,11 +173,12 @@ test('build uses the web source and includes working scripts and valid gameplay 
   let scripts = 0;
   walk(parse(page), node => {
     if (node.tagName !== 'script' || node.attrs.some(attr => attr.name === 'type' && attr.value === 'application/ld+json')) return;
-    new vm.Script(node.childNodes.map(child => child.value || '').join(''));
+    const src = node.attrs.find(attr => attr.name === 'src')?.value;
+    new vm.Script(src ? readFileSync(path.join(projectRoot, src), 'utf8') : node.childNodes.map(child => child.value || '').join(''));
     scripts++;
   });
-  assert.equal(scripts, 2);
-  assert.match(page, /Chỉnh sửa trực tiếp/);
+  assert.equal(scripts, 10);
+  assert.ok(page.includes('Edit document'));
   for (const item of gameplay.toc) {
     assert.ok(page.includes(`id="${item.id}"`));
     assert.ok(page.includes(`href="#${item.id}"`));

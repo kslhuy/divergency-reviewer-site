@@ -29,6 +29,7 @@ export function prepareGameplay(input) {
       if (attr(node, 'class').split(/\s+/).includes('heading-link')) return false;
       const attributes = [];
       const keep = (name, value) => { if (value) attributes.push({ name, value }); };
+      keep('data-local-only', attr(node, 'data-local-only'));
       keep('class', attr(node, 'class').split(/\s+/).filter(name => classes.has(name)).join(' '));
       if (node.tagName === 'img') {
         const src = safeUrl(attr(node, 'src'), true);
