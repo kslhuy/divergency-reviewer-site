@@ -1,11 +1,80 @@
 <h2 id="gameplay-1-0-cay-cau-o-marseille" tabindex="-1"><a class="heading-link" href="#gameplay-1-0-cay-cau-o-marseille" aria-label="Link to section">#</a>1-0. Cây cầu ở Marseille</h2>
-<p><strong>Mục tiêu:</strong> đi từ bến đổ bộ qua cầu vào khu phố của đội, đưa Block về căn cứ Deep. Đây là phần tiếp ngay chuyến rút khỏi Bastonne, trước khi đội tìm đến Armorlite.</p>
-<figure class="markdown-image"><img src="imgs/Stage1/chap1/In_thecity_Fix.png" alt="Cầu vào Marseille — đường từ bến đổ bộ về căn cứ Deep." loading="lazy"><figcaption>Cầu vào Marseille — đường từ bến đổ bộ về căn cứ Deep.</figcaption></figure>
-<h3 id="gameplay-1-0-qua-cau" tabindex="-1"><a class="heading-link" href="#gameplay-1-0-qua-cau" aria-label="Link to section">#</a>Qua cầu — thành phố bắt đầu khép đường thoát</h3>
-<p>Một nhóm thuộc băng đua xe chặn đầu cầu. Chúng vốn có thù với Deep vì đội từng phá đường buôn người, nay nhận tin treo thưởng sau vụ Bastonne. Chúng nhận ra đội và tìm cách giữ chân để gọi thêm người.</p>
-<p>Người chơi đánh mở lối qua một chốt nhỏ. Block ở phía sau vật che cùng người dìu; không bắt anh đang bị thương ra giữ tuyến. Đường đi chỉ có đầu cầu, chốt chặn và ngõ về căn cứ. Không thêm boss ở đây, vì trận lớn với băng đua xe nằm tại Armorlite.</p>
-<h3 id="gameplay-1-0-tai-can-cu" tabindex="-1"><a class="heading-link" href="#gameplay-1-0-tai-can-cu" aria-label="Link to section">#</a>Tại căn cứ — nghỉ, đặt tên Ghost và quyết định đi đâu</h3>
-<p>Đội chăm sóc Block và xem sổ chuyển tù. Sổ xác nhận tù nhân bị đưa ra biển, nhưng không cho biết vị trí trạm hoặc mục đích nghiên cứu. Mark muốn mang cả nhân chứng lẫn sổ ra khỏi Marseille vì lực lượng truy bắt thuộc bộ máy đang che giấu vụ việc.</p>
-<p>Block được ổn định thương tích trước khi người chơi chọn lại đội. Nếu Stranger đã giúp anh, Block lên tiếng bảo vệ người lạ. Nếu chưa, cuộc nói chuyện dè dặt hơn nhưng đội vẫn chăm sóc cả hai. Từ đây họ gọi Stranger là <strong>Ghost</strong>; anh được chọn trong đội hình sau cuộc đối thoại. Thương tích không tạo một mức giảm máu kéo dài mà người chơi không biết cách chữa.</p>
-<p><strong>Hướng dẫn phối hợp tùy chọn:</strong> tại sân tập, thử gọi một đồng đội theo, cho đứng canh một điểm rồi gọi lại. Popup ngắn giải thích cách nhập lệnh đang dùng; người chơi có thể bỏ qua và xem lại. Không cần học cả đội hình lẫn mọi chuỗi phím mới được ra cửa.</p>
-<p><strong>Kết quả:</strong> Mark nhờ Jacques thu xếp đường biển. Người chơi rời căn cứ theo ngõ sau tới Armorlite để nhận chi tiết cuộc hẹn. Lưu tại căn cứ sau khi điều trị và chọn đội.</p>
+<p class="chapter-version"><strong>Bản đồng nhất gameplay · narrative · Timeline — 09/10/2026.</strong> Nguồn thực thi: <code>Assets/Scenes/Chapter1_Playable.unity</code>. Bản đang ở mức <code>prototype_known_issues</code>; các phần cần hoàn thiện được ghi cụ thể phía dưới.</p>
+<span id="gameplay-1-0-qua-cau"></span><span id="gameplay-1-0-tai-can-cu"></span>
+
+<p><strong>Mục tiêu:</strong> mở chốt trên cầu, đưa Block về căn cứ Deep rồi tìm đường rời Marseille cùng nhân chứng và sổ Bastonne.</p>
+<h3>Qua cầu — một chốt ngắn, không có boss</h3>
+<p>Đội vừa rời Bastonne. Băng đua xe nhận tin treo thưởng, nhận ra Deep và chặn đầu cầu để giữ chân đội. Mark bảo Block ở sau vật che; Deep mở đường. Trận mở đầu dùng ba địch, có cảnh báo trước khi xuất hiện. Không đưa boss Armorlite lên cây cầu.</p>
+<p>Dọn chốt xong, Mark nhận ra chúng đã báo cho đồng bọn. Cửa về căn cứ mở; câu chuyện nối trực tiếp sang việc điều trị Block. Hình học cầu hiện dùng bản dựng Marseille có sẵn; tình tiết Block được bảo vệ thể hiện qua hội thoại, chưa có AI người dìu riêng.</p>
+<h3>Tại căn cứ — giữ thông tin đúng mức nhân vật biết</h3>
+<p>Block đã được thay băng và ổn định. Sổ chỉ chứng minh tù nhân bị chuyển ra biển; nó chưa cho tọa độ hoặc mục đích nghiên cứu. Mark muốn đưa chứng cứ cùng người sống ra khỏi thành phố. Anh nhờ Jacques thu xếp thuyền; đội tới Armorlite để nhận giờ và đường đi.</p>
+<p>Cuộc nói chuyện chính với Mark đặt tên Ghost cho Stranger. Block nhắc người lạ cũng cần một chỗ nghỉ. Sau câu cuối, mục tiêu nghe kế hoạch mới hoàn tất và đường sang Armorlite mở. Hỏi thăm Block, Solei, Tulas là tùy chọn; lời Solei giới thiệu bài gọi đồng đội, giữ vị trí rồi gọi lại, không khóa cửa bằng bài thi phối hợp.</p>
+<h3>Nhịp gameplay và Timeline</h3>
+<ul><li>Cầu: hết thoại nhập cảnh → cảnh báo 2,5 giây → ba địch lần lượt xuất hiện → chờ cả ba bị hạ → thoại sau trận → về căn cứ.</li><li>Căn cứ: giữ điều khiển khi nói chuyện; một cuộc họp chính đủ để tiến. Không có Timeline chiến đấu hoặc đợt địch giả ở khu nghỉ.</li><li>Quay lại phòng đã dọn không sinh lại địch. Kết quả nhiệm vụ được ghi sau câu cuối, không ghi ngay khi bắt đầu thoại.</li></ul>
+<h3>Phần cần hoàn thiện tiếp</h3>
+<p>Asset cầu riêng, NPC dìu Block và nhánh đối thoại dựa trên việc Stranger giúp Block ở Chapter 0 chưa được hoàn thiện. Việc đặt tên Ghost đã có trong thoại; chưa coi đó là cơ chế mở khóa nhân vật Ghost trong roster. Không dùng mô tả cốt truyện để khẳng định các tính năng này đã chạy.</p>
+
+<h3>Phạm vi Timeline của đoạn</h3><div class="table-wrap"><table><thead><tr><th>Phòng</th><th>Thực thi</th></tr></thead><tbody>
+<tr><td><code>ch1_marseille_bridge</code></td><td>Timeline: 7 cue / 3 actor</td></tr>
+<tr><td><code>ch1_deep_base</code></td><td>Không có encounter; giữ hội thoại, tương tác và cửa</td></tr>
+</tbody></table></div><p>Timeline điều khiển spawn và nhịp chiến đấu. Typewriter giữ hội thoại nhấn tiếp; ChapterOneProgress giữ trạng thái nhiệm vụ/cửa/checkpoint. Không chạy đồng thời bộ spawn cũ. Dữ liệu có thể chỉnh trong LF2 → Stage Timeline.</p>
+<details><summary>Ảnh tham chiếu bố trí (không phải ảnh chứng minh runtime)</summary><figure class="markdown-image"><img src="imgs/Stage1/chap1/In_thecity_Fix.png" alt="Cầu vào Marseille — đường từ bến đổ bộ về căn cứ Deep." loading="lazy"><figcaption>Cầu vào Marseille — đường từ bến đổ bộ về căn cứ Deep.</figcaption></figure></details>
+<section class="chapter-dialogue"><h3>Toàn bộ hội thoại đang gắn trong bản Unity</h3><p>Các mục dưới được xuất từ Typewriter. Điều kiện và tên điểm tương tác dành cho việc review, không phải lời nhân vật nói.</p>
+<details><summary>Cầu vào Marseille — ch1_marseille_bridge</summary>
+<p>Đánh mở chốt nhỏ, đưa Block từ bến đổ bộ về căn cứ Deep.</p>
+<h4>enter — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Mark:</strong> Qua cầu này là ngõ về căn cứ. Block, ở sau vật che với chúng tôi.</li>
+<li><strong>Băng đua xe:</strong> Deep! Tiền thưởng Bastonne vừa tới. Giữ chúng lại!</li>
+<li><strong>Deep:</strong> Mở đường qua chốt. Không để họ tới gần người bị thương.</li>
+</ul>
+<h4>clear — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Mark:</strong> Chốt đã tan, nhưng chúng kịp báo cho đồng bọn.</li>
+<li><strong>Deep:</strong> Đưa Block về điều trị trước. Tính đường ra khỏi thành phố sau.</li>
+</ul>
+</details>
+<details><summary>Căn cứ Deep — ch1_deep_base</summary>
+<p>Đưa Block nghỉ, xem sổ Bastonne cùng Mark rồi tới Armorlite.</p>
+<ul>
+<li><strong>Nghe Mark · chuẩn bị lên đường</strong>: cần None; nhận Briefed; hết địch: False.</li>
+<li><strong>Block · Hỏi thăm</strong>: cần None; nhận None; hết địch: False.</li>
+<li><strong>Solei · Nói chuyện</strong>: cần None; nhận None; hết địch: False.</li>
+<li><strong>Tulas · Nói chuyện</strong>: cần None; nhận None; hết địch: False.</li>
+</ul>
+<h4>enter — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Block:</strong> Băng đã thay rồi. Tôi đỡ chóng mặt hơn nhiều.</li>
+<li><strong>Deep:</strong> Cứ nghỉ. Qua được cây cầu không có nghĩa là phải đứng canh ngay.</li>
+<li><strong>Mark:</strong> Tôi đã đặt sổ Bastonne lên bàn. Cùng xem trước khi quyết định đường đi.</li>
+</ul>
+<h4>briefing — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Mark:</strong> Sổ ghi tù nhân bị chuyển ra biển. Không có tọa độ trạm, cũng chưa nói họ làm gì ở đó.</li>
+<li><strong>Deep:</strong> Giữ cả sổ lẫn nhân chứng ở đây thì họ sẽ tìm tới. Ta cần ra khỏi Marseille.</li>
+<li><strong>Mark:</strong> Jacques đang nhờ người chuẩn bị thuyền. Tới Armorlite nhận đường đi và giờ hẹn.</li>
+<li><strong>Block:</strong> Còn người đi cùng chúng ta thì sao? Anh ấy cũng cần một chỗ nghỉ.</li>
+<li><strong>Deep:</strong> Anh chưa muốn nói tên cũng được. Chúng tôi gọi anh là Ghost nhé?</li>
+<li><strong>Ghost:</strong> ...Ghost. Tôi nhớ được.</li>
+<li><strong>Solei:</strong> Block đã được điều trị. Kiểm tra đồ, nghỉ đủ rồi hãy lên đường.</li>
+</ul>
+<h4>block — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Deep:</strong> Vết thương thế nào?</li>
+<li><strong>Block:</strong> Đã cầm máu. Cảm ơn vì không bỏ tôi lại.</li>
+<li><strong>Deep:</strong> Nếu mệt cứ nói. Chúng ta có thời gian nghỉ trước cuộc hẹn.</li>
+</ul>
+<h4>mark — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Mark:</strong> Người lo thuyền là người tôi tin. Nhưng giờ hẹn và đường đi phải hỏi Jacques.</li>
+</ul>
+<h4>solei — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Solei:</strong> Có thể tập gọi đồng đội theo, giữ một điểm rồi gọi lại ở sân. Khi nào sẵn sàng thì đi, không phải thi qua bài tập đâu.</li>
+</ul>
+<h4>tulas — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Tulas:</strong> Không cần trông vào riêng kỹ năng của tôi. Chúng ta phải tìm được đường cho cả đội.</li>
+</ul>
+</details>
+</section>

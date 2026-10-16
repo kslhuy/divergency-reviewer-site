@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divergency - Báº§y NgÆ°á»i Hoa (Les Ã‰clos) Animation Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070a12;
+      --panel: #0d1424;
+      --card: #141f36;
+      --accent-purple: #c084fc;
+      --accent-red: #ef4444;
+      --accent-cyan: #00f0ff;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+    }
+    .header {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .header h1 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge {
+      background: rgba(192, 132, 252, 0.2);
+      border: 1px solid var(--accent-purple);
+      color: var(--accent-purple);
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+    .char-nav {
+      display: flex;
+      gap: 10px;
+    }
+    .nav-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-btn.active {
+      background: var(--accent-purple);
+      color: #000;
+      border-color: var(--accent-purple);
+      box-shadow: 0 0 15px rgba(192, 132, 252, 0.4);
+    }
+    .studio-grid {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: 480px 1fr;
+      gap: 24px;
+    }
+    .preview-stage {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    .canvas-wrap {
+      position: relative;
+      width: 384px;
+      height: 384px;
+      background: repeating-linear-gradient(45deg, #090e1a 0px, #090e1a 16px, #0c1322 16px, #0c1322 32px);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      image-rendering: pixelated;
+    }
+    canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      image-rendering: pixelated;
+    }
+    .stage-overlays {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .grid-ground {
+      position: absolute;
+      left: 0; right: 0;
+      top: calc(112 / 128 * 100%);
+      height: 1px;
+      background: rgba(0, 240, 255, 0.4);
+    }
+    .controls {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .scrubber-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .slider {
+      flex: 1;
+      height: 6px;
+      background: #1e293b;
+      border-radius: 3px;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent-purple);
+      cursor: grab;
+      box-shadow: 0 0 10px var(--accent-purple);
+    }
+    .btn-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn:hover { background: rgba(255, 255, 255, 0.1); }
+    .btn.active {
+      background: var(--accent-cyan);
+      color: #000;
+      border-color: var(--accent-cyan);
+    }
+    .details-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .clip-selector {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .clip-btn {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 10px;
+      border-radius: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .clip-btn:hover { color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+    .clip-btn.active {
+      background: rgba(192, 132, 252, 0.15);
+      border-color: var(--accent-purple);
+      color: var(--accent-purple);
+    }
+    .info-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .info-card h3 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .info-card p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+    .code-box {
+      background: #020617;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #38bdf8;
+      overflow-x: auto;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title-wrap">
+      <h1>Báº§y NgÆ°á»i Hoa (Les Ã‰clos) <span class="badge">LF2 Studio 30 FPS</span></h1>
+    </div>
+    <div class="char-nav">
+      <button class="nav-btn active" id="btnFlower">ðŸŒ¸ QuÃ¡i Hoa Nhá»¥y (Mutan Flower)</button>
+      <button class="nav-btn" id="btnLeaf">ðŸƒ SÃ¡t Thá»§ LÃ¡ Gai (Mutan Leaf)</button>
+    </div>
+  </div>
+
+  <div class="studio-grid">
+    <!-- Left: Preview Canvas & Playback -->
+    <div class="preview-stage">
+      <div class="canvas-wrap">
+        <canvas id="viewCanvas" width="128" height="128"></canvas>
+        <div class="stage-overlays">
+          <div class="grid-ground"></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="scrubber-row">
+          <input type="range" min="0" max="5" value="0" class="slider" id="frameSlider">
+          <span style="font-family:'JetBrains Mono'; font-size:13px; min-width:60px;" id="frameDisplay">F: 0/5</span>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn" id="btnPlayPause">â¸ Pause</button>
+          <button class="btn" id="btnStep">â­ Step</button>
+          <button class="btn active" id="btnLayerComp">ðŸŒŸ Composite</button>
+          <button class="btn" id="btnLayerBody">ðŸ§ Body</button>
+          <button class="btn" id="btnLayerFX">ðŸ©¸ FX Only</button>
+          <button class="btn" id="btnBoxes">ðŸŽ¯ Hitboxes: ON</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Clip Selection & LF2 Data -->
+    <div class="details-panel">
+      <div class="clip-selector" id="clipContainer"></div>
+
+      <div class="info-card">
+        <h3 id="clipTitle">CLIP: ATTACK_REACH <span id="clipWaitMeta">Wait: 17 ticks (566ms)</span></h3>
+        <p id="clipDesc">
+          <strong>Ã Ä‘á»“ tÆ° tháº¿ & ÄÃ²n Ä‘Ã¡nh cá»‘t truyá»‡n:</strong> ThÃ¢n hÃ¬nh gÃ¹ lao vá» phÃ­a trÆ°á»›c, tay vÆ°Æ¡n dÃ i Ä‘áº­p máº¡nh xuá»‘ng sÃ n, Ä‘Ã³a hoa huyáº¿t nhá»¥c trÃªn lÆ°ng co bÃ³p rá»‰ dá»‹ch bÃ o tá»­ lÃ m mÃ¹ máº¯t Ä‘á»‘i thá»§.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>LF2 DATA FRAME CODE (30 FPS EXACT)</h3>
+        <div class="code-box" id="codeDisplay">Loading frame data...</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const flowerData = {"frames": [{"filename": "flower_idle_0", "frame": {"x": 0, "y": 0, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_idle_1", "frame": {"x": 128, "y": 0, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_idle_2", "frame": {"x": 256, "y": 0, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_idle_3", "frame": {"x": 384, "y": 0, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_idle_4", "frame": {"x": 512, "y": 0, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_idle_5", "frame": {"x": 640, "y": 0, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_walk_0", "frame": {"x": 0, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_walk_1", "frame": {"x": 128, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_walk_2", "frame": {"x": 256, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_walk_3", "frame": {"x": 384, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_walk_4", "frame": {"x": 512, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_walk_5", "frame": {"x": 640, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_attack_reach_0", "frame": {"x": 0, "y": 256, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_attack_reach_1", "frame": {"x": 128, "y": 256, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_attack_reach_2", "frame": {"x": 256, "y": 256, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_attack_reach_3", "frame": {"x": 384, "y": 256, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_attack_reach_4", "frame": {"x": 512, "y": 256, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_attack_reach_5", "frame": {"x": 640, "y": 256, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_spore_burst_0", "frame": {"x": 0, "y": 384, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_spore_burst_1", "frame": {"x": 128, "y": 384, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_spore_burst_2", "frame": {"x": 256, "y": 384, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_spore_burst_3", "frame": {"x": 384, "y": 384, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_spore_burst_4", "frame": {"x": 512, "y": 384, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_spore_burst_5", "frame": {"x": 640, "y": 384, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": [75, 42, 45, 40]}, {"filename": "flower_vine_entangle_0", "frame": {"x": 0, "y": 512, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_vine_entangle_1", "frame": {"x": 128, "y": 512, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_vine_entangle_2", "frame": {"x": 256, "y": 512, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_vine_entangle_3", "frame": {"x": 384, "y": 512, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_vine_entangle_4", "frame": {"x": 512, "y": 512, "w": 128, "h": 128}, "duration": 166, "wait": 5, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_vine_entangle_5", "frame": {"x": 640, "y": 512, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_sacrifice_clasp_0", "frame": {"x": 0, "y": 640, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_sacrifice_clasp_1", "frame": {"x": 128, "y": 640, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_sacrifice_clasp_2", "frame": {"x": 256, "y": 640, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_sacrifice_clasp_3", "frame": {"x": 384, "y": 640, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_sacrifice_clasp_4", "frame": {"x": 512, "y": 640, "w": 128, "h": 128}, "duration": 200, "wait": 6, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_sacrifice_clasp_5", "frame": {"x": 640, "y": 640, "w": 128, "h": 128}, "duration": 266, "wait": 8, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_hurt_0", "frame": {"x": 0, "y": 768, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_hurt_1", "frame": {"x": 128, "y": 768, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_hurt_2", "frame": {"x": 256, "y": 768, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_hurt_3", "frame": {"x": 384, "y": 768, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_hurt_4", "frame": {"x": 512, "y": 768, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_hurt_5", "frame": {"x": 640, "y": 768, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_knockdown_0", "frame": {"x": 0, "y": 896, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_knockdown_1", "frame": {"x": 128, "y": 896, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_knockdown_2", "frame": {"x": 256, "y": 896, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_knockdown_3", "frame": {"x": 384, "y": 896, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_knockdown_4", "frame": {"x": 512, "y": 896, "w": 128, "h": 128}, "duration": 200, "wait": 6, "bdy": [44, 38, 48, 74], "itr": []}, {"filename": "flower_knockdown_5", "frame": {"x": 640, "y": 896, "w": 128, "h": 128}, "duration": 300, "wait": 9, "bdy": [44, 38, 48, 74], "itr": []}], "meta": {"size": {"w": 768, "h": 1024}, "frameTags": [{"name": "IDLE", "from": 0, "to": 5, "direction": "forward"}, {"name": "WALK", "from": 6, "to": 11, "direction": "forward"}, {"name": "ATTACK_REACH", "from": 12, "to": 17, "direction": "forward"}, {"name": "SPORE_BURST", "from": 18, "to": 23, "direction": "forward"}, {"name": "VINE_ENTANGLE", "from": 24, "to": 29, "direction": "forward"}, {"name": "SACRIFICE_CLASP", "from": 30, "to": 35, "direction": "forward"}, {"name": "HURT", "from": 36, "to": 41, "direction": "forward"}, {"name": "KNOCKDOWN", "from": 42, "to": 47, "direction": "forward"}]}};
+    const leafData = {"frames": [{"filename": "leaf_idle_0", "frame": {"x": 0, "y": 0, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 53, 32, 58], "itr": []}, {"filename": "leaf_idle_1", "frame": {"x": 128, "y": 0, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [48, 54, 32, 58], "itr": []}, {"filename": "leaf_idle_2", "frame": {"x": 256, "y": 0, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [48, 54, 32, 58], "itr": []}, {"filename": "leaf_idle_3", "frame": {"x": 384, "y": 0, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 53, 32, 58], "itr": []}, {"filename": "leaf_idle_4", "frame": {"x": 512, "y": 0, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 52, 32, 58], "itr": []}, {"filename": "leaf_idle_5", "frame": {"x": 640, "y": 0, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [48, 52, 32, 58], "itr": []}, {"filename": "leaf_walk_0", "frame": {"x": 0, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 56, 32, 58], "itr": []}, {"filename": "leaf_walk_1", "frame": {"x": 128, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [51, 54, 32, 58], "itr": []}, {"filename": "leaf_walk_2", "frame": {"x": 256, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [51, 54, 32, 58], "itr": []}, {"filename": "leaf_walk_3", "frame": {"x": 384, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 56, 32, 58], "itr": []}, {"filename": "leaf_walk_4", "frame": {"x": 512, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [45, 54, 32, 58], "itr": []}, {"filename": "leaf_walk_5", "frame": {"x": 640, "y": 128, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [45, 54, 32, 58], "itr": []}, {"filename": "leaf_attack_rake_0", "frame": {"x": 0, "y": 256, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [46, 53, 32, 58], "itr": [71, 58, 38, 35]}, {"filename": "leaf_attack_rake_1", "frame": {"x": 128, "y": 256, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [42, 51, 32, 58], "itr": [67, 56, 38, 35]}, {"filename": "leaf_attack_rake_2", "frame": {"x": 256, "y": 256, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [56, 55, 32, 58], "itr": [81, 60, 38, 35]}, {"filename": "leaf_attack_rake_3", "frame": {"x": 384, "y": 256, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [60, 57, 32, 58], "itr": [85, 62, 38, 35]}, {"filename": "leaf_attack_rake_4", "frame": {"x": 512, "y": 256, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [52, 55, 32, 58], "itr": [77, 60, 38, 35]}, {"filename": "leaf_attack_rake_5", "frame": {"x": 640, "y": 256, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 53, 32, 58], "itr": [73, 58, 38, 35]}, {"filename": "leaf_pounce_shred_0", "frame": {"x": 0, "y": 384, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [48, 53, 32, 58], "itr": [73, 58, 38, 35]}, {"filename": "leaf_pounce_shred_1", "frame": {"x": 128, "y": 384, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [58, 37, 32, 58], "itr": [83, 42, 38, 35]}, {"filename": "leaf_pounce_shred_2", "frame": {"x": 256, "y": 384, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [68, 37, 32, 58], "itr": [93, 42, 38, 35]}, {"filename": "leaf_pounce_shred_3", "frame": {"x": 384, "y": 384, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [72, 47, 32, 58], "itr": [97, 52, 38, 35]}, {"filename": "leaf_pounce_shred_4", "frame": {"x": 512, "y": 384, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [68, 53, 32, 58], "itr": [93, 58, 38, 35]}, {"filename": "leaf_pounce_shred_5", "frame": {"x": 640, "y": 384, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [60, 53, 32, 58], "itr": [85, 58, 38, 35]}, {"filename": "leaf_thorn_eruption_0", "frame": {"x": 0, "y": 512, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 53, 32, 58], "itr": []}, {"filename": "leaf_thorn_eruption_1", "frame": {"x": 128, "y": 512, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 59, 32, 58], "itr": []}, {"filename": "leaf_thorn_eruption_2", "frame": {"x": 256, "y": 512, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [48, 59, 32, 58], "itr": []}, {"filename": "leaf_thorn_eruption_3", "frame": {"x": 384, "y": 512, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 53, 32, 58], "itr": []}, {"filename": "leaf_thorn_eruption_4", "frame": {"x": 512, "y": 512, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [48, 53, 32, 58], "itr": []}, {"filename": "leaf_thorn_eruption_5", "frame": {"x": 640, "y": 512, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [48, 53, 32, 58], "itr": []}, {"filename": "leaf_jump_0", "frame": {"x": 0, "y": 640, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 53, 32, 58], "itr": []}, {"filename": "leaf_jump_1", "frame": {"x": 128, "y": 640, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [48, 57, 32, 58], "itr": []}, {"filename": "leaf_jump_2", "frame": {"x": 256, "y": 640, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 31, 32, 58], "itr": []}, {"filename": "leaf_jump_3", "frame": {"x": 384, "y": 640, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 31, 32, 58], "itr": []}, {"filename": "leaf_jump_4", "frame": {"x": 512, "y": 640, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 45, 32, 58], "itr": []}, {"filename": "leaf_jump_5", "frame": {"x": 640, "y": 640, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [48, 55, 32, 58], "itr": []}, {"filename": "leaf_hurt_0", "frame": {"x": 0, "y": 768, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [44, 51, 32, 58], "itr": []}, {"filename": "leaf_hurt_1", "frame": {"x": 128, "y": 768, "w": 128, "h": 128}, "duration": 66, "wait": 2, "bdy": [40, 51, 32, 58], "itr": []}, {"filename": "leaf_hurt_2", "frame": {"x": 256, "y": 768, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [36, 53, 32, 58], "itr": []}, {"filename": "leaf_hurt_3", "frame": {"x": 384, "y": 768, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [36, 53, 32, 58], "itr": []}, {"filename": "leaf_hurt_4", "frame": {"x": 512, "y": 768, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [40, 53, 32, 58], "itr": []}, {"filename": "leaf_hurt_5", "frame": {"x": 640, "y": 768, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [44, 53, 32, 58], "itr": []}, {"filename": "leaf_knockdown_0", "frame": {"x": 0, "y": 896, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [48, 53, 32, 58], "itr": []}, {"filename": "leaf_knockdown_1", "frame": {"x": 128, "y": 896, "w": 128, "h": 128}, "duration": 100, "wait": 3, "bdy": [42, 50, 32, 58], "itr": []}, {"filename": "leaf_knockdown_2", "frame": {"x": 256, "y": 896, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [36, 47, 32, 58], "itr": []}, {"filename": "leaf_knockdown_3", "frame": {"x": 384, "y": 896, "w": 128, "h": 128}, "duration": 133, "wait": 4, "bdy": [30, 61, 32, 58], "itr": []}, {"filename": "leaf_knockdown_4", "frame": {"x": 512, "y": 896, "w": 128, "h": 128}, "duration": 200, "wait": 6, "bdy": [24, 61, 32, 58], "itr": []}, {"filename": "leaf_knockdown_5", "frame": {"x": 640, "y": 896, "w": 128, "h": 128}, "duration": 266, "wait": 8, "bdy": [18, 61, 32, 58], "itr": []}], "meta": {"size": {"w": 768, "h": 1024}, "frameTags": [{"name": "IDLE", "from": 0, "to": 5, "direction": "forward"}, {"name": "WALK", "from": 6, "to": 11, "direction": "forward"}, {"name": "ATTACK_RAKE", "from": 12, "to": 17, "direction": "forward"}, {"name": "POUNCE_SHRED", "from": 18, "to": 23, "direction": "forward"}, {"name": "THORN_ERUPTION", "from": 24, "to": 29, "direction": "forward"}, {"name": "JUMP", "from": 30, "to": 35, "direction": "forward"}, {"name": "HURT", "from": 36, "to": 41, "direction": "forward"}, {"name": "KNOCKDOWN", "from": 42, "to": 47, "direction": "forward"}]}};
+
+    let currentChar = 'flower';
+    let currentClip = 'IDLE';
+    let currentFrameIdx = 0;
+    let isPlaying = true;
+    let layerMode = 'comp'; // 'comp', 'body', 'fx'
+    let showBoxes = true;
+
+    const imgFlowerComp = new Image(); imgFlowerComp.src = 'mutan_pack_suite/spritesheets/flower_composite.png';
+    const imgFlowerBody = new Image(); imgFlowerBody.src = 'mutan_pack_suite/spritesheets/flower_body.png';
+    const imgFlowerFX = new Image(); imgFlowerFX.src = 'mutan_pack_suite/spritesheets/flower_fx.png';
+
+    const imgLeafComp = new Image(); imgLeafComp.src = 'mutan_pack_suite/spritesheets/leaf_composite.png';
+    const imgLeafBody = new Image(); imgLeafBody.src = 'mutan_pack_suite/spritesheets/leaf_body.png';
+    const imgLeafFX = new Image(); imgLeafFX.src = 'mutan_pack_suite/spritesheets/leaf_fx.png';
+
+    const canvas = document.getElementById('viewCanvas');
+    const ctx = canvas.getContext('2d');
+    const slider = document.getElementById('frameSlider');
+    const frameDisplay = document.getElementById('frameDisplay');
+    const codeDisplay = document.getElementById('codeDisplay');
+    const clipContainer = document.getElementById('clipContainer');
+    const clipTitle = document.getElementById('clipTitle');
+    const clipWaitMeta = document.getElementById('clipWaitMeta');
+    const clipDesc = document.getElementById('clipDesc');
+
+    const descriptions = {
+      'flower': {
+        'IDLE': 'Äá»©ng thá»Ÿ dá»‘c giá»¯a báº¿n cáº£ng Ä‘Ãªm giÃ´ng bÃ£o, thÃ¢n hÃ¬nh gÃ¹ pháº­p phá»“ng, Ä‘Ã³a hoa nhá»¥y co bÃ³p nháº¹ nhÆ° má»™t buá»“ng tim há»Ÿ.',
+        'WALK': 'LÃª bÆ°á»›c láº·c lÃ¨ trÃªn ná»n Ä‘Ã¡ Æ°á»›t, hai tay dÃ i quÃ©t sÃ¡t máº·t Ä‘áº¥t, sáºµn sÃ ng lao vÃ o káº» thÃ¹.',
+        'ATTACK_REACH': 'ÄÃ²n cÃ o sáº¥p máº·t: VÆ°Æ¡n toÃ n bá»™ sáº£i tay dÃ i Ä‘áº­p chá»™p tá»›i trÆ°á»›c, xÃ© rÃ¡ch khiÃªn báº¡o Ä‘á»™ng cá»§a cáº£nh sÃ¡t.',
+        'SPORE_BURST': 'ChiÃªu thá»©c [D > A]: Bung nhá»¥y hoa ná»• tung Ä‘Ã¡m mÃ¢y bÃ o tá»­ tÃ­m Ä‘á» cay xÃ¨, lÃ m cháº­m vÃ  gÃ¢y mÃ¹ káº» thÃ¹ diá»‡n rá»™ng.',
+        'VINE_ENTANGLE': 'ChiÃªu thá»©c [D v A]: Ná»‡n tay xuá»‘ng sÃ n báº¿n cáº£ng, rá»… cÃ¢y gai nhá»n má»c xuyÃªn tá»« káº½ Ä‘Ã¡ trÃ³i cháº·t chÃ¢n Ä‘á»‘i phÆ°Æ¡ng trong 4s.',
+        'SACRIFICE_CLASP': 'ÄÃ²n cáº£m tá»­ [Run + A]: Lao vÃ o Ã´m cháº·t Ä‘á»‘i phÆ°Æ¡ng kÃ­ch ná»• Ä‘Ã³a hoa, háº¥t vÄƒng cáº£ hai rÆ¡i xuá»‘ng biá»ƒn (Ring-Out)!',
+        'HURT': 'ThÃ¢n thá»ƒ giáº­t náº£y ra sau khi trÃºng Ä‘áº¡n, Ä‘Ã³a hoa rÃ­t lÃªn nhá»¯ng tiáº¿ng the thÃ© Ä‘e dá»a.',
+        'KNOCKDOWN': 'TrÃºng Ä‘Ã²n náº·ng ngÃ£ báº­t ngá»­a xuá»‘ng máº·t sÃ n loang dáº§u, dá»‹ch bÃ o tá»­ xÃ¬ ra ngÃ¹n ngá»¥t.'
+      },
+      'leaf': {
+        'IDLE': 'Khom lÆ°ng nhÃºn nháº£y nhá»‹p nhÃ ng, mÃ³ng vuá»‘t rá»… cÃ¢y Ä‘á» rá»±c thÃµng xuá»‘ng rÃ¬nh má»“i.',
+        'WALK': 'LÆ°á»›t Ä‘i thoÄƒn thoáº¯t trÃªn Ä‘áº§u ngÃ³n chÃ¢n, trÆ°á»n sÃ¡t cÃ¡c gÃ³c container nÃ© Ä‘Ã¨n pha.',
+        'ATTACK_RAKE': 'Combo [A > A > A]: 3 nhá»‹p cÃ o xÃ© liÃªn tiáº¿p báº±ng mÃ³ng vuá»‘t Ä‘á», ráº¡ch nÃ¡t giÃ¡p sáº¯t vÃ  gÃ¢y hiá»‡u á»©ng Bleed.',
+        'POUNCE_SHRED': 'ChiÃªu thá»©c [D > A]: Báº­t nháº£y táº§m tháº¥p tá»« container vá»“ ngá»±c má»¥c tiÃªu cÃ o 3 nhÃ¡t chá»›p nhoÃ¡ng rá»“i lá»™n ngÆ°á»£c ra sau.',
+        'THORN_ERUPTION': 'ChiÃªu thá»©c [D v A]: Cáº¯m mÃ³ng vuá»‘t xuá»‘ng cáº§u tÃ u, cá»c gá»— gai nhá»n Ä‘Ã¢m xuyÃªn tá»« dÆ°á»›i Ä‘áº¥t lÃªn háº¥t tung káº» Ä‘á»‹ch.',
+        'JUMP': 'Báº­t nháº£y nháº¹ nhÃ ng lÃªn cao vá»›i sáº£i chÃ¢n dÃ i quáº¥n váº£i báº¥t Ä‘á»‘i xá»©ng.',
+        'HURT': 'ThÃ¢n gá»— máº£nh kháº£nh giáº­t lÃ¹i nÃ© trÃ¡nh sÃ¡t thÆ°Æ¡ng tiáº¿p theo.',
+        'KNOCKDOWN': 'Bá»‹ háº¥t vÄƒng xoay trÃ²n trÃªn khÃ´ng rá»“i tiáº¿p Ä‘áº¥t báº±ng lá»›p lÃ¡ gai bá»c kÃ­n thÃ¢n.'
+      }
+    };
+
+    function getActiveData() {
+      return currentChar === 'flower' ? flowerData : leafData;
+    }
+
+    function getActiveImage() {
+      if (currentChar === 'flower') {
+        return layerMode === 'comp' ? imgFlowerComp : (layerMode === 'body' ? imgFlowerBody : imgFlowerFX);
+      } else {
+        return layerMode === 'comp' ? imgLeafComp : (layerMode === 'body' ? imgLeafBody : imgLeafFX);
+      }
+    }
+
+    function renderClipButtons() {
+      clipContainer.innerHTML = '';
+      const data = getActiveData();
+      data.meta.frameTags.forEach(tag => {
+        const btn = document.createElement('div');
+        btn.className = `clip-btn ${tag.name === currentClip ? 'active' : ''}`;
+        btn.innerText = tag.name;
+        btn.onclick = () => {
+          currentClip = tag.name;
+          currentFrameIdx = 0;
+          document.querySelectorAll('.clip-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          updateFrameRange();
+          updateInfo();
+        };
+        clipContainer.appendChild(btn);
+      });
+    }
+
+    function getClipFrames() {
+      const data = getActiveData();
+      const tag = data.meta.frameTags.find(t => t.name === currentClip);
+      if (!tag) return [];
+      return data.frames.slice(tag.from, tag.to + 1);
+    }
+
+    function updateFrameRange() {
+      const frames = getClipFrames();
+      slider.max = frames.length - 1;
+      slider.value = currentFrameIdx;
+      frameDisplay.innerText = `F: ${currentFrameIdx + 1}/${frames.length}`;
+    }
+
+    function updateInfo() {
+      const frames = getClipFrames();
+      const totalWait = frames.reduce((sum, f) => sum + (f.wait || 3), 0);
+      clipTitle.innerHTML = `CLIP: ${currentClip} <span>${totalWait} ticks (${Math.round(totalWait * 33.33)}ms)</span>`;
+      clipDesc.innerText = descriptions[currentChar][currentClip] || 'Hoáº¡t áº£nh chiáº¿n Ä‘áº¥u chuáº©n hÃ³a LF2.';
+
+      if (frames[currentFrameIdx]) {
+        const f = frames[currentFrameIdx];
+        const stateId = currentClip.includes('ATTACK') || currentClip.includes('SPORE') || currentClip.includes('POUNCE') ? 3 : (currentClip === 'WALK' ? 1 : 0);
+        codeDisplay.innerText = `<frame> ${f.filename}
+   state: ${stateId}   wait: ${f.wait}   next: ${currentFrameIdx < frames.length - 1 ? currentFrameIdx + 1 : 0}   dvx: 0   dvy: 0
+   hit_a: 0   hit_d: 0   hit_j: 0
+   bdy:
+      x: ${f.bdy[0]}  y: ${f.bdy[1]}  w: ${f.bdy[2]}  h: ${f.bdy[3]}
+   itr:
+      ${f.itr.length ? `kind: 0  x: ${f.itr[0]}  y: ${f.itr[1]}  w: ${f.itr[2]}  h: ${f.itr[3]}  dvx: 6  dvy: -3  fall: 40  bdefend: 15` : '# KhÃ´ng cÃ³ há»™p va cháº¡m sÃ¡t thÆ°Æ¡ng'}
+<frame_end>`;
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, 128, 128);
+      const frames = getClipFrames();
+      if (!frames.length) return;
+
+      const f = frames[currentFrameIdx];
+      const img = getActiveImage();
+
+      if (img.complete && img.naturalWidth !== 0) {
+        ctx.drawImage(img, f.frame.x, f.frame.y, 128, 128, 0, 0, 128, 128);
+      }
+
+      if (showBoxes) {
+        if (f.bdy && f.bdy.length) {
+          ctx.strokeStyle = '#00f0ff';
+          ctx.lineWidth = 1;
+          ctx.strokeRect(f.bdy[0], f.bdy[1], f.bdy[2], f.bdy[3]);
+        }
+        if (f.itr && f.itr.length) {
+          ctx.strokeStyle = '#ef4444';
+          ctx.lineWidth = 1.5;
+          ctx.strokeRect(f.itr[0], f.itr[1], f.itr[2], f.itr[3]);
+        }
+      }
+    }
+
+    // Animation loop with LF2 wait timing accumulator
+    let lastTime = performance.now();
+    let accumulatedTime = 0;
+
+    function loop(now) {
+      const dt = now - lastTime;
+      lastTime = now;
+
+      if (isPlaying) {
+        accumulatedTime += dt;
+        const frames = getClipFrames();
+        if (frames.length) {
+          const currentDuration = frames[currentFrameIdx].duration;
+          if (accumulatedTime >= currentDuration) {
+            accumulatedTime -= currentDuration;
+            currentFrameIdx = (currentFrameIdx + 1) % frames.length;
+            slider.value = currentFrameIdx;
+            frameDisplay.innerText = `F: ${currentFrameIdx + 1}/${frames.length}`;
+            updateInfo();
+          }
+        }
+      }
+
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    // UI Event Handlers
+    document.getElementById('btnFlower').onclick = () => {
+      currentChar = 'flower';
+      currentClip = 'IDLE';
+      currentFrameIdx = 0;
+      document.getElementById('btnFlower').classList.add('active');
+      document.getElementById('btnLeaf').classList.remove('active');
+      renderClipButtons();
+      updateFrameRange();
+      updateInfo();
+    };
+
+    document.getElementById('btnLeaf').onclick = () => {
+      currentChar = 'leaf';
+      currentClip = 'IDLE';
+      currentFrameIdx = 0;
+      document.getElementById('btnLeaf').classList.add('active');
+      document.getElementById('btnFlower').classList.remove('active');
+      renderClipButtons();
+      updateFrameRange();
+      updateInfo();
+    };
+
+    document.getElementById('btnPlayPause').onclick = (e) => {
+      isPlaying = !isPlaying;
+      e.target.innerText = isPlaying ? 'â¸ Pause' : 'â–¶ Play';
+    };
+
+    document.getElementById('btnStep').onclick = () => {
+      isPlaying = false;
+      document.getElementById('btnPlayPause').innerText = 'â–¶ Play';
+      const frames = getClipFrames();
+      currentFrameIdx = (currentFrameIdx + 1) % frames.length;
+      slider.value = currentFrameIdx;
+      frameDisplay.innerText = `F: ${currentFrameIdx + 1}/${frames.length}`;
+      updateInfo();
+    };
+
+    slider.oninput = (e) => {
+      isPlaying = false;
+      document.getElementById('btnPlayPause').innerText = 'â–¶ Play';
+      currentFrameIdx = parseInt(e.target.value);
+      frameDisplay.innerText = `F: ${currentFrameIdx + 1}/${getClipFrames().length}`;
+      updateInfo();
+    };
+
+    function setLayerMode(mode, btnId) {
+      layerMode = mode;
+      ['btnLayerComp', 'btnLayerBody', 'btnLayerFX'].forEach(id => {
+        document.getElementById(id).classList.toggle('active', id === btnId);
+      });
+    }
+
+    document.getElementById('btnLayerComp').onclick = () => setLayerMode('comp', 'btnLayerComp');
+    document.getElementById('btnLayerBody').onclick = () => setLayerMode('body', 'btnLayerBody');
+    document.getElementById('btnLayerFX').onclick = () => setLayerMode('fx', 'btnLayerFX');
+
+    document.getElementById('btnBoxes').onclick = (e) => {
+      showBoxes = !showBoxes;
+      e.target.innerText = showBoxes ? 'ðŸŽ¯ Hitboxes: ON' : 'ðŸŽ¯ Hitboxes: OFF';
+      e.target.classList.toggle('active', showBoxes);
+    };
+
+    // Init
+    renderClipButtons();
+    updateFrameRange();
+    updateInfo();
+    requestAnimationFrame(loop);
+  </script>
+</body>
+</html>
+

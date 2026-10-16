@@ -39,13 +39,32 @@ export function readContent(root, id) {
 export function writeContent(root, id, html) {
   const directory = path.join(root, 'content', id);
   mkdirSync(directory, { recursive: true });
+  const index = path.join(directory, 'index.json');
+  let existing = [];
+  if (existsSync(index)) {
+    try {
+      existing = JSON.parse(readFileSync(index, 'utf8'));
+    } catch {
+      existing = [];
+    }
+  }
   const chapters = splitChapters(html).map((chapter, index) => {
-    const digest = createHash('sha256').update(chapter.html).digest('hex').slice(0, 10);
-    const file = `${String(index + 1).padStart(2, '0')}-${slug(chapter.title)}-${digest}.html`;
+    let file;
+    const prefix = `${String(index + 1).padStart(2, '0')}-`;
+    if (existing[index]?.file && existing[index].file.startsWith(prefix)) {
+      file = existing[index].file;
+    } else {
+      const match = existing.find(e => e.file.startsWith(prefix) || slug(e.title) === slug(chapter.title));
+      if (match?.file) {
+        file = match.file;
+      } else {
+        const digest = createHash('sha256').update(chapter.html).digest('hex').slice(0, 10);
+        file = `${prefix}${slug(chapter.title)}-${digest}.html`;
+      }
+    }
     writeFileSync(path.join(directory, file), chapter.html, 'utf8');
     return { title: chapter.title, file };
   });
-  const index = path.join(directory, 'index.json');
   writeFileSync(index + '.pending', JSON.stringify(chapters, null, 2) + '\n', 'utf8');
   renameSync(index + '.pending', index);
 }

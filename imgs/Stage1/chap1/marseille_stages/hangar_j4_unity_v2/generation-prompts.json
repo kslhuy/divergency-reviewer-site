@@ -1,0 +1,161 @@
+{
+  "tool": "built-in image_gen",
+  "prompts": [
+    {
+      "name": "00_extended_clean_master",
+      "prompt": "Use case: precise-object-edit / panorama outpainting.\nEdit the supplied approved pixel-art Marseille Hangar J4 quay game background into a CLEAN EXTENDED BACKGROUND PLATE for later layer extraction. The reference is the center section, not just loose inspiration. Preserve its actual visual identity, dark fine pixel art, sunset palette, level quay geometry and side-on view.\nOutput one extremely wide horizontal panoramic strip, desired aspect ratio 6.375:1 (5484 x 860), three equal virtual screen-width sections: NEW LEFT EXTENSION | ORIGINAL CENTER | NEW RIGHT EXTENSION. No gutters, borders, labels or visible divisions. Keep the original camera zoom/object scale in the CENTER THIRD and extend the world one original screen width to each side, not a zoomed-out reimagining.\nCENTER: preserve recognizable Fort Saint-Jean across the bay, same sky red-orange/purple, same sea, same straight flat cracked concrete pier. REMOVE all cars, ALL shipping containers, the wrecked boat AND smoke plume, the left-edge crane tower, loose crates/barrels, foreground bollards/chains, and all manhole covers. Reconstruct underlying scenery convincingly without any holes. These objects will be separate sprites. Preserve concrete cracks, occasional oil puddles and faded yellow ground lines, original horizontal rear quay at 54% image height and front quay face beginning at 88%. Sea horizon approximately 34% down; buildings above that.\nLEFT EXTENSION: uninterrupted continuation of the same wide cracked concrete quay, same ground plane, yellow markings and subdued oil stains; behind is more teal harbor and distant industrial Marseille quayside with small cranes and warehouses. Sky gets dusty purple toward left. No foreground objects blocking walkable floor.\nRIGHT EXTENSION: uninterrupted continuation of same quay, ground height, faint guide lines; bay behind opens toward low coastal hills and small distant port structures under warm sunset. Do not add another sun or duplicate Fort Saint-Jean.\nINVARIANTS: all three sections share perfectly continuous straight quay edges, waterline, pixel scale and lighting. Original sun appears only once in center third toward its right side. MuCEM absent. Floor spans bottom 46% of full image uniformly. No trucks, cars, containers, people, monsters, floating objects, text, interface or watermarks. No perspectival road vanishing into depth: this is a long horizontal side-scrolling brawler stage. No blur or glossy 3D, preserve crisp deliberate small pixel clusters. This is one continuous background, no collage."
+    },
+    {
+      "name": "left_clean",
+      "prompt": "Use case: panorama extension. Input image is the CENTER panel of a game stage. Produce ONLY a NEW ADJACENT panel, same canvas aspect ratio 2002:786 and same resolution, camera elevation, pixel scale and exposure. Match crisp dark detailed pixel art. Quay rear edge y=440/786; skyline/water horizon y=298/786; foreground quay face top y=688/786. Ground is broad cracked concrete with faint horizontal yellow guide markings and sparse dark oil puddles. Straight horizontal quay runs across the entire panel. Do not show any cars, containers, boats, smoke, manholes, people, crates, barrels or foreground cranes; those are independent sprites. No MuCEM, no labels, no text. Never replicate the central fort, sun, or central landmarks. This is one continuation image, not a triptych. All edges continue with sky, distant coast, water, concrete and the front quay wall at corresponding heights. Generate the LEFT extension: this image's RIGHT EDGE joins the reference LEFT EDGE. Continue the low industrial waterfront, small distant cranes and warehouses across the bay. Sky transitions gradually toward muted purple and subdued red at far left; sunset highlights come from offscreen right. Do not copy the center reference composition. Make genuinely new scenery: distant dockside sheds and a few small port cranes, behind the continuous empty foreground combat quay."
+    },
+    {
+      "name": "right_clean",
+      "prompt": "Use case: panorama extension. Input image is the CENTER panel of a game stage. Produce ONLY a NEW ADJACENT panel, same canvas aspect ratio 2002:786 and same resolution, camera elevation, pixel scale and exposure. Match crisp dark detailed pixel art. Quay rear edge y=440/786; skyline/water horizon y=298/786; foreground quay face top y=688/786. Ground is broad cracked concrete with faint horizontal yellow guide markings and sparse dark oil puddles. Straight horizontal quay runs across the entire panel. Do not show any cars, containers, boats, smoke, manholes, people, crates, barrels or foreground cranes; those are independent sprites. No MuCEM, no labels, no text. Never replicate the central fort, sun, or central landmarks. This is one continuation image, not a triptych. All edges continue with sky, distant coast, water, concrete and the front quay wall at corresponding heights. Generate the RIGHT extension: this image's LEFT EDGE joins the reference RIGHT EDGE. Continue the low coastal hills and distant waterfront structures, with more open teal water toward right. Orange-pink sky transitions subtly to dusty purple, lit by the sunset offscreen left; do not show another sun. Make genuinely new scenery with low distant industrial piers and hillside silhouettes. Keep the foreground combat quay continuous, empty and level."
+    },
+    {
+      "name": "center_L0_sky_far",
+      "prompt": "Use case: background-extraction. Extract one production-ready parallax layer from the reference, preserving exact scene artwork, camera registration, palette and pixel scale. Output full 2002 x 786 canvas, same aspect and composition as reference. DO NOT zoom, crop, rearrange or rescale the extracted objects. Use real transparent alpha for removed regions, NOT painted checkerboard, NOT black or white background. Crisp pixel edges. No new elements. Keep only the red-purple sunset SKY, hills, distant city/cranes and Fort Saint-Jean silhouette, including the distant coast down to its waterline around y=300. REMOVE all sea/water pixels, concrete quay, barriers, floor and foreground wall. Every pixel below the far shoreline must be transparent. Preserve the upper sky fully opaque to all top/left/right canvas edges. The upper sky and distant city are ONE layer. No floating islands of concrete below."
+    },
+    {
+      "name": "center_L1_sea",
+      "prompt": "Use case: background-extraction. Extract one production-ready parallax layer from the reference, preserving exact scene artwork, camera registration, palette and pixel scale. Output full 2002 x 786 canvas, same aspect and composition as reference. DO NOT zoom, crop, rearrange or rescale the extracted objects. Use real transparent alpha for removed regions, NOT painted checkerboard, NOT black or white background. Crisp pixel edges. No new elements. Keep ONLY the seawater band between the distant coastline around y=298 and the foreground quay around y=440. REMOVE sky, hills, ALL city/buildings, fort, foreground quay barriers, ALL concrete floor and front wall. Sky region top 37% transparent; bottom floor region below y=442 transparent. Fill in a small amount of sea hidden behind quay barriers so this water band has clean straight horizontal top and bottom boundaries and extends edge-to-edge. The water itself opaque with dark teal waves and orange sunset highlights. DO NOT include any silhouette of skyline or buildings. Empty sea strip only, no boats."
+    },
+    {
+      "name": "center_L2_playfield",
+      "prompt": "Use case: background-extraction. Extract one production-ready parallax layer from the reference, preserving exact scene artwork, camera registration, palette and pixel scale. Output full 2002 x 786 canvas, same aspect and composition as reference. DO NOT zoom, crop, rearrange or rescale the extracted objects. Use real transparent alpha for removed regions, NOT painted checkerboard, NOT black or white background. Crisp pixel edges. No new elements. Keep ONLY the foreground concrete PLAYFIELD and its front vertical quay wall: all cracked concrete, yellow paint, oil puddles, rear low concrete barriers and the dark front wall. These occupy approximately y=420 through bottom=786 in original. REMOVE the entire sky, city, fort, hills and ALL water. Everything above the true silhouette of the rear concrete barriers must be genuinely transparent. Keep original irregular rear barrier contour and completely fill concrete to left/right/bottom edges. No cars, boats, containers or manholes."
+    },
+    {
+      "name": "left_L0_sky_far",
+      "prompt": "Use case: background-extraction. Extract ONLY the specified layer from the supplied pixel-art harbor image. Preserve its artwork, palette, camera and original coordinates EXACTLY. Full canvas 2001x786. No cropping, zooming or recentering. Removed regions must have genuine transparent alpha, NOT a painted checkerboard or black backdrop. Crisp detailed original pixel art, no new scene elements. Keep all SKY, distant hills, city waterfront and distant cranes above the coastline y=300, filling to the top and both sides. Remove ALL water, quay barriers, concrete floor and foreground wall. Every pixel below the distant coastline must be transparent. This is sky + far shore only.",
+      "ref": "C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage1/chap1/marseille_stages/hangar_j4_unity_v2/Source/left_clean.png"
+    },
+    {
+      "name": "left_L1_sea",
+      "prompt": "Use case: background-extraction. Extract ONLY the specified layer from the supplied pixel-art harbor image. Preserve its artwork, palette, camera and original coordinates EXACTLY. Full canvas 2001x786. No cropping, zooming or recentering. Removed regions must have genuine transparent alpha, NOT a painted checkerboard or black backdrop. Crisp detailed original pixel art, no new scene elements. Keep ONLY the band of teal SEAWATER approximately y=298..446. Remove sky, hills, city, cranes, buildings, all concrete, all barriers, floor, front wall. All canvas above y=298 and below y=446 must be transparent. Reconstruct a small amount of water behind the removed rear quay barriers so the strip has clean horizontal top and bottom edges, full width. NO sun or skyline remnants, NO objects. Keep original water color and local reflections.",
+      "ref": "C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage1/chap1/marseille_stages/hangar_j4_unity_v2/Source/left_clean.png"
+    },
+    {
+      "name": "left_L2_playfield",
+      "prompt": "Use case: background-extraction. Extract ONLY the specified layer from the supplied pixel-art harbor image. Preserve its artwork, palette, camera and original coordinates EXACTLY. Full canvas 2001x786. No cropping, zooming or recentering. Removed regions must have genuine transparent alpha, NOT a painted checkerboard or black backdrop. Crisp detailed original pixel art, no new scene elements. Keep ONLY the concrete quay PLAYFIELD, rear low concrete barriers, and front dark vertical wall. These occupy from the contour of the barriers around y=420 to the bottom y=786, filling both sides. Retain cracks, yellow markings and oil puddles. Remove ALL sky, city, hills and ALL seawater. Everything above the true concrete silhouette must be transparent. No objects added.",
+      "ref": "C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage1/chap1/marseille_stages/hangar_j4_unity_v2/Source/left_clean.png"
+    },
+    {
+      "name": "right_L0_sky_far",
+      "prompt": "Use case: background-extraction. Extract ONLY the specified layer from the supplied pixel-art harbor image. Preserve its artwork, palette, camera and original coordinates EXACTLY. Full canvas 2001x786. No cropping, zooming or recentering. Removed regions must have genuine transparent alpha, NOT a painted checkerboard or black backdrop. Crisp detailed original pixel art, no new scene elements. Keep all SKY, distant hills, city waterfront and distant cranes above the coastline y=300, filling to the top and both sides. Remove ALL water, quay barriers, concrete floor and foreground wall. Every pixel below the distant coastline must be transparent. This is sky + far shore only.",
+      "ref": "C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage1/chap1/marseille_stages/hangar_j4_unity_v2/Source/right_clean.png"
+    },
+    {
+      "name": "right_L1_sea",
+      "prompt": "Use case: background-extraction. Extract ONLY the specified layer from the supplied pixel-art harbor image. Preserve its artwork, palette, camera and original coordinates EXACTLY. Full canvas 2001x786. No cropping, zooming or recentering. Removed regions must have genuine transparent alpha, NOT a painted checkerboard or black backdrop. Crisp detailed original pixel art, no new scene elements. Keep ONLY the band of teal SEAWATER approximately y=298..446. Remove sky, hills, city, cranes, buildings, all concrete, all barriers, floor, front wall. All canvas above y=298 and below y=446 must be transparent. Reconstruct a small amount of water behind the removed rear quay barriers so the strip has clean horizontal top and bottom edges, full width. NO sun or skyline remnants, NO objects. Keep original water color and local reflections.",
+      "ref": "C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage1/chap1/marseille_stages/hangar_j4_unity_v2/Source/right_clean.png"
+    },
+    {
+      "name": "right_L2_playfield",
+      "prompt": "Use case: background-extraction. Extract ONLY the specified layer from the supplied pixel-art harbor image. Preserve its artwork, palette, camera and original coordinates EXACTLY. Full canvas 2001x786. No cropping, zooming or recentering. Removed regions must have genuine transparent alpha, NOT a painted checkerboard or black backdrop. Crisp detailed original pixel art, no new scene elements. Keep ONLY the concrete quay PLAYFIELD, rear low concrete barriers, and front dark vertical wall. These occupy from the contour of the barriers around y=420 to the bottom y=786, filling both sides. Retain cracks, yellow markings and oil puddles. Remove ALL sky, city, hills and ALL seawater. Everything above the true concrete silhouette must be transparent. No objects added.",
+      "ref": "C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage1/chap1/marseille_stages/hangar_j4_unity_v2/Source/right_clean.png"
+    },
+    {
+      "name": "prop_armored_sedan",
+      "prompt": "Use case: background-extraction / reconstruct occluded object. The supplied image is the approved pixel-art game scene. Extract and complete just ONE specified prop into a standalone Unity sprite. True transparent RGBA background everywhere outside the prop; no checkerboard graphic, no floor slab, no opaque rectangular backdrop, no cast shadow on a rectangular floor. Preserve reference's fine crisp small-pixel clusters, dark palette, orange sunset rim lighting, same side-on brawler camera with a little visible top. FULL object visible with transparent margin, reconstruct any part cropped by original frame or covered by another prop. No text, no labels, no watermark, no people, no extra objects. ONE complete black armored sedan from the three cars on the reference left. Long low squared body, reinforced doors, black tinted windows, rectangular headlights and heavy bumper, two visible wheels, entire rear and front present. Nose points RIGHT, reference camera view from near side and front. One car only, not the trio, no police lights or logo. Wide landscape sprite framing with modest transparent padding."
+    },
+    {
+      "name": "prop_container_rust",
+      "prompt": "Use case: background-extraction / reconstruct occluded object. The supplied image is the approved pixel-art game scene. Extract and complete just ONE specified prop into a standalone Unity sprite. True transparent RGBA background everywhere outside the prop; no checkerboard graphic, no floor slab, no opaque rectangular backdrop, no cast shadow on a rectangular floor. Preserve reference's fine crisp small-pixel clusters, dark palette, orange sunset rim lighting, same side-on brawler camera with a little visible top. FULL object visible with transparent margin, reconstruct any part cropped by original frame or covered by another prop. No text, no labels, no watermark, no people, no extra objects. ONE complete rust-red/brown corrugated steel shipping container from the lower right stack. Unstack it and rebuild its hidden roof and end wall. Wide horizontal side view, slight visible roof and left end, flat level top/bottom suitable for a jumpable platform. Dark corrugated walls, reinforced corner posts, restrained orange rim light. Entire container including all four corners visible; no other container, crates, barrel, ground, chains or scene. Wide sprite framing, modest transparent padding."
+    },
+    {
+      "name": "prop_container_teal",
+      "prompt": "Use case: background-extraction / reconstruct occluded object. The supplied image is the approved pixel-art game scene. Extract and complete just ONE specified prop into a standalone Unity sprite. True transparent RGBA background everywhere outside the prop; no checkerboard graphic, no floor slab, no opaque rectangular backdrop, no cast shadow on a rectangular floor. Preserve reference's fine crisp small-pixel clusters, dark palette, orange sunset rim lighting, same side-on brawler camera with a little visible top. FULL object visible with transparent margin, reconstruct any part cropped by original frame or covered by another prop. No text, no labels, no watermark, no people, no extra objects. ONE complete faded dark teal corrugated steel shipping container from the upper right stack. Unstack it and rebuild hidden base and full end. Same side-view geometry as reference lower red containers, slight visible roof and left end, flat horizontal level top/bottom suitable for stacking and jumping. Rust streaks, reinforced corner posts, restrained sunset rim light. Entire box visible, no other container or objects or scene. Wide sprite framing, modest transparent padding."
+    },
+    {
+      "name": "prop_wreck_boat_smoke",
+      "prompt": "Use case: background-extraction. Extract ONLY the wrecked fishing boat and its attached dark smoke plume from the center-left of the supplied pixel-art scene as ONE transparent Unity sprite. Preserve distinctive broken white cabin, shattered engine compartment, leaning mast, rope rigging, damaged dark hull and charcoal smoke. Reconstruct whole visible hull and upper smoke so the sprite has transparent padding on all four sides, nothing clipped. Same side-on harbor camera, subdued dark fine pixel art and orange sunset highlights. No sky, city, fort, quay, floor or background seawater rectangle; cut water away cleanly at the hull. True alpha transparency around silhouette including rigging gaps and around wispy pixel-cluster smoke, no painted checkerboard. One boat, no text, no other objects, no artificial drop shadow. Portrait/near-square canvas suits the tall plume, keep full object."
+    },
+    {
+      "name": "prop_manhole",
+      "prompt": "Use case: background-extraction. Extract and reconstruct ONE cast-iron manhole cover from the four on the concrete floor of the supplied pixel-art scene. Standalone game prop on TRUE transparent alpha. Wide shallow elliptical cast iron lid in the same side-on 2.5D brawler perspective, thick dark circular rim, crosshatched iron grate, subtle orange sunset upper edge highlights and purple-black shadows. Keep the grate dark opaque behind its slots; outside the circular rim fully transparent. No concrete, no rectangular ground patch, no giant hole, no smoke, no monster, no people, no text, no checkerboard image. One complete small manhole sprite with padding; fine deliberate pixel art matching original. Wide canvas around 3:1."
+    }
+  ],
+  "outputs": [
+    {
+      "name": "left_clean",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-a4a6d8a0-9f94-4e11-8213-a0eb6c7c5327.png",
+      "dest": "Source/left_clean.png"
+    },
+    {
+      "name": "right_clean",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-eaa0e2c9-a8cc-4870-a837-09c23fe82e93.png",
+      "dest": "Source/right_clean.png"
+    },
+    {
+      "name": "center_L0_sky_far",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-abdcf82e-6fa2-4776-b58b-28dda02599cb.png",
+      "dest": "Textures/center_L0_sky_far.png"
+    },
+    {
+      "name": "center_L1_sea",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-a17ce57b-9539-48f2-b9d4-a8e4c8449b94.png",
+      "dest": "Textures/center_L1_sea.png"
+    },
+    {
+      "name": "center_L2_playfield",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-fc811ad8-431f-49eb-b672-d5287854840e.png",
+      "dest": "Textures/center_L2_playfield.png"
+    },
+    {
+      "name": "left_L0_sky_far",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-bee84434-6dc9-4c99-9e61-b865bc29403b.png",
+      "dest": "Textures/left_L0_sky_far.png"
+    },
+    {
+      "name": "left_L1_sea",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-11f0490e-e9f5-441d-9f79-cb5460c3f715.png",
+      "dest": "Textures/left_L1_sea.png"
+    },
+    {
+      "name": "left_L2_playfield",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-b244da91-4f48-4362-b439-60f8cbae5f1a.png",
+      "dest": "Textures/left_L2_playfield.png"
+    },
+    {
+      "name": "right_L0_sky_far",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-e19d2d2b-66d6-4aae-8e45-a42cf711ac95.png",
+      "dest": "Textures/right_L0_sky_far.png"
+    },
+    {
+      "name": "right_L1_sea",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-abebcc08-48ee-4ca6-8648-a9eb140b081d.png",
+      "dest": "Textures/right_L1_sea.png"
+    },
+    {
+      "name": "right_L2_playfield",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-638d0b5a-1dbf-41b4-9ec5-354db84d742f.png",
+      "dest": "Textures/right_L2_playfield.png"
+    },
+    {
+      "name": "prop_armored_sedan",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-5fb094ad-1f80-446d-bfe2-a8c7af933345.png",
+      "dest": "Textures/prop_armored_sedan.png"
+    },
+    {
+      "name": "prop_container_rust",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-fab9e632-df6c-407e-b18f-65de7b83e577.png",
+      "dest": "Textures/prop_container_rust.png"
+    },
+    {
+      "name": "prop_container_teal",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-2419eee9-5744-476c-a312-7506bbd7cb07.png",
+      "dest": "Textures/prop_container_teal.png"
+    },
+    {
+      "name": "prop_wreck_boat_smoke",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-b548ce3b-157a-4393-b95e-d08dbe8695c0.png",
+      "dest": "Textures/prop_wreck_boat_smoke.png"
+    },
+    {
+      "name": "prop_manhole",
+      "source": "C:\\Users\\Quang Huy Nugyen\\.codex\\generated_images\\01a13faa-43b0-79f0-92e4-597dc91894eb\\exec-c3950b58-d4a0-4847-afd6-8d35b7b4add1.png",
+      "dest": "Textures/prop_manhole.png"
+    }
+  ]
+}

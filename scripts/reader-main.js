@@ -95,3 +95,50 @@ window.addEventListener("resize", () => {
 renderImageSlots();
 openHash();
 updateProgress();
+
+function initPitchControls() {
+  const pitchPane = document.getElementById("pane-pitch-france");
+  if (!pitchPane) return;
+
+  const savedLang = localStorage.getItem("pitch-france-lang") || "fr";
+  const savedPillar = localStorage.getItem("pitch-france-pillar") || "all";
+  pitchPane.setAttribute("data-pitch-lang", savedLang);
+  pitchPane.setAttribute("data-pitch-pillar", savedPillar);
+
+  function syncButtons() {
+    const curLang = pitchPane.getAttribute("data-pitch-lang") || "fr";
+    const curPillar = pitchPane.getAttribute("data-pitch-pillar") || "all";
+
+    document.querySelectorAll("[data-pitch-lang]").forEach((btn) => {
+      btn.classList.toggle("is-active", btn.dataset.pitchLang === curLang);
+    });
+
+    document.querySelectorAll("[data-pitch-pillar]").forEach((btn) => {
+      btn.classList.toggle("is-active", btn.dataset.pitchPillar === curPillar);
+    });
+  }
+
+  document.addEventListener("click", (e) => {
+    const langBtn = e.target.closest("[data-pitch-lang]");
+    if (langBtn) {
+      const lang = langBtn.dataset.pitchLang;
+      pitchPane.setAttribute("data-pitch-lang", lang);
+      localStorage.setItem("pitch-france-lang", lang);
+      syncButtons();
+      return;
+    }
+
+    const pillarBtn = e.target.closest("[data-pitch-pillar]");
+    if (pillarBtn) {
+      const pillar = pillarBtn.dataset.pitchPillar;
+      pitchPane.setAttribute("data-pitch-pillar", pillar);
+      localStorage.setItem("pitch-france-pillar", pillar);
+      syncButtons();
+      return;
+    }
+  });
+
+  syncButtons();
+}
+
+initPitchControls();

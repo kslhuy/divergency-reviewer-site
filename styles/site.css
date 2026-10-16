@@ -1520,6 +1520,612 @@ pre code {
   html { scroll-behavior: auto; }
 }
 
+/* ==========================================================================
+   Pitch & Subventions France (Dossier Région Sud / CNC FAJV)
+   ========================================================================== */
+.pitch-toolbar-card {
+  padding: 20px;
+  margin: 18px 0 26px;
+  background: linear-gradient(135deg, rgba(208, 90, 70, 0.15), rgba(111, 184, 174, 0.08)), var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--red);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+.pitch-toolbar-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pitch-badge-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(208, 90, 70, 0.22);
+  color: #ff9d8b;
+  border: 1px solid rgba(208, 90, 70, 0.4);
+  border-radius: 4px;
+}
+
+.pitch-version {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--soft);
+}
+
+.pitch-toolbar-desc {
+  color: var(--ink);
+  font-size: 1.02rem;
+  margin: 0 0 16px;
+  line-height: 1.55;
+}
+
+.pitch-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pitch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 140ms ease;
+}
+
+.pitch-btn:hover {
+  border-color: var(--teal);
+  background: #332d27;
+  color: #fff;
+}
+
+.pitch-btn-primary {
+  background: rgba(208, 90, 70, 0.25);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.pitch-btn-primary:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.pitch-btn-outline {
+  border-color: var(--amber);
+  color: #f4d49a;
+}
+
+.pitch-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 18px 0 14px;
+  padding: 10px 14px;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.pitch-filter-label {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.pitch-badge-star {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: rgba(216, 166, 77, 0.12);
+  border: 1px solid rgba(216, 166, 77, 0.35);
+  border-radius: 4px;
+  color: #fce3a6;
+  font-weight: 600;
+}
+
+.pitch-stars {
+  color: #f6c867;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+
+.pitch-contact-link {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--teal);
+  word-break: break-all;
+}
+
+.pitch-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.pitch-card {
+  padding: 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.pitch-card-highlight {
+  border-color: var(--red);
+  box-shadow: 0 8px 24px rgba(208, 90, 70, 0.12);
+}
+
+.pitch-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pitch-badge-type {
+  font-size: 0.76rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(111, 184, 174, 0.14);
+  color: var(--teal);
+  border: 1px solid rgba(111, 184, 174, 0.3);
+}
+
+.pitch-card h4 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: #fff5e6;
+}
+
+.pitch-card p {
+  margin: 4px 0 10px;
+  font-size: 0.95rem;
+}
+
+.pitch-card ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.pitch-card li {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.pitch-email-box {
+  margin: 20px 0 28px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.pitch-email-header {
+  padding: 12px 16px;
+  background: var(--panel-strong);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+  display: grid;
+  gap: 4px;
+  color: var(--ink);
+}
+
+.pitch-email-body {
+  margin: 0;
+  padding: 16px;
+  background: #141312;
+  border: 0;
+  border-radius: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.pitch-email-body code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+}
+
+.pitch-email-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--panel-strong);
+  border-top: 1px solid var(--line-soft);
+}
+
+.pitch-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.pitch-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  margin-top: 6px;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  font-size: 0.96rem;
+}
+
+.pitch-checklist input[type="checkbox"] {
+  margin-top: 4px;
+  accent-color: var(--teal);
+}
+
+.pitch-callout {
+  margin: 22px 0;
+  padding: 16px 20px;
+  background: rgba(216, 166, 77, 0.08);
+  border-left: 4px solid var(--amber);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.pitch-callout h4 {
+  margin: 0 0 6px;
+  color: #f6c867;
+  font-size: 1.05rem;
+}
+
+.pitch-callout p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Pitch France Controls: Dual Pillars, Bilingual Switcher & Comparison Cards
+   ========================================================================== */
+.pitch-control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 18px 0 26px;
+  padding: 16px 20px;
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.pitch-control-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pitch-control-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.pitch-control-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--soft);
+}
+
+.pitch-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.pitch-switch-btn:hover {
+  color: var(--ink);
+  border-color: var(--teal);
+}
+
+.pitch-switch-btn.is-active {
+  background: var(--teal);
+  color: #111;
+  border-color: var(--teal);
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(111, 184, 174, 0.3);
+}
+
+.pitch-switch-btn.is-active-amber {
+  background: var(--amber);
+  color: #111;
+  border-color: var(--amber);
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(216, 166, 77, 0.3);
+}
+
+.pitch-pillar-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  margin: 26px 0 16px;
+  background: linear-gradient(90deg, rgba(208, 90, 70, 0.18), transparent);
+  border-left: 4px solid var(--red);
+  border-radius: 4px;
+}
+
+.pitch-pillar-banner.is-internal {
+  background: linear-gradient(90deg, rgba(216, 166, 77, 0.18), transparent);
+  border-left-color: var(--amber);
+}
+
+.pitch-pillar-banner h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.pitch-pillar-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: var(--red);
+  color: #fff;
+}
+
+.pitch-pillar-badge.is-internal {
+  background: var(--amber);
+  color: #1a1714;
+}
+
+/* Language display logic */
+#pane-pitch-france[data-pitch-lang="fr"] .pitch-lang-vi {
+  display: none !important;
+}
+
+#pane-pitch-france[data-pitch-lang="vi"] .pitch-lang-fr {
+  display: none !important;
+}
+
+#pane-pitch-france[data-pitch-lang="bilingual"] .pitch-lang-fr {
+  display: block !important;
+}
+
+#pane-pitch-france[data-pitch-lang="bilingual"] .pitch-lang-vi {
+  display: block !important;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: rgba(111, 184, 174, 0.08);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 6px 6px 0;
+  color: #d8e5e3;
+  font-size: 0.95em;
+}
+
+/* Pillar display logic */
+#pane-pitch-france[data-pitch-pillar="show"] .pitch-pillar-internal {
+  display: none !important;
+}
+
+#pane-pitch-france[data-pitch-pillar="internal"] .pitch-pillar-show {
+  display: none !important;
+}
+
+/* TOC hiding based on pillar */
+#pane-pitch-france[data-pitch-pillar="show"] .toc-item:has(a[href*="pitch-france-internal"]) {
+  display: none !important;
+}
+
+#pane-pitch-france[data-pitch-pillar="internal"] .toc-item:has(a[href*="pitch-france-show"]) {
+  display: none !important;
+}
+
+/* Comparison Cards Grid */
+.pitch-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin: 24px 0 36px;
+}
+
+.pitch-compare-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 8px 24px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pitch-compare-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--line-soft);
+  padding-bottom: 12px;
+}
+
+.pitch-compare-card-head h4 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.pitch-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.pitch-status-done {
+  background: rgba(111, 184, 174, 0.2);
+  color: var(--teal);
+  border: 1px solid rgba(111, 184, 174, 0.4);
+}
+
+.pitch-status-pending {
+  background: rgba(216, 166, 77, 0.2);
+  color: #fce3a6;
+  border: 1px solid rgba(216, 166, 77, 0.45);
+}
+
+.pitch-compare-duo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.pitch-compare-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pitch-col-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--soft);
+}
+
+.pitch-col-label .pitch-tag-ref {
+  color: var(--teal);
+}
+
+.pitch-col-label .pitch-tag-game {
+  color: #ff9d8b;
+}
+
+.pitch-compare-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #11100f;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pitch-compare-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 220ms ease;
+}
+
+.pitch-compare-image-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.pitch-placeholder-art {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(216, 166, 77, 0.04),
+    rgba(216, 166, 77, 0.04) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border: 2px dashed rgba(216, 166, 77, 0.45);
+  border-radius: 6px;
+  color: var(--amber);
+}
+
+.pitch-placeholder-art-icon {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+
+.pitch-placeholder-art-title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #fce3a6;
+  margin-bottom: 4px;
+}
+
+.pitch-placeholder-art-desc {
+  font-size: 0.8rem;
+  color: var(--soft);
+  max-width: 280px;
+  line-height: 1.4;
+}
+
+.pitch-compare-note {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+
 @media print {
   body {
     background: white;
@@ -1531,7 +2137,10 @@ pre code {
   .toc-panel,
   .media-band,
   .search-wrap,
-  .search-count {
+  .search-count,
+  .pitch-toolbar-actions,
+  .pitch-email-footer,
+  .pitch-filter-bar {
     display: none !important;
   }
 
@@ -1547,8 +2156,12 @@ pre code {
   }
 
   .doc-pane {
+    display: none !important;
+  }
+
+  .doc-pane.is-active {
     display: block !important;
-    break-before: page;
+    break-before: auto;
   }
 
   .markdown-body {
@@ -1557,7 +2170,34 @@ pre code {
 
   .markdown-body p,
   .markdown-body li,
-  td {
-    color: #222;
+  td, th {
+    color: #222 !important;
+  }
+
+  th {
+    background: #f0f0f0 !important;
+    color: #111 !important;
+  }
+
+  table, tr, td, th {
+    border-color: #ccc !important;
+  }
+
+  .pitch-toolbar-card, .pitch-card, .pitch-email-box, .pitch-callout {
+    background: #fafafa !important;
+    border-color: #ddd !important;
+    color: #111 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .pitch-email-header, .pitch-email-body {
+    background: #fff !important;
+    color: #111 !important;
+    border-color: #ddd !important;
+  }
+
+  .pitch-email-body code {
+    color: #111 !important;
   }
 }

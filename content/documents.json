@@ -13,6 +13,13 @@
     "summary": "Mở pledge ngày 02/10/2026: tracking miễn phí, short clip trên 5 kênh, gửi Indie Games Hub và chuẩn bị cho Projects We Love."
   },
   {
+    "id": "pitch-france",
+    "showMedia": true,
+    "label": "Pitch & Subventions France",
+    "eyebrow": "Marseille · Région Sud · CNC",
+    "summary": "Dossier institutionnel complet pour la Région Sud, le CNC et les partenaires français : ancrage patrimonial à Marseille, pitch tactique 2.5D, contacts prioritaires vérifiés et templates de courriels."
+  },
+  {
     "id": "devlog",
     "showMedia": false,
     "label": "YouTube Devlog",

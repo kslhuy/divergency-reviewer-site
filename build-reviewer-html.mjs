@@ -8,6 +8,7 @@ import { publicContent } from './src/public-content.mjs';
 export { buildPage };
 const here = fileURLToPath(new URL('.', import.meta.url));
 const outputFile = path.join(here, 'Divergency_Reviewer_Tabs.html');
+const localOutputFile = path.join(here, 'Divergency_Reviewer_Local.html');
 
 export function buildDocs(gameplayOverride, { local = false } = {}) {
   const documents = JSON.parse(readFileSync(path.join(here, 'content/documents.json'), 'utf8'));
@@ -20,11 +21,27 @@ export function buildDocs(gameplayOverride, { local = false } = {}) {
   });
 }
 
-export function buildReviewer({ local = false, output = outputFile } = {}) {
-  writeFileSync(output, buildPage(buildDocs(undefined, { local }), { local }), 'utf8');
+export function buildReviewer({ local = false, output } = {}) {
+  const targetOutput = output || (local ? localOutputFile : outputFile);
+  writeFileSync(targetOutput, buildPage(buildDocs(undefined, { local }), { local }), 'utf8');
+  return targetOutput;
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  buildReviewer({ local: process.argv.includes('--local') });
-  console.log('Wrote Divergency_Reviewer_Tabs.html from HTML chapters');
+  const isLocal = process.argv.includes('--local');
+  const isAll = process.argv.includes('--all');
+  const outputArgIdx = process.argv.indexOf('--output');
+  const customOutput = outputArgIdx !== -1 && process.argv[outputArgIdx + 1] ? path.resolve(here, process.argv[outputArgIdx + 1]) : null;
+
+  if (isAll) {
+    buildReviewer({ local: false, output: outputFile });
+    buildReviewer({ local: true, output: localOutputFile });
+    console.log('Wrote Divergency_Reviewer_Tabs.html (public) and Divergency_Reviewer_Local.html (full local)');
+  } else if (isLocal) {
+    const target = buildReviewer({ local: true, output: customOutput || localOutputFile });
+    console.log(`Wrote ${path.basename(target)} with all chapters and tabs`);
+  } else {
+    const target = buildReviewer({ local: false, output: customOutput || outputFile });
+    console.log(`Wrote ${path.basename(target)} from HTML chapters`);
+  }
 }

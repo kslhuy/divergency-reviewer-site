@@ -1,13 +1,133 @@
-<h2 id="gameplay-1-1-quan-bar-armorlite" tabindex="-1"><a class="heading-link" href="#gameplay-1-1-quan-bar-armorlite" aria-label="Link to section">#</a>1-1. Quán bar Armorlite</h2>
-<p><strong>Vì sao đến đây?</strong> Jacques là đầu mối đáng tin của Mark, biết các lối qua khu cảng. Đội đến nhận tuyến đi và giờ gặp người liên lạc phụ trách thuyền, đồng thời hỏi về trạm ngoài khơi trong sổ Bastonne.</p>
-<p><strong>Tuyến màn:</strong> ngõ từ căn cứ → trong Armorlite → phố sau quán → cửa bảo trì xuống cống.</p>
-<h3 id="gameplay-1-1-trong-quan" tabindex="-1"><a class="heading-link" href="#gameplay-1-1-trong-quan" aria-label="Link to section">#</a>Trong quán — nhận đủ thông tin để hiểu chuyến đi</h3>
-<p>Jacques cho biết người của Mark đang chuẩn bị thuyền ở bến dịch vụ; giờ rời bến là hoàng hôn, lúc đổi ca tuần tra. Ông chưa biết trạm nghiên cứu nằm ở đâu. Ông chỉ cả tuyến kho hàng trên phố lẫn lối dự phòng qua chợ Laundel dưới cống.</p>
-<p>Người chơi nói với Jacques để nhận mục tiêu “Tới bến dịch vụ trước giờ hẹn”, rồi có thể mua thuốc hoặc nghe thêm chuyện của đội. Thông tin chính được ghi lại sau một cuộc nói chuyện; không phải hỏi hết mọi nhánh thoại để mở đường.</p>
-<h3 id="gameplay-1-1-bi-tim-thay" tabindex="-1"><a class="heading-link" href="#gameplay-1-1-bi-tim-thay" aria-label="Link to section">#</a>Bị tìm thấy — đánh để thoát khỏi vòng vây</h3>
-<p>Nhóm ở cầu đã báo cho băng đua xe. Chúng lần tới quán, ép Jacques giao người. Đội kéo trận đánh ra phố sau để tránh liên lụy khách và giữ cửa cống còn dùng được. Bàn ghế, chai và thùng ngoài phố cho người chơi dùng lại thao tác nhặt–ném.</p>
-<p>Thiết kế phố gồm cửa quán ở một đầu, khoảng sân giao chiến ở giữa và cửa bảo trì ở cuối. Xe xuất hiện theo làn nhìn rõ, có cảnh báo trước khi vào vùng đánh. Đồ che và khoảng tránh nằm ngoài làn xe; không yêu cầu nhảy lên xe hoặc điều khiển phương tiện.</p>
-<p><strong>Ý tưởng boss:</strong> thủ lĩnh băng đua xe trực tiếp chặn đường rút. Trận nên giữ cảm giác bị một băng đường phố săn đuổi, có thể khai thác xe và vật thể nếu bộ kỹ năng thực tế hỗ trợ. Chưa xác định chuỗi đòn, vũ khí hay các giai đoạn. Hạ hắn giúp đội tiếp cận cửa cống.</p>
-<h3 id="gameplay-1-1-xuong-cong" tabindex="-1"><a class="heading-link" href="#gameplay-1-1-xuong-cong" aria-label="Link to section">#</a>Sau trận — vì sao không quay về căn cứ?</h3>
-<p>Cảnh sát đã khóa tuyến kho hàng và đang rà những ngõ dẫn về căn cứ. Quay lại sẽ kéo người truy bắt tới chỗ trú. Mark dùng phương án Jacques đã chỉ: mở cửa bảo trì và đi xuống cống, tiếp tục tới cùng bến hẹn.</p>
-<p>Lưu trước cuộc vây quán và tại bờ khô đầu cống. Việc tự vệ không làm dân tự động ghét đội. Chỉ hành động cướp hoặc cố ý phá quầy được chọn rõ ràng mới có hậu quả riêng; không phạt người chơi vì trận kéo dài.</p>
+<h2 id="gameplay-1-1-quan-bar-armorlite" tabindex="-1"><a class="heading-link" href="#gameplay-1-1-quan-bar-armorlite" aria-label="Link to section">#</a>1-1. Khu phố Noailles, Quán bar Armorlite & Cuộc ẩu đả bến cảng Vieux-Port</h2>
+<p class="chapter-version"><strong>Bản đồng nhất gameplay · narrative · Timeline — 10/10/2026.</strong> Nguồn thực thi: <code>Assets/Scenes/Chapter1_Playable.unity</code>. Bản đang ở mức <code>prototype_known_issues</code>; các phần cần hoàn thiện được ghi cụ thể phía dưới.</p>
+<span id="gameplay-1-1-trong-quan"></span><span id="gameplay-1-1-bi-tim-thay"></span><span id="gameplay-1-1-xuong-cong"></span>
+
+<div class="table-wrap"><table><thead><tr><th>Tuyến di chuyển (Where to where)</th><th>Mục tiêu &amp; Điểm mốc</th><th>Chuyển tiếp gameplay</th></tr></thead><tbody>
+<tr><td><strong>Căn cứ Deep → Đại lộ Marseille</strong><br><code>marsile_background.png</code></td><td>Men theo đại lộ nhìn xuống vịnh cảng và đồi Notre-Dame dưới nắng ban ngày để né tránh chốt cơ giới.</td><td>Di chuyển trinh sát, quan sát trạm kiểm soát từ trên cao.</td></tr>
+<tr><td><strong>Đại lộ → Phố chợ Noailles &amp; Bar Armorlite</strong><br><code>noailles_market_gameplay_v3_muted.png</code></td><td>Băng qua chợ gia vị Noailles; chia đội (Mark/Deep vào gặp Jacques lấy hải đồ, Ghost/Block ở ngoài canh chừng).</td><td>Hội thoại trong bar + Mini-skirmish đánh lén lút/cận chiến ngoài cửa bar.</td></tr>
+<tr><td><strong>Armorlite → Bến cảng Vieux-Port lúc hoàng hôn</strong><br><code>marseille_late.png</code></td><td>Jacques mở cửa ngách thoát thân; kéo trận chiến ra đại lộ bờ kè bến cảng lúc chạng vạng hoàng hôn đỏ rực.</td><td>Đấu trường Beat 'em up diện rộng: Quái xế mô tô, ném bom xăng, Ring Out mép kè.</td></tr>
+<tr><td><strong>Vieux-Port → Cửa cống ngầm bờ kè</strong></td><td>Dồn thủ lĩnh băng đảng (Big_MM) về mép kè chắn sóng, mở nắp cống bảo trì thoát xuống lòng đất.</td><td>Hạ Boss, mở cửa chuyển cảnh sang Chapter 1-2 (Sewer1).</td></tr>
+<tr><td><strong>Màn phụ: Mark tại Vallon des Auffes</strong><br><code>vallon_des_auffes_marsile_style_v1.png</code></td><td>Mark độc hành lẻn vào làng chài dưới chân cầu vòm đá để móc nối với Thuyền trưởng Mateo chuẩn bị thuyền vượt biển.</td><td>Sidescrolling 2.5D Stealth-Action: Né đèn pha quét trên cầu, Silent Takedown, Splash Ring Out.</td></tr>
+</tbody></table></div>
+
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/marsile_background.png" alt="marsile_background — Tuyến đường đô thị ban ngày tiến vào trung tâm Marseille" loading="lazy"><figcaption>marsile_background — Tuyến đại lộ ban ngày: Cả đội men theo trục đường nhìn xuống vịnh cảng và nhà thờ Notre-Dame de la Garde để tránh xe tuần tra cơ giới.</figcaption></figure>
+
+<h3>1. Khu phố Noailles &amp; Quán bar Armorlite — Cơ chế chia đội chiến thuật</h3>
+<p>Khu phố <strong>Noailles</strong> được mệnh danh là “chiếc bụng của Marseille” — nơi hội tụ các chợ trời nhộn nhịp, quầy gia vị Bắc Phi ("Épices d'Orient"), sạp hoa quả và quán cà phê góc phố. Quán bar <strong>Armorlite</strong> nằm ẩn mình ở cuối phố với cánh cửa vòm leo kín lá thường xuân, do <strong>Jacques</strong> quản lý — cựu thợ máy và người liên lạc kỳ cựu mà Mark tuyệt đối tin cậy.</p>
+
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/noailles_concepts/noailles_market_gameplay_v3_muted.png" alt="noailles_market_gameplay_v3_muted — Phố chợ Noailles và mặt tiền quán Bar Armorlite" loading="lazy"><figcaption>noailles_market_gameplay_v3_muted — Sàn đấu phố chợ Noailles: Sạp gia vị, quầy hoa quả, thùng gỗ tương tác và cửa vào Bar Armorlite ở góc phải.</figcaption></figure>
+
+<ul>
+  <li><strong>Cơ chế chia đội (Squad Split):</strong> Cả nhóm 5 người không thể cùng vào quán vì sẽ gây chú ý cho tai mắt chính quyền:
+    <ul>
+      <li><strong>Nhóm bên trong:</strong> Mark và Deep vào bar đàm phán với Jacques để nhận hải đồ, giờ hẹn đổi ca tuần tra và thẻ bảo trì cống.</li>
+      <li><strong>Nhóm bên ngoài:</strong> Stranger (Ghost) và Block (đang bị thương máu tối đa còn 75%) nán lại ngoài lề đường trông chừng.</li>
+    </ul>
+  </li>
+  <li><strong>Mini-Skirmish ngoài cửa bar:</strong> Tay chân do thám của Băng Quái Xế phát hiện Block và Ghost. Người chơi điều khiển nhóm ngoài hạ gục 3 tên du côn gây rối. Đạo cụ tương tác: đạp đổ sạp ớt bột làm mù mắt địch (Blind/Stun), ném thùng hoa quả và bao gia vị gây choáng.</li>
+  <li><strong>Báo động &amp; Cửa thoát hiểm:</strong> Nghe tiếng đánh nhau ngoài cửa, Jacques rút súng săn và mở ngay cửa ngách sau quán dẫn qua con hẻm dốc đổ thẳng ra mặt cảng Vieux-Port.</li>
+</ul>
+
+<h3>2. Cuộc ẩu đả bến cảng Vieux-Port — Đấu trường hoàng hôn rực lửa</h3>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/marseille_late.png" alt="marseille_late — Đại chiến bờ kè cảng Vieux-Port lúc hoàng hôn muộn" loading="lazy"><figcaption>marseille_late — Bờ kè bến cảng Vieux-Port lúc hoàng hôn tím sẫm: Đấu trường Beat 'em up diện rộng đối đầu Băng Quái Xế với cơ chế xe mô tô càn quét và đẩy rơi mép kè.</figcaption></figure>
+
+<p>Băng đua xe (thù cũ của Deep từ vụ triệt phá đường dây buôn người) dàn quân phục kích trên bờ kè đá hoa cương rộng thênh thang của <strong>Vieux-Port</strong> lúc hoàng hôn đỏ rực:</p>
+<ul>
+  <li><strong>Đấu trường mô tô phân khối lớn:</strong> Kẻ địch chạy xe máy từ ngoài màn hình vào với vạch đỏ telegraph cảnh báo trước 2,5 giây. Người chơi có thể dùng đòn nhảy chém của Deep hoặc cú huých khiên của Block để hất quái xế văng khỏi xe.</li>
+  <li><strong>Cơ chế đẩy rơi xuống biển (Ring Out):</strong> Dọc mép kè không có rào chắn, đòn đánh mạnh có thể hất văng địch rơi xuống biển kết liễu tức thì.</li>
+  <li><strong>Thủ lĩnh Big_MM:</strong> Cưỡi mô tô lớn quẹt kiếm tạo vệt lửa trên mặt đường, khi mất 50% máu sẽ xuống xe cận chiến với đòn chém quét diện rộng chống nhảy đánh.</li>
+  <li><strong>Lối thoát cống ngầm:</strong> Sau khi dọn sạch Boss và còi xe cảnh sát hú vang, Mark cạy nắp cống kỹ thuật ngay mép kè đưa cả đội trượt xuống Chapter 1-2.</li>
+</ul>
+
+<h3>3. Màn thám báo độc hành: Mark tại Vallon des Auffes</h3>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/vallon_des_auffes_marsile_style_v1.png" alt="vallon_des_auffes_marsile_style_v1 — Vịnh Le Vallon des Auffes" loading="lazy"><figcaption>vallon_des_auffes_marsile_style_v1 — Vịnh Le Vallon des Auffes: Đấu trường Sidescrolling 2.5D phong cách Stealth-Action của Mark dưới chân cầu vòm đá Corniche Kennedy.</figcaption></figure>
+
+<p>Để chuẩn bị sẵn phương án vượt biển bí mật sang Sakuri, <strong>Mark độc hành xâm nhập Vallon des Auffes</strong> — vịnh cảng ngư dân nép dưới chân cầu vòm đá khổng lồ:</p>
+<ul>
+  <li><strong>Cơ chế tránh tai mắt (Searchlight Evasion):</strong> Xe tuần tra cảnh sát trên đỉnh cầu vòm đá liên tục quét đèn pha xuống vịnh. Mark phải canh thời điểm nấp dưới bóng râm các trụ cầu, ngồi thụp sau các lồng bẫy cua, đống dây thừng và giàn cá khô.</li>
+  <li><strong>Triệt hạ lén lút (Silent Takedown):</strong> Áp sát lính gác và tay chỉ điểm từ phía sau, bẻ khớp hạ gục nhanh hoặc đạp văng đối thủ xuống làn nước xanh ("Splash" Ring Out) không gây tiếng động.</li>
+  <li><strong>Gặp gỡ Thuyền trưởng Mateo:</strong> Mark tiếp cận cầu tàu gỗ bên phải, gõ cửa nhà vàng ven vách đá để chốt tọa độ và giờ đón với người lái thuyền kỳ cựu.</li>
+</ul>
+
+<h3>Điều kiện hoàn thành</h3>
+<p>Cuộc nói chuyện Jacques chỉ cấp mục tiêu sau câu cuối. Toàn bộ chuỗi encounter dọc bờ cảng Vieux-Port chỉ được tính an toàn sau khi thủ lĩnh và mọi actor chiến đấu trong Timeline đã bị hạ gục. Cửa cống ngầm bảo trì giữ tiến trình chuyển tiếp sang Chapter 1-2 mà không tự cấp vật phẩm thay hội thoại.</p>
+<h3>Phần cần hoàn thiện tiếp</h3>
+<p>Thủ lĩnh hiện dùng Big_MM làm asset đại diện. Bản này đang hoàn thiện bộ đòn riêng cho hắn, cơ chế xe mô tô lao qua có vạch cảnh báo telegraph, các đạo cụ tương tác (thùng cá ném gây choáng, sạp ớt làm mù). Nhịp chuyển camera cuộn ngang liên tục (horizontal scrolling) giữa các phân vùng cảng đang được đồng bộ hóa từ layout tổng thể.</p>
+
+<h3>Phạm vi Timeline của đoạn</h3><div class="table-wrap"><table><thead><tr><th>Phòng / Phân khu</th><th>Thực thi</th></tr></thead><tbody>
+<tr><td><code>ch1_marseille_boulevard</code></td><td>Không có encounter; di chuyển qua đại lộ ban ngày quan sát trạm kiểm soát</td></tr>
+<tr><td><code>ch1_noailles_market</code></td><td>Timeline Mini-Wave: 4 actor (Skirmish ngoài cửa Bar Armorlite)</td></tr>
+<tr><td><code>ch1_armorlite</code></td><td>Không có encounter; giữ hội thoại Jacques, Mireille, DJ Luc và cửa ra phố</td></tr>
+<tr><td><code>ch1_vieuxport_late</code></td><td>Timeline Wave 1: 12 cue / 6 actor + Boss Big_MM (Bờ kè cảng hoàng hôn muộn)</td></tr>
+<tr><td><code>ch1_vallon_des_auffes</code></td><td>Timeline Stealth/Takedown: 5 actor tuần tra + điểm hẹn thuyền trưởng Mateo</td></tr>
+</tbody></table></div><p>Timeline điều khiển spawn và nhịp chiến đấu. Typewriter giữ hội thoại nhấn tiếp; ChapterOneProgress giữ trạng thái nhiệm vụ/cửa/checkpoint. Không chạy đồng thời bộ spawn cũ. Dữ liệu có thể chỉnh trong LF2 → Stage Timeline.</p>
+
+<details><summary>Ảnh tham chiếu bố trí stage gameplay (Noailles & Vieux-Port Battle Sequence)</summary>
+<figure class="markdown-image"><img src="imgs/campaign-panels/Fund_region/imgs_refs/Noail_quartier.jpg" alt="Ảnh thực tế khu phố Noailles — ngõ hẹp, khu chợ đa văn hóa sầm uất nơi quán bar Armorlite tọa lạc." loading="lazy"><figcaption>Ảnh thực tế khu phố Noailles — ngõ hẹp, khu chợ đa văn hóa sầm uất nơi quán bar Armorlite tọa lạc.</figcaption></figure>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/noailles_concepts/noailles_stage_market.jpg" alt="Noailles Market Stage Concept — bối cảnh dãy hàng quán trước cửa vào Armorlite." loading="lazy"><figcaption>Noailles Market Stage Concept — bối cảnh dãy hàng quán trước cửa vào Armorlite.</figcaption></figure>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/vieux_port_panoramic_battle_scroll_strip.png" alt="Toàn cảnh cuộn ngang trường chiến bến cảng Vieux-Port (Fish Market → Quai du Port Promenade → Cửa bảo trì cống thoát nước)." loading="lazy"><figcaption>Toàn cảnh cuộn ngang trường chiến bến cảng Vieux-Port (Fish Market → Quai du Port Promenade → Cửa bảo trì cống thoát nước).</figcaption></figure>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/vieux_port_01_marche_aux_poissons.png" alt="Phân đoạn 1: Chợ cá Quai des Belges — Sạp cá, thùng gỗ đá lạnh, cọc neo thuyền buồm, nhìn ra Fort Saint-Jean lúc hoàng hôn." loading="lazy"><figcaption>Phân đoạn 1: Chợ cá Quai des Belges — Sạp cá, thùng gỗ đá lạnh, cọc neo thuyền buồm, nhìn ra Fort Saint-Jean lúc hoàng hôn.</figcaption></figure>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/vieux_port_02_quayside_promenade.png" alt="Phân đoạn 2: Bờ kè đêm Quai du Port — Đấu trường mô tô, vệt lốp xe, rào chắn sắt và đèn đường in bóng nhà thờ Notre-Dame de la Garde." loading="lazy"><figcaption>Phân đoạn 2: Bờ kè đêm Quai du Port — Đấu trường mô tô, vệt lốp xe, rào chắn sắt và đèn đường in bóng nhà thờ Notre-Dame de la Garde.</figcaption></figure>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/vieux_port_04_sewer_sluice_dock.png" alt="Phân đoạn 3: Cầu cảng chắn sóng & Cửa bảo trì cống xả — Vị trí đối đầu thủ lĩnh băng đảng và lối thoát xuống cống ngầm 1-2." loading="lazy"><figcaption>Phân đoạn 3: Cầu cảng chắn sóng & Cửa bảo trì cống xả — Vị trí đối đầu thủ lĩnh băng đảng và lối thoát xuống cống ngầm 1-2.</figcaption></figure>
+</details>
+
+<section class="chapter-dialogue"><h3>Toàn bộ hội thoại đang gắn trong bản Unity</h3><p>Các mục dưới được xuất từ Typewriter. Điều kiện và tên điểm tương tác dành cho việc review, không phải lời nhân vật nói.</p>
+<details><summary>Armorlite — ch1_armorlite</summary>
+<p>Hỏi Jacques về giờ hẹn thuyền và lối dự phòng qua Laundel.</p>
+<ul>
+<li><strong>Jacques · hỏi đường cống</strong>: cần None; nhận JacquesInformed; hết địch: False.</li>
+<li><strong>Mireille · Nói chuyện</strong>: cần None; nhận None; hết địch: False.</li>
+<li><strong>Nina · Hỏi về ngoài phố</strong>: cần None; nhận None; hết địch: False.</li>
+<li><strong>Marcel · Hỏi chuyện bến cảng</strong>: cần None; nhận None; hết địch: False.</li>
+<li><strong>Luc · Nói chuyện với DJ</strong>: cần None; nhận None; hết địch: False.</li>
+</ul>
+<h4>enter — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Mireille:</strong> Đóng cửa giúp tôi. Jacques đang đợi ở quầy.</li>
+<li><strong>Deep:</strong> Cảm ơn. Chúng tôi chỉ ghé nhận một lời nhắn.</li>
+</ul>
+<h4>jacques — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Jacques:</strong> Người của Mark chờ ở bến dịch vụ. Hoàng hôn đổi ca tuần tra, đó là giờ rời bến. Còn mã trạm trong sổ, tôi chưa biết tọa độ.</li>
+<li><strong>Jacques:</strong> Đi tuyến kho hàng. Nếu bị chặn, xuống cửa bảo trì sau quán, qua Laundel hỏi Áo Ghi; nói tôi giới thiệu.</li>
+<li><strong>Deep:</strong> Bến dịch vụ, trước hoàng hôn. Còn căn cứ?</li>
+<li><strong>Jacques:</strong> Đừng kéo người truy bắt về đó. Có chuyện thì dùng lối cống.</li>
+</ul>
+<h4>mireille — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Mireille:</strong> Nước và khăn sạch đây. Các anh vừa đi đường dài phải không?</li>
+<li><strong>Block:</strong> Cảm ơn. Chỉ cần ngồi yên một lúc là tốt rồi.</li>
+</ul>
+<h4>nina — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Nina:</strong> Mấy gã ở đầu cầu vừa đi qua đây. Họ nhìn từng người trong quán.</li>
+<li><strong>Deep:</strong> Cô ở trong này. Nếu họ tới, chúng tôi đưa họ ra phố sau.</li>
+</ul>
+<h4>marcel — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Marcel:</strong> Bến dịch vụ có lối lên chòi gác bên kho. Nếu đường sân bị chặn, đừng đứng giữa khoảng trống.</li>
+<li><strong>Mark:</strong> Tôi nhớ rồi.</li>
+</ul>
+<h4>dj — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Luc:</strong> Tôi cứ để nhạc chứ?</li>
+<li><strong>Deep:</strong> Ừ. Cứ để mọi người có một buổi tối bình thường.</li>
+</ul>
+</details>
+<details><summary>Phố Marseille — ch1_backstreet</summary>
+<p>Đẩy lùi băng đua xe, giữ lối xuống cống.</p>
+<h4>enter — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Big Bro:</strong> Người ở cầu báo đúng thật. Deep trốn ở đây!</li>
+<li><strong>Thủ lĩnh băng đua xe:</strong> Món nợ đường buôn người chưa trả xong đâu.</li>
+<li><strong>Deep:</strong> Muốn tìm tôi thì ra phố. Để khách trong quán yên.</li>
+<li><strong>Mark:</strong> Giữ cửa bảo trì. Đó là đường xuống cống của cả đội.</li>
+</ul>
+<h4>clear — cần None; loại trừ None</h4>
+<ul>
+<li><strong>Mark:</strong> Jacques báo cảnh sát đã khóa tuyến kho hàng và đang rà các ngõ về căn cứ.</li>
+<li><strong>Deep:</strong> Quay lại sẽ dẫn họ tới chỗ trú. Dùng lối cống, vẫn tới bến hẹn.</li>
+<li><strong>Block:</strong> Tôi đi được. Khóa cửa quán phía sau giúp họ.</li>
+</ul>
+</details>
+</section>

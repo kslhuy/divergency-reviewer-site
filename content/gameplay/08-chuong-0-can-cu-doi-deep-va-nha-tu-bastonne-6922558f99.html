@@ -1,234 +1,146 @@
-<h2 id="gameplay-chuong-0-can-cu-oi-deep-va-nha-tu-bastonne" tabindex="-1"><a class="heading-link" href="#gameplay-chuong-0-can-cu-oi-deep-va-nha-tu-bastonne" aria-label="Link to section">#</a>Chương 0 – Đêm Máu Tại Bastonne (Gameplay)</h2>
+<h2 id="gameplay-chuong-0-can-cu-oi-deep-va-nha-tu-bastonne" tabindex="-1"><a class="heading-link" href="#gameplay-chuong-0-can-cu-oi-deep-va-nha-tu-bastonne" aria-label="Link to section">#</a>Chương 0 – Căn Cứ Đội Deep &amp; Nhà Tù Bastonne (Gameplay)</h2>
 
-<p><strong>Mục tiêu thiết kế tổng thể (FTUE - First Time User Experience):</strong> Đưa người chơi lập tức vào nhịp đập sinh tử của một game <em>Dark Fantasy Tactical Brawler</em>. Loại bỏ hoàn toàn các bài tập an toàn đánh bao cát; thay vào đó, người chơi học cơ chế điều khiển thông qua hai góc nhìn đan xen: <strong>Kẻ Vô Danh sinh tồn đơn độc</strong> và <strong>Đội Đột Kích phối hợp chiến thuật</strong>.</p>
+<p><strong>Mục tiêu chương:</strong> Giải cứu Block và thu hồi chứng cứ anh thu thập về các vụ mất tích, vận chuyển hóa chất sinh học và thí nghiệm trái phép của Jamerson Obsworth. Block chủ động thâm nhập Bastonne để điều tra, bị phát hiện và bắt giữ nhằm bịt đầu mối. Solei tham gia một nhiệm vụ có kế hoạch; Stranger trở thành người cộng tác cần thiết từ bên trong khu biệt giam.</p>
+<p><strong>Trải nghiệm mở đầu:</strong> Người chơi học di chuyển, né đòn nặng, phá thế thủ và phối hợp qua bài kiểm tra thực chiến với Deep, rồi vận dụng trong cuộc giải cứu. Sự trưởng thành của Solei thể hiện bằng năng lực và độ tin cậy trong tác chiến. Trận đấu tập diễn ra khi Mark hoàn tất phương tiện, không làm đội trì hoãn một cuộc cứu viện đã sẵn sàng xuất phát.</p>
+<p><strong>Quy ước:</strong> Các thời lượng dưới đây là mục tiêu thiết kế. Cắt cảnh có thể rút gọn hoặc bỏ qua; thông tin nhiệm vụ quan trọng vẫn có trong mục tiêu và tương tác. Thoại trao đổi ngắn ưu tiên diễn ra ngay trong gameplay. Phần mô tả cơ chế là đích thiết kế, không phải xác nhận mọi cơ chế đã có trong Unity.</p>
 
-<div class="table-wrap">
-  <table>
-    <thead>
-      <tr>
-        <th>Nhịp chơi (Beat)</th>
-        <th>Góc nhìn & Nhân vật</th>
-        <th>Cơ chế cốt lõi được dạy</th>
-        <th>Tình huống gameplay</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Beat 1: Thức tỉnh</strong></td>
-        <td>Stranger (Đơn độc)</td>
-        <td>Đánh thường, Đòn nặng, Lướt/Né đòn, Nhặt/Ném vật thể</td>
-        <td>Phá xiềng xích, hạ 2 y viên vũ trang trong buồng ngập khí độc</td>
-      </tr>
-      <tr>
-        <td><strong>Beat 2: Đột phá bến ngầm</strong></td>
-        <td>Solei (Lead) + Deep & Tulas</td>
-        <td>Hệ thống Command (<code>Shift + Tab</code>, <code>Hold</code>, <code>Regroup</code>, <code>Free</code>), Phá giáp</td>
-        <td>Càn quét tiền đồn Bastonne, đối đầu lính khiên hạng nặng</td>
-      </tr>
-      <tr>
-        <td><strong>Beat 3: Dãy biệt giam & Lựa chọn</strong></td>
-        <td>Stranger ↔ Đội Deep</td>
-        <td>Áp lực thời gian (Countdown Timer), Lựa chọn hy sinh</td>
-        <td>Giải cứu Block trước khi van xả nhiệt và khí axit kích hoạt</td>
-      </tr>
-      <tr>
-        <td><strong>Beat 4: Trùm Gilles "Kẻ Nuốt Khóa"</strong></td>
-        <td>Đội hình 3 người</td>
-        <td>Phối hợp lệnh chiến đấu, Tránh vùng độc, Phá đòn tụ lực</td>
-        <td>Đối đầu đồ tể Bastonne 2 giai đoạn (Khiên Chùy & Cuồng Bạo Tà Thần)</td>
-      </tr>
-      <tr>
-        <td><strong>Beat 5: Đào thoát ra biển</strong></td>
-        <td>Cả đội rút lui</td>
-        <td>Bảo vệ người thương tật, Thoát hiểm đường thủy</td>
-        <td>Chạy đua ra cano, mở đầu hành trình chạy trốn về Marseille</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="table-wrap"><table>
+<thead><tr><th>Nhịp chơi</th><th>Phân định và thời lượng dự kiến</th><th>Nhân vật điều khiển</th><th>Việc người chơi làm và kết quả</th></tr></thead>
+<tbody>
+<tr><td><strong>0-1. Căn cứ Deep</strong></td><td>Dẫn nhập 30–40 giây; chơi 2–3 phút</td><td>Solei</td><td>Hiểu vì sao Block bị bắt; đấu tập để chứng minh bộ pháp né chấn động và cước pháp phá thủ trước giờ xuất kích.</td></tr>
+<tr><td><strong>0-2. Đột nhập Bastonne</strong></td><td>Tiếp cận 20–30 giây; chơi 5–7 phút</td><td>Solei, cùng Deep và Tulas</td><td>Qua ba khu giam và ba khu thẩm vấn; lấy lại tài liệu của Block; xác định nơi giam anh. James Kid phong tỏa lối vào biệt giam.</td></tr>
+<tr><td><strong>0-3. Phía trong cửa khóa</strong></td><td>Chuyển góc nhìn 15–25 giây; chơi 1–2 phút</td><td>Stranger</td><td>Gửi tín hiệu, mở chốt bảo trì phía trong để đội tiếp cận. Gây tiếng động lớn sẽ làm lộ dãy giam và đường rút.</td></tr>
+<tr><td><strong>0-4. Cứu Block</strong></td><td>Thoại trong gameplay; chơi 1–2 phút</td><td>Tiếp tục là Stranger</td><td>Ngắt khí rồi tháo khóa, hoặc yêu cầu phá cửa khẩn cấp. Block luôn được cứu; cách cứu quyết định thương tích và chi viện địch.</td></tr>
+<tr><td><strong>0-5. Cổng Bastonne</strong></td><td>Đối mặt 15–20 giây; chơi 4–5 phút</td><td>Trở lại Solei</td><td>Hạ James Kid, lấy quyền mở cổng bãi đáp và giữ đường tới Skyjet. Tình trạng Block và việc lộ vị trí thay đổi áp lực trận đấu.</td></tr>
+<tr><td><strong>0-6. Về Marseille</strong></td><td>Kết chương 40–60 giây</td><td>Cả đội</td><td>Xác nhận Block và chứng cứ đã lên tàu; đưa Stranger theo để chăm sóc và tìm hiểu danh tính. Khép cuộc giải cứu, mở cuộc điều tra tiếp theo.</td></tr>
+</tbody></table></div>
 <hr>
 
-<h3 id="gameplay-0-1-stranger-awakening" tabindex="-1"><a class="heading-link" href="#gameplay-0-1-stranger-awakening" aria-label="Link to section">#</a>0-1. Beat 1: Buồng Tra Tấn — Học Sinh Tồn Bản Năng (Stranger)</h3>
-
-<figure class="markdown-image">
-  <img src="imgs/Stage1/Torture_room_1.png" alt="Buồng tra tấn ngầm Bastonne" loading="lazy">
-  <figcaption>Buồng tra tấn ngầm — không gian hẹp dạy phản xạ sinh tồn căn bản</figcaption>
-</figure>
-
-<p>Người chơi bắt đầu mà không có giao diện rườm rà. Nhân vật <strong>Stranger</strong> bị khóa tay vào ghế mổ kim loại. Trên màn hình chỉ xuất hiện một phím bấm duy nhất nhấp nháy nhịp tim.</p>
-
-<h4 id="gameplay-cac-buoc-day-co-che-beat-1" tabindex="-1"><a class="heading-link" href="#gameplay-cac-buoc-day-co-che-beat-1" aria-label="Link to section">#</a>Các bước dạy cơ chế tự nhiên:</h4>
+<h3 id="gameplay-0-1-can-cu-deep" tabindex="-1"><a class="heading-link" href="#gameplay-0-1-can-cu-deep" aria-label="Link to section">#</a>0-1. Căn Cứ Deep — Kiểm Tra Năng Lực Trước Giờ Xuất Kích</h3>
+<figure class="markdown-image"><img src="imgs/Stage1/Chapter0/Team_Deep_Solei_Tutorial_Map.png" alt="Sân tập căn cứ của Deep" loading="lazy"><figcaption>Solei kiểm tra bộ pháp và khả năng phá thủ trong lúc đội hoàn tất chuẩn bị.</figcaption></figure>
+<h4 id="gameplay-0-1-cutscene" tabindex="-1">[DẪN NHẬP] Block chủ động điều tra Bastonne</h4>
+<p>Ở căn cứ ven vịnh Marseille, Mark đang kiểm tra phương tiện. Hai ngày trước, Block lần theo các vụ mất tích và những chuyến hóa chất sinh học vào Bastonne. Tín hiệu cuối cho biết anh đã thu thập tài liệu, nhưng chưa kịp mang ra. Nguồn tin xác nhận anh đang bị giữ để thẩm vấn; đội phải tới trước khi Jamerson chuyển anh sang khu thí nghiệm hoặc thủ tiêu.</p>
+<blockquote>
+<p><strong>Solei:</strong> “Chú Deep! Đã hơn hai ngày rồi kể từ khi Block mất liên lạc ở Bastonne. Anh ấy liều mình thâm nhập để thu thập bằng chứng việc Jamerson làm chuyện sai trái, giờ đang bị giam cầm... Cháu phải đi cùng để đưa anh ấy về!”</p>
+<p><strong>Deep:</strong> “Bastonne không phải là sàn đấu đường phố của lũ côn đồ Marseille, Solei. Jamerson biến nơi đó thành lò mổ ngầm để thủ tiêu bất kỳ ai nắm thóp hắn. Nếu cháu còn nóng vội, cháu không cứu được Block mà chỉ tự nộp mạng. Ta cần biết cháu có đủ nhanh, đủ tỉnh táo để sống sót trở về không.”</p>
+<p><strong>Solei:</strong> “Vậy thì thử xem cháu có theo kịp tốc độ của chú không!”</p>
+<p><strong>Deep:</strong> “Mark còn đang kiểm tra động cơ. Vào sân. Né đòn nặng, tìm sơ hở, rồi phá thế thủ của ta.”</p>
+</blockquote>
+<h4 id="gameplay-0-1-gameplay" tabindex="-1">[GAMEPLAY] Bài kiểm tra sinh tồn thực chiến</h4>
 <ol>
-  <li><strong>Vùng vẫy & Thoát xích:</strong> Nhấn liên tục nút <code>Tấn công</code> để tích lũy Nộ khí, gồng cơ bắp bẻ gãy đai xích sắt. Đoạn xích gãy trở thành vũ khí cận chiến tạm thời quấn quanh nắm đấm.</li>
-  <li><strong>Di chuyển & Né đòn (Dodge):</strong> Tên y viên thứ nhất lao vào vung dùi cui điện. Một vệt đỏ báo hiệu quỹ đạo tấn công (Telegraph) xuất hiện trên sàn. HUD hiển thị phím <code>Né / Lướt (Space / Dash)</code>. Né đòn đúng nhịp (Just-Evade) làm chậm động tác của kẻ địch trong 0.5 giây.</li>
-  <li><strong>Chuỗi đòn liên hoàn (Light & Heavy Combo):</strong> 
-    <ul>
-      <li>Nhấn <code>Tấn công</code> 3 lần liên tiếp: Combo đấm xích cơ bản.</li>
-      <li>Giữ <code>Tấn công</code> (Heavy Attack): Đòn vung xích quét ngang phá vỡ thế phòng thủ của địch.</li>
-    </ul>
-  </li>
-  <li><strong>Tận dụng môi trường (Cầm / Nhặt / Ném):</strong> Tên y viên thứ hai đứng từ xa xả súng điện. Người chơi tiếp cận bình oxy cũ hoặc chiếc cốc kim loại trên bàn mổ, nhấn <code>Tương tác / Nhặt (E)</code>, sau đó hướng cần gạt ném thẳng vào mặt tên lính. Cú va đập gây choáng (Stun), cho phép Stranger lao vào tung đòn kết liễu tàn khốc.</li>
+<li><strong>Di chuyển và né:</strong> Solei tập bước chân, nhảy và lướt tránh vùng chấn động được báo trước. Deep tăng nhịp từ chậm tới tốc độ chiến đấu; người chơi có cơ hội quan sát và thử lại.</li>
+<li><strong>Phá thủ:</strong> Đánh chính diện liên tục bị chặn. Vòng ra sau tạo cơ hội đánh trúng; đòn cước nặng đủ lực mới phá thế thủ. Hai cách có phản hồi riêng, tránh gọi mọi đòn đánh sau lưng là Guard Break.</li>
+<li><strong>Kết hợp:</strong> Đọc nhịp tấn công, né, phá thủ rồi nối đòn để thắng thanh máu đấu tập. Thua được hồi phục và tập lại, không thành một thất bại cốt truyện.</li>
 </ol>
-
-<p><em>Kết thúc Beat 1:</em> Còi báo động rú lên. Stranger nhặt chiếc chìa khóa trên xác lính, mở cánh cửa sắt bước ra hành lang phụ.</p>
-
+<p>Đây là một trận tập có giới hạn lực, không xác nhận Solei mạnh hơn Deep trong chiến đấu sinh tử. Deep kết thúc ngắn gọn: <em>“Được. Cháu theo kịp. Giữ nhịp như thế khi vào Bastonne.”</em></p>
+<p><strong>Phân công trước khi đi:</strong> Deep và Tulas vào cùng Solei; Mark phụ trách Skyjet và liên lạc ngoài khu giam. Cano giúp tiếp cận bến ngầm, Skyjet sẽ đón tại bãi đáp ngoài cổng khi đội mở được đường.</p>
 <hr>
 
-<h3 id="gameplay-0-2-the-breach-solei-deep" tabindex="-1"><a class="heading-link" href="#gameplay-0-2-the-breach-solei-deep" aria-label="Link to section">#</a>0-2. Beat 2: Đột Phá Bến Ngầm — Nhập Môn Chỉ Huy Chiến Thuật (Solei & Deep)</h3>
-
-<figure class="markdown-image">
-  <img src="imgs/Stage1/Bastonne_prison_entrance_playable.png" alt="Sảnh bến ngầm Bastonne" loading="lazy">
-  <figcaption>Sảnh bến ngầm — đấu trường rộng mở thực hành hệ thống chỉ huy đồng đội</figcaption>
-</figure>
-
-<p>Góc máy chuyển mượt mà ra ngoài cửa bến ngầm. Người chơi trực tiếp điều khiển <strong>Solei</strong>, với <strong>Deep</strong> (General) và <strong>Tulas</strong> hỗ trợ. Tại đây, kẻ địch là đội tuần tra Bastonne gồm lính mang khiên chống bạo động và lính súng trường.</p>
-
-<h4 id="gameplay-day-he-thong-command-thuc-te" tabindex="-1"><a class="heading-link" href="#gameplay-day-he-thong-command-thuc-te" aria-label="Link to section">#</a>Dạy hệ thống Command thực tế (Chuẩn mã nguồn):</h4>
-<div class="table-wrap">
-  <table>
-    <thead>
-      <tr>
-        <th>Thao tác phím</th>
-        <th>Hành động trong game</th>
-        <th>Áp dụng chiến thuật tại sảnh</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Giữ <code>Shift</code></strong></td>
-        <td>Mở <strong>Command HUD</strong>, làm chậm nhịp camera, hiện danh sách General</td>
-        <td>Solei dừng di chuyển tạm thời để quan sát bố cục chiến trường</td>
-      </tr>
-      <tr>
-        <td><strong>Giữ <code>Shift</code> + Nhấn <code>Tab</code></strong></td>
-        <td>Đổi mục tiêu chỉ định đồng đội</td>
-        <td>Chuyển tiêu điểm chọn sang <strong>Deep</strong> hoặc <strong>Tulas</strong></td>
-      </tr>
-      <tr>
-        <td><strong>Giữ <code>Shift</code> + Nhấn <code>Trái/Phải</code></strong></td>
-        <td><strong>Lệnh Giữ Vị Trí (Hold)</strong></td>
-        <td>Lệnh cho Deep trấn thủ tại cửa hành lang hẹp, chặn đàn lính tràn ra</td>
-      </tr>
-      <tr>
-        <td><strong>Giữ <code>Shift</code> + Nhấn <code>Xuống</code></strong></td>
-        <td><strong>Lệnh Tập Hợp (Regroup)</strong></td>
-        <td>Gọi cả đội rút về phía sau vị trí Solei khi ụ súng máy quét đạn</td>
-      </tr>
-      <tr>
-        <td><strong>Giữ <code>Shift</code> + Nhấn <code>Lên</code></strong></td>
-        <td><strong>Lệnh Tự Do (Free)</strong></td>
-        <td>Trả AI đồng đội về trạng thái chủ động tấn công mục tiêu gần nhất</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<h4 id="gameplay-tinh-huong-khac-che-phong-thu" tabindex="-1"><a class="heading-link" href="#gameplay-tinh-huong-khac-che-phong-thu" aria-label="Link to section">#</a>Tình huống khắc chế phòng thủ:</h4>
-<p>Lính khiên Bastonne hoàn toàn miễn nhiễm sát thương trực diện từ song đao của Solei. Trò chơi hướng dẫn:</p>
-<ol>
-  <li>Giữ <code>Shift</code>, chọn <strong>Deep</strong>, nhấn <code>Tấn công + 0</code> (Kỹ năng hỗ trợ đặc trưng): Deep hú vang, lao thẳng vào đội hình lính khiên bằng cú húc vai búa tạ, đập tan thế đỡ (Guard Break).</li>
-  <li>Solei lập tức lướt ra sau lưng kẻ địch đang bị choáng, kích hoạt chuỗi đòn tốc độ cao dọn sạch chiến trường.</li>
-</ol>
-
+<h3 id="gameplay-0-2-dot-nhap-bastonne" tabindex="-1"><a class="heading-link" href="#gameplay-0-2-dot-nhap-bastonne" aria-label="Link to section">#</a>0-2. Đột Nhập Bastonne — Cứu Người Và Thu Hồi Chứng Cứ</h3>
+<figure class="markdown-image"><img src="imgs/Stage1/Chapter0/stage0_to_bastonne_cutscene.gif" alt="Cano tiếp cận Bastonne trong đêm" loading="lazy"><figcaption>Tiếp cận bằng đường nước; phương án rút bằng Skyjet đã được chuẩn bị.</figcaption></figure>
+<h4 id="gameplay-0-2-cutscene" tabindex="-1">[CHUYỂN TIẾP] Kế hoạch và phản ứng của địch</h4>
+<p>Tulas mở lối qua rào chắn đường nước. Khi đội vào sảnh ngoài, hệ thống phát hiện đột nhập nhưng chưa biết đích đến của họ.</p>
+<blockquote>
+<p><strong>Deep:</strong> “Mục tiêu không đổi: Tìm Block, lấy tài liệu giải phẫu của Jamerson, và rút lui.”</p>
+<p><strong>Mark, qua bộ đàm:</strong> “Tôi chờ tín hiệu ở bãi đáp ngoài cổng. Giữ tài liệu trong túi chống nước.”</p>
+<p><strong>James Kid, qua loa:</strong> “Khóa sảnh Tây. Giữ các chốt trong. Chưa xác định được mục tiêu của nhóm xâm nhập.”</p>
+</blockquote>
+<p><strong>Hai mục tiêu được theo dõi riêng:</strong> Cứu Block; thu hồi tập chứng cứ. Tài liệu bao gồm sổ chuyển người, vận đơn hóa chất và phiếu thí nghiệm có mã khớp nhau. Một ghi chép về tù nhân vô danh là manh mối phụ trong tập này, không thay thế toàn bộ chứng cứ.</p>
+<figure class="markdown-image"><img src="imgs/Stage1/Chapter0/sanh_1.png" alt="Sảnh khu giam thường Bastonne" loading="lazy"><figcaption>Mỗi phòng bổ sung một tình huống tác chiến hoặc thông tin dẫn đường.</figcaption></figure>
+<h4 id="gameplay-0-2-gameplay" tabindex="-1">[GAMEPLAY] Sáu phòng có chức năng riêng</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>Phòng</th><th>Hành động</th><th>Thông tin hoặc kết quả</th></tr></thead>
+<tbody>
+<tr><td>Khu giam 1</td><td>Hạ lính tuần tra; thử ném vật thể để ngắt nhịp đám đông.</td><td>Thấy tù nhân bị đưa đi mà không ghi điểm đến công khai.</td></tr>
+<tr><td>Khu giam 2</td><td>Vượt đội hình khiên bằng vòng sườn hoặc phối hợp Deep phá tuyến.</td><td>Vận dụng bài đấu tập trong đội hình thật.</td></tr>
+<tr><td>Khu giam 3</td><td>Giải cứu tù nhân ở buồng phụ nếu muốn; tiếp tục dọn đường.</td><td>Tù nhân chỉ ra tủ vật chứng và đường vào thẩm vấn; có thể chỉ vị trí đồ cứu thương. Không biến người được cứu thành vật rơi chiến lợi phẩm.</td></tr>
+<tr><td>Thẩm vấn 1</td><td>Vượt đường ống rò khí có tín hiệu trước, hạ toán giữ van.</td><td>Nhận biết quy trình khí mê và nguy hiểm khi tăng nồng độ.</td></tr>
+<tr><td>Thẩm vấn 2</td><td>Dọn phòng, tương tác tủ vật chứng để lấy tài liệu Block bị tịch thu.</td><td>Mục tiêu chứng cứ hoàn tất; có lệnh chuyển Block vào biệt giam và ghi chép mẫu 07 không có phản ứng gây mê dự kiến.</td></tr>
+<tr><td>Thẩm vấn 3</td><td>Hạ chốt điều khiển, tới lối biệt giam.</td><td>James Kid ra lệnh lockdown; cổng ngăn cả đội tiếp cận Block. Chốt bảo trì chỉ mở từ phía trong.</td></tr>
+</tbody></table></div>
+<figure class="markdown-image"><img src="imgs/Stage1/Chapter0/sanh_2.png" alt="Khu thẩm vấn và đường ống khí" loading="lazy"><figcaption>Tài liệu và cấu trúc đường ống cùng dẫn đội vào khu biệt giam.</figcaption></figure>
+<p><strong>Tương tác chứng cứ bắt buộc:</strong> Tủ nằm trên đường đi, có nhãn và phản hồi rõ. Cửa sang phòng tiếp theo yêu cầu đã dọn phòng và đã cất tài liệu. Không tự cộng chứng cứ chỉ vì xem thoại vào phòng; hủy tương tác trước khi nhận tài liệu không hoàn tất mục tiêu.</p>
+<blockquote><p><strong>Solei:</strong> “Sổ chuyển người, vận đơn hóa chất... đúng những mã Block gửi về. Cháu đã cất đủ.”</p><p><strong>Deep:</strong> “Giữ nguyên bản. Giờ tới chỗ Block.”</p></blockquote>
+<p><strong>Khí Neuro-B:</strong> Dùng để gây mê khi kiểm soát đúng nồng độ; phơi nhiễm cao trong phòng kín có thể gây suy hô hấp. Stranger kháng tác dụng gây mê không đồng nghĩa miễn nhiễm mọi độc chất, nhiệt hoặc chấn thương.</p>
 <hr>
 
-<h3 id="gameplay-0-3-cell-block-dilemma" tabindex="-1"><a class="heading-link" href="#gameplay-0-3-cell-block-dilemma" aria-label="Link to section">#</a>0-3. Beat 3: Dãy Biệt Giam — Áp Lực Thời Gian & Lựa Chọn Cứu Block</h3>
-
-<figure class="markdown-image">
-  <img src="imgs/Stage1/Special_Jail_detailed_source.png" alt="Dãy biệt giam đặc biệt" loading="lazy">
-  <figcaption>Dãy biệt giam đặc biệt — nơi hai mạch truyện giao thoa thành một lựa chọn sinh tử</figcaption>
-</figure>
-
-<p>Sau trận đụng độ ngỡ ngàng giữa Đội Deep và Stranger (được thể hiện qua đối thoại kịch tính), toàn bộ Dãy Giam Đặc Biệt bị kích hoạt giao thức tự hủy cục bộ. Khí axit ăn mòn bắt đầu phun vào buồng số 5 của Block. Đồng hồ đếm ngược <strong>45 GIÂY</strong> xuất hiện ở góc trên màn hình.</p>
-
-<h4 id="gameplay-co-che-lua-chon-dilemma" tabindex="-1"><a class="heading-link" href="#gameplay-co-che-lua-chon-dilemma" aria-label="Link to section">#</a>Cơ chế lựa chọn Dilemma (Không phải menu bấm nút, mà là hành động trực tiếp):</h4>
-<div class="table-wrap">
-  <table>
-    <thead>
-      <tr>
-        <th>Thao tác của người chơi</th>
-        <th>Lựa chọn tương ứng</th>
-        <th>Hệ quả tác động ngay lập tức vào Gameplay</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Điều khiển <strong>Stranger</strong> chạy tới hốc xả nhiệt đỏ rực, giữ phím <code>Tương tác (E)</code> trong 3 giây.</td>
-        <td><strong>Stranger Chấp Nhận Bị Bỏng</strong><br><em>(Dùng cơ thể dị biệt để cứu người)</em></td>
-        <td>
-          • Cửa mở ngay ở giây thứ 15. Block thoát ra lành lặn, nhặt tấm khiên thép của lính gác.<br>
-          • <strong>Lợi thế trận Boss:</strong> Block trở thành đồng đội thứ 3 có thể nhận lệnh (<code>Hold</code> chắn đòn cho đội).<br>
-          • <strong>Cái giá:</strong> Thanh máu của Stranger bị khóa 15% Max HP, mở khóa trait nội tại <em>Ý Chí Bất Diệt</em>.
-        </td>
-      </tr>
-      <tr>
-        <td>Không dùng Stranger; điều khiển <strong>Deep</strong> tiếp cận cánh cửa thép buồng giam và nhấn combo phá cửa liên tục.</td>
-        <td><strong>Deep & Mark Dùng Sức Phá Cửa</strong><br><em>(Bảo toàn thân thể Stranger)</em></td>
-        <td>
-          • Cửa bật tung khi đồng hồ còn đúng 2 giây. Khí axit đã kịp tràn ngập buồng.<br>
-          • <strong>Bất lợi trận Boss:</strong> Block bị nhiễm độc ngã gục, Mark phải ở lại sơ cứu. Trận Boss chỉ có 3 người (Solei, Deep, Stranger).<br>
-          • <strong>Gánh nặng:</strong> Đội phải cử người che chắn cho khu vực Block nằm nghỉ trong lúc giao chiến.
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<h3 id="gameplay-0-3-khu-biet-giam-stranger" tabindex="-1"><a class="heading-link" href="#gameplay-0-3-khu-biet-giam-stranger" aria-label="Link to section">#</a>0-3. Phía Trong Cửa Khóa — Stranger Mở Đường</h3>
+<figure class="markdown-image"><img src="imgs/Stage1/Chapter0/Torture_room_1.png" alt="Buồng biệt giam số 7" loading="lazy"><figcaption>Đội bị chặn bên ngoài; một người ở phía trong có thể mở chốt bảo trì.</figcaption></figure>
+<h4 id="gameplay-0-3-cutscene" tabindex="-1">[CHUYỂN GÓC NHÌN] Tiếng gọi đi qua đường thông khí</h4>
+<p>Deep gọi Block qua ống thông khí. Stranger tỉnh dậy ở buồng 7, nghe Block ho từ buồng 5 cùng dãy. Anh yếu vì bị giam và thiếu ăn, vẫn tỉnh giữa khí mê. Máy quay nối tiếng gọi bên ngoài với hai cửa và chốt bảo trì phía trong, giúp người chơi hiểu địa hình.</p>
+<blockquote><p><strong>Deep:</strong> “Block! Có nghe không? Gõ vào đường ống. Chúng tôi ở ngoài cổng bảo trì.”</p><p><strong>Block:</strong> “Người ở buồng bảy... chốt cạnh cửa... mở cho họ. Tôi không tới được.”</p></blockquote>
+<figure class="markdown-image"><img src="imgs/Stage1/Chapter0/stranger.png" alt="Stranger gượng dậy trong buồng giam" loading="lazy"><figcaption>Stranger chưa đủ sức giao chiến; hành động cần thiết lúc này là phối hợp mở đường.</figcaption></figure>
+<h4 id="gameplay-0-3-gameplay" tabindex="-1">[GAMEPLAY] Gửi tín hiệu rồi mở chốt</h4>
+<p>Quyền điều khiển chuyển sang Stranger và giữ đến hết đoạn cứu Block. Hai phương án tạo tín hiệu là lựa chọn nhỏ về mức độ kín đáo, không được quảng cáo như một quyết định đạo đức lớn:</p>
+<div class="table-wrap"><table><thead><tr><th>Tín hiệu</th><th>Phản hồi tức thời</th><th>Hệ quả</th></tr></thead><tbody>
+<tr><td>Gõ khung giường nối ống hai lần</td><td>Deep đáp lại qua đường ống, xác định chốt phải phối hợp.</td><td>Địch vẫn biết có đột nhập nhưng chưa xác định dãy giam và đường rút của đội.</td></tr>
+<tr><td>Đập khay vào song sắt</td><td>Đội xác định vị trí nhanh. Bộ đàm lính: “Dãy bảy! Chuyển tổ súng lên cổng bãi đáp!”</td><td>Vị trí bị lộ; chi viện sẽ chặn đường rút. Không khẳng định toàn pháo đài trước đó im lặng.</td></tr>
+</tbody></table></div>
+<p>Sau tín hiệu, người chơi phải tới mở <strong>chốt bảo trì phía trong</strong>. Deep chịu lực cổng ở phía ngoài khi Stranger nhả chốt. Đây là nguyên nhân đội đi qua được cổng phong tỏa; không dùng một cảnh phá cửa khác để bỏ qua đóng góp của Stranger. Cửa buồng 7 và cổng bảo trì thuộc cùng cơ cấu nhả khẩn cấp.</p>
+<h4 id="gameplay-0-3-gap-mat" tabindex="-1">[THOẠI NGẮN] Chưa biết danh tính, đã có việc cần làm</h4>
+<blockquote><p><strong>Deep:</strong> “Cậu mở chốt? Block ở đâu?”</p><p><strong>Stranger:</strong> “Buồng năm. Tôi nghe anh ấy qua vách. Tên tôi... tôi không nhớ.”</p><p><strong>Solei:</strong> “Được. Chỉ đường cho chúng tôi.”</p></blockquote>
+<p>Giữ sự thận trọng nhưng không kéo dài một cuộc tra hỏi khi Block đang gặp nguy hiểm. Tên gọi Ghost chưa phải lời giải về thân phận.</p>
 <hr>
 
-<h3 id="gameplay-0-4-boss-gilles" tabindex="-1"><a class="heading-link" href="#gameplay-0-4-boss-gilles" aria-label="Link to section">#</a>0-4. Beat 4: Đại Chiến Trùm — Cai Ngục Gilles "Kẻ Nuốt Chìa Khóa"</h3>
+<h3 id="gameplay-0-4-cuu-block-dilemma" tabindex="-1"><a class="heading-link" href="#gameplay-0-4-cuu-block-dilemma" aria-label="Link to section">#</a>0-4. Cứu Block — Hai Phương Án Có Chi Phí Rõ Ràng</h3>
+<figure class="markdown-image"><img src="imgs/Stage1/Chapter0/Special_Jail_detailed_source.png" alt="Buồng giữ Block và hệ thống van" loading="lazy"><figcaption>Người chơi nhìn được đường tới van và cảnh báo trên cơ cấu phá cửa khẩn cấp.</figcaption></figure>
+<h4 id="gameplay-0-4-gameplay" tabindex="-1">[GAMEPLAY] Tiếp tục điều khiển Stranger</h4>
+<p>Block vẫn chủ động chỉ dẫn dù suy yếu: <em>“Tài liệu bị tịch thu ở khu thẩm vấn. Đã lấy được chưa? ...Tốt. Khóa đường cấp trước. Đừng bẻ chốt đỏ khi bơm còn chạy.”</em> Anh quan tâm cả bằng chứng lẫn an toàn của đội, không chỉ chờ được mang đi.</p>
+<p><strong>Nguyên nhân nguy hiểm:</strong> Chốt đỏ là cơ cấu mở cưỡng bức. Khi bơm còn hoạt động, phá chốt kích hoạt một nhịp xả áp từ đường khí vào buồng trước khi khóa nhả. Nhãn cảnh báo và tiếng bơm báo trước hậu quả; không giải thích bằng việc cửa mở đơn thuần làm khí trong phòng đậm hơn.</p>
+<div class="table-wrap"><table><thead><tr><th>Phương án</th><th>Hành động và lợi thế</th><th>Chi phí và kết quả</th></tr></thead><tbody>
+<tr><td><strong>Ngắt khí rồi tháo khóa</strong></td><td>Stranger theo đường phụ tới van; đội giữ lối. Ngắt bơm, xác nhận đèn xanh, quay lại nhả khóa cho Block.</td><td>Mất thời gian di chuyển và giữ vị trí. Block không chịu thêm thương tích, còn khả năng hỗ trợ có giới hạn khi rút lui.</td></tr>
+<tr><td><strong>Mở cưỡng bức ngay</strong></td><td>Stranger ra hiệu để Deep phá chốt ngay tại cửa, không phải đi vòng qua van.</td><td>Đưa Block ra nhanh nhưng nhịp xả khí làm anh suy yếu; hệ thống báo vị trí cửa bị phá. Đội cần bảo vệ anh và đối phó chi viện.</td></tr>
+</tbody></table></div>
+<p>Không gắn nhãn lựa chọn là “đúng/sai” hoặc “bình tĩnh/hấp tấp”. Người chơi được biết cái giá trước khi quyết định. Bản hoàn thiện phải thể hiện chi phí giữ đường thật; nếu chỉ có hai tương tác đơn giản thì ghi rõ là prototype.</p>
+<p><strong>Không dùng thanh đếm ngược giả:</strong> Ở bản tương tác theo hội thoại, sự khẩn cấp thể hiện qua môi trường và lời nói. Chỉ thêm đồng hồ chịu đựng khi có cơ chế hoàn chỉnh: dừng trong đoạn khóa điều khiển, cảnh báo rõ, và khi hết thời gian Deep cứu khẩn cấp khiến Block bị thương thay vì đổi canon thành Block chết. Cơ chế này chưa phải yêu cầu của đợt tích hợp narrative đầu tiên.</p>
+<blockquote><p><strong>Nếu ngắt khí:</strong> Block: “Tôi tự đi được. Để tôi giữ phía sau.”</p><p><strong>Nếu phá cửa:</strong> Block: “Đừng dừng lại... giữ tài liệu. Tôi cần người đỡ một đoạn.”</p><p><strong>Deep:</strong> “Cả người lẫn tài liệu đều ra cùng chúng ta. Đi.”</p></blockquote>
+<p>Stranger đã giúp đội mở đường và cứu Block bằng hành động. Chưa cần trao ngay lòng tin tuyệt đối. Hoàn tất đoạn cứu mới trả quyền điều khiển về Solei; chế độ cho chọn nhân vật khôi phục nhân vật trước đó.</p>
+<hr>
 
-<figure class="markdown-image">
-  <img src="imgs/Stage1/Bastonne.png" alt="Sân đấu trùm trước cổng bến Bastonne" loading="lazy">
-  <figcaption>Cổng vòm bến tàu Bastonne — đấu trường sinh tử giữa mưa bão</figcaption>
-</figure>
+<h3 id="gameplay-0-5-cong-bastonne-james-kid" tabindex="-1"><a class="heading-link" href="#gameplay-0-5-cong-bastonne-james-kid" aria-label="Link to section">#</a>0-5. Cổng Bastonne — James Kid Chặn Đường Tới Skyjet</h3>
+<figure class="markdown-image"><img src="imgs/Stage1/Chapter0/Bastonne.png" alt="Cổng dẫn tới bãi đáp Bastonne" loading="lazy"><figcaption>Đội phải mở cổng bãi đáp và giữ hành lang rút lui cho tới khi Mark đón được mọi người.</figcaption></figure>
+<h4 id="gameplay-0-5-cutscene" tabindex="-1">[ĐỐI MẶT] Người ra lệnh lockdown</h4>
+<p>James Kid, giọng chỉ huy đã nghe qua loa, giữ quyền mở cổng bãi đáp. Block tự đi nếu được cứu an toàn; nếu bị thương anh được dìu vào vị trí có vật che. Không dùng cùng một cảnh “dìu Block” cho cả hai nhánh.</p>
+<blockquote><p><strong>James Kid:</strong> “Để tù nhân và túi tài liệu lại. Các người chưa qua được cổng này đâu.”</p><p><strong>Mark, qua bộ đàm:</strong> “Skyjet đã tới. Hạ chốt phòng thủ, mở cổng bãi đáp cho tôi.”</p><p><strong>Deep:</strong> “Solei, giữ khoảng cách với súng. Ta mở tuyến cho cháu.”</p></blockquote>
+<h4 id="gameplay-0-5-gameplay" tabindex="-1">[GAMEPLAY] Vận dụng bài tập trong một trận thật</h4>
+<p>Đánh bại James Kid và lực lượng phong tỏa, giành bộ điều khiển cổng, rồi đưa đội qua bãi đáp. Cổng mở vì quyền điều khiển đã đổi chủ, không vì một thanh máu tự làm cổng bật lên. James Kid dùng bộ chiêu phù hợp asset chiến đấu thực tế; vũ khí và kỹ năng mới cần được kiểm chứng trước khi coi là đã tích hợp.</p>
+<div class="table-wrap"><table><thead><tr><th>Trạng thái</th><th>Biến đổi trận đấu</th><th>Ý nghĩa lựa chọn</th></tr></thead><tbody>
+<tr><td>Chưa lộ dãy giam/đường rút</td><td>James Kid và lực lượng chặn cổng thường trực. Trận vẫn có đủ áp lực.</td><td>Đội tránh được chi viện, không khiến boss trở thành một chiến thắng tự động.</td></tr>
+<tr><td>Đã lộ vị trí do khay hoặc phá cửa</td><td>Thêm chi viện súng được báo qua radio. Đích thiết kế có hai đợt từ tháp canh, có đường ngắm và thời gian cảnh báo đọc được.</td><td>Người chơi nhận ra đúng mệnh lệnh điều quân đã nghe trong biệt giam.</td></tr>
+<tr><td>Block không bị thương thêm</td><td>Anh dùng khiên bảo vệ một khoảng rút lui, hỗ trợ theo từng đợt vì vẫn mệt sau giam giữ.</td><td>Block tiếp tục là đồng đội chủ động; không hồi phục thần kỳ thành hoàn toàn khỏe mạnh.</td></tr>
+<tr><td>Block bị thương</td><td>Đội bố trí che chắn và người dìu. Bản hoàn thiện cần cơ chế bảo vệ rõ, không chỉ một cờ trạng thái.</td><td>Áp lực chiến thuật tăng; không quy lỗi đạo đức lên Stranger.</td></tr>
+</tbody></table></div>
+<p>Solei đọc đòn nặng để né, xử lý thế thủ và phối hợp Deep như ở sân tập. Stranger còn yếu nên chỉ giúp mở chốt, chuyển đồ hoặc cản một lính lọt tuyến; không đột ngột trở thành chiến binh toàn năng. Không còn mục tiêu bảo vệ cano ở đoạn này: điểm đến là Skyjet.</p>
+<p>Đánh bại James Kid, lấy bộ điều khiển, mở cổng. Mark đưa Skyjet vào vị trí đón; người chơi hoàn tất đường rút cùng đội và chứng cứ.</p>
+<hr>
 
-<p><strong>Cơ chế Boss Gilles:</strong> Đây là trùm kiểm tra toàn bộ kỹ năng người chơi đã học: Tránh né đòn nặng, dùng lệnh Command đúng thời điểm, và tận dụng vật thể ném để phá chiêu.</p>
+<h3 id="gameplay-0-6-skyjet-ve-marseille" tabindex="-1"><a class="heading-link" href="#gameplay-0-6-skyjet-ve-marseille" aria-label="Link to section">#</a>0-6. Skyjet — Hoàn Thành Hai Mục Tiêu, Giữ Lại Một Bí Ẩn</h3>
+<figure class="markdown-image"><img src="imgs/Stage1/Chapter0/stage0_shot2_escape.gif" alt="Rời Bastonne hướng về Marseille trong khói lửa" loading="lazy"><figcaption>Cuộc giải cứu kết thúc; pháo đài Bastonne rực lửa và còi báo động khi đội thoát ra biển mở đường cho cuộc điều tra ở Marseille.</figcaption></figure>
+<h4 id="gameplay-0-6-cutscene" tabindex="-1">[KẾT CHƯƠNG] Lời thoại theo kết quả thật</h4>
+<blockquote>
+<p><strong>Solei:</strong> “Đủ người. Tài liệu vẫn nguyên.”</p>
+<p><strong>Block, nếu được cứu an toàn:</strong> “Tốt. Đối chiếu những mã vận chuyển ấy ở Marseille. Chúng dẫn tới nơi khác ngoài Bastonne.”</p>
+<p><strong>Block, nếu bị thương:</strong> “Tôi cần bác sĩ... nhưng đừng để mất sổ vận chuyển. Nó dẫn tới đầu mối ở Marseille.”</p>
+<p><strong>Deep, đưa nước cho Stranger:</strong> “Cậu đã mở đường cho chúng tôi và giúp đưa Block ra. Đi cùng tới Marseille. Chúng ta tìm chỗ chữa trị trước.”</p>
+<p><strong>Stranger:</strong> “Tôi vẫn không nhớ tên mình.”</p>
+<p><strong>Mark:</strong> “Trong hồ sơ chỉ có số mẫu. Không một danh tính để đối chiếu... một bóng ma.”</p>
+<p><strong>Deep:</strong> “Tạm gọi cậu là Ghost, nếu cậu đồng ý. Chuyện còn lại để sau.”</p>
+</blockquote>
+<p>Không khẳng định Bastonne “không có hồ sơ”: có hồ sơ thí nghiệm nhưng thiếu danh tính. Không cảm ơn “tiếng gõ” nếu người chơi đã đập khay; dùng hành động chung “mở đường”, hoặc thoại đúng nhánh. Ghost là biệt danh, Stranger là tên định danh nhân vật trong tài liệu và hệ thống.</p>
+<p>Máy quay cho thấy Marseille phía trước. Chương khép lại bằng hai kết quả cụ thể: Block thoát và chứng cứ được bảo toàn. Hai câu hỏi còn mở: mạng lưới của Jamerson đi tới đâu, và vì sao Stranger vẫn tỉnh trước Neuro-B? Chưa giải thích nguồn gốc siêu nhiên hoặc thêm độc thoại phản diện xác nhận mọi bí mật.</p>
+<hr>
 
-<h4 id="gameplay-giai-doan-1-do-te-sat-da" tabindex="-1"><a class="heading-link" href="#gameplay-giai-doan-1-do-te-sat-da" aria-label="Link to section">#</a>Giai đoạn 1 (100% – 50% HP): Đồ Tể Sắt Đá</h4>
+<h3 id="gameplay-0-tong-ket-gia-tri-ftue" tabindex="-1"><a class="heading-link" href="#gameplay-0-tong-ket-gia-tri-ftue" aria-label="Link to section">#</a>Tổng Kết Trải Nghiệm Và Điều Kiện Hoàn Tất</h3>
 <ul>
-  <li><strong>Vũ khí:</strong> Chùy máy khổng lồ + Khiên sắt gai.</li>
-  <li><strong>Bộ chiêu thức:</strong>
-    <ul>
-      <li><em>Bổ Chùy Rung Chuyển:</em> Nện mạnh xuống đất gây sóng xung kích lan tỏa. <strong>Đối phó:</strong> Nhấn <code>Nhảy</code> qua sóng xung kích.</li>
-      <li><em>Càn Quét 360°:</em> Vung chùy quay tròn một vòng rộng. <strong>Đối phó:</strong> Lướt giật lùi hoặc ra lệnh <code>Regroup</code> để đồng đội AI lùi xa.</li>
-      <li><em>Húc Khiên Phản Đòn:</em> Đứng thủ thế khiên gai. Nếu tấn công lúc này sẽ bị phản đòn ngã quỵ. <strong>Đối phó:</strong> Dùng lệnh cho Deep húc phá khiên hoặc dùng Stranger ném thùng sắt sau lưng hắn.</li>
-    </ul>
-  </li>
-  <li><strong>Nếu Block được cứu lành lặn:</strong> Người chơi có thể đặt lệnh <code>Block - Hold</code> ngay trước mặt Gilles khi hắn tụ lực bổ chùy. Khiên thép của Block sẽ triệt tiêu hoàn toàn đòn đánh, tạo sơ hở cho Solei và Stranger dồn sát thương cực đại.</li>
+<li><strong>Block:</strong> Người điều tra chủ động, có nguyên tắc, tiếp tục cung cấp thông tin và hỗ trợ trong khả năng sau khi được cứu.</li>
+<li><strong>Deep – Solei:</strong> Thủ lĩnh kiểm tra năng lực sinh tồn; Solei chứng minh tốc độ, khả năng phá thủ và độ tin cậy tác chiến. Không ép một bài học cảm xúc thay cho mục tiêu thực chiến.</li>
+<li><strong>Stranger:</strong> Hợp tác từ bên trong cổng khóa, tiếp tục cứu Block rồi mới rút. Lòng tin bắt đầu từ việc đã làm, không từ lời giải thích về nguồn gốc.</li>
+<li><strong>Nhiệm vụ kép:</strong> Tài liệu là vật chứng bắt buộc có tương tác và trạng thái, không chỉ lore tùy chọn. Thu hồi trước khi khóa tuyến vào biệt giam để không buộc quay ngược cứu người giữa cao trào.</li>
+<li><strong>Hệ quả độc lập:</strong> Đập khay rồi ngắt khí vẫn có chi viện nhưng Block không bị thương thêm. Gõ kín đáo rồi phá cửa vẫn làm lộ vị trí và gây thương tích. Ngắt khí không xóa báo động đã gây.</li>
+<li><strong>Liên tục:</strong> Không lặp đoạn giới thiệu đã hoàn tất khi retry trái thiết kế; giữ kết quả nhiệm vụ qua chuyển map/checkpoint. Debug vào phòng thu hồi chứng cứ phải tự lấy tài liệu, không tự tặng mục tiêu đang kiểm thử.</li>
 </ul>
-
-<h4 id="gameplay-giai-doan-2-cuong-bao-ta-than" tabindex="-1"><a class="heading-link" href="#gameplay-giai-doan-2-cuong-bao-ta-than" aria-label="Link to section">#</a>Giai đoạn 2 (Dưới 50% HP): Cuồng Bạo Tà Thần</h4>
-<p>Gilles bẻ gãy chùy máy, độc dược và máu tà thần phát tác khiến cơ thể hắn biến dạng, hai tay biến thành vuốt độc dài ngoằng, tốc độ tăng gấp đôi.</p>
-<ul>
-  <li><strong>Sàn đấu nhiễm độc:</strong> Gilles liên tục rỉ dịch độc xuống đất tạo các vũng axit. Đứng trên vũng axit làm tăng <em>Độ Nhiễu</em> và rút máu nhanh chóng. Người chơi phải linh hoạt di chuyển giữa các bệ đá khô.</li>
-  <li><strong>Chiêu Tụ Lực Tuyệt Diệt (Enrage Charge):</strong> Gilles gầm lên, mắt rực đỏ, chuẩn bị lao xuyên màn hình ghim bất kỳ ai vào tường đá (sát thương chí mạng 80% HP).
-    <ul>
-      <li><strong>Cách hóa giải:</strong> Trong lúc hắn tụ lực 3 giây, Tulas tạo một bệ nước trên sàn hoặc người chơi nhặt một khối xích sắt nặng ném thẳng vào đầu hắn. Cú ném ngắt đòn tụ lực, khiến Gilles choáng váng quỳ sụp xuống sàn (Knockdown Window).</li>
-      <li>Đây là thời điểm dồn toàn lực phối hợp combo cả đội để dứt điểm trận đấu.</li>
-    </ul>
-  </li>
-</ul>
-
-<hr>
-
-<h3 id="gameplay-0-5-extraction-va-checkpoint" tabindex="-1"><a class="heading-link" href="#gameplay-0-5-extraction-va-checkpoint" aria-label="Link to section">#</a>0-5. Beat 5: Thoát Hiểm, Kiểm Tra Kết Quả & Điểm Lưu Logic</h3>
-
-<h4 id="gameplay-phan-thuong-va-vat-pham-chuyen-giao" tabindex="-1"><a class="heading-link" href="#gameplay-phan-thuong-va-vat-pham-chuyen-giao" aria-label="Link to section">#</a>Phần thưởng và vật phẩm chuyển giao sang Chapter 1:</h4>
-<ul>
-  <li><strong>Thẻ Khóa Máu của Gilles:</strong> Mở khóa cổng bến, đồng thời lưu trữ dữ liệu mã hóa về trạm thí nghiệm ngoài khơi Marseille.</li>
-  <li><strong>Sổ Chuyển Tù Nhân Bastonne:</strong> Chứng minh sự liên kết giữa chính quyền thành phố, nhà Obsworth và các vụ bắt cóc quy mô lớn.</li>
-  <li><strong>Trạng thái Block:</strong> Lưu giữ cờ trạng thái (<code>BlockInjuryState = Stable</code> nếu chọn cứu nhanh, hoặc <code>Injured</code> nếu phá cửa chậm).</li>
-  <li><strong>Mở khóa Stranger (Ghost):</strong> Sau trận đánh, Stranger chính thức được gắn mác nhân vật điều khiển được trong danh sách đổi đội hình ở nơi trú ẩn.</li>
-</ul>
-
-<h4 id="gameplay-diem-luu-checkpoint-than-thien" tabindex="-1"><a class="heading-link" href="#gameplay-diem-luu-checkpoint-than-thien" aria-label="Link to section">#</a>Điểm lưu (Checkpoints) thân thiện với người chơi:</h4>
-<ol>
-  <li><strong>Checkpoint 1:</strong> Ngay sau khi Stranger thoát khỏi buồng mổ (Hết Beat 1).</li>
-  <li><strong>Checkpoint 2:</strong> Trước khi vào Dãy Biệt Giam Số 5 (Đầu Beat 3).</li>
-  <li><strong>Checkpoint 3:</strong> Trước cửa vòm bến tàu ngầm (Ngay trước trận Boss Gilles).</li>
-</ol>
-<p><em>Quy tắc tải lại:</em> Nếu người chơi thất bại trước Boss Gilles, game tải lại ngay tại Checkpoint 3 với đầy đủ máu và trạng thái đã chọn trước đó, tuyệt đối không bắt người chơi xem lại cutscene mở đầu hay lặp lại màn giải đố buồng giam.</p>
-
-<p>Đọc diễn biến cốt truyện và hội thoại đầy đủ tại <a href="#story-stage-0-can-cu-oi-cua-deep-va-nha-tu-bastonne">Story Stage 0</a>. Màn tiếp theo bắt đầu tại cầu cảng Marseille khi toàn thành phố rực sáng đèn truy lùng.</p>
+<p><strong>Ánh xạ Unity cho đợt narrative:</strong> Giữ tuyến 12 map và các bảng <code>Ch0_*</code>. <code>EvidenceRecovered</code> theo dõi chứng cứ; <code>Alarm</code> hiện có được hiểu là địch đã định vị dãy giam/đường rút, không phải mọi tiếng còi; <code>BlockInjured</code> theo dõi thương tích. <code>OpenCell</code> được diễn đạt thành mở chốt bảo trì từ trong; chưa đồng nghĩa đã có animation cổng cơ khí. Bổ sung tương tác chứng cứ tại <code>torture_room_02</code> và thoại kết quả theo nhánh.</p>
+<p><strong>Timeline cho luồng sự kiện:</strong> Dùng <code>StageModeData</code>, <code>StageTimeline</code> và <code>StageTimelineRunner</code> tại phòng chứng cứ và đợt chi viện do lộ đường rút. Phòng chứng cứ: sinh địch tại điểm cố định → chờ hạ đủ địch → mở tương tác tủ → chờ xác nhận thu hồi tài liệu → hoàn tất phòng. Đợt chi viện chỉ khởi chạy sau trận phong tỏa nếu đường rút đã bị lộ, rồi chờ toàn bộ địch bị hạ. Mỗi bước có ID để theo dõi trong Stage Timeline. Không dùng thời gian ước lượng thay cho kết quả chiến đấu hoặc thao tác của người chơi. Các trận còn lại giữ luồng hiện có trong đợt tích hợp này.</p>
+<p><strong>Phạm vi triển khai:</strong> Đợt đầu cập nhật narrative, mục tiêu, tương tác chứng cứ và luồng trạng thái trên gameplay hiện có. Các cảnh dàn dựng, chấm bài né/phá thủ, lệnh phối hợp Deep, bẫy khí, chi phí giữ đường tại van, khiên/hộ tống Block và lính tháp canh cần lượt tích hợp cơ chế riêng. Báo cáo Unity phải tách phần đã kiểm chứng với các đích thiết kế này.</p>
+<p><strong>Ưu tiên nội dung:</strong> Bản gameplay này là hướng sửa Chapter 0 đã thống nhất. Trang Story Stage 0 cũ còn các chi tiết Gilles, Stranger bộc phát và van nhiệt hy sinh chưa đồng bộ; không dùng các chi tiết đó để thay ngược bản này.</p>
+<p>Tham khảo bản truyện cần đồng bộ tại <a href="#story-stage-0-can-cu-oi-cua-deep-va-nha-tu-bastonne">Story Stage 0</a>. Tiếp tục tại <a href="#gameplay-1-0-cay-cau-o-marseille">Chương 1-0: Cây cầu ở Marseille</a>.</p>

@@ -122,6 +122,61 @@ export const imageSlots = {
   ],
   gameplay: [
     {
+      src: "imgs/Stage1/chap1/marseille_stages/vieux_port_panoramic_battle_scroll_strip.png",
+      alt: "Cuộn cảnh chiến đấu toàn cảnh Cảng Cổ Marseille 3 giai đoạn",
+      caption: "Màn 1-1: Toàn cảnh ẩu đả Cảng Cổ Vieux-Port (Cuộn 3000px)",
+    },
+    {
+      src: "imgs/Stage1/chap1/marseille_stages/vieux_port_01_marche_aux_poissons.png",
+      alt: "Giai đoạn 1 Chợ cá Cảng Cổ Marseille",
+      caption: "Màn 1-1: Giai đoạn 1 - Chợ cá buổi sớm và quầy sạp hải sản",
+    },
+    {
+      src: "imgs/Stage1/chap1/marseille_stages/vieux_port_02_quayside_promenade.png",
+      alt: "Giai đoạn 2 Bờ kè bến cảng và rào chắn lật đổ",
+      caption: "Màn 1-1: Giai đoạn 2 - Lối đi bờ kè ven biển đối đầu đoàn biker",
+    },
+    {
+      src: "imgs/Stage1/chap1/marseille_stages/vieux_port_04_sewer_sluice_dock.png",
+      alt: "Giai đoạn 3 Cửa âu cống ngầm thoát hiểm bến cảng",
+      caption: "Màn 1-1: Giai đoạn 3 - Cửa âu thoát hiểm dẫn xuống cống ngầm Laundel",
+    },
+    {
+      src: "imgs/Stage1/chap1/noailles_concepts/noailles_stage_market.jpg",
+      alt: "Khu chợ phố cổ Noailles dẫn vào quán bar Armorlite",
+      caption: "Màn 1-1: Phố chợ Noailles náo nhiệt quanh quán bar Armorlite",
+    },
+    {
+      src: "imgs/Stage1/chap1/Harbor_Sunset_Battle_Map.png",
+      alt: "Bản đồ chơi Bến cảng hoàng hôn hỗn chiến đa phe",
+      caption: "Màn 1-3: Sàn đấu bến cảng hoàng hôn - Hỗn chiến ba phe",
+    },
+    {
+      src: "imgs/Stage1/chap1/Labs/mucem_concepts/mucem_ingame_dock_1791562279017.jpg",
+      alt: "Bề nổi bảo tàng MuCEM che giấu tàu ngầm nghiên cứu Shemal",
+      caption: "Màn 1-4: MuCEM - Bề nổi hợp pháp che giấu trạm ngầm Shemal",
+    },
+    {
+      src: "imgs/Stage1/chap1/Labs/mucem_concepts/mucem_ingame_lattice_walkway_1791562308875.jpg",
+      alt: "Lối đi hành lang lưới bê tông hiện đại MuCEM",
+      caption: "Màn 1-4: Hành lang lưới bê tông MuCEM trên mép sóng biển",
+    },
+    {
+      src: "imgs/Stage1/bar.png",
+      alt: "Tình huống chiến đấu trong quán Armorlite",
+      caption: "Không gian giao chiến tại Armorlite",
+    },
+    {
+      src: "imgs/Stage1/Bastonne.png",
+      alt: "Không gian nhà tù Bastonne",
+      caption: "Định hướng không gian Chương 0: Bastonne",
+    },
+    {
+      src: "imgs/Stage1/GROGER_boss.png",
+      alt: "Hình ảnh trùm GROGER",
+      caption: "Định hướng hình ảnh cho trùm ẩn GROGER",
+    },
+    {
       src: "imgs/Stage4/stage4_act_4_1_dragon_cave_approach_map.png",
       alt: "Bản đồ chơi Chương 4-1 tại lối vào hang rồng",
       caption: "Bản đồ Chương 4-1: Lối vào hang rồng",
@@ -142,24 +197,81 @@ export const imageSlots = {
       caption: "Bản đồ Chương 4-4: Chiến trường Titan Trái Tim",
     },
     {
-      src: "imgs/Stage1/Bastonne.png",
-      alt: "Không gian nhà tù Bastonne",
-      caption: "Định hướng không gian Chương 0: Bastonne",
-    },
-    {
-      src: "imgs/Stage1/bar.png",
-      alt: "Tình huống chiến đấu trong quán Armorlite",
-      caption: "Không gian giao chiến tại Armorlite",
-    },
-    {
-      src: "imgs/Stage1/GROGER_boss.png",
-      alt: "Hình ảnh trùm GROGER",
-      caption: "Định hướng hình ảnh cho trùm ẩn GROGER",
-    },
-    {
       src: "imgs/Stage2/bridge_2_r_4.png",
       alt: "Tình huống chiến đấu trên cầu tại Sakuri",
       caption: "Định hướng tình huống trên cầu ở Chương 2",
+    },
+  ],
+  "pitch-france": [
+    {
+      src: "imgs/campaign-panels/Fund_region/imgs_refs/view_port.png",
+      alt: "Le Vieux-Port de Marseille réel sous la lumière matinale",
+      caption: "Patrimoine réel : Le Vieux-Port de Marseille (Provence)",
+    },
+    {
+      src: "imgs/Stage1/chap1/marseille_stages/vieux_port_panoramic_battle_scroll_strip.png",
+      alt: "Panorama complet de combat en 3 phases sur le Vieux-Port dans Divergency",
+      caption: "Direction artistique : Déroulé complet du Vieux-Port (Scroll panoramique 3000px)",
+    },
+    {
+      src: "imgs/Stage1/chap1/marseille_stages/vieux_port_01_marche_aux_poissons.png",
+      alt: "Phase 1 de l'affrontement au marché aux poissons du Vieux-Port",
+      caption: "Direction artistique : Phase 1 - Étalages du marché aux poissons",
+    },
+    {
+      src: "imgs/Stage1/chap1/marseille_stages/vieux_port_02_quayside_promenade.png",
+      alt: "Phase 2 de l'affrontement sur la promenade des quais du Vieux-Port",
+      caption: "Direction artistique : Phase 2 - Promenade des quais et barricades",
+    },
+    {
+      src: "imgs/Stage1/chap1/marseille_stages/vieux_port_04_sewer_sluice_dock.png",
+      alt: "Phase 3 sas d'évacuation et écluse vers les souterrains de Laundel",
+      caption: "Direction artistique : Phase 3 - Écluse d'évacuation vers Laundel",
+    },
+    {
+      src: "imgs/campaign-panels/Fund_region/imgs_refs/Noail_quartier.jpg",
+      alt: "Quartier populaire réel de Noailles à Marseille",
+      caption: "Patrimoine réel : Quartier Noailles et ruelles marchandes",
+    },
+    {
+      src: "imgs/Stage1/chap1/noailles_concepts/noailles_stage_market.jpg",
+      alt: "En jeu : Venelles marchandes de Noailles abritant le bar Armorlite",
+      caption: "Direction artistique : Venelles marchandes de Noailles en jeu",
+    },
+    {
+      src: "imgs/campaign-panels/Fund_region/imgs_refs/Mucem.png",
+      alt: "Le MuCEM réel et sa résille de béton face à la mer Méditerranée",
+      caption: "Patrimoine réel : Le MuCEM et le Fort Saint-Jean",
+    },
+    {
+      src: "imgs/Stage1/chap1/Labs/mucem_concepts/mucem_ingame_dock_1791562279017.jpg",
+      alt: "En jeu : Façade et dock de surface du MuCEM abritant le sous-marin de Shemal",
+      caption: "Direction artistique : Dock MuCEM - Couverture de surface du sous-marin",
+    },
+    {
+      src: "imgs/Stage1/chap1/Labs/mucem_concepts/mucem_ingame_lattice_walkway_1791562308875.jpg",
+      alt: "En jeu : Passerelle en résille de béton surplombant les flots",
+      caption: "Direction artistique : Passerelle en résille de béton du laboratoire",
+    },
+    {
+      src: "imgs/Stage1/chap1/Harbor_Sunset_Battle_Map.png",
+      alt: "Bataille massive multi-factions sur les docks au coucher du soleil",
+      caption: "Direction artistique : Mêlée générale sur les docks au coucher du soleil",
+    },
+    {
+      src: "imgs/Stage1/Marseille_Metropolis_Splash_Day.png",
+      alt: "Splash art panoramique de Marseille",
+      caption: "Concept d'ensemble : Marseille métropole méditerranéenne",
+    },
+    {
+      src: "imgs/Stage1/Chapter0/Bastonne_rescue_approach_wide.png",
+      alt: "Fort Bastonne inspiré des falaises calcaires des calanques",
+      caption: "Direction artistique : Approche fortifiée de Bastonne",
+    },
+    {
+      src: "imgs/campaign-panels/Fund_region/imgs_refs/Le vallon des Auffes.png",
+      alt: "Le Vallon des Auffes réel sous les arches du viaduc de la Corniche",
+      caption: "Patrimoine réel : Le Vallon des Auffes - Havre de fuite traditionnel",
     },
   ],
   rewards: [
