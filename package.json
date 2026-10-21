@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "check:canon": "node scripts/check-character-canon.mjs",
     "build": "node build-reviewer-html.mjs",
     "build:local": "node build-reviewer-html.mjs --local",
     "build:all": "node build-reviewer-html.mjs --all",

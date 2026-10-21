@@ -1,8 +1,9 @@
 import os
+from divergency_paths import unity_path
 import re
 import json
 
-doc_path = r"C:\Users\Quang Huy Nugyen\LF2Revie\Docs\DevLogsMusicAndSFXPrompts.md"
+doc_path = unity_path("Docs", "DevLogsMusicAndSFXPrompts.md")
 
 with open(doc_path, "r", encoding="utf-8") as f:
     lines = f.readlines()

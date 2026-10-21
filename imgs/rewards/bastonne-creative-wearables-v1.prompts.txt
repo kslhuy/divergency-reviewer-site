@@ -1,0 +1,44 @@
+Tool: built-in image_gen. All three are new concepts without image references.
+Intent: creative, simple alternatives to the existing key cap; two headwear designs and one possible replacement item.
+Sources for research (inspiration only; no graphics copied):
+- https://www.fangamer.com/products/the-batter-off-hat (game-world storytelling using under-brim decoration)
+- https://numerogroup.com/products/numero-five-panel-cap (minimal mark on everyday cap)
+- https://www.printful.com/custom-bandanas (printed bandana format)
+- Local lore: content/story/07-stage-0-can-cu-doi-cua-deep-va-nha-tu-bastonne-8f6b10949d.html (Stranger as subject 07; prison escape)
+- https://support.printful.com/hc/en-us/articles/41396531405457 (simple shapes and bold strokes for embroidery)
+No supplier, price, availability or production validation implied.
+
+OUTPUT: bastonne-open-cell-cap-concept-v1.png
+
+Use case: product-mockup.
+Asset type: a NEW creative but simple wearable reward concept for the indie game Divergency.
+Primary request: invent a Bastonne "OPEN CELL" cap, very different from a vintage key logo cap. No image references; create an original design.
+The idea is the moment a prison cell opens: an abstract geometric doorway with a small opening of colored light. This is subtle game-world storytelling worn as everyday clothing, not a police/prison authority uniform.
+
+One affordable washed-charcoal low-profile five-panel cotton baseball cap with a softly curved brim, ordinary tonal cloth eyelets and adjustable strap. Broad continuous front panel without a center seam. On the viewer's LEFT part of the front panel, slightly off-center, one small flat-embroidered icon, only about 30 mm tall. The icon is an off-white squared doorway made of three bold clean strokes (two upright jambs and a lintel), with a single dark-teal diagonal door leaf standing ajar inside its right half. Three short broad off-white bars are contained in that tilted door leaf, making it read as an opened cell door. The center of the doorway is empty charcoal cloth: a bold dark opening. Overall silhouette should read as both an opening doorway and an abstract broken D. Keep everything geometrically simple, at most eight chunky embroidery strokes, no thin filigree. The dark teal is muted but visible against charcoal. One off-white thread plus one dark-teal thread; ordinary flat embroidery, no thick puff or giant patch. No key, shield, skull, crest or words on the front. Plain side panels, no script logo. The off-center placement and door-like negative space are the creative elements, not added decoration.
+
+Presentation: believable small-batch wearable on a warm neutral tabletop in soft daylight. One large three-quarter front product photograph with a slight higher angle so the small embroidered doorway is readable; generous surrounding space. At upper left a modest editorial heading "01 / OPEN CELL". Beneath it a single short line "Find the opening." At lower right, a small clean flat enlarged version of exactly the same two-color symbol for understanding the design, on the same neutral background, not another product. Footer "CONCEPT - SAMPLE REQUIRED". Cotton texture and realistic modest flat stitches, no fantasy props or packaging, no dark dungeon backdrop, no people. Understated adult streetwear, original graphic design, simple manufacturing intent, not an existing real brand or a tested sample.
+
+--------------------
+
+OUTPUT: bastonne-subject-07-beanie-concept-v1.png
+
+Use case: product-mockup.
+Asset type: NEW creative simple wearable reward concept for the indie game Divergency.
+Create a Bastonne "SUBJECT 07" cuffed beanie. Story hook: Stranger is called experimental subject 07 in the Bastonne prison chapter. The original creative gesture is to cross out the specimen number, as if the wearer has escaped being treated as property. Do not invent additional lore or text.
+
+One ordinary muted charcoal-olive ribbed-knit beanie with a wide turned-up cuff, practical soft shape, an accessible off-the-shelf blank appearance. The knit is plain and consistent. On the viewer's RIGHT portion of the cuff, near where a normal small label would sit, attach ONE narrow warm stone cotton rectangular tag, about 42 mm wide by 25 mm high, sewn flat with a simple tonal straight stitch. On this tag ONLY, print "07" in bold black utilitarian stencil numerals with generous strokes, no tiny breaks. One confident diagonal brick-red brush-like slash crosses through the number from lower left to upper right, but leaves 07 readable. Two flat printed ink colors total: black plus dull brick red. The stone fabric is the blank tag substrate, not a third ink. The slash should look intentional and strong, not bloody, not a complicated distressed texture. No emblem, key, prison bars, shield, brand script, extra tag, large skull, cute character face or pompoms. Nothing printed elsewhere on the beanie. The object should feel like a small recovered item from the game's world while being normal wearable clothing.
+
+Presentation: one large honest product photograph of the beanie lightly shaped upright on an invisible support, on a warm gray tabletop with soft daylight and natural shadows. Three-quarter view toward the numbered label so it reads clearly. The knitted cuff and label remain flat enough to look sewable at home. Small heading in whitespace "02 / SUBJECT 07", and one short caption "Subject 07, set free." At lower right add a small isolated flat view of the same label artwork for design clarity. Footer "CONCEPT - SAMPLE REQUIRED". No models, bust, accessories, packaging, elaborate badges or prison scenery. Show a convincing modest handmade assembly concept, not a luxury CGI object. Standalone landscape product concept image, clearly different from a black baseball cap.
+
+--------------------
+
+OUTPUT: bastonne-escape-route-bandana-concept-v1.png
+
+Use case: product-mockup.
+Asset type: NEW simple wearable reward concept for the indie game Divergency; an alternative to a cap.
+Create an original "BASTONNE / ESCAPE ROUTE" square cloth bandana, intended as a simple printed cotton accessory that can be worn around the head, neck or tied to a bag. It should feel like an improvised escape instruction fragment from the game's prison, abstract enough to wear every day. It is not a literal accurate game map.
+
+One washed deep petrol-teal plain cotton bandana with simple hemmed edges. A single warm off-white ink is printed on one side. Graphic is deliberately minimal: an inset square outline with ONE obvious break in the right edge; within the border a single broad angular escape route makes four clean right-angle turns and finishes as a bold arrow pointing OUT through the gap. Include just TWO short obstacle bars inside the square, arranged so the route clearly passes around them. No maze filled with tiny corridors, no coastline, no buildings, no map labels, no symbols everywhere, no paisley. A small bold "07" sits at the route's starting point near the lower-left interior. At one corner of the border, the simple uppercase word "BASTONNE" is integrated, using the same one-color ink and legible medium weight letters. The overall print is a striking sparse geometric composition with lots of teal empty cloth. A square enclosure plus path that exits it, no keys, shields or crests. Flat screenprint-like solid ink, no gradients or artificial grunge. The white path should be wide enough to see when the bandana is folded, a few millimeters in real scale.
+
+Composition: landscape editorial product photograph on a warm neutral tabletop, softly lit with real cotton texture. Show ONE bandana laid mostly flat and rotated into a subtle diamond, one small corner lightly folded to reveal the unprinted reverse; complete main graphic visible. Include ONE smaller inset photo at lower right showing the SAME bandana folded into a simple tied neckerchief shape with the arrow and corner number visible, no person or mannequin. Both views represent the same item, not a bundle. Small heading in whitespace "03 / ESCAPE ROUTE", single short line "Carry the way out." Footer "CONCEPT - SAMPLE REQUIRED". Everyday wearable, modest small-batch cotton accessory, no extra props, no cap, no printed faux blood or elaborate cinematic environment.

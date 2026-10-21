@@ -141,4 +141,47 @@ function initPitchControls() {
   syncButtons();
 }
 
+function initItemWikiControls() {
+  const searchInput = document.getElementById("item-search-input");
+  const pills = document.querySelectorAll(".item-pill");
+  const cards = document.querySelectorAll(".item-card");
+
+  if (!searchInput || !cards.length) return;
+
+  let currentCat = "all";
+  let searchQuery = "";
+
+  function applyFilter() {
+    const q = searchQuery.toLowerCase().trim();
+    cards.forEach((card) => {
+      const text = (card.textContent || "").toLowerCase();
+      const cat = card.getAttribute("data-category") || "";
+      const matchesCat = currentCat === "all" || cat.includes(currentCat);
+      const matchesSearch = !q || text.includes(q);
+
+      if (matchesCat && matchesSearch) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  searchInput.addEventListener("input", (e) => {
+    searchQuery = e.target.value;
+    applyFilter();
+  });
+
+  pills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      pills.forEach((p) => p.classList.remove("is-active"));
+      pill.classList.add("is-active");
+      currentCat = pill.getAttribute("data-cat") || "all";
+      applyFilter();
+    });
+  });
+}
+
 initPitchControls();
+initItemWikiControls();
+

@@ -1,4 +1,5 @@
 import os
+from divergency_paths import unity_path
 import sys
 import json
 import time
@@ -9,7 +10,7 @@ import re
 # Base paths
 BASE_DIR = r"c:\Users\Quang Huy Nugyen\divergency-reviewer-site"
 SITE_AUDIO_DIR = os.path.join(BASE_DIR, "content", "gameplay", "audio")
-UNITY_SOUND_DIR = r"C:\Users\Quang Huy Nugyen\LF2Revie\Assets\Sound\DevLogs"
+UNITY_SOUND_DIR = unity_path("Assets", "Sound", "DevLogs")
 STUDIO_GEN_DIR = r"C:\Users\Quang Huy Nugyen\Videos\Marketting_game\Music_SoundFX_MrLinken91\Music_SoundFX_MrLinken91\output\generated"
 
 os.makedirs(SITE_AUDIO_DIR, exist_ok=True)

@@ -13,7 +13,7 @@ Mốc thời gian là dự kiến. Thu nháp rồi chỉnh theo nhịp nói. Ph�
 | Mốc | Nội dung |
 |---|---|
 | 00:00–00:35 | Một đòn đánh, sáu năm |
-| 00:35–01:50 | Từ LF2 đến thế giới của mình |
+| 00:35–01:50 | Nguồn cảm hứng và thế giới Divergency |
 | 01:50–02:35 | Một dự án nằm giữa cuộc sống |
 | 02:35–03:35 | Tại sao lại là Divergency? |
 | 03:35–04:30 | Một thế giới tối, một người kể chuyện vui |
@@ -80,19 +80,19 @@ Mốc thời gian là dự kiến. Thu nháp rồi chỉnh theo nhịp nói. Ph�
 
 00:23–00:35 · 12 giây
 
-> Hôm nay mình muốn kể chuyện một ý tưởng từ LF2 đã thành Divergency như thế nào. Và để một nhân vật vừa biết đánh nhau, vừa chịu đứng yên trên mặt đất… tụi mình đã phải loay hoay ra sao.
+> Hôm nay mình muốn kể chuyện Divergency được hình thành và phát triển như thế nào. Và để một nhân vật vừa biết đánh nhau, vừa chịu đứng yên trên mặt đất… tụi mình đã phải loay hoay ra sao.
 
 **Hình cần lấy:** Cận mặt kể chuyện hoặc tay bên bàn phím → 2s nhân vật đánh → 2s tiếp đất → logo nhỏ trên khung game.
 
 **Dựng:** Đừng cho xem hết cú lỗi tiếp đất; để dành phần giải thích. Logo xuất hiện cùng hình, khoảng 1s.
 
-**Âm thanh:** Cười nhẹ ở câu cuối; tiếng click chuyển sang chương LF2.
+**Âm thanh:** Cười nhẹ ở câu cuối; tiếng click chuyển sang phần nguồn cảm hứng.
 
 **Chữ trên hình:** Từ ý tưởng → một đòn đánh
 
 **Tư liệu:** F01, F16, F21, F22
 
-### 02 Từ LF2 đến thế giới của mình
+### 02 Nguồn cảm hứng và thế giới Divergency
 
 00:35–01:50 · Hoài niệm → thử nghiệm → cùng Khoa chọn hướng riêng.
 
@@ -150,7 +150,7 @@ Mốc thời gian là dự kiến. Thu nháp rồi chỉnh theo nhịp nói. Ph�
 
 01:20–01:35 · 15 giây
 
-> Divergency dần hình thành từ đó. Tình yêu với LF2 vẫn còn, nhưng mỗi lần bàn thêm về hình ảnh, thế giới và cách chơi, tụi mình lại muốn thử một hướng riêng. Cái tên cũng phải mang được cảm giác ấy.
+> Divergency dần hình thành từ đó. Mỗi lần bàn thêm về hình ảnh, thế giới và cách chơi, tụi mình lại làm rõ bản sắc riêng của Divergency. Cái tên cũng phải mang được cảm giác ấy.
 
 **Hình cần lấy:** Một thử nghiệm cũ → concept thế giới → Deep/Solei → logo. Mỗi hình hỗ trợ đúng danh từ đang nói.
 
@@ -162,23 +162,23 @@ Mốc thời gian là dự kiến. Thu nháp rồi chỉnh theo nhịp nói. Ph�
 
 **Tư liệu:** F02, F08, F09, F21
 
-#### S08 LF2 Remastered: một nụ cười nhẹ
+#### S08 Một lỗi nhỏ, một bước tiến của Divergency
 
 01:35–01:50 · 15 giây
 
-> Đến lúc mình thấy tin về LF2 Remastered, mình vừa háo hức vừa cười: may mà tụi mình đã chọn một hướng riêng. Chứ tình yêu với LF2 thì có thừa. Tốc độ làm game của mình… là một câu chuyện khác.
+> Có lúc mình sửa xong một lỗi, chạy thử lại thấy một lỗi khác. Mỗi lần như vậy lại hiểu nhân vật và nhịp chiến đấu của Divergency thêm một chút. Còn tốc độ làm game của mình… là một câu chuyện khác.
 
-**Hình cần lấy:** Trang chính thức LF2 Remastered 4–5s → gương mặt cười chừ hoặc con trỏ đứng im trên project 2s → build Divergency.
+**Hình cần lấy:** Hai lần chạy cùng một cảnh Divergency trước và sau khi sửa lỗi → gương mặt cười chừ hoặc con trỏ đứng im trên project 2s → build hiện tại.
 
-**Dựng:** Một nhịp dừng trước câu cuối. Không gắn thông báo hiện tại với thời điểm quá khứ nếu chưa tìm đúng bài.
+**Dựng:** Một nhịp dừng trước câu cuối. Dùng đúng clip lỗi và clip sau khi sửa để người xem thấy thay đổi.
 
 **Âm thanh:** Hạ nhạc ngắn ở câu đùa, rồi nối bằng tiếng gõ phím.
 
-**Chữ trên hình:** Kể lại thời điểm mình thấy tin
+**Chữ trên hình:** Một lỗi nhỏ → một bước tiến
 
 **Tư liệu:** F05, F22, F06
 
-**Ghi chú khi chọn cảnh:** Cách nói không hàm ý game mình thay thế LF2. Chưa xác minh ngày bạn thấy tin; không chèn năm đoán.
+**Ghi chú khi chọn cảnh:** Dùng lỗi đã ghi hình thật của Divergency; không dựng lỗi giả rồi trình bày như lịch sử phát triển.
 
 ### 03 Một dự án nằm giữa cuộc sống
 
@@ -844,8 +844,8 @@ Mốc thời gian là dự kiến. Thu nháp rồi chỉnh theo nhịp nói. Ph�
   Chọn 2–3 câu chat thật liên quan hướng game, hoặc dựng lại hai bong bóng lời mới có nhãn. Chỉ đưa phần định chia sẻ công khai.
   Dùng ở: S06, S11
 
-- [ ] **F05 LF2 Remastered** · Ưu tiên 2 · Nguồn chính thức có trong tài liệu
-  Một screenshot trang chính thức. Nếu gọi là thông báo ngày xưa, tìm đúng thông báo; không lấy ngày phát hành làm ngày công bố.
+- [ ] **F05 Sửa lỗi Divergency trước/sau** · Ưu tiên 2 · Dùng hai lần quay cùng một cảnh
+  Hai clip thật trước và sau khi sửa cùng một lỗi trong Divergency; giữ góc máy và tình huống giống nhau để thấy thay đổi.
   Dùng ở: S08
 
 - [ ] **F06 Cảnh bàn làm việc** · Ưu tiên 1 · Cần quay mới
@@ -913,7 +913,7 @@ Mốc thời gian là dự kiến. Thu nháp rồi chỉnh theo nhịp nói. Ph�
   Dùng ở: S03, S07, S15, S44, S45
 
 - [ ] **F22 Giọng và hình người kể** · Ưu tiên 1 · Cần thu và quay
-  Thu lời nháp trước. Khi quay chính thức, ưu tiên mặt người ở mở, câu đùa LF2, đoạn sáu năm và kết. Nếu không lộ mặt, dùng lời thu + cảnh tay/bàn.
+  Thu lời nháp trước. Khi quay chính thức, ưu tiên mặt người ở mở, câu đùa sửa lỗi, đoạn sáu năm và kết. Nếu không lộ mặt, dùng lời thu + cảnh tay/bàn.
   Dùng ở: S03, S08, S18, S30, S39, S40, S42
 
 - [ ] **F23 Đồ họa giải thích** · Ưu tiên 2 · Cần dựng đơn giản
@@ -928,13 +928,13 @@ Mốc thời gian là dự kiến. Thu nháp rồi chỉnh theo nhịp nói. Ph�
 
 **Chuyển cảnh** — Phần lớn là cắt thẳng. Ưu tiên nối cùng pose, cùng vị trí điểm sáng hoặc cùng động tác; để lời cảnh sau vào sớm 0,3–0,7s khi phù hợp, hoặc giữ tiếng cảnh trước qua điểm cắt. Đây là ý nghĩa của J-cut và L-cut.
 
-**Điểm nối đáng làm** — LF2 → prototype cùng hướng di chuyển; bong bóng chat → concept; đồ thị → cảnh thế giới; artwork → pose trong Aseprite; Aseprite → Unity cùng pose; hitbox bật → gameplay sạch; ảnh cũ ở đầu → ảnh mới ở cuối.
+**Điểm nối đáng làm** — Nguồn cảm hứng → prototype Divergency cùng hướng di chuyển; bong bóng chat → concept; đồ thị → cảnh thế giới; artwork → pose trong Aseprite; Aseprite → Unity cùng pose; hitbox bật → gameplay sạch; ảnh cũ ở đầu → ảnh mới ở cuối.
 
 **Hài** — Tự trêu cách làm của mình, không chê tác giả LF2, Khoa hoặc người dùng AI. Chọn khoảng 4–5 nhịp vui nhẹ; mỗi câu đùa có một khoảng nghỉ rồi đi tiếp. Boss hở là cảnh tùy chọn.
 
 **Nhạc và âm thanh** — Ba vùng cảm xúc: mở có nhịp vui; art có không khí tối; cuối ấm và vững hơn. Nhạc nền lùi khi có lời, hạ mạnh khi phát tiếng game. Không cần whoosh cho mọi lần đổi hình.
 
-**Chữ** — Chỉ nhấn các từ giúp theo dõi: LF2, Divergency, Aseprite, vùng đánh, trước/sau. Phụ đề tối đa hai dòng; tránh che bàn chân, địch và UI đang giải thích. Xem thử trên điện thoại.
+**Chữ** — Chỉ nhấn các từ giúp theo dõi: Divergency, Aseprite, vùng đánh, trước/sau. Phụ đề tối đa hai dòng; tránh che bàn chân, địch và UI đang giải thích. Xem thử trên điện thoại.
 
 **Khi quay màn hình** — Ngang 1920×1080, chọn 60 fps nếu máy giữ ổn định; giọng thu riêng. Mỗi take dư 3–5s đầu và cuối. Với pixel art, tránh phóng lẻ tùy tiện làm hình nhòe.
 
@@ -982,7 +982,6 @@ Chữ cuối: Theo dõi hành trình Divergency. Không hiện nút nhận thôn
 
 **Liên tưởng tên game** — Đồ thị là cách minh họa cảm hứng cá nhân. Không trình bày chaos và divergence như hai khái niệm đồng nghĩa.
 
-**LF2 Remastered** — Trang Steam chính thức xác nhận trò chơi đã phát hành. Ở video ghi ngày 29/09/2026, đoạn này là kể lại lúc bạn thấy tin; ngày công bố cần đúng tư liệu riêng, không suy từ ngày phát hành. [Nguồn chính thức](https://store.steampowered.com/app/3249650/Little_Fighter_2_Remastered/).
 
 **Sáu năm và công việc nghiên cứu** — Giữ “khoảng sáu năm”; thêm năm lên ảnh chỉ khi đúng lịch sử. Thu đúng tình trạng PhD của bạn tại ngày ghi hình.
 
@@ -1004,7 +1003,7 @@ Các đường dẫn dưới đây là nơi bắt đầu tuyển hình; xem file
 ## Tiêu đề và thumbnail
 
 - Tụi mình đã dành 6 năm để làm tựa game này
-- Từ LF2 đến Divergency — 6 năm làm game sau giờ làm
+- Divergency — 6 năm làm game sau giờ làm
 - Mình nghiên cứu sự ổn định rồi lại làm một game tên Divergency
 
 Thumbnail đề xuất: nhân vật cũ và mới đặt cạnh nhau, cùng kích thước; chữ “6 NĂM SAU”. Chỉ dùng cặp ảnh có thứ tự phát triển thật.

@@ -51,9 +51,23 @@
     "summary": "Kế hoạch lối chơi theo từng chương, gồm cơ chế, câu đố, tình huống chiến đấu, trùm, nhóm kẻ địch và nhịp học kỹ năng."
   },
   {
+    "id": "character-power",
+    "showMedia": false,
+    "label": "Sức mạnh nhân vật",
+    "eyebrow": "Chỉ số · Công thức · Dữ liệu thực",
+    "summary": "Đối chiếu kỹ năng, chỉ số và progression theo code/asset ngày 21/10/2026; tách phần đã có, đề xuất và chưa kiểm thử runtime. Studio giữ ngân sách mana thiết kế, độc lập với game test không mana."
+  },
+  {
     "id": "rewards",
     "label": "Rewards Checklist",
     "eyebrow": "Launch readiness",
     "summary": "Current EUR rewards, exact add-on quantities, painted figure concept, combined shipping, creative tier scope and fulfillment checks."
+  },
+  {
+    "id": "items",
+    "showMedia": true,
+    "label": "Kho Vật Phẩm (Item Wiki)",
+    "eyebrow": "48 Relics · Vũ khí & Dị vật",
+    "summary": "Bách khoa toàn thư 48 vật phẩm dã chiến, vũ khí cận chiến, cổ vật hiến tế, cấm thư ma pháp và dược phẩm sinh tồn trong Divergency."
   }
 ]

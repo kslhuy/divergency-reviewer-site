@@ -15,6 +15,7 @@ from tkinter import filedialog, messagebox, ttk
 APP_DIR = Path(__file__).resolve().parent
 DEFAULT_OUTPUT = APP_DIR / "converted"
 NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+SUPPORTED_EXTENSIONS = {".gif", ".mp4", ".webm", ".mov", ".mkv", ".avi"}
 
 
 def find_ffmpeg() -> str:
@@ -34,14 +35,22 @@ class Cancelled(Exception):
     pass
 
 
-def convert(source: Path, output_dir: Path, *, crf: int = 18, scale: int = 1,
-            repeats: int = 1, fps: int = 60, cancel: threading.Event | None = None) -> Path:
+def convert(source: Path, output_dir: Path, *, crf: int = 18, scale: int | str = "Fit",
+            repeats: int = 1, fps: int = 60, aspect: str = "original",
+            cancel: threading.Event | None = None) -> Path:
     """Encode into a temporary file, then publish under a new, unused name."""
     source = source.expanduser().resolve()
-    if source.suffix.lower() != ".gif" or not source.is_file():
-        raise ValueError(f"Not an accessible GIF file: {source}")
-    if scale not in (1, 2, 3, 4) or not 1 <= repeats <= 100 or not 0 <= crf <= 51 or fps not in (25, 30, 50, 60):
+    suffix = source.suffix.lower()
+    if suffix not in SUPPORTED_EXTENSIONS or not source.is_file():
+        allowed = ", ".join(sorted(SUPPORTED_EXTENSIONS))
+        raise ValueError(f"Not an accessible media file ({allowed}): {source}")
+    scale_str = str(scale).strip()
+    if scale_str.lower() not in ("fit", "auto") and scale_str not in ("1", "2", "3", "4"):
         raise ValueError("Invalid conversion settings.")
+    if not 1 <= repeats <= 100 or not 0 <= crf <= 51 or fps not in (25, 30, 50, 60):
+        raise ValueError("Invalid conversion settings.")
+    if aspect not in ("original", "9:16"):
+        raise ValueError(f"Invalid aspect ratio: {aspect}")
     ffmpeg = find_ffmpeg()
     if cancel and cancel.is_set():
         raise Cancelled()
@@ -51,17 +60,41 @@ def convert(source: Path, output_dir: Path, *, crf: int = 18, scale: int = 1,
     temporary = Path(temp_name)
     # Using 60 fps (or 50/30 fps) ensures full iOS / iPhone Photos compatibility.
     # Framerates >= 100 fps cause iPhone to flag the video as Slo-Mo and disable editing.
-    filters = (
+    prefix = (
         f"[0:v]fps={fps},format=rgba,split[bg][fg];"
         "[bg]drawbox=color=black:t=fill:replace=1[base];"
-        "[base][fg]overlay=shortest=1:format=auto,"
-        f"scale=iw*{scale}:ih*{scale}:flags=neighbor,"
-        "pad=ceil(iw/2)*2:ceil(ih/2)*2:color=black,format=yuv420p[v]"
+        "[base][fg]overlay=shortest=1:format=auto"
     )
+    if aspect == "9:16":
+        if scale_str.lower() in ("fit", "auto"):
+            body = (
+                ",scale=w=1080:h=1920:force_original_aspect_ratio=decrease:flags=neighbor,"
+                "pad=1080:1920:(1080-iw)/2:(1920-ih)/2:color=black"
+            )
+        else:
+            s = int(scale_str)
+            body = (
+                f",scale=iw*{s}:ih*{s}:flags=neighbor,"
+                "scale=w='if(gt(a,9/16),min(1080,iw),-2)':h='if(gt(a,9/16),-2,min(1920,ih))':flags=neighbor,"
+                "pad=1080:1920:(1080-iw)/2:(1920-ih)/2:color=black"
+            )
+    else:
+        s = 1 if scale_str.lower() in ("fit", "auto") else int(scale_str)
+        body = f",scale=iw*{s}:ih*{s}:flags=neighbor,pad=ceil(iw/2)*2:ceil(ih/2)*2:color=black"
+    filters = f"{prefix}{body},format=yuv420p[v]"
+
+    # Level 4.2 handles 1080x1920 @ 60fps without macroblock warnings on modern iOS/Android/PC.
+    level = "4.2" if aspect == "9:16" and fps == 60 else "4.1"
+    input_args = ["-stream_loop", str(repeats - 1)]
+    if source.suffix.lower() == ".gif":
+        input_args.extend(["-ignore_loop", "1"])
+    input_args.extend(["-i", str(source)])
+
     command = [ffmpeg, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
-               "-stream_loop", str(repeats - 1), "-ignore_loop", "1", "-i", str(source),
-               "-filter_complex", filters, "-map", "[v]", "-an", "-c:v", "libx264",
-               "-profile:v", "high", "-level", "4.1", "-pix_fmt", "yuv420p",
+               *input_args,
+               "-filter_complex", filters, "-map", "[v]", "-map", "0:a?",
+               "-c:v", "libx264", "-profile:v", "high", "-level", level, "-pix_fmt", "yuv420p",
+               "-c:a", "aac", "-b:a", "192k",
                "-preset", "medium", "-crf", str(crf),
                "-movflags", "+faststart", str(temporary)]
     process = None
@@ -84,13 +117,17 @@ def convert(source: Path, output_dir: Path, *, crf: int = 18, scale: int = 1,
             if process.returncode:
                 errors.seek(0)
                 detail = errors.read().decode("utf-8", errors="replace").strip()
-                raise RuntimeError(detail[-3000:] or "FFmpeg could not convert this GIF.")
+                raise RuntimeError(detail[-3000:] or "FFmpeg could not convert this media file.")
         if temporary.stat().st_size == 0:
             raise RuntimeError("FFmpeg produced an empty output.")
         index = 0
+        base_stem = f"{source.stem} (9x16)" if aspect == "9:16" else source.stem
         while True:
             suffix = f" ({index})" if index else ""
-            destination = output_dir / f"{source.stem}{suffix}.mp4"
+            destination = output_dir / f"{base_stem}{suffix}.mp4"
+            if destination.resolve() == source.resolve():
+                index += 1
+                continue
             try:
                 # Windows rename refuses an existing destination. On POSIX,
                 # hard-link publication supplies the same no-overwrite guarantee.
@@ -118,7 +155,7 @@ class ConverterApp:
         self.busy = False
         self.closing = False
         self.controls = []
-        root.title("GIF to MP4")
+        root.title("GIF & MP4 Converter")
         root.geometry("840x700")
         root.minsize(720, 620)
         root.configure(bg="#f4f6fa")
@@ -130,11 +167,11 @@ class ConverterApp:
         style.configure("Title.TLabel", font=("Segoe UI", 25, "bold"), foreground="#192746")
         body = ttk.Frame(root, padding=24)
         body.pack(fill="both", expand=True)
-        ttk.Label(body, text="GIF → MP4", style="Title.TLabel").pack(anchor="w")
-        ttk.Label(body, text="Convert animations locally. Original timing. Crisp pixel art.").pack(anchor="w", pady=(3, 18))
+        ttk.Label(body, text="GIF / MP4 → MP4", style="Title.TLabel").pack(anchor="w")
+        ttk.Label(body, text="Convert animations and videos locally. Original timing. Crisp pixel art.").pack(anchor="w", pady=(3, 18))
         row = ttk.Frame(body)
         row.pack(fill="x")
-        self.button(row, "Add GIFs…", self.browse).pack(side="left")
+        self.button(row, "Add files…", self.browse).pack(side="left")
         self.button(row, "Remove selected", self.remove).pack(side="left", padx=8)
         self.button(row, "Clear", self.clear).pack(side="left")
         frame = ttk.Frame(body)
@@ -157,7 +194,7 @@ class ConverterApp:
         entry.bind("<Return>", lambda _: self.add_path())
         self.controls.append(entry)
         self.button(path_row, "Add pasted path", self.add_path).pack(side="right")
-        ttk.Label(body, text="Paste a GIF path above, or drag GIF files onto Open GIF to MP4.cmd.").pack(anchor="w", pady=(4, 14))
+        ttk.Label(body, text="Paste a GIF/video path above, or drag files onto Open GIF to MP4.cmd.").pack(anchor="w", pady=(4, 14))
         ttk.Label(body, text="Save MP4 files to").pack(anchor="w")
         out_row = ttk.Frame(body)
         out_row.pack(fill="x", pady=(5, 12))
@@ -169,12 +206,12 @@ class ConverterApp:
         settings = ttk.Frame(body)
         settings.pack(fill="x")
         self.quality = tk.StringVar(value="High")
-        self.scale = tk.StringVar(value="1")
+        self.scale = tk.StringVar(value="Fit")
         self.repeats = tk.StringVar(value="1")
         self.fps = tk.StringVar(value="60 fps (iPhone/Web)")
         for label, variable, values, width in (
             ("Quality", self.quality, ("High", "Balanced", "Smaller file"), 12),
-            ("Pixel scale", self.scale, ("1", "2", "3", "4"), 6),
+            ("Pixel scale", self.scale, ("Fit", "1", "2", "3", "4"), 6),
             ("Play count", self.repeats, ("1", "2", "3", "5", "10"), 6),
             ("Frame rate", self.fps, ("60 fps (iPhone/Web)", "50 fps", "30 fps"), 18),
         ):
@@ -182,16 +219,17 @@ class ConverterApp:
             combo = ttk.Combobox(settings, textvariable=variable, values=values, state="readonly", width=width)
             combo.pack(side="left", padx=(0, 14))
             self.controls.append(combo)
-        ttk.Label(body, text="H.264 MP4 • iPhone & Web compatible (normal speed + editable) • Black background").pack(anchor="w", pady=12)
+        ttk.Label(body, text="H.264 MP4 • iPhone & Web compatible • 9:16 for Shorts/Reels/TikTok • Black background").pack(anchor="w", pady=12)
         action_row = ttk.Frame(body)
         action_row.pack(fill="x")
-        self.button(action_row, "Convert to MP4", self.start).pack(side="left")
+        self.button(action_row, "Convert to MP4", lambda: self.start(aspect="original")).pack(side="left")
+        self.button(action_row, "Convert to 9:16 size", lambda: self.start(aspect="9:16")).pack(side="left", padx=8)
         self.cancel_button = ttk.Button(action_row, text="Cancel", command=self.cancel.set, state="disabled")
-        self.cancel_button.pack(side="left", padx=8)
+        self.cancel_button.pack(side="left")
         ttk.Button(action_row, text="Open output folder", command=self.open_output).pack(side="right")
         self.progress = ttk.Progressbar(body, mode="indeterminate")
         self.progress.pack(fill="x", pady=(14, 6))
-        self.status = tk.StringVar(value="Ready — add one or more GIF files.")
+        self.status = tk.StringVar(value="Ready — add one or more GIF or MP4 files.")
         ttk.Label(body, textvariable=self.status).pack(anchor="w")
         self.log = tk.Text(body, height=6, font=("Segoe UI", 9), bg="white", relief="flat", wrap="word", state="disabled")
         self.log.pack(fill="both", expand=True, pady=(8, 0))
@@ -210,16 +248,23 @@ class ConverterApp:
         invalid = []
         for value in paths:
             path = Path(value.strip().strip('"')).expanduser().resolve()
-            if not path.is_file() or path.suffix.lower() != ".gif":
+            if not path.is_file() or path.suffix.lower() not in SUPPORTED_EXTENSIONS:
                 invalid.append(str(path))
             elif path not in self.files:
                 self.files.append(path)
                 self.listbox.insert("end", str(path))
         if invalid:
-            messagebox.showerror("Cannot add file", "Select an accessible .gif file:\n\n" + "\n".join(invalid))
+            allowed = ", ".join(sorted(SUPPORTED_EXTENSIONS))
+            messagebox.showerror("Cannot add file", f"Select accessible media files ({allowed}):\n\n" + "\n".join(invalid))
 
     def browse(self):
-        self.add_files(filedialog.askopenfilenames(title="Select GIF animations", filetypes=[("GIF animations", "*.gif")]))
+        filetypes = [
+            ("Supported media (*.gif, *.mp4...)", "*.gif;*.mp4;*.webm;*.mov;*.mkv;*.avi"),
+            ("GIF animations (*.gif)", "*.gif"),
+            ("MP4 videos (*.mp4)", "*.mp4"),
+            ("All files (*.*)", "*.*"),
+        ]
+        self.add_files(filedialog.askopenfilenames(title="Select animations or videos", filetypes=filetypes))
 
     def add_path(self):
         if self.path.get().strip():
@@ -250,11 +295,11 @@ class ConverterApp:
         except Exception as exc:
             messagebox.showerror("Cannot open folder", str(exc))
 
-    def start(self):
+    def start(self, aspect: str = "original"):
         if self.busy:
             return
         if not self.files:
-            messagebox.showinfo("Add GIFs", "Add at least one GIF before converting.")
+            messagebox.showinfo("Add media", "Add at least one GIF or MP4 file before converting.")
             return
         try:
             find_ffmpeg()
@@ -267,8 +312,8 @@ class ConverterApp:
             return
         fps_val = int(self.fps.get().split()[0])
         settings = dict(crf={"High": 18, "Balanced": 23, "Smaller file": 28}[self.quality.get()],
-                        scale=int(self.scale.get()), repeats=int(self.repeats.get()),
-                        fps=fps_val)
+                        scale=self.scale.get(), repeats=int(self.repeats.get()),
+                        fps=fps_val, aspect=aspect)
         self.busy = True
         self.cancel.clear()
         for control in self.controls:
@@ -279,11 +324,12 @@ class ConverterApp:
 
     def work(self, files, output, settings):
         succeeded = failed = 0
+        aspect_tag = " [9:16]" if settings.get("aspect") == "9:16" else ""
         try:
             for index, source in enumerate(files, 1):
                 if self.cancel.is_set():
                     break
-                self.events.put(("status", f"Converting {index}/{len(files)}: {source.name}"))
+                self.events.put(("status", f"Converting{aspect_tag} {index}/{len(files)}: {source.name}"))
                 try:
                     target = convert(source, output, cancel=self.cancel, **settings)
                     succeeded += 1
@@ -331,18 +377,21 @@ class ConverterApp:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Convert GIFs to H.264 MP4 locally.")
-    parser.add_argument("files", nargs="*")
+    parser = argparse.ArgumentParser(description="Convert GIFs and videos to H.264 MP4 locally.")
+    parser.add_argument("files", nargs="*", help="GIF or MP4 files to convert")
     parser.add_argument("--output", type=Path, help="Convert without opening the GUI, saving to this folder")
-    parser.add_argument("--scale", type=int, choices=(1, 2, 3, 4), default=1)
+    parser.add_argument("--scale", default="Fit", help="Pixel scale (Fit, 1, 2, 3, 4). Default is Fit.")
     parser.add_argument("--repeats", type=int, default=1)
     parser.add_argument("--fps", type=int, choices=(25, 30, 50, 60), default=60)
+    parser.add_argument("--aspect", choices=("original", "9:16"), default="original", help="Target aspect ratio ('original' or '9:16')")
+    parser.add_argument("--9-16", dest="aspect_9_16", action="store_true", help="Shortcut to convert to 9:16 size")
     args = parser.parse_args()
     if args.output:
         if not args.files:
-            parser.error("Provide at least one GIF file for conversion.")
+            parser.error("Provide at least one GIF or MP4 file for conversion.")
+        aspect = "9:16" if args.aspect_9_16 else args.aspect
         for value in args.files:
-            print(convert(Path(value), args.output.resolve(), scale=args.scale, repeats=args.repeats, fps=args.fps))
+            print(convert(Path(value), args.output.resolve(), scale=args.scale, repeats=args.repeats, fps=args.fps, aspect=aspect))
     else:
         if os.name == "nt":
             import ctypes

@@ -1,0 +1,32 @@
+Generated with built-in image_gen using $divergency-25d-stage-background and the user's established source-mood/platform-preservation preferences.
+Edit target, scene, platform shapes and color relationships: imgs/Stage4/ch4_05_the_blue_rift_shattered_sky.png
+Pixel rendering reference only: output/skills/divergency-25d-stage-background/references/style-anchor.png
+
+Use case: style-transfer with structure preservation.
+Asset type: a finished pixel-art background for a dark fantasy 2.5D side-scrolling game.
+
+REFERENCE ROLES:
+IMAGE 1, The Blue Rift / Shattered Sky, is the EDIT TARGET and authoritative reference for the scene, platform arrangement, composition, shapes, theme and color relationships.
+IMAGE 2, the blood-lair draft, is the user's APPROVED PIXEL STYLE reference: coarse handcrafted square-pixel clusters, hard stepped silhouettes, restrained dithering, compact discrete highlights, dark muted values and short shade ramps. Borrow its rendering vocabulary and controlled saturation, not its dragon skull, cave, bones, floor layout, or ochre color scheme.
+
+PRIMARY REQUEST:
+Restyle IMAGE 1 into the user's established authentic 16-bit pixel-art style while keeping its distinctive shattered-sky environment. Preserve the source composition and wide approximately 16:9 framing. This is the SAME Blue Rift stage, not a replacement location.
+
+SCENE AND SHAPES TO PRESERVE:
+An immense jagged luminous turquoise fissure tears open the upper central sky, revealing a strange star-filled blue-green cosmic void. The surrounding blood-red/burgundy storm clouds fracture into angular plates, with thin branching teal cracks along their edges and suspended black stone fragments. Far below, smoky jagged mountains, a distant erupting volcano on the left, sparse tiny lava streams and ashen gray-violet atmospheric layers suggest a vast hostile landscape.
+Preserve the separated dark basalt platform structures: the upper ledge entering from the left with ancient inscribed monoliths; the lower left broken ledge and its falling thin lava stream; the small isolated bottom-left stepping rock; the broad lower central shattered rock shelf with branching turquoise fissures; the distinctive rising, broken, zigzag stone-platform/stair shape in the middle; the right-hand cliff with its diagonal stone steps and its separate high projecting shelf. Keep their recognizable horizontal placement, relative heights, open chasm gaps and jagged angular outlines. Maintain the sense that pieces of the world have broken apart and float over an abyss.
+Dark dried-blood-red vein-like roots wrap the right cliff and selected platform undersides as in the source. Ancient narrow monoliths carry small abstract carved cyan markings, treated as simple pixel motifs rather than readable writing.
+
+2.5D WALKABLE SURFACES:
+Give the existing platform TOP faces a little more usable front-to-back depth, consistent with a shallow side-on beat 'em up viewpoint. The central lower rock shelf and the existing right-hand stair treads should read as standable surfaces, not razor-thin decorative shelves. Preserve their essential silhouettes, elevations and gaps; do not replace the path or move the platforms. Use compact stepped top-face shading to show depth. Keep the tops mostly clear, with cracks and inlaid energy traces lying flush. No new props obstructing movement. No full-width ground floor, filled-in abyss, uninterrupted bridge, ground courtyard or ritual circle. The original separated platforms and zigzag stone path remain the stage's identity.
+
+PIXEL ART STYLE:
+Authentic handcrafted 16-bit game background, using the clear coarse pixel language of IMAGE 2 throughout. Visibly square deliberate pixel clusters, crisp hard edges, stepped contours, chunky readable stone facets, clean limited dithering, small sparse highlights and short discrete color ramps. Simplify fine brush texture into intentional pixel shapes. Clouds, mist, cosmic light and lava must also be built from discrete pixel clusters and color bands, not smooth blurred gradients. Large readable silhouettes and quiet areas on the platform tops.
+
+COLOR AND LIGHT:
+Keep IMAGE 1's character: near-black charcoal basalt, muted cool slate/blue-violet rocks, dried burgundy and desaturated blood-red storm clouds and roots, smoky earthy gray mountains, turquoise/ghostly teal fissure and energy traces, very restrained distant burnt-orange lava. Bring saturation and value control closer to the approved pixel reference, while preserving the teal-rift versus red-storm contrast. The rift may have a few sharp bright teal and pale mint pixels, but avoid an electric cyan wash, glossy bloom or airbrushed glow. Keep all other areas gloomy and subdued. Rift edges and crack highlights stay crisp.
+
+CONSTRAINTS:
+One coherent edge-to-edge opaque environment image in the source framing. No characters, enemies, humanoid ghosts, UI, captions, logos, watermark, panels, black bars or readable text. No 3D rendering, isometric map overview, photorealistic rock texture, painterly airbrushing, blur, anti-aliased outlines, smooth gradients, soft glow, overly fine microtexture or shiny CGI lava.
+Highest priorities: the original BLUE RIFT mood and recognizable broken PLATFORM SHAPES, rendered in the user's hard-edged muted 16-bit pixel-art style, with useful visible depth on the walkable tops.
+

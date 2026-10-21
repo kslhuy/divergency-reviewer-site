@@ -1,5 +1,5 @@
 <h2 id="gameplay-1-3-uong-cong-chinh-va-ben-cang-hoang-hon" tabindex="-1"><a class="heading-link" href="#gameplay-1-3-uong-cong-chinh-va-ben-cang-hoang-hon" aria-label="Link to section">#</a>1-3. Đường cống chính và bến cảng hoàng hôn</h2>
-<p class="chapter-version"><strong>Bản đồng nhất gameplay · narrative · Timeline — 10/10/2026.</strong> Nguồn thực thi: <code>Assets/Scenes/Chapter1_Playable.unity</code>. Bản đang ở mức <code>prototype_known_issues</code>; các phần cần hoàn thiện được ghi cụ thể phía dưới.</p>
+<p class="chapter-version"><strong>Bản thiết kế được đồng bộ ngày 20/10/2026; các bảng prototype là mốc đối chiếu, cần kiểm tra lại khi tích hợp.</strong> Nguồn thực thi: <code>Assets/Scenes/Chapter1_Playable.unity</code>. Bản đang ở mức <code>prototype_known_issues</code>; các phần cần hoàn thiện được ghi cụ thể phía dưới.</p>
 <span id="gameplay-1-3-tu-cong-ra-bien"></span><span id="gameplay-1-3-cuoc-hen-vang-nguoi"></span><span id="gameplay-1-3-gianh-cau-tau"></span><span id="gameplay-1-3-quyet-dinh-cuu-nguoi"></span>
 
 <div class="table-wrap"><table><thead><tr><th>Tuyến di chuyển (Where to where)</th><th>Mục tiêu & Điểm mốc</th><th>Chuyển tiếp gameplay</th></tr></thead><tbody>
@@ -14,42 +14,43 @@
 
 <h3>2. Cuộc hẹn vắng người, Thế chân vạc &amp; Đại hỗn chiến 4 phe (Combat đông người)</h3>
 <p>Đầu cảng có một nhịp yên tĩnh quý giá: Ghost đứng lặng nhìn về phía chân trời biển Địa Trung Hải rực đỏ trong ánh hoàng hôn. Tuy nhiên, đội nhanh chóng phát hiện chiếc thuyền đánh cá hẹn trước đã bị đập nát buồng máy, dây neo bị chém đứt, và vệt máu kéo dài về phía bãi xe container — hoa tiêu Mateo của Mark đã bị xích giải đi.</p>
-<p>Ngay lúc đó, không phải một cuộc phục kích bất ngờ mà <strong>cả 3 thế lực đã tề tựu sẵn tại cầu tàu Hangar J4</strong> tạo thành thế chân vạc nghẹt thở:</p>
+<p><strong>Ba lực lượng cùng có mặt tại cầu tàu Hangar J4:</strong></p>
 <ul>
 <li><strong>Phe Băng Áo Đen (Don Hector "Big MM" Malo chỉ huy):</strong> Đậu 3 chiếc sedan bọc thép đen bóng chặn lối độc đạo, hàng chục tay dao búa bao vây. Don Malo chống gậy baton thép hút xì gà, trong túi áo dạ thủ sẵn ống Huyết thanh Chitin. Bọn chúng đã đập nát chiếc thuyền cá và bắt hoa tiêu Mateo làm con tin!</li>
-<li><strong>Phe Tay Súng Thuê Marseille (Bruno Valette chỉ huy cùng Antoine, Luc):</strong> Phục kích trên nóc container tầng hai với tiểu liên drum-mag, đến đòi món nợ 5 vạn Francs tiền hàng bị nổ ở Bastonne.</li>
-<li><strong>Đội Deep (Deep, Mark, Solei, Block, Ghost):</strong> Vừa từ nắp cống trồi lên với áo quần ướt sũng, kẹt ngay giữa tầm ngắm của súng máy và mã tấu.</li>
+<li><strong>Phe Tay Súng Thuê Marseille (Bruno Valette chỉ huy cùng Antoine, Luc):</strong> Phục kích trên nóc container tầng hai với tiểu liên drum-mag, đến đòi khoản tiền hàng Jamerson chưa trả; lô hàng bị lực lượng ông giữ sau báo động Bastonne.</li>
+<li><strong>Đội Deep (nhóm ba người đã chọn, người dự bị giữ tuyến):</strong> Vừa từ nắp cống trồi lên với áo quần ướt sũng, kẹt ngay giữa tầm ngắm của súng máy và mã tấu.</li>
 </ul>
 
 <h4>Màn đấu tay đôi 1v1 &amp; Bầy Mutant trào lên phá đám</h4>
-<p>Deep cắm đại kiếm thách đấu Bruno theo Luật Cầu Tàu để buộc thả con tin và tránh đánh động pháo bờ biển. Hai bên đấu 1v1 kịch liệt. Đúng lúc giằng co, bầy mutant dưới cống ngầm bị kích động (hoặc do bọn băng đảng bắt giữ người/đồng loại mutant làm con tin để khống chế bầy quái), khiến <strong>Bầy Quái Hoa "Les Éclos" (mutan_flower &amp; mutan_leaf)</strong> đạp tung hàng loạt nắp cống tràn lên phá đám, cắn xé hỗn loạn!</p>
+<p>Đạt ngưỡng phá thế Bruno mới chuyển sang cảnh xả thải và hỗn chiến; không tự hoàn thành trận đấu theo đồng hồ. Nếu Deep bị hạ trước đó, thử lại tại checkpoint đấu tay đôi, không mở một nhánh anh bị bắt khỏi chiến dịch. Lưu nhóm đã chọn để trả quyền điều khiển sau đoạn này. Các số HP, thời gian choáng và hệ số sát thương dưới đây là giá trị thử nghiệm cần kiểm chứng trong Unity.</p>
+<p>Deep thách Bruno theo Luật Cầu Tàu: anh chịu bị bắt nếu thua; nếu thắng, tay súng phải hạ nòng cho đội qua. Bruno tin mình thắng cận chiến và muốn dùng Deep mặc cả với Jamerson nên rời ổ súng. Hắn không có quyền thả Mateo trong tay Don Malo. Đồng đội giữ đường tránh cho công nhân mắc kẹt; trận đấu không tự hoàn tất mục tiêu cứu Mateo. Trong đoạn này quyền điều khiển tạm chuyển sang Deep tại checkpoint; đồng đội giữ tuyến theo kịch bản, sau đó trả lại nhân vật đã chọn. Đúng lúc giằng co, MuCEM xả chất thải và kích hoạt thiêu hủy xuống cống, khiến <strong>Bầy Quái Hoa "Les Éclos" (mutan_flower &amp; mutan_leaf)</strong> đạp tung hàng loạt nắp cống tràn lên phá đám, cắn xé hỗn loạn!</p>
 <ul>
   <li><strong>Bruno tháo chạy chiến thuật:</strong> Bị quái hoa cào rách giáp ngực, súng ngắn cạn đạn, Bruno ném lựu đạn khói rút chạy theo đường hầm kỹ thuật sang MuCEM (để dành hình thái Snake Boss cho Stage 1-4).</li>
-  <li><strong>Don Malo bị đánh gần chết ➔ Hóa STAG-BEETLE TITAN (Big_MM_trans):</strong> Don Malo dạng người (8,000 HP, cầm gậy baton bọc thép) trực tiếp nghênh chiến. Khi bị người chơi dồn combo đánh thừa sống thiếu chết, gãy gậy, máu cạn đáy và gục ngã sát mép biển, lão mới tuyệt vọng rút ống Huyết thanh Chitin cắm vào cổ hồi sinh và biến thành Bọ Hung Thiết Giáp Khổng Lồ 24,000 HP!</li>
-  <li><strong>AI Faction Infighting &amp; Tương tác sàn đấu:</strong> Người chơi dẫn dụ cú húc của Don Malo tông thẳng vào bầy quái hoa để dọn creep; lừa boss cắm sừng vào container bị choáng 4s lộ điểm yếu sau gáy x2 damage; và quét kiếm hất địch rơi xuống biển (Ring Out).</li>
+  <li><strong>Don Malo bị đánh gần chết ➔ Hóa STAG-BEETLE TITAN (Big_MM_trans):</strong> Don Malo dạng người (8,000 HP, cầm gậy baton bọc thép) trực tiếp nghênh chiến. Khi bị người chơi dồn combo đánh thừa sống thiếu chết, gãy gậy, máu cạn đáy và gục ngã sát mép biển, lão mới tuyệt vọng rút ống Huyết thanh Chitin cắm vào cổ, tăng sức và biến thành Bọ Hung Thiết Giáp Khổng Lồ 24,000 HP!</li>
+  <li><strong>AI Faction Infighting &amp; Tương tác sàn đấu:</strong> Người chơi dẫn dụ cú húc của Don Malo tông thẳng vào bầy quái hoa để dọn creep; lừa boss cắm sừng vào container bị choáng 4s lộ điểm yếu sau gáy x2 damage; và dùng đòn phá thế đẩy địch rơi xuống biển (Ring Out).</li>
 </ul>
 
 <h3>3. Cutscene: Cuộc họp bàn tác chiến tách cánh bên bến cảng Hangar J4</h3>
-<p>Sau trận huyết chiến nghẹt thở, Don Malo gục ngã dưới đòn trảm của Deep và Solei, rơi xuống biển sâu. Cả đội chiếm quyền kiểm soát chiếc ca-nô tuần tra cao tốc còn nguyên vẹn ở mép cầu cảng. Nhưng cả nhóm không thể mù quáng phóng ca-nô ra biển ngay mà phải <strong>ngồi lại họp bàn kế hoạch tác chiến</strong> trước nguy cơ sinh tử:</p>
+<p>Sau trận huyết chiến nghẹt thở, Don Malo gục ngã dưới đòn phá thế của nhóm đang chiến đấu, rơi xuống biển sâu. Cả đội chiếm quyền kiểm soát chiếc ca-nô tuần tra cao tốc còn nguyên vẹn ở mép cầu cảng. Nhưng cả nhóm không thể mù quáng phóng ca-nô ra biển ngay mà phải <strong>ngồi lại họp bàn kế hoạch tác chiến</strong> trước nguy cơ sinh tử:</p>
 <ul>
-  <li><strong>Hiện thực nguy hiểm:</strong> Thuyền cá đào tẩu đã bị đập nát hoàn toàn, hoa tiêu Mateo (con tin duy nhất nắm hải đồ né bãi mìn) bị áp giải sang MuCEM. Toàn bộ vịnh biển bị pháo hải quân và radar quét 360 độ khóa chết; nếu cả 5 người cùng ngồi lên một ca-nô lao ra biển sẽ bị bắn chìm trong 30 giây!</li>
-  <li><strong>Cảm ứng của Stranger:</strong> Stranger ôm đầu chỉ ra cửa âu ngập nước bí mật dưới chân đế MuCEM — nơi không bị pháo trên cao quét tới. Cậu nghe thấy tiếng kêu cứu của Mateo và các mẫu vật biến dị bên dưới.</li>
+  <li><strong>Hiện thực nguy hiểm:</strong> Thuyền cá đào tẩu đã bị đập nát hoàn toàn, hoa tiêu Mateo (con tin duy nhất nắm hải đồ né bãi mìn) bị áp giải sang MuCEM. Toàn bộ vịnh biển bị pháo hải quân và radar quét 360 độ khóa chết; nếu cả đội cùng ngồi lên một ca-nô lao ra biển sẽ lọt vào luồng hỏa lực!</li>
+  <li><strong>Cảm ứng của Stranger:</strong> Sơ đồ dịch vụ cùng lệnh chuyển Mateo chỉ cửa vòm dưới MuCEM. Ghost cảm thấy cộng hưởng ở hướng ấy nhưng không nghe rõ ai đang bị giữ. Mark kiểm tra sơ đồ và tuyến hỏa lực trước khi chốt đường vào.</li>
   <li><strong>Kế hoạch tách 2 cánh của Mark &amp; Deep:</strong>
     <ul>
       <li><em>Cánh 1 (Mark &amp; Solei):</em> Men theo bờ đá lẻn vào <strong>Trạm kiểm soát kỹ thuật ven bờ</strong> đối diện MuCEM để hack ngắt nguồn điện radar và tắt dàn đèn pha quét biển.</li>
-      <li><em>Cánh 2 (Deep, Stranger, Block):</em> Nấp sẵn trên ca-nô; ngay khi đèn pha vụt tắt (tín hiệu hoàn thành), Deep nổ máy rẽ sóng men theo vách đá pháo đài Fort Saint-Jean, đâm thẳng vào cửa âu ngầm MuCEM.</li>
+      <li><em>Cánh 2 (Deep, Ghost, Block):</em> Chờ trên ca-nô; khi radar và đèn pha tắt, Deep lái men vách Fort Saint-Jean tới cửa vòm MuCEM. Deep và Ghost lên hành lang; Block đưa thuyền tới bến dịch vụ 01, giữ đường rút cùng đội dự bị.</li>
       <li><em>Điểm hội quân:</em> Mark và Solei sau đó cắt qua cầu treo hành lang trên cao (Skybridge) để hội quân cùng cả đội tại <strong>Ga ngầm đáy biển (Subway Dock)</strong> trước khi xuống phòng Lab.</li>
     </ul>
   </li>
 </ul>
-<blockquote><p><strong>Deep cắm kiếm xuống sàn kè cảng:</strong> “Thuyền nát rồi, Mateo đang bị giam dưới đó, và họng pháo của chúng khóa chết cả thành phố. Chúng ta đã chạy trốn một lần từ Bastonne... Nhưng đêm nay, chúng ta không chạy trốn nữa! Đêm nay, kết thúc tất cả ở MuCEM! Xuất kích!”</p></blockquote>
+<blockquote><p><strong>Deep đưa kiếm ngắn ra trước người:</strong> “Thuyền nát rồi, Mateo đang bị giam dưới đó, và họng pháo của chúng khóa chết cả thành phố. Chúng ta đã chạy trốn một lần từ Bastonne... Nhưng đêm nay, chúng ta không chạy trốn nữa! Cứu Mateo và những người dưới đó, rồi đưa họ ra thuyền. Xuất phát!”</p></blockquote>
 
 <h3>Phạm vi Timeline của đoạn</h3><div class="table-wrap"><table><thead><tr><th>Phòng / Phân khu</th><th>Thực thi</th></tr></thead><tbody>
 <tr><td><code>ch1_sewer_03</code></td><td>Timeline: 9 cue / 4 actor (Bờ khô cống chính)</td></tr>
 <tr><td><code>ch1_sewer_04</code></td><td>Timeline: 3 cue / 1 actor (Cơ cấu cần hạ cầu bảo trì)</td></tr>
 <tr><td><code>ch1_harbor_brawl</code></td><td>Timeline Wave 1: 18 cue / 14 actor (1v1 Deep vs Bruno ➔ Mutant phá đám ➔ Đại hỗn chiến 4 phe)</td></tr>
 <tr><td><code>ch1_harbor_boss</code></td><td>Timeline Wave 2: Don Hector Malo hóa Stag-Beetle Titan 24,000 HP</td></tr>
-</tbody></table></div><p>Timeline điều khiển spawn và nhịp chiến đấu đa phe. Typewriter giữ hội thoại nhấn tiếp; ChapterOneProgress giữ trạng thái nhiệm vụ/cửa/checkpoint. Dữ liệu có thể chỉnh trong LF2 → Stage Timeline.</p>
+</tbody></table></div><p>Timeline điều khiển spawn và nhịp chiến đấu đa phe. Typewriter giữ hội thoại nhấn tiếp; ChapterOneProgress giữ trạng thái nhiệm vụ/cửa/checkpoint. Dữ liệu có thể chỉnh trong cửa sổ Stage Timeline của Unity.</p>
 
 <details><summary>Ảnh tham chiếu bố trí stage gameplay (Sunset Harbor &amp; MuCEM Connection)</summary>
 <figure class="markdown-image"><img src="imgs/Stage1/chap1/Sewer3.png" alt="Sewer3 — đi theo bờ khô tới cầu bảo trì; các phòng trú cũ là nhánh khám phá ngắn." loading="lazy"><figcaption>Sewer3 — đi theo bờ khô tới cầu bảo trì; các phòng trú cũ là nhánh khám phá ngắn.</figcaption></figure>
@@ -58,7 +59,7 @@
 <figure class="markdown-image"><img src="imgs/campaign-panels/Fund_region/imgs_refs/Mucem.png" alt="Ảnh thực tế Bảo tàng MuCEM — Khối kiến trúc mắt cáo bê tông sợi nổi trên mặt biển Marseille, bề nổi ngụy trang của tàu ngầm Jamerson." loading="lazy"><figcaption>Ảnh thực tế Bảo tàng MuCEM — Khối kiến trúc mắt cáo bê tông sợi nổi trên mặt biển Marseille, bề nổi ngụy trang của tàu ngầm Jamerson.</figcaption></figure>
 <figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_ingame_dock_1791562279017.jpg" alt="MuCEM In-game Surface Dock — Bến cập tháp nổi MuCEM dẫn xuống tháp nâng khoang kín tàu ngầm bí mật." loading="lazy"><figcaption>MuCEM In-game Surface Dock — Bến cập tháp nổi MuCEM dẫn xuống tháp nâng khoang kín tàu ngầm bí mật.</figcaption></figure>
 </details>
-<section class="chapter-dialogue"><h3>Toàn bộ hội thoại đang gắn trong bản Unity</h3><p>Các mục dưới được xuất từ Typewriter. Điều kiện và tên điểm tương tác dành cho việc review, không phải lời nhân vật nói.</p>
+<section class="chapter-dialogue"><h3>Hội thoại mục tiêu và các key để đối chiếu Unity</h3><p>Các mục dưới giữ key Typewriter; nội dung biên tập mới cần đồng bộ lại trong Unity. Điều kiện và tên điểm tương tác dành cho việc review, không phải lời nhân vật nói.</p>
 <details><summary>Cống chính — ch1_sewer_03</summary>
 <p>Dọn quái trên bờ khô, tiến tới cầu bảo trì.</p>
 <h4>enter — cần None; loại trừ None</h4>
@@ -102,14 +103,14 @@
 <h4>ambush — cần None; loại trừ None</h4>
 <ul>
 <li><strong>Mark:</strong> Dây neo bị băm nát! Buồng máy bị đập vỡ, hoa tiêu Mateo bị kéo xích giải đi rồi!</li>
-<li><strong>Bruno Valette:</strong> Mày nhìn kìa Deep! Cả cái vịnh Marseille này không có chiếc thuyền nào đón mày đâu. Vụ nổ sà lan ở Bastonne đã đốt sạch 5 vạn Francs của tao. Bỏ mạng lại đây!</li>
+<li><strong>Bruno Valette:</strong> Mày nhìn kìa Deep! Cả cái vịnh Marseille này không có chiếc thuyền nào đón mày đâu. Sau báo động Bastonne, Jamerson giữ sạch hàng của tao mà không trả tiền. Giao tù nhân đây để tao buộc hắn mở kho!</li>
 <li><strong>Don Hector Malo:</strong> Cầu cảng này là đất của Malo. Thằng nhóc Bastonne có giá bằng cả con tàu hàng. Còn mày Bruno, lượn đi trước khi tao bảo tụi nhỏ quẳng xác mày nuôi cá trích!</li>
-<li><strong>Deep:</strong> Muốn tính nợ Bastonne? Thả con tin ra, bỏ súng máy xuống. Bước ra đây 1 chọi 1 theo Luật Cầu Tàu!</li>
-<li><strong>Bruno:</strong> Được lắm! Xem kiếm thép Bastonne hay nắm đấm bọc chì của tao nhanh hơn!</li>
+<li><strong>Deep:</strong> Muốn một người để mặc cả với Jamerson? Đấu với tôi theo Luật Cầu Tàu. Tôi thua, tôi đi với anh. Tôi thắng, tay súng của anh hạ nòng cho đội qua.</li>
+<li><strong>Bruno:</strong> Deep đổi lấy cả đội? Được. Thắng tao rồi hãy nói chuyện đi qua!</li>
 </ul>
 <h4>outbreak — kích hoạt khi Quái Hoa trào dâng &amp; Don Malo biến hình</h4>
 <ul>
-<li><strong>Bruno:</strong> Khốn kiếp! Lũ quái cống trào lên rồi! Jameson... tao sẽ đến tìm mày tính đủ cả gốc lẫn lãi! (Ném bom khói rút sang MuCEM)</li>
+<li><strong>Bruno:</strong> Khốn kiếp! Lũ quái cống trào lên rồi! Jamerson... tao sẽ đến tìm mày tính đủ cả gốc lẫn lãi! (Ném bom khói rút sang MuCEM)</li>
 <li><strong>Don Malo (bị đánh trọng thương gần chết, quỳ gục run rẩy):</strong> Lũ khốn... Ta là vua của Marseille! Ta không thể chết ở đây!... (Cắm phập ống Huyết thanh Chitin vào cổ hóa Stag-Beetle Titan)</li>
 <li><strong>Deep:</strong> Đội hình chiến đấu! Lừa con bọ húc vào container phá giáp, dọn đường đoạt lấy chiếc ca-nô!</li>
 </ul>
@@ -121,14 +122,14 @@
 <ul>
 <li><strong>Mark:</strong> Đã hạ con bọ khổng lồ! Nhưng thuyền của chúng ta bị đập nát bấy rồi. Mateo đã bị lôi đi...</li>
 <li><strong>Block:</strong> Ta còn chiếc ca-nô cao tốc vừa cướp được kia! Lên hết thuyền, phóng thẳng ra biển là xong!</li>
-<li><strong>Mark:</strong> Không được! Radar và tháp pháo cao tốc dưới chân MuCEM đang quét 360 độ. Nếu cả 5 người cùng lao ra biển mở, pháo hải quân sẽ băm nát chúng ta trong 30 giây!</li>
+<li><strong>Mark:</strong> Không được! Radar và tháp pháo cao tốc dưới chân MuCEM đang quét 360 độ. Nếu cả đội cùng lao ra biển mở, pháo hải quân có thể hạ thuyền khi nó vào luồng quét!</li>
 <li><strong>Solei:</strong> Đường bộ trên quảng trường chính thì xe thiết giáp chốt chặn. Đường biển thì tháp pháo khóa họng. Chẳng lẽ đứng đây chờ chết?</li>
-<li><strong>Stranger:</strong> (Ôm đầu quỳ gục, mắt rực sáng lam nhạt)... Dưới đáy biển... dưới chân khối bê tông đó... Mateo đang ở đó... Cả những tiếng thét nữa... Họ đang bị mổ xẻ... Có một cửa âu kỹ thuật ngập nước dưới đáy bảo tàng, pháo trên cao không quét tới!</li>
-<li><strong>Mark:</strong> Muốn ca-nô vào được cửa âu ngầm đó, phải làm 'mù' mắt MuCEM trước! Tôi và Solei sẽ men theo bờ đá đột nhập Trạm kiểm soát kỹ thuật ven bờ hack tắt radar và đèn pha. Deep, Stranger và Block nấp sẵn trên ca-nô này. Khi thấy đèn pha vụt tắt, Deep lập tức nổ máy men theo chân vách đá Fort Saint-Jean đâm thẳng vào cửa âu ngầm!</li>
+<li><strong>Ghost:</strong> (Ghì tay lên trán, nhìn về phía MuCEM) Có tiếng nhiễu từ dưới đó. Tôi không phân biệt được ai.</li>
+<li><strong>Mark:</strong> Lệnh chuyển ghi MuCEM, sơ đồ dịch vụ chỉ cửa vòm dưới chân bảo tàng. Tôi và Solei cắt radar, tắt đèn pha ở trạm bờ. Deep và Ghost theo ca-nô vào cửa vòm khi có tín hiệu. Block đưa thuyền tới bến 01 để giữ đường rút; người dự bị theo tuyến cứu hộ.</li>
 <li><strong>Deep:</strong> Sau khi dập xong radar, hai người rút thế nào?</li>
 <li><strong>Solei:</strong> Có cầu treo Skybridge nối sang MuCEM. Tôi và Mark sẽ cắt qua cầu hội quân với mọi người tại Ga ngầm đáy biển!</li>
 <li><strong>Block:</strong> Kế hoạch rất rõ ràng. Lần này chúng ta không lùi nữa.</li>
-<li><strong>Deep:</strong> (Cắm kiếm xuống sàn kè cảng)... Thuyền nát rồi, Mateo đang bị giam dưới đó, và họng pháo của chúng khóa chết cả thành phố. Chúng ta đã chạy trốn một lần từ Bastonne... Nhưng đêm nay, chúng ta không chạy trốn nữa! Đêm nay, kết thúc tất cả ở MuCEM! Xuất kích!</li>
+<li><strong>Deep:</strong> (Hạ kiếm ngắn, chỉ lối xuống bến)... Thuyền nát rồi, Mateo đang bị giam dưới đó, và họng pháo của chúng khóa chết cả thành phố. Chúng ta đã chạy trốn một lần từ Bastonne... Nhưng đêm nay, chúng ta không chạy trốn nữa! Cứu Mateo và những người bị giữ dưới đó. Đưa họ ra thuyền. Xuất phát!</li>
 </ul>
 </details>
 </section>

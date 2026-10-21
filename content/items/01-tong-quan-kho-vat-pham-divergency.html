@@ -1,0 +1,1109 @@
+<h1 id="item-wiki-overview">Kho Vật Phẩm & Cổ Vật Chiến Đấu (Item Wiki 48 Relics)</h1>
+<p class="doc-summary">Bách khoa toàn thư lưu trữ toàn bộ 48 vật phẩm dã chiến, vũ khí cận chiến, cấm thư ma pháp, dị vật hiến tế và dược phẩm sinh tồn trong Divergency. Mỗi vật phẩm đều có vai trò cơ chế rõ ràng, gắn liền với bối cảnh thành phố cảng Marseille, nhà tù Bastonne và thần thoại Khởi Nguyên.</p>
+
+<div class="item-wiki-summary-strip">
+  <div class="item-wiki-stat-box">
+    <span class="item-wiki-stat-num">48</span>
+    <span class="item-wiki-stat-label">Vật phẩm & Cổ vật</span>
+  </div>
+  <div class="item-wiki-stat-box">
+    <span class="item-wiki-stat-num">5</span>
+    <span class="item-wiki-stat-label">Phân nhánh tác chiến</span>
+  </div>
+  <div class="item-wiki-stat-box">
+    <span class="item-wiki-stat-num">5</span>
+    <span class="item-wiki-stat-label">Chương bản đồ gắn kết</span>
+  </div>
+  <div class="item-wiki-stat-box">
+    <span class="item-wiki-stat-num">60 Hz</span>
+    <span class="item-wiki-stat-label">Tick combat · tách khỏi FPS hình</span>
+  </div>
+</div>
+
+<blockquote class="item-mastery-scope"><strong>Đối chiếu code/asset 21/10/2026:</strong> 48 artwork là danh mục ý tưởng, không phải 48 hiệu ứng đã kiểm thử hoặc đều được khảm. ItemCatalog hiện đăng ký 23 item: 10 consumables, 10 vật liệu và 3 essence; có 10 recipe. Code mastery dùng các essence riêng, không tiêu hủy cổ vật gốc; các thẻ Chùy Gai (item_0_0), Vỏ Ốc (item_0_1), Đoản Kiếm (item_3_0) vẫn là nguồn artwork cho bản mô phỏng. Hiệu ứng, chi phí MP và giới hạn trong Studio là ngân sách thiết kế; bản game test không dùng mana. Mọi công năng chiến đấu kiếm được bằng gameplay; biến thể backer chỉ đổi ngoại hình. Các hiệu ứng mở rộng ở thẻ ý tưởng cần cân bằng riêng, không tự cộng vào chiêu game. Xem <a href="#power-mastery-sockets">phạm vi socket</a> và <a href="#power-skill-mastery">phần đã có, đề xuất và chưa kiểm thử runtime</a>.</blockquote>
+
+<h2 id="item-master-sheet">Bảng Lưu Trữ Tổng Hợp 48 Vật Phẩm (Master Sprite Sheet)</h2>
+<p>Hình ảnh nguồn từ tập tin <code>item_in_khoa.png</code> (8 cột x 6 hàng) được chế tác tỉ mỉ theo tỷ lệ chuẩn pixel art, mỗi ô vật phẩm nằm gọn trong khung viền kim loại - đá cổ kính đặc trưng của vũ trụ Divergency.</p>
+
+<figure class="item-sheet-figure">
+  <div class="item-sheet-viewer">
+    <img src="imgs/items/item_in_khoa.png" alt="Bảng tổng hợp 48 vật phẩm và dị vật chiến đấu trong Divergency" class="item-sheet-img" loading="lazy">
+  </div>
+  <figcaption>Bảng lưu trữ tổng hợp 48 Relics & Dị vật chiến đấu (item_in_khoa.png · 8 cột x 6 hàng)</figcaption>
+</figure>
+
+<h2 id="item-cards-explorer">Hệ Thống Phân Loại & Bộ Lọc Tương Tác (Item Cards Explorer)</h2>
+<p>Nhấp vào các thẻ phân loại bên dưới hoặc gõ từ khóa vào ô tìm kiếm để lọc nhanh danh mục 48 vật phẩm theo tên, công dụng, thuộc tính phá giáp, hồi phục hoặc bối cảnh màn chơi.</p>
+
+<div class="item-filter-container" id="item-wiki-filter-app">
+  <div class="item-filter-toolbar">
+    <input type="search" class="item-search-input" id="item-search-input" placeholder="Tìm tên vật phẩm, cơ chế (Bleed, Guard Break, Hồi Máu, Bastonne...)..." autocomplete="off">
+    <div class="item-category-pills">
+      <button type="button" class="item-pill is-active" data-cat="all">Tất cả (48)</button>
+      <button type="button" class="item-pill" data-cat="Vũ khí cận chiến">Vũ khí & Công cụ</button>
+      <button type="button" class="item-pill" data-cat="Cổ vật">Dị vật & Cổ vật</button>
+      <button type="button" class="item-pill" data-cat="Dược phẩm">Dược phẩm & Sinh tồn</button>
+      <button type="button" class="item-pill" data-cat="Ký sinh">Xúc tác & Ký sinh</button>
+      <button type="button" class="item-pill" data-cat="Mặt nạ">Mặt nạ & Phòng hộ</button>
+    </div>
+  </div>
+
+  <div class="item-cards-grid" id="item-cards-grid">
+    <article class="item-card" data-category="Vũ khí cận chiến" data-stage="Chương 0: Nhà tù Bastonne" data-id="item_0_0" id="item_0_0">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r0_c0.png" alt="Chùy Gai Rỉ Máu Bastonne" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R0·C0</span>
+          <h3 class="item-card-name">Chùy Gai Rỉ Máu Bastonne</h3>
+          <p class="item-card-en">Bloodied Trench Club</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Vũ khí cận chiến</span>
+        <span class="item-tag item-tag-stage">Chương 0</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Phá vỡ thế thủ (Guard Break) & Gây Chảy Máu</p>
+      <p class="item-card-desc">Khối chùy gỗ đặc bịt đai sắt đóng đầy đinh rỉ, thấm đẫm máu khô của các cai ngục và tù nhân trong cuộc hỗn chiến ngục tối.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Đòn đánh chậm nhưng lực va chạm cực mạnh. Đòn vung hạng nặng (Heavy Swing) lập tức bẻ gãy thế thủ (Guard Break) của lính giáp, gây hiệu ứng Choáng (Stagger) kéo dài 1.5 giây và tích lũy trạng thái Chảy Máu (Bleed).</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Rất hợp khi mở đầu combat để đập vỡ khiên chắn của đối phương, tạo cửa sổ cho đồng đội lao vào tung chuỗi liên hoàn đòn.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Cổ vật bảo hộ" data-stage="Chương 1: Cảng Cổ Marseille" data-id="item_0_1" id="item_0_1">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r0_c1.png" alt="Vỏ Ốc Xà Cừ Hoàng Kim" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R0·C1</span>
+          <h3 class="item-card-name">Vỏ Ốc Xà Cừ Hoàng Kim</h3>
+          <p class="item-card-en">Golden Nautilus Shell</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Cổ vật bảo hộ</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Kháng âm thanh chấn động & Lệch sóng ma thuật</p>
+      <p class="item-card-desc">Hóa thạch ốc anh vũ biển sâu dát lớp xà cừ óng ánh hổ phách, lưu giữ tiếng vọng của đại dương tiền sử trước thảm họa Sao Rơi.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Khi kích hoạt, tạo ra một trường cộng hưởng âm học trong 6 giây: giảm 40% sát thương từ các đòn chấn động, tiếng thét của đàn hợp xướng (Voro Choir) và sóng xung kích diện rộng.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Bảo vệ cả đội khỏi bị ngắt chuỗi combo khi giao chiến với nhóm quái dị giáo có đòn gầm thét gây choáng.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Dị vật hiến tế" data-stage="Chương 2: Tế đàn Sakuri" data-id="item_0_2" id="item_0_2">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r0_c2.png" alt="Bàn Tay Quỷ Đứt Lìa" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R0·C2</span>
+          <h3 class="item-card-name">Bàn Tay Quỷ Đứt Lìa</h3>
+          <p class="item-card-en">Severed Fiend Claw</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Dị vật hiến tế</span>
+        <span class="item-tag item-tag-stage">Chương 2</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Cường hóa đòn vật (Grapple) & Hút sinh lực</p>
+      <p class="item-card-desc">Bàn tay ba ngón xám ngoét với móng vuốt cong hoắm, phần cổ tay đứt lìa vẫn còn rỉ chất dịch đen ma quỷ.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Gia tăng 25% uy lực cho các chiêu quật ngã, tóm bắt và ném đối thủ. Khi đè nghiến kẻ địch xuống mặt sàn, bàn tay sẽ siết chặt khí quản mục tiêu, hồi 5% HP cho người thi triển.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Đặc biệt hiệu quả trong các pha khống chế đấu sĩ đơn lẻ hoặc quái vật tinh anh (Elite creeps).</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Ngọc cảm ứng" data-stage="Chương 3: Hẻm đá Calvaria" data-id="item_0_3" id="item_0_3">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r0_c3.png" alt="Khối Đá Mắt Ma Ám" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R0·C3</span>
+          <h3 class="item-card-name">Khối Đá Mắt Ma Ám</h3>
+          <p class="item-card-en">Ghost-Eye Soul Stone</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Ngọc cảm ứng</span>
+        <span class="item-tag item-tag-stage">Chương 3</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Phát hiện phục kích & Cảnh báo nguy hiểm</p>
+      <p class="item-card-desc">Khối đá núi lửa màu tro xám với con mắt đỏ ngầu nằm ẩn giữa các nếp đá, liên tục đảo quanh quan sát.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Soi sáng và định vị toàn bộ kẻ địch tàng hình, lính bắn lén núp sau thùng gỗ và bẫy ngầm trong bán kính 10 mét. Khi lượng HP của đội rơi vào mức báo động đỏ, ngọc sẽ phát ra luồng xung kích nhẹ đẩy lùi quái nhỏ.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Giúp người chơi kiểm soát nhịp độ bản đồ, tránh bị móc lốp bất ngờ trong các màn cống ngầm tối tăm.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Xúc tác cấm thuật" data-stage="Chương 3: Thánh đường Calvaria" data-id="item_0_4" id="item_0_4">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r0_c4.png" alt="Lưỡi Quỷ Câm Lặng" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R0·C4</span>
+          <h3 class="item-card-name">Lưỡi Quỷ Câm Lặng</h3>
+          <p class="item-card-en">Flayed Hex Tongue</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Xúc tác cấm thuật</span>
+        <span class="item-tag item-tag-stage">Chương 3</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Vùng câm lặng (Silence Aura) & Ngắt chú</p>
+      <p class="item-card-desc">Chiếc lưỡi thịt đỏ lòm bị xẻ đôi của một kẻ cuồng tín, rỉ máu đen phong ấn lời nguyền báng bổ.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Nghiền nát vật phẩm để phóng ra làn sóng Câm Lặng bán kính 8 mét trong 8 giây: toàn bộ pháp sư địch và lính dị giáo lập tức bị khóa chiêu thức phép thuật, buộc phải đánh cận chiến.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Khắc chế tuyệt đối các đợt niệm phép diện rộng của dàn tế lễ Voro Choir.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Trang bị kiên định" data-stage="Chương 0: Nhà tù Bastonne" data-id="item_0_5" id="item_0_5">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r0_c5.png" alt="Vòng Xiềng Đá Tội Đồ Bastonne" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R0·C5</span>
+          <h3 class="item-card-name">Vòng Xiềng Đá Tội Đồ Bastonne</h3>
+          <p class="item-card-en">Bastonne Shackle Torc</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Trang bị kiên định</span>
+        <span class="item-tag item-tag-stage">Chương 0</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Kháng hất văng (Knockback Resist) & Trụ vững</p>
+      <p class="item-card-desc">Vòng đai đá cứng bọc sắt rạn nứt mang mã số tù khổ sai, minh chứng cho ý chí sinh tồn không thể bẻ gãy.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Giảm 35% lực đẩy lùi và kháng 40% trạng thái bay người khi bị kẻ địch đánh dồn. Giúp đấu sĩ đứng vững chân trên sàn đấu để phản kích ngay tức thì.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Hoàn hảo cho lối đánh áp sát trực diện, biến đấu sĩ thành bức tường thành không thể suy chuyển.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Ký sinh trùng hắc ám" data-stage="Chương 4: Hang Rồng Akam Meskul" data-id="item_0_6" id="item_0_6">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r0_c6.png" alt="Trùng Tủy Sống Có Cánh" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R0·C6</span>
+          <h3 class="item-card-name">Trùng Tủy Sống Có Cánh</h3>
+          <p class="item-card-en">Winged Spinal Parasite</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Ký sinh trùng hắc ám</span>
+        <span class="item-tag item-tag-stage">Chương 4</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Bảo hộ tử địa & Nổ gai xương</p>
+      <p class="item-card-desc">Sinh vật đốt xương gớm ghiếc có đôi cánh thịt tím thẫm và hàm răng tua tủa, chuyên bám vào đốt sống.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Khi chịu đòn đánh chí mạng có thể dẫn đến gục ngã, trùng tủy lập tức phát nổ bung các gai xương xung quanh: gây sát thương đẩy lùi đám đông và giữ người chơi sống sót ở mức 1 HP (hồi lại sau mỗi màn chơi).</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Bảo hiểm sinh mạng vô giá trong các trận chạm trán boss có đòn dứt điểm chết người.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Cổ vật di chuyển" data-stage="Chương 4: Hầm mộ xương rồng" data-id="item_0_7" id="item_0_7">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r0_c7.png" alt="Chân Xác Ướp Phong Ấn" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R0·C7</span>
+          <h3 class="item-card-name">Chân Xác Ướp Phong Ấn</h3>
+          <p class="item-card-en">Mummified Stalker Foot</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Cổ vật di chuyển</span>
+        <span class="item-tag item-tag-stage">Chương 4</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Gia tăng cự ly lướt né & Vệt làm chậm</p>
+      <p class="item-card-desc">Bàn chân khô quắt bọc dải vải vàng vương triều cổ, rỉ ra làn khói mù mịt mang tử khí.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Tăng 25% khoảng cách lướt né (Dash distance) và tốc độ trượt sàn. Khi lướt qua chân kẻ địch, để lại vệt tro tàn làm giảm 30% tốc độ chạy của đối thủ trong 3 giây.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Tối ưu hóa khả năng thả diều (kiting) và cơ động thoát khỏi vòng vây của đám đông quái vật.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Dụng cụ sinh tồn" data-stage="Chương 0: Nhà tù Bastonne" data-id="item_1_0" id="item_1_0">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r1_c0.png" alt="Vải Liệm Rách Bastonne" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R1·C0</span>
+          <h3 class="item-card-name">Vải Liệm Rách Bastonne</h3>
+          <p class="item-card-en">Torn Bastonne Shroud</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Dụng cụ sinh tồn</span>
+        <span class="item-tag item-tag-stage">Chương 0</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Cầm máu tức thì & Xóa hiệu ứng Bleed</p>
+      <p class="item-card-desc">Mảnh vải bao bố thô rách tơi tả dính đất bùn và vệt máu khô, vật dụng cấp cứu thô sơ nhưng cứu mạng của tử tù.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Sử dụng khẩn cấp để ngừng ngay trạng thái Mất Máu liên tục (Bleed) và hồi phục 10% lượng máu tối đa. Có thể mang theo số lượng lớn trong túi đồ dã chiến.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Cần thiết trong mọi cuộc đối đầu với lính dùng dao găm hoặc quái có vuốt cào xé.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Dược thảo thánh địa" data-stage="Chương 2: Cầu Sakuri & Heniana" data-id="item_1_1" id="item_1_1">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r1_c1.png" alt="Hoa Huyết Liên Heniana" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R1·C1</span>
+          <h3 class="item-card-name">Hoa Huyết Liên Heniana</h3>
+          <p class="item-card-en">Heniana Cursed Lotus</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Dược thảo thánh địa</span>
+        <span class="item-tag item-tag-stage">Chương 2</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Hồi Thể Lực & Năng Lượng Đòn Phối Hợp</p>
+      <p class="item-card-desc">Đóa hoa màu hồng tím rực rỡ với nhị vàng chói lọi, mọc lên từ những khe đá ngấm huyết dịch nguyên thủy.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Nhai hoa giúp hồi phục lập tức 50% thanh Thể Lực (Stamina) và tích đầy 1 nấc thanh Synergy của đội. Tác dụng phụ: màn hình hơi chao đảo ánh tím trong 4 giây.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Cung cấp nguồn năng lượng dồi dào để lập tức kích hoạt chuỗi hợp chiêu đồng đội giải nguy.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Dị vật cuồng nộ" data-stage="Chương 3: Đấu trường Calvaria" data-id="item_1_2" id="item_1_2">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r1_c2.png" alt="Sọ Nứt Khát Máu" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R1·C2</span>
+          <h3 class="item-card-name">Sọ Nứt Khát Máu</h3>
+          <p class="item-card-en">Cracked Crimson Skull</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Dị vật cuồng nộ</span>
+        <span class="item-tag item-tag-stage">Chương 3</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Trạng thái Cuồng Sát (Berserk) khi thấp máu</p>
+      <p class="item-card-desc">Hộp sọ vỡ toác để lộ khoang rỗng bốc khói đỏ thẫm, chứa đựng sự hận thù của những đấu sĩ tử trận.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Khi HP của nhân vật tụt xuống dưới 30%, sọ nứt phát hỏa: tăng 35% tốc độ ra đòn và 40% sát thương chí mạng cho tới khi HP được hồi phục lại.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Biến tình thế ngàn cân treo sợi tóc thành đợt phản công lội ngược dòng ngoạn mục.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Vũ khí đặt bẫy" data-stage="Chương 1: Phố Noailles & Cống ngầm" data-id="item_1_3" id="item_1_3">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r1_c3.png" alt="Nanh Độc & Xương Nhọn Bẫy Chông" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R1·C3</span>
+          <h3 class="item-card-name">Nanh Độc & Xương Nhọn Bẫy Chông</h3>
+          <p class="item-card-en">Bone Shards & Venom Fangs</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Vũ khí đặt bẫy</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Rải chông sàn đấu & Bẫy làm khựng kẻ địch</p>
+      <p class="item-card-desc">Cụm xương sườn gãy bén ngót cùng răng nanh thú săn mồi ngâm trong dịch độc màu xanh lục bảo.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Rải một cụm chông xương trên mặt sàn. Kẻ địch giẫm phải sẽ bị đâm xuyên chân, khựng đòn (Hitstun) 1.2 giây và nhận sát thương độc ăn mòn rút máu dần.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Bảo vệ sườn và lưng của đội, chia cắt đội hình địch khi bị bao vây từ hai phía.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Mặt nạ kinh hoàng" data-stage="Chương 3: Nhà thờ Calvaria" data-id="item_1_4" id="item_1_4">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r1_c4.png" alt="Mặt Nạ Tóc Bện Người Chết" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R1·C4</span>
+          <h3 class="item-card-name">Mặt Nạ Tóc Bện Người Chết</h3>
+          <p class="item-card-en">Matted Hair Shroud Mask</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Mặt nạ kinh hoàng</span>
+        <span class="item-tag item-tag-stage">Chương 3</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Áp đảo tinh thần & Làm đối thủ đánh trượt</p>
+      <p class="item-card-desc">Mặt nạ làm bằng da mặt thuộc thủ công kết hợp tóc bện khô cứng, toát ra tử khí kinh rợn.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Kẻ địch cận chiến đứng gần người đeo mặt nạ sẽ bị giảm 20% lực tấn công và có 25% tỷ lệ tung đòn đánh bị trượt (Whiff) do hoảng sợ tinh thần.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Giảm tải áp lực sát thương cho tuyến đầu khi đối đầu bầy quái vật đông đảo.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Xúc tác không gian" data-stage="Chương 2: Sakuri" data-id="item_1_5" id="item_1_5">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r1_c5.png" alt="Cánh Tay Bóng Tối Hư Vô" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R1·C5</span>
+          <h3 class="item-card-name">Cánh Tay Bóng Tối Hư Vô</h3>
+          <p class="item-card-en">Abyssal Shadow Arm</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Xúc tác không gian</span>
+        <span class="item-tag item-tag-stage">Chương 2</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Kéo rớt mục tiêu trên không & Khống chế sàn</p>
+      <p class="item-card-desc">Cánh tay quỷ màu xám tro vươn lên từ các sợi gân máu đen, như muốn lôi tuột mọi sinh linh xuống vực thẳm.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Trong lúc tung đòn kết hợp, cánh tay bóng tối trồi lên tóm chặt kẻ địch đang nhảy né trên không trung, quật thẳng xuống mặt đất gây choáng diện rộng.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Trừng phạt triệt để các đơn vị kẻ địch có thói quen bay lượn hoặc nhảy đạp từ trên cao.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Cấm thư bí thuật" data-stage="Chương 1: Trạm ngầm MuCEM Shemal" data-id="item_1_6" id="item_1_6">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r1_c6.png" alt="Cấm Thư Pha Lê Phong Ấn" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R1·C6</span>
+          <h3 class="item-card-name">Cấm Thư Pha Lê Phong Ấn</h3>
+          <p class="item-card-en">Crystal-Bound Grimoire</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Cấm thư bí thuật</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Giảm thời gian hồi chiêu & Tăng slot chiêu thức</p>
+      <p class="item-card-desc">Cuốn sách bìa da dày cộp nẹp các phiến đá thạch anh tím phát quang, lưu giữ nghiên cứu cấm về đột biến thể xác.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Rút ngắn 20% thời gian hồi của tất cả kỹ năng kích hoạt của toàn đội; gia tăng 15% diện tích ảnh hưởng của các chiêu thức hỗ trợ.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Trang bị cốt cán cho đội hình thiên về sử dụng kỹ năng đặc biệt liên tục.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Bom sinh học" data-stage="Chương 4: Hang Rồng" data-id="item_1_7" id="item_1_7">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r1_c7.png" alt="Ổ Kén Bào Tử Tím" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R1·C7</span>
+          <h3 class="item-card-name">Ổ Kén Bào Tử Tím</h3>
+          <p class="item-card-en">Clustered Spore Pods</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Bom sinh học</span>
+        <span class="item-tag item-tag-stage">Chương 4</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Nổ sương mù độc hại & Giảm tầm nhìn địch</p>
+      <p class="item-card-desc">Chùm trứng tím sẫm dập dờn như kén ong bắp cày đột biến, sẵn sàng nổ tung khi chịu lực tác động.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Vật phẩm ném: Khi chạm đất nổ tung thành đám mây sương mù độc tố tím che khuất tầm nhìn, khiến quái vật trong vùng ảnh hưởng bị trúng độc và mất mục tiêu tấn công trong 5 giây.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Tạo khoảng trống an toàn cho đồng đội lùi bước hồi phục hoặc hồi sinh thành viên bị ngã.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Công cụ chỉ huy" data-stage="Chương 0: Nhà tù Bastonne" data-id="item_2_0" id="item_2_0">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r2_c0.png" alt="Chuông Đồng Hồn Bastonne" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R2·C0</span>
+          <h3 class="item-card-name">Chuông Đồng Hồn Bastonne</h3>
+          <p class="item-card-en">Golden Funeral Bell</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Công cụ chỉ huy</span>
+        <span class="item-tag item-tag-stage">Chương 0</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Giải cứu trạng thái khống chế & Tăng phòng ngự</p>
+      <p class="item-card-desc">Quả chuông bằng đồng đúc hoa văn tang lễ, tiếng chuông ngân vang có thể xua tan sự u mê ám ảnh.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Rung chuông lập tức xóa bỏ toàn bộ hiệu ứng Choáng, Đóng Băng và Bị Trói cho cả đội ngũ, đồng thời tăng 25% Giáp trụ cho toàn bộ thành viên trong 8 giây.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Nút bấm cứu cánh tối thượng khi đội hình bị dồn vào chân tường bởi kỹ năng khống chế diện rộng của boss.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Giáp ngực phòng ngự" data-stage="Chương 1: Bờ biển Marseille" data-id="item_2_1" id="item_2_1">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r2_c1.png" alt="Hóa Thạch Cúc Đá Vực Sâu" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R2·C1</span>
+          <h3 class="item-card-name">Hóa Thạch Cúc Đá Vực Sâu</h3>
+          <p class="item-card-en">Fossilized Ammonite Shell</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Giáp ngực phòng ngự</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Giảm sát thương đâm xuyên & Chống đạn tầm xa</p>
+      <p class="item-card-desc">Vỏ cúc đá hóa thạch hàng triệu năm tuổi với các đường vân xoắn ốc hoàn mỹ, cứng hơn thép tôi luyện.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Giảm 30% sát thương từ mọi đòn tấn công tầm xa (mũi tên, đạn súng lính canh, dao phóng) từ góc chính diện.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Cho phép đấu sĩ tiên phong dẫn đầu mở đường tiếp cận toán xạ thủ địch mà không bị tỉa máu.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Mặt nạ nguyên tố" data-stage="Chương 2: Sakuri" data-id="item_2_2" id="item_2_2">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r2_c2.png" alt="Mặt Nạ Quỷ Lửa Tím" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R2·C2</span>
+          <h3 class="item-card-name">Mặt Nạ Quỷ Lửa Tím</h3>
+          <p class="item-card-en">Phantom Pyre Mask</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Mặt nạ nguyên tố</span>
+        <span class="item-tag item-tag-stage">Chương 2</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Đốt cháy nội lực kẻ địch (Mana Burn)</p>
+      <p class="item-card-desc">Mặt nạ nứt nửa bốc ngọn lửa ma thuật màu tím ma mị, hút lấy tinh thần lực của kẻ thù bị thiêu đốt.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Mỗi đòn đánh trúng đích gây thêm sát thương hỏa ngục tím và thiêu đốt 10% thanh nộ/mana của đối thủ, ngăn cản trùm sử dụng tuyệt kỹ.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Cực kỳ giá trị khi đánh trùm để trì hoãn các đòn quét sàn chí mạng.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Chất phủ vũ khí" data-stage="Chương 1: Cống ngầm Laundel" data-id="item_2_3" id="item_2_3">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r2_c3.png" alt="Móng Vuốt Ăn Mòn Axit" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R2·C3</span>
+          <h3 class="item-card-name">Móng Vuốt Ăn Mòn Axit</h3>
+          <p class="item-card-en">Corrosive Acid Stinger</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Chất phủ vũ khí</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Bào mòn thanh Giáp Trụ & Tăng sát thương đội</p>
+      <p class="item-card-desc">Móng vuốt bọ cạp cống rãnh đột biến, đầu ngọn nhỏ giọt axit xanh chanh sôi sùng sục làm mủn cả kim loại.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Bôi lên vũ khí trong 15 giây: các đòn đánh sẽ phá hủy 35% lớp giáp cứng của mục tiêu, khiến các đòn đánh sau của toàn đội gây thêm 25% sát thương lên kẻ đó.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Vũ khí phối hợp ăn ý để dồn sát thương tiêu diệt các quái vật thể xác trâu bò.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Dị vật lõi trùm" data-stage="Chương 3: Rớt từ Trùm Calvaria" data-id="item_2_4" id="item_2_4">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r2_c4.png" alt="Trái Tim Tội Lỗi Ngọ Nguậy" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R2·C4</span>
+          <h3 class="item-card-name">Trái Tim Tội Lỗi Ngọ Nguậy</h3>
+          <p class="item-card-en">Pulsing Heart of Sin</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Dị vật lõi trùm</span>
+        <span class="item-tag item-tag-stage">Chương 3</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Tăng mạnh công kích & Tự tổn thương nhỏ</p>
+      <p class="item-card-desc">Khối thịt dạng trái tim màu tím thẫm đập thình thịch, mở ra một con mắt đỏ rực giữa những xúc tu ngoe nguẩy.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Cổ vật cực mạnh: Tăng 45% tổng lực sát thương và tăng 25% tốc độ thực hiện đòn đánh; đổi lại, người giữ mất 1.5% máu sau mỗi 10 giây chiến đấu.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Dành riêng cho người chơi có kỹ năng né đòn điêu luyện, chuộng lối đánh hủy diệt dồn dập.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Vật ném hạng nặng" data-stage="Chương 1: Marseille" data-id="item_2_5" id="item_2_5">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r2_c5.png" alt="Thủ Cấp Quỷ Đá Galio" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R2·C5</span>
+          <h3 class="item-card-name">Thủ Cấp Quỷ Đá Galio</h3>
+          <p class="item-card-en">Galio Stone Gargoyle Head</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Vật ném hạng nặng</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Ném đè bẹp lính & Chắn lối đi hẹp</p>
+      <p class="item-card-desc">Đầu tượng đá gãy từ mái vòm nhà thờ cổ, nhe hàm răng sắc nhọn với ánh mắt trừng trừng dữ dội.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Có thể bưng lên ném thẳng vào hàng ngũ địch: gây sát thương đè bẹp diện rộng và tạo thành một chướng ngại vật cản đường trên sàn đấu.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Tận dụng các lối đi hẹp để phong tỏa đường tiến của viện binh địch.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Nguồn sáng tâm linh" data-stage="Chương 1: Mê cung Laundel" data-id="item_2_6" id="item_2_6">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r2_c6.png" alt="Cây Nến Mắt Lệ Khóc" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R2·C6</span>
+          <h3 class="item-card-name">Cây Nến Mắt Lệ Khóc</h3>
+          <p class="item-card-en">Weeping Eye Candle</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Nguồn sáng tâm linh</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Soi tỏ lối đi bí mật & Làm yếu quái bóng tối</p>
+      <p class="item-card-desc">Cây nến sáp trắng tạc hình con mắt nhỏ lệ, ngọn lửa xanh soi tỏ những thứ ẩn giấu nơi tăm tối.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Xua tan hoàn toàn sương mù hắc ám trong màn cống ngầm; làm suy yếu 30% phòng thủ của các sinh vật sống trong bóng tối khi chúng bước vào vùng sáng.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Vật phẩm bắt buộc phải có để hoàn thành trọn vẹn các bí mật và phòng ẩn ở Màn 1-4.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Tinh thể băng" data-stage="Chương 3: Vực gió tuyết Calvaria" data-id="item_2_7" id="item_2_7">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r2_c7.png" alt="Khối Băng Tinh Linh Thể" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R2·C7</span>
+          <h3 class="item-card-name">Khối Băng Tinh Linh Thể</h3>
+          <p class="item-card-en">Pure Frost Shard Cluster</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Tinh thể băng</span>
+        <span class="item-tag item-tag-stage">Chương 3</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Tích tụ Đóng Băng (Freeze) & Đập Vỡ (Shatter)</p>
+      <p class="item-card-desc">Cụm băng vĩnh cửu bao bọc lấy một viên ngọc tím ở tâm, tỏa ra luồng khí hàn băng buốt giá.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Gán sát thương Băng vào các đòn đánh: sau 4 đòn đánh trúng, kẻ địch bị đóng băng hoàn toàn trong 2.5 giây; một đòn đánh nặng tiếp theo sẽ kích hoạt Đập Vỡ gây thêm 50% sát thương bộc phát.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Tạo cơ hội vàng cho toàn đội tập trung tung đòn kết liễu an toàn tuyệt đối.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Vũ khí cận chiến" data-stage="Chương 0: Nhà tù Bastonne" data-id="item_3_0" id="item_3_0">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r3_c0.png" alt="Đoản Kiếm Đấu Sĩ Bastonne" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R3·C0</span>
+          <h3 class="item-card-name">Đoản Kiếm Đấu Sĩ Bastonne</h3>
+          <p class="item-card-en">Gladiator Short Sword</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Vũ khí cận chiến</span>
+        <span class="item-tag item-tag-stage">Chương 0</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Tốc độ vung đòn nhanh, đỡ gạt (Parry) & Phản đòn</p>
+      <p class="item-card-desc">Thanh đoản kiếm chuôi chữ thập đúc từ sắt phế liệu ngục tù, lưỡi kiếm mẻ nhiều vết nhưng mũi nhọn vẫn cực kỳ sắc bén.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Kiếm ngắn chuẩn mực cho phong cách chiến đấu đấu sĩ. Khung thời gian thu đòn (Recovery) chớp nhoáng, cho phép hóa giải đòn đánh của địch bằng đòn Đỡ Gạt (Parry) chính xác và phản kích tức thì.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Hoàn hảo cho người chơi ưa thích lối đánh đấu sĩ cự ly gần: công thủ toàn diện và không có độ trễ động tác.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Cổ vật kiên định" data-stage="Chương 1: Đền thờ cổ Vieux-Port" data-id="item_3_1" id="item_3_1">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r3_c1.png" alt="Thân Tượng Đá Nữ Thần Vô Diện" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R3·C1</span>
+          <h3 class="item-card-name">Thân Tượng Đá Nữ Thần Vô Diện</h3>
+          <p class="item-card-en">Marble Idol Torso</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Cổ vật kiên định</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Tăng Siêu Cương Thể (Super Armor)</p>
+      <p class="item-card-desc">Pho tượng bán thân bằng cẩm thạch trắng bị bào mòn bởi sóng biển, toát lên vẻ trang nghiêm bất khả xâm phạm.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Gia tăng 60% chỉ số Kiên Cường (Poise). Khi chiến binh bước vào động tác vung đòn tấn công đặc biệt, sẽ hoàn toàn không bị gián đoạn bởi các đòn đánh thông thường.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Đảm bảo các tuyệt chiêu diện rộng luôn được thi triển trọn vẹn ngay giữa làn mưa đòn.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Dị vật thể xác" data-stage="Chương 1: Hố rác cống ngầm" data-id="item_3_2" id="item_3_2">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r3_c2.png" alt="Cánh Tay Xác Sống Trương Phình" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R3·C2</span>
+          <h3 class="item-card-name">Cánh Tay Xác Sống Trương Phình</h3>
+          <p class="item-card-en">Swollen Ghoul Arm</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Dị vật thể xác</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Tăng cự ly tóm bắt & Ném đập tường (Wall-Splat)</p>
+      <p class="item-card-desc">Cánh tay thây ma cơ bắp phình to quấn chặt bằng gân mục nát, các ngón tay co quắp như móng kẹp sắt.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Tăng cự ly thi triển đòn tóm bắt thêm 30%. Khi ném kẻ địch va vào vách tường đá, tạo dư chấn chấn động làm ngã ngửa các kẻ địch lân cận.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Tận dụng triệt để địa hình chật hẹp trong hẻm phố Marseille để kiểm soát đám đông.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Bùa chú thể chất" data-stage="Chương 3: Calvaria" data-id="item_3_3" id="item_3_3">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r3_c3.png" alt="Răng Quỷ Nhuốm Máu Tươi" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R3·C3</span>
+          <h3 class="item-card-name">Răng Quỷ Nhuốm Máu Tươi</h3>
+          <p class="item-card-en">Blood-Rooted Demon Molar</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Bùa chú thể chất</span>
+        <span class="item-tag item-tag-stage">Chương 3</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Kích hoạt Thân Thể Sắt (Iron Body)</p>
+      <p class="item-card-desc">Chiếc răng hàm khổng lồ hai chân răng đẫm máu tươi, tỏa ra hơi ấm kỳ dị của loài quái thú hung tợn.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Cắn vỡ răng quỷ để nhận trạng thái Thiết Bì trong 10 giây: miễn nhiễm hoàn toàn với ngã ngựa, choáng và giật lùi, sẵn sàng càn quét thẳng vào tuyến hỏa lực địch.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Mở đường xung phong phá vỡ các đội hình lính bắn tỉa hoặc phòng thủ khiên kiên cố.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Dược phẩm chiến thuật" data-stage="Chương 1: Quán bar Armorlite" data-id="item_3_4" id="item_3_4">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r3_c4.png" alt="Lọ Độc Dược Tím Đậm" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R3·C4</span>
+          <h3 class="item-card-name">Lọ Độc Dược Tím Đậm</h3>
+          <p class="item-card-en">Concentrated Nightshade Phial</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Dược phẩm chiến thuật</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Gia tốc né tránh & Gây hỗn loạn đối thủ</p>
+      <p class="item-card-desc">Ống nghiệm thủy tinh nút bấc chứa chất lỏng màu tím phát quang, điều chế từ thảo dược ngầm Marseille.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Uống để tăng 40% tốc độ di chuyển và tốc độ né tránh trong 12 giây; đồng thời các đòn đánh tay có 20% khả năng khiến kẻ địch bị Lú Lẫn tự tấn công đồng bọn.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Gây rối loạn phòng tuyến đông đúc của địch, tạo cơ hội cho đồng đội rảnh tay hành động.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Dược phẩm hồi phục" data-stage="Chương 0: Nhà tù Bastonne" data-id="item_3_5" id="item_3_5">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r3_c5.png" alt="Bình Rượu Ngục Bện Rơm Bastonne" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R3·C5</span>
+          <h3 class="item-card-name">Bình Rượu Ngục Bện Rơm Bastonne</h3>
+          <p class="item-card-en">Bastonne Woven Canteen</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Dược phẩm hồi phục</span>
+        <span class="item-tag item-tag-stage">Chương 0</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Hồi phục Thể Lực & Xóa bỏ Kiệt Sức</p>
+      <p class="item-card-desc">Bình gốm bọc dây gai đan thủ công kèm dây đeo vai, đựng loại rượu nặng giúp tù nhân chống chọi cái lạnh thấu xương.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Lập tức hồi phục 70% thanh Thể Lực và xóa bỏ hoàn toàn trạng thái Kiệt Sức (Exhaustion), tăng 50% tốc độ hồi thể lực trong 20 giây tiếp theo.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Duy trì khả năng ra đòn liên tục không ngừng nghỉ trong các trận hỗn chiến kéo dài.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Vũ khí chém quét" data-stage="Chương 1: Bến cảng Marseille" data-id="item_3_6" id="item_3_6">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r3_c6.png" alt="Đao Cong Hải Tặc Vieux-Port" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R3·C6</span>
+          <h3 class="item-card-name">Đao Cong Hải Tặc Vieux-Port</h3>
+          <p class="item-card-en">Vieux-Port Harbor Cutlass</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Vũ khí chém quét</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Quét góc 180 độ & Hất tung diện rộng</p>
+      <p class="item-card-desc">Thanh đao cong một lưỡi với quai chuôi bằng đồng thau nặng trịch, vũ khí ưa thích của giới buôn lậu hải cảng.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Đòn chém quét hình bán nguyệt cực rộng phía trước, dễ dàng hất tung 3-4 tên địch cùng lúc lên không trung để tiếp nối combo không chiến.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Giải vây ngoạn mục khi bị bao vây tứ phía bởi toán lính cận chiến số lượng đông.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Tài liệu chiến dịch" data-stage="Chương 1: Trạm Laundel" data-id="item_3_7" id="item_3_7">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r3_c7.png" alt="Hắc Thư Khế Ước Laundel" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R3·C7</span>
+          <h3 class="item-card-name">Hắc Thư Khế Ước Laundel</h3>
+          <p class="item-card-en">Laundel Smuggler Ledger</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Tài liệu chiến dịch</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Mở đường tắt cống ngầm & Bổ sung tiền thưởng</p>
+      <p class="item-card-desc">Cuốn sổ bìa da đen ghi chép các tuyến vận chuyển hàng ngầm và mật mã mở các cửa cống sluice dock.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Mở khóa các lối đi tắt bí mật qua cống ngầm Laundel, cho phép đội bỏ qua các chốt chặn hiểm trở và thu thập rương báu ẩn.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Tăng lượng tiền thưởng nhận được sau màn chơi lên 30% để mua sắm nâng cấp trang bị.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Vũ khí ném xuyên thấu" data-stage="Chương 1: Vách đá Calanques" data-id="item_4_0" id="item_4_0">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r4_c0.png" alt="Mũi Lao Đá Silex Cổ" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R4·C0</span>
+          <h3 class="item-card-name">Mũi Lao Đá Silex Cổ</h3>
+          <p class="item-card-en">Ancient Flint Spearhead</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Vũ khí ném xuyên thấu</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Xuyên thấu hàng dọc & Ghim địch vào tường</p>
+      <p class="item-card-desc">Mũi lao tam diện bằng đá hoa cương nhọn hoắt, đẽo gọt công phu từ thời kỳ dựng làng ven biển.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Phóng thẳng với vận tốc cực cao, đâm xuyên qua toàn bộ kẻ thù đứng trên một đường thẳng và ghim chặt tên cuối cùng vào bờ tường đá trong 2 giây.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Gom cụm toàn bộ hàng lính địch lại một chỗ để đồng đội tung đòn dứt điểm.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Phụ kiện ma thuật máu" data-stage="Chương 2: Tu viện Sakuri" data-id="item_4_1" id="item_4_1">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r4_c1.png" alt="Chuỗi Hạt Ngọc Huyết Tế Lễ" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R4·C1</span>
+          <h3 class="item-card-name">Chuỗi Hạt Ngọc Huyết Tế Lễ</h3>
+          <p class="item-card-en">Bloodstone Rosary</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Phụ kiện ma thuật máu</span>
+        <span class="item-tag item-tag-stage">Chương 2</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Tiết kiệm tiêu hao máu khi thi triển huyết thuật</p>
+      <p class="item-card-desc">Sợi dây kim loại mảnh xâu các hạt ngọc đỏ rực như giọt máu đông, mang dấu ấn đức tin tử vì đạo.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Giảm 30% lượng HP phải tiêu hao khi kích hoạt các ấn chú ma thuật máu; tăng 15% tầm lan tỏa của các đòn bộc phá huyết thuật.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Tối ưu hóa sức mạnh của người sử dụng phép thuật máu có dấu chữ thập ở ngực, giúp thi triển chiêu an toàn hơn.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Cổ vật nhận diện đặc trưng" data-stage="Chương 1: Hầm ngầm Marseille" data-id="item_4_2" id="item_4_2">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r4_c2.png" alt="Mặt Nạ Kẻ Lắng Nghe" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R4·C2</span>
+          <h3 class="item-card-name">Mặt Nạ Kẻ Lắng Nghe</h3>
+          <p class="item-card-en">Mask of the Listening Route</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Cổ vật nhận diện đặc trưng</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Mở rộng cửa sổ né đòn (Perfect Dodge) & Phản đòn</p>
+      <p class="item-card-desc">Mặt nạ đá trắng muốt với đôi mắt nhỏ lệ trầm tư, biểu tượng di sản quý báu của Divergency. Bản có công năng kiếm được trong gameplay; biến thể dành cho backer chỉ khác ngoại hình.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Mở rộng khung thời gian Né Tránh Hoàn Hảo (Perfect Dodge Window) thêm 0.25 giây; khi né sát sạt đòn địch, kích hoạt hiệu ứng Làm Chậm thời gian trong 1.5 giây để phản đòn chí mạng.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Nâng tầm kỹ năng cá nhân của người chơi lên mức thượng thừa trong mọi kèo đấu tay đôi.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Mặt nạ chiến binh" data-stage="Chương 3: Calvaria" data-id="item_4_3" id="item_4_3">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r4_c3.png" alt="Mặt Nạ Khâu Thịt Đơn Sừng" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R4·C3</span>
+          <h3 class="item-card-name">Mặt Nạ Khâu Thịt Đơn Sừng</h3>
+          <p class="item-card-en">Stitched Flesh Horned Mask</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Mặt nạ chiến binh</span>
+        <span class="item-tag item-tag-stage">Chương 3</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Cường hóa đòn húc đầu & Uy hiếp tinh thần</p>
+      <p class="item-card-desc">Mặt nạ chắp vá từ các thớ thịt thuộc cứng với chiếc sừng quỷ nhọn hoắt bên trán, vương mùi máu tanh nồng.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Tăng 35% sát thương cho các đòn húc, đòn đấm thẳng và phi thân; khi hạ gục một chỉ huy địch, phát ra tiếng gầm làm choáng lính xung quanh trong 1.5 giây.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Rất thích hợp cho phong cách chiến đấu quyền anh, đấm đá cận chiến vũ bão.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Dược phẩm hồi máu cốt lõi" data-stage="Chương 0 & Mọi màn chơi" data-id="item_4_4" id="item_4_4">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r4_c4.png" alt="Lọ Huyết Thanh Đỏ Tươi" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R4·C4</span>
+          <h3 class="item-card-name">Lọ Huyết Thanh Đỏ Tươi</h3>
+          <p class="item-card-en">Vital Crimson Blood Phial</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Dược phẩm hồi máu cốt lõi</span>
+        <span class="item-tag item-tag-stage">Chương 0 & Mọi màn chơi</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Hồi phục 40% Max HP tức thì</p>
+      <p class="item-card-desc">Ống nghiệm chứa tinh chất máu tươi thanh khiết nút bấc kín, dược phẩm sống còn của mọi chiến binh trên chiến trường.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Sử dụng tức thì để hồi phục ngay 40% thanh Máu tối đa. Có thể tích trữ tối đa 3 lọ trong túi trang bị mang theo.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Huyết mạch duy trì sự sinh tồn của đội ngũ trong các đợt công kích dồn dập của trùm cuối.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Trang bị di chuyển" data-stage="Chương 1: Khu thợ đóng tàu" data-id="item_4_5" id="item_4_5">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r4_c5.png" alt="Đôi Giày Thám Hiểm Cảng Cổ" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R4·C5</span>
+          <h3 class="item-card-name">Đôi Giày Thám Hiểm Cảng Cổ</h3>
+          <p class="item-card-en">Harbor Runner Boots</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Trang bị di chuyển</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Tăng tốc độ chạy & Chống trơn trượt địa hình</p>
+      <p class="item-card-desc">Đôi bốt da đanh dày gót đóng đinh tán, bảo vệ đôi chân chiến binh khỏi bùn lầy, nước bẩn và mảnh thủy tinh vỡ.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Tăng 15% tốc độ di chuyển cơ bản; miễn nhiễm hoàn toàn với hiệu ứng trơn trượt trên vũng nước dầu loang hoặc bùn lầy cống ngầm.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Giúp người chơi duy trì thế chủ động về vị trí, chạy chỗ linh hoạt để bọc lót đồng đội.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Biểu tượng xung phong" data-stage="Chương 4: Chiến trường Titan Trái Tim" data-id="item_4_6" id="item_4_6">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r4_c6.png" alt="Thủ Cấp Chiến Mã Tế Đàn" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R4·C6</span>
+          <h3 class="item-card-name">Thủ Cấp Chiến Mã Tế Đàn</h3>
+          <p class="item-card-en">Ritual Warsteed Skull</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Biểu tượng xung phong</span>
+        <span class="item-tag item-tag-stage">Chương 4</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Cường hóa đòn đá phi thân & Phá vỡ đội hình</p>
+      <p class="item-card-desc">Đầu ngựa chiến sơn trắng vạch tế lễ đỏ quanh mắt, biểu trưng cho lòng dũng cảm của các kỵ sĩ tử thủ.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Tăng 30% sát thương và lực hất văng cho các cú đá phi thân (Running Kick / Flying Tackle), xuyên phá mọi hàng rào phòng thủ của đối phương.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Xé toạc đội hình phòng ngự kiên cố của kẻ địch trong nháy mắt.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Vũ khí ném tầm xa cơ động" data-stage="Chương 1: Noailles" data-id="item_4_7" id="item_4_7">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r4_c7.png" alt="Phi Tiêu Kunai Buộc Dải Lụa Đỏ" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R4·C7</span>
+          <h3 class="item-card-name">Phi Tiêu Kunai Buộc Dải Lụa Đỏ</h3>
+          <p class="item-card-en">Tasseled Throwing Kunai</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Vũ khí ném tầm xa cơ động</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Ngắt chiêu niệm chú tầm xa & Kích nổ thùng hàng</p>
+      <p class="item-card-desc">Lưỡi thép hai cạnh sắc bén có vòng khuyên buộc dải lụa đỏ thắm, trang bị ném dã chiến tiện dụng.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Phóng nhanh với quỹ đạo thẳng tắp: dùng để ngắt lời niệm chú của xạ thủ hoặc pháp sư địch từ xa, hoặc phóng kích nổ các thùng dầu/thùng thuốc nổ ven đường.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Vũ khí hỗ trợ tầm xa hữu hiệu giúp đội kiểm soát tình hình mà không cần áp sát.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Cổ vật hiến tế bàn thờ" data-stage="Chương 0: Hầm mộ Bastonne" data-id="item_5_0" id="item_5_0">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r5_c0.png" alt="Chén Thánh Huyết Tế Có Cánh" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R5·C0</span>
+          <h3 class="item-card-name">Chén Thánh Huyết Tế Có Cánh</h3>
+          <p class="item-card-en">Winged Sacrificial Chalice</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Cổ vật hiến tế bàn thờ</span>
+        <span class="item-tag item-tag-stage">Chương 0</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Hiến tế máu đổi vô hạn thể lực & Tăng bạo kích</p>
+      <p class="item-card-desc">Chiếc chén bạc tạc hình mắt đỏ có cánh, chứa thứ huyết dịch cổ xưa của các nghi lễ hiến tế trần gian.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Chỉ người kích hoạt tự trả 10% MaxHP, không được làm HP còn dưới 1 và không trừ HP đồng đội. Đổi lấy 8 giây MP cost ×0.90 và CritChance +5 điểm phần trăm; một lần mỗi encounter, không cộng dồn hoặc làm mới thời gian. Không bỏ qua khóa encounter. Đây là đề xuất ngoài bản mastery thử nghiệm đầu.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Chiến thuật tấn công tổng lực 'được ăn cả ngã về không' để kết liễu nhanh trùm nguy hiểm.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Bùa chú phản đòn" data-stage="Chương 2: Sakuri" data-id="item_5_1" id="item_5_1">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r5_c1.png" alt="Hình Nhân Rơm Phản Huyết Nguyền" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R5·C1</span>
+          <h3 class="item-card-name">Hình Nhân Rơm Phản Huyết Nguyền</h3>
+          <p class="item-card-en">Woven Retaliation Effigy</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Bùa chú phản đòn</span>
+        <span class="item-tag item-tag-stage">Chương 2</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Phản sát thương thật (True Damage) lại kẻ tấn công</p>
+      <p class="item-card-desc">Hình nhân đan bằng rơm khô bị ghim đầy kim châm và bọc vải đen rách, kết nối nhân quả với linh hồn người đeo.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Khi nhân vật bị dính đòn nặng hoặc bị quăng ngã, 45% lượng sát thương nhận vào sẽ phản ngược trực tiếp thành sát thương thật lên kẻ vừa ra chiêu.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Trừng phạt nghiêm khắc các tên trùm có đòn đánh sát thương khủng khiếp.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Bùa bình an" data-stage="Chương 1: Vallon des Auffes" data-id="item_5_2" id="item_5_2">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r5_c2.png" alt="Tượng Lữ Hành Vượt Biển Áo Xám" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R5·C2</span>
+          <h3 class="item-card-name">Tượng Lữ Hành Vượt Biển Áo Xám</h3>
+          <p class="item-card-en">Drifting Pilgrim Figurine</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Bùa bình an</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Miễn nhiễm bẫy môi trường tự nhiên</p>
+      <p class="item-card-desc">Tượng nhỏ nặn hình người lữ hành trùm áo choàng đứng trên chiếc bè trôi, tượng trưng cho hành trình an toàn qua bão tố.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Bảo hộ người mang khỏi mọi cạm bẫy môi trường tự nhiên: không bị dính sát thương từ gai nhọn ngầm, axit rỉ cống rãnh hay đá sập từ trần hang.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Giúp chiến binh thoải mái chiến đấu tự do mà không cần bận tâm đến địa hình hiểm trở.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Khế ước nhiệm vụ" data-stage="Chương 0: Tủ hồ sơ Bastonne" data-id="item_5_3" id="item_5_3">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r5_c3.png" alt="Khế Ước Da Cừu Bastonne Cổ" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R5·C3</span>
+          <h3 class="item-card-name">Khế Ước Da Cừu Bastonne Cổ</h3>
+          <p class="item-card-en">Bastonne Covenant Scroll</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Khế ước nhiệm vụ</span>
+        <span class="item-tag item-tag-stage">Chương 0</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Mở khóa thử thách săn tiền thưởng trùm phụ</p>
+      <p class="item-card-desc">Cuộn giấy da dê ố vàng chép các thỏa ước bí mật giữa ban quản ngục Bastonne và tổ chức thế giới ngầm.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Kích hoạt nhiệm vụ săn tiền thưởng (Bounty Hunt) trong màn chơi: triệu hồi một tên trùm phụ tinh anh mang theo nhiều vật phẩm hiếm khi bị đánh bại.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Gia tăng độ khó thử thách và mang lại lượng phần thưởng nâng cấp đồ sộ cho người chơi.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Cổ vật hồi sinh kỳ tích" data-stage="Phần thưởng gameplay · biến thể backer chỉ đổi ngoại hình" data-id="item_5_4" id="item_5_4">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r5_c4.png" alt="Lam Ngọc Đầu Lâu Hồi Sinh" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R5·C4</span>
+          <h3 class="item-card-name">Lam Ngọc Đầu Lâu Hồi Sinh</h3>
+          <p class="item-card-en">Emerald Soul Shard</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Cổ vật hồi sinh kỳ tích</span>
+        <span class="item-tag item-tag-stage">Phần thưởng gameplay · biến thể backer chỉ đổi ngoại hình</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Tự động hồi sinh đồng đội gục ngã</p>
+      <p class="item-card-desc">Khối ngọc bích màu xanh lục trong vắt kết tinh hình đầu lâu, chứa đựng nguồn năng lượng linh hồn thuần khiết.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Đề xuất mở rộng: tiêu một charge để hồi sinh đồng đội với 30% MaxHP (tối thiểu 1 HP), tối đa một lần cho mỗi người mỗi encounter. Không tự tạo thêm charge, không kích hoạt dây chuyền, không vượt khóa kết thúc màn. Có thể kiếm bằng gameplay; không thuộc socket mastery bản đầu.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Vị cứu tinh số một trong các màn vượt ải độ khó cao nhất của chiến dịch.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Vũ khí hai tay hạng nặng" data-stage="Chương 4: Hang Xương Rồng" data-id="item_5_5" id="item_5_5">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r5_c5.png" alt="Đại Chiến Búa Sọ Rồng Đỏ" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R5·C5</span>
+          <h3 class="item-card-name">Đại Chiến Búa Sọ Rồng Đỏ</h3>
+          <p class="item-card-en">Dragon Bone Warhammer</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Vũ khí hai tay hạng nặng</span>
+        <span class="item-tag item-tag-stage">Chương 4</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Đập sàn tạo địa chấn & Hất tung diện rộng</p>
+      <p class="item-card-desc">Cây búa chiến khổng lồ gắn hộp sọ rồng đỏ sừng nhọn hoắt, nặng tựa ngàn cân với sức tàn phá kinh hoàng.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Cú dộng búa cực mạnh xuống mặt sàn tạo sóng địa chấn nứt toác mặt đất trong bán kính 6 mét, hất tung toàn bộ kẻ địch lên không trung và vô hiệu hóa giáp nặng.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Thiết lập tiền đề hoàn hảo cho chuỗi combo trên không của toàn đội.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Di cốt nghiên cứu khoa học" data-stage="Chương 1: Trạm MuCEM Shemal" data-id="item_5_6" id="item_5_6">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r5_c6.png" alt="Thủ Cấp Ngâm Hũ Hóa Sinh MuCEM" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R5·C6</span>
+          <h3 class="item-card-name">Thủ Cấp Ngâm Hũ Hóa Sinh MuCEM</h3>
+          <p class="item-card-en">Preserved Head in Formalin Jar</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Di cốt nghiên cứu khoa học</span>
+        <span class="item-tag item-tag-stage">Chương 1</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Giải mã kháng tính & Mở khóa đặc quyền đội</p>
+      <p class="item-card-desc">Cái đầu người ngâm trong bình dung dịch hóa chất phát sáng xanh lục, mẫu vật giải phẫu của phòng thí nghiệm dưới biển.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Mang về xưởng căn cứ để phân tích gen: vĩnh viễn hiển thị thanh Máu và điểm yếu nguyên tố của tất cả quái vật trong các màn chơi kế tiếp.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Cung cấp lợi thế thông tin chiến thuật vô giá để đội chuẩn bị trang bị khắc chế trước trận đánh.</p>
+      </div>
+    </article>
+    <article class="item-card" data-category="Sinh vật hỗ trợ dọn dẹp" data-stage="Chương 0 & Hầm mộ" data-id="item_5_7" id="item_5_7">
+      <div class="item-card-top">
+        <div class="item-sprite-frame">
+          <img src="imgs/items/item_r5_c7.png" alt="Ấu Trùng Sâu Mộ Ăn Xác" class="item-sprite-img" loading="lazy">
+        </div>
+        <div class="item-card-title-group">
+          <span class="item-coord-badge">R5·C7</span>
+          <h3 class="item-card-name">Ấu Trùng Sâu Mộ Ăn Xác</h3>
+          <p class="item-card-en">Carnivorous Grave Maggot</p>
+        </div>
+      </div>
+      <div class="item-card-badges">
+        <span class="item-tag item-tag-cat">Sinh vật hỗ trợ dọn dẹp</span>
+        <span class="item-tag item-tag-stage">Chương 0 & Hầm mộ</span>
+      </div>
+      <p class="item-card-role"><strong>Công năng:</strong> Tiêu thụ xác địch & Nhả ngọc hồi máu</p>
+      <p class="item-card-desc">Ấu trùng béo múp màu nâu đốt ngấn với vòng răng kim nhọn hoắt, chuyên rúc trong các hầm mộ ẩm ướt.</p>
+      <div class="item-card-combat">
+        <p><strong>Cơ chế chiến đấu:</strong> Thả ấu trùng ra sàn đấu: nó sẽ tự bò đến các xác chết của lính địch bị hạ gục, tiêu hóa xác và nhả ra các viên ngọc năng lượng hồi phục Máu và Thể Lực cho đội.</p>
+        <p class="item-synergy-text"><strong>Đồng đội phối hợp:</strong> Duy trì sinh lực dồi dào trong các màn chơi sinh tồn làn sóng quái vật đông đúc (Horde waves).</p>
+      </div>
+    </article>
+  </div>
+</div>

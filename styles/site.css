@@ -1122,24 +1122,61 @@ dd {
   filter: none;
 }
 
+.reward-product-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
 .reward-item-card--product {
-  display: block;
+  display: flex;
+  flex-direction: column;
   min-height: 0;
   padding: 0;
   overflow: hidden;
+  background: rgba(33, 31, 27, 0.88);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
 }
 
 .reward-item-card--product .reward-item-image {
   width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
+  height: 154px;
+  aspect-ratio: auto;
   border: 0;
   border-bottom: 1px solid rgba(245, 238, 227, 0.12);
   border-radius: 0;
+  background: #12110f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.reward-item-card--product .reward-item-image--photo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
 }
 
 .reward-item-card--product .reward-item-card-copy {
-  padding: 14px;
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.reward-item-card--product .reward-item-card-copy h4 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+.reward-item-card--product .reward-item-card-copy p {
+  font-size: 0.84rem;
+  line-height: 1.4;
 }
 
 .reward-item-card--candidate {
@@ -1489,17 +1526,21 @@ pre code {
   }
 
   .reward-item-card--product {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .reward-item-card--product .reward-item-image {
     width: 100%;
-    height: auto;
+    height: 140px;
   }
 
   .reward-item-card--product .reward-item-image img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
   }
 
   .toolbar { padding: 8px; gap: 8px; }
@@ -2124,6 +2165,337 @@ pre code {
   line-height: 1.55;
   color: var(--ink);
   margin: 0;
+}
+
+/* ==========================================================================
+   Item Wiki & 48 Relics Explorer Styles
+   ========================================================================== */
+
+.item-wiki-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 20px 0 28px 0;
+}
+
+.item-wiki-stat-box {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--shadow);
+  border-top: 3px solid var(--amber);
+}
+
+.item-wiki-stat-num {
+  display: block;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--amber);
+  font-family: var(--mono);
+  line-height: 1.2;
+}
+
+.item-wiki-stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.item-sheet-figure {
+  margin: 20px 0 32px 0;
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+}
+
+.item-sheet-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0c0b;
+  border-radius: 6px;
+  padding: 16px;
+  border: 1px solid var(--line-soft);
+  overflow-x: auto;
+}
+
+.item-sheet-img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.6));
+  border-radius: 4px;
+}
+
+.item-filter-container {
+  margin: 24px 0;
+}
+
+.item-filter-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.item-search-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.item-search-input:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(216, 166, 77, 0.2);
+}
+
+.item-category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.item-pill {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: var(--muted);
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.item-pill:hover {
+  border-color: var(--teal);
+  color: var(--ink);
+}
+
+.item-pill.is-active {
+  background: var(--amber);
+  color: #111;
+  border-color: var(--amber);
+  font-weight: 700;
+}
+
+.item-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.item-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.item-card:hover {
+  border-color: var(--amber);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.item-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.item-sprite-frame {
+  width: 66px;
+  height: 66px;
+  flex-shrink: 0;
+  background: #0a0908;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.item-sprite-img {
+  width: 58px;
+  height: 58px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.item-card-title-group {
+  min-width: 0;
+  flex: 1;
+}
+
+.item-coord-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  background: rgba(216, 166, 77, 0.15);
+  color: var(--amber);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(216, 166, 77, 0.3);
+  margin-bottom: 2px;
+}
+
+.item-card-name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.item-card-en {
+  margin: 2px 0 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.item-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.item-tag {
+  font-size: 0.74rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.item-tag-cat {
+  background: rgba(111, 184, 174, 0.15);
+  color: var(--teal);
+  border: 1px solid rgba(111, 184, 174, 0.3);
+}
+
+.item-tag-stage {
+  background: rgba(208, 90, 70, 0.15);
+  color: var(--red);
+  border: 1px solid rgba(208, 90, 70, 0.3);
+}
+
+.item-card-role {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--amber);
+  line-height: 1.4;
+}
+
+.item-card-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 8px;
+}
+
+.item-card-combat {
+  margin-top: auto;
+  font-size: 0.84rem;
+  color: var(--ink);
+  background: var(--bg-soft);
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 3px solid var(--teal);
+}
+
+.item-card-combat p {
+  margin: 0 0 6px 0;
+}
+
+.item-card-combat p:last-child {
+  margin-bottom: 0;
+}
+
+.item-synergy-text {
+  color: #a8d5ce;
+}
+
+.item-wiki-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 28px 0;
+  font-size: 0.92rem;
+}
+
+.item-wiki-table th,
+.item-wiki-table td {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.item-wiki-table th {
+  background: var(--panel-strong);
+  color: var(--amber);
+  font-weight: 700;
+  text-align: left;
+}
+
+.item-wiki-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.item-wiki-table tr:hover {
+  background: rgba(216, 166, 77, 0.05);
+}
+
+.item-carry-badge {
+  display: inline-block;
+  background: rgba(136, 168, 107, 0.15);
+  color: var(--green);
+  border: 1px solid rgba(136, 168, 107, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .item-wiki-summary-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .item-wiki-summary-strip {
+    grid-template-columns: 1fr;
+  }
+  .item-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media print {

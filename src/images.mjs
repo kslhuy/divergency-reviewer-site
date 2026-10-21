@@ -88,7 +88,7 @@ export const imageSlots = {
       caption: "The Cradle / divine encounter preview",
     },
     {
-      src: "imgs/Stage3/Pain_fotress.png",
+      src: "imgs/Stage3/ch3_11_pain_cathedral_approach.png",
       alt: "Calvaria fortress environment",
       caption: "Calvaria fortress atmosphere",
     },
@@ -416,6 +416,38 @@ export const imageSlots = {
       src: "imgs/items/figsure.png",
       alt: "Worn field figure",
       caption: "Field Relics visual: Worn field figure",
+    },
+  ],
+  items: [
+    {
+      src: "imgs/items/item_in_khoa.png",
+      alt: "Bảng tổng hợp 48 vật phẩm và dị vật chiến đấu trong Divergency",
+      caption: "Bảng lưu trữ tổng hợp 48 Relics & Dị vật chiến đấu (item_in_khoa.png)",
+    },
+    {
+      src: "imgs/items/massk.png",
+      alt: "Mặt nạ kẻ lắng nghe (Mask of the Listening Route)",
+      caption: "Mặt nạ kẻ lắng nghe - Cổ vật nhận diện",
+    },
+    {
+      src: "imgs/items/Barcalet.png",
+      alt: "Vòng xích xiềng Bastonne (Bastonne Shackle)",
+      caption: "Vòng xích xiềng Bastonne",
+    },
+    {
+      src: "imgs/items/skull emer.png",
+      alt: "Lam ngọc đầu lâu phong ấn (Emerald Skull)",
+      caption: "Lam ngọc đầu lâu phong ấn",
+    },
+    {
+      src: "imgs/items/flower.png",
+      alt: "Hoa huyết liên Heniana (Heniana Lotus)",
+      caption: "Hoa huyết liên Heniana",
+    },
+    {
+      src: "imgs/items/poition.png",
+      alt: "Bình huyết thanh hồi phục (Red Vitality Vial)",
+      caption: "Bình huyết thanh hồi phục",
     },
   ],
 };

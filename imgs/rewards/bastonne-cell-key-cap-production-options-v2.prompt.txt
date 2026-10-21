@@ -1,0 +1,28 @@
+Tool: built-in image_gen (comparison, then front-panel construction correction).
+Input: bastonne-cell-key-cap-solo-key.png
+Output: bastonne-cell-key-cap-production-options-v2.png
+Purpose: compare a simplified cap's direct embroidery and home patch attachment options; neither is a sampled product.
+
+Use case: precise-object-edit / product-mockup.
+Asset type: design comparison for an improved Divergency Bastonne cap.
+Input image 1 is the existing solo-key cap and the design reference. Keep the essential tasteful black cap with a small warm off-white prison-cell key emblem. Improve everyday wearability and practical small-batch production. The reference is a CAP / HAT, not a computer keycap.
+
+Create ONE landscape comparison board, two product photos side by side on a warm light-gray neutral background, beautifully lit but realistic affordable cotton twill caps. LEFT is "DIRECT EMBROIDERY". RIGHT is "SEW-ON PATCH". Both are the SAME black/washed-charcoal cap shape and same simplified key emblem, clearly alternative ways to produce ONE hat, not a bundle.
+
+Blank cap design for BOTH: low-profile curved brim, soft but tidy five-panel baseball-cap silhouette with a broad continuous front panel, absolutely NO vertical center seam through the logo. Normal fabric ventilation eyelets, NOT custom shiny metal grommets. Plain tonal brim stitching, ordinary adjustable strap. No decorative hardware. No teal script on the side, no oversized front text or shield badge. All visible side panels are unbranded. The front should feel like normal tasteful everyday clothing.
+
+Key emblem for BOTH: one small warm off-white icon, approximately 34 mm high, centered on the front with plenty of surrounding empty cloth. Preserve the reference concept: vintage cell key with an oval/circular bow containing prison bars, upright shaft, and two simple squared teeth facing the viewer's right. Simplify it to a confident bold silhouette: a thick oval ring, TWO thick vertical interior bars, one solid thick shaft and TWO broad rectangular teeth. No thin doubled outlines, fine shaft lines, decorative tiny collars or intricate old-fashioned teeth. The prison bars inside the bow must remain visible at small size, broad clear negative-space windows. One warm off-white thread color, matte not metallic. The mark must still read clearly as a key, not a racket or letter. Do not enlarge it into a giant cap logo.
+
+LEFT photo: cap three-quarter angle with a modest tilt to show continuous front panel. The key is ordinary flat embroidery directly on the charcoal cloth, realistic fine stitch texture and modest relief, no 3D puff, no outline badge or surrounding patch. Label above "DIRECT EMBROIDERY", small caption below "Supplier-finished option".
+
+RIGHT photo: same three-quarter angle, cap scale, construction and off-white key. Here the key is embroidered on a tiny black cotton rectangular patch, about 30 mm wide by 42 mm high, with subtly rounded corners. Patch color closely matches the cap. Visible simple black perimeter topstitch attaches the patch to the front panel. No thick contrasting border, no shield, no background illustration, no text inside the patch. Patch is slightly wider than the key and remains discreet, not a giant square. Lay ONE matching loose patch on the tabletop near the bottom of this right photo, face up, to explain that it can be bought separately and attached. Label above "SEW-ON PATCH", small caption below "Blank cap + premade patch".
+
+Layout: understated editorial product design comparison, generous margins, no clipped products. Small heading at top "BASTONNE / CELL KEY CAP". Bottom small shared caption "One symbol. One thread color. Everyday wear." Footer in tiny readable type "DESIGN CONCEPT - MATERIALS AND STITCHING TO BE SAMPLED". No prices, measurements or manufacturing guarantees printed onto the picture. No hangtags, dungeon props, packaging, prison scenery, dramatic teal lights, mannequin or people. Slightly visible natural cotton texture and real stitching; no excessive premium luxury appearance. Clear enough to judge actual logo size and the difference between direct embroidery and an attached patch.
+
+SECOND PASS (edit of first draft):
+Use case: precise-object-edit.
+Edit the attached cap comparison board with ONLY ONE construction correction. Preserve the layout, typography, key emblem designs, their size/position, colors, left direct embroidery, right sewn patch with loose patch, lighting and all other details.
+
+BOTH caps currently have an unwanted front CENTER SEAM that runs from the top button downward behind the key to the brim. REMOVE this front center seam completely on BOTH caps. Replace the current split front with ONE single broad unbroken charcoal cotton front panel, like a five-panel cap made for decoration. The cloth texture should flow continuously across the entire front, including immediately behind, above and below the key. No line of stitching, no raised ridge, no fold imitating a seam along that center axis. Keep the real panel boundary seams only at the LEFT and RIGHT outer edges of the broad front panel. Side panel seams and brim stitching remain. The cap should still look like a plausible manufactured five-panel blank, with the frontal decoration on a continuous seam-free panel.
+
+This is a seam-removal edit only. Keep every word and both key designs unchanged.

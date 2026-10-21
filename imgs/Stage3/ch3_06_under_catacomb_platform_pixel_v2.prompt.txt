@@ -1,0 +1,53 @@
+Generated and refined with built-in image_gen.
+Primary edit target, platform layout, shapes, atmosphere and palette: imgs/Stage3/ch3_06_under_catacomb_draft.png (4500 x 900).
+Rendering reference only: output/skills/divergency-25d-stage-background/references/style-anchor.png.
+Final output: 2172 x 724. Platform silhouettes and horizontal placement are visually preserved; this is not a pixel-aligned geometry transfer.
+
+INITIAL GENERATION PROMPT
+
+Use case: style-transfer with structure preservation.
+Asset type: an ultrawide pixel-art 2.5D side-scrolling game-stage panorama, based closely on an existing level draft. Fully opaque.
+
+INPUT ROLES:
+IMAGE 1, under-catacomb draft, is the EDIT TARGET and the authoritative reference for PLATFORM SHAPES, spatial layout, camera, proportions, setting, and colors.
+IMAGE 2, blood-lair draft, is a PIXEL RENDERING reference only: crisp hand-placed pixel clusters, hard step edges, discrete shade ramps, restrained dithering. Do not import its dragon, red sinew, bone spines, ochre palette or full-width cobblestone floor.
+
+MOST IMPORTANT USER REQUIREMENT:
+Preserve the recognizable shapes of the platforms in IMAGE 1. This is a visual refinement of that draft, not an invention of a new level layout. Keep each platform's footprint, silhouette, top surface height, supporting columns, relative horizontal position, and the gaps between structures as closely as possible. Repaint the existing structures with detailed pixel materials without altering their geometry. Retain the very wide original panorama, approximately 5:1 aspect ratio like the 4500 x 900 source. Do not crop the stage ends, zoom in, rearrange objects, or convert it into a compact 2:1 arena.
+
+LAYOUT TO PRESERVE, LEFT TO RIGHT:
+- Near the far left, the small stair-step platform rising to the right, with a short horizontal top and a thick vertical end support.
+- Around 15-20 percent of the width, the narrow square ruined tower with its flat upper cap, arched openings and a ledge extending sideways.
+- Around 23-35 percent of the width, the taller block-shaped tower with a wide projecting broken balcony/platform at mid-height and its thin vertical supporting stilts.
+- Around 39-45 percent of the width, the narrow tall ruined tower with small dark arched recesses and the short broken hanging platform projecting from its right side on a chain.
+- Around 51-57 percent, the low collapsed stone arch/rubble mound; around 58-62 percent, the short jagged ruined wall stub.
+- Around 71-79 percent of the width, the distinct right-hand stair-step ruin descending to the right from an elevated landing. Keep the step profile easy to recognize.
+- Around 82-91 percent, the rightmost square tower stump with its broad projecting balcony on long thin supporting legs.
+Preserve the original broad empty spaces between these groups. Keep the structures relatively small within the enormous environment, not huge close-up foreground architecture. The main platform group should remain along the lower half of the panorama as in IMAGE 1.
+
+ENVIRONMENT AND ORIGINAL MOOD:
+Ancient under-catacomb ruins in a vast root-filled subterranean forest/cavern. Massive near-black twisting root columns and rock pillars descend from the cavern canopy, leaving openings to luminous spectral teal depths. Jagged stalactite silhouettes frame the top border. Layer far root silhouettes, distant low dark ridges, and horizontal cold turquoise mist into a spacious eerie background. Keep IMAGE 1's dark green-black foreground, desaturated deep teal stone, cool gray-green fog, and luminous aqua/emerald backdrop. Preserve the atmosphere and color identity of THIS draft, not the blood-lair color scheme. Convey atmospheric depth with simplified discrete pixel color bands and clusters rather than blur.
+
+MATERIAL REFINEMENT:
+Render the existing towers, stair blocks and projecting platforms as weathered old charcoal/teal stone masonry: chipped square blocks, compact stepped cracks, small dark arch openings, restrained pale cool-teal edge light, moss in a few joints, broken slab ends and aged iron chains. Decorate inside the source silhouettes; do not cover or round off the stair-step shapes, add new pillars, or change the balcony outlines. Add modest shallow top-face shading appropriate to 2.5D gameplay, keeping the original side-on camera and platform heights. Keep supports and silhouettes distinct from the dark background.
+
+BOTTOM AREA:
+Keep the same narrow low dark base strip/background line as the source. Do not expand it upward into a broad paved battle floor. Do not connect the isolated ledges with a new floor, bridge, wooden raft, ceremonial courtyard or other replacement geometry. No new large props in the gaps.
+
+PIXEL STYLE:
+Authentic handcrafted 16-bit pixel art, with consistent visibly square pixel clusters, hard stair-step contours, short discrete shade ramps, compact highlights, deliberate limited dithering and clean readable silhouettes. Match the pixel vocabulary of IMAGE 2 while preserving IMAGE 1's green/teal palette and platform layout. All fog, glow and materials use pixel clusters, no smooth airbrush, soft gradients, blurred trees, painterly microtexture, antialiased outlines, photoreal texture, or 3D rendering. Detail should be restrained enough to keep this panoramic stage readable.
+
+Remove the tiny orange-haired player sprite visible near the far-left stairs. No other characters, enemies, humanoid spirits, UI, lettering, logos, watermark, framing, collage or black letterbox bars.
+Final priority: recognizable SOURCE PLATFORM SHAPES and spacing in the same ultrawide panorama, enriched with crisp pixel-art environmental detail and the same eerie turquoise under-catacomb vibe.
+
+FOCUSED FRAMING CORRECTION
+
+Use case: precise-object-edit.
+IMAGE 1 is the edit target, an ultrawide pixel-art catacomb panorama. Make ONE focused framing correction: remove the large unused nearly-black horizontal strip below the narrow ground baseline. It currently occupies roughly the bottom fifth of the picture and looks like an empty border.
+
+Keep ALL EXISTING PLATFORM SHAPES, stair profiles, balcony outlines, columns, tower heights, horizontal spacing, root silhouettes, pixel-art texture and green/teal colors exactly as closely as possible. Do not redesign any structure or introduce new ones.
+
+Reframe the composition so the narrow ground baseline sits near the actual BOTTOM edge of the final image, with only a very thin natural dark edge below it. The finished artwork should be filled edge-to-edge by the catacomb scene, not an image with a black lower border. If a wider frame is possible, crop the unused bottom area and return the very wide panorama. Otherwise, retain the ultrawide canvas and move the existing platform grouping down together WITHOUT changing any individual platform's geometry or horizontal placement, naturally continuing the existing teal fog and huge root environment above/behind them to fill the composition. The black blank strip itself must be gone.
+
+Keep the existing detailed handcrafted 16-bit pixel art, crisp stepped silhouettes, compact discrete color clusters, ancient teal-stone ruins, two stair groups, the three main tower-and-balcony groups, low rubble pile and wall stub. No broad newly paved floor, no new platform, no characters, writing, UI, watermark, soft airbrush, blur or smooth gradients. Keep the narrow baseline visually subordinate to the original platform structures.
+

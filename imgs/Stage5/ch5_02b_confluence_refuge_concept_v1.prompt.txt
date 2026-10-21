@@ -1,0 +1,31 @@
+Use case: stylized-concept.
+Asset type: ONE original opaque environment concept for Divergency Chapter 5, a 2.5D side-scrolling beat 'em up stage. Wide horizontal 2:1 composition. This is a new scene, not an edit or a collage.
+
+REFERENCE ROLES, IN THIS EXACT ORDER:
+Image 1: ch5_02_hall_of_mirrors_playable.png is thematic inspiration only: the Blue Cradle dream realm, broken mirror architecture and spectral umbilical filaments. Do not copy its bright neon palette, dense stars or glossy high-contrast floor reflections.
+Image 2: style-anchor.png is the PRIMARY rendering and palette authority: dark handcrafted pixel clusters, hard stair-step contours, discrete short shade ramps, muted desaturated blue-violet, charcoal, bone gray, subdued burgundy and sparse ghostly teal. Match its game-art density rather than painterly illustration.
+Image 3: approved-gameplay-layout.png is the PRIMARY gameplay composition authority: broad quiet walkable floor in the lower half, side-on viewpoint, large scenery behind the floor. Do not copy dragon ribs or cave ceiling; the new scene is an open dream plaza.
+
+SCENE: THE CONFLUENCE REFUGE, BETWEEN THE MEMORY MIRROR AND THE FINAL UMBILICAL ALTAR.
+A fragment of Akam Meskul's war-torn basalt plaza has been pulled into the sleeping god's blue dream realm. In the midground behind the clear battle floor, readable remains of opposing human technologies meet: a fractured dark glass-and-brass machine arcade on the left, a broken bone-gray ritual colonnade threaded with dried-burgundy cords on the right. These are architectural traces of the factions, not army units. Dream fragments hover far behind them. Use only a few bold silhouettes, large quiet gaps and restrained stars. This place must feel like a displaced real battlefield being swallowed by memory, not a generic luminous space palace.
+
+TRANSITION LANDMARKS:
+At the left rear edge of the playable floor, a modest upright broken mirror arch contains a dark, still-water surface: the entrance from the Memory Mirror room. At the right rear edge, a grounded, open stone arch at floor level leads onward to the final altar; no staircase or platform blocks the walkable strip. Through that right arch and beyond the plaza, a tiny distant altar silhouette is visible, connected to the sky by ONE narrow subdued teal umbilical strand. Keep that distant strand offset toward the right, small and low-intensity; reserve the immense full reveal for the later boss room. Place two small dormant broken weapon-anchor housings along the BACK edge of the floor, one near each flank, recessed enough that they do not occupy the center movement space. They are inactive scenery placeholders for later separate interactable props, with no bright target rings or UI markings.
+
+GAMEPLAY COMPOSITION:
+Fixed side-on beat 'em up view, shallow ground-plane depth. The lower 45–50 percent of the image is ONE broad flat continuous basalt-and-weathered-stone floor spanning edge to edge with no pits, no stairs, no stacked platforms, no foreground rail and no front drop-off drawn across the image. Its central 70 percent must remain especially open and quiet. Characters will move both left/right and toward/away from the rear edge. Floor texture uses large sparse stone slabs and low-contrast cracks. Small flat debris only at extreme corners. No converging perspective road. All tall pillars, equipment, cables and crystal pieces remain BEHIND the rear floor edge; no glowing vein crosses the active combat area. No heavy foreground framing. The environment must immediately read as an empty usable combat room, not a top-down route diagram.
+
+ART DIRECTION:
+Visible square pixel clusters on a consistent grid, hard edges, stepped silhouettes, limited clean dithering, short discrete shade ramps and sparse compact highlights. Density comparable to a roughly 900 x 450 handcrafted pixel background enlarged cleanly. Muted midnight blue, desaturated slate-violet, charcoal, gray-ochre stone and subdued burgundy. Teal is a small accent, not a floodlight. The floor is a slightly lighter muted stone plane than the dark backdrop so future sprite silhouettes remain legible. No glossy reflections, no neon magenta, no electric cyan bloom, no dense stars, no smooth gradients, no painterly microdetail, no blur, no 3D rendering. The mood is tense, lonely and otherworldly. It is still night; no golden dawn or triumphant sunlight.
+
+DELIVERY:
+One finished edge-to-edge opaque environment image, no text, labels, diagrams, characters, children, refugees, soldiers, monsters, bosses, UI, health bars, target markers, logos, watermark or contact sheet. Do not add any figures. No collages or multiple panels. Preserve the empty readable battle floor.
+
+REFERENCE PATHS:
+1. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage5/ch5_02_hall_of_mirrors_playable.png
+2. output/skills/divergency-25d-stage-background/references/style-anchor.png
+3. output/skills/divergency-25d-stage-background/references/approved-gameplay-layout.png
+
+GENERATION METHOD: built-in image_gen.
+TARGET OUTPUT: imgs/Stage5/ch5_02b_confluence_refuge_concept_v1.png
+STATUS: design proposal; not an engine-tested stage.

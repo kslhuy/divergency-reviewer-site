@@ -1,0 +1,23 @@
+Edited with built-in image_gen.
+Edit target: imgs/Stage3/ch3_04_spirit_citadel_gameplay_pixel_v2.png
+Requested change: give the floor a different vibe.
+Art direction: ancient spectral ceremonial courtyard with broad slate slabs, a faded flush ritual seal, and faint teal seams.
+
+Use case: precise-object-edit.
+Asset type: an edit to an existing 2.5D pixel-art beat 'em up stage background.
+
+IMAGE 1 is the EDIT TARGET. Make a focused material and design change to the FLOOR ONLY. Preserve the existing upper scene: skull-crowned gate, fortress towers, battlements, spirit braziers, obelisks, chains, distant castle silhouettes, fog, camera position, canvas proportions, and established pixel-art rendering. Keep their shapes, placement, colors, lighting and detail unchanged as closely as possible. The rear edge of the combat floor stays in the same place.
+
+FLOOR REDESIGN:
+Give the floor the feeling of an ancient spectral citadel's ceremonial courtyard. Replace the small irregular cobblestones and exposed brown earth across the whole lower combat area with broad, heavy, well-fitted rectangular basalt/slate slabs. Large quiet stone faces with deliberate stepped pixel cracks, subtly chipped corners, worn smooth matte surfaces, narrow dark joints, and restrained age stains. Use large slab shapes and fewer seams to make this a clearly different floor texture.
+
+Integrate a large, timeworn circular ritual seal into the central floor surface: shallow concentric engraved arcs and simple angular geometric inlay, subtly distorted by the same shallow ground-plane perspective. It is completely FLUSH with the slabs, part of the paving itself, not a raised dais or platform. Its pattern is faded bone-gray with only occasional very faint desaturated teal traces. Around it, a few thin teal mineral/energy veins follow selected slab joints, broken and understated. The floor should feel like an abandoned sacred spirit court, dark and solemn. No readable writing or dense rune text. Keep plenty of unmarked quiet slab surface around the seal for character readability. No glowing checkerboard and no bright sci-fi circuitry.
+
+GAMEPLAY INVARIANTS:
+The existing wide battle floor remains continuous, flat, unobstructed, edge-to-edge, with exactly the same depth and side-on beat 'em up viewpoint. No pits, holes, stairs, water, tall props, pillars, loose boulders, characters or hazards on the combat floor. No perspective road converging toward the gate. All lines and seal engravings are flat surface decoration.
+
+STYLE AND PALETTE INVARIANTS:
+Retain the existing authentic handcrafted 16-bit pixel style. Crisp hard square-pixel edges, stair-step contours, compact pixel clusters, short discrete shade ramps, sparse clean dithering, no painterly microtexture. Keep the current dark muted charcoal and blue-violet slate range. The small teal floor details must be dimmer than the existing spirit flames; no bloom or overall brightness increase. No smooth airbrushing, blur, anti-aliasing, 3D rendering, shiny marble, photoreal texture, neon cyan or dramatic reflections.
+
+Deliver a single fully opaque edited image in the same wide 2:1 composition. Change only the floor. Keep the entire citadel backdrop intact. No text, UI, logo or watermark.
+

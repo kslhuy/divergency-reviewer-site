@@ -1,337 +1,145 @@
-<h2 id="gameplay-1-4-tau-ngam-nghien-cuu-va-shemal" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-tau-ngam-nghien-cuu-va-shemal" aria-label="Link to section">#</a>1-4. Tàu ngầm nghiên cứu và SheMal</h2>
-<p class="chapter-version"><strong>Bản đồng nhất gameplay · narrative · Timeline — 09/10/2026.</strong> Nguồn thực thi: <code>Assets/Scenes/Chapter1_Playable.unity</code>. Bản đang ở mức <code>prototype_known_issues</code>; các phần cần hoàn thiện được ghi cụ thể phía dưới.</p>
-<span id="gameplay-1-4-so-do-cong-viec"></span><span id="gameplay-1-4-cap-ben"></span><span id="gameplay-1-4-tim-nguoi"></span><span id="gameplay-1-4-cuu-va-lay-ho-so"></span><span id="gameplay-1-4-tiep-can-trung-tam"></span><span id="gameplay-1-4-shemal"></span><span id="gameplay-1-4-rut-va-sakuri"></span><span id="gameplay-1-4-luu-va-pham-vi"></span>
-
-<p><strong>Mục tiêu:</strong> Phối hợp chiến dịch đột nhập đa cánh vào <strong>tổ hợp MuCEM (bề nổi ngụy trang của phòng thí nghiệm ngầm)</strong>: Cánh 1 (Mark &amp; Solei) vô hiệu hóa hệ thống radar bờ biển và ca-nô tuần tra; Cánh 2 (Deep, Stranger, Block) áp sát bằng ca-nô rẽ sóng đêm mưa, đột kích tầng hành lang bảo tàng, hội quân tại ga ngầm đáy biển rồi hạ thang máy áp suất xuống Tàu ngầm nghiên cứu để giải cứu hoa tiêu duy nhất, thu thập hồ sơ Heniana và ngăn chặn thảm kịch biến đổi SheMal.</p>
-
-<div class="table-wrap"><table><thead><tr><th>Tuyến di chuyển (Where to where)</th><th>Mục tiêu &amp; Điểm mốc</th><th>Chuyển tiếp gameplay</th></tr></thead><tbody>
-<tr><td><strong>1. Trạm Bờ Kỹ Thuật</strong><br><code>mucem_service_pier_game_style_v1.png</code></td><td>Mark &amp; Solei đột nhập trạm kiểm soát bờ đối diện, né đèn pha quét, hack bàn điều khiển vô hiệu hóa ca-nô và radar bờ biển.</td><td><strong>Stealth &amp; Sabotage:</strong> Tắt trạm tiếp sóng GPS ca-nô địch, ngắt cầu dao radar, mở đường biển.</td></tr>
-<tr><td><strong>2. Ca-nô Vượt Biển Đêm Mưa</strong><br><code>mucem_infiltration_keyart_1791562382184.jpg</code></td><td>Deep, Stranger, Block lái ca-nô rẽ sóng giông bão Địa Trung Hải áp sát cửa âu dịch vụ dưới chân bệ móng MuCEM.</td><td><strong>Cinematic Cutscene:</strong> Lướt trong bóng tối an toàn dưới chân thành Fort Saint-Jean khi đèn pha đã tắt.</td></tr>
-<tr><td><strong>3. Hành Lang Mắt Cáo Tầng Nổi</strong><br><code>mucem_walkway_game_style_v1.png</code></td><td>Deep &amp; Stranger càn quét sảnh bảo tàng tầng nổi, đối đầu lực lượng an ninh tư nhân PMC, phá khóa thang nâng công nghiệp.</td><td><strong>All-out Beat 'em up:</strong> Đẩy địch đập cột mắt cáo (Wall Bounce), né camera trần, mở lối xuống ray ngầm.</td></tr>
-<tr><td><strong>4. Ga Tàu Ngầm Đáy Biển</strong><br><code>mucem_subway_dock_laundel_style_v1.png</code></td><td>Cả đội hội quân trước ô kính khổng lồ nhìn ra lòng đại dương sâu thẳm, đập tan toán áp giải tù nhân, vào thang máy áp suất.</td><td><strong>Team Wave Arena:</strong> Đấu trường trước Boss, giải cứu tù nhân, hạ thang máy xuống Submarine Lab.</td></tr>
-<tr><td><strong>Airlock 02 → Buồng giam 05</strong></td><td>Dọn phòng gác 04, lấy chìa và danh sách, giải thoát người liên lạc của Mark và hộ tống về 02 an toàn.</td><td>Cứu người an toàn, mở khóa động cơ ngăn đợt thử mới ở trung tâm.</td></tr>
-<tr><td><strong>Tuyến máy / Tuyến hơi → Buồng SheMal 11</strong></td><td>Khóa van rò (06) hoặc ngắt máy phát A/B (08–09) để mở đường vào buồng nuôi cấy trung tâm 11.</td><td>Đối đầu SheMal, ngắt máy lấy hồ sơ Sakuri, thoát hiểm về ca-nô MuCEM.</td></tr>
-</tbody></table></div>
-
-<h3>I. Kế hoạch đột nhập MuCEM: 4 giai đoạn tác chiến đa cánh</h3>
-
-<h4>1. Trạm Bờ Kỹ Thuật (mucem_service_pier_game_style_v1.png) — Lối chơi Stealth &amp; Sabotage</h4>
-<figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_service_pier_game_style_v1.png" alt="mucem_service_pier_game_style_v1 — Trạm Bờ Kỹ Thuật nhìn sang MuCEM" loading="lazy"><figcaption>mucem_service_pier_game_style_v1 — Trạm Bờ Kỹ Thuật: Sàn kè bê tông ướt mưa đối diện MuCEM. Điểm đột kích của Mark &amp; Solei để vô hiệu hóa trạm điều khiển ca-nô và radar bờ biển.</figcaption></figure>
+<h2 id="gameplay-1-4-tau-ngam-nghien-cuu-va-shemal" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-tau-ngam-nghien-cuu-va-shemal" aria-label="Link to section">#</a>1-4. MuCEM, tàu ngầm nghiên cứu và SheMal</h2>
+<p class="chapter-version"><strong>Bản thiết kế và hội thoại đề xuất — đồng bộ 20/10/2026.</strong> Đã biên tập để thống nhất tuyến truyện; chưa đồng bộ vào Unity. Prototype hiện có vẫn ở mức <code>prototype_known_issues</code>. Phạm vi thực thi và hướng dẫn tích hợp nằm cuối trang.</p>
+<p><strong>Mục tiêu:</strong> mở đường qua MuCEM, cứu Mateo ở phòng 05, dừng thí nghiệm và mang bằng chứng ra khỏi Marseille. Chỉ sau khi lấy hồ sơ ở buồng SheMal, đội mới có đầu mối tới Sakuri.</p>
+<p><strong>Nhịp chơi:</strong> lén đột nhập → cận chiến hội quân → khám phá và cứu người → chọn tuyến điện → đối đầu SheMal → thoát tàu. Lab dự kiến 25–30 phút, chưa tính MuCEM, đọc hồ sơ hoặc thử lại boss.</p>
+<p><strong>Đội hình trong bản thiết kế hoàn thiện:</strong> lưu lựa chọn ở cảng, chuyển ngắn sang Mark cùng Solei tại trạm bờ rồi sang Deep cùng Ghost ở hành lang; Block lo thuyền theo kịch bản. Hai chặng này là ngoại lệ có một người trực tiếp và một hỗ trợ. Tại ga, cho chọn lại nhóm ba người trước khi đánh Bruno và xuống lab; Block tiếp tục giữ bến, các thành viên còn lại đều có thể chọn. Việc chuyển quyền này cần tích hợp riêng, không coi thoại radio của prototype là cơ chế đã chạy.</p>
+<h3 id="gameplay-1-4-so-do-cong-viec" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-so-do-cong-viec" aria-label="Link to section">#</a>Tuyến và kết quả của từng chặng</h3><div class="table-wrap"><table><thead><tr><th>Chặng</th><th>Việc người chơi làm</th><th>Kết quả</th></tr></thead><tbody><tr><td>Trạm bờ MuCEM</td><td>Né đèn, lấy mã kỹ thuật viên, gây nhiễu rồi cắt radar</td><td>Mở luồng biển cho ca-nô</td></tr><tr><td>Ca-nô → hành lang mắt cáo → ga ngầm</td><td>Mở thang, chặn toán áp giải, cứu nhóm tù nhân tại ga</td><td>Hội quân; biết Mateo đã bị chuyển xuống phòng 05</td></tr><tr><td>Ga → bến dịch vụ 01 → khoang 02</td><td>Qua cửa trái theo hành lang kỹ thuật kín lên bến, xuống thang dịch vụ vào lab</td><td>Block giữ ca-nô tại 01; 02 là điểm tập kết</td></tr><tr><td>03 → 04 → 03 → 05 → 03 → 02</td><td>Thử ảo ảnh, lấy thẻ, lấy hồ sơ Heniana và cứu Mateo</td><td>Đưa Mateo tới 02 mới hoàn tất cứu hộ</td></tr><tr><td>06 → 03 → 07 → 10 hoặc 08 → 09 → 10</td><td>Giữ điện bằng cách khóa hơi, hoặc chủ động ngắt hai nguồn thí nghiệm</td><td>Chốt cách tiếp cận boss, giữ cùng đường rút</td></tr><tr><td>10 → 11</td><td>Phân biệt thật/giả, ngắt hai nguồn sạc, dừng hệ thống và lấy hồ sơ</td><td>Biết đầu mối Sakuri; lưu trước khi thảm họa bắt đầu</td></tr><tr><td>11 → 10 → 07 → 03 → 02 → 01 → Corniche</td><td>Né nguy hiểm, đón Mateo, lên ca-nô rồi đổi sang thuyền Pointu</td><td>Đưa người được cứu tới nơi an toàn; đội quyết định đi Sakuri</td></tr></tbody></table></div><h3 id="gameplay-1-4-mucem" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-mucem" aria-label="Link to section">#</a>MuCEM — hai mũi đột nhập, một điểm hội quân</h3>
+<p>Mark và Solei đi trạm bờ; Deep, Stranger và Block chờ trên ca-nô. Block đã được ổn định tại căn cứ; lần này anh nhận nhiệm vụ giữ thuyền và tiếp nhận người được cứu, không tham chiến trong lab. Tulas và những người dự bị khác phụ trách chuyển vật tư cùng tuyến cứu hộ. Trong prototype, việc chia đội được kể qua radio; đổi nhân vật điều khiển theo cánh là phần cần triển khai riêng.</p>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_service_pier_game_style_v1.png" alt="Trạm bờ: Mark và Solei lấy mã, gây nhiễu rồi cắt radar." loading="lazy"><figcaption>Trạm bờ: Mark và Solei lấy mã, gây nhiễu rồi cắt radar.</figcaption></figure>
+<p><strong>Trạm bờ:</strong> quan sát đèn quét và hướng nhìn kỹ thuật viên, đi qua các chỗ nấp để lấy mã. Có thể khống chế sau lưng hoặc đánh lấy mã. Console vô hiệu hóa liên kết điều khiển hỏa lực ca-nô; cầu dao tắt radar và đèn. Báo động tạo loạt bắn có dấu báo trước, cho phép né và ẩn nấp để tiếp tục. Thao tác bị ngắt khi di chuyển hoặc trúng đòn.</p>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_infiltration_keyart_1791562382184.jpg" alt="Ca-nô chở Deep, Stranger và Block áp sát cửa vòm MuCEM sau tín hiệu an toàn." loading="lazy"><figcaption>Ca-nô chở Deep, Stranger và Block áp sát cửa vòm MuCEM sau tín hiệu an toàn.</figcaption></figure>
+<p><strong>Vượt biển:</strong> cutscene ngắn sau tín hiệu radar tắt, có thể bỏ qua. Ca-nô cập cửa vòm; Deep và Stranger lên hành lang. Block đưa ca-nô theo tuyến dịch vụ tới bến 01 và ở lại giữ đường rút.</p>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_walkway_game_style_v1.png" alt="Hành lang mắt cáo: Deep và Stranger mở đường tới thang xuống ga." loading="lazy"><figcaption>Hành lang mắt cáo: Deep và Stranger mở đường tới thang xuống ga.</figcaption></figure>
+<p><strong>Hành lang:</strong> đánh ba nhóm nhỏ, mở thang bên trái. Cột và vật ném tạo cơ hội kiểm soát vị trí; khiên điện, kiosk phá hủy và wall-bounce riêng là phần đề xuất. Mark và Solei đi cầu bảo trì tới điểm hẹn.</p>
+<figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_subway_dock_laundel_style_v1.png" alt="Ga ngầm: cứu nhóm tù nhân, biết Mateo đã bị đưa xuống phòng 05; cửa trái nối tuyến dịch vụ tới lab." loading="lazy"><figcaption>Ga ngầm: cứu nhóm tù nhân, biết Mateo đã bị đưa xuống phòng 05; cửa trái nối tuyến dịch vụ tới lab.</figcaption></figure>
+<p><strong>Ga ngầm:</strong> hội quân, chặn bốn nhóm áp giải và mở lối cho tù nhân. Mateo không ở đây: người được cứu báo anh đã bị đưa xuống phòng 05. Cho nhóm này tập kết ở phần ga đã dọn, chờ mở hành lang dịch vụ phía cửa trái rồi đưa họ tới Block tại bến 01 trước khi xuống lab.</p>
+<p>Tại hành lang áp giải sau ga, Bruno chặn lối để đòi lại hàng bị Jamerson giữ. Bị dồn vào đường cụt, hắn dùng Vector Viper biến thành Xà Nhân. Miniboss ngắn kiểm tra né độc và phá các ống cấp; đánh bại hắn mở tuyến dịch vụ tới bến 01. Không thêm pha biến hình của Bruno trong trận SheMal. Đây là nội dung cần tích hợp, không xác nhận encounter đã có trong prototype.</p>
+<h3 id="gameplay-1-4-cap-ben" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-cap-ben" aria-label="Link to section">#</a>01–02 — giữ đường về</h3>
+<p>Từ ga, hành lang kỹ thuật kín dẫn lên bến dịch vụ 01 ở cao độ mặt nước. Ca-nô đã được Block chuyển tới đây; không chiếu lại cảnh cập bến. Đội đi thang kín từ 01 xuống khoang 02 trong thân tàu. Cân áp xong mới mở cửa; không bơm nước vào khoang có người.</p>
+<p>02 có điểm lưu khi vào lab và chỗ tập kết cứu hộ. Khi đổi màn hoặc bỏ qua chuyển cảnh, cả đội và NPC đi theo phải đứng đúng phía cửa; không để đồng đội bị kẹt giữa hai map.</p>
+<h3 id="gameplay-1-4-tim-nguoi" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-tim-nguoi" aria-label="Link to section">#</a>03–04 — học cách kiểm chứng, lấy thẻ</h3>
+<p>Tại 03, ném bu lông xuyên một thùng giả rồi ném vào thùng thật ngay bên cạnh. Luật nhất quán: <strong>ảnh chiếu không có va chạm vật lý</strong>. Lần học đầu không có địch; luôn có vật thử lấy lại được. Bóng chân, dấu va chạm và đường bay đều cho phản hồi, không phụ thuộc riêng vào âm thanh.</p>
+<p>Qua phòng gác 04, hạ nhóm bảo vệ để lấy thẻ bảo trì và danh sách giam. Danh sách xác nhận Mateo ở 05. Quay lại hành lang; các phòng 04/05/06 là nhánh riêng, không nối xuyên nhau.</p>
+<h3 id="gameplay-1-4-cuu-va-lay-ho-so" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-cuu-va-lay-ho-so" aria-label="Link to section">#</a>05 → 03 → 02 — cứu Mateo một lần</h3>
+<p>Kiểm tra cửa thật bằng vật ném, dọn lính, lấy hồ sơ Heniana rồi ngắt thuốc và mở buồng. Hồ sơ cho biết Jamerson dùng tù nhân để tìm cơ thể chịu được bệnh của con gái; chưa xác nhận Heniana đang ở Sakuri.</p>
+<p>Mateo biết một thuyền Pointu ở Corniche và hứa lo đường biển. Anh chưa chọn điểm đến thay cả đội. Đưa anh theo tuyến đã dọn 05 → 03 → 02; cửa đợi NPC theo kịp. Không bắt hộ tống xuyên các trận boss và không hồi sinh lính chỉ để kéo dài đường về.</p>
+<p>Mở buồng nhận <code>CaptiveReleased</code>; tới điểm tập kết và hoàn tất đối thoại mới nhận <code>Rescued</code>. Mateo nghe tiếng người bị giữ ở trung tâm, khiến đội có lý do quay vào dừng thí nghiệm.</p>
+<h3 id="gameplay-1-4-tiep-can-trung-tam" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-tiep-can-trung-tam" aria-label="Link to section">#</a>Hai tuyến điện — báo trước đánh đổi</h3><div class="table-wrap"><table><thead><tr><th>Lựa chọn</th><th>Thao tác</th><th>Boss và đường thoát</th></tr></thead><tbody><tr><td>Giữ điện</td><td>Khóa van rò tại 06, chờ đồng hồ an toàn; đi 03 → 07 → 10</td><td>Sàn sáng, giữ dữ liệu phụ; SheMal giữ giáp và nhịp đánh cơ bản. Đường rút có sự cố điện theo cảnh báo, không thêm quái của tuyến phá điện.</td></tr><tr><td>Phá điện</td><td>Ngắt A ở 08, khóa hơi rồi xác nhận ngắt B ở 09; đi lên 10</td><td>SheMal giảm giáp, thêm một đòn quét sau cú lao. Đèn sàn và báo đòn vẫn rõ. Có vật tư thưởng và tối đa hai quái thêm trên đường rút; không tăng mọi thông số cùng lúc.</td></tr></tbody></table></div>
+<p>Ngắt A chưa chốt lựa chọn: còn có thể quay lại tuyến hơi. Trước thao tác B, bảng báo rõ mất làm mát, buồng mẫu nhả khóa và dữ liệu phụ có thể mất. Ngắt B mới chốt tuyến phá điện; mở cửa 10 bằng tuyến hơi chốt tuyến giữ điện. Sau đó không đổi tuyến để nhận thưởng hai lần. Bằng chứng chính và đường cứu hộ luôn còn.</p>
+<p>Máy phát nuôi thí nghiệm; pin khẩn cấp cấp cho thang, cửa thoát và đèn sàn. Buồng SheMal còn <strong>tụ dự phòng</strong>, nên cả hai tuyến đều phải ngắt hai nguồn sạc tại chỗ. Qua 07 có một phép thử ảo ảnh ngắn để nhắc lại luật trước boss. Tại 10, mở chốt về 07, nghỉ và lưu.</p>
+<h3 id="gameplay-1-4-shemal" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-shemal" aria-label="Link to section">#</a>SheMal — đọc đòn, nhận ra người thật, ngắt máy</h3>
+<p>Tiếng Heniana phát từ loa. SheMal lặp lại vài từ rồi bị xung máy ép tấn công. Trả điều khiển trước đòn đầu; không dùng hội thoại dài để giải thích ngay giữa combat.</p>
+<ol>
+<li><strong>100% → 65%: cận chiến.</strong> Hai nhát vuốt rồi đòn nặng; cú lao có động tác ghì chân báo hướng. Dụ cô lao trượt vào vách để tạo khoảng phản công. Các cột không được chặn kín đường né.</li>
+<li><strong>65% → 30%: một bóng giả.</strong> Bóng giả không có tiếp đất và vật ném đi xuyên; bản thể thật có dấu va chạm. Lần đầu đánh nhầm chỉ mất cơ hội tấn công. Những lần sau, bản thể thật báo hướng trước khi đổi phía phản kích; không dịch chuyển gây damage tức thì. Luôn có vật thử, kể cả khi chơi một mình.</li>
+<li><strong>Dưới 30%: ngắt hai nguồn sạc.</strong> SheMal lui về bình; đường cáp chỉ tới công tắc đang sáng trên cùng sàn chiến đấu. Ngắt lần lượt từng nguồn bằng tương tác hoặc vật ném; kết quả nguồn đầu giữ nguyên. Chơi đơn vẫn đủ cửa sổ thao tác, đồng đội AI không phải giữ nút. Tối đa hai nhóm quái phụ; không đồng thời ép người chơi chịu đòn boss khi thao tác. Tuyến phá điện vẫn dùng tụ còn tích năng lượng.</li>
+</ol>
+<p>Khi nguồn sạc ngừng, SheMal tỉnh lại đủ để xin tắt tiếng khóc. Solei tắt bản ghi, ở cạnh cô trong một nhịp ngắn trước khi cô qua đời vì tổn thương đã có. Nếu Solei đang dự bị, cô vào theo tuyến đã an toàn trong cảnh sau trận; không thêm một hỗ trợ giữa combat. Ngắt máy không phải một vụ nổ giết cô. Cuộc trao đổi về Heniana và quyết định đi tiếp được dành cho lúc lên thuyền.</p>
+<h3 id="gameplay-1-4-rut-va-sakuri" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-rut-va-sakuri" aria-label="Link to section">#</a>Lấy hồ sơ rồi mới thoát tàu</h3>
+<p>Sau khi encounter kết thúc, dừng quy trình tại bàn trung tâm và lấy hồ sơ. Hồ sơ nêu <strong>Sakuri, Cái Tai và nơi tiếp nhận mẫu Heniana</strong>; chưa chứng minh cô bé đang ở đó. Truy cập kho dữ liệu gửi cảnh báo an ninh tới Jamerson; ông chuẩn bị ống phóng rồi ghi đè lệnh dừng để hủy cơ sở và phần chứng cứ còn lại. Hoàn tất sao lưu, nhận <code>Evidence</code> và xác nhận lưu trước khi trả điều khiển đoạn rút; quy trình phá cơ sở không xóa bản đã sao.</p>
+<p><strong>Đường rút:</strong> 11 → 10 → 07 → 03 → 02 → 01. Sự cố xuất hiện theo vị trí đội đi tới; không có đồng hồ chết cứng. Nước rò vào các khoang bị hỏng, cửa cách ly hạn chế lan sang tuyến cứu hộ; không bắt mô phỏng ngập toàn tàu.</p>
 <ul>
-  <li><strong>Cơ chế né đèn pha (Searchlight Evasion):</strong> Hai chùm đèn pha lớn từ pháo đài quét luân phiên qua mặt kè. Người chơi điều khiển Mark/Solei nấp sau thùng pallet gỗ bên trái, di chuyển trong vùng bóng tối để không kích hoạt báo động.</li>
-  <li><strong>Hạ gục lén lút (Silent Takedown):</strong> Triệt hạ nhanh các kỹ thuật viên vận hành và bảo vệ trạm.</li>
-  <li><strong>Hack bảng điều khiển (Console Sabotage):</strong>
-    <ul>
-      <li><em>Console hàng hải:</em> Gửi mã gây nhiễu làm tê liệt hệ thống định vị GPS của dàn ca-nô tuần tra ngoài khơi của Jamerson.</li>
-      <li><em>Trạm biến áp:</em> Ngắt cầu dao trạm radar và dàn đèn chiếu bờ biển. Đèn tín hiệu buồng thang máy bên phải chuyển từ ĐỎ sang XANH LỤC, mở đường an toàn cho cánh biển xuất phát.</li>
-    </ul>
-  </li>
+<li><strong>11 → 10:</strong> kính nứt và nước rò báo hướng chạy. Không khóa di chuyển để nghe thoại.</li>
+<li><strong>10 → 07:</strong> vùng hồ quang báo vàng 3 giây, gây sát thương 1,5 giây rồi nghỉ 2 giây; luôn có đường vòng khô.</li>
+<li><strong>07 → 03:</strong> trần nứt rồi rơi vào một làn; lối bảo trì đã mở trước đó. Tuyến phá điện thêm tối đa hai quái, không đóng cửa ép đánh hết khi đang chạy.</li>
+<li><strong>02 → 01:</strong> đón Mateo và người được cứu, vào thang kín, lên bến nơi Block đợi. Không bỏ qua bến 01.</li>
+<li><strong>01 → Corniche:</strong> Mateo lái ca-nô tới bến kín, chuyển mọi người sang Pointu. Đưa người bị thương tới nơi an toàn trước khi đội tiếp tục hành trình Sakuri; Pointu không xuất hiện ở bến lab.</li>
 </ul>
-
-<h4>2. Ca-nô Vượt Biển Đêm Mưa (mucem_infiltration_keyart_1791562382184.jpg) — Cutscene Điện Ảnh</h4>
-<figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_infiltration_keyart_1791562382184.jpg" alt="mucem_infiltration_keyart — Ca-nô áp sát khối lập phương MuCEM" loading="lazy"><figcaption>mucem_infiltration_keyart — Cutscene điện ảnh: Ca-nô tuần tra chở Deep, Stranger và Block rẽ sóng đêm mưa giông, lướt êm ả tiếp cận cửa âu dịch vụ MuCEM sau khi radar bị vô hiệu hóa.</figcaption></figure>
-<p>Đoạn cutscene ngắn gọn, kịch tính: Chiếc ca-nô phóng đi trên mặt nước Địa Trung Hải gầm thét trong mưa giông. Khối lập phương MuCEM mắt cáo phát sáng xanh lam kỳ bí hiện ra lừng lững. Ca-nô giảm tốc cập nhẹ vào cửa vòm kỹ thuật sát chân bệ móng bảo tàng.</p>
-
-<h4>3. Hành Lang Mắt Cáo Tầng Nổi (mucem_walkway_game_style_v1.png) — Lối chơi All-out Combat</h4>
-<figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_walkway_game_style_v1.png" alt="mucem_walkway_game_style_v1 — Hành lang mắt cáo bảo tàng MuCEM" loading="lazy"><figcaption>mucem_walkway_game_style_v1 — Tầng nổi MuCEM: Sàn đá hoa cương sang trọng đối lập với cuộc cận chiến bạo liệt chống lực lượng an ninh tư nhân PMC.</figcaption></figure>
-<ul>
-  <li><strong>Đấu trường Beat 'em up:</strong> Deep và Stranger xông vào sảnh hành lang bảo tàng, chạm trán lực lượng an ninh PMC với khiên sốc điện và gậy điện giật.</li>
-  <li><strong>Tương tác môi trường:</strong> Đòn đánh đẩy văng địch vào các cột mắt cáo bê tông (Wall Bounce), đập vỡ kiosk thông tin để lấy vũ khí ném.</li>
-  <li><strong>Mục tiêu:</strong> Dọn sạch sảnh hành lang, mở khóa bảng điều khiển thang máy công nghiệp dẫn xuống tầng móng đáy biển.</li>
-</ul>
-
-<h4>4. Ga Tàu Ngầm Đáy Biển (mucem_subway_dock_laundel_style_v1.png) — Đấu trường Hội quân</h4>
-<figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_subway_dock_laundel_style_v1.png" alt="mucem_subway_dock_laundel_style_v1 — Ga tàu điện ngầm dưới đáy biển" loading="lazy"><figcaption>mucem_subway_dock_laundel_style_v1 — Ga ngầm đáy biển: Nơi hai cánh đột kích hội quân trước ô kính đại dương sâu thẳm, sẵn sàng bước vào thang máy áp suất bên trái xuống Submarine Lab.</figcaption></figure>
-<ul>
-  <li><strong>Hội tụ đầy đủ đội hình:</strong> Mark và Solei (qua cầu nối Skybridge trên cao) tụ họp cùng Deep và Stranger tại ga ngầm.</li>
-  <li><strong>Wave chiến đấu tổng lực:</strong> Chạm trán toán áp giải tù nhân và những mẫu vật dị nhân sơ khai sổng chuồng. Người chơi tự do thi triển các đòn phối hợp đồng đội (Synergy Combos).</li>
-  <li><strong>Cửa ngõ xuống Lab:</strong> Dọn sạch ga ngầm, cả đội bước vào <strong>Thang máy áp suất (Airlock Service Elevator)</strong> có mũi tên vàng bên trái bức ảnh để hạ xuống Submarine Lab.</li>
-</ul>
-
-<h3>II. Đi theo công việc trong Tàu ngầm, không đi tuần tự mọi số phòng</h3>
-<div class="table-wrap"><table><thead><tr><th>Tuyến</th><th>Việc phải làm</th><th>Kết quả</th></tr></thead><tbody>
-<tr><td>01 → 02 → 03 → 04 → 03</td><td>Xuống trạm, dọn phòng gác, lấy thẻ và danh sách giam</td><td>Biết người liên lạc ở 05; được mở buồng giữ</td></tr>
-<tr><td>03 → 05 → 03 → 02</td><td>Lấy hồ sơ, ngắt thử thuốc, mở buồng và hộ tống về thang</td><td>Xác nhận cứu hộ; nghe việc chuẩn bị đợt thử mới</td></tr>
-<tr><td>02 → 03 → 06 → 03 → 07 → 10</td><td>Khóa van rò, xác nhận áp suất an toàn</td><td>Tuyến dãy mẫu tới trung tâm</td></tr>
-<tr><td>02 → 03 → 08 → 09 → 10</td><td>Ngắt nguồn A; khóa hơi và ngắt nguồn B</td><td>Tuyến bảo trì; vẫn phải cứu người trước</td></tr>
-<tr><td>10 → 11</td><td>Mở chốt về 07, đối đầu SheMal, dùng bàn điều khiển</td><td>Dừng thử nghiệm, nhận hồ sơ Sakuri trước sự cố</td></tr>
-<tr><td>11 → 10 → 07 → 03 → 02 → 01 → rời bến</td><td>Tránh sự cố có báo trước, đón người ở 02, về thuyền</td><td>Rời Marseille cùng chứng cứ và nhân chứng</td></tr>
-</tbody></table></div>
-<h3>01–04 — học dấu thật, tìm đúng người</h3>
-<p>Thuyền cảnh sát đưa đội tới tháp dịch vụ; 02 là nơi tập kết và đường lên lại bến. Tại hành lang 03, Ghost nhận ra cảm giác sai lệch giống Bastonne. Có phép thử tùy chọn: dùng điểm tương tác ném một con ốc qua bóng thùng giả. Vật thử đi xuyên hình, hình không có collider, mặt sàn và đường đi vẫn giữ nguyên. Đây là mô hình minh họa cơ chế; chưa phải hệ đánh lừa nhận thức hoàn chỉnh trong trận boss.</p>
-<p>Phòng gác 04 chạy Timeline ba địch. Thẻ lấy sau trận là quyền bảo trì có giới hạn, cùng danh sách chỉ người liên lạc ở 05. Nó không thay thế nhiệm vụ cứu hộ hoặc tự mở hết tàu.</p>
-<h3>05 → 03 → 02 — cứu người thật sự trước khi đi sâu</h3>
-<p>Dọn ba địch tại 05, lấy hồ sơ về Heniana rồi dùng thẻ ngắt thử thuốc và mở buồng. Hồ sơ cho biết Jamerson dùng tù nhân để tạo cơ thể chịu bệnh của con gái. Sau câu cuối cuộc giải cứu, người liên lạc bắt đầu đi theo.</p>
-<p>NPC đi bằng motor trên NavMesh, dừng khi còn giao chiến hoặc đang nói chuyện, không chiếm slot đồng đội chiến đấu. Cổng 05 và 03 chỉ cho đoàn chuyển phòng khi người này theo tới gần cửa. Trong một phòng NPC không tự dịch chuyển để đuổi kịp; khi qua cửa cùng đội, presentation được đặt tại cửa vào phòng kế tiếp. Bản hiện tại dùng một NPC đại diện cho nhóm người đủ sức di chuyển.</p>
-<p>Tại 02, cần chờ NPC tới gần điểm tập kết rồi xác nhận cứu hộ. Mở buồng ở 05 mới là <em>đã giải thoát</em>; giao người tới 02 mới là <em>đã cứu an toàn</em>. Cả tuyến hơi lẫn tuyến điện đều chờ bước thứ hai. Người liên lạc báo đợt thử mới sắp diễn ra, khiến quyết định quay vào trung tâm có động cơ rõ.</p>
-<h3>Hai tuyến tới trung tâm</h3>
-<p><strong>Giữ nguồn:</strong> tới 06, khóa nhánh rò rồi xác nhận an toàn; quay lại 03 qua 07 tới 10. Bảng van chỉ tác động nhánh hơi liên quan, không đặt câu đố cân áp toàn biển.</p>
-<p><strong>Ngắt nguồn phụ:</strong> vào 08 rồi 09, dọn các sinh vật đang chặn thiết bị và tương tác ngắt A/B. Điện cứu hộ riêng giữ cửa, đèn sàn và thang hoạt động. Bản hiện tại chạy encounter khi vào phòng sau lời cảnh báo, chưa gắn thời điểm sinh quái với thao tác tắt điện và chưa có cơ chế mất hồ sơ phụ. Hai nguồn tắt mở tuyến lên 10 nhưng trung tâm vẫn còn năng lượng.</p>
-<p>Phòng 10 là chỗ chuẩn bị. Mở chốt trung tâm đồng thời cô lập nhánh hơi trên đường 07, nên hai tuyến có cùng đường về. Không yêu cầu ba chứng thực, bài phản đòn hoặc phối hợp đồng đội để vào boss.</p>
-<h3>SheMal và giọng Heniana</h3>
-<p>Trong phòng 11, bản ghi Heniana nói “Cha ơi… con lạnh.” SheMal lặp lại giọng đứa trẻ; Solei nối chi tiết với hồ sơ đã đọc. Deep muốn dừng hệ thống đang ép SheMal chiến đấu.</p>
-<p>Timeline dùng Avatar Shemal thật của dự án, có cảnh báo ba giây trước khi vào trận, sau đó hai địch hỗ trợ tới hữu hạn với nhịp cách xa hơn các phòng thường. Boss và lính hỗ trợ nối lại hệ chỉ huy encounter hiện có. Cửa hoàn tất chiến đấu chờ cả boss lẫn hai hỗ trợ bị hạ; không coi việc boss xuất hiện hoặc nói một câu là thắng.</p>
-<p>Sau trận, người chơi phải tới bàn điều khiển dừng quy trình và lấy hồ sơ. Bản này chưa bổ sung bộ chiêu hoặc số pha mới cho SheMal, cũng chưa biến phép thử bóng giả thành luật đánh boss mới.</p>
-<h3>Hồ sơ trước thảm họa, đường rút theo tiến độ</h3>
-<p>Hồ sơ chính chứa đường tới Sakuri, ghi chú Cái Tai và đầu mối tiếp nhận mẫu Heniana. Jamerson qua loa giành lại điều khiển, phá lệnh dừng an toàn để giữ mẫu; trung tâm quá tải ở cả hai tuyến điện. Đội thấy bóng giống ông sau kính rồi lửa che mất. Diễn biến này hiện được kể qua thoại; cảnh cháy và thân xác thế mạng chưa có cinematic hoàn chỉnh.</p>
-<p>Khi mang hồ sơ trở ra, hai vùng chập điện cục bộ ở 10 và 03 được kích hoạt lúc người chơi tới gần. Ô vàng báo trước ba giây, ô đỏ nguy hiểm hai giây, sau đó tắt; mỗi người chỉ nhận một lần sát thương trong đợt đó. Có thể chờ ngoài vùng hoặc đi vòng. Không có đồng hồ toàn màn ép người chơi bỏ người được cứu. Nhánh hơi 07 đã khóa vẫn giữ an toàn; không bắt làm lại van hay quay xuống tầng máy.</p>
-<p>Tới 02 đón người rồi về 01 lên thuyền. Đội tin Jamerson chết và chưa gặp Heni; họ tới Sakuri vì chứng cứ cho thấy cơ sở tiếp theo, để ngăn thí nghiệm và tìm tin Heniana. Cảnh riêng cuối chapter cho người xem biết Jamerson thật trốn bằng ống phóng, mang máu SheMal cùng bản đồ. Thông tin riêng này không biến thành kiến thức của đội; hiện nó là lời kể tách người nói, chưa phải cutscene ngoài thuyền.</p>
-<h3>Checkpoint và giới hạn kiểm chứng</h3>
-<p>Giữ checkpoint tại khu an toàn, sau tập kết 02, ở cửa 10 và sau bàn điều khiển cuối. Cờ cứu hộ, hồ sơ, tuyến điện và phòng đã dọn đi cùng tiến trình. Revisit không sinh lại quân trên đường rút. Hội thoại hủy giữa chừng không được tính là đã nhận kết quả. Kiểm thử host dùng công cụ hỗ trợ cho chiến đấu và di chuyển; vẫn cần một lượt cân nhịp đánh bằng tay và client mạng riêng.</p>
-
-<h3>Phạm vi Timeline của đoạn</h3><div class="table-wrap"><table><thead><tr><th>Phòng</th><th>Thực thi</th></tr></thead><tbody>
-<tr><td><code>ch1_sub_01_dock</code></td><td>Không có encounter; giữ hội thoại, tương tác và cửa</td></tr>
-<tr><td><code>ch1_sub_02_airlock</code></td><td>Không có encounter; giữ hội thoại, tương tác và cửa</td></tr>
-<tr><td><code>ch1_sub_03_corridor</code></td><td>Không có encounter; giữ hội thoại, tương tác và cửa</td></tr>
-<tr><td><code>ch1_sub_04_security</code></td><td>Timeline: 7 cue / 3 actor</td></tr>
-<tr><td><code>ch1_sub_05_archive</code></td><td>Timeline: 7 cue / 3 actor</td></tr>
-<tr><td><code>ch1_sub_06_pressure</code></td><td>Không có encounter; giữ hội thoại, tương tác và cửa</td></tr>
-<tr><td><code>ch1_sub_07_samples</code></td><td>Timeline: 7 cue / 3 actor</td></tr>
-<tr><td><code>ch1_sub_08_generator_a</code></td><td>Timeline: 7 cue / 3 actor</td></tr>
-<tr><td><code>ch1_sub_09_generator_b</code></td><td>Timeline: 7 cue / 3 actor</td></tr>
-<tr><td><code>ch1_sub_10_reactor</code></td><td>Không có encounter; giữ hội thoại, tương tác và cửa</td></tr>
-<tr><td><code>ch1_sub_11_shemal</code></td><td>Timeline: 7 cue / 3 actor</td></tr>
-<tr><td><code>ch1_departure</code></td><td>Không có encounter; giữ hội thoại, tương tác và cửa</td></tr>
-</tbody></table></div><p>Timeline điều khiển spawn và nhịp chiến đấu. Typewriter giữ hội thoại nhấn tiếp; ChapterOneProgress giữ trạng thái nhiệm vụ/cửa/checkpoint. Không chạy đồng thời bộ spawn cũ. Dữ liệu có thể chỉnh trong LF2 → Stage Timeline.</p>
-<details><summary>Ảnh tham chiếu bố trí (không phải ảnh chứng minh runtime)</summary><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_ingame_dock_1791562279017.jpg" alt="MuCEM Surface Dock — Bề nổi ngụy trang của tàu ngầm: Tòa nhà mắt cáo MuCEM nổi trên mặt biển che giấu tháp nâng bí mật dẫn xuống thân tàu ngầm bên dưới." loading="lazy"><figcaption>MuCEM Surface Dock — Bề nổi ngụy trang của tàu ngầm: Tòa nhà mắt cáo MuCEM nổi trên mặt biển che giấu tháp nâng bí mật dẫn xuống thân tàu ngầm bên dưới.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_minimap_full_v1.png" alt="Sơ đồ tham chiếu tàu ngầm: 01–02 là đường vào và rút; 03 nối ba phòng 04/05/06; tuyến trên qua 07 tới 10/11; tuyến máy đi 08–09 rồi lên 10. Số phòng dùng để đối chiếu ảnh, không phải thứ tự nhiệm vụ." loading="lazy"><figcaption>Sơ đồ tham chiếu tàu ngầm: 01–02 là đường vào và rút; 03 nối ba phòng 04/05/06; tuyến trên qua 07 tới 10/11; tuyến máy đi 08–09 rồi lên 10. Số phòng dùng để đối chiếu ảnh, không phải thứ tự nhiệm vụ.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_01_service_dock_transition.png" alt="01 — Bến dịch vụ: thuyền chờ bên trái, tháp nâng kín bên phải dẫn xuống tàu." loading="lazy"><figcaption>01 — Bến dịch vụ: thuyền chờ bên trái, tháp nâng kín bên phải dẫn xuống tàu.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_02_service_lift_airlock.png" alt="02 — Khoang vào: thang nâng về bến, chỗ tập kết cứu hộ và cửa sang hành lang 03." loading="lazy"><figcaption>02 — Khoang vào: thang nâng về bến, chỗ tập kết cứu hộ và cửa sang hành lang 03.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_03_main_corridor.png" alt="03 — Hành lang chung: biển phòng gác, buồng giữ, phòng áp suất và lối tầng máy giúp người chơi chọn đúng hướng." loading="lazy"><figcaption>03 — Hành lang chung: biển phòng gác, buồng giữ, phòng áp suất và lối tầng máy giúp người chơi chọn đúng hướng.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_04_under_mechanical_surveillance_room.png" alt="04 — Phòng gác: danh sách giam và thẻ bảo trì chỉ tới người liên lạc ở phòng 05." loading="lazy"><figcaption>04 — Phòng gác: danh sách giam và thẻ bảo trì chỉ tới người liên lạc ở phòng 05.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_05_archive_rescue_bay.png" alt="05 — Kho hồ sơ và buồng giữ: người cần cứu nằm bên phải, hồ sơ thí nghiệm trên bàn bên trái." loading="lazy"><figcaption>05 — Kho hồ sơ và buồng giữ: người cần cứu nằm bên phải, hồ sơ thí nghiệm trên bàn bên trái.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_06_pressure_regulation_room.png" alt="06 — Khóa nhánh hơi rò để đi qua dãy mẫu an toàn; bảng tại đây không đòi phối hợp nhiều người cùng bấm." loading="lazy"><figcaption>06 — Khóa nhánh hơi rò để đi qua dãy mẫu an toàn; bảng tại đây không đòi phối hợp nhiều người cùng bấm.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_07_service_dock_transition.png" alt="07 — Dãy mẫu trên đường tới trung tâm. Những cơ thể sau kính cho thấy hồ sơ vừa đọc đang nói về người thật." loading="lazy"><figcaption>07 — Dãy mẫu trên đường tới trung tâm. Những cơ thể sau kính cho thấy hồ sơ vừa đọc đang nói về người thật.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_08_auxiliary_generator_a.png" alt="08 — Nguồn phụ A; đường từ hành lang xuống tầng máy và đi tiếp sang 09." loading="lazy"><figcaption>08 — Nguồn phụ A; đường từ hành lang xuống tầng máy và đi tiếp sang 09.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_09_generator_b.png" alt="09 — Nguồn phụ B; ngắt điện thí nghiệm xong dùng lối bảo trì lên 10." loading="lazy"><figcaption>09 — Nguồn phụ B; ngắt điện thí nghiệm xong dùng lối bảo trì lên 10.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_10_central_reactor_access.png" alt="10 — Cửa trung tâm: tuyến dãy mẫu và tuyến tầng máy gặp nhau. Mở chốt về 07, nghỉ và lưu trước khi vào 11." loading="lazy"><figcaption>10 — Cửa trung tâm: tuyến dãy mẫu và tuyến tầng máy gặp nhau. Mở chốt về 07, nghỉ và lưu trước khi vào 11.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_11_shemal_containment_chamber.png" alt="11 — Buồng SheMal và bàn điều khiển thí nghiệm. Sàn phía trước là không gian đối đầu; thiết bị sau kính giải thích cô bị giam và sử dụng ra sao." loading="lazy"><figcaption>11 — Buồng SheMal và bàn điều khiển thí nghiệm. Sàn phía trước là không gian đối đầu; thiết bị sau kính giải thích cô bị giam và sử dụng ra sao.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/vallon_des_auffes_stage.jpg" alt="ch1_departure — Vịnh Le Vallon des Auffes: Bến thoát hiểm bí mật dưới vòm cầu cạn Corniche Kennedy. Điểm trốn tàu chiến Jamerson, đổi ca-nô lấy thuyền gỗ sang Sakuri." loading="lazy"><figcaption>ch1_departure — Vịnh Le Vallon des Auffes: Bến thoát hiểm bí mật dưới vòm cầu cạn Corniche Kennedy. Điểm trốn tàu chiến Jamerson, đổi ca-nô lấy thuyền gỗ sang Sakuri.</figcaption></figure></details>
-<section class="chapter-dialogue"><h3>Toàn bộ hội thoại đang gắn trong bản Unity</h3><p>Các mục dưới được xuất từ Typewriter. Điều kiện và tên điểm tương tác dành cho việc review, không phải lời nhân vật nói.</p>
+<p>Trên thuyền, Deep muốn bảo vệ Solei bằng cách rời cuộc truy đuổi. Solei muốn tìm Heniana và ngăn thêm nạn nhân; Mark đề nghị đi cùng. Đây mới là quyết định chủ động tới Sakuri. Cảnh riêng cuối chương cho người xem thấy Jamerson thoát; đội chỉ thấy bóng sau kính bị lửa che và chưa biết ông ta sống sót.</p>
+<h3 id="gameplay-1-4-luu-va-pham-vi" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-luu-va-pham-vi" aria-label="Link to section">#</a>Checkpoint và phạm vi triển khai</h3>
+<p>Lưu khi vào 02, sau khi tập kết Mateo, trước boss ở 10 và sau khi nhận hồ sơ ở 11. Retry giữ người đã cứu, tuyến điện đã chốt, cửa mở và hồ sơ; không bắt đánh lại boss khi thất bại trên đường rút. Khi thoát, nhánh phụ đóng nhưng tuyến chính và lối tránh luôn đi được.</p>
+<details><summary>Ảnh tham chiếu bố trí (không phải ảnh chứng minh runtime)</summary><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/mucem_ingame_dock_1791562279017.jpg" alt="MuCEM Surface Dock — Trạm dịch vụ phía trên lab: Tòa nhà mắt cáo MuCEM nổi trên mặt biển che giấu tháp nâng bí mật dẫn xuống thân tàu ngầm bên dưới." loading="lazy"><figcaption>MuCEM Surface Dock — Trạm dịch vụ phía trên lab: Tòa nhà mắt cáo MuCEM nổi trên mặt biển che giấu tháp nâng bí mật dẫn xuống thân tàu ngầm bên dưới.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/mucem_concepts/submarine_minimap_full_v1.png" alt="Sơ đồ tham chiếu tàu ngầm: 01–02 là đường vào và rút; 03 nối ba phòng 04/05/06; tuyến trên qua 07 tới 10/11; tuyến máy đi 08–09 rồi lên 10. Số phòng dùng để đối chiếu ảnh, không phải thứ tự nhiệm vụ." loading="lazy"><figcaption>Sơ đồ tham chiếu tàu ngầm: 01–02 là đường vào và rút; 03 nối ba phòng 04/05/06; tuyến trên qua 07 tới 10/11; tuyến máy đi 08–09 rồi lên 10. Số phòng dùng để đối chiếu ảnh, không phải thứ tự nhiệm vụ.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_01_service_dock_transition.png" alt="01 — Bến dịch vụ: thuyền chờ bên trái, tháp nâng kín bên phải dẫn xuống tàu." loading="lazy"><figcaption>01 — Bến dịch vụ: thuyền chờ bên trái, tháp nâng kín bên phải dẫn xuống tàu.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_02_service_lift_airlock.png" alt="02 — Khoang vào: thang nâng về bến, chỗ tập kết cứu hộ và cửa sang hành lang 03." loading="lazy"><figcaption>02 — Khoang vào: thang nâng về bến, chỗ tập kết cứu hộ và cửa sang hành lang 03.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_03_main_corridor.png" alt="03 — Hành lang chung: biển phòng gác, buồng giữ, phòng áp suất và lối tầng máy giúp người chơi chọn đúng hướng." loading="lazy"><figcaption>03 — Hành lang chung: biển phòng gác, buồng giữ, phòng áp suất và lối tầng máy giúp người chơi chọn đúng hướng.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_04_under_mechanical_surveillance_room.png" alt="04 — Phòng gác: danh sách giam và thẻ bảo trì chỉ tới người liên lạc ở phòng 05." loading="lazy"><figcaption>04 — Phòng gác: danh sách giam và thẻ bảo trì chỉ tới người liên lạc ở phòng 05.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_05_archive_rescue_bay.png" alt="05 — Kho hồ sơ và buồng giữ: người cần cứu nằm bên phải, hồ sơ thí nghiệm trên bàn bên trái." loading="lazy"><figcaption>05 — Kho hồ sơ và buồng giữ: người cần cứu nằm bên phải, hồ sơ thí nghiệm trên bàn bên trái.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_06_pressure_regulation_room.png" alt="06 — Khóa nhánh hơi rò để đi qua dãy mẫu an toàn; bảng tại đây không đòi phối hợp nhiều người cùng bấm." loading="lazy"><figcaption>06 — Khóa nhánh hơi rò để đi qua dãy mẫu an toàn; bảng tại đây không đòi phối hợp nhiều người cùng bấm.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_07_service_dock_transition.png" alt="07 — Dãy mẫu trên đường tới trung tâm. Những cơ thể sau kính cho thấy hồ sơ vừa đọc đang nói về người thật." loading="lazy"><figcaption>07 — Dãy mẫu trên đường tới trung tâm. Những cơ thể sau kính cho thấy hồ sơ vừa đọc đang nói về người thật.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_08_auxiliary_generator_a.png" alt="08 — Nguồn phụ A; đường từ hành lang xuống tầng máy và đi tiếp sang 09." loading="lazy"><figcaption>08 — Nguồn phụ A; đường từ hành lang xuống tầng máy và đi tiếp sang 09.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_09_generator_b.png" alt="09 — Nguồn phụ B; ngắt điện thí nghiệm xong dùng lối bảo trì lên 10." loading="lazy"><figcaption>09 — Nguồn phụ B; ngắt điện thí nghiệm xong dùng lối bảo trì lên 10.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_10_central_reactor_access.png" alt="10 — Cửa trung tâm: tuyến dãy mẫu và tuyến tầng máy gặp nhau. Mở chốt về 07, nghỉ và lưu trước khi vào 11." loading="lazy"><figcaption>10 — Cửa trung tâm: tuyến dãy mẫu và tuyến tầng máy gặp nhau. Mở chốt về 07, nghỉ và lưu trước khi vào 11.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/Labs/submarine_11_shemal_containment_chamber.png" alt="11 — Buồng SheMal và bàn điều khiển thí nghiệm. Sàn phía trước là không gian đối đầu; thiết bị sau kính giải thích cô bị giam và sử dụng ra sao." loading="lazy"><figcaption>11 — Buồng SheMal và bàn điều khiển thí nghiệm. Sàn phía trước là không gian đối đầu; thiết bị sau kính giải thích cô bị giam và sử dụng ra sao.</figcaption></figure><figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/vallon_des_auffes_stage.jpg" alt="ch1_departure — Vịnh Le Vallon des Auffes: Bến thoát hiểm bí mật dưới vòm cầu cạn Corniche Kennedy. Điểm trốn tàu chiến Jamerson, đổi ca-nô lấy thuyền gỗ sang Sakuri." loading="lazy"><figcaption>ch1_departure — Vịnh Le Vallon des Auffes: Bến thoát hiểm bí mật dưới vòm cầu cạn Corniche Kennedy. Điểm trốn tàu chiến Jamerson, đổi ca-nô lấy thuyền gỗ sang Sakuri.</figcaption></figure></details>
+<section class="chapter-dialogue"><h3 id="gameplay-1-4-dialogue-de-xuat" tabindex="-1"><a class="heading-link" href="#gameplay-1-4-dialogue-de-xuat" aria-label="Link to section">#</a>Hội thoại đề xuất — ngắn theo từng chặng</h3><p>Bản biên tập ngày 16/10/2026, chưa nhập vào Typewriter. Các khóa và điều kiện dưới đây là hướng dẫn authoring; không phải transcript xuất từ Unity. Ghost là tên gọi của Stranger trong các đoạn thoại lab. Khi đang đánh hoặc chạy, chỉ phát một câu ngắn; đoạn trao đổi dài hơn đặt ở chỗ an toàn.</p>
+<details><summary>Trạm bờ MuCEM — ch1_mucem_service_pier</summary>
+<h4>enter</h4><p><small>Vào trạm lần đầu</small></p><ul><li><strong>Mark:</strong> Lấy mã trước. Gây nhiễu ca-nô, rồi cắt radar.</li><li><strong>Solei:</strong> Đợi đèn quét qua. Tôi giữ phía sau.</li></ul>
+<h4>mucem_technician</h4><p><small>Khống chế hoặc hạ kỹ thuật viên, lấy mã</small></p><ul><li><strong>Mark:</strong> Rời tay khỏi nút báo động.</li><li><strong>Solei:</strong> Có mã rồi. Tới console.</li></ul>
+<h4>mucem_jammer</h4><p><small>Hoàn tất console</small></p><ul><li><strong>Mark:</strong> Liên kết điều khiển đã ngắt. Còn cầu dao radar.</li></ul>
+<h4>mucem_radar</h4><p><small>Hoàn tất cầu dao</small></p><ul><li><strong>Solei:</strong> Đèn tắt rồi. Deep, đi ngay.</li><li><strong>Deep · radio:</strong> Rõ. Gặp ở ga ngầm.</li></ul>
+</details>
+<details><summary>Hành lang mắt cáo — ch1_mucem_walkway</summary>
+<h4>enter</h4><p><small>Sau cảnh vượt biển</small></p><ul><li><strong>Deep:</strong> Block giữ ca-nô. Stranger, đi với tôi.</li><li><strong>Solei · radio:</strong> Chúng tôi qua cầu bảo trì. Mở thang bên trái.</li></ul>
+<h4>clear</h4><p><small>Hạ nhóm bảo vệ cuối</small></p><ul><li><strong>Ghost:</strong> Lối thông rồi. Bảng thang máy bên trái.</li></ul>
+<h4>mucem_elevator</h4><p><small>Mở thang</small></p><ul><li><strong>Mark · radio:</strong> Chúng đang đưa tù nhân qua ga. Chặn toán áp giải!</li></ul>
+</details>
+<details><summary>Ga ngầm — ch1_mucem_subway_dock</summary>
+<h4>enter</h4><p><small>Hội quân</small></p><ul><li><strong>Mark:</strong> Mateo đã bị chuyển xuống dưới.</li><li><strong>Deep:</strong> Cứu những người này trước.</li></ul>
+<h4>clear</h4><p><small>Giải thoát nhóm tù nhân tại ga; chưa nhận CaptiveReleased/Rescued của Mateo</small></p><ul><li><strong>Tù nhân:</strong> Mateo ở phòng số năm. Họ đưa anh ấy đi trước rồi.</li><li><strong>Mark:</strong> Theo lối dịch vụ lên bến. Block đang đợi.</li></ul>
+<h4>mucem_airlock</h4><p><small>Mở cửa trái</small></p><ul><li><strong>Solei:</strong> Cửa dịch vụ mở rồi.</li><li><strong>Deep:</strong> Qua bến 01, xuống lab. Giữ lối này cho lúc rút.</li></ul>
+</details>
 <details><summary>01 · Bến dịch vụ — ch1_sub_01_dock</summary>
-<p>Dùng thang dịch vụ xuống tàu ngầm, giữ đường về thuyền.</p>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Thuyền cảnh sát đưa ta qua chốt ngoài trạm. Tháp nâng kín này xuống tàu ngầm.</li>
-<li><strong>Deep:</strong> Giữ thuyền ở đây. Cứu người rồi quay lại đúng đường này.</li>
-</ul>
-<h4>escape — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Deep:</strong> Thuyền đây. Người được cứu và hồ sơ cùng lên, không bỏ ai lại.</li>
-</ul>
+<h4>enter</h4><p><small>Từ ga tới bến; không phát lại cảnh thuyền cập</small></p><ul><li><strong>Block:</strong> Ca-nô đã neo. Tôi giữ bến và những người vừa ra.</li><li><strong>Deep:</strong> Cứu Mateo rồi quay lại. Giữ liên lạc.</li></ul>
+<h4>escape</h4><p><small>Đã nhận Evidence và Rescued</small></p><ul><li><strong>Mateo:</strong> Tôi cầm lái. Đưa mọi người lên!</li><li><strong>Deep:</strong> Không bỏ ai lại.</li></ul>
 </details>
 <details><summary>02 · Khoang vào — ch1_sub_02_airlock</summary>
-<p>Tập kết người được cứu ở 02 trước khi tới trung tâm.</p>
-<ul>
-<li><strong>Tập kết người được cứu tại thang 02</strong>: cần CaptiveReleased; nhận Rescued; hết địch: False.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Khoang 02 là điểm tập kết. Thang phía sau trở lại bến.</li>
-<li><strong>Deep:</strong> Khi tìm được người, đưa họ về đây trước khi đi sâu hơn.</li>
-</ul>
-<h4>rescue_arrival — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Người liên lạc:</strong> Tới đây là đủ an toàn rồi. Tôi sẽ ở cạnh thang cùng những người còn đi được.</li>
-<li><strong>Mark:</strong> Nước và túi cứu thương ở bên trái. Chúng tôi sẽ trở lại đón.</li>
-<li><strong>Người liên lạc:</strong> Họ sắp chạy đợt thử mới ở trung tâm. Vẫn còn người mắc trong hệ thống.</li>
-<li><strong>Deep:</strong> Đường cứu hộ đã giữ được. Giờ tới trung tâm, dừng đợt thí nghiệm.</li>
-</ul>
-<h4>escape — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Người liên lạc:</strong> Tôi đã tập hợp mọi người bên thang!</li>
-<li><strong>Mark:</strong> Bám vai tôi. Nguồn khẩn cấp vẫn chạy, ta lên thuyền.</li>
-</ul>
+<h4>enter</h4><p><small>Lần đầu xuống lab</small></p><ul><li><strong>Mark:</strong> Đưa người được cứu về cạnh thang này.</li><li><strong>Deep:</strong> Nhớ đường lên bến.</li></ul>
+<h4>rescue_arrival</h4><p><small>CaptiveReleased và Mateo đã tới điểm tập kết; nhận Rescued ở cuối thoại</small></p><ul><li><strong>Mark:</strong> Nghỉ ở đây. Có nước và túi cứu thương.</li><li><strong>Mateo:</strong> Còn một người trong buồng trung tâm. Đừng bỏ cô ấy.</li><li><strong>Deep:</strong> Chúng tôi sẽ dừng máy rồi trở lại.</li></ul>
+<h4>escape</h4><p><small>Đón Mateo; đi tiếp tới 01</small></p><ul><li><strong>Mateo:</strong> Mọi người đã vào thang!</li><li><strong>Mark:</strong> Đóng cửa. Lên bến.</li></ul>
 </details>
 <details><summary>03 · Hành lang — ch1_sub_03_corridor</summary>
-<p>Lấy thẻ ở 04, cứu người ở 05 rồi đưa về 02.</p>
-<ul>
-<li><strong>Thử ném ốc xuyên bóng giả</strong>: cần None; nhận None; hết địch: True.</li>
-</ul>
-<h4>illusion_probe — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Ghost:</strong> Con ốc đi xuyên qua cái thùng... Nó không thật.</li>
-<li><strong>Deep:</strong> Nhìn mặt sàn và vật chạm được. Đừng để hình bóng kéo mình khỏi đường an toàn.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Phòng gác 04 giữ danh sách và thẻ bảo trì. Buồng giam ở 05; phòng van hơi ở 06.</li>
-<li><strong>Ghost:</strong> Bóng thùng thuốc kia... lệch khỏi thùng thật. Cảm giác này giống Bastonne.</li>
-<li><strong>Deep:</strong> Đừng đoán theo hình bóng. Giữ mắt vào mặt sàn và đường đi.</li>
-<li><strong>Mark:</strong> Tìm người trước. Chúng ta chưa biết trung tâm đang làm gì.</li>
-</ul>
-<h4>escape — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Qua cửa về 02. Không rẽ xuống tầng máy.</li>
-</ul>
+<h4>enter</h4><p><small>Lần đầu tới hành lang</small></p><ul><li><strong>Mark:</strong> Thẻ ở phòng gác 04. Mateo ở 05.</li><li><strong>Ghost:</strong> Cái thùng kia… giống cảm giác ở Bastonne.</li></ul>
+<h4>illusion_probe</h4><p><small>Sau khi bu lông xuyên hình giả</small></p><ul><li><strong>Ghost:</strong> Bu lông xuyên qua… Cái thùng đó không thật.</li><li><strong>Deep:</strong> Thử vật trước khi bước tới.</li></ul>
+<h4>escape</h4><p><small>Trên đường rút</small></p><ul><li><strong>Mark:</strong> Cửa về khoang thang ở đây!</li></ul>
 </details>
 <details><summary>04 · Phòng giám sát — ch1_sub_04_security</summary>
-<p>Lấy thẻ bảo trì và danh sách giam chỉ tới 05.</p>
-<ul>
-<li><strong>Lấy thẻ bảo trì và danh sách giam</strong>: cần None; nhận Access; hết địch: True.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Lính gác:</strong> Dừng lại! Khu này chỉ nhận thẻ bảo trì.</li>
-<li><strong>Deep:</strong> Người vừa bị đưa từ bến cảng vào đang ở đâu?</li>
-<li><strong>Lính gác:</strong> Bỏ vũ khí xuống!</li>
-</ul>
-<h4>access — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Danh sách giam: người của tôi còn sống ở 05. Đây là thẻ bảo trì.</li>
-<li><strong>Deep:</strong> Thẻ mở buồng giữ và thiết bị phục vụ. Quay lại hành lang, sang 05 ngay.</li>
-</ul>
+<h4>enter</h4><p><small>Gặp lính gác</small></p><ul><li><strong>Lính gác:</strong> Đứng lại! Bỏ vũ khí xuống!</li></ul>
+<h4>access</h4><p><small>Combat clear; nhận Access</small></p><ul><li><strong>Mark:</strong> Thẻ đây. Danh sách xác nhận Mateo còn sống.</li><li><strong>Deep:</strong> Sang phòng năm.</li></ul>
 </details>
 <details><summary>05 · Hồ sơ và cứu hộ — ch1_sub_05_archive</summary>
-<p>Ngắt thử thuốc, mở buồng; lấy hồ sơ và đưa người về 02.</p>
-<ul>
-<li><strong>Lấy hồ sơ thí nghiệm Heniana</strong>: cần Access; nhận Records; hết địch: True.</li>
-<li><strong>Ngắt thử thuốc · mở buồng giữ</strong>: cần Access, Records; nhận CaptiveReleased; hết địch: True.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Người liên lạc:</strong> Mark! Tôi ở sau cửa kính!</li>
-<li><strong>Mark:</strong> Tôi thấy rồi. Lùi khỏi thiết bị, chúng tôi dọn nhóm gác.</li>
-</ul>
-<h4>records — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Heniana, con gái Jamerson. Ông ta dùng tù nhân để thử tạo cơ thể chịu được bệnh của con.</li>
-<li><strong>Solei:</strong> Những mẫu này là người. Không phải hàng như trong sổ vận chuyển.</li>
-<li><strong>Deep:</strong> Giữ hồ sơ đối chiếu với sổ Bastonne. Và mở buồng cho họ.</li>
-</ul>
-<h4>rescue — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Thẻ nhận rồi. Ngắt thử thuốc trước, mở khóa buồng sau.</li>
-<li><strong>Người liên lạc:</strong> Tôi đứng được. Những người bên cạnh còn đi nổi nữa.</li>
-<li><strong>Deep:</strong> Theo chúng tôi qua hành lang về 02. Chúng ta chưa đưa ai vào trận tiếp theo.</li>
-</ul>
+<h4>enter</h4><p><small>Thấy Mateo sau kính</small></p><ul><li><strong>Mateo:</strong> Mark! Tôi ở đây!</li><li><strong>Mark:</strong> Lùi khỏi cửa. Chúng tôi tới rồi.</li></ul>
+<h4>records</h4><p><small>Access; nhận Records</small></p><ul><li><strong>Mark:</strong> Jamerson dùng tù nhân để tìm cách cứu con gái.</li><li><strong>Solei:</strong> Heniana… tên cô bé trên từng bệnh án.</li><li><strong>Deep:</strong> Giữ hồ sơ. Mở buồng cho họ.</li></ul>
+<h4>rescue</h4><p><small>Access + Records; nhận CaptiveReleased, chưa nhận Rescued</small></p><ul><li><strong>Mark:</strong> Đã ngắt thuốc. Tôi mở khóa đây.</li><li><strong>Mateo:</strong> Tôi còn một chiếc thuyền ở Corniche. Đưa mọi người ra, tôi lo đường biển.</li><li><strong>Deep:</strong> Theo tôi về khoang thang.</li></ul>
 </details>
 <details><summary>06 · Phòng áp suất — ch1_sub_06_pressure</summary>
-<p>Khóa nhánh hơi rò, xác nhận lối 07 an toàn.</p>
-<ul>
-<li><strong>Khóa van rò hơi</strong>: cần Access, Rescued; nhận LeakSealed; hết địch: False.</li>
-<li><strong>Xác nhận nhánh hơi tới 07 an toàn</strong>: cần Access, Rescued, LeakSealed; nhận PressureSafe; hết địch: False.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Sơ đồ cho thấy nhánh hơi này rò qua lối dãy mẫu 07.</li>
-<li><strong>Deep:</strong> Khóa đúng nhánh, chờ đồng hồ về vùng an toàn rồi đi.</li>
-</ul>
-<h4>leak — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Van nhánh đã khóa. Hơi đang giảm.</li>
-</ul>
-<h4>pressure — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Đồng hồ an toàn. Lối 03 sang 07 đã thông.</li>
-<li><strong>Deep:</strong> Qua dãy mẫu tới trung tâm. Giữ đường này cho lúc rút.</li>
-</ul>
+<h4>enter</h4><p><small>Access + Rescued</small></p><ul><li><strong>Mark:</strong> Khóa nhánh hơi này là qua được dãy mẫu.</li></ul>
+<h4>leak</h4><p><small>Khóa van; nhận LeakSealed</small></p><ul><li><strong>Mark:</strong> Hơi đang giảm. Chờ kim về vùng an toàn.</li></ul>
+<h4>pressure</h4><p><small>Xác nhận an toàn; nhận PressureSafe</small></p><ul><li><strong>Deep:</strong> Đường thông rồi. Tới trung tâm.</li></ul>
 </details>
 <details><summary>07 · Dãy bình mẫu — ch1_sub_07_samples</summary>
-<p>Qua dãy mẫu tới trung tâm 10.</p>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Solei:</strong> Những người trong bình... chính là những gì hồ sơ mô tả.</li>
-<li><strong>Deep:</strong> Đừng tách đội. Trung tâm ở cuối dãy.</li>
-</ul>
-<h4>escape — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Nhánh hơi đã được cô lập. Lối về hành lang vẫn an toàn.</li>
-</ul>
+<h4>enter</h4><p><small>Qua tuyến lab</small></p><ul><li><strong>Solei:</strong> Những cái tên trong hồ sơ… họ ở đây.</li><li><strong>Ghost:</strong> Lối kia có gì không đúng. Thử ném một vật.</li></ul>
+<h4>escape</h4><p><small>Đã nhận Evidence</small></p><ul><li><strong>Mark:</strong> Qua lối bảo trì! Đừng đứng dưới trần nứt.</li></ul>
 </details>
 <details><summary>08 · Máy phát A — ch1_sub_08_generator_a</summary>
-<p>Sau cứu hộ: tùy chọn ngắt nguồn thí nghiệm A.</p>
-<ul>
-<li><strong>Ngắt máy phát A</strong>: cần Access, Rescued; nhận GeneratorA; hết địch: True.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Nguồn A và B chỉ nuôi thí nghiệm. Đèn sàn, cửa cứu hộ và thang có nguồn riêng.</li>
-<li><strong>Deep:</strong> Ngắt điện có thể nhả chốt các buồng mẫu. Chúng ta chủ động chọn việc này, không đánh bừa vào máy.</li>
-</ul>
-<h4>generator_a — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Nguồn A đã dừng. Cần ngắt nguồn B mới mở được tuyến bảo trì lên trung tâm.</li>
-<li><strong>Deep:</strong> Coi chừng buồng mẫu mất kiểm soát.</li>
-</ul>
+<h4>enter</h4><p><small>Access + Rescued</small></p><ul><li><strong>Mark:</strong> Nguồn thí nghiệm. Thang và đèn thoát hiểm dùng điện riêng.</li><li><strong>Deep:</strong> Ngắt máy có thể mở cả buồng mẫu. Cân nhắc trước.</li></ul>
+<h4>generator_a</h4><p><small>Ngắt A; nhận GeneratorA</small></p><ul><li><strong>Mark:</strong> A đã dừng. Chưa ngắt B thì vẫn quay lại tuyến hơi được.</li></ul>
 </details>
 <details><summary>09 · Máy phát B — ch1_sub_09_generator_b</summary>
-<p>Khóa hơi, ngắt nguồn B rồi đi lối bảo trì lên 10.</p>
-<ul>
-<li><strong>Khóa đường hơi nóng</strong>: cần Access, Rescued; nhận GeneratorVent; hết địch: True.</li>
-<li><strong>Ngắt máy phát B</strong>: cần Access, Rescued, GeneratorA, GeneratorVent; nhận GeneratorB; hết địch: True.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Đây là nguồn B. Khóa đường hơi để tiếp cận bảng ngắt.</li>
-<li><strong>Deep:</strong> Tuyến thử phối hợp ở bên cạnh chỉ là cách hỗ trợ. Vẫn có thể thao tác trực tiếp.</li>
-</ul>
-<h4>vent — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Hơi đã khóa. Tiếp cận bảng ngắt được rồi.</li>
-</ul>
-<h4>generator_b — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Hai nguồn phụ đã tắt. Cửa bảo trì lên 10 nhả chốt.</li>
-<li><strong>Deep:</strong> Buồng trung tâm vẫn còn tích năng lượng. Chưa thể bỏ đi.</li>
-</ul>
+<h4>enter</h4><p><small>Vào tầng máy B</small></p><ul><li><strong>Mark:</strong> Chờ hơi ngừng rồi tới van.</li></ul>
+<h4>vent</h4><p><small>Khóa hơi; nhận GeneratorVent</small></p><ul><li><strong>Mark:</strong> Tiếp cận bảng ngắt được rồi.</li></ul>
+<h4>generator_b_warning</h4><p><small>Đề xuất mới: trước thao tác ngắt B, không tự nhận thưởng</small></p><ul><li><strong>Mark:</strong> Ngắt B sẽ mở buồng mẫu và tắt làm mát. Không khôi phục được từ đây.</li><li><strong>Deep:</strong> Đường cứu hộ vẫn có điện. Quyết định đi.</li></ul>
+<h4>generator_b</h4><p><small>Xác nhận ngắt B; nhận GeneratorB và chốt tuyến phá điện</small></p><ul><li><strong>Mark:</strong> Nguồn đã ngắt. Lối bảo trì mở rồi.</li><li><strong>Deep:</strong> Coi chừng buồng mẫu bên kia.</li></ul>
 </details>
 <details><summary>10 · Cửa trung tâm — ch1_sub_10_reactor</summary>
-<p>Mở chốt về 07, nghỉ và dùng thẻ vào buồng SheMal.</p>
-<ul>
-<li><strong>Mở chốt đường về · vào trung tâm</strong>: cần Access, Rescued; nhận ReactorOpen; hết địch: False.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Đây là cửa trung tâm. Mở chốt về 07 để giữ đường rút.</li>
-<li><strong>Deep:</strong> Người được cứu đã ở 02. Kiểm tra đồ trước khi vào buồng SheMal.</li>
-</ul>
-<h4>reactor — cần Access, Rescued, GeneratorA, GeneratorB; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Hai nguồn phụ đã tắt. Dùng thẻ mở chốt bảo trì; nhánh hơi trên đường về tự cô lập.</li>
-<li><strong>Deep:</strong> Đường 07 đã thông. Vào dừng hệ thống trung tâm.</li>
-</ul>
-<h4>reactor — cần Access, Rescued, PressureSafe; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Lối hơi đã an toàn. Thẻ bảo trì mở chốt trung tâm và giữ đường về 07.</li>
-<li><strong>Deep:</strong> Vào dừng thí nghiệm.</li>
-</ul>
-<h4>escape — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Về 07 rồi 03. Không phải làm lại van hoặc xuống tầng máy.</li>
-</ul>
+<h4>enter</h4><p><small>Nghỉ trước boss</small></p><ul><li><strong>Mark:</strong> Mở chốt về dãy mẫu trước.</li><li><strong>Deep:</strong> Mateo đã an toàn. Kiểm tra đồ rồi vào.</li></ul>
+<h4>reactor · tuyến giữ điện</h4><p><small>Access + Rescued + PressureSafe; nhận ReactorOpen và chốt tuyến giữ điện</small></p><ul><li><strong>Mark:</strong> Nhánh hơi đã an toàn. Cửa trung tâm mở.</li></ul>
+<h4>reactor · tuyến phá điện</h4><p><small>Access + Rescued + GeneratorA + GeneratorB; nhận ReactorOpen</small></p><ul><li><strong>Mark:</strong> Máy phát đã tắt, nhưng buồng trung tâm còn tụ dự phòng.</li><li><strong>Deep:</strong> Vậy phải ngắt tại chỗ.</li></ul>
+<h4>escape</h4><p><small>Đã nhận Evidence</small></p><ul><li><strong>Mark:</strong> Về dãy mẫu, rồi tới thang. Đừng xuống tầng máy.</li></ul>
 </details>
 <details><summary>11 · Buồng SheMal — ch1_sub_11_shemal</summary>
-<p>Vượt SheMal, dừng thí nghiệm và lấy tuyến Sakuri trước khi rút.</p>
-<ul>
-<li><strong>Dừng thí nghiệm · lấy hồ sơ Sakuri</strong>: cần Rescued, BossDefeated; nhận Evidence; hết địch: True.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Bản ghi Heniana:</strong> Cha ơi... con lạnh.</li>
-<li><strong>SheMal:</strong> Con lạnh... Đừng bật nó nữa.</li>
-<li><strong>Solei:</strong> Heniana. Đứa trẻ trong hồ sơ. Họ buộc SheMal lặp lại giọng cô bé.</li>
-<li><strong>Deep:</strong> SheMal, chúng tôi tới tắt hệ thống. Cô cũng đang bị giữ ở đây.</li>
-<li><strong>Mark:</strong> Thiết bị đang kích cô ấy! Tìm khoảng trống tới bàn điều khiển!</li>
-</ul>
-<h4>clear — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Solei:</strong> Thiết bị vẫn còn chạy. Đừng để họ dùng cô ấy nữa.</li>
-<li><strong>Deep:</strong> Tới bàn trung tâm. Dừng quy trình rồi lấy hồ sơ.</li>
-</ul>
-<h4>evidence — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Đã dừng hệ thống. Hồ sơ chính đã ở trong túi: tuyến tới Sakuri, ghi chú về Cái Tai và nơi tiếp nhận mẫu Heniana.</li>
-<li><strong>Jamerson qua loa:</strong> Các người đã phá cơ hội cứu con gái tôi! Trả mẫu lại!</li>
-<li><strong>Mark:</strong> Ông ta đang giành lại điều khiển, vô hiệu hóa lệnh dừng an toàn!</li>
-<li><strong>Solei:</strong> Sau kính... là Jamerson? Lửa che mất rồi!</li>
-<li><strong>Deep:</strong> Khu trung tâm quá tải. Mang hồ sơ ra trước. Rút qua 10, 07, 03, đón người ở 02 rồi lên bến 01.</li>
-</ul>
+<h4>enter</h4><p><small>Trước đòn đầu</small></p><ul><li><strong>Bản ghi Heniana:</strong> Cha ơi… con lạnh.</li><li><strong>SheMal:</strong> Đừng bật nó nữa…</li><li><strong>Deep:</strong> Chúng tôi tới tắt máy.</li></ul>
+<h4>boss_phase2</h4><p><small>Đề xuất mới: lần đầu xuất hiện bóng giả</small></p><ul><li><strong>Ghost:</strong> Nhìn chân cô ấy. Bóng kia không chạm sàn.</li></ul>
+<h4>boss_charge</h4><p><small>Đề xuất mới: máy sạc đầu tiên sáng</small></p><ul><li><strong>Mark:</strong> Công tắc dưới đường cáp sáng!</li></ul>
+<h4>clear</h4><p><small>Hai nguồn sạc đã ngắt; nhận BossDefeated sau khi encounter hoàn tất</small></p><ul><li><strong>SheMal:</strong> Tắt tiếng khóc đi… xin các người.</li><li><strong>Solei:</strong> Cô ấy vẫn nghe được chúng ta.</li><li><strong>Deep:</strong> Tắt bản ghi. Lấy hồ sơ rồi rút.</li></ul>
+<h4>evidence</h4><p><small>Rescued + BossDefeated; nhận Evidence, lưu rồi mới khởi động thảm họa</small></p><ul><li><strong>Mark:</strong> Hồ sơ dẫn tới Sakuri: Cái Tai và nơi tiếp nhận mẫu Heniana.</li><li><strong>Jamerson qua loa:</strong> Không! Con bé vẫn còn cơ hội!</li><li><strong>Mark:</strong> Ông ta đang ghi đè lệnh dừng!</li><li><strong>Solei:</strong> Sau kính… là ông ta?</li><li><strong>Deep:</strong> Đón Mateo. Lên bến ngay!</li></ul>
 </details>
 <details><summary>Rời Marseille — ch1_departure</summary>
-<p>Đưa người và hồ sơ lên thuyền; tìm đầu mối ở Sakuri.</p>
-<ul>
-<li><strong>Lên thuyền · tới Sakuri</strong>: cần Rescued, Evidence; nhận Escaped; hết địch: False.</li>
-</ul>
-<h4>enter — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Người liên lạc:</strong> Tôi có thể liên hệ một bến kín. Từ đó thu xếp tàu đi phía đông.</li>
-<li><strong>Mark:</strong> Trước hết đưa mọi người và chứng cứ ra khỏi Marseille.</li>
-</ul>
-<h4>depart — cần None; loại trừ None</h4>
-<ul>
-<li><strong>Mark:</strong> Đủ người. Hồ sơ đã nằm trong túi chống nước.</li>
-<li><strong>Deep:</strong> Tôi không thấy Jamerson thoát khỏi đám lửa. Nhưng mạng lưới của ông ta vẫn còn ở Sakuri.</li>
-<li><strong>Solei:</strong> Chúng ta chưa biết Heniana ở đâu. Đầu mối tiếp nhận có thể cho tin về cô bé.</li>
-<li><strong>Deep:</strong> Và ngăn cơ sở tiếp theo tiếp tục hại người. Cho thuyền chạy.</li>
-<li><strong>Cảnh riêng — ngoài tầm nhìn của đội:</strong> Một ống phóng trồi lên xa trạm. Jamerson thật mang theo mẫu máu SheMal và bản đồ. Đội trên thuyền không biết ông ta đã thoát.</li>
-</ul>
+<h4>enter</h4><p><small>Ca-nô tới Corniche, chuyển người sang thuyền Pointu</small></p><ul><li><strong>Mateo:</strong> Thuyền của tôi dưới vòm cầu. Đưa người sang trước.</li><li><strong>Mark:</strong> Hồ sơ vẫn khô. Đủ người rồi.</li></ul>
+<h4>depart</h4><p><small>Sau khi người bị thương được đưa tới bến an toàn; Rescued + Evidence</small></p><ul><li><strong>Deep:</strong> Tôi muốn đưa Solei khỏi chuyện này.</li><li><strong>Solei:</strong> Cháu muốn tìm Heniana. Trước khi có thêm một người như cô ấy.</li><li><strong>Mark:</strong> Sakuri là đầu mối. Ta đi cùng nhau.</li><li><strong>Deep:</strong> Mateo, đưa chúng tôi tới Sakuri.</li></ul>
+<h4>epilogue</h4><p><small>Cảnh riêng cho người xem; nhân vật trên thuyền không biết</small></p><ul><li><strong>Cảnh riêng:</strong> Xa khỏi bến, ống phóng nổi lên. Jamerson giữ mẫu máu SheMal và bản đồ Cái Tai.</li></ul>
 </details>
 </section>
+
+<details id="gameplay-1-4-unity-handoff"><summary>Hướng dẫn Unity — cần triển khai và kiểm thử riêng</summary>
+<p><strong>Không dùng nguyên đoạn static bool trong tệp ghi chú cũ.</strong> Project hiện dùng ChapterOneProgress dạng MonoBehaviour, snapshot chiến dịch và xác thực của host. Giữ các ID đã lưu; không khai báo lại class hoặc đổi bit cũ.</p>
+<div class="table-wrap"><table><thead><tr><th>Ý nghĩa</th><th>Trạng thái hiện có / đề xuất</th></tr></thead><tbody><tr><td>Lấy thẻ / hồ sơ Heniana</td><td><code>Access</code> / <code>Records</code></td></tr><tr><td>Mở buồng Mateo / đưa tới 02</td><td><code>CaptiveReleased</code> / <code>Rescued</code>; chỉ hoàn tất cứu hộ khi NPC đã tới điểm tập kết</td></tr><tr><td>Tuyến hơi / hai máy phát</td><td><code>LeakSealed</code>, <code>PressureSafe</code> / <code>GeneratorA</code>, <code>GeneratorVent</code>, <code>GeneratorB</code></td></tr><tr><td>Mở trung tâm / thắng boss / hồ sơ / rời chương</td><td><code>ReactorOpen</code> / <code>BossDefeated</code> / <code>Evidence</code> / <code>Escaped</code></td></tr><tr><td>Lựa chọn tuyến đã chốt</td><td>Đề xuất lưu enum <code>SubmarinePowerRoute</code> trong snapshot có version và migration; không dùng biến static độc lập. Chốt Sabotage khi ngắt B; chốt Preserve khi mở cửa 10 bằng tuyến hơi. Từ chối đổi tuyến sau khi chốt.</td></tr><tr><td>Thoát hiểm</td><td>Truy cập console gây cảnh báo an ninh trong truyện. Chỉ trả điều khiển đoạn rút sau khi sao lưu xong, <code>Evidence</code> đã được xác nhận và lưu; không để Jamerson biết biến nhiệm vụ của người chơi. <code>BossDefeated</code> một mình không kích hoạt quy trình phá cơ sở. Lưu các mốc thảm họa nếu cần để retry không phát thưởng hoặc tạo vật cản trùng.</td></tr></tbody></table></div>
+<ul>
+<li><strong>Save cũ:</strong> nếu có cả GeneratorA và GeneratorB, suy ra tuyến phá điện; nếu ReactorOpen mà không có đủ hai máy phát, suy ra tuyến giữ điện. Không suy tuyến từ PressureSafe một mình, vì code hiện cũng cấp cờ đó khi mở cửa trung tâm.</li>
+<li><strong>Mateo:</strong> đổi tên hiển thị và ánh xạ speaker/portrait qua Unity API, giữ GUID và tham chiếu ổn định. Không chỉ đổi tên GameObject. Tù nhân ở ga là nhóm khác, không cấp cờ cứu hộ Mateo.</li>
+<li><strong>Bóng giả:</strong> dùng bản trình diễn không có AI gây damage, body collider hoặc hurtbox nhận sát thương; không đăng ký vào wave clear. Vật ném đi xuyên hình giả, va vào bản thể thật. Host quản lý nhịp xuất hiện; AI đồng minh chỉ chọn bản thể thật, không kích hoạt hình phạt đánh nhầm cho người chơi.</li>
+<li><strong>Boss:</strong> chuyển pha một lần tại ngưỡng 65% và 30% HP. Nếu burst damage vượt cả hai ngưỡng, xếp chuyển pha theo thứ tự và không chồng cơ chế. Pha cuối ngăn thắng trận sớm cho tới khi hai nguồn đã ngắt; các công tắc ở cùng sàn và giữ kết quả qua khoảng nghỉ. Tối đa hai đợt quái phụ, không spawn vô hạn.</li>
+<li><strong>Thoát tàu:</strong> báo vàng 3 giây → vùng điện gây sát thương 1,5 giây → nghỉ 2 giây. Mốc 20 damage chỉ là giá trị thử, tối đa một lần mỗi nhân vật trong một pha điện; phải kiểm tra theo máu và tốc độ thật. Có đường vòng khô, không ép nhân vật đứng chờ trong vùng sát thương. Trần rơi chỉ đóng một làn, lối bảo trì mở trước đó. Không chuyển trực tiếp 02 sang departure.</li>
+<li><strong>Retry và multiplayer:</strong> host xác nhận tương tác, ngăn nhận thưởng trùng, lưu route/máy/cửa/hồ sơ; đồng bộ boss thật/giả, tụ sạc và mốc rút lui cho client. Thử save/load, death/retry, quay lại phòng, bỏ qua cutscene và late join. Không coi host smoke test là kiểm chứng hai máy.</li>
+<li><strong>Typewriter:</strong> không hard-code entry ID. Giữ key ổn định, thêm boss_phase2/boss_charge/generator_b_warning có trigger thật. Kết quả nhiệm vụ nhận ở cuối thoại hoàn tất; trường hợp chết hoặc hủy giữa thoại không tự cấp cờ. Cảnh nguy hiểm không bắt đọc tiếp mới chạy được.</li>
+<li><strong>Quy trình:</strong> sửa prefab/scene qua Unity API; save preflight trước tự động hóa, bật autotick, chạy compile và poll đến kết quả. Kiểm tra cả hai tuyến, nhận/gây damage thật, né bẫy, chơi đơn, retry và đường 11 → 10 → 07 → 03 → 02 → 01 → departure.</li>
+</ul>
+<p><strong>Phạm vi đã xác nhận từ tài liệu project:</strong> có prototype MuCEM, tuyến phòng lab, thẻ/hồ sơ, cứu hộ và hai điều kiện mở cửa trung tâm. Chia đội là cách kể qua radio, chưa ép đổi nhân vật campaign. Khiên điện, wall-bounce riêng ở MuCEM, boss 3 pha/ảo ảnh, đoàn tù nhân đầy đủ, nước tràn và cutscene kết mới là phần đề xuất cần authoring và QA. Build web không xác nhận các cơ chế này đã chạy trong Unity.</p>
+</details>

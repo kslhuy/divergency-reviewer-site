@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divergency & LF2 - DevLogs Audio & SFX Showcase</title>
+  <title>Divergency - DevLogs Audio & SFX Showcase</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -307,7 +307,7 @@
     <div class="header-content">
       <div class="brand">
         <span class="brand-badge">Aura & ACE-Step Studio</span>
-        <h1 class="brand-title">Divergency / LF2 Audio Showcase (105 Cues)</h1>
+        <h1 class="brand-title">Divergency Audio Showcase (105 Cues)</h1>
       </div>
       <div style="display: flex; gap: 12px;">
         <a class="studio-btn" href="http://127.0.0.1:8765/" target="_blank">
@@ -429,7 +429,7 @@
         const dotClass = isReady ? "dot-ready" : (st.status === "failed" ? "dot-failed" : "dot-pending");
         const statusText = isReady ? `Sẵn sàng (${st.size_kb || '?'} KB)` : (st.status === "failed" ? "Lỗi sinh" : "Đang tạo / Chờ lượt");
         const audioSrc = `content/gameplay/audio/${it.file_name}`;
-        const unityPath = `C:/Users/Quang Huy Nugyen/LF2Revie/Assets/Sound/DevLogs/${it.category}/${it.file_name}`;
+        const unityPath = `Assets/Sound/DevLogs/${it.category}/${it.file_name}`;
 
         return `
           <div class="audio-card">

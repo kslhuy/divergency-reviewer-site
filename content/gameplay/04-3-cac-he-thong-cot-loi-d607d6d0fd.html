@@ -1,6 +1,6 @@
 <h2 id="gameplay-3-cac-he-thong-cot-loi" tabindex="-1"><a class="heading-link" href="#gameplay-3-cac-he-thong-cot-loi" aria-label="Link to section">#</a>3. Các hệ thống cốt lõi</h2>
 <h3 id="gameplay-3-1-lenh-phoi-hop-he-thong-thuc-te" tabindex="-1"><a class="heading-link" href="#gameplay-3-1-lenh-phoi-hop-he-thong-thuc-te" aria-label="Link to section">#</a>3.1. Lệnh phối hợp — hệ thống thực tế</h3>
-<p>Phần này đối chiếu theo <code>README_AI_COMMAND_SYSTEM.html</code> trong <code>Assets/LF2_multiplayer/GamePlay/Character/AI/Commands/</code> của dự án game. Tên lệnh và thao tác dưới đây là chức năng được tài liệu hệ thống mô tả. Các liên kết kỹ năng, cơ chế Di Vật và tình huống màn chơi ở những phần sau là <strong>đề xuất thiết kế</strong>; từng kỹ năng và tương tác cần được cấu hình hoặc triển khai trước khi dùng trong màn.</p>
+<p>Phần này đối chiếu theo <code>README_AI_COMMAND_SYSTEM.html</code> trong <code>Assets/Divergency_multiplayer/GamePlay/Character/AI/Commands/</code> của dự án game. Tên lệnh và thao tác dưới đây là chức năng được tài liệu hệ thống mô tả. Các liên kết kỹ năng, cơ chế Di Vật và tình huống màn chơi ở những phần sau là <strong>đề xuất thiết kế</strong>; từng kỹ năng và tương tác cần được cấu hình hoặc triển khai trước khi dùng trong màn.</p>
 <p>Người chơi chọn một NPC có thể nhận lệnh, được hệ thống gọi là <strong>General</strong>, rồi ra lệnh di chuyển, giữ vị trí, đổi đội hình hoặc dùng kỹ năng hỗ trợ. General là vai trò của NPC trong hệ thống, không phải tên lớp nhân vật hay chức danh riêng của Mark. Lệnh có thể tác động một NPC hoặc một nhóm tùy cấu hình; kỹ năng hỗ trợ luôn gửi cho General đang chọn. Máy chủ kiểm tra và áp dụng yêu cầu.</p>
 <figure class="markdown-image" style="text-align: center; margin: 20px 0;">
   <img src="imgs/UI/CommandSystem_wheel/command_wheel_full.png" alt="Bánh xe lệnh 4 hướng (Command Wheel)" style="max-width: 220px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));" loading="lazy">
@@ -25,16 +25,16 @@
 <p>Lệnh <strong>Lên / Xuống / Trái / Phải</strong> được gửi khi thả hướng hoặc thả Shift. Chọn đội hình khi chưa có lệnh đang hoạt động sẽ bắt đầu <strong>Regroup</strong>. <strong>Hold</strong> và <strong>Regroup</strong> tồn tại trong thời lượng cấu hình của hồ sơ lệnh; lệnh di chuyển mới thay lệnh cũ, còn <strong>Free</strong> xóa lệnh ngay khi được gửi và chấp nhận.</p>
 <p>Hold giữ <strong>vị trí</strong>, không tự giữ cần gạt, vận hành máy hoặc duy trì kỹ năng. Regroup canh phía sau <strong>người chơi</strong>, không tự chọn Heni hay dân thường làm mục tiêu hộ tống. Cả hai vẫn duy trì hành vi canh gác; không lệnh nào bảo đảm NPC ngừng tấn công.</p>
 <h4 id="gameplay-yeu-cau-ky-nang-cua-general" tabindex="-1"><a class="heading-link" href="#gameplay-yeu-cau-ky-nang-cua-general" aria-label="Link to section">#</a>2. Điều khiển trực tiếp hành động NPC và Kích hoạt kỹ năng (Skill Combo)</h4>
-<p>Khi đang giữ <strong>Shift</strong>, người chơi có thể điều khiển trực tiếp phản xạ của NPC General đang chọn hệt như đang điều khiển chính nhân vật đó (D/J/A), đồng thời thi triển chuỗi combo võ thuật kinh điển của Little Fighter 2 để yêu cầu NPC tung tuyệt kỹ:</p>
-<div class="table-wrap"><table><thead><tr><th>Thao tác</th><th>Lệnh gửi cho General đang chọn</th><th>Phản ứng chiến đấu tức thời của NPC</th></tr></thead><tbody><tr><td><strong>Giữ Shift + D (Phòng thủ)</strong></td><td><strong>Phòng thủ trực tiếp (Defense)</strong></td><td>NPC lập tức vào thế thủ / giương khiên chắn đòn (ví dụ: Block dựng khiên nặng đỡ đòn càn quét).</td></tr>
+<p>Khi đang giữ <strong>Shift</strong>, người chơi có thể điều khiển trực tiếp phản xạ của NPC General đang chọn hệt như đang điều khiển chính nhân vật đó (D/J/A), đồng thời thi triển chuỗi kỹ năng đặc trưng của Divergency để yêu cầu NPC tung tuyệt kỹ:</p>
+<div class="table-wrap"><table><thead><tr><th>Thao tác</th><th>Lệnh gửi cho General đang chọn</th><th>Phản ứng chiến đấu tức thời của NPC</th></tr></thead><tbody><tr><td><strong>Giữ Shift + D (Phòng thủ)</strong></td><td><strong>Phòng thủ trực tiếp (Defense)</strong></td><td>NPC lập tức vào thế thủ phù hợp với nhân vật (ví dụ: Block khép tay vào thế thủ boxing, đỡ đòn rồi phản công).</td></tr>
 <tr><td><strong>Giữ Shift + J (Nhảy)</strong></td><td><strong>Nhảy cơ động (Jump)</strong></td><td>NPC lập tức nhảy né đòn, vượt chướng ngại vật hoặc đón đầu đối thủ trên không.</td></tr>
 <tr><td><strong>Giữ Shift + A (Tấn công)</strong></td><td><strong>Tấn công thường (Attack)</strong></td><td>NPC lập tức vung đòn đánh cận chiến trực diện vào kẻ địch gần nhất trong trục phía trước.</td></tr>
-<tr><td><strong>Giữ Shift + D + Lên + A</strong></td><td><strong>Combo Skill: Hất tung / Sóng chưởng</strong></td><td>Yêu cầu NPC thi triển chiêu hất tung hoặc phóng sóng xung kích tầm xa theo chuẩn phím võ thuật LF2.</td></tr>
+<tr><td><strong>Giữ Shift + D + Lên + A</strong></td><td><strong>Combo Skill: Hất tung / Sóng chưởng</strong></td><td>Yêu cầu NPC thi triển chiêu hất tung hoặc phóng sóng xung kích tầm xa theo tổ hợp phím kỹ năng của Divergency.</td></tr>
 <tr><td><strong>Giữ Shift + D + Xuống + A</strong></td><td><strong>Combo Skill: Trảm sát / Quét sàn</strong></td><td>Yêu cầu NPC thi triển đòn quét sàn phá vỡ thế phòng thủ giáp nặng của quân địch.</td></tr>
 <tr><td><strong>Giữ Shift + D + Lên + J</strong></td><td><strong>Combo Skill: Phi thân lướt kích</strong></td><td>Yêu cầu NPC phi thân không kích tầm cao, tiếp cận áp sát hoặc tiêu diệt xạ thủ trên giàn giáo.</td></tr>
 <tr><td><strong>Giữ Shift + D + Xuống + J</strong></td><td><strong>Combo Skill: Bộc phá / Địa chấn phòng hộ</strong></td><td>Yêu cầu NPC nện sàn bộc phá chấn động diện rộng, hất văng mọi kẻ thù áp sát và dựng vòng an toàn.</td></tr>
 <tr><td><strong>Tấn công, rồi 1–9 / 0</strong></td><td><strong>Ô kỹ năng / Hỗ trợ đặc trưng</strong></td><td>Dùng ô kỹ năng tương ứng (1–9) hoặc hỗ trợ đặc trưng (0) được cấu hình trong hồ sơ lệnh của General.</td></tr></tbody></table></div>
-<p>Sau khi nhấn <strong>Tấn công</strong>, các phím số chọn ô kỹ năng thay vì đội hình; <strong>1–3</strong> trong chuỗi sau đòn đánh này không còn là Line/Wedge/Circle. Kỹ năng hỗ trợ chỉ thực hiện được nếu NPC có trạng thái kỹ năng phù hợp, đủ <strong>MP</strong> và đáp ứng thời gian hồi. Điều khiển phản hồi xúc giác nhanh, giữ trọn nhịp combo đối kháng của dòng game Little Fighter 2.</p>
+<p>Sau khi nhấn <strong>Tấn công</strong>, các phím số chọn ô kỹ năng thay vì đội hình; <strong>1–3</strong> trong chuỗi sau đòn đánh này không còn là Line/Wedge/Circle. Kỹ năng hỗ trợ chỉ thực hiện được nếu NPC có trạng thái kỹ năng phù hợp, đủ <strong>MP</strong> và đáp ứng thời gian hồi. Điều khiển phản hồi xúc giác nhanh, giữ trọn nhịp combo chiến đấu của Divergency.</p>
 <p><strong>Tay cầm:</strong> nút vai trái mở chế độ lệnh, nút vai phải chuyển General; D-pad <strong>Lên / Phải / Xuống</strong> chọn <strong>Line / Wedge / Circle</strong>; các nút Phòng thủ, Nhảy, Tấn công tuân thủ đúng ánh xạ tay cầm chiến đấu.</p>
 <h4 id="gameplay-mot-nguoi-hay-ca-nhom-nhan-lenh" tabindex="-1"><a class="heading-link" href="#gameplay-mot-nguoi-hay-ca-nhom-nhan-lenh" aria-label="Link to section">#</a>Một người hay cả nhóm nhận lệnh?</h4>
 <p>Lệnh di chuyển, Hold và Free dùng một phạm vi nhận lệnh; đội hình có phạm vi riêng. Kỹ năng hỗ trợ luôn chỉ áp dụng cho General đang chọn.</p>
@@ -57,8 +57,8 @@
 <ul>
 <li><strong>Deep và Tulas:</strong> Tulas tạo bệ hoặc cột chất lỏng để Deep lao lên, phá giáp trên cao hoặc đập xuống diện rộng.</li>
 <li><strong>Solei và Tulas:</strong> Tulas tạo điểm tựa để Solei chạy tường, vượt bẫy và tiếp cận điểm yếu.</li>
-<li><strong>Mark và Tulas:</strong> màn nước làm lệch đường đạn hoặc tạo thấu kính giúp Mark bắn công tắc và điểm yếu ở góc khuất.</li>
-<li><strong>Block và Tulas:</strong> Tulas làm đặc chất lỏng quanh khiên của Block, tạo hành lang an toàn cho đội hoặc dân thường.</li>
+<li><strong>Mark và Tulas:</strong> màn nước tạo thấu kính hỗ trợ Mark quan sát và bắn tên vào công tắc và điểm yếu ở góc khuất.</li>
+<li><strong>Block và Tulas:</strong> Tulas dựng màn chắn chất lỏng trước thế thủ boxing của Block, tạo hành lang an toàn cho đội hoặc dân thường.</li>
 <li><strong>Ghost và Tulas:</strong> Ghost vượt qua máy nhận diện; Tulas giữ cửa, van hoặc vật thể từ phía bên kia để mở đường cho cả đội.</li>
 </ul>
 <p>Ví dụ sau khi đã gán kỹ năng tạo bệ của Tulas vào hỗ trợ di chuyển: giữ Shift, dùng Tab chọn Tulas, nhấn Nhảy rồi thả Shift để Solei chạy lên bệ. Kỹ năng tạo bệ quyết định vị trí, thời lượng và tương tác; Hold chỉ giữ vị trí của Tulas. Nếu chưa có kỹ năng hoặc tương tác phù hợp, màn phải dùng cơ cấu môi trường hay đoạn hướng dẫn được dựng riêng. Gọi hỗ trợ Tulas không đồng thời ra lệnh cho General khác.</p>
@@ -111,18 +111,20 @@
 <tr><td>50–60%</td><td>Xâm nhập đến ăn sâu</td><td>Luật của mảnh thần trong chương bắt đầu tác động rõ</td></tr>
 <tr><td>70–90%</td><td>Phân mảnh đến quá tải</td><td>Chiến trường khó đọc hơn, Bóng Nhiễu có thể xuất hiện</td></tr>
 <tr><td>100%</td><td>Bùng Nhiễu</td><td>Khóa tạm một số kỹ năng và tạo tình huống nguy cấp</td></tr></tbody></table></div>
-<p>Khi một nhân vật thông thường Bùng Nhiễu, người chơi vẫn giữ quyền điều khiển. Trạng thái kéo dài khoảng 6–8 giây; một hoặc hai kỹ năng bị khóa, hồi máu thường giảm hiệu quả và một Bóng Nhiễu riêng xuất hiện. Người chơi có thể đổi nhân vật, gọi hỗ trợ, phá nguồn nhiễu hoặc chạy vào vùng an toàn. Nếu sống sót, Độ Nhiễu trở về khoảng 60% thay vì về 0%.</p>
+<p>Khi một nhân vật thông thường Bùng Nhiễu, người chơi vẫn giữ quyền điều khiển. Trạng thái kéo dài khoảng 6–8 giây; một hoặc hai kỹ năng bị khóa, hồi máu thường giảm hiệu quả và một Bóng Nhiễu riêng xuất hiện. Người chơi giữ nhân vật hiện tại, gọi hỗ trợ, phá nguồn nhiễu hoặc vào vùng an toàn; đổi đội tại điểm nghỉ kế tiếp. Nếu sống sót, Độ Nhiễu trở về khoảng 60% thay vì về 0%.</p>
 <h4 id="gameplay-trum-ieu-kien-stranger-mat-kiem-soat" tabindex="-1"><a class="heading-link" href="#gameplay-trum-ieu-kien-stranger-mat-kiem-soat" aria-label="Link to section">#</a>Trùm điều kiện: Stranger mất kiểm soát</h4>
 <p><strong>Stranger là ngoại lệ của trạng thái Bùng Nhiễu.</strong> Khi Độ Nhiễu của Ghost/Stranger đạt 100%, anh không chỉ chịu một hiệu ứng nguy cấp ngắn mà có thể mất hoàn toàn điểm neo với đội và trở thành một trận trùm. Đây là phần giữ lại ý tưởng ban đầu của nhân vật: người sống sót mà đội vừa cứu cũng có thể trở thành mối nguy lớn nhất nếu sức mạnh trong anh vượt khỏi tầm kiểm soát.</p>
 <ul>
 <li>Giao diện gọi anh là <strong>Stranger</strong> trong trận này, thay vì Ghost, để thể hiện rằng Độ Nhiễu đang xóa cái tên và mối quan hệ anh đã chọn.</li>
-<li>Quyền điều khiển chuyển sang Solei. Deep, Mark, Tulas và Block trở thành đồng đội hỗ trợ theo đội hình hiện có.</li>
+<li>Nếu đang điều khiển Ghost, chuyển sang nhân vật đã chọn thay thế (mặc định Solei nếu sẵn có); chỉ hai hỗ trợ trong đội hình hiện tại tham chiến. Dự bị không tự thành bốn General. Nếu Ghost đang hỗ trợ, giữ nhân vật người chơi và thay vị trí anh tại checkpoint.</li>
 <li>Nếu Stranger đạt 100% trong một đoạn chơi đơn, trạng thái được giữ ở ngưỡng Quá tải và trận trùm bắt đầu ngay khi anh gặp lại đội. Trò chơi không tạo một trận đánh không thể hoàn thành vì thiếu đồng đội.</li>
 <li>Stranger dùng chính những kỹ năng người chơi đã mở cho anh, đồng thời lặp lại một số thói quen di chuyển và tấn công gần nhất. Luật của mảnh thần trong chương hiện tại sẽ tạo thêm biến thể cho trận đấu.</li>
-<li>Mục tiêu là <strong>khống chế và cắt nguồn Nhiễu</strong>, không giết Stranger. Solei phá các bóng lặp; người chơi chọn từng General để yêu cầu các kỹ năng đã xây dựng: Trấn tĩnh của Mark, phòng thủ của Block hoặc lọc Nhiễu của Tulas. Deep chỉ phá thế tấn công thay vì tung đòn kết liễu. Trận này cần quy tắc sát thương và mục tiêu riêng để bảo đảm khống chế được Stranger; Free, Hold hay Regroup không tự tạo hành vi không sát thương.</li>
+<li>Mục tiêu là <strong>khống chế và cắt nguồn Nhiễu</strong>. Thanh tiến độ đo lớp cộng hưởng và thế tấn công, không phải sinh lực Ghost. Đòn đánh chỉ tính trên lớp bao, bóng và mối nối; AI đồng minh không chọn cơ thể anh làm mục tiêu kết liễu. Cơ cấu môi trường cho mọi đội cách ngắt nguồn. Trấn tĩnh của Mark hoặc lọc Nhiễu của Tulas chỉ là lợi thế nếu đã triển khai và gán kỹ năng, không phải điều kiện bắt buộc. Free, Hold hay Regroup không tự tạo các quy tắc này.</li>
 <li>Ở 80% và 90%, chân dung, lời thoại và hành vi của Stranger phải cảnh báo rõ nguy cơ biến đổi để người chơi có cơ hội xử lý trước khi trận trùm xảy ra.</li>
 </ul>
-<p>Trận trùm đầy đủ chỉ kích hoạt một lần trong mỗi lượt chơi. Sau khi được khống chế, Stranger trở lại đội với Độ Nhiễu khoảng 40% và mở một đoạn đối thoại riêng. Nếu anh lại đạt 100%, trò chơi buộc anh rời vị trí chiến đấu cho đến điểm nghỉ thay vì lặp lại toàn bộ trận trùm. Cách xử lý này giữ trọng lượng của ý tưởng mà không biến nó thành một hình phạt lặp đi lặp lại.</p>
+<p>Trận trùm đầy đủ chỉ kích hoạt một lần trong mỗi lượt chơi. Sau khi được khống chế, Stranger trở lại đội với Độ Nhiễu khoảng 40% và mở một đoạn đối thoại riêng. Nếu anh lại đạt 100% ngoài khoảng 4-4 tới hết Chương 5, tạo Quá tải ngắn rồi cho đổi anh ra tại điểm an toàn; không lặp trận trùm đầy đủ. Khủng hoảng chính tuyến 5-3B có nguyên nhân và điều kiện riêng.</p>
+<p><strong>Ngoại lệ từ 4-4 tới hết Chapter 5:</strong> không chèn trận Stranger vào Titan, khoảng nghỉ chiến thắng hoặc Cradle. 100% Nhiễu chuyển thành Quá tải ngắn có vùng ổn định; khủng hoảng mất neo được xử lý trong các mốc của trận hiện tại. Trận Stranger đầy đủ vẫn tối đa một lần mỗi lượt chơi ở các đoạn khác. STRANGER là mã tù của Ghost; anh có tín hiệu dị thường trước thí nghiệm, không chứa thực thể riêng. Dream Sovereign là sự kiện chính tuyến tại 5-3B do xung xả áp khi tháo khóa cuối, trước khi mở van trả lõi, không do chạm 100% Nhiễu. Ba mốc ổn định đã đặt giữ điểm retry khi anh mất tự chủ.</p>
+<p>Từ lò Akam, dấu đội đặt và trạm ổn định đã lưu giữ điểm retry khi Ghost không ổn định. Mỗi pha boss, nhóm đã sơ tán và lõi đã hoàn trả có mốc riêng; thất bại ở Cradle không bắt đánh lại Jamerson. Quy tắc này được giải thích ở trạm trước lò và nhắc trước đài.</p>
 <p>Không dùng Độ Nhiễu để đảo nút điều khiển, xóa thông tin hệ thống hoặc ép nhân vật tự đánh đồng đội. Ảo giác có thể làm chiến trường khó đọc, nhưng luôn phải có dấu hiệu để phân biệt thật và giả.</p>
 <h4 id="gameplay-bien-oi-theo-tung-chuong" tabindex="-1"><a class="heading-link" href="#gameplay-bien-oi-theo-tung-chuong" aria-label="Link to section">#</a>Biến đổi theo từng chương</h4>
 <div class="table-wrap"><table><thead><tr><th>Khu vực</th><th>Biểu hiện chính</th><th>Cách xử lý</th></tr></thead><tbody><tr><td><strong>Bastonne</strong></td><td>Chỉ gợi bí ẩn qua Stranger và thiết bị nghiên cứu; chưa dạy Độ Nhiễu</td><td>Mở thông gió để cứu Block và vượt khí mê; đây là tình huống môi trường</td></tr>
@@ -130,47 +132,48 @@
 <tr><td><strong>Sakuri</strong></td><td>Tiếng bước chân lặp, thước tiếng động tăng nhanh, nhịp giả gọi Bóng Nhiễu</td><td>Giữ im lặng, thay đổi tiết tấu, phá nguồn tụng niệm</td></tr>
 <tr><td><strong>Calvaria</strong></td><td>Tín hiệu trong thế giới bị méo, xuất hiện lời ra lệnh giả, giọng người chết khóa kỹ năng</td><td>Đọc phản hồi lệnh thật trên HUD; phá khế ước, xác nhận bằng ký ức và kỹ năng Trấn tĩnh đề xuất</td></tr>
 <tr><td><strong>Akam Meskul</strong></td><td>Nộ khí tăng nhanh, đám đông dễ cuồng loạn, trùm mạnh lên khi có người chết</td><td>Regroup để tái bố trí, Hold giữ tuyến; cứu dân, phá loa và áp dụng quy tắc bảo vệ người đầu hàng của màn</td></tr>
-<tr><td><strong>Chiếc Nôi</strong></td><td>Luật cũ trộn vào nhau, địa hình lệch, đường giả và Bóng Nhiễu riêng xuất hiện</td><td>Heni tìm đường thật, Ghost cắt mạch nối, cả đội tạo vùng ổn định</td></tr></tbody></table></div>
+<tr><td><strong>Chiếc Nôi</strong></td><td>Luật cũ trộn vào nhau, địa hình lệch, đường giả và Bóng Nhiễu riêng xuất hiện</td><td>Đối chiếu nhịp và dấu tiếp đất, tháo mạch lần lượt; cơ cấu môi trường giúp mọi đội hợp lệ tạo vùng ổn định</td></tr></tbody></table></div>
 <h4 id="gameplay-khac-biet-theo-nhan-vat" tabindex="-1"><a class="heading-link" href="#gameplay-khac-biet-theo-nhan-vat" aria-label="Link to section">#</a>Khác biệt theo nhân vật</h4>
 <ul>
 <li>Solei thoát vùng nguy hiểm nhanh nhưng bóng giả làm khó việc căn phản đòn.</li>
 <li>Deep chịu đòn tốt nhưng dễ bị Trái Tim khơi lại ký ức chiến tranh; bảo vệ đồng đội giúp anh ổn định.</li>
 <li>Mark nhận ra cấu trúc của ảo giác nhưng Cái Lưỡi có thể giả lời chỉ huy của anh trong thế giới; phản hồi lệnh thật trên HUD vẫn phải đọc được.</li>
 <li>Tulas giảm Nhiễu cho người khác nhưng dễ quá tải nếu dùng máu quá nhiều.</li>
-<li>Block chặn được đòn gây Nhiễu cho đồng đội, đổi lại thể lực của khiên hao nhanh khi bản thân bị nhiễm nặng.</li>
-<li>Ghost tích Nhiễu chậm hơn, nhưng ở mức cao sẽ tạo một bóng lặp lại chính hành động cũ của anh. Nếu đạt 100%, anh có thể mất kiểm soát và trở thành trùm Stranger.</li>
-<li>Heni nhìn thấy đường thật nhưng tích Nhiễu rất nhanh khi đến gần Dây Rốn.</li>
+<li>Block chặn được đòn gây Nhiễu cho đồng đội, đổi lại thể lực đỡ đòn hao nhanh khi bản thân bị nhiễm nặng.</li>
+<li>Ghost tích Nhiễu chậm hơn nhưng có bóng lặp hành động khi quá tải. Trận Stranger do 100% chỉ xảy ra tối đa một lần trước 4-4; Dream Sovereign ở 5-3B là một sự kiện cứu hộ riêng, không phát sinh từ thanh Nhiễu.</li>
+<li>Heni nhạy với sai lệch và giúp quan sát đường thật, vẫn có thể quá tải gần Dây Rốn; cơ cấu môi trường luôn có cách kiểm chứng độc lập.</li>
 </ul>
 <h3 id="gameplay-3-5-coi-mong-sau-cai-chet" tabindex="-1"><a class="heading-link" href="#gameplay-3-5-coi-mong-sau-cai-chet" aria-label="Link to section">#</a>3.5. Cõi Mộng Sau Cái Chết</h3>
 <p>Cõi Mộng Sau Cái Chết là không gian nằm giữa ý thức Ghost và giấc mơ của Thần Sơ Sinh. Hệ thống này chỉ mở sau Bastonne để không làm lộ Ghost quá sớm.</p>
 <p>Cõi Mộng dùng để:</p>
 <ul>
-<li>hồi sinh tại điểm lưu;</li>
+<li>tiếp tục từ điểm lưu sau khi bị hạ;</li>
 <li>thay đổi bộ kỹ năng và đội hình;</li>
 <li>phân bổ lại nâng cấp bằng tài nguyên;</li>
 <li>xem các mảnh ký ức đã tìm được;</li>
 <li>gợi dần mối liên hệ giữa Ghost và Dây Rốn.</li>
 </ul>
-<p>Ghost là chủ thể của không gian này. Khi thành viên khác bị hạ, Ghost nghe thấy tiếng vọng của họ và kéo cả đội về điểm lưu. Heni là người duy nhất ngoài Ghost có thể cảm nhận rõ Cõi Mộng; cô giúp ổn định đường đi nhưng không thay Ghost làm trung tâm.</p>
+<p>Ghost là người đầu tiên kết nối được không gian này. Khi thất bại trong chiến đấu, trò chơi khôi phục trạng thái tại mốc đã lưu; Cõi Mộng là cách thể hiện lần thử lại, không xác nhận nhân vật đã chết rồi sống lại. Những cái chết trong cốt truyện vẫn không thể đảo ngược. Từ Akam, các mốc ổn định cả đội đặt giữ liên kết điểm lưu cả khi Ghost mất tự chủ. Heni nhạy với cộng hưởng nhưng cũng có thể quá tải. Cô chia sẻ điều đã quan sát; dấu vật lý và cơ cấu môi trường luôn cho mọi đội cách kiểm chứng, không cần cô mở cửa.</p>
 <p>Không gian thay đổi theo tiến độ:</p>
 <ul>
 <li>Sau Bastonne: phòng trắng, loa tù nhân và hơi khí mê.</li>
 <li>Sau Marseille: nước cống và ánh Con Mắt phản chiếu trên mặt nước.</li>
 <li>Sau Sakuri: tiếng bước chân và ý nghĩ bị lặp lại từ rất xa.</li>
-<li>Sau Calvaria: giọng người chết gọi tên cũ của Ghost.</li>
-<li>Sau Akam Meskul: nhịp tim làm méo không gian và bảng kỹ năng.</li>
+<li>Sau Calvaria: mẫu loa nhắc mã STRANGER và những tên bị giáo hội giữ trong sổ.</li>
+<li>Sau Akam Meskul: nhịp tim làm méo không gian, bảng kỹ năng và HUD vẫn đáng tin.</li>
 <li>Trong Chiếc Nôi: Cõi Mộng trở thành một phần thật của màn chơi.</li>
 </ul>
 <h3 id="gameplay-3-6-ky-uc-cua-the-gioi-va-hau-qua-cuc-bo" tabindex="-1"><a class="heading-link" href="#gameplay-3-6-ky-uc-cua-the-gioi-va-hau-qua-cuc-bo" aria-label="Link to section">#</a>3.6. Ký ức của thế giới và hậu quả cục bộ</h3>
 <p>Không có thanh đạo đức chung. Mỗi khu vực chỉ ghi nhớ những việc liên quan trực tiếp đến nó. Hậu quả nên xuất hiện lần đầu trong vòng 10–20 phút, sau đó vọng lại một lần ở cuối trò chơi.</p>
-<div class="table-wrap"><table><thead><tr><th>Dữ liệu diễn giải</th><th>Thay đổi khi</th><th>Hậu quả gần</th><th>Hậu quả xa</th></tr></thead><tbody><tr><td><strong>Đã giúp Block</strong></td><td>Ghost chỉ vị trí Block, làm chậm khí hoặc mở chốt cửa</td><td>Block tỉnh hơn trong trận thoát ngục; đội bớt nghi Ghost</td><td>Mở đối thoại riêng giữa Ghost và Block</td></tr>
-<tr><td><strong>Thương tích của Block</strong></td><td>Stranger giúp sớm hoặc để đội tìm muộn hơn</td><td>Đổi tình trạng lúc thoát ngục và lời thoại tại căn cứ</td><td>Được điều trị ở 1-0; không áp dụng giảm máu hoặc hồi hỗ trợ kéo dài sang các màn sau</td></tr>
+<div class="table-wrap"><table><thead><tr><th>Dữ liệu diễn giải</th><th>Thay đổi khi</th><th>Hậu quả gần</th><th>Hậu quả xa</th></tr></thead><tbody><tr><td><strong>Cách cứu Block</strong></td><td>Stranger khóa khí trước hoặc ra hiệu để Deep mở chốt khẩn cấp</td><td>Block ít thương tích hơn nếu khóa khí; cả hai cách đều ghi nhận Stranger đã hợp tác</td><td>Đối thoại riêng nhắc đúng cách cứu, không phủ nhận lựa chọn khác</td></tr>
+<tr><td><strong>Thương tích của Block</strong></td><td>Khóa khí an toàn hoặc mở chốt khẩn cấp</td><td>Đổi tình trạng lúc thoát ngục và lời thoại tại căn cứ</td><td>Được điều trị ở 1-0; không áp dụng giảm máu hoặc hồi hỗ trợ kéo dài sang các màn sau</td></tr>
 <tr><td><strong>Lòng tin Laundel</strong></td><td>Mua bán công bằng, giữ lời hoặc cướp phá</td><td>Đổi giá, tin đồn, đường tắt và số lần phục kích</td><td>Người Laundel có thể hỗ trợ khi gặp GROGER</td></tr>
 <tr><td><strong>Mức truy nã Marseille</strong></td><td>Cố ý cướp quầy hoặc gây thêm báo động có cảnh báo; tự vệ và trận kéo dài không tự tăng mức này</td><td>Một nhóm tiếp viện hữu hạn ở cảng có thể đến sớm hơn</td><td>Thành phố nhớ đội như kẻ phá hoại hoặc người phơi bày Bastonne</td></tr>
 <tr><td><strong>Manh mối GROGER</strong></td><td>Tìm hình vẽ, lời đồn và phòng ẩn</td><td>Mở tuyến chủ động tìm GROGER</td><td>Câu chuyện về GROGER thay đổi từ quái vật thành bi kịch</td></tr>
 <tr><td><strong>Tuyến điện tàu ngầm</strong></td><td>Sau cứu hộ, giữ điện hoặc chủ động ngắt nguồn thí nghiệm</td><td>Đổi đường tiếp cận trung tâm, ánh sáng và mối nguy</td><td>Đổi hồ sơ phụ; cả hai giữ người đã cứu, hồ sơ chính và đầu mối Sakuri</td></tr>
-<tr><td><strong>Lòng tin của Heni</strong></td><td>Tôn trọng lựa chọn, giúp người bệnh, không coi cô như chìa khóa</td><td>Heni chia sẻ đường phụ và ký ức rõ hơn</td><td>Cộng hưởng trong Chiếc Nôi ổn định hơn</td></tr>
+<tr><td><strong>Lòng tin của Heni</strong></td><td>Tôn trọng lựa chọn, giúp người bệnh, không coi cô như chìa khóa</td><td>Heni tự nguyện chia sẻ điều quan sát và ký ức của đời mình</td><td>Cộng hưởng trong Chiếc Nôi ổn định hơn</td></tr>
 <tr><td><strong>Sự thật Calvaria</strong></td><td>Sửa tên người chết, phá lời tha thứ giả</td><td>Giảm quân xương và giọng giả trong trận trùm</td><td>Dùng làm bằng chứng để thuyết phục một nhóm rút lui ở Chiếc Nôi</td></tr>
 <tr><td><strong>Dân Akam được cứu</strong></td><td>Phá vật neo, mở đường sơ tán, không truy sát</td><td>Giảm Nộ khí của Titan, mở điểm yếu lâu hơn</td><td>Nhiều người của hai phe cùng hỗ trợ ở cuối chương</td></tr>
-<tr><td><strong>Hành động nhân từ cuối game</strong></td><td>Ngừng bắn, bảo vệ dân, từ chối vật tế</td><td>Giai đoạn Trái Tim của trùm cuối bớt khắc nghiệt</td><td>Đổi giọng điệu đoạn kết, không tạo một kết thúc hoàn toàn khác</td></tr></tbody></table></div>
+<tr><td><strong>Hành động nhân từ cuối game</strong></td><td>Ngừng bắn, bảo vệ dân, từ chối vật tế</td><td>Giảm nguồn kích Nộ và số đường tiếp viện của phòng vệ Con Mắt</td><td>Đổi giọng điệu đoạn kết, không tạo một kết thúc hoàn toàn khác</td></tr></tbody></table></div>
 <p>Phần thưởng tốt nhất là đường tắt, đồng minh hỗ trợ, thông tin, vật phẩm đặc biệt hoặc chi tiết kết truyện. Không nên chỉ hiện thông báo “điểm tốt +1”.</p>
+<h3 id="gameplay-phan-biet-anh-chieu-va-bong-nhieu">Ảnh chiếu, Bóng Nhiễu và sát thương</h3><p><strong>Ảnh chiếu:</strong> không có body collider, hurtbox hoặc đòn gây sát thương; vật thử đi xuyên. <strong>Bóng Nhiễu:</strong> thể cộng hưởng có nguồn nuôi, có collider và hurtbox, để lại bụi tiếp đất cùng vệt nối nguồn; có thể đánh và bị đánh. Dạy hai dấu hiệu trong lần xuất hiện an toàn đầu tiên. Cả hai dùng lại đúng phản hồi tại 5-3B. Địa hình thật bị kéo sang Cradle vẫn có va chạm. Không dùng cùng một hình báo cho ảnh vô hại và đòn có sát thương.</p>

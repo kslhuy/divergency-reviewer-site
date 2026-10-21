@@ -10,7 +10,7 @@
 
 | Mốc thời gian | Chương | Trọng tâm nội dung |
 |---|---|---|
-| **00:00 – 01:20** | **01. Mở đầu & Khởi nguồn LF2** | Tĩnh lặng dưới bóng Sakura trên vách đá lộng gió (6 năm Divergency); ký ức Little Fighter 2; bản build mobile đầu tiên và gáo nước lạnh ("game sucks, slippery"). |
+| **00:00 – 01:20** | **01. Mở đầu & Khởi đầu Divergency** | Tĩnh lặng dưới bóng Sakura trên vách đá lộng gió (6 năm Divergency); ký ức Little Fighter 2; bản build mobile đầu tiên và gáo nước lạnh ("game sucks, slippery"). |
 | **01:20 – 02:55** | **02. Đồng đội, Bối cảnh & Divergency** | Bế tắc khi làm một mình; bước ngoặt 2023 hội ngộ Khoa (Pixel Art) và Nghĩa (Dialogue); bối cảnh cốt truyện Team Deep tại cảng Marseille, giải cứu đồng đội và dấn thân vào rắc rối lớn hơn; câu chuyện nghiên cứu Hệ thống điều khiển khai sinh tên game. |
 | **02:55 – 04:45** | **03. Hành trình Một đòn đánh** | Flow kỹ thuật: Ý tưởng $\rightarrow$ Từ Photoshop sang Aseprite $\rightarrow$ Unity Pivot chân $\rightarrow$ Blue Hurtbox & Red Hitbox chuẩn từng khung hình. |
 | **04:45 – 06:00** | **04. Gameplay Showcase & Synergy** | Trình diễn gameplay thực chiến nguyên bản của Deep; phối hợp đồng đội chiến thuật (Team Synergy) giữa Solei và Deep. |
@@ -52,9 +52,9 @@
 #### S03 Thử nghiệm vụng về & Gáo nước lạnh đầu đời
 - **Thời gian:** 00:50 – 01:20 (30 giây) · **Tư liệu:** F02, F06
 - **Lời dẫn (Tiếng Việt):**
-  > Rồi mình ấp ủ làm lại nó, cứ ngỡ mình có thể tự tay tạo ra một phiên bản tốt hơn. Mọi thứ bắt đầu từ những dòng code chắp vá vụng về và những khung sprite căn chỉnh thô lệch. Mình làm vài bản thử nghiệm trên điện thoại, mời bạn bè chơi thử... nhưng mọi bình luận nhận lại chỉ là: *"Game của ông dở tệ. Cảm giác di chuyển trơn tuột."* Thật sự... lúc đó cay đắng và khó khăn vô cùng.
+  > Từ nguồn cảm hứng đó, mình bắt đầu thử xây dựng Divergency, một game với nhân vật và cách chơi riêng. Mọi thứ bắt đầu từ những dòng code chắp vá vụng về và những khung sprite căn chỉnh thô lệch. Mình làm vài bản thử nghiệm trên điện thoại, mời bạn bè chơi thử... nhưng mọi bình luận nhận lại chỉ là: *"Game của ông dở tệ. Cảm giác di chuyển trơn tuột."* Thật sự... lúc đó cay đắng và khó khăn vô cùng.
 - **English Voiceover:**
-  > Eventually, I tried to remake that, thinking I could build a better version myself. Everything started as clumsy code snippets and rough, awkward sprite alignment. I put together some phone builds, ran playtests, but every single comment was: *"Your game sucks. It feels slippery."* That was hard.
+  > That inspiration led me to start building Divergency, with its own characters and gameplay. Everything started as clumsy code snippets and rough, awkward sprite alignment. I put together some phone builds, ran playtests, but every single comment was: *"Your game sucks. It feels slippery."* That was hard.
 - **Hình cần lấy:** Tư liệu thực tế các bản prototype đầu tiên (2018–2020): ngón tay bấm trên màn hình cảm ứng điện thoại, nhân vật pixel đơn sơ trượt dài bất kiểm soát (slippery physics), tung đòn chém lệch tâm hoàn toàn. Hiện các bong bóng tin nhắn/comment thật: *"Your game sucks", "Trơn quá không đánh trúng", "Di chuyển như trên băng"*.
 - **Dựng:** Zoom cận vào nhân vật đang trượt ngã, freeze-frame 1 giây với tông màu desaturate (đen trắng) ngay khi chữ *"Your game sucks. It feels slippery."* xuất hiện.
 - **Âm thanh:** Âm thanh retro vui tươi ngắt phụt đột ngột (tiếng đĩa than trượt rè), chỉ còn tiếng thở dài nhẹ hoặc tiếng click chuột đơn độc trong đêm.
@@ -64,20 +64,20 @@
 
 ### CHƯƠNG 2: CỘT MỐC ĐỒNG ĐỘI 2023, BỐI CẢNH MARSEILLE & CÁI TÊN DIVERGENCY (01:20 – 02:55)
 
-#### S04 Bước ngoặt 2023: Từ làm lại LF2 đến game mới
+#### S04 Bước ngoặt 2023: Cùng xây dựng Divergency
 - **Thời gian:** 01:20 – 02:00 (40 giây) · **Tư liệu:** F04, F08, F09, F24
 - **Lời dẫn (Tiếng Việt):**
-  > Hồi đó, mình làm game một mình. Tiến độ chậm, và nhiều lúc thấy cô đơn vô cùng. Đến năm 2023, mọi thứ bắt đầu thay đổi. Mình thấy tranh pixel art dark fantasy của Khoa và hệ thống hội thoại mà Nghĩa đã xây dựng. Mình liên hệ với cả hai và họ đã cùng tham gia dự án. Tụi mình quyết định vượt ra khỏi việc làm lại Little Fighter 2 để xây dựng một tựa game hoàn toàn mới. Cả ba cùng thống nhất một ý tưởng chung và tự viết tài liệu thiết kế riêng — nền tảng cho Divergency.
+  > Hồi đó, mình làm game một mình. Tiến độ chậm, và nhiều lúc thấy cô đơn vô cùng. Đến năm 2023, mọi thứ bắt đầu thay đổi. Mình thấy tranh pixel art dark fantasy của Khoa và hệ thống hội thoại mà Nghĩa đã xây dựng. Mình liên hệ với cả hai và họ đã cùng tham gia dự án. Tụi mình cùng xác định bản sắc riêng cho Divergency, từ nhân vật và thế giới đến cách chiến đấu. Cả ba cùng thống nhất một ý tưởng chung và tự viết tài liệu thiết kế riêng — nền tảng cho Divergency.
 - **English Voiceover:**
-  > Back then, I was making the game alone. Progress was slow, and it often felt lonely. Then, in 2023, things started to change. I came across Khoa's dark fantasy pixel art and a dialogue system Nghĩa had built. I reached out to both of them, and they joined the project together. We decided to move beyond remaking Little Fighter 2 and build a completely new game. We agreed on a shared vision and created our own game design documents that became the foundation for Divergency.
+  > Back then, I was making the game alone. Progress was slow, and it often felt lonely. Then, in 2023, things started to change. I came across Khoa's dark fantasy pixel art and a dialogue system Nghĩa had built. I reached out to both of them, and they joined the project together. We defined Divergency’s own identity through its characters, world, and combat. We agreed on a shared vision and created our own game design documents that became the foundation for Divergency.
 - **Hình cần lấy:** Hiển thị sự hội tụ của nhóm:
   - Bên trái: Nghệ thuật Pixel Art của Khoa (sprite Deep, Solei, quái vật bóng tối).
   - Bên phải: Hệ thống hội thoại phân nhánh của Nghĩa trên Unity (hộp thoại tương tác chữ chạy mượt mà, câu thoại có hồn).
   - Cắt thoáng qua tin nhắn kết nối 3 anh em năm 2023.
   - Tư liệu thảo luận ý tưởng chung và tài liệu thiết kế game (F24).
-- **Dựng:** Mở bằng art của Khoa và demo hội thoại của Nghĩa. Khi lời dẫn nói đến quyết định làm game mới, chuyển từ prototype LF2 sang tài liệu thiết kế Divergency.
+- **Dựng:** Mở bằng art của Khoa và demo hội thoại của Nghĩa. Khi lời dẫn nói đến quyết định làm game mới, chuyển từ prototype Divergency sang tài liệu thiết kế Divergency.
 - **Âm thanh:** Nhạc nền chuyển tông ấm áp với tiếng piano và cello trầm ấm, mang cảm hứng khởi sắc và hy vọng.
-- **Chữ trên hình:** *2023 · Beyond LF2 Remake $\rightarrow$ Divergency · Shared Vision · Game Design Document*
+- **Chữ trên hình:** *2023 · Divergency · Shared Vision · Game Design Document*
 
 ---
 
@@ -207,9 +207,9 @@
   > *(Không lời dẫn · Nhạc giao tranh hào hùng & Sound Effect game: Trình diễn phối hợp tác chiến giữa Solei và Deep)*
 - **English Voiceover:**
   > *(Non-verbal Gameplay · Raw combat audio and dynamic battle music: Solei & Deep Tactical Team Synergy showcase)*
-- **Hình cần lấy:** Pha phối hợp đồng đội đặc trưng (Team Synergy): Solei dùng chiêu thức diện rộng đẩy dồn quái vật vào thế góc kẹt, Deep từ trên cao lao xuống tung nhát kiếm kết liễu đồng bộ. Kết thúc bằng tư thế chiến đấu hai nhân vật tựa lưng vào nhau.
+- **Hình cần lấy:** Pha phối hợp đồng đội đặc trưng (Team Synergy): Solei dùng chuỗi đá karate bằng chân máy có mắt quỷ để ép quái vật vào góc, Deep từ trên cao lao xuống tung đòn kiếm ngắn kết liễu đồng bộ. Kết thúc bằng tư thế chiến đấu hai nhân vật tựa lưng vào nhau.
 - **Dựng:** Chuyển động camera mượt mà theo nhịp hợp kích, dừng lại ở pose đứng chiến thắng oai vệ của hai nhân vật.
-- **Âm thanh:** Hòa âm giữa hiệu ứng phép thuật ma mị và tiếng đao kiếm uy lực, âm nhạc dâng lên cao trào rồi chuyển sang giai điệu trầm ấm.
+- **Âm thanh:** Tiếng chân máy đá vun vút và va chạm kết hợp tiếng kiếm ngắn của Deep, âm nhạc dâng lên cao trào rồi chuyển sang giai điệu trầm ấm.
 - **Chữ trên hình:** *Tactical Team Synergy · Solei & Deep*
 
 ---
@@ -278,6 +278,6 @@
 - [ ] **F15 Clip minh họa Game Feel:** Hiệu ứng Hitstop khi chém trúng, tia lửa lóe sáng, rung camera nhẹ và phản ứng bật ngửa của địch (Ưu tiên 1).
 - [ ] **F16 Cảnh test tiếp đất vững chãi (Ground Check):** Nhảy lên và tiếp đất mượt mà, không bị trôi chân hay lún sàn (Ưu tiên 1).
 - [ ] **F18 Gameplay combat thực chiến của Deep:** 30–40s giao tranh sạch không debug UI, combo 3-hit, lướt né, hất tung đòn đánh (Ưu tiên 1).
-- [ ] **F19 Combo phối hợp Solei & Deep (Team Synergy):** Cảnh 2 nhân vật phối hợp chiêu thức ma thuật và kiếm thuật khống chế dứt điểm mục tiêu (Ưu tiên 1).
+- [ ] **F19 Combo phối hợp Solei & Deep (Team Synergy):** Cảnh 2 nhân vật phối hợp đòn chân karate của Solei và kiếm ngắn của Deep khống chế dứt điểm mục tiêu (Ưu tiên 1).
 - [ ] **F20 Trang Kickstarter Pre-launch:** Screenshot/quay màn hình trang chiến dịch và con trỏ chuột bấm nút "Notify me on launch" (Ưu tiên 1).
 - [ ] **F21 Logo Divergency chính thức:** File logo độ phân giải cao trên nền trong suốt (Ưu tiên 1).

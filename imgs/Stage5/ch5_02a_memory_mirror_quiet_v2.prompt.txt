@@ -1,0 +1,33 @@
+Use case: stylized-concept.
+Asset type: ONE finished opaque environment concept for Divergency Chapter 5, the quiet Memory Mirror Chamber. Wide horizontal 2:1 pixel-art background for a 2.5D side-scrolling game, a calm story/interlude space.
+
+USER ART DIRECTION: Ground design must fit THIS room, not repeat the stone floor from a background-generation skill. The surface is shallow still water over dark translucent glass, not cave rock, cobblestone or an ordinary tiled arena.
+
+REFERENCE ROLES IN ORDER:
+1. ch5_02_hall_of_mirrors_playable.png: conceptual inspiration for mirrors and a cosmic dream chamber. Redesign it as a much quieter, intimate scene. Remove the neon cables, busy stars, shiny tile grid and towering repeated angel columns.
+2. ch5_02b_confluence_refuge_concept_v1.png: pixel rendering continuity, clean square clusters and dark value separation only. Do NOT copy its ground, war-plaza architecture or tangled red vines.
+3. style-anchor.png: secondary pixel-cluster craft reference only. Its cave, brown colors and rough stone floor are not part of this scene.
+
+SCENE AND EMOTION:
+An intimate silent room between two sisters' memories, in the sleeping god's blue dream. A black-blue void is divided by a few large suspended mirror fragments and two slender incomplete pearl-gray arches at the back corners. The mirrors carry faint, indistinct traces of old windows and curtains, as if holding a child's private room; no people or faces. The rear center is deliberately quiet and open with a distant veil of desaturated blue light, no huge palace, no dense star field. One tall fractured mirror at the back left subtly marks the entrance from the Unindexed Gate. On the far-right rear, a modest broken arch shows a small glimpse of the darker displaced plaza beyond; this is the exit to the rescue battlefield. The entire space should feel like a breath held before a difficult conversation, not another boss arena.
+
+SITE-SPECIFIC WATER/GLASS GROUND:
+The lower 40–45 percent is ONE broad, horizontal, continuous surface of ankle-shallow perfectly still dark indigo water, supported by a solid translucent glass plane immediately beneath it. It looks safe to walk on, with broad faint blue-gray reflection bands rather than a deep ocean or an empty pit. A few soft, low-contrast concentric ripples near the center suggest two people will later stand close and meet here; no human figures, no luminous target circles. Reflect only portions of the rear arches and a few mirror edges, with much darker, simpler reflections than the actual architecture. Keep the central surface calm, clean and readable for future sprites. No floor tile grid, cobbles, stones, debris, roots, sharp glass shards on the walking plane, bright filigree or high-contrast galaxy reflections. The glass substrate's faint perimeter line can be seen at the far rear; no front rail or front cliff. The surface continues below the bottom crop.
+
+COMPOSITION:
+Fixed side-on 2.5D view, shallow depth and unobstructed left/right traversal. Large quiet negative space around the rear center and the reflection focus; no central perspective road, stacked platforms, raised dais or floor pits. Put tall props behind the back edge. Use sparse framing at extreme edges only. Keep a small visual doorway connection at each side while prioritizing the central moment of intimacy.
+
+STYLE AND LIGHT:
+Handcrafted pixel art with crisp square pixel clusters, stepped silhouettes, short shade ramps and very restrained dithering. Pixel the water with a few broad discrete reflection shapes, not photographic blur or smooth gradients. Midnight indigo, blue-black, muted periwinkle and cool pearl-gray; restrained pale jade light along a few mirror edges. No neon magenta, electric cyan cables, heavy bloom, bright shiny floor, golden dawn, 3D render, painterly texture or isometric camera. The room should have noticeably less visual noise than its neighboring combat map.
+
+DELIVERY:
+ONE opaque edge-to-edge empty environment. No people, characters, faces, statues shaped like people, children, enemies, ghosts, UI, labels, writing, logos, watermarks, multiple panels or map diagrams.
+
+REFERENCE PATHS:
+1. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage5/ch5_02_hall_of_mirrors_playable.png
+2. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage5/ch5_02b_confluence_refuge_concept_v1.png
+3. output/skills/divergency-25d-stage-background/references/style-anchor.png
+
+GENERATION METHOD: built-in image_gen.
+TARGET OUTPUT: imgs/Stage5/ch5_02a_memory_mirror_quiet_v2.png
+STATUS: environment concept; not engine-tested.

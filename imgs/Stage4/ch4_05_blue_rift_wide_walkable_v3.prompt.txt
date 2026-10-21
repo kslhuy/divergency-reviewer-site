@@ -1,0 +1,31 @@
+Edited with built-in image_gen.
+Edit target: imgs/Stage4/ch4_05_blue_rift_platform_pixel_v2.png
+Requested change: substantially widen the walkable area for reasonable 2.5D gameplay.
+Art direction: a broad clear central combat terrace, deeper separated platform tops, practical wide stone stairs and generous landings, preserving the Blue Rift palette and pixel style.
+
+Use case: precise-object-edit.
+Asset type: gameplay-layout correction to an existing 16-bit pixel-art 2.5D platform-stage background.
+
+IMAGE 1 is the EDIT TARGET. The user says the walkable area is not reasonable and MUST BE MUCH WIDER. This requires a substantial geometry correction, not a subtle material edit or a thin extra border.
+
+HIGHEST PRIORITY: LARGE USABLE TOP FACES.
+The present platforms are mostly narrow shelves and steep visible cliff faces. Rebuild their top surfaces into BROAD FLAT TERRACES with clear front-to-back movement depth for a beat 'em up. Expand the ground-plane depth by approximately THREE TIMES. Some original rock outlines may expand to achieve this; do not preserve an unusably narrow shape at the expense of gameplay. Keep the overall arrangement of the separate platform groups and major voids, not every skinny edge.
+
+MAIN CENTRAL PLAYABLE AREA:
+Turn the lower central shelf into a substantial clear battle terrace. Its visible TOP SURFACE should occupy roughly the lower central 20-25% of the image, extending approximately from one-third of the image width to the right-hand cliff/landing. Show a broad quiet surface of dark fractured basalt tiles, not a thin horizontal lip. Extend the top toward the viewer by reducing how much foreground space is occupied by the vertical cliff face. A short dark rock fascia can remain at the bottom. Keep a real abyss visible at the left and between the separated islands; do not make a full-width floor.
+
+CENTRAL RISING PATH:
+The existing thin zigzag stone strip is too cramped. Reinterpret it as two or three broad stepped terraces/landings in the same central rising arrangement. Each landing must have a substantial clearly visible flat top and connect through short, wide flights of stone stairs. No knife-edge bridges or single-file ribbons. Keep its recognizable rising staggered silhouette and floating fractured-rock identity, but broaden the terraces decisively. Use shallow 2.5D projection so the extra walkable depth reads immediately.
+
+RIGHT-HAND STAIRS AND LANDINGS:
+Make the stone stairs connecting the main lower terrace to the right ledge significantly broader across their front-to-back dimension. Show wide treads of consistent depth with a generous flat landing at each end. No crumbling missing steps on the main route. Keep the right-hand cliff, upper projecting shelf and red organic roots, moving roots and monoliths toward rear/side boundaries where necessary so the actual walking surface is unobstructed. Enlarge the upper-right platform top and upper-left platform top into usable flat ledges, rather than keeping their top faces as thin decorative rims. Widen the lower-left isolated stepping platform proportionately.
+
+WALKABLE READABILITY:
+The main flat surfaces must visibly have space for several character rows in depth, while remaining empty of characters. Top faces should use calmer low-detail slate textures and slightly lighter cool-gray shading than vertical drop faces. Bright teal fissures are narrow FLUSH inlaid cracks/energy seams, not holes, barriers or raised beams across the walking route. Keep tall rune stones, roots, spikes, rubble and heavy decoration at rear or side edges. Maintain clear openings and sensible connections between stairs and platforms. No new railings or objects across the path.
+
+KEEP THE APPROVED ART DIRECTION:
+Preserve the huge turquoise cosmic rift overhead, cracked burgundy storm clouds, suspended small rock fragments, distant volcano, smoky mountains, sparse orange lava, rune monoliths and blood-red roots. Keep these background elements closely matched in placement, appearance and palette. Preserve the existing crisp handcrafted 16-bit pixel rendering: visible square clusters, stair-step contours, discrete color ramps, restrained dithering and compact highlights. Same source aspect ratio and side-on shallow 2.5D viewpoint. No isometric overhaul or top-down map.
+
+No characters, UI, labels, writing, logos, watermark, black bands, smooth gradients, blur, airbrushing, glossy 3D or neon bloom.
+The result must immediately show a MUCH BROADER MAIN COMBAT TERRACE and DEEPER PLATFORM TOPS with wide practical stairs, while retaining the Blue Rift stage identity and visible chasms between separated platform groups.
+

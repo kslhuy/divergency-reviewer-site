@@ -1,9 +1,9 @@
 """
 build_mutan_suite.py
-Generates the complete LF2 Character Animation Suite for "Bầy Người Hoa" (Les Éclos):
+Generates the complete Divergency Character Animation Suite for "Bầy Người Hoa" (Les Éclos):
 - Mutan Flower (Heavy Bloomed Spore Carrier)
 - Mutan Leaf (Agile Root-Claw Shredder)
-Separated Layers (Character_Body + FX_Effects), LF2 deterministic 30 FPS wait ticks,
+Separated Layers (Character_Body + FX_Effects), deterministic preview duration ticks at 30 FPS,
 master spritesheets, layered .aseprite compilation, and HTML5 studio.
 """
 
@@ -167,8 +167,8 @@ def process_mutan_flower():
                 "composite": p_comp,
                 "body": p_body,
                 "fx": p_fx,
-                "bdy": [44, 38, 48, 74],
-                "itr": [75, 42, 45, 40] if "ATTACK" in clip_name or "SPORE" in clip_name else []
+                "hurtbox": [44, 38, 48, 74],
+                "hitbox": [75, 42, 45, 40] if "ATTACK" in clip_name or "SPORE" in clip_name else []
             })
             frame_counter += 1
 
@@ -303,8 +303,8 @@ def process_mutan_leaf():
                 "composite": p_comp,
                 "body": p_body,
                 "fx": p_fx,
-                "bdy": [pos[0] + 10, pos[1] + 10, 32, 58],
-                "itr": [pos[0] + 35, pos[1] + 15, 38, 35] if "ATTACK" in clip_name or "POUNCE" in clip_name else []
+                "hurtbox": [pos[0] + 10, pos[1] + 10, 32, 58],
+                "hitbox": [pos[0] + 35, pos[1] + 15, 38, 35] if "ATTACK" in clip_name or "POUNCE" in clip_name else []
             })
             frame_counter += 1
 
@@ -362,8 +362,8 @@ def compile_sheets(char_name, meta_frames, clips_info):
             "frame": {"x": x, "y": y, "w": CANVAS_SIZE, "h": CANVAS_SIZE},
             "duration": int(f["duration_ms"]),
             "wait": f["wait"],
-            "bdy": f["bdy"],
-            "itr": f["itr"]
+            "hurtbox": f["hurtbox"],
+            "hitbox": f["hitbox"]
         })
 
     if cur_tag != "":
@@ -694,7 +694,7 @@ def build_html_studio(flower_json, leaf_json):
 
   <div class="header">
     <div class="title-wrap">
-      <h1>Bầy Người Hoa (Les Éclos) <span class="badge">LF2 Studio 30 FPS</span></h1>
+      <h1>Bầy Người Hoa (Les Éclos) <span class="badge">Divergency Studio 30 FPS</span></h1>
     </div>
     <div class="char-nav">
       <button class="nav-btn active" id="btnFlower">🌸 Quái Hoa Nhụy (Mutan Flower)</button>
@@ -729,7 +729,7 @@ def build_html_studio(flower_json, leaf_json):
       </div>
     </div>
 
-    <!-- Right: Clip Selection & LF2 Data -->
+    <!-- Right: Clip Selection & Divergency Data -->
     <div class="details-panel">
       <div class="clip-selector" id="clipContainer"></div>
 
@@ -741,7 +741,7 @@ def build_html_studio(flower_json, leaf_json):
       </div>
 
       <div class="info-card">
-        <h3>LF2 DATA FRAME CODE (30 FPS EXACT)</h3>
+        <h3>PREVIEW METADATA JSON · 30 FPS</h3>
         <div class="code-box" id="codeDisplay">Loading frame data...</div>
       </div>
     </div>
@@ -848,19 +848,19 @@ def build_html_studio(flower_json, leaf_json):
       const frames = getClipFrames();
       const totalWait = frames.reduce((sum, f) => sum + (f.wait || 3), 0);
       clipTitle.innerHTML = `CLIP: ${{currentClip}} <span>${{totalWait}} ticks (${{Math.round(totalWait * 33.33)}}ms)</span>`;
-      clipDesc.innerText = descriptions[currentChar][currentClip] || 'Hoạt ảnh chiến đấu chuẩn hóa LF2.';
+      clipDesc.innerText = descriptions[currentChar][currentClip] || 'Hoạt ảnh chiến đấu chuẩn hóa Divergency.';
 
       if (frames[currentFrameIdx]) {{
         const f = frames[currentFrameIdx];
         const stateId = currentClip.includes('ATTACK') || currentClip.includes('SPORE') || currentClip.includes('POUNCE') ? 3 : (currentClip === 'WALK' ? 1 : 0);
-        codeDisplay.innerText = `<frame> ${{f.filename}}
-   state: ${{stateId}}   wait: ${{f.wait}}   next: ${{currentFrameIdx < frames.length - 1 ? currentFrameIdx + 1 : 0}}   dvx: 0   dvy: 0
-   hit_a: 0   hit_d: 0   hit_j: 0
-   bdy:
-      x: ${{f.bdy[0]}}  y: ${{f.bdy[1]}}  w: ${{f.bdy[2]}}  h: ${{f.bdy[3]}}
-   itr:
-      ${{f.itr.length ? `kind: 0  x: ${{f.itr[0]}}  y: ${{f.itr[1]}}  w: ${{f.itr[2]}}  h: ${{f.itr[3]}}  dvx: 6  dvy: -3  fall: 40  bdefend: 15` : '# Không có hộp va chạm sát thương'}}
-<frame_end>`;
+        codeDisplay.innerText = JSON.stringify({{
+          project: 'Divergency', dataKind: 'preview', fps: 30,
+          animation: currentClip, frame: f.filename,
+          durationMs: Math.round(f.wait * 1000 / 30),
+          nextFrame: currentFrameIdx < frames.length - 1 ? currentFrameIdx + 1 : 0,
+          hurtbox: f.hurtbox, hitbox: f.hitbox,
+          status: 'Proposed preview boxes; validate in Divergency Unity project'
+        }}, null, 2);
       }}
     }}
 
@@ -877,20 +877,20 @@ def build_html_studio(flower_json, leaf_json):
       }}
 
       if (showBoxes) {{
-        if (f.bdy && f.bdy.length) {{
+        if (f.hurtbox && f.hurtbox.length) {{
           ctx.strokeStyle = '#00f0ff';
           ctx.lineWidth = 1;
-          ctx.strokeRect(f.bdy[0], f.bdy[1], f.bdy[2], f.bdy[3]);
+          ctx.strokeRect(f.hurtbox[0], f.hurtbox[1], f.hurtbox[2], f.hurtbox[3]);
         }}
-        if (f.itr && f.itr.length) {{
+        if (f.hitbox && f.hitbox.length) {{
           ctx.strokeStyle = '#ef4444';
           ctx.lineWidth = 1.5;
-          ctx.strokeRect(f.itr[0], f.itr[1], f.itr[2], f.itr[3]);
+          ctx.strokeRect(f.hitbox[0], f.hitbox[1], f.hitbox[2], f.hitbox[3]);
         }}
       }}
     }}
 
-    // Animation loop with LF2 wait timing accumulator
+    // Animation loop with Divergency wait timing accumulator
     let lastTime = performance.now();
     let accumulatedTime = 0;
 
@@ -1008,11 +1008,11 @@ def write_suite_readme():
     print("[5/5] Generating Suite README.md...")
     readme_path = os.path.join(SUITE_DIR, "README.md")
     
-    readme_content = """# Bầy Người Hoa (Les Éclos) — Animation Suite & LF2 Combat Specification
+    readme_content = """# Bầy Người Hoa (Les Éclos) — Animation Suite & Divergency Combat Specification
 > **Dự án:** *Divergency / LF Revive*  
 > **Nhóm NPC:** Bầy Người Hoa Cống Ngầm Laundel (Hội Nhụy Huyết)  
 > **Màn chơi:** Stage 1-3 Đại Hỗn Chiến Bến Cảng Hoàng Hôn (Hangar J4)  
-> **Chuẩn hóa Engine:** LF2 Deterministic Wait Engine (30 FPS, wait * 33.33ms)  
+> **Chuẩn hóa Engine:** Deterministic preview timeline (30 FPS, wait * 33.33ms)  
 > **Kiến trúc Tách Lớp:** `Character_Body` & `FX_Effects` (Aseprite Native Layers)  
 
 ---
@@ -1030,11 +1030,11 @@ Bầy Người Hoa ("Les Éclos") là những nạn nhân của chất thải t�
 
 ---
 
-## 2. BẢNG DANH MỤC ĐÒN ĐÁNH & THỜI LƯỢNG LF2
+## 2. BẢNG DANH MỤC ĐÒN ĐÁNH & THỜI LƯỢNG Divergency
 
 ### A. Quái Hoa Nhụy (`mutan_flower`) — Canvas 128 × 128 | Pivot `(64, 112)`
 
-| Tên Animation | Lệnh Bấm LF2 | Số Frames | Ticks Chuỗi Wait | Tổng Thời Lượng | Vai Trò & Tương Tác Cốt Truyện Bến Cảng |
+| Tên Animation | Lệnh Bấm Divergency | Số Frames | Ticks Chuỗi Wait | Tổng Thời Lượng | Vai Trò & Tương Tác Cốt Truyện Bến Cảng |
 | :--- | :--- | :---: | :--- | :---: | :--- |
 | **IDLE** | — | 6 | `4, 4, 4, 4, 4, 4` | 800 ms | Thở dốc giữa đêm giông bão, đóa hoa co bóp nhịp nhàng. |
 | **WALK** | `→ →` / AI | 6 | `3, 3, 3, 3, 3, 3` | 600 ms | Tiến bước lặc lè, hai tay quét gần sát mặt đất. |
@@ -1049,7 +1049,7 @@ Bầy Người Hoa ("Les Éclos") là những nạn nhân của chất thải t�
 
 ### B. Sát Thủ Lá Gai (`mutan_leaf`) — Canvas 128 × 128 | Pivot `(64, 112)`
 
-| Tên Animation | Lệnh Bấm LF2 | Số Frames | Ticks Chuỗi Wait | Tổng Thời Lượng | Vai Trò & Tương Tác Cốt Truyện Bến Cảng |
+| Tên Animation | Lệnh Bấm Divergency | Số Frames | Ticks Chuỗi Wait | Tổng Thời Lượng | Vai Trò & Tương Tác Cốt Truyện Bến Cảng |
 | :--- | :--- | :---: | :--- | :---: | :--- |
 | **IDLE** | — | 6 | `3, 4, 4, 3, 3, 4` | 700 ms | Khom lưng nhún nhảy, móng vuốt đỏ thõng xuống rình mồi. |
 | **WALK** | `→ →` / AI | 6 | `3, 3, 3, 3, 3, 3` | 600 ms | Lướt thoăn thoắt trên đầu ngón chân né đèn pha quét. |
@@ -1081,7 +1081,7 @@ Mọi file `.aseprite` xuất ra trong thư mục `aseprite/` đều tuân thủ
    * Chuyển đổi giữa 2 nhân vật bằng nút **Quái Hoa Nhụy** và **Sát Thủ Lá Gai**.
    * Bật/tắt các tầng hiển thị: `🌟 Composite`, `🧍 Body Only`, `🩸 FX Only`.
    * Kéo thanh trượt Scrubber để soi từng frame và nhịp `wait` chuẩn 30 FPS.
-   * Xem và sao chép mã code **LF2 Data Frame** tạo sẵn bên dưới.
+   * Xem và sao chép mã code **preview metadata JSON** tạo sẵn bên dưới.
 2. **Chỉnh sửa trong Aseprite:**
    * Mở file `aseprite/Mutan_Flower_Master_Combat.aseprite` hoặc `aseprite/Mutan_Leaf_Master_Combat.aseprite`.
    * Dòng thời gian (Timeline) đã được chia sẵn các Tag tương ứng với chuỗi `wait ticks` chuẩn xác.

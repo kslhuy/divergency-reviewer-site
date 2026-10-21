@@ -1,8 +1,9 @@
 import os
+from divergency_paths import unity_path
 import re
 import json
 
-doc_path = r"C:\Users\Quang Huy Nugyen\LF2Revie\Docs\DevLogsMusicAndSFXPrompts.md"
+doc_path = unity_path("Docs", "DevLogsMusicAndSFXPrompts.md")
 
 if not os.path.exists(doc_path):
     print(f"File not found: {doc_path}")

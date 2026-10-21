@@ -1,0 +1,33 @@
+Use case: stylized-concept.
+Asset type: ONE finished opaque environment concept for Divergency Chapter 5, the final Umbilical Altar at night before the resolution. Wide horizontal 2:1 pixel-art background for a 2.5D side-scrolling beat 'em up boss encounter.
+
+USER ART DIRECTION: The ground must grow from the lore and architecture of this altar. It is ancient divine porcelain fused with solidified biological glass, NOT the generic rocky/cobblestone dungeon floor of the skill or the nearby rescue plaza. Keep clear depth for play while making its material and pattern unique.
+
+REFERENCE ROLES IN ORDER:
+1. ch5_03_umbilical_altar_playable.png: inspiration for a circular ritual ground, enormous umbilical column and old standing stones. Redesign as a broad traversable plane before dawn. Remove the golden sun, conspicuous front platform edge and narrow circular stage.
+2. ch5_02b_confluence_refuge_concept_v1.png: continuity of handcrafted pixel rendering and dark, readable forms only. Do not copy its cobblestone ground, rubble plaza or red-vine gateway.
+3. style-anchor.png: secondary reference for crisp pixel clusters and discrete value ramps only; do not copy its cave floor, skeletons or brown palette.
+
+SCENE AND DRAMATIC REVEAL:
+The summit of the sleeping god's Blue Cradle. Behind a broad empty ritual ground, ONE immense braided umbilical strand rises beyond the image into a silent blue-black cosmic sky. It feels like a living cosmic connection, composed of dark pearlescent tissue with subdued pale-jade inner filaments, not a bright tree, a laser, flowing lava or a neon fountain. Place its base behind the rear edge of the playable plane, slightly right of center. Its immense scale is the dramatic reveal after the much smaller distant strand in the rescue plaza. Broken pale monoliths at the far sides frame the chamber, with very few floating fragments in the distance. At far-left rear, an open stone arch subtly recalls the arrival from the displaced plaza. A small empty recessed plinth near the rear-right can later receive a separate cryogenic-pod prop. Leave its socket empty; the pod and all characters will be separate assets.
+
+SITE-SPECIFIC DIVINE GROUND:
+A continuous broad plane of muted pearl-gray and ivory organic porcelain fused into smoked blue glass. Its surface has huge smooth petal-like plates with sparse hairline seams, an enormous FLUSH circular inlay cropped by the bottom edge, and four quiet radial channels set INSIDE the material toward the rear conduit. Think fossilized living tissue that became fine ceramic, with very subtle translucent depth and nacre-like discrete color shifts. This is an ancient biological interface, not a mechanical metal grid and not rough rock pavement. Subtle gray-lavender and dark blue veins lie beneath the surface, with tiny restrained jade glints only near the rear conduit. Keep floor highlights soft in value and sparse. No glowing runic text, bright target rings, blood pools, skulls, gravel, cobbles, roots crossing the floor or marble checkerboard.
+
+GAMEPLAY COMPOSITION:
+Fixed side-on 2.5D view with a shallow ground plane occupying about the lower 45 percent. The floor spans the entire image width and continues below the crop. The circular motif is inlaid FLUSH in that floor; it is NOT a raised island, disk with exposed front edge, platform over a pit, stage reached by stairs or a perspective road. Leave the central 70 percent spacious for boss, player and two allies, with only low-contrast surface patterning. All monoliths, the umbilical root and plinth stay behind the rear floor edge. No tall foreground props. No stacked ledges. Maintain enough floor/background value separation to read sprites without overlighting the ground.
+
+STYLE AND LIGHT:
+Dark handcrafted 16-bit-inspired pixel art, visible square clusters, stepped silhouettes, limited discreet dithering and short clean shade ramps. Midnight navy and slate-violet sky, gray-pearl porcelain, blue smoked glass and restrained jade inner light. The mood is solemn, immense and threatening. NO golden sunrise or yellow halo: warmth is reserved for the later successful return ritual. No dense sparkles, neon floodlighting, painterly microtexture, smooth airbrushing, heavy bloom, 3D rendering or isometric/top-down camera.
+
+DELIVERY:
+ONE finished opaque empty environment with unique site-specific ground. No people, boss, silhouettes of people, children, bodies, pod occupant, enemies, UI, writing, labels, diagrams, logos, watermark, collage or multiple panels.
+
+REFERENCE PATHS:
+1. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage5/ch5_03_umbilical_altar_playable.png
+2. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage5/ch5_02b_confluence_refuge_concept_v1.png
+3. output/skills/divergency-25d-stage-background/references/style-anchor.png
+
+GENERATION METHOD: built-in image_gen.
+TARGET OUTPUT: imgs/Stage5/ch5_03_umbilical_altar_night_v2.png
+STATUS: environment concept; not engine-tested.

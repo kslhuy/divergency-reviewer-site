@@ -1,0 +1,27 @@
+Edited with built-in image_gen.
+Edit target: imgs/Stage3/ch3_06_under_catacomb_platform_pixel_v2.png
+Requested change: expand the walkable area while retaining the approved platform shapes, layout, pixel rendering and teal atmosphere.
+Art direction: a broader front-to-back ground route and deeper visible tops on existing platforms and stair treads.
+
+Use case: precise-object-edit.
+Asset type: a revised ultra-wide 3:1 pixel-art 2.5D game-stage background.
+
+IMAGE 1 is the EDIT TARGET. The user approves this scene and wants MORE WALKABLE SPACE. Make the walkable surfaces visibly broader in FRONT-TO-BACK DEPTH so characters have room to move toward and away from the background, not just left/right.
+
+PRESERVE:
+Keep the established ancient teal under-catacomb atmosphere, pixel art, root columns, stalactite canopy, luminous turquoise depths, distant mist layers, ruined masonry materials, and overall panoramic camera.
+Preserve the recognizable layout, relative horizontal positions, tower dimensions, original stair profiles, elevations of the raised platforms, and open horizontal gaps between raised structures. Do not replace these ruins with a new arena. Keep the ascending stairs on the left, the left tower ledge, the tall central-left tower with projecting balcony and thin supporting stilts, the narrow middle tower with chained right balcony, low rubble and short broken wall, descending stairs on the right, and the rightmost tower on a projecting supported balcony.
+
+WALKABLE GROUND STRIP:
+The current ground at the bottom is too narrow, almost a thin baseline. Widen this EXISTING route into a clearly visible flat ground plane about 18-22% of the final image height, roughly 2.5 times its present depth. Extend it toward the viewer across the bottom of the scene. A modest upward reframing of the existing scenery is acceptable to create room, but preserve the shapes and scale of the original structures.
+This is an ancient under-catacomb stone-earth route, dark cool gray-green/teal, quiet and readable. Broad worn rock surfaces, shallow cracks, a few sparse flat stone chips and subtle moss in seams. No new dense cobblestone pattern, ceremonial circle, glowing grid or unrelated decorations. Separate the walkable plane from the ruin fronts with discrete pixel shading and restrained edge light so its usable depth is obvious. The player area must remain mostly clear. Do not add huge rubble, holes, raised obstacles or pits on this route. No empty black band at the bottom.
+
+RAISED PLATFORMS AND STAIRS:
+Make the visible horizontal TOP SURFACES of the existing ledges/balconies about 2-3 times deeper toward the viewer. They must read as broad small terraces where characters can stand and move in depth, rather than thin decorative stone shelves. Keep their LEFT/RIGHT footprint, original rear-edge heights, staircase directions and tower relationships recognizable. Extend their stone top faces forward and show their front fascia in shallow 2.5D projection; do not enlarge the towers themselves. Maintain the original side-profile identity of each platform. Enlarge each existing stair tread in front-to-back depth without changing the step count, the ascending/descending profile, or turning the stairs into a ramp. Extend relevant thin supports or stone braces naturally under the widened decks. The suspended right balcony stays a small chained stone platform, just deeper and more readable. Do not connect separated raised platforms into a single new bridge.
+
+VISUAL REQUIREMENTS:
+Keep a side-on beat 'em up camera with shallow visible top faces, no isometric overhaul or top-down view. Clear hard-edged pixel-art planes. Authentic 16-bit clusters, stepped silhouettes, compact highlights, short discrete shade ramps, restrained dithering. Palette stays dark green-black, cool desaturated teal masonry, turquoise distant light and gray-green haze. Preserve the bright distant atmosphere and dark readable structures; do not add red, orange or neon highlights.
+
+No characters, enemies, text, UI, labels, watermark, black letterbox band, 3D rendering, glossy textures, blur, soft airbrushing, antialiasing or smooth gradient shading.
+The visual change should be immediately clear: the SAME ruins, with a broader playable ground route below and substantially deeper, standable platform tops, all in the same pixel style.
+

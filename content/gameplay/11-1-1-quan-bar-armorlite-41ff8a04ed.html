@@ -1,13 +1,13 @@
 <h2 id="gameplay-1-1-quan-bar-armorlite" tabindex="-1"><a class="heading-link" href="#gameplay-1-1-quan-bar-armorlite" aria-label="Link to section">#</a>1-1. Khu phố Noailles, Quán bar Armorlite & Cuộc ẩu đả bến cảng Vieux-Port</h2>
-<p class="chapter-version"><strong>Bản đồng nhất gameplay · narrative · Timeline — 10/10/2026.</strong> Nguồn thực thi: <code>Assets/Scenes/Chapter1_Playable.unity</code>. Bản đang ở mức <code>prototype_known_issues</code>; các phần cần hoàn thiện được ghi cụ thể phía dưới.</p>
+<p class="chapter-version"><strong>Bản thiết kế được đồng bộ ngày 20/10/2026; các mô tả prototype bên dưới là mốc đối chiếu, cần kiểm tra lại khi tích hợp.</strong> Nguồn thực thi: <code>Assets/Scenes/Chapter1_Playable.unity</code>. Bản đang ở mức <code>prototype_known_issues</code>; các phần cần hoàn thiện được ghi cụ thể phía dưới.</p>
 <span id="gameplay-1-1-trong-quan"></span><span id="gameplay-1-1-bi-tim-thay"></span><span id="gameplay-1-1-xuong-cong"></span>
 
 <div class="table-wrap"><table><thead><tr><th>Tuyến di chuyển (Where to where)</th><th>Mục tiêu &amp; Điểm mốc</th><th>Chuyển tiếp gameplay</th></tr></thead><tbody>
 <tr><td><strong>Căn cứ Deep → Đại lộ Marseille</strong><br><code>marsile_background.png</code></td><td>Men theo đại lộ nhìn xuống vịnh cảng và đồi Notre-Dame dưới nắng ban ngày để né tránh chốt cơ giới.</td><td>Di chuyển trinh sát, quan sát trạm kiểm soát từ trên cao.</td></tr>
 <tr><td><strong>Đại lộ → Phố chợ Noailles &amp; Bar Armorlite</strong><br><code>noailles_market_gameplay_v3_muted.png</code></td><td>Băng qua chợ gia vị Noailles; chia đội (Mark/Deep vào gặp Jacques lấy hải đồ, Ghost/Block ở ngoài canh chừng).</td><td>Hội thoại trong bar + Mini-skirmish đánh lén lút/cận chiến ngoài cửa bar.</td></tr>
 <tr><td><strong>Armorlite → Bến cảng Vieux-Port lúc hoàng hôn</strong><br><code>marseille_late.png</code></td><td>Jacques mở cửa ngách thoát thân; kéo trận chiến ra đại lộ bờ kè bến cảng lúc chạng vạng hoàng hôn đỏ rực.</td><td>Đấu trường Beat 'em up diện rộng: Quái xế mô tô, ném bom xăng, Ring Out mép kè.</td></tr>
-<tr><td><strong>Vieux-Port → Cửa cống ngầm bờ kè</strong></td><td>Dồn thủ lĩnh băng đảng (Big_MM) về mép kè chắn sóng, mở nắp cống bảo trì thoát xuống lòng đất.</td><td>Hạ Boss, mở cửa chuyển cảnh sang Chapter 1-2 (Sewer1).</td></tr>
-<tr><td><strong>Màn phụ: Mark tại Vallon des Auffes</strong><br><code>vallon_des_auffes_marsile_style_v1.png</code></td><td>Mark độc hành lẻn vào làng chài dưới chân cầu vòm đá để móc nối với Thuyền trưởng Mateo chuẩn bị thuyền vượt biển.</td><td>Sidescrolling 2.5D Stealth-Action: Né đèn pha quét trên cầu, Silent Takedown, Splash Ring Out.</td></tr>
+<tr><td><strong>Vieux-Port → Cửa cống ngầm bờ kè</strong></td><td>Dồn thủ lĩnh quái xế Big Bro về mép kè chắn sóng, mở nắp cống bảo trì thoát xuống lòng đất.</td><td>Hạ Boss, mở cửa chuyển cảnh sang Chapter 1-2 (Sewer1).</td></tr>
+<tr><td><strong>Màn phụ: Mark tại Vallon des Auffes</strong><br><code>vallon_des_auffes_marsile_style_v1.png</code></td><td>Mark độc hành lẻn vào làng chài dưới chân cầu vòm đá để móc nối với Thuyền trưởng Mateo chuẩn bị thuyền vượt biển.</td><td>Sidescrolling 2.5D Stealth-Action: Né đèn pha quét trên cầu, Silent Takedown, khống chế tại chỗ.</td></tr>
 </tbody></table></div>
 
 <figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/marsile_background.png" alt="marsile_background — Tuyến đường đô thị ban ngày tiến vào trung tâm Marseille" loading="lazy"><figcaption>marsile_background — Tuyến đại lộ ban ngày: Cả đội men theo trục đường nhìn xuống vịnh cảng và nhà thờ Notre-Dame de la Garde để tránh xe tuần tra cơ giới.</figcaption></figure>
@@ -18,13 +18,13 @@
 <figure class="markdown-image"><img src="imgs/Stage1/chap1/noailles_concepts/noailles_market_gameplay_v3_muted.png" alt="noailles_market_gameplay_v3_muted — Phố chợ Noailles và mặt tiền quán Bar Armorlite" loading="lazy"><figcaption>noailles_market_gameplay_v3_muted — Sàn đấu phố chợ Noailles: Sạp gia vị, quầy hoa quả, thùng gỗ tương tác và cửa vào Bar Armorlite ở góc phải.</figcaption></figure>
 
 <ul>
-  <li><strong>Cơ chế chia đội (Squad Split):</strong> Cả nhóm 5 người không thể cùng vào quán vì sẽ gây chú ý cho tai mắt chính quyền:
+  <li><strong>Cơ chế chia đội (Squad Split):</strong> Đội tránh cùng ùa vào quán vì sẽ gây chú ý cho tai mắt chính quyền:
     <ul>
       <li><strong>Nhóm bên trong:</strong> Mark và Deep vào bar đàm phán với Jacques để nhận hải đồ, giờ hẹn đổi ca tuần tra và thẻ bảo trì cống.</li>
-      <li><strong>Nhóm bên ngoài:</strong> Stranger (Ghost) và Block (đang bị thương máu tối đa còn 75%) nán lại ngoài lề đường trông chừng.</li>
+      <li><strong>Nhóm bên ngoài:</strong> Stranger (Ghost) và Block (đã được ổn định tại căn cứ) nán lại ngoài lề đường trông chừng.</li>
     </ul>
   </li>
-  <li><strong>Mini-Skirmish ngoài cửa bar:</strong> Tay chân do thám của Băng Quái Xế phát hiện Block và Ghost. Người chơi điều khiển nhóm ngoài hạ gục 3 tên du côn gây rối. Đạo cụ tương tác: đạp đổ sạp ớt bột làm mù mắt địch (Blind/Stun), ném thùng hoa quả và bao gia vị gây choáng.</li>
+  <li><strong>Mini-Skirmish ngoài cửa bar:</strong> Tay chân do thám của Băng Quái Xế phát hiện Block và Ghost. Đoạn phát hiện là kịch bản; trước khi giao chiến, nhóm đã chọn một người trực tiếp và hai hỗ trợ tập hợp ngoài cửa. Những người còn lại giữ khách và đường rút, không thêm General. Đạo cụ tương tác: đạp đổ sạp ớt bột làm mù mắt địch (Blind/Stun), ném thùng hoa quả và bao gia vị gây choáng.</li>
   <li><strong>Báo động &amp; Cửa thoát hiểm:</strong> Nghe tiếng đánh nhau ngoài cửa, Jacques rút súng săn và mở ngay cửa ngách sau quán dẫn qua con hẻm dốc đổ thẳng ra mặt cảng Vieux-Port.</li>
 </ul>
 
@@ -33,34 +33,34 @@
 
 <p>Băng đua xe (thù cũ của Deep từ vụ triệt phá đường dây buôn người) dàn quân phục kích trên bờ kè đá hoa cương rộng thênh thang của <strong>Vieux-Port</strong> lúc hoàng hôn đỏ rực:</p>
 <ul>
-  <li><strong>Đấu trường mô tô phân khối lớn:</strong> Kẻ địch chạy xe máy từ ngoài màn hình vào với vạch đỏ telegraph cảnh báo trước 2,5 giây. Người chơi có thể dùng đòn nhảy chém của Deep hoặc cú huých khiên của Block để hất quái xế văng khỏi xe.</li>
-  <li><strong>Cơ chế đẩy rơi xuống biển (Ring Out):</strong> Dọc mép kè không có rào chắn, đòn đánh mạnh có thể hất văng địch rơi xuống biển kết liễu tức thì.</li>
-  <li><strong>Thủ lĩnh Big_MM:</strong> Cưỡi mô tô lớn quẹt kiếm tạo vệt lửa trên mặt đường, khi mất 50% máu sẽ xuống xe cận chiến với đòn chém quét diện rộng chống nhảy đánh.</li>
+  <li><strong>Đấu trường mô tô phân khối lớn:</strong> Kẻ địch chạy xe máy từ ngoài màn hình vào với vạch đỏ telegraph cảnh báo trước 2,5 giây. Người chơi có thể dùng đòn nhảy chém của Deep hoặc cú đấm móc của Block để hất quái xế văng khỏi xe.</li>
+  <li><strong>Cơ chế đẩy rơi xuống biển (Ring Out):</strong> Dọc mép kè không có rào chắn, đòn đánh mạnh có thể hất văng địch rơi xuống biển đẩy địch khỏi khu giao chiến; dân thường ở tuyến được bảo vệ.</li>
+  <li><strong>Thủ lĩnh quái xế Big Bro:</strong> Cưỡi mô tô lớn quẹt kiếm tạo vệt lửa trên mặt đường, khi mất 50% máu sẽ xuống xe cận chiến với đòn chém quét diện rộng chống nhảy đánh.</li>
   <li><strong>Lối thoát cống ngầm:</strong> Sau khi dọn sạch Boss và còi xe cảnh sát hú vang, Mark cạy nắp cống kỹ thuật ngay mép kè đưa cả đội trượt xuống Chapter 1-2.</li>
 </ul>
 
 <h3>3. Màn thám báo độc hành: Mark tại Vallon des Auffes</h3>
 <figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/vallon_des_auffes_marsile_style_v1.png" alt="vallon_des_auffes_marsile_style_v1 — Vịnh Le Vallon des Auffes" loading="lazy"><figcaption>vallon_des_auffes_marsile_style_v1 — Vịnh Le Vallon des Auffes: Đấu trường Sidescrolling 2.5D phong cách Stealth-Action của Mark dưới chân cầu vòm đá Corniche Kennedy.</figcaption></figure>
 
-<p>Để chuẩn bị sẵn phương án vượt biển bí mật sang Sakuri, <strong>Mark độc hành xâm nhập Vallon des Auffes</strong> — vịnh cảng ngư dân nép dưới chân cầu vòm đá khổng lồ:</p>
+<p>Để chuẩn bị sẵn phương án rời Marseille bằng đường biển, <strong>Mark độc hành xâm nhập Vallon des Auffes</strong> — vịnh cảng ngư dân nép dưới chân cầu vòm đá khổng lồ:</p>
 <ul>
   <li><strong>Cơ chế tránh tai mắt (Searchlight Evasion):</strong> Xe tuần tra cảnh sát trên đỉnh cầu vòm đá liên tục quét đèn pha xuống vịnh. Mark phải canh thời điểm nấp dưới bóng râm các trụ cầu, ngồi thụp sau các lồng bẫy cua, đống dây thừng và giàn cá khô.</li>
-  <li><strong>Triệt hạ lén lút (Silent Takedown):</strong> Áp sát lính gác và tay chỉ điểm từ phía sau, bẻ khớp hạ gục nhanh hoặc đạp văng đối thủ xuống làn nước xanh ("Splash" Ring Out) không gây tiếng động.</li>
+  <li><strong>Triệt hạ lén lút (Silent Takedown):</strong> Áp sát lính gác và tay chỉ điểm từ phía sau, bẻ khớp hạ gục nhanh bằng đòn phù hợp hoặc né qua theo vật che; rơi nước gây tiếng lớn, không phải cách lén lút im lặng.</li>
   <li><strong>Gặp gỡ Thuyền trưởng Mateo:</strong> Mark tiếp cận cầu tàu gỗ bên phải, gõ cửa nhà vàng ven vách đá để chốt tọa độ và giờ đón với người lái thuyền kỳ cựu.</li>
 </ul>
 
 <h3>Điều kiện hoàn thành</h3>
 <p>Cuộc nói chuyện Jacques chỉ cấp mục tiêu sau câu cuối. Toàn bộ chuỗi encounter dọc bờ cảng Vieux-Port chỉ được tính an toàn sau khi thủ lĩnh và mọi actor chiến đấu trong Timeline đã bị hạ gục. Cửa cống ngầm bảo trì giữ tiến trình chuyển tiếp sang Chapter 1-2 mà không tự cấp vật phẩm thay hội thoại.</p>
 <h3>Phần cần hoàn thiện tiếp</h3>
-<p>Thủ lĩnh hiện dùng Big_MM làm asset đại diện. Bản này đang hoàn thiện bộ đòn riêng cho hắn, cơ chế xe mô tô lao qua có vạch cảnh báo telegraph, các đạo cụ tương tác (thùng cá ném gây choáng, sạp ớt làm mù). Nhịp chuyển camera cuộn ngang liên tục (horizontal scrolling) giữa các phân vùng cảng đang được đồng bộ hóa từ layout tổng thể.</p>
+<p>Thủ lĩnh quái xế là Big Bro, khác Don Malo ở Hangar J4. Prototype từng dùng asset Big_MM đại diện; cần đổi nhãn và cấu hình khi tích hợp, không kể thành Don Malo xuất hiện hai lần. Bộ đòn riêng, cơ chế xe mô tô lao qua có vạch cảnh báo telegraph, các đạo cụ tương tác (thùng cá ném gây choáng, sạp ớt làm mù). Nhịp chuyển camera cuộn ngang liên tục (horizontal scrolling) giữa các phân vùng cảng cần đồng bộ theo layout tổng thể.</p>
 
 <h3>Phạm vi Timeline của đoạn</h3><div class="table-wrap"><table><thead><tr><th>Phòng / Phân khu</th><th>Thực thi</th></tr></thead><tbody>
 <tr><td><code>ch1_marseille_boulevard</code></td><td>Không có encounter; di chuyển qua đại lộ ban ngày quan sát trạm kiểm soát</td></tr>
 <tr><td><code>ch1_noailles_market</code></td><td>Timeline Mini-Wave: 4 actor (Skirmish ngoài cửa Bar Armorlite)</td></tr>
 <tr><td><code>ch1_armorlite</code></td><td>Không có encounter; giữ hội thoại Jacques, Mireille, DJ Luc và cửa ra phố</td></tr>
-<tr><td><code>ch1_vieuxport_late</code></td><td>Timeline Wave 1: 12 cue / 6 actor + Boss Big_MM (Bờ kè cảng hoàng hôn muộn)</td></tr>
+<tr><td><code>ch1_vieuxport_late</code></td><td>Timeline Wave 1: 12 cue / 6 actor + thủ lĩnh quái xế Big Bro (Bờ kè cảng hoàng hôn muộn)</td></tr>
 <tr><td><code>ch1_vallon_des_auffes</code></td><td>Timeline Stealth/Takedown: 5 actor tuần tra + điểm hẹn thuyền trưởng Mateo</td></tr>
-</tbody></table></div><p>Timeline điều khiển spawn và nhịp chiến đấu. Typewriter giữ hội thoại nhấn tiếp; ChapterOneProgress giữ trạng thái nhiệm vụ/cửa/checkpoint. Không chạy đồng thời bộ spawn cũ. Dữ liệu có thể chỉnh trong LF2 → Stage Timeline.</p>
+</tbody></table></div><p>Timeline điều khiển spawn và nhịp chiến đấu. Typewriter giữ hội thoại nhấn tiếp; ChapterOneProgress giữ trạng thái nhiệm vụ/cửa/checkpoint. Không chạy đồng thời bộ spawn cũ. Dữ liệu có thể chỉnh trong cửa sổ Stage Timeline của Unity.</p>
 
 <details><summary>Ảnh tham chiếu bố trí stage gameplay (Noailles & Vieux-Port Battle Sequence)</summary>
 <figure class="markdown-image"><img src="imgs/campaign-panels/Fund_region/imgs_refs/Noail_quartier.jpg" alt="Ảnh thực tế khu phố Noailles — ngõ hẹp, khu chợ đa văn hóa sầm uất nơi quán bar Armorlite tọa lạc." loading="lazy"><figcaption>Ảnh thực tế khu phố Noailles — ngõ hẹp, khu chợ đa văn hóa sầm uất nơi quán bar Armorlite tọa lạc.</figcaption></figure>
@@ -71,7 +71,7 @@
 <figure class="markdown-image"><img src="imgs/Stage1/chap1/marseille_stages/vieux_port_04_sewer_sluice_dock.png" alt="Phân đoạn 3: Cầu cảng chắn sóng & Cửa bảo trì cống xả — Vị trí đối đầu thủ lĩnh băng đảng và lối thoát xuống cống ngầm 1-2." loading="lazy"><figcaption>Phân đoạn 3: Cầu cảng chắn sóng & Cửa bảo trì cống xả — Vị trí đối đầu thủ lĩnh băng đảng và lối thoát xuống cống ngầm 1-2.</figcaption></figure>
 </details>
 
-<section class="chapter-dialogue"><h3>Toàn bộ hội thoại đang gắn trong bản Unity</h3><p>Các mục dưới được xuất từ Typewriter. Điều kiện và tên điểm tương tác dành cho việc review, không phải lời nhân vật nói.</p>
+<section class="chapter-dialogue"><h3>Hội thoại mục tiêu và các key để đối chiếu Unity</h3><p>Các mục dưới giữ key Typewriter để tích hợp; phần biên tập mới cần được đồng bộ lại trong Unity. Điều kiện và tên điểm tương tác dành cho việc review, không phải lời nhân vật nói.</p>
 <details><summary>Armorlite — ch1_armorlite</summary>
 <p>Hỏi Jacques về giờ hẹn thuyền và lối dự phòng qua Laundel.</p>
 <ul>

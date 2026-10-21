@@ -96,8 +96,8 @@ test('image API authenticates, uploads, serves and lists new images for reuse', 
   assert.ok((await (await fetch(origin + '/')).text()).includes(image.src));
 });
 
-test('current gameplay import preserves every text fragment, image, table cell and heading', () => {
-  const markdown = readFileSync(path.join(projectRoot, 'Divergency_Gameplay_Level_Design.md'), 'utf8');
+test('legacy Markdown import preserves text, images, table cells and headings without an obsolete document dependency', () => {
+  const markdown = '# Lối chơi\n\n## Nhân vật\n\nSolei dùng đòn chân karate; chân máy có mắt quỷ.\n\n| Nhân vật | Phong cách |\n| --- | --- |\n| Deep | Kiếm ngắn, đấu sĩ |\n| Block | Da đen, boxing, đấm đá và đỡ đòn |\n| Mark | Cung tách thành kiếm, kính kiểu laser |\n| Tulas | Phép thuật máu, dấu chữ thập ở ngực |\n\n![Deep](imgs/chars/Deep/Deep.png)\n';
   const rendered = renderMarkdown(markdown, 'gameplay');
   const prepared = prepareGameplay(rendered.html);
   assert.deepEqual(contentSignature(prepared.html), contentSignature(rendered.html));
@@ -177,7 +177,7 @@ test('build uses the web source and includes working scripts and valid gameplay 
     new vm.Script(src ? readFileSync(path.join(projectRoot, src), 'utf8') : node.childNodes.map(child => child.value || '').join(''));
     scripts++;
   });
-  assert.equal(scripts, 10);
+  assert.equal(scripts, 11);
   assert.ok(page.includes('Edit document'));
   for (const item of gameplay.toc) {
     assert.ok(page.includes(`id="${item.id}"`));

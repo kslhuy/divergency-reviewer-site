@@ -1,0 +1,27 @@
+Use case: precise-object-edit.
+Asset type: a revised empty pixel-art environment background for Divergency Chapter 3, the final Voro / Choir boss arena.
+
+INPUT IMAGE 1 IS THE EDIT TARGET:
+C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage3/ch3_12_the_tongue_inner_sanctum.png
+
+STORY REQUIREMENT:
+Jamerson has already received the living core of the divine Tongue through a deal with Mother Voro BEFORE the heroes enter this room. The remaining boss is Voro controlling the Choir apparatus, powered by imprisoned souls and previously sealed voice contracts. The environment must show that the actual divine core is absent. It must not depict the living Tongue still waiting to be collected.
+
+PRESERVE:
+The source's handcrafted Divergency pixel-art language, consistent visibly square pixels, hard stepped contours, short discrete shade ramps, dark stone cathedral, restrained burgundy / ochre / gold palette, sparse teal ghost-flame accents, fixed side-on 2.5D beat 'em up viewpoint, horizontal composition, architectural pillars and broad usable floor. Preserve the particular dark geometric tiled floor of THIS map, its quiet walking depth, its side-scrolling gameplay proportions and its floor material; do not replace it with a generic cobblestone floor, cave floor or cosmic marble. The user's direction is that ground must fit each specific map.
+
+CHANGE:
+1. Remove the giant living red Tongue and its demon-like organic silhouette from the center upper/rear wall. In its place, create a CLEARLY EMPTY bone-and-bronze reliquary socket shaped like an open oval mouth, dark inside, with severed inert connector ends hanging beside it. This is an architectural empty socket, not an alive mouth, a creature, or a person. No glowing divine core remains.
+2. Place THREE distinct large old bone-and-bronze bell resonators along the BACK line of the room, integrated between existing pillars. They should have clear separate silhouettes, chained phonograph-like voice chambers, and a few dim teal seams. Static machinery only; the later interactive handles and effects will be separate game objects. Their spatial links lead to a single raised conductor's lectern at the extreme rear right where Voro can later stand. Do not draw Voro.
+3. Replace the red organic central mass with the skeletal architecture of a ritual sound machine: old bronze voice pipes, hanging chains and closed empty lattice soul-vessel housings behind the walking floor. Leave negative space for the later boss character. Do not include recognizable souls or human figures inside the housings.
+4. Remove ALL baked-in enemies, fighters, horned creatures and small creatures currently sitting on the floor. Also remove any foreground object that blocks the main horizontal movement strip. Make the lower approximately 40 percent one broad quiet unobstructed continuous floor reaching both horizontal edges.
+
+STYLE:
+Closely match the original low-resolution game background rather than making a realistic cinematic painting. Avoid high-frequency painterly texture, soft gradients, 3D rendering, isometric perspective, excessive bloom and photoreal light. Muted teal only for small machinery accents and lamps; preserve the chamber's red-black-gold identity. No blue cosmic sky from Chapter 5, no unrelated cave bones and no brightly glowing ground runes.
+
+DELIVERY:
+ONE opaque edge-to-edge pixel-art environment, no characters, enemies, people, children, spirits, silhouettes of people, UI, text, labels, diagrams, watermarks or multiple panels. The image must read as an empty playable-looking room with a missing relic core and the remaining coercion machinery.
+
+GENERATION METHOD: built-in image_gen edit with local reference path.
+TARGET OUTPUT: imgs/Stage3/ch3_12_voro_choir_contract_arena_v2.png
+STATUS: story-aligned concept environment, not a Unity-tested scene.

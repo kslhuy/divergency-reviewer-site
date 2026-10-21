@@ -5,12 +5,18 @@ import { prepareGameplay } from './scripts/web-content.mjs';
 import { readContent, describeContent } from './scripts/chapter-content.mjs';
 import { buildPage } from './src/page.mjs';
 import { publicContent } from './src/public-content.mjs';
+import { assertCharacterCanon, characterCanonViolations } from './scripts/check-character-canon.mjs';
+import { writeStoryReader } from './scripts/story-reader.mjs';
 export { buildPage };
 const here = fileURLToPath(new URL('.', import.meta.url));
 const outputFile = path.join(here, 'Divergency_Reviewer_Tabs.html');
 const localOutputFile = path.join(here, 'Divergency_Reviewer_Local.html');
 
 export function buildDocs(gameplayOverride, { local = false } = {}) {
+  assertCharacterCanon();
+  if (gameplayOverride !== undefined && characterCanonViolations(gameplayOverride).length) {
+    throw new Error('Character canon conflict in gameplay draft. Read AGENTS.md before saving.');
+  }
   const documents = JSON.parse(readFileSync(path.join(here, 'content/documents.json'), 'utf8'));
   return documents.filter(doc => local || doc.id === 'kickstarter').map(doc => {
     const source = doc.id === 'gameplay' && gameplayOverride !== undefined ? gameplayOverride : readContent(here, doc.id);
@@ -36,9 +42,11 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   if (isAll) {
     buildReviewer({ local: false, output: outputFile });
     buildReviewer({ local: true, output: localOutputFile });
-    console.log('Wrote Divergency_Reviewer_Tabs.html (public) and Divergency_Reviewer_Local.html (full local)');
+    writeStoryReader(here);
+    console.log('Wrote public reviewer, full local reviewer and artifacts/chapters3-5_story.html from canonical chapter sources');
   } else if (isLocal) {
     const target = buildReviewer({ local: true, output: customOutput || localOutputFile });
+    writeStoryReader(here);
     console.log(`Wrote ${path.basename(target)} with all chapters and tabs`);
   } else {
     const target = buildReviewer({ local: false, output: customOutput || outputFile });

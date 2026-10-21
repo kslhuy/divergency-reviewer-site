@@ -1,0 +1,30 @@
+Edited with built-in image_gen.
+Edit target: imgs/Stage3/ch3_07_river_of_hatred_platform_pixel_v2.png
+Supporting environment reference: imgs/Stage3/ch3_07_river_of_hatred.png
+Requested change: make the environment feel much bigger and the platform smaller.
+
+Use case: precise-object-edit.
+Asset type: revised pixel-art 2.5D river-stage background, wide 2:1 image, fully opaque.
+
+REFERENCE ROLES:
+IMAGE 1 is the edit target: the approved River of Hatred background with the wooden ferry raft.
+IMAGE 2 is the original River of Hatred concept: supporting reference for the enormous haunted flooded environment, spacious water-dominated composition, and ominous cold blue-green mood. Do not include its character sprite or its black letterbox bars.
+
+USER REQUEST: Make the map environment feel MUCH BIGGER and the playable platform SMALLER.
+
+MAKE THIS A CLEAR COMPOSITION CHANGE:
+Pull the camera back substantially to show a colossal flooded underworld chamber and a much broader expanse of haunted river. The environment must dominate the image. Reduce the wooden ferry to approximately 30-35 percent of the canvas width and approximately 10-12 percent of its height, about half its previous width, occupying only a small portion of the complete composition. Place the ferry near the lower center, floating in open water, with a large visible separation from both banks. Keep it recognizable and readable: weathered planks, low heavy timber frame, flat rope lashings, small pole at a rear corner, broad empty top deck in the same shallow side-on beat 'em up perspective. No character.
+
+ENVIRONMENT SCALE:
+Surround the small ferry with expansive open flowing water in front, behind and on both sides. Reveal much more river and stronger depth toward the far shore. The rear masonry wall should read as part of an immense ancient subterranean city: monumental stone buttresses, multiple levels of ruined vaulted galleries, enormous recessed drain arches and iron grates, and distant shadowy tunnels disappearing into layered teal atmospheric bands. Towering dark vault silhouettes and stalactites frame the far upper border without closing off the whole image. Add a few huge structural arches behind the nearer ruins so the chamber feels cavernous and extends beyond the frame, not like a small enclosed room. Architectural layers and scale relationships convey vastness; do not use a dramatic central perspective road.
+
+Keep ruined banks and broken stone landing ledges confined to the far left/right edges, smaller in the framing, separated from the ferry by broad river gaps. Preserve ancient oversized skeletal remains embedded in the right-bank ruins as static environmental detail. Sparse drowned skull fragments and partially submerged stone slabs provide distant scale cues, without cluttering the open water. Retain a handful of small drifting skull-shaped spirit wisps and sparse hanging chains, never oversized figures. Gentle pixel current bands lead across and into the scene. The boat must look isolated within a much larger haunted world.
+
+PRESERVE THE VISUAL IDENTITY:
+Keep the existing River of Hatred atmosphere and palette: deep navy and blue-violet shadows, cold turquoise river currents, ghostly desaturated mint spirit light, near-black stone, and eerie drifting soul mist. Water remains dominant, with restrained bright pixel ripples and small foam accents. Use layered bands and discrete pixel colors for haze, not blur. Do not introduce blood-red tendrils, ochre cave lighting, dry courtyard paving, ritual floor circles or unrelated architecture.
+
+Preserve authentic handcrafted 16-bit pixel-art rendering from IMAGE 1: crisp hard square-pixel edges, stepped contours, compact deliberate clusters, short discrete shade ramps, controlled clean dithering and no smooth microtexture. Distant features use simpler compact pixels, not airbrushed blur. Keep the same 2:1 composition and side-on 2.5D gameplay viewpoint; no isometric map, top-down map or 3D rendering.
+
+No full-width floor or bridge. No oversized foreground platform. No humanoid ghosts, enemies, player sprites, text, UI, watermarks, panels, black bars, painterly airbrushing, smooth gradients, anti-aliased edges, glossy CGI water or neon bloom.
+The immediate visual impression must be: a SMALL empty ferry floating in a VAST ominous underground river environment.
+
