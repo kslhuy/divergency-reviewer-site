@@ -87,8 +87,8 @@ test('public reader contains bilingual EN/FR campaign; local reader retains othe
 test('public builds omit private chapters, rewards and image manifests; local retains them in dedicated tabs while syncing Kickstarter 1:1', () => {
   const publicPage = buildPage(buildDocs());
   assert.doesNotMatch(publicPage, /imgs\/backgrounds\/use\/stage5__|imgs\/rewards\/|data-tab="rewards"|data-doc="rewards"|stage-05|stage_5|Stage 5|Chapitre 5|Chương 5|Side-Eye Recognition|Nightmare Harbinger|Expédition et livraison/);
-  assert.match(publicPage, /Stage 4/);
-  assert.match(publicPage, /Chapitre 4/);
+  assert.doesNotMatch(publicPage, /The Full Campaign|La campagne complète/);
+  assert.match(publicPage, /Playable Fighters/);
   const localDocs = buildDocs(undefined, {local:true});
   const publicDocs = buildDocs();
   assert.equal(localDocs.find(d => d.id === 'kickstarter').html, publicDocs[0].html);

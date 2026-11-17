@@ -23,7 +23,7 @@ export function buildDocs(gameplayOverride, { local = false } = {}) {
     // Kickstarter stays 1:1 synced between local and online (both exclude Rewards & Stage 5;
     // Rewards live in the Rewards Checklist tab and Stage 5 lives in Story/Gameplay tabs).
     const html = (local && doc.id !== 'kickstarter') ? source : publicContent(source, { documentId: doc.id });
-    if (doc.id === 'kickstarter') doc.summary = 'Game showcase: combat, skill deck & Vesliction, squad synergy, playable fighters, story, world, and music.';
+    if (doc.id === 'kickstarter') doc.summary = 'Game showcase: combat, skill deck & Vesliction, squad synergy, playable fighters, story, and music.';
     if (!local && ['story', 'story-summary'].includes(doc.id)) doc.summary = 'Divergency story, characters, and the journey through Stage 4.';
     return { ...doc, ...(doc.id === 'gameplay' ? prepareGameplay(html) : describeContent(html)) };
   });

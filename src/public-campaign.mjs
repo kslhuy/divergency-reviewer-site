@@ -65,7 +65,7 @@ export function publicCampaignPage(html) {
       if (hasClass(parent, 'doc-heading')) {
         if (node.tagName === 'p' && hasClass(node, 'eyebrow')) replaceContents(node, '<span class="ks-lang-en">Campaign pitch</span><span class="ks-lang-fr" lang="fr">Présentation de la campagne</span>');
         if (node.tagName === 'h2' && attr(node, 'id') === 'tab-title-kickstarter') replaceContents(node, '<span class="ks-lang-en">Kickstarter Campaign</span><span class="ks-lang-fr" lang="fr">Campagne Kickstarter</span>');
-        if (node.tagName === 'p' && hasClass(node, 'doc-summary')) replaceContents(node, '<span class="ks-lang-en">Game showcase: combat, skill deck &amp; Vesliction, squad synergy, playable fighters, story, world, and music.</span><span class="ks-lang-fr" lang="fr">Présentation du jeu : combats, deck de compétences &amp; Vesliction, synergie d\'escouade, combattants jouables, histoire, univers et musique.</span>');
+        if (node.tagName === 'p' && hasClass(node, 'doc-summary')) replaceContents(node, '<span class="ks-lang-en">Game showcase: combat, skill deck &amp; Vesliction, squad synergy, playable fighters, story, and music.</span><span class="ks-lang-fr" lang="fr">Présentation du jeu : combats, deck de compétences &amp; Vesliction, synergie d\'escouade, combattants jouables, histoire et musique.</span>');
       }
       if (/^h[23]$/.test(node.tagName || '') && attr(node, 'id').startsWith('kickstarter-')) {
         const en = (findClassText(node, 'ks-lang-en') || textOf(node)).replace(/^#/, '').trim();

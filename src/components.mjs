@@ -93,7 +93,7 @@ export function renderPane(doc, index) {
   const headingHtml = isKs
     ? `          <p class="eyebrow"><span class="ks-lang-en">Campaign pitch</span><span class="ks-lang-fr" lang="fr">Présentation de la campagne</span></p>
           <h2 id="tab-title-${doc.id}"><span class="ks-lang-en">Kickstarter Campaign</span><span class="ks-lang-fr" lang="fr">Campagne Kickstarter</span></h2>
-          <p class="doc-summary"><span class="ks-lang-en">${escapeHtml(doc.summary)}</span><span class="ks-lang-fr" lang="fr">Présentation du jeu : combats, deck de compétences & Vesliction, synergie d'escouade, combattants jouables, histoire, univers et musique.</span></p>
+          <p class="doc-summary"><span class="ks-lang-en">${escapeHtml(doc.summary)}</span><span class="ks-lang-fr" lang="fr">Présentation du jeu : combats, deck de compétences & Vesliction, synergie d'escouade, combattants jouables, histoire et musique.</span></p>
           <div class="ks-lang-switcher" role="group" aria-label="Language / Langue"><button type="button" class="ks-lang-btn is-active" data-ks-lang-btn="en" aria-pressed="true">EN · English</button><button type="button" class="ks-lang-btn" data-ks-lang-btn="fr" aria-pressed="false">FR · Français</button></div>`
     : `          <p class="eyebrow">${escapeHtml(doc.eyebrow)}</p>
           <h2 id="tab-title-${doc.id}">${escapeHtml(doc.label)}</h2>
