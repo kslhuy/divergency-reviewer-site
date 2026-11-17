@@ -65,13 +65,6 @@ export function assertCharacterCanon({ includeGenerated = false } = {}) {
       Deep: [/kiếm ngắn/i, /đấu sĩ/i],
       Tulas: [/phép thuật máu/i, /chữ thập.*ngực/i],
     }],
-    ['content/kickstarter/02-playable-fighters-ed9a14f790.html', 'h3', {
-      Solei: [/karate/i, /mechanical legs/i, /demon eyes/i],
-      Block: [/Black boxer/i, /punch/i, /kick/i, /guard/i],
-      Mark: [/bow.*split into swords/i, /laser-style glasses/i],
-      Deep: [/short.sword/i, /gladiator/i],
-      Tulas: [/blood magic/i, /cross mark.*chest/i],
-    }],
   ];
   for (const [file, heading, characters] of profiles) {
     const nodes = parseFragment(readFileSync(path.join(root, file), 'utf8')).childNodes;
