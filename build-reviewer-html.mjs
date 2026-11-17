@@ -20,8 +20,10 @@ export function buildDocs(gameplayOverride, { local = false } = {}) {
   const documents = JSON.parse(readFileSync(path.join(here, 'content/documents.json'), 'utf8'));
   return documents.filter(doc => local || doc.id === 'kickstarter').map(doc => {
     const source = doc.id === 'gameplay' && gameplayOverride !== undefined ? gameplayOverride : readContent(here, doc.id);
-    const html = local ? source : publicContent(source, { documentId: doc.id });
-    if (!local && doc.id === 'kickstarter') doc.summary = 'Campaign pitch: hook, gameplay, story, funding, timeline, and risks.';
+    // Kickstarter stays 1:1 synced between local and online (both exclude Rewards & Stage 5;
+    // Rewards live in the Rewards Checklist tab and Stage 5 lives in Story/Gameplay tabs).
+    const html = (local && doc.id !== 'kickstarter') ? source : publicContent(source, { documentId: doc.id });
+    if (doc.id === 'kickstarter') doc.summary = 'Game showcase: combat, skill deck & Vesliction, squad synergy, playable fighters, story, world, and music.';
     if (!local && ['story', 'story-summary'].includes(doc.id)) doc.summary = 'Divergency story, characters, and the journey through Stage 4.';
     return { ...doc, ...(doc.id === 'gameplay' ? prepareGameplay(html) : describeContent(html)) };
   });
@@ -39,17 +41,23 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const outputArgIdx = process.argv.indexOf('--output');
   const customOutput = outputArgIdx !== -1 && process.argv[outputArgIdx + 1] ? path.resolve(here, process.argv[outputArgIdx + 1]) : null;
 
-  if (isAll) {
+  if (customOutput) {
+    const target = buildReviewer({ local: isLocal, output: customOutput });
+    if (isLocal) writeStoryReader(here);
+    console.log(`Wrote ${path.basename(target)} from HTML chapters`);
+  } else if (isAll) {
     buildReviewer({ local: false, output: outputFile });
     buildReviewer({ local: true, output: localOutputFile });
     writeStoryReader(here);
     console.log('Wrote public reviewer, full local reviewer and artifacts/chapters3-5_story.html from canonical chapter sources');
   } else if (isLocal) {
-    const target = buildReviewer({ local: true, output: customOutput || localOutputFile });
+    const target = buildReviewer({ local: true, output: localOutputFile });
+    buildReviewer({ local: false, output: outputFile });
     writeStoryReader(here);
-    console.log(`Wrote ${path.basename(target)} with all chapters and tabs`);
+    console.log(`Wrote ${path.basename(target)} and synced ${path.basename(outputFile)}`);
   } else {
-    const target = buildReviewer({ local: false, output: customOutput || outputFile });
-    console.log(`Wrote ${path.basename(target)} from HTML chapters`);
+    const target = buildReviewer({ local: false, output: outputFile });
+    buildReviewer({ local: true, output: localOutputFile });
+    console.log(`Wrote ${path.basename(target)} and synced ${path.basename(localOutputFile)}`);
   }
 }

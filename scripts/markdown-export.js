@@ -90,9 +90,21 @@
   const output = dialog.querySelector('textarea');
   const status = dialog.querySelector('[role="status"]');
   let article, pane, headings, opener;
-  const headingText = heading => { const clone = heading.cloneNode(true); clone.querySelectorAll('.heading-link').forEach(link => link.remove()); return clone.textContent.trim(); };
+  const hiddenLangSelector = () => {
+    const ksLang = pane?.dataset.ksLang;
+    if (ksLang === 'fr') return '.ks-lang-en';
+    if (ksLang === 'en' || pane?.dataset.doc === 'kickstarter') return '.ks-lang-fr';
+    return '';
+  };
+  const headingText = heading => {
+    const clone = heading.cloneNode(true);
+    clone.querySelectorAll('.heading-link').forEach(link => link.remove());
+    const hidden = hiddenLangSelector();
+    if (hidden) clone.querySelectorAll(hidden).forEach(el => el.remove());
+    return clone.textContent.trim();
+  };
   function refresh() {
-    let root = article;
+    let root;
     if (scope.value !== 'all') {
       const index = Number(scope.value);
       const heading = headings[index];
@@ -101,7 +113,11 @@
       const range = document.createRange(); range.setStartBefore(heading);
       if (end) range.setEndBefore(end); else range.setEnd(article, article.childNodes.length);
       root = range.cloneContents();
+    } else {
+      root = article.cloneNode(true);
     }
+    const hidden = hiddenLangSelector();
+    if (hidden) root.querySelectorAll(hidden).forEach(el => el.remove());
     const base = location.protocol === 'file:' ? 'https://kslhuy.github.io/divergency-reviewer-site/' : document.baseURI;
     output.value = toMarkdown(root, base);
     status.textContent = '';

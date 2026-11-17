@@ -177,7 +177,7 @@ test('build uses the web source and includes working scripts and valid gameplay 
     new vm.Script(src ? readFileSync(path.join(projectRoot, src), 'utf8') : node.childNodes.map(child => child.value || '').join(''));
     scripts++;
   });
-  assert.equal(scripts, 11);
+  assert.equal(scripts, 13);
   assert.ok(page.includes('Edit document'));
   for (const item of gameplay.toc) {
     assert.ok(page.includes(`id="${item.id}"`));

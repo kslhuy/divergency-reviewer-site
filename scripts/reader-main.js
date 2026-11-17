@@ -109,11 +109,11 @@ function initPitchControls() {
     const curLang = pitchPane.getAttribute("data-pitch-lang") || "fr";
     const curPillar = pitchPane.getAttribute("data-pitch-pillar") || "all";
 
-    document.querySelectorAll("[data-pitch-lang]").forEach((btn) => {
+    document.querySelectorAll("button[data-pitch-lang]").forEach((btn) => {
       btn.classList.toggle("is-active", btn.dataset.pitchLang === curLang);
     });
 
-    document.querySelectorAll("[data-pitch-pillar]").forEach((btn) => {
+    document.querySelectorAll("button[data-pitch-pillar]").forEach((btn) => {
       btn.classList.toggle("is-active", btn.dataset.pitchPillar === curPillar);
     });
   }
@@ -156,7 +156,8 @@ function initItemWikiControls() {
     cards.forEach((card) => {
       const text = (card.textContent || "").toLowerCase();
       const cat = card.getAttribute("data-category") || "";
-      const matchesCat = currentCat === "all" || cat.includes(currentCat);
+      const slot = card.getAttribute('data-slot') || '';
+      const matchesCat = currentCat === 'all' || cat.includes(currentCat) || slot === currentCat;
       const matchesSearch = !q || text.includes(q);
 
       if (matchesCat && matchesSearch) {
@@ -182,6 +183,42 @@ function initItemWikiControls() {
   });
 }
 
+function initKickstarterControls() {
+  const pane = document.getElementById("pane-kickstarter");
+  if (!pane) return;
+
+  function applyLang(lang, persist) {
+    const next = lang === "fr" ? "fr" : "en";
+    pane.setAttribute("data-ks-lang", next);
+    document.querySelectorAll("[data-ks-lang-btn]").forEach((btn) => {
+      const active = btn.dataset.ksLangBtn === next;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    if (persist) {
+      try { localStorage.setItem("ks-lang", next); } catch {}
+    }
+  }
+
+  let initial = "en";
+  try {
+    const param = new URLSearchParams(window.location.search).get("lang");
+    if (param === "en" || param === "fr") initial = param;
+    else {
+      const saved = localStorage.getItem("ks-lang");
+      if (saved === "en" || saved === "fr") initial = saved;
+    }
+  } catch {}
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-ks-lang-btn]");
+    if (btn) applyLang(btn.dataset.ksLangBtn, true);
+  });
+
+  applyLang(initial, false);
+}
+
 initPitchControls();
+initKickstarterControls();
 initItemWikiControls();
 

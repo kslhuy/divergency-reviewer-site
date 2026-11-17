@@ -1,9 +1,10 @@
 [
   {
     "id": "kickstarter",
-    "label": "Kickstarter Page",
+    "label": "Kickstarter Campaign",
     "eyebrow": "Campaign pitch",
-    "summary": "Reviewer-ready campaign copy: hook, gameplay, story, funding, timeline, rewards, shipping, and risks."
+    "summary": "Game showcase: combat, skill deck & Vesliction, squad synergy, playable fighters, story, world, and music.",
+    "showMedia": false
   },
   {
     "id": "marketing",
