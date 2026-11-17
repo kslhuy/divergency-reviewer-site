@@ -1,0 +1,237 @@
+{
+  "version": 2,
+  "canvas": {
+    "panelWidth": 2000,
+    "panelHeight": 786,
+    "panelCount": 3,
+    "totalWidth": 6000,
+    "ppu": 100
+  },
+  "note": "Full-canvas layers registered to 2000x786 in the supplied preview and Unity assembly. Native PNG dimensions vary by 1-2 pixels; retained without resampling. Generated inpainting reconstructs occluded regions. Sky and distant coast are combined as L0.",
+  "assets": [
+    {
+      "name": "center_L0_sky_far",
+      "file": "Textures/center_L0_sky_far.png",
+      "width": 2001,
+      "height": 786,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 2001,
+        "height": 304
+      },
+      "transparentPixels": 958688,
+      "opaquePixels": 415,
+      "partialPixels": 613683
+    },
+    {
+      "name": "center_L1_sea",
+      "file": "Textures/center_L1_sea.png",
+      "width": 2001,
+      "height": 786,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 300,
+        "width": 2001,
+        "height": 135
+      },
+      "transparentPixels": 1289874,
+      "opaquePixels": 131,
+      "partialPixels": 282781
+    },
+    {
+      "name": "center_L2_playfield",
+      "file": "Textures/center_L2_playfield.png",
+      "width": 1999,
+      "height": 787,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 417,
+        "width": 1999,
+        "height": 370
+      },
+      "transparentPixels": 844242,
+      "opaquePixels": 1884,
+      "partialPixels": 727087
+    },
+    {
+      "name": "left_L0_sky_far",
+      "file": "Textures/left_L0_sky_far.png",
+      "width": 2001,
+      "height": 786,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 2001,
+        "height": 304
+      },
+      "transparentPixels": 959913,
+      "opaquePixels": 34,
+      "partialPixels": 612839
+    },
+    {
+      "name": "left_L1_sea",
+      "file": "Textures/left_L1_sea.png",
+      "width": 2001,
+      "height": 786,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 305,
+        "width": 2001,
+        "height": 132
+      },
+      "transparentPixels": 1294744,
+      "opaquePixels": 1023,
+      "partialPixels": 277019
+    },
+    {
+      "name": "left_L2_playfield",
+      "file": "Textures/left_L2_playfield.png",
+      "width": 2001,
+      "height": 786,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 416,
+        "width": 2001,
+        "height": 370
+      },
+      "transparentPixels": 838753,
+      "opaquePixels": 182,
+      "partialPixels": 733851
+    },
+    {
+      "name": "right_L0_sky_far",
+      "file": "Textures/right_L0_sky_far.png",
+      "width": 1999,
+      "height": 786,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1999,
+        "height": 304
+      },
+      "transparentPixels": 961255,
+      "opaquePixels": 498,
+      "partialPixels": 609461
+    },
+    {
+      "name": "right_L1_sea",
+      "file": "Textures/right_L1_sea.png",
+      "width": 2001,
+      "height": 786,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 294,
+        "width": 2001,
+        "height": 142
+      },
+      "transparentPixels": 1272992,
+      "opaquePixels": 167,
+      "partialPixels": 299627
+    },
+    {
+      "name": "right_L2_playfield",
+      "file": "Textures/right_L2_playfield.png",
+      "width": 2001,
+      "height": 786,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 415,
+        "width": 2001,
+        "height": 371
+      },
+      "transparentPixels": 834816,
+      "opaquePixels": 95,
+      "partialPixels": 737875
+    },
+    {
+      "name": "prop_armored_sedan",
+      "file": "Textures/prop_armored_sedan.png",
+      "width": 1810,
+      "height": 869,
+      "alpha": true,
+      "bounds": {
+        "x": 31,
+        "y": 176,
+        "width": 1754,
+        "height": 567
+      },
+      "transparentPixels": 870119,
+      "opaquePixels": 536,
+      "partialPixels": 702235
+    },
+    {
+      "name": "prop_container_rust",
+      "file": "Textures/prop_container_rust.png",
+      "width": 1774,
+      "height": 887,
+      "alpha": true,
+      "bounds": {
+        "x": 83,
+        "y": 140,
+        "width": 1609,
+        "height": 605
+      },
+      "transparentPixels": 575428,
+      "opaquePixels": 152,
+      "partialPixels": 997958
+    },
+    {
+      "name": "prop_container_teal",
+      "file": "Textures/prop_container_teal.png",
+      "width": 1774,
+      "height": 887,
+      "alpha": true,
+      "bounds": {
+        "x": 101,
+        "y": 175,
+        "width": 1572,
+        "height": 566
+      },
+      "transparentPixels": 668067,
+      "opaquePixels": 1042,
+      "partialPixels": 904429
+    },
+    {
+      "name": "prop_wreck_boat_smoke",
+      "file": "Textures/prop_wreck_boat_smoke.png",
+      "width": 1187,
+      "height": 1325,
+      "alpha": true,
+      "bounds": {
+        "x": 41,
+        "y": 42,
+        "width": 1125,
+        "height": 1239
+      },
+      "transparentPixels": 1038941,
+      "opaquePixels": 984,
+      "partialPixels": 532850
+    },
+    {
+      "name": "prop_manhole",
+      "file": "Textures/prop_manhole.png",
+      "width": 2172,
+      "height": 724,
+      "alpha": true,
+      "bounds": {
+        "x": 595,
+        "y": 207,
+        "width": 982,
+        "height": 367
+      },
+      "transparentPixels": 1280251,
+      "opaquePixels": 431,
+      "partialPixels": 291846
+    }
+  ]
+}

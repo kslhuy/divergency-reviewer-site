@@ -1,0 +1,43 @@
+Generated with the built-in image_gen tool on 2026-10-19.
+Purpose: Chapter 4 Akam Meskul main-menu artwork, no UI, buttons or item icons.
+Output: imgs/UI/main_menu_sprites/Khoa/main_menu_khoa_stage4_akam_meskul_no_ui.png
+Reference paths (in input order):
+1. C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage3_calvaria_finished.png
+2. C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage2_bridge_finished.png
+3. C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\Stage4\ch4_01_volcano_dragon_canyon_parallax.png
+4. C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\Stage4\ch4_00_akam_meskul_approach.jpg
+
+Final generation prompt:
+
+Use case: stylized-concept.
+Asset type: ONE finished opaque pixel-art background illustration for the Chapter 4 MAIN MENU of Divergency, in the same visual series as the provided main-menu references. Wide landscape composition, aspect ratio 32:15, target 1832 x 859 pixels.
+
+CRITICAL USER CHANGE: IMAGE ONLY, WITH ABSOLUTELY NO GAME INTERFACE. Remove ALL buttons, item icons, inventory grids, counters, health displays, skill circles, ability icons, decorative UI frames, arrows, labels and text. Replace their former areas with continuous natural scenery. No empty interface panels or placeholder shapes. No text anywhere, including BACK, CHANGE, SKILL or CURSED OBJECT. Cars and the camp companions are part of the illustrated scene and should remain.
+
+REFERENCE ROLES in supplied order:
+1. main_menu_khoa_stage3_calvaria_finished.png: primary reference for the finished main-menu series, crisp pixel-art style, camera, camp staging, red cargo truck, olive open jeep and tiny chibi companion identities. Ignore and REMOVE every interface element shown in this reference.
+2. main_menu_khoa_stage2_bridge_finished.png: supporting reference for accurate camp roster, vehicle silhouettes, scale, and appealing menu composition. Ignore and REMOVE all its interface.
+3. ch4_01_volcano_dragon_canyon_parallax.png: Chapter 4 environmental identity only: volcanic canyon, ancient colossal dragon ribcage, distant mountains, industrial fortress, rusty red storm sky and restrained cyan mist. Do not copy its battle arena or brighter rendering.
+4. ch4_00_akam_meskul_approach.jpg: setting inspiration only, the immense dead dragon fused into a mountain amid volcanic rock, with its head and ribs recognizably visible. Do not copy its realistic rendering, armored people or vivid lightning.
+
+SCENE: CHAPTER 4 — AKAM MESKUL, INDUSTRY BUILT WITHIN AN ANCIENT DRAGON'S CORPSE.
+A quiet small travelers' camp at the accessible foot of a volcanic mountain, overlooking a vast caldera in Akam Meskul. The foreground is a broad safe basalt rest terrace, naturally continuous and convincingly large enough for the parked vehicles and people. Fine ash lies in shallow cracks of dark brown-black rock. Small dusty weeds and dull iron scraps at the extreme edges only, no scattered collectible items. A sheltered left edge contains a rough basalt overhang, a few supply crates and worn canvas rolls.
+The upper background is the distinct spectacular chapter landmark: an ENORMOUS weathered dragon skeleton embedded in the mountain across the canyon, with a long angular skull in profile at upper right and its ribcage forming a chain of monumental arches across the slope. Distant Kardias ironworks have grown between these bones: tiny foundry windows, squat chimneys, narrow maintenance gantries and distant industrial towers. They must feel small enough to communicate the dragon's colossal scale. The dragon is ancient dead bone and rock, never a living monster or boss.
+A few molten orange streams thread the far canyon walls and bottom, safely BEHIND the terrace, with drifting volcanic ash and layered gray-teal smoke. Distant jagged volcanoes and red-brown storm clouds create atmospheric depth. Keep the strongest lava accents small, with no full orange lake or orange wash covering the foreground. A weak subdued teal mineral glow in a few distant fractures balances the rust-red volcanic sky. This is an ominous volcanic industrial frontier, distinctly different from Chapter 3's graveyard.
+
+CAMP AND CHARACTERS:
+Retain the same faded burgundy cargo truck with boxes parked left of center, and the same olive open jeep diagonally in front of it. Their wheels sit naturally on basalt. Same oblique orientation and readable size as the main-menu refs.
+The familiar six seated or resting small chibi pixel companions gather around one small orange campfire near the middle, slightly left: red-hooded companion to the left, brown-haired dark-clothed companion behind, sleeping green-clothed companion upper right, small blue-haired companion lower left, dark-haired companion facing away lower middle and white-haired companion to the right. Same identities and proportions as the references. Keep them small, approximately the same fraction of the frame as in the original menus.
+One small standing selected brown-haired hero in front of the group, naturally standing on ordinary ground WITHOUT a selection pedestal, selection ring or aura.
+Only this familiar camp roster, no extra soldiers, enemies, ghosts, bosses or people in the background.
+Warm campfire light softly touches faces, wheels and nearby rock through compact pixel clusters. A moment of human rest in a harsh landscape.
+
+COMPOSITION:
+Keep the same slightly elevated oblique main-menu camera angle as the menu references, NOT a flat side-on battle arena, isometric tactical grid or world map. Lower roughly 55% is a textured terrace with the camp, vehicles and clear ordinary ground; upper background reveals the dragon mountain and volcanic industrial valley. Let former top-left counters, right inventory and bottom skill-bar areas become uninterrupted environmental art: unobtrusive basalt, a few shallow stone steps and small edge rocks with canyon views behind. Do not leave rectangular gaps or panels. Leave broad legible quiet areas naturally integrated into the art for future interface placement, but DO NOT DRAW ANY INTERFACE.
+
+STYLE:
+Match the crisp handcrafted dark fantasy pixel-art rendering of the menu images, with visible square pixel clusters, hard stepped contours, compact discrete shade ramps and consistent sprite-to-environment pixel scale. Polished densely detailed world, but large readable shapes and calm ground. Near-black charcoal and basalt, desaturated warm gray bone, dusty ochre and bronze industrial details, restrained burgundy/rust sky, small amber firelight and muted teal haze. No painterly brush strokes, airbrushing, photorealism, 3D rendering, smooth gradients or excessive bloom.
+
+DELIVER:
+One single cohesive edge-to-edge opaque environment illustration WITH the familiar camp and vehicles and WITHOUT UI of any kind. No buttons, icons, inventory, equipment, skills, counters, texts, letters, numbers, logos, watermarks, borders, collage or split panels.
+

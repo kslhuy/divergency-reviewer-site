@@ -13,3 +13,9 @@ dist/
 .dev.vars
 online/generated/
 tmp/
+/dev_log_video/*.aux
+/dev_log_video/*.log
+/dev_log_video/*.out
+/dev_log_video/*.toc
+APP_tool/
+assets/items/

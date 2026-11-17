@@ -71,8 +71,10 @@ const readerNavigation = (() => {
     });
     entry.index = index;
     const link = entry.links[index];
-    entry.current.textContent = link.textContent;
-    entry.current.title = link.textContent;
+    entry.current.replaceChildren(...Array.from(link.childNodes, node => node.cloneNode(true)));
+    const activeLang = link.closest('[data-ks-lang]')?.dataset.ksLang;
+    const activeNode = activeLang === 'fr' ? link.querySelector('.ks-lang-fr') : link.querySelector('.ks-lang-en');
+    entry.current.title = (activeNode || link).textContent;
     revealLink(entry, link);
   }
 

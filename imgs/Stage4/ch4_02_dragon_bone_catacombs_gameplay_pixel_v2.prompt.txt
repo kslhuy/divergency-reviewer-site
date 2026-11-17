@@ -1,0 +1,22 @@
+Generated with built-in image_gen.
+Reference 1 (environment inspiration): imgs/Stage4/ch4_02_dragon_bone_catacombs.png
+Reference 2 (pixel style and palette): imgs/Stage4/ch4_03b_blood_lair_arena_draft.png
+
+Use case: stylized-concept.
+Asset type: production-style 2D pixel-art environment background for a 2.5D side-scrolling beat 'em up game, wide 2:1 horizontal landscape image, fully opaque.
+
+REFERENCE ROLES:
+Image 1, dragon bone catacombs: environment inspiration only. Borrow its immense fossilized dragon ribcage arches, bone columns and vertebrae, ancient catacomb niches, hanging dried crimson sinew and organic root systems, dark rock, subterranean teal lake, and oppressive ancient cavern atmosphere. Recompose these into ONE continuous gameplay room.
+Image 2, blood lair arena draft: PRIMARY STYLE AND COLOR REFERENCE. Match image 2 closely in low-resolution pixel size, hard stair-step contours, compact pixel clusters, sparse deliberate dithering, flatter discrete shade ramps, and muted dark color range. All objects, especially bones and stones, must use image 2's actual pixel language. Do not adopt image 1's finer painterly detailing or its brighter cyan glow.
+
+Primary request: A dragon-bone catacomb stage inspired by image 1, entirely rendered in the same handcrafted 16-bit pixel style and colors as image 2.
+Composition and gameplay: Fixed side-on beat 'em up view with a visible ground plane, a low and shallow perspective, no dramatic vanishing point. The full LOWER HALF, from about 50 percent height down to the bottom edge, must be a continuous broad flat battle floor spanning the entire width. It should allow characters to walk left/right and also up/down in depth, clearly readable in a 2.5D game. Dark charcoal slate cobblestone flagstones mixed with weathered bone-gray stone, a few small flat skull fragments and sparse dark burgundy vein roots between slabs. Keep this playable area largely clear. No holes, pools, steps, platforms, tall obstacles, pillars, or big bones on the combat floor. Tiny flat debris only. Foreground roots may touch the extreme bottom corners but must not block the floor.
+
+Behind the rear edge of that floor in the UPPER HALF: colossal ancient dragon ribs curve into a cavernous catacomb archway, with a dark tunnel visible inside the ribs. Petrified bone columns and vertebral buttresses support eroded stone galleries and small empty burial alcoves recessed into the back wall. One weathered dragon skull fragment rests against the distant rear wall as part of the ruin, subordinate to the ribcage architecture. Dried blood red sinew winds around the bones and hangs in sparse strands. Muted earthy limestone and ochre mineral surfaces recede into shadow. Through gaps between bone arches, a narrow band of ghostly desaturated turquoise underground lake provides restrained depth behind the battle floor. Hanging near-black stalactites and crimson vascular roots frame the upper border, open enough to read the bone architecture.
+
+Style and medium: Authentic hand-crafted 16-bit pixel art, consistent coarse low-resolution pixel grid across the whole image, visually like a roughly 900 x 450 pixel game background enlarged with nearest-neighbor sampling. Every edge visibly stair-stepped. Hand-placed pixel clusters, clean limited dithering, simple discrete shadow planes, controlled compact highlights; no microtexture finer than the reference. Large readable silhouettes, deliberate low-detail resting areas on the playable floor. 2.5D refers to gameplay depth in 2D artwork, never 3D rendering.
+
+Exact color direction from IMAGE 2: near-black charcoal, dark desaturated blue-violet slate stone, earthy bone gray with muted ochre/brown shadows, dried blood burgundy, and restrained ghostly dark teal. Low saturation, gloomy values. Bones must be weathered gray-ochre, not bright white. Water must be subdued teal, not electric cyan. Match image 2's narrow hue ramps and pixel contrast. No bright glowing blue ghosts, no bright fire, no magical lights.
+
+Deliver one finished environment image, edge-to-edge. No characters, enemies, ghosts, sprites, UI, labels, lettering, logo or watermark. No collage, map overview, cutaway diagram, stacked playable platforms, isometric view, top-down view, central perspective road, 3D rendering, smooth airbrushing, blurred lighting, soft gradients, anti-aliased outlines, photorealistic textures, painterly brushwork, neon palette, or heavy bloom.
+

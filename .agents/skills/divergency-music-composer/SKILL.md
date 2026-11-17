@@ -1,12 +1,16 @@
 ---
 name: divergency-music-composer
 description: >-
-  Use this skill whenever the user asks to compose, generate, create, or preview music, soundtrack (OST), background music (BGM), ambient soundscapes, boss battle themes, character leitmotifs, or sound effects (SFX, kiếm chém, phép thuật, va chạm, tiếng động UI, ambient loop) for Divergency or LF2. Also activate when the user requests "$divergency-music-composer", mentions "tạo nhạc", "sinh nhạc", "làm nhạc", "nhạc không lời", "music generator", "soundtrack", "tạo sfx", "âm thanh kiếm", "tiếng động game", or simply provides an idea for a track or sound effect (e.g., "Tạo nhạc cho boss Dimraeth", "Nhạc lúc Solei gặp mẹ", "SFX kiếm chém của Solei", "Tiếng chưởng phép Sakuri"). The skill automatically builds storyline/combat context, verifies and opens ACE-Step (port 7865) and Aura Audio Studio (port 8765), autonomously generates audio, and syncs to both the project and the Studio library.
+  Use this skill whenever the user asks to compose, generate, create, or preview music, soundtrack (OST), background music (BGM), ambient soundscapes, boss battle themes, character leitmotifs, or sound effects (SFX, kiếm chém, phép thuật, va chạm, tiếng động UI, ambient loop) for Divergency or Divergency. Also activate when the user requests "$divergency-music-composer", mentions "tạo nhạc", "sinh nhạc", "làm nhạc", "nhạc không lời", "music generator", "soundtrack", "tạo sfx", "âm thanh kiếm", "tiếng động game", or simply provides an idea for a track or sound effect (e.g., "Tạo nhạc cho boss Dimraeth", "Nhạc lúc Solei gặp mẹ", "SFX cú đá chân máy của Solei", "Tiếng chưởng phép Sakuri"). The skill automatically builds storyline/combat context, verifies and opens ACE-Step (port 7865) and Aura Audio Studio (port 8765), autonomously generates audio, and syncs to both the project and the Studio library.
 ---
+
+## Chuẩn nhân vật Divergency
+
+Trước khi dùng nhân vật Divergency, đọc [nguồn chuẩn của tác giả](../../../AGENTS.md). Mọi ví dụ, prompt và kết quả phải giữ đúng ngoại hình, vũ khí và phong cách chiến đấu đã chốt; bản mẫu chỉ là tham khảo cách trình bày.
 
 # Divergency Music & Audio Composer (Skill Tạo Nhạc & Sound FX Tự Động)
 
-Skill này cho phép trợ lý AI đóng vai trò **Nhà Thiết Kế Âm Thanh & Soạn Nhạc Tự Động (Autonomous Audio & Music Designer)** cho dự án Divergency / LF2. Sau khi hợp nhất bộ công cụ **Aura Audio Studio** (kết hợp **ACE-Step 3.5B** và **Stable Audio 3 Engine**), agent có khả năng tạo cả:
+Skill này cho phép trợ lý AI đóng vai trò **Nhà Thiết Kế Âm Thanh & Soạn Nhạc Tự Động (Autonomous Audio & Music Designer)** cho dự án Divergency. Sau khi hợp nhất bộ công cụ **Aura Audio Studio** (kết hợp **ACE-Step 3.5B** và **Stable Audio 3 Engine**), agent có khả năng tạo cả:
 1. **Nhạc nền, OST, Vocal & Leitmotif (ACE-Step Engine):** Thời lượng 30s - 180s+, đa tầng nhạc cụ dân tộc/gothic/công nghiệp, hỗ trợ cả không lời `[instrumental]` và có lời hát.
 2. **Phát triển & Sửa nhạc (Audio Remix / Extend / Repaint):** Nạp bài hát bất kỳ (.wav/.mp3), AI giữ giai điệu/motif gốc để phối khí lại theo phong cách mới (orchestral, metal, oriental, synthwave), nối dài thời lượng (+15s đến +60s) hoặc thay thế đoạn nhạc cụ thể.
 3. **Hiệu ứng âm thanh Sound FX & Foley (Stable Audio Engine):** Tiếng vung kiếm, va chạm giáp sắt, phép thuật hư không, nện đất chấn động, tiếng bước chân, âm thanh UI game.
@@ -76,10 +80,10 @@ python ".agents/skills/divergency-music-composer/scripts/generate_music.py" `
 ```powershell
 python ".agents/skills/divergency-music-composer/scripts/generate_music.py" `
   --mode sfx `
-  --prompt "one sharp katana slash with spark deflection ping, isolated game combat sound effect, no music" `
+  --prompt "one fast mechanical karate kick, sharp air whoosh and solid impact, isolated game combat sound effect, no music" `
   --duration 2.5 `
   --infer-steps 10 `
-  --output-name "solei_slash_01" `
+  --output-name "solei_kick_01" `
   --output-dir "c:\Users\Quang Huy Nugyen\divergency-reviewer-site\content\gameplay\audio"
 ```
 
@@ -101,7 +105,7 @@ Báo cáo kết quả theo cấu trúc chuẩn:
 | *"Tạo nhạc cho Solei"* | `music` | Sáo trúc shakuhachi, đàn koto, chuông ngọc tuyết rơi, 72 BPM. | `solei_theme.wav` |
 | *"Tạo nhạc cho boss Dimraeth"* | `music` | Violin điện biến dạng gào thét, cello u tối, trống dồn 135 BPM. | `dimraeth_boss_duel.wav` |
 | *"Tạo nhạc Chapter 3 Calvaria"* | `music` | Đại phong cầm pipe organ, hợp xướng ma quái, chuông tử thần 55 BPM. | `calvaria_bone_cathedral.wav` |
-| *"Tạo tiếng chém kiếm của Solei"* | `sfx` | `one sharp sword slash cutting air, crisp metallic impact, isolated game sfx` | `solei_sword_slash.wav` |
+| *"Tạo tiếng đá chân máy của Solei"* | `sfx` | `one fast mechanical karate kick, sharp air whoosh and solid impact, isolated game sfx` | `solei_mechanical_kick.wav` |
 | *"Tiếng phép thuật sóng âm Sakuri"* | `sfx` | `destructive sonic resonance burst, screeching glass and air blast, game sfx` | `sakuri_sonic_blast.wav` |
 | *"Tiếng đỡ khiên parry"* | `sfx` | `heavy metallic shield parry deflection with high-pitched spark ping, combat sfx` | `shield_parry_hit.wav` |
 | *"Vòng lặp hang động ẩm ướt"* | `ambient` | `subterranean cave ambient drone, dripping water echoes, seamless loop` | `dungeon_cave_loop.wav` |

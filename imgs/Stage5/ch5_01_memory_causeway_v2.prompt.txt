@@ -1,0 +1,33 @@
+Use case: stylized-concept.
+Asset type: ONE finished opaque environment concept for Divergency Chapter 5, Memory Causeway. Wide horizontal 2:1 pixel-art background for a 2.5D side-scrolling beat 'em up.
+
+USER ART DIRECTION: Ground material and design MUST belong to this dream-memory map. The cave/basalt/cobblestone floor from the skill and other stages is NOT a template to copy. Retain pixel-art craft and usable depth, but invent a site-specific floor.
+
+REFERENCE ROLES IN ORDER:
+1. ch5_01_cradle_dreamscape_playable.png: thematic inspiration for inverted architecture floating in the Blue Cradle. Preserve its dream logic but give the scene a broader movement plane, recognizable regional memories and quieter lighting.
+2. ch5_02b_confluence_refuge_concept_v1.png: pixel-art rendering continuity and readable silhouettes only. DO NOT copy its dark cobblestone floor, ruined gothic plaza, burgundy vines or stone gateway design.
+3. style-anchor.png: secondary reference for crisp pixel clusters and discrete shading only. DO NOT copy cave props, bone structures, its ground material or force the whole image into its brown palette.
+
+SCENE AND STORY:
+The player's route through a beautiful but uneasy memory of four places is suspended in the sleeping god's midnight-blue dream. A half Marseille apartment facade and clock tower hang upside down at left; a faded red Sakuri torii floats farther back toward the center; a small Calvaria bell and bone-white column fragment appear farther right, and a distant curved Akam dragon-rib silhouette anchors the far distance. Treat these as a few carefully spaced recognizable memory fragments, not a crowded theme-park collage. The skyline has deep dark gaps, a restrained jade aurora and sparse stars. At the rear-right end of the playable plane stands a narrow asymmetrical pale gateway containing an opaque dark blue surface: the route toward the Unindexed Gate. Architecture can defy gravity in the BACKGROUND; the entire active ground plane remains steady.
+
+SITE-SPECIFIC GROUND, THE MAIN DESIGN REQUIREMENT:
+A broad seamless dream terrace made of large warm ivory limestone and pearl-gray marble plates, with a few worn terracotta geometric mosaics and subdued red timber inlays borrowed from remembered streets. The pieces are fused FLUSH into one level walking surface, like memories becoming a single material; no raised steps or separate islands. Use large calm slabs with sparse thin seams and soft pixel reflections, very few small cracks, and occasional jade light trapped INSIDE a seam. Color: moonlit pale blue-gray with cream undertones and small muted terracotta accents. Do not tile it with black rocks, cobbles, skulls, rubble, lava veins or dungeon bricks. The front of the image should show the uninterrupted surface continuing below the crop, not the vertical face of a narrow floating bridge.
+
+COMPOSITION:
+Fixed side-on view with shallow ground-plane depth. The broad walking plane occupies roughly the lower 40 percent, enough depth for left/right and toward/away movement. It spans both sides edge to edge; keep its central 70 percent open and low in visual noise. Put tall structures behind its rear edge. A shallow pale arch at the far left rear marks the entry. Do not draw a road converging toward a central vanishing point, stacked platforms, pits, floor obstacles or large foreground rails. Let the upper inverted skyline provide the surreal composition while the quiet terrace supports the eventual sprites.
+
+STYLE AND LIGHT:
+Handcrafted 16-bit-inspired pixel art, visibly square clusters, clean stepped contours, compact highlights and short shade ramps. Large readable shapes; restrained dithering. The light marble ground must remain distinct from the dark blue background without becoming white glare. Sparse jade accents and a quiet desaturated red torii. Moonlit, inviting, slightly wrong. No golden sunrise, heavy bloom, neon signage, smooth painterly gradients, airbrushing, 3D render or isometric viewpoint.
+
+DELIVERY:
+One edge-to-edge environment image. No characters, figures, enemies, spirits, children, UI, labels, readable text, runic writing, logos, watermarks, collage panels or diagrams. The scene must look like an empty game environment with unique ground appropriate to the memory realm.
+
+REFERENCE PATHS:
+1. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage5/ch5_01_cradle_dreamscape_playable.png
+2. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage5/ch5_02b_confluence_refuge_concept_v1.png
+3. output/skills/divergency-25d-stage-background/references/style-anchor.png
+
+GENERATION METHOD: built-in image_gen.
+TARGET OUTPUT: imgs/Stage5/ch5_01_memory_causeway_v2.png
+STATUS: environment concept; not engine-tested.

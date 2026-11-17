@@ -1,0 +1,31 @@
+Generated with built-in image_gen using $divergency-25d-stage-background, with the user's platform and source-mood overrides.
+Reference 1, setting, mood and palette: imgs/Stage3/ch3_07_river_of_hatred.png
+Reference 2, pixel rendering only: output/skills/divergency-25d-stage-background/references/style-anchor.png
+
+Use case: stylized-concept.
+Asset type: finished pixel-art 2.5D side-scrolling beat 'em up environment background. Wide horizontal 2:1 composition, fully opaque, edge to edge without black letterbox bars.
+
+REFERENCE ROLES:
+IMAGE 1, River of Hatred: PRIMARY SETTING, MOOD AND PALETTE reference. Preserve its eerie flooded underworld, cold dark navy/blue-violet masonry, haunted turquoise water currents, restrained sickly mint spirit light, gloomy oppressive depth, ruined drains, hanging chains, skulls and ancient skeletal remains. The result must feel like this exact location, reconstructed as a game background.
+IMAGE 2, blood lair draft: PIXEL RENDERING reference ONLY. Match its crisp coarse handcrafted 16-bit pixel clusters, stair-step silhouettes, short discrete shade ramps and restrained dithering. Do not borrow its cavern props, red sinew, dragon statue, ochre palette, or cobblestone-floor layout. IMAGE 1 controls the atmosphere and color.
+
+USER'S KEY DIRECTION:
+This location has PLATFORMS OVER A RIVER. Do not turn the lower half into a full-width ground floor. Most of the environment remains water. Make a playable-looking horizontal platform within this river scene, preserving the reference's water-dominated identity.
+
+SCENE AND COMPOSITION:
+Side-on view inside a vast ancient flooded crypt/sewer cavern. A long ruined navy stone back wall contains round drain outlets, dark arched grates, worn skull reliefs, leaking thin turquoise streams, and weathered masonry. Near-black stalactites, hanging iron chains and isolated small ghost-flame candles frame the upper border. A ruined ossuary on the right bank has ancient oversized skeletal remains embedded among the stones as static environment detail, like the reference. A few faint skull-shaped spirit wisps drift horizontally through the far background mist, subtle rather than large characters. Layer the wall, distant mist and river so there is clear 2D depth.
+
+MAIN PLAYABLE PLATFORM:
+A large, long, rectangular weathered wooden ferry raft occupies the lower-middle area, about two-thirds of the image width, with its long edge horizontal and parallel to the bottom border. Its broad flat top is clearly visible in shallow beat 'em up perspective, deep enough for characters to move left/right and toward/away from the rear edge. The deck is built from wide waterlogged gray-brown timber planks, heavy dark side beams, and a few flat rope lashings. An old ferryman's pole and a small iron mooring fitting sit at an extreme rear corner only, leaving the main deck clear. No rails, tall obstacles or props blocking the fighting area. Keep the raft physically believable, low and heavy in the water. Reinterpret the small raft in IMAGE 1 as a substantial playable ferry, not a tiny decoration.
+
+Small broken blue-gray stone landing platforms appear at the extreme left and right edges, separated from the raft by visible river gaps. They do not join into continuous ground. A few low partially submerged stone slabs and ancient skull/bone fragments break the water surface beyond the platform. Water is visibly present BOTH behind and in FRONT of the raft and between all landings. Keep the foreground bottom strip primarily luminous dark river water and pixel ripples, not a pavement band or dry bank.
+
+RIVER AND ATMOSPHERE:
+Strong flowing river-of-souls identity. Layered teal current bands curl around the raft and rocks, with tiny square-pixel foam highlights, subdued mint reflections, drowned skull forms and sparse spectral vapor. Match IMAGE 1's ominous cold blue-green mood and dark violet-blue shadows. Preserve its haunting energy while rendering all water, light and fog with discrete pixel clusters. The water can be brighter than the dark deck, but should not turn into an overexposed neon wash. Make the platform top distinctly readable against moving water.
+
+STYLE:
+Authentic handcrafted 16-bit pixel art, uniform visible square-pixel clusters, crisp hard edges, stepped outlines, clean restrained dithering, compact highlights, short discrete ramps. Aim for the visual density of roughly 900 x 450 pixel artwork enlarged with nearest-neighbor sampling. No fine painterly microtexture, smooth airbrushing, blurred glow, smooth gradients, anti-aliased outlines, 3D rendering, glossy CGI water, photoreal texture or isometric map overview. 2.5D means 2D artwork with visible platform depth for gameplay, not 3D graphics.
+
+CONSTRAINTS:
+One coherent empty game-stage background. No player sprites, orange-haired character, enemies, humanoid ghosts, ferryman figure, UI, writing, text, logo or watermark. No full-width cobblestone floor, ceremonial stone arena, dry courtyard, ritual circle, continuous bridge replacing the river, or thick foreground terrain concealing the water. No raised multilevel platform maze. Keep this a river crossing stage with one broad playable ferry and small separated bank landings.
+

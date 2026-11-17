@@ -1,9 +1,10 @@
 [
   {
     "id": "kickstarter",
-    "label": "Kickstarter Page",
+    "label": "Kickstarter Campaign",
     "eyebrow": "Campaign pitch",
-    "summary": "Reviewer-ready campaign copy: hook, gameplay, story, funding, timeline, rewards, shipping, and risks."
+    "summary": "Game showcase: combat, skill deck & Vesliction, squad synergy, playable fighters, story, world, and music.",
+    "showMedia": false
   },
   {
     "id": "marketing",
@@ -11,6 +12,13 @@
     "label": "Marketing Kickstarter",
     "eyebrow": "Launch 02/10 · Tối đa 100 €",
     "summary": "Mở pledge ngày 02/10/2026: tracking miễn phí, short clip trên 5 kênh, gửi Indie Games Hub và chuẩn bị cho Projects We Love."
+  },
+  {
+    "id": "pitch-france",
+    "showMedia": true,
+    "label": "Pitch & Subventions France",
+    "eyebrow": "Marseille · Région Sud · CNC",
+    "summary": "Dossier institutionnel complet pour la Région Sud, le CNC et les partenaires français : ancrage patrimonial à Marseille, pitch tactique 2.5D, contacts prioritaires vérifiés et templates de courriels."
   },
   {
     "id": "devlog",
@@ -44,9 +52,23 @@
     "summary": "Kế hoạch lối chơi theo từng chương, gồm cơ chế, câu đố, tình huống chiến đấu, trùm, nhóm kẻ địch và nhịp học kỹ năng."
   },
   {
+    "id": "character-power",
+    "showMedia": false,
+    "label": "Sức mạnh nhân vật",
+    "eyebrow": "Chỉ số · Công thức · Dữ liệu thực",
+    "summary": "Đối chiếu kỹ năng, chỉ số và progression theo code/asset ngày 21/10/2026; tách phần đã có, đề xuất và chưa kiểm thử runtime. Studio giữ ngân sách mana thiết kế, độc lập với game test không mana."
+  },
+  {
     "id": "rewards",
     "label": "Rewards Checklist",
     "eyebrow": "Launch readiness",
     "summary": "Current EUR rewards, exact add-on quantities, painted figure concept, combined shipping, creative tier scope and fulfillment checks."
+  },
+  {
+    "id": "items",
+    "showMedia": true,
+    "label": "Kho Vật Phẩm (Item Wiki)",
+    "eyebrow": "48 Relics · Vũ khí & Dị vật",
+    "summary": "Bách khoa toàn thư 48 vật phẩm dã chiến, vũ khí cận chiến, cổ vật hiến tế, cấm thư ma pháp và dược phẩm sinh tồn trong Divergency."
   }
 ]

@@ -1,0 +1,87 @@
+Main-menu environment-only background plates
+Created 2026-10-19 using the built-in image_gen tool, one reference-image edit per stage.
+Original source PNG files preserved.
+Visual review: all three outputs contain environment only, with no UI, characters, vehicles or central campfire.
+
+STAGE: stage1
+Source/edit target: C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage1_finished.png
+Output: C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage1_background_only.png
+
+Final prompt:
+Use case: precise-object-edit.
+Task: Produce a CLEAN ENVIRONMENT-ONLY BACKGROUND PLATE from the supplied finished game main-menu image. This is a faithful removal/inpainting edit of THIS specific source scene, not a new design. The user will add their own character sprites later.
+
+REMOVE COMPLETELY:
+- ALL people, seated companions, sleeping companions, standing selected hero, every character sprite, their shadows and any floating sleep marks.
+- BOTH vehicles: the burgundy cargo truck including the boxes on its bed, and the olive jeep, their wheels and cast shadows.
+- The central campfire, flames, firewood, stone fire-ring, embers and its localized orange pool of light.
+- ALL graphical interface overlays, top-left currency/heart counters and decorative skull frames, right-side inventory and equipment panels, all item icons and bottles, grid lines and cell frames, bottom skill icons, circular controls, selection platform and aura, arrows, labels, numbers and text.
+- The stone BACK button and its lettering: reconstruct natural foreground stone/ground in that area, without button-like edges or symbols.
+No remaining letters, digits, UI silhouettes, circular skill sockets, floating symbols, collectible objects, detached character fragments, shadows from removed objects, blur patches or rectangular replacement panels.
+
+PRESERVE:
+The original chapter environment, composition, horizon, camera angle, silhouette placement, scenery perspective, environmental colors, lighting, pixel-art scale and handcrafted crisp cluster style. Keep the existing fixed scenic architecture, natural landmarks, environmental lanterns/candles, trees/vegetation, terrain and peripheral scenery crates. Fixed candles/lamps are environmental light sources, not UI, so retain them. Do not add new dramatic structures, new landmarks, new characters, new props or a different viewpoint.
+Carefully reconstruct the formerly obscured areas as plausible continuations of the existing terrain and scenery, including correct ground plane, perspective, depth, material, cracks, vegetation and illumination. Replace all overlays with fully finished natural environment art, not blank space. The central area where the party and vehicles stood should remain unobstructed, ready for the user's own character placement.
+Keep the same full-frame camera composition and wide source aspect ratio; no crop, zoom, borders, resizing of existing landmarks or camera shift.
+One finished opaque PNG scene, edge-to-edge. Authentic crisp square-pixel game art, no painterly smoothing, blur, airbrush, 3D rendering, photorealism or conspicuous cloned repeating patterns. BACKGROUND SCENERY ONLY.
+
+SCENE-SPECIFIC PRESERVATION:
+Preserve the nighttime old harbor plaza. The top and rear scene must retain its deep blue clouded sky, densely packed illuminated hill city across the water, warm distant cathedral on the hill, boats and cranes, rippling dark blue harbor, chain-linked bollards along the waterfront, left-edge brick harbor building, metal pipes and hanging amber lamp. Preserve the lower-left stacked wooden dock crates and stone dock edge.
+Restore continuous worn dark dock cobbles under the removed cars, party and campfire. Restore the harbor and distant city behind the upper right inventory overlay where they naturally belong, and dock cobbles beneath its lower parts. The erased upper-left counters should reveal the correct continuation of pipes, old masonry and night sky. Bottom areas become ordinary textured quay paving and natural edge stones. Match the original blue night values and sparse warm window reflections. Target the original 1280 x 600 composition.
+
+========================================
+
+STAGE: stage2
+Source/edit target: C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage2_bridge_finished.png
+Output: C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage2_bridge_background_only.png
+
+Final prompt:
+Use case: precise-object-edit.
+Task: Produce a CLEAN ENVIRONMENT-ONLY BACKGROUND PLATE from the supplied finished game main-menu image. This is a faithful removal/inpainting edit of THIS specific source scene, not a new design. The user will add their own character sprites later.
+
+REMOVE COMPLETELY:
+- ALL people, seated companions, sleeping companions, standing selected hero, every character sprite, their shadows and any floating sleep marks.
+- BOTH vehicles: the burgundy cargo truck including the boxes on its bed, and the olive jeep, their wheels and cast shadows.
+- The central campfire, flames, firewood, stone fire-ring, embers and its localized orange pool of light.
+- ALL graphical interface overlays, top-left currency/heart counters and decorative skull frames, right-side inventory and equipment panels, all item icons and bottles, grid lines and cell frames, bottom skill icons, circular controls, selection platform and aura, arrows, labels, numbers and text.
+- The stone BACK button and its lettering: reconstruct natural foreground stone/ground in that area, without button-like edges or symbols.
+No remaining letters, digits, UI silhouettes, circular skill sockets, floating symbols, collectible objects, detached character fragments, shadows from removed objects, blur patches or rectangular replacement panels.
+
+PRESERVE:
+The original chapter environment, composition, horizon, camera angle, silhouette placement, scenery perspective, environmental colors, lighting, pixel-art scale and handcrafted crisp cluster style. Keep the existing fixed scenic architecture, natural landmarks, environmental lanterns/candles, trees/vegetation, terrain and peripheral scenery crates. Fixed candles/lamps are environmental light sources, not UI, so retain them. Do not add new dramatic structures, new landmarks, new characters, new props or a different viewpoint.
+Carefully reconstruct the formerly obscured areas as plausible continuations of the existing terrain and scenery, including correct ground plane, perspective, depth, material, cracks, vegetation and illumination. Replace all overlays with fully finished natural environment art, not blank space. The central area where the party and vehicles stood should remain unobstructed, ready for the user's own character placement.
+Keep the same full-frame camera composition and wide source aspect ratio; no crop, zoom, borders, resizing of existing landmarks or camera shift.
+One finished opaque PNG scene, edge-to-edge. Authentic crisp square-pixel game art, no painterly smoothing, blur, airbrush, 3D rendering, photorealism or conspicuous cloned repeating patterns. BACKGROUND SCENERY ONLY.
+
+SCENE-SPECIFIC PRESERVATION:
+Preserve the grassy mountain rest plateau at golden sunrise, the pink blossom tree in the upper left-center, wooden crates at the left edge, layered blue-gray mountain ranges, cloud-filled chasm and waterfalls, narrow suspension bridge running across the upper right background, sun and softly golden cloud banks, distant slender castle on the far right horizon.
+Restore grassy earth and low flattened vegetation under the removed cars, party, standing hero and campfire. Behind the erased right-side panels reconstruct the existing natural right edge of the plateau, cliff wall and open clouded canyon as their perspective requires; do not merely cover the whole right side in grass. Retain a broad unoccupied grassy center for sprites. Replace lower interface icons and button with appropriate grassy soil, pebbles and scattered fallen pink petals, never new props. Match the original muted sage/ochre ground and gentle sunrise light. Target the original 1280 x 600 composition.
+
+========================================
+
+STAGE: stage3
+Source/edit target: C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage3_calvaria_finished.png
+Output: C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage3_calvaria_background_only.png
+
+Final prompt:
+Use case: precise-object-edit.
+Task: Produce a CLEAN ENVIRONMENT-ONLY BACKGROUND PLATE from the supplied finished game main-menu image. This is a faithful removal/inpainting edit of THIS specific source scene, not a new design. The user will add their own character sprites later.
+
+REMOVE COMPLETELY:
+- ALL people, seated companions, sleeping companions, standing selected hero, every character sprite, their shadows and any floating sleep marks.
+- BOTH vehicles: the burgundy cargo truck including the boxes on its bed, and the olive jeep, their wheels and cast shadows.
+- The central campfire, flames, firewood, stone fire-ring, embers and its localized orange pool of light.
+- ALL graphical interface overlays, top-left currency/heart counters and decorative skull frames, right-side inventory and equipment panels, all item icons and bottles, grid lines and cell frames, bottom skill icons, circular controls, selection platform and aura, arrows, labels, numbers and text.
+- The stone BACK button and its lettering: reconstruct natural foreground stone/ground in that area, without button-like edges or symbols.
+No remaining letters, digits, UI silhouettes, circular skill sockets, floating symbols, collectible objects, detached character fragments, shadows from removed objects, blur patches or rectangular replacement panels.
+
+PRESERVE:
+The original chapter environment, composition, horizon, camera angle, silhouette placement, scenery perspective, environmental colors, lighting, pixel-art scale and handcrafted crisp cluster style. Keep the existing fixed scenic architecture, natural landmarks, environmental lanterns/candles, trees/vegetation, terrain and peripheral scenery crates. Fixed candles/lamps are environmental light sources, not UI, so retain them. Do not add new dramatic structures, new landmarks, new characters, new props or a different viewpoint.
+Carefully reconstruct the formerly obscured areas as plausible continuations of the existing terrain and scenery, including correct ground plane, perspective, depth, material, cracks, vegetation and illumination. Replace all overlays with fully finished natural environment art, not blank space. The central area where the party and vehicles stood should remain unobstructed, ready for the user's own character placement.
+Keep the same full-frame camera composition and wide source aspect ratio; no crop, zoom, borders, resizing of existing landmarks or camera shift.
+One finished opaque PNG scene, edge-to-edge. Authentic crisp square-pixel game art, no painterly smoothing, blur, airbrush, 3D rendering, photorealism or conspicuous cloned repeating patterns. BACKGROUND SCENERY ONLY.
+
+SCENE-SPECIFIC PRESERVATION:
+Preserve Calvaria's existing exact funerary terrace environment. Keep the ossuary niches and old stone walls along the left, hanging bronze bell, leafless twisting tree, weathered burgundy canopy, peripheral wooden supply crates, environmental candles, broken low parapet, layered misty necropolis, monumental cathedral with red stained glass in the upper right-center, ruined arches, distant towers and teal-gray haze.
+Reconstruct the broad terrace under the removed vehicles, party and campfire using matching worn rectangular charcoal limestone slabs, cracks and sparse weeds. Where the right-hand interface was, reconstruct a coherent continuation of the terrace, its low parapet and the deep misty necropolis behind, obeying the original shallow elevated camera and ground plane. Reconstruct lower interface areas as continuous natural stone paving and existing foreground ledges. Do not replace the cathedral, rebuild its silhouette, copy the source cast, add new graves in the middle or change the overcast dusk mood. Target the original 1832 x 859 composition.
+

@@ -1,0 +1,16 @@
+Mode: built-in image_gen; opaque background.
+Edit target: imgs/rewards/divergency-crowdfunding-tshirt-mockup.png (previous version).
+Authoritative artwork: imgs/chars/imge_ingame.png.
+
+Use case: compositing / product-mockup.
+Asset type: replacement crowdfunding reward T-shirt mockup image for the Divergency project.
+Input image 1: EDIT TARGET, the previous ornate black T-shirt mockup. Replace its design and composition according to the instructions below.
+Input image 2: AUTHORITATIVE ARTWORK INSERT, imge_ingame.png, a lineup of EXACTLY FIVE pixel-art game characters. This is the ONLY source for printed character artwork.
+
+Primary request: Create one polished photorealistic product catalog image showing EXACTLY FIVE separate black crewneck short-sleeved cotton T-shirts, one shirt per character in image 2, ordered left to right in the same character order as the source. The clothing designs must be simple, understated and wearable with tiny character graphics, rather than a large full-front illustration.
+Use the five original pixel sprites from image 2 as the actual printed graphics: preserve their silhouettes, pixel edges, facial features, hairstyle, body proportions, clothing, colors and poses as closely as possible. Carefully extract each figure visually from the dark green reference background and its grid. The green rectangle and grid must NOT appear on the shirts. Do not redraw into smooth illustration, chibi, anime, photoreal character art, logos, or a different game art style.
+
+Layout: one landscape contact sheet with three shirts in the top row and two shirts centered in the bottom row. All five entire shirts visible with generous breathing space and no overlap, no cropping. Consistent scale and realistic garment proportions. Gentle near-overhead three-quarter view, clean warm light-gray studio surface, soft shadows and subtle cotton folds. The shirts should be neatly laid flat with sleeves spread so the prints are visible. No models or mannequins.
+Print placement: shirts 1, 2, 3 have a single small full-body character print on the wearer's left chest, like a subtle pocket-size graphic about 7–9 cm tall, no actual pocket. Shirt 1 uses only the leftmost blond dark-skinned character, shirt 2 only the orange-haired visor character, shirt 3 only the middle brown-haired character with sword. Shirts 4 and 5 have blank chests and a single tiny full-body character print on the outward-facing sleeve, just above the sleeve hem, about 4–5 cm tall: shirt 4 the short blue-haired character, shirt 5 the red-haired dark-scarf character. Orient those two garments very slightly to show the sleeve graphic clearly while preserving the full shirt. Print should follow fabric naturally but stay crisp and legible. All other garment areas plain black.
+No additional artwork, emblems, text, names, slogans, numbering, captions, ornate backgrounds, hangtags, props or watermarks. No huge chest graphics, no large background illustration on the fabric. The result should read as five minimal premium merch options with faithful in-game pixel graphics.
+Output: a high-resolution wide landscape image, ideally approximately 3:2.

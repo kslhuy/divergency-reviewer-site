@@ -1,0 +1,28 @@
+Generated with built-in image_gen using $divergency-25d-stage-background.
+Reference 1, environment inspiration: imgs/Stage3/ch3_04_spirit_citadel_arena.png
+Reference 2, pixel style and palette: output/skills/divergency-25d-stage-background/references/style-anchor.png
+Reference 3, gameplay composition: output/skills/divergency-25d-stage-background/references/approved-gameplay-layout.png
+
+Use case: stylized-concept.
+Asset type: finished opaque pixel-art background for a 2.5D side-scrolling retro arcade beat 'em up. Wide 2:1 horizontal composition.
+
+REFERENCE ROLES, in this exact order:
+IMAGE 1, spirit citadel arena: environment inspiration only. Borrow the massive skull-crowned barred gate, two round crenellated fortress towers, horn-shaped stone decorations, chained skull-topped obelisks, eerie teal spirit-flame braziers, weathered battlements, and spectral atmosphere. Recompose the scene into one continuous side-on gameplay room. Do NOT copy the isometric island-overview camera, floating island cutaway, bottom entrance bridge, giant ghost figure, character sprite, bright cyan saturation, or smooth painterly rendering.
+IMAGE 2, blood-lair draft: PRIMARY PIXEL STYLE AND PALETTE ANCHOR. Match its coarse handcrafted pixel clusters, hard stair-step contours, discrete shade ramps, limited dithering, dark values, and restricted muted color range.
+IMAGE 3, approved catacomb gameplay background: COMPOSITION reference only. Match its shallow side-on view, broad open floor depth, readable large scenery behind the floor, and carefully controlled pixel detail. Do NOT borrow its cavern, dragon ribcage, stalactites, dragon skull, fleshy roots, or catacomb architecture for this citadel.
+
+SCENE:
+An ancient Spirit Citadel fortress terrace in a gloomy spectral realm, a dark fantasy arena environment. In the upper half beyond the rear edge of the combat floor, a huge weathered dark slate wall with a sinister horned skull relief crowns the central heavy iron portcullis. Two round broken battlement towers flank the gate, their narrow slit windows holding restrained desaturated teal light. Jagged stone horn finials, low crenellated rear parapets, and a few skull-carved stone obelisks linked with heavy hanging chains reinforce the fortress silhouette. Place all obelisks and small spirit-flame braziers against the REAR boundary, leaving the battle area open. Muted spectral teal fog and distant fortress silhouettes appear beyond gaps in the wall and behind the towers. Small restrained teal flame shapes, pixel-rendered without bloom, provide the spirit theme. Frame the extreme upper corners lightly with dark chain silhouettes where appropriate. No cavern frame, no hanging red flesh.
+
+GAMEPLAY COMPOSITION:
+A fixed SIDE-ON beat 'em up viewpoint, with a shallow visible ground plane and no dramatic perspective vanishing point. The lower 45-50% of the image is a broad, uninterrupted, flat combat terrace extending edge-to-edge, like the approved gameplay reference. Large dark blue-gray irregular flagstones, sparse shallow cracks, slight earthy weathering, and a few tiny flat stone chips. Quiet readable texture with enough space for character sprites to move left/right and toward/away from the rear wall. No stairs, raised circular dais, entrance bridge, floor pits, pools, tall foreground obstacles, central braziers, or open chasm in the combat floor. Large scenery remains beyond the rear edge. No isolated floating island depiction. This is a view from inside the arena, not an overview of the entire map.
+
+PIXEL STYLE:
+Authentic 16-bit handcrafted pixel art matching IMAGE 2, with consistent visibly square pixel clusters, crisp hard pixel edges, deliberate stair-step contours, compact pixel highlights, simple discrete shadow planes and restrained clean dithering. Visual density of roughly 900 x 450 pixel artwork enlarged with nearest-neighbor sampling, not fine painterly concept art. All stone, metal, fog, and flames use discrete pixel colors and visible clustered shapes. 2.5D refers to movement depth within 2D artwork; no 3D rendering.
+
+COLOR AND MOOD:
+Match IMAGE 2's muted palette and dark value range: near-black charcoal, desaturated blue-violet slate, earthy bone-gray masonry, restrained muted ochre-brown weathering, and subdued ghostly teal accents. Teal is an accent in the gate, windows, braziers, and distant atmospheric bands, not a neon wash over the whole scene. Bone carvings remain gray-ochre, not bright white. Gloomy but readable, good silhouette separation and open low-detail floor. No bright electric cyan, green bloom, glossy surfaces, smooth lighting gradients or overexposure.
+
+DELIVERY:
+One finished edge-to-edge fully opaque environment image. No characters, enemies, giant ghost, humanoid spirits, UI, labels, writing, logo, watermark, panels, collage or map diagram. No top-down or isometric view, painterly rendering, soft airbrushing, blurred edges, anti-aliased contours, photoreal textures, or 3D.
+

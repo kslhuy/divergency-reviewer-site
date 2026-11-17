@@ -1,0 +1,29 @@
+Tool: built-in image_gen, transparent_background=true.
+Reference: Sakuri_Pose_Sword.png, supplied by the author.
+Purpose: proposed nonsexual costume-mishap animation for Divergency.
+
+INITIAL PROMPT
+Use case: identity-preserve.
+Create exactly 12 sequential pixel-art drawings in a uniform 4-column by 3-row
+transparent spritesheet. Preserve Sakuri's dark teal hair, cyan visor/glasses,
+pink kimono, green sash, sandals and green sword held across the shoulders.
+Ignore rectangular colour swatches in the source image. Use normal full-body
+game-sprite framing, consistent scale, clear padding and no text.
+Loose plum outer trousers beneath the closed pink kimono slip, are caught and
+pulled back up. The opaque kimono covers torso, hips, pelvis, buttocks and upper
+thighs throughout. No nudity, visible underwear, extra shorts or suggestive poses.
+Sequence: neutral; notices waistband; reaches; trousers slip; surprised pause;
+bends knees; catches waistband; lifts; pulls to waist; adjusts; settles; neutral.
+Keep sword controlled, use believable shoulder-elbow-wrist motion and folds.
+
+REPAIR PROMPT
+Use case: precise-object-edit.
+Preserve the 4x3 spritesheet, dimensions, identity and all twelve poses. Remove
+the disembodied extra hand in row 2 column 1. In the slipping poses extend the
+opaque closed pink kimono panels to completely cover hips, pelvis, buttocks and
+upper thighs, with outer trousers gathered lower and caught by the free hand.
+Clean detached red/green speckles, preserve genuine transparency, no text or
+scenery, no redesign, no nudity, no visible underwear or extra shorts.
+
+Original AI sheets are retained for traceability. Crop, uniform nearest-neighbour
+scaling and foot registration are technical export steps, not new pose drawings.

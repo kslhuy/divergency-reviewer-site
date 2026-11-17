@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hangar J4 · Parallax & Unity sprites</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111319;color:#e8e7e3;font:14px system-ui}header{padding:22px 28px;border-bottom:1px solid #32343c}h1{font-size:22px;margin:0 0 6px}p{margin:5px 0;color:#adb4be}main{padding:20px 28px}button,a{color:#ece7db}button{background:#30343d;border:1px solid #606572;border-radius:6px;padding:8px 13px;cursor:pointer}button.active{background:#795331}label{white-space:nowrap;display:inline-flex;align-items:center;gap:6px}.controls{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:16px}input[type=range]{flex:1;min-width:220px}canvas{display:block;width:100%;background:#101b24;image-rendering:pixelated;border:1px solid #40414a}#status{margin:12px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px}.card{border:1px solid #363943;border-radius:6px;overflow:hidden}.card img{width:100%;height:150px;object-fit:contain;image-rendering:pixelated;background:repeating-conic-gradient(#41444c 0 25%,#30333b 0 50%) 0/16px 16px}.card a{display:block;padding:12px;text-decoration:none}.card small{display:block;color:#b3b9c2;margin-top:5px}.hint{font-size:12px}footer{margin:20px 0;color:#b0b7c1}
+</style>
+<header><h1>Cầu Tàu Hangar J4</h1><p>Trái · Giữa · Phải — 9 lớp nền RGBA và 5 sprite vật thể. Không có MuCEM.</p></header>
+<main><div class="controls"><button id="overview">Toàn cảnh 3 đoạn</button><button id="play">Tự cuộn</button><label>Camera <input id="camera" aria-label="Vị trí camera" type="range" min="1000" max="5000" value="3000" step="1"></label><label><input type="checkbox" id="parallax" checked>Parallax</label></div>
+<div class="controls" id="toggles"><label><input type="checkbox" data-layer="L0" checked>Trời + bờ xa</label><label><input type="checkbox" data-layer="L1" checked>Mặt nước</label><label><input type="checkbox" data-layer="L2" checked>Sàn</label><label><input type="checkbox" data-layer="props" checked>Vật thể</label><label><input type="checkbox" id="checker">Nền ô caro</label><label><input type="checkbox" id="guides">Ranh giới đoạn</label></div>
+<canvas id="view" width="1600" height="629"></canvas><p id="status">Đang tải ảnh…</p><p class="hint">Kéo thanh camera để kiểm tra parallax. Mỗi vật thể đặt riêng; 3 xe dùng chung một sprite, 3 container dùng hai mẫu. Thuyền và khói chung một sprite.</p>
+<div class="grid" id="assets"></div><footer><a href="README.txt">Hướng dẫn Unity</a> · <a href="manifest.json">Thông số / kích thước</a> · <a href="generation-prompts.json">Prompt imagegen</a></footer></main>
+<script>
+const $=s=>document.querySelector(s),canvas=$('#view'),ctx=canvas.getContext('2d');
+const sides=['left','center','right'],names=sides.flatMap(s=>['L0_sky_far','L1_sea','L2_playfield'].map(l=>s+'_'+l)).concat(['prop_armored_sedan','prop_container_rust','prop_container_teal','prop_wreck_boat_smoke','prop_manhole']);
+const bounds={prop_armored_sedan:[31,176,1754,567],prop_container_rust:[83,140,1609,605],prop_container_teal:[101,175,1572,566],prop_wreck_boat_smoke:[41,42,1125,1239],prop_manhole:[595,207,982,367]};
+const imgs={},visible={L0:true,L1:true,L2:true,props:true};let loaded=false,overview=false,playing=false;
+const placements=[['prop_wreck_boat_smoke',2790,405,320,0.4],['prop_manhole',2320,625,110,1],['prop_manhole',2760,625,110,1],['prop_manhole',3200,625,110,1],['prop_manhole',3640,625,110,1],['prop_armored_sedan',2170,505,350,1],['prop_armored_sedan',2090,552,350,1],['prop_armored_sedan',2010,599,350,1],['prop_container_rust',3400,525,360,1],['prop_container_rust',3760,525,360,1],['prop_container_teal',3580,390,360,1]];
+function offset(f){return overview||!$('#parallax').checked?0:(+$('#camera').value-3000)*(1-f)}
+function prop(p){const [n,x,bottom,w,f]=p,b=bounds[n],h=w*b[3]/b[2];ctx.drawImage(imgs[n],...b,x+offset(f),bottom-h,w,h)}
+function draw(){if(!loaded)return;canvas.height=overview?210:629;ctx.imageSmoothingEnabled=false;const scale=canvas.width/(overview?6000:2000),cam=overview?3000:+$('#camera').value;
+ ctx.clearRect(0,0,canvas.width,canvas.height);if($('#checker').checked){for(let y=0;y<canvas.height;y+=16)for(let x=0;x<canvas.width;x+=16){ctx.fillStyle=((x+y)/16)%2?'#333841':'#515661';ctx.fillRect(x,y,16,16)}}else{ctx.fillStyle='#11202a';ctx.fillRect(0,0,canvas.width,canvas.height)}
+ ctx.save();ctx.scale(scale,scale);ctx.translate(overview?0:1000-cam,0);
+ if(visible.L1){ctx.fillStyle='#0b2930';ctx.fillRect(offset(.35),292,6000,155)}
+ for(const [tag,file,f] of [['L1','L1_sea',.35],['L0','L0_sky_far',.12]])if(visible[tag])sides.forEach((s,i)=>ctx.drawImage(imgs[s+'_'+file],i*2000+offset(f),0,2000,786));
+ if(visible.props)prop(placements[0]);
+ if(visible.L2)sides.forEach((s,i)=>ctx.drawImage(imgs[s+'_L2_playfield'],i*2000,0,2000,786));
+ if(visible.props)placements.slice(1).forEach(prop);
+ if($('#guides').checked){ctx.strokeStyle='#f5e2aa';ctx.lineWidth=2/scale;ctx.setLineDash([10/scale,8/scale]);[2000,4000].forEach(x=>{ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,786);ctx.stroke()});ctx.setLineDash([]);ctx.font='24px system-ui';ctx.fillStyle='#fff4d0';sides.forEach((s,i)=>ctx.fillText(['TRÁI','GIỮA','PHẢI'][i],i*2000+40,50))}
+ ctx.restore();$('#status').textContent=overview?'Toàn cảnh: 6000 × 786 pixel bố cục — ba đoạn ngang.':'Camera '+Math.round(cam)+' / 6000 · trời 0.12 · biển 0.35 · thuyền 0.40 · sàn/vật thể 1.00';
+}
+$('#overview').onclick=()=>{overview=!overview;$('#overview').classList.toggle('active',overview);draw()};$('#play').onclick=()=>{playing=!playing;$('#play').textContent=playing?'Dừng cuộn':'Tự cuộn'};
+document.querySelectorAll('input').forEach(el=>el.addEventListener('input',()=>{if(el.dataset.layer)visible[el.dataset.layer]=el.checked;draw()}));
+Promise.all(names.map(n=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{imgs[n]=im;resolve()};im.onerror=()=>reject(Error('Không tải được '+n));im.src='Textures/'+n+'.png'}))).then(()=>{loaded=true;draw();for(const n of names){const c=document.createElement('div');c.className='card';c.innerHTML='<img loading="lazy" src="Textures/'+n+'.png" alt="'+n+'"><a href="Textures/'+n+'.png" download>'+n+'<small>'+imgs[n].width+' × '+imgs[n].height+' · PNG RGBA</small></a>';$('#assets').append(c)}}).catch(e=>{$('#status').textContent=e.message});
+let last=0,dir=1;function tick(t){if(playing&&!overview){const dt=Math.min((t-last)/1000,.05);let v=+$('#camera').value+dir*230*dt;if(v>5000){v=5000;dir=-1}if(v<1000){v=1000;dir=1}$('#camera').value=v;draw()}last=t;requestAnimationFrame(tick)}requestAnimationFrame(tick);
+window.hangarPreview={draw,placements,get ready(){return loaded},get images(){return imgs}};
+</script></html>

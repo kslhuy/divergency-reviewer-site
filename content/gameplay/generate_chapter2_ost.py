@@ -16,7 +16,7 @@ CHAPTER_2_THEMES = {
     "1": {
         "id": "sakuri_snow_pure_truth",
         "title": "Tuyết Lạnh & Chuông Gió Ngọc (Theme Sakuri & Solei - Sự Thật Thuần Khiết)",
-        "description": "Khoảnh khắc Solei hạ kiếm, khúc hát ru của mẹ hòa cùng chuông gió ngọc xoa dịu tâm trí Sakuri giữa đỉnh núi tuyết.",
+        "description": "Khoảnh khắc Solei hạ thế thủ, khúc hát ru của mẹ hòa cùng chuông gió ngọc xoa dịu tâm trí Sakuri giữa đỉnh núi tuyết.",
         "prompt": "traditional japanese, weeping shakuhachi flute, koto, delicate jade wind chimes, snow mountain ambient pads, emotional cinematic strings, gentle piano lullaby motif, melancholic, ethereal, pure, peaceful catharsis, slow tempo, 72 BPM, high quality game soundtrack",
         "duration": 45.0,
         "infer_steps": 50,

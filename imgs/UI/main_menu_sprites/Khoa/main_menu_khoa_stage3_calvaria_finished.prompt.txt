@@ -1,0 +1,47 @@
+Generated with the built-in image_gen tool on 2026-10-19.
+Purpose: Chapter 3 Calvaria main menu concept, matching the supplied Khoa menu series.
+Output: imgs/UI/main_menu_sprites/Khoa/main_menu_khoa_stage3_calvaria_finished.png
+Reference paths (in input order):
+1. C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage2_bridge_finished.png
+2. C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_khoa_stage1_finished.png
+3. C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\UI\main_menu_sprites\Khoa\main_menu_v2_hot_spring.png
+4. C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\Stage3\ch3_09_bone_market_wide.png
+5. C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\Stage3\ch3_11_pain_cathedral_approach.png
+
+Final generation prompt:
+
+Use case: stylized-concept.
+Asset type: ONE finished Chapter 3 main-menu environment illustration WITH the existing game UI and camp roster, for the game Divergency. A new sibling image in the exact visual series of the supplied three menu references. Wide horizontal canvas, target 1280 x 600 pixels, aspect ratio 32:15. Opaque edge-to-edge PNG.
+
+REFERENCE ROLES, in supplied file order:
+Image 1 main_menu_khoa_stage2_bridge_finished.png is the PRIMARY composition, pixel-art rendering, exact UI, vehicle and character reference.
+Image 2 main_menu_khoa_stage1_finished.png confirms the same UI, red cargo truck, olive jeep, camp roster and nighttime pixel lighting.
+Image 3 main_menu_v2_hot_spring.png supports cozy campfire lighting and finished environmental detail. Do not import its additional Deep stats panel or vertical settings toolbar; follow Image 1's simpler UI layout.
+Image 4 ch3_09_bone_market_wide.png supplies CHAPTER 3 CALVARIA environmental identity only: sepulchral city, bone architecture and distant cathedral, stormy desaturated green-gray mist.
+Image 5 ch3_11_pain_cathedral_approach.png supplies Calvaria's massive funerary religious architecture only. Do not import its bright magenta plants or its battle-arena composition.
+
+PRIMARY REQUEST:
+Create a fresh Chapter 3 themed MAIN MENU CAMP scene in Calvaria, the city of tombs and pilgrimage. Preserve the visual identity, layout, proportions and crisp pixel density of Image 1. Change the surrounding environment to the new chapter. This is a main menu campsite seen from the same shallow elevated oblique angle as the menu references, NOT a side-on combat arena or a world map.
+
+ENVIRONMENT:
+An abandoned pilgrim rest terrace on the outskirts of Calvaria at blue-gray dusk. The camp is set on weathered flat charcoal limestone paving, with sparse desaturated weeds, hairline cracks and small worn funerary carvings. Left edge: a ruined sepulchral gate with recessed ossuary niches, clustered gray bone reliefs, an old hanging bronze bell, a few small candles, a leafless twisted tree, travel crates and a folded weathered burgundy pilgrim canopy. Keep these framing the camp instead of covering it.
+Across the upper background beyond a low broken parapet, reveal a deep misty necropolis: layered mausoleums and crypt roofs, old rib-shaped stone arches along a pilgrim route, and ONE memorable distant cathedral silhouette slightly right of center. Its dim stained-glass windows and tiny candles are muted amber/burgundy. Desaturated ghostly teal fog separates the depth planes. The city architecture feels mournful, sacred and oppressive without becoming visually noisy. The skyline and cathedral stay visible ABOVE the right-side UI. Avoid a gigantic foreground skull or any new monster.
+The central camp offers a small human refuge against this ominous setting, with a warm orange campfire and subtle discrete pixel reflections on stone and vehicles.
+
+PRESERVE THE MENU CAST AND LAYOUT:
+Preserve the SAME faded burgundy cargo truck with its boxes, left-center around x=300-550/y=160-305, and the SAME olive open-top jeep diagonally in front around x=325-505/y=265-380. Wheels rest naturally on the stone paving.
+Keep the same six small seated/resting chibi pixel companions around the central orange campfire at about x=600,y=295: red-hooded companion on the left, brown-haired dark-clothed companion at rear, sleeping green-clothed companion upper-right, blue-haired small companion lower-left, dark-haired companion facing away lower-middle, white-haired companion at right. Keep the small standing selected hero in front of the fire near x=600,y=365. Match their identities, silhouettes, proportions and sprite-like scale from Image 1; no extra NPCs, combatants or ghosts. The campfire, cars and cast remain clear of all interface panels.
+
+PRESERVE THE UI FROM IMAGE 1:
+Use Image 1 as a locked layout reference, recreating its existing small pixel UI elements accurately, WITHOUT redesigning them for the new chapter.
+Upper left: two purple-gray skull-ended resource counters, gold coin icon with 60 and red heart icon with 603.
+Right: the existing blue-gray gothic inventory grid, upper three cursed-object slots with the same dagger/charm, green skull and violet flower. Keep the small CURSED OBJECT label, the equipment grid underneath, slim potion slots along its left, and the large bag grid extending to the lower-right edge. Keep the sample items, empty cells, borders and panel proportions as in Image 1.
+Lower center/left: the same round red CHANGE control, the small four-icon SKILL strip, and the five large round skill/ability icons along the bottom with decorative arrows. Match their original illustrations and UI scale.
+Lower left: the rough dark stone BACK button.
+Retain only existing UI text: 60, 603, CURSED OBJECT, CHANGE, SKILL, BACK. Do not add Chapter 3 typography, banners, location labels, a logo, new buttons or a watermark.
+The graveyard scenery must recede behind this UI. Keep quiet dark stone and shadow underneath the inventory area for legibility.
+
+PIXEL ART STYLE:
+Match the user's MENU references over all other style defaults. Polished handmade dark fantasy pixel art with crisp small square clusters, stepped silhouettes, compact shade ramps, controlled dithering and consistent scale across characters, UI and scenery. Desaturated slate, bone-gray, olive-gray and muted teal environment; small amber light sources; weathered burgundy accents. No saturated cyan or green glow, no magenta foliage, no huge bright moon, no excessive bloom. Keep ground and subjects readable, not crushed into black.
+Avoid painterly brushwork, photorealism, 3D renders, smooth vector art, blurry/anti-aliased characters, a generic empty battle floor, a collage or split-screen. Deliver a cohesive single finished menu image with careful environmental staging and all existing interface elements in their familiar positions.
+

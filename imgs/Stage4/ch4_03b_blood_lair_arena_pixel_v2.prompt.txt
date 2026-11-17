@@ -1,0 +1,19 @@
+Generated using built-in image_gen with style reference:
+C:\Users\Quang Huy Nugyen\divergency-reviewer-site\imgs\Stage4\ch4_03b_blood_lair_arena_draft.png
+
+Use case: stylized-concept.
+Asset type: finished side-scrolling 2D stage background for a retro arcade beat 'em up, wide 2:1 landscape composition.
+Input image 1: STYLE AND PALETTE REFERENCE. Create a new stage image from the brief below. Match this reference very closely in pixel scale, hand-placed pixel clusters, contour language, shading, dark values, and restricted muted color range. The visual should belong to the same game and chapter.
+
+Primary request: Grimdark fantasy cavern and ancient ruin. Lower HALF of the image is a wide, continuous, flat, walkable battle floor of dark gray irregular cobblestone flagstones with scattered small skull bones and creeping crimson fleshy root veins. Keep this entire lower half readable and largely unobstructed for gameplay; skeletal details and veins lie flat on the ground. Floor spans edge to edge, side-scrolling beat 'em up perspective, no converging road or dramatic camera angle.
+
+Midground, immediately beyond the rear edge of the battle floor: a gargantuan petrified dark scaly dragon skull statue with a huge hollow mouth, sinister ancient stone totems wrapped in sinew, and jagged black bone spines rising from the ground. Keep the statue and upright spines behind the open battle area. Weathered, organic, ancient forms, chipped stone and compact scale patterns.
+
+Far background: eerie subdued toxic turquoise subterranean lake and jagged limestone cavern walls, carved ancient slit-eye reliefs, murky sepia ochre haze. Frame the upper border with hanging near-black stalactites and sparse dried-blood-red vascular tendrils.
+
+Style/medium: authentic hand-crafted 16-bit pixel art, exactly the reference's crisp low-resolution game-art vocabulary. Uniform hard-edged square pixel clusters throughout, stepped silhouettes and pixel lines, restrained clean dithering, limited discrete shade ramps. Detailed but clearly pixel drawn. Preserve dark blue-violet/slate scale highlights from the reference and earthy muted ochre cave light.
+
+Color palette: strictly match reference: charcoal black, charcoal slate and cool blue-gray stone, muted earthy bone gray, dark dried blood burgundy red, desaturated ghostly teal, low-chroma sepia and ochre. Gloomy and muted. Turquoise water is eerie but softly luminous in discrete pixel colors, with no vivid cyan bloom. Keep saturation and brightness within the reference's range.
+
+Constraints: single seamless-looking stage composition with no frames or panels, no characters, no UI, no writing, no watermark. No smooth digital airbrushing, no soft gradients, no anti-aliased contours, no 3D rendering, no painterly brushwork, no photorealism, no neon colors, no glossy lighting. Deliver a fully opaque image.
+

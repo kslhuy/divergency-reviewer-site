@@ -2,8 +2,8 @@ import { parseFragment, serialize, serializeOuter } from 'parse5';
 
 // Publication policy is enforced while building and on server responses, never
 // by a query parameter or CSS. Local source documents remain complete.
-const stageFive = /(?:^|[^a-z0-9])(?:stage|chapter|chuong)[\s_-]*0?5(?![a-z0-9])/i;
-const reward = /\brewards?\b|\bpledge[\s_-]*(?:tiers?|manager)\b/i;
+const stageFive = /(?:^|[^a-z0-9])(?:stage|chapter|chuong|chapitre|etape)[\s_-]*0?5(?![a-z0-9])/i;
+const reward = /\brewards?\b|\bpledge[\s_-]*(?:tiers?|manager)\b|\b(?:optional[\s_-]*add[\s_-]*ons?|creative[\s_-]*collaboration)\b|\br[eé]compenses?\b|\bcontreparties?\b/i;
 const normalized = value => String(value).normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/[đĐ]/g, 'd');
 const textOf = node => node.nodeName === '#text' ? node.value : (node.childNodes || []).map(textOf).join(' ');
 const attr = (node, name) => node.attrs?.find(a => a.name === name)?.value || '';
@@ -14,7 +14,7 @@ export function isLocalOnlyPath(value) {
   try { for (let n = 0; n < 3; n++) { const next = decodeURIComponent(decoded); if (next === decoded) break; decoded = next; } }
   catch { return true; }
   decoded = decoded.replaceAll('\\', '/');
-  return stageFive.test(decoded) || /(?:^|[\/_-])rewards?(?:[\/_. -]|$)/i.test(decoded)
+  return /(?:^|\/)backgrounds\/no-use\//i.test(decoded) || stageFive.test(decoded) || /(?:^|[\/_-])rewards?(?:[\/_. -]|$)/i.test(decoded)
     || /(?:^|\/)pledge-tiers(?:\/|$)/i.test(decoded)
     || /(?:^|\/)divergency-(?:ai-)?story-03-cradle-bargain\./i.test(decoded);
 }
@@ -26,7 +26,7 @@ export function publicContent(html, { documentId = '', retainHidden } = {}) {
     const label = normalized(textOf(node)).replace(/^#/, '').trim();
     return privateText(label) || privateText(attr(node, 'id'))
       || (documentId === 'gameplay' && /^5[-.]\d+\b/.test(label))
-      || /^(?:Shipping And Fulfillment|Epilogue|Y nghia cai ket|Chu de ket lai)$/i.test(label);
+      || /^(?:Shipping And Fulfillment(?:\s+Expedition et livraison)?|Expedition et livraison|Epilogue|Y nghia cai ket|Chu de ket lai)$/i.test(label);
   }
   function privateMedia(node) {
     return (node.attrs || []).some(a => ['src', 'href', 'poster', 'data-lightbox-src'].includes(a.name) && isLocalOnlyPath(a.value))

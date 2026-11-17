@@ -1,16 +1,13 @@
-<h2 id="gameplay-3-3-phao-ai-linh-hon" tabindex="-1"><a class="heading-link" href="#gameplay-3-3-phao-ai-linh-hon" aria-label="Link to section">#</a>3-3. Pháo đài Linh hồn</h2>
-<h3 id="gameplay-muc-ich-4" tabindex="-1"><a class="heading-link" href="#gameplay-muc-ich-4" aria-label="Link to section">#</a>Mục đích</h3>
-<p>Đây là trận công thành kết hợp Hold, Regroup, đổi đội hình và hỗ trợ kỹ năng. Năng lượng của lá chắn pháo đài đến từ những bình nhốt linh hồn.</p>
-<h3 id="gameplay-ba-thap-nang-luong" tabindex="-1"><a class="heading-link" href="#gameplay-ba-thap-nang-luong" aria-label="Link to section">#</a>Ba tháp năng lượng</h3>
-<ol>
-<li>Deep và Block phá cổng, che nhau trước pháo linh hồn.</li>
-<li>Solei leo ròng rọc, cắt dây nối và mở điểm yếu từ trên cao.</li>
-<li>Người chơi đặt các General ở Hold quanh vòng thanh tẩy bằng vị trí và khoảng cách đã bố trí cho màn, rồi gọi hỗ trợ phòng thủ khi lính phản kích. Vòng thanh tẩy kiểm tra điều kiện riêng của màn; đội hình Circle không tự kích hoạt thanh tẩy.</li>
-</ol>
-<p>Sau khi hạ chỉ huy, người chơi có hai cách xử lý bình linh hồn:</p>
-<ul>
-<li><strong>Phá hủy:</strong> nhanh, tạo nổ dây chuyền và dọn bớt lính, nhưng biến linh hồn thành oán niệm.</li>
-<li><strong>Thanh tẩy:</strong> phải giữ vị trí lâu hơn, nhưng giải phóng linh hồn an toàn.</li>
-</ul>
-<p>Lựa chọn này tác động trực tiếp tới trận Dàn Hợp Xướng ở cuối chương.</p>
-<p>Đổi từ tiến quân sang phòng thủ cần ra Hold cho từng General nếu dùng SelectedOnly. Khi cần nhóm cùng đổi đội hình, màn phải cấu hình MatchingSquad hoặc bảo đảm các NPC đáp ứng ActiveCommandGroup. Thời lượng Hold/Regroup cần phù hợp từng đợt phản kích; không thiết kế câu đố với giả định lệnh kéo dài vô hạn.</p>
+<h2 id="gameplay-3-3-phao-ai-linh-hon" tabindex="-1"><a class="heading-link" href="#gameplay-3-3-phao-ai-linh-hon" aria-label="Link to section">#</a>3-3. Pháo đài Linh hồn — Học cách giải một khế ước</h2>
+
+<p><strong>Maps:</strong> <code>ch3_03_spirit_fortress_breach</code> → <code>ch3_04_spirit_citadel_arena</code> → <code>ch3_05_tower_chain_elevator</code>. Mục tiêu là qua tiền đồn đang dùng linh hồn làm lá chắn, không chiếm cả thành phố.</p>
+<figure class="markdown-image"><img src="imgs/Stage3/ch3_03_spirit_fortress_breach.png" alt="Phá cổng để tiếp cận đường nguồn các bình linh hồn" loading="lazy"><figcaption>Phá cổng để tiếp cận đường nguồn các bình linh hồn</figcaption></figure>
+<p>Đại cảnh ngắn cho thấy dây nguồn từ bình tới pháo; camera trở lại ngang trước khi chiến đấu. Một van thử cho thấy ngắt điện chỉ dừng pháo, dấu trói vẫn còn. Người chơi cần tháo dấu trên bình để giải người trong đó. Đây là bài dạy bắt buộc cho boss Voro.</p>
+<div class="table-wrap"><table><thead><tr><th>Cách vượt</th><th>Thao tác</th><th>Hậu quả cục bộ</th></tr></thead><tbody>
+<tr><td>Phá thẳng bình, có cảnh báo trước đòn cuối</td><td>Dùng đòn thường hoặc vật ném phá vỏ để sụp lá chắn nhanh</td><td>Linh hồn trong bình bị hủy; phản hồi âm và lời người chứng kiến ghi nhận mất mát, cuối chương không trả họ lại. Dàn Hợp Xướng có thêm đợt sóng oán khí hữu hạn, không hồi sinh họ thành tù nhân mới.</td></tr>
+<tr><td>Giải dấu an toàn</td><td>Khóa van, chống đợt canh gác, mở từng chốt rồi tương tác tháo dấu. Hai hỗ trợ giữ hai hướng tiến; không bắt Ghost và Tulas cùng vận hành.</td><td>Linh hồn được giải, để lại lời cảm ơn và chỉ dẫn. Không tái bắt họ ở giáo đường. Đường chính xuống hầm vẫn mở dù chọn cách nào.</td></tr>
+</tbody></table></div>
+<figure class="markdown-image"><img src="imgs/Stage3/ch3_04_spirit_citadel_arena.png" alt="Đỉnh Vọng Gác — Giáo sĩ Hồn Vương và Linh Vượn" loading="lazy"><figcaption>Đỉnh Vọng Gác — Giáo sĩ Hồn Vương và Linh Vượn</figcaption></figure>
+<p>Miniboss Giáo sĩ Hồn Vương có khiên nối với hai trạm; người chơi phá trạm hoặc dùng vật ném khi hắn hạ độ cao. Pha Linh Vượn có đập đất, quét tay và khoảng phản công ở khớp tay; mọi nhân vật đánh được, Solei hoặc Deep có lợi thế riêng. Trận ngắn kiểm tra đường nguồn, không lặp ba pha giải khế ước của boss cuối.</p>
+<figure class="markdown-image"><img src="imgs/Stage3/ch3_05_tower_chain_elevator.png" alt="Thang xích rút xuống lối mộ đạo dưới thành" loading="lazy"><figcaption>Thang xích rút xuống lối mộ đạo dưới thành</figcaption></figure>
+<p>Cổng mặt đất đóng khi tiền đồn báo động. Đội xuống thang xích; phòng vệ hai đợt hữu hạn rồi chèn phanh phụ bằng cơ cấu trên sàn. Block giúp giữ ổn định nếu được chọn, không bắt buộc dùng tay giữ xích trong khi người chơi thiếu quân. Thang đáp xuống hầm, một đoạn nền rạn cho thấy hệ thoát nước cũ dẫn tới sông. Lưu checkpoint tại cửa hầm, mang theo kết quả các bình.</p>

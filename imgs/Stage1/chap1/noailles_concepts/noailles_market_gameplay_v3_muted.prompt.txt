@@ -1,0 +1,17 @@
+Generator: built-in image_gen
+Edit source: noailles_market_gameplay_v2_flat.png
+Style reference: marsile background before finish.png
+
+Use case: style-transfer.
+Edit image 1, the Noailles market gameplay background, using image 2, "marsile background before finish.png", as the authoritative PALETTE, PIXEL ART, AND CHARACTER SPRITE STYLE reference.
+
+Image 1 = composition/content edit target. Preserve its 16:9 horizontal stage composition, market buildings, stalls and NPC locations along the rear sidewalk, broad empty combat pavement, and far-right BAR ARMORLITE entrance. Image 2 = style reference only, not a harbor scene to copy. Do not add ships or harbor scenery.
+
+CRITICAL PALETTE CHANGE:
+Image 1 is much too bright, pastel, yellow-orange and saturated. Match image 2's restrained mid-dark earthy pixel-game palette instead: muted khaki stone, gray ochre, desaturated olive-brown walls, subdued cool gray shutters, blue-gray/slate details, dusty teal accents, deep blue-gray outlines. Use image 2 as the direct color authority. Moderate daytime brightness; not sunny cream/pastel and not night. Fruit and fabric retain small muted color accents, never vivid saturated orange-red or candy colors. Flat, matte uniform fills and limited discrete colors, minimal texture. No exposure gradients, no photorealistic rendering, no smooth comic linework. Scenery should look like the same artist drew it as image 2: coarse deliberate pixel clusters and low-resolution architectural detail, simplified flat facade planes, clean stair-step edges. Preserve readable silhouettes. Pavement mostly muted medium blue-gray stone with a sparse barely contrasting cobblestone pattern.
+
+CRITICAL NPC STYLE CHANGE:
+Carefully inspect the single sprite character at bottom left of image 2. Every NPC must match that character's hand-authored pixel-sprite rendering language and proportions: slightly oversized expressive head, compact stylized body, defined chunky dark hair and face clusters, dark pixel outline, simplified hands, strong small-scale silhouettes, subdued brown/gray/olive clothes, just two or three flat tones per material. They should read like small beat-em-up character sprites from the same game as that reference, NOT realistic proportioned miniature painted people or the bright thin figures in image 1. Match approximate 60–75 pixel native sprite height in a roughly 1024-wide scene. Maintain civilian vendor/pedestrian identities, varied faces and clothing, friendly relaxed standing poses. No weapons and no fighting. Keep NPCs on the rear walkway and behind stalls, no character in central combat floor.
+
+Keep prior user constraints: flat colors easy to recolor, NO CAST SHADOWS. Do not darken by adding lighting. Use inherently muted palette under even neutral ambient illumination. No shadows cast by trees, awnings, NPCs, props or bollards, no contact shadow blobs, no sunlight patches, no sunbeams, no glow, no bloom, no vignette. Architectural differentiation only through a few discrete flat colors. Lanterns are unlit muted brass.
+Keep the exact legible text "BAR ARMORLITE" on the far right entrance, and retain the general market scene contents and empty playable floor. Deliver one finished full-bleed cohesive 16:9 pixel game stage.

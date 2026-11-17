@@ -39,28 +39,67 @@ export function readContent(root, id) {
 export function writeContent(root, id, html) {
   const directory = path.join(root, 'content', id);
   mkdirSync(directory, { recursive: true });
+  const index = path.join(directory, 'index.json');
+  let existing = [];
+  if (existsSync(index)) {
+    try {
+      existing = JSON.parse(readFileSync(index, 'utf8'));
+    } catch {
+      existing = [];
+    }
+  }
   const chapters = splitChapters(html).map((chapter, index) => {
-    const digest = createHash('sha256').update(chapter.html).digest('hex').slice(0, 10);
-    const file = `${String(index + 1).padStart(2, '0')}-${slug(chapter.title)}-${digest}.html`;
+    let file;
+    const prefix = `${String(index + 1).padStart(2, '0')}-`;
+    if (existing[index]?.file && existing[index].file.startsWith(prefix)) {
+      file = existing[index].file;
+    } else {
+      const match = existing.find(e => e.file.startsWith(prefix) || slug(e.title) === slug(chapter.title));
+      if (match?.file) {
+        file = match.file;
+      } else {
+        const digest = createHash('sha256').update(chapter.html).digest('hex').slice(0, 10);
+        file = `${prefix}${slug(chapter.title)}-${digest}.html`;
+      }
+    }
     writeFileSync(path.join(directory, file), chapter.html, 'utf8');
     return { title: chapter.title, file };
   });
-  const index = path.join(directory, 'index.json');
   writeFileSync(index + '.pending', JSON.stringify(chapters, null, 2) + '\n', 'utf8');
   renameSync(index + '.pending', index);
 }
 
 export function describeContent(html) {
   const toc = []; let tables = 0;
+  const hasClass = (node, name) => (node.attrs?.find(attr => attr.name === 'class')?.value || '').split(/\s+/).includes(name);
+  function textExcluding(node, excludedClass) {
+    if (node.nodeName === '#text') return node.value;
+    if (excludedClass && hasClass(node, excludedClass)) return '';
+    return (node.childNodes || []).map(child => textExcluding(child, excludedClass)).join('');
+  }
+  function findClassText(node, targetClass) {
+    if (hasClass(node, targetClass)) return textOf(node);
+    for (const child of node.childNodes || []) {
+      const found = findClassText(child, targetClass);
+      if (found) return found;
+    }
+    return '';
+  }
   function visit(node) {
     if (node.tagName === 'table') tables++;
     if (/^h[1-6]$/.test(node.tagName || '')) {
       const id = node.attrs.find(attr => attr.name === 'id')?.value;
-      if (id) toc.push({ id, level: Number(node.tagName[1]), text: textOf(node).replace(/^#/, '').trim() });
+      if (id) {
+        const enText = findClassText(node, 'ks-lang-en').replace(/^#/, '').trim();
+        const frText = findClassText(node, 'ks-lang-fr').replace(/^#/, '').trim();
+        const text = enText || textOf(node).replace(/^#/, '').trim();
+        toc.push(frText ? { id, level: Number(node.tagName[1]), text, textFr: frText } : { id, level: Number(node.tagName[1]), text });
+      }
     }
     for (const child of node.childNodes || []) visit(child);
   }
   const root = parseFragment(html); visit(root);
+  const words = textExcluding(root, 'ks-lang-fr').trim().split(/\s+/).filter(Boolean).length;
   return { html, toc, tables, sections: toc.filter(item => item.level <= 2).length,
-    readMinutes: Math.max(1, Math.ceil(textOf(root).trim().split(/\s+/).length / 220)) };
+    readMinutes: Math.max(1, Math.ceil(words / 220)) };
 }

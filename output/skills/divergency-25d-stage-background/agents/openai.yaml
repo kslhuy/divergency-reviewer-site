@@ -1,0 +1,4 @@
+interface:
+  display_name: "Divergency 2.5D Stage Background"
+  short_description: "Pixel-art stages with an open 2.5D battle floor"
+  default_prompt: "Use $divergency-25d-stage-background to create a new background from my inspiration image, matching the approved pixel style and muted palette."

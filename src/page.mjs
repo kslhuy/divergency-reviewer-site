@@ -68,6 +68,7 @@ export function buildPage(docs, { local = false } = {}) {
   <link rel="stylesheet" href="scripts/stage-layouts.css">
   <link rel="stylesheet" href="styles/export.css">
   <link rel="stylesheet" href="styles/workspace.css">
+  ${local && docs.some(doc => doc.id === "character-power") ? '<link rel="stylesheet" href="styles/character-power.css">' : ""}
 </head>
 <body>
   <div class="progress" aria-hidden="true"><span id="read-progress"></span></div>
@@ -149,6 +150,7 @@ export function buildPage(docs, { local = false } = {}) {
   <script defer src="scripts/merge-gameplay.js"></script>
   <script defer src="scripts/gameplay-editor.js"></script>
   <script defer src="scripts/markdown-export.js"></script>
+  ${local && docs.some(doc => doc.id === "character-power") ? '<script defer src="scripts/skill-mastery-model.js"></script>\n  <script defer src="scripts/character-power.js"></script>\n  <script defer src="scripts/skill-mastery-studio.js"></script>' : ""}
 </body>
 </html>`;
   return local ? html : publicCampaignPage(html);

@@ -3,8 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "check:canon": "node scripts/check-character-canon.mjs",
     "build": "node build-reviewer-html.mjs",
     "build:local": "node build-reviewer-html.mjs --local",
+    "build:all": "node build-reviewer-html.mjs --all",
     "build:pages": "node scripts/prepare-pages.mjs",
     "build:online": "node online/prepare.mjs && vite build",
     "dev:online": "node online/prepare.mjs --local && vite --host 127.0.0.1",

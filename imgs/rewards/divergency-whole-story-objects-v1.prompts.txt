@@ -1,0 +1,109 @@
+Divergency useful objects - whole-story, reference-led revision
+Generated using built-in image_gen. Earlier Bastonne concepts are exploratory and are not the basis for this revision.
+Scope reviewed: premise, themes, main cast, five relics, Prologue/Bastonne/Marseille summaries, Sakuri and Calvaria summaries and prop passages, full Akam/Cradle chapter text and ending, origin myth and its limits.
+
+Narrative and visual findings:
+- Sakuri: the mother's jade wind chime and lullaby connect Solei with Sakuri; listening and care resolve the encounter. The story describes an engraved maternal crest but no clear crest artwork was found, so these concepts do not invent one.
+- Calvaria: Barnaby's Fate-Changer Coffin Shop combines dark humor with a refuge. Its timber coffins and rough shop placards are directly identifiable visual props. The box is a modern practical adaptation, not a new canonical relic.
+- Akam Meskul: the ancient dragon's body houses the tunnels and industry. The long fossil skull, rib arches, burgundy roots and teal water are actual game features, not a made-up military faction mark.
+- The Cradle: the Memory Causeway brings back fragments of Marseille, Sakuri, Calvaria and Akam. Its scene can carry the full journey on one useful printed textile.
+- Whole-story themes: identity, listening, letting the living choose, rescue and accepting loss. Avoid presenting the relics as a triumphant collectible power set or assigning the companions a new cult emblem.
+- Art direction: actual original character poster and gameplay/environment images, visible pixel clusters, stepped silhouettes, short shade ramps, mature figures, desaturated bone/bronze/jade/burgundy and chapter-specific blue. Photographic object mockup, game-style printed artwork; the physical product should not glow.
+- Simplicity refers to physical manufacture: ordinary fabric/paper blanks plus one printed image; coffin box is an intended two-part FDM concept. These are visual concepts, not samples or validated CAD.
+- Product titles are design labels, not changes to lore.
+
+Local narrative sources:
+content/story/03-chu-de-chinh-d20669680f.html
+content/story/04-than-so-sinh-va-nam-bao-vat-024999de2a.html
+content/story/05-nhan-vat-trung-tam-d34f521cf6.html
+content/story/09-stage-2-sakuri-noi-niem-tin-nghe-thay-moi-loi-noi-doi-df183b1d3c.html
+content/story/10-stage-3-calvaria-xuong-mo-ton-giao-va-cai-chet-bi-rao-ban-1a9c76ef3f.html
+content/story/11-stage-4-akam-meskul-huyet-lo-khe-nut-coi-mong-8a97d2f9e9.html
+content/story/12-stage-5-the-cradle-coi-mong-xanh-day-ron-va-su-thuc-tinh-cua-stranger-35c59fd8d0.html
+content/story/13-y-nghia-cai-ket-5197e0450d.html
+content/origin/04-3-nam-vet-thuong-kien-tao-nam-nen-van-minh-dadf74ce78.html
+content/origin/06-5-soi-day-nhan-qua-noi-vao-cau-chuyen-game-577bc3cbc1.html
+content/origin/07-6-dich-den-cuoi-cung-khuc-ca-ru-thay-cho-loi-nguyen-216d0349e1.html
+
+EXACT GENERATION PROMPTS AND REFERENCES
+
+OUTPUT: divergency-memory-causeway-bandana-v1.png
+REFERENCE PATHS:
+1. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage5/ch5_01_memory_causeway_v2.png
+2. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage5/ch5_03_umbilical_altar_night_v2.png
+3. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/chars/Poster.png
+
+Use case: product-mockup, reference-guided redesign of printed artwork.
+Asset: one practical square bandana for Divergency, with meaning from the ENTIRE journey, not just Bastonne. Create a new physical-object concept using the supplied GAME ART as real visual references.
+Reference image 1 is the authoritative illustrated Memory Causeway from Chapter 5: upside-down Marseille architecture at left, the faded red Sakuri torii, Calvaria's bell/ruined pale masonry, and Akam's dragon ribs in a midnight-blue dream. Preserve these recognizable features and its actual square pixel clusters, stepped silhouettes, short color ramps and carefully controlled blue/jade/terracotta palette.
+Reference image 2 supplies Cradle architectural tracery and the dark cosmic roots, secondary only.
+Reference image 3 supplies the game's handmade gritty sprite rendering, restrained palette and mature tone. Do not redraw the characters onto this product.
+Story basis: the Memory Causeway is where fragments of all the earlier places return in the Cradle. It embodies the journey and the need to leave comforting memories and return to life. This is a merch interpretation of an existing location, not a map, faction crest, religion or newly invented canon.
+
+ONE normal dark midnight-blue cloth bandana with a simple hem, about 50 cm square. The construction is ordinary and simple; its artistic identity comes from ONE printed face. Show a large square image adapted directly from reference 1 occupying the inner 70 percent: a quiet ivory causeway at bottom, floating inverted stone facades to the left, one small faded-red torii near the center, a bone-colored hanging bell and rib arch to the right. Surround it with calm blue-black cloth and one restrained border borrowed from the Cradle's bone-white arch shapes, stepped like actual game pixels. Keep plenty of quiet dark sky. Retain the characteristic environment shapes so someone who knows the game recognizes the setting. No random abstract arrows, keys, numbers, generic escape symbols, paisley or modern vector logos. Pixel illustration must read as shaded game artwork printed onto fabric, NOT a smooth airbrushed fantasy painting, generic 8-bit emoji, neon space photo or novelty cartoon. Use roughly a dozen coordinated flat pixel-art tones, not photographic full-spectrum shading. Small "DIVERGENCY" in quiet worn bone-colored serif capitals at ONE bottom corner of the cloth; no slogan on the cloth. No made-up glyphs.
+The print is physically FLAT ink/dye: the illustrated light is printed color, the bandana itself must not glow, emit light or have sewn buildings, relief, metal trim, tassels or holes. One simple printed textile item, no custom assembly.
+
+Presentation: one large truthful product photograph of the bandana laid nearly flat on a neutral charcoal tabletop, shot from above at a slight angle, shallow natural wrinkles only, image visible. Along the right edge a small inset of the same bandana loosely folded as a neckerchief, keeping part of the red torii and blue sky visible; inset is a second view of the SAME item. Quiet museum/catalog lighting, enough exposure to see the actual dark print. Small off-product heading "MEMORY CAUSEWAY / BANDANA". One off-product caption "A whole journey carried home." Tiny footer "REFERENCE-BASED CONCEPT - SAMPLE REQUIRED". No fantasy staging, scene props, packaging or people. Landscape composition. Make this recognizably Divergency through the supplied environments, rather than a minimalist invented symbol.
+
+----------------------------------------
+
+OUTPUT: divergency-akam-dragonbone-beanie-v1.png
+REFERENCE PATHS:
+1. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage4/ch4_02_dragon_bone_catacombs_gameplay_pixel_v2.png
+2. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/chars/Poster.png
+3. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/UI/Character_selcted_story.png
+
+Use case: product-mockup, reference-guided redesign of printed artwork.
+Asset: a useful everyday beanie for Divergency that belongs to Chapter 4 Akam Meskul, replacing the previous anonymous number-label concept.
+Reference image 1 is authoritative visual content: Akam's gigantic fossilized dragon skull lying low at the right of the corridor, long snout, stone/bone planes, huge repeating rib arches, burgundy root/vein growths, dark teal water. Derive the patch illustration from this ACTUAL GAME LOCATION.
+Reference 2 is the original character poster: follow its crisp hand-placed pixel clusters, earthy desaturated palette, bone/bronze edges and gritty mature tone. Do not add character faces.
+Reference 3 is secondary item-icon pixel shading and bronze/black frame treatment, not content or text to copy.
+Story basis: Akam Meskul has industry and a war built into an ancient dragon's body. The design is a souvenir of the dragon-bone passage and the people rescued there, not a symbol endorsing either warring faction. Do not invent a faction crest, runes or canonical badge.
+
+ONE ordinary dark charcoal-olive ribbed-knit cuffed beanie. A single small rectangular flat PRINTED fabric patch, roughly 45 by 40 mm, is simply sewn onto one side of the cuff. The patch is an inventory-like miniature game scene with the identifiable long dragon skull from reference 1 filling the lower half and ONE massive rib arch framing it from above. Two modest burgundy root strands cross the rib, and a tiny area of desaturated teal water sits behind. Charcoal background, aged bone highlights, short brown-gray shade ramps, subtle burgundy and teal accents, rendered as actual crisp shaded 16-bit-inspired pixel art, around 64 by 48 logical pixels. Dark one-pixel-type outline gives the shape clarity. The silhouette of the skull MUST be the dragon from the supplied game scene, not a human skull, ram, dinosaur sticker or generic winged dragon logo. No wings, no shield, no number 07, no text on the patch, no slogan, no patch collection.
+Use a real practical flat printed patch with modest black attachment stitching. The tiny shaded pixel artwork is PRINTED, not impossibly embroidered into tiny multicolor stitches. No relief sculpture, 3D printed bone spikes, fake leather shields or expensive customized knit pattern. The beanie is a stock-looking blank plus one patch. The black/bronze UI influence should stay as a very narrow simple edge within the printed patch, not raised ornament.
+
+Presentation: one large photorealistic product photograph of the beanie sitting upright naturally on a neutral dark tabletop, three-quarter view toward the patch. Soft daylight reveals the game artwork and knit texture. Off-product small heading "AKAM / DRAGONBONE BEANIE"; small caption "From the passage inside the ancient dragon." A small clear inset at lower right enlarges the exact same patch as flat square pixel art so the style can be judged. Tiny footer "REFERENCE-BASED CONCEPT - SAMPLE REQUIRED". Landscape. No prison props, neon, packaging, people, military uniform or new lore. Strong game-specific art on an uncomplicated useful object.
+
+----------------------------------------
+
+OUTPUT: divergency-barnaby-coffin-pencil-box-v1.png
+REFERENCE PATHS:
+1. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage3/ch3_10_coffin_shop_sanctuary.png
+2. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/chars/Poster.png
+3. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/UI/Character_selcted_story.png
+
+Use case: product-mockup, reference-guided new useful object based on an existing scene.
+Asset: a simple homemade-3D-print-oriented pencil box inspired by Barnaby's Fate-Changer Coffin Shop in Divergency Chapter 3, Calvaria.
+Reference image 1 is AUTHORITATIVE for the narrative prop: the shop's plain rough wooden coffins, old dark timber, warm ochre hand-written signs "COFFINS CHEAP" and "FATE CHANGER", bone details, burgundy cloth and subtle teal gloom. This is the irreverent small shop/safe stop that later gives shelter to rescued people. Preserve that humorous everyday handmade personality, not a grand religious reliquary.
+Reference 2 supplies the game's gritty handmade PIXEL-ART surface design, dark outlines and shade ramps. Any printed illustration must share this style.
+Reference 3 supplies muted bronze/bone UI frame color only, not elaborate ornament.
+
+Create a practical small DESKTOP PENCIL BOX in the shape of one ordinary broad six-sided coffin, with enough interior length for normal pens. About 19 cm long by 7 cm wide is the design intent, not a production guarantee. Exactly TWO simple home-print-oriented parts: a flat-bottom open tray with broad straight walls, and one separate flat lift-off lid with a shallow locating lip. No hinge, magnets, clasps, metal handles, separate feet, fragile bone ornaments, complicated mechanisms, hidden compartments, fangs or many tiny modelled carvings. Plain thick robust geometry with chamfered outside corners. Shape is recognizable as the shop's simple coffin, not a detailed miniature coffin statue.
+
+Material: matte dark-brown FDM plastic with a few honest layer lines. Wide shallow parallel grooves suggest 3-4 wooden planks on the lid only; no sculpted wood grain. A simple single-color dry-brush edge treatment in muted ochre suggests worn timber. Everything must look achievable as a modest homemade box, not carved real hardwood, metal casting or museum-quality aging.
+The LID has ONE flat printed paper/vinyl label on top, ochre/ivory, drawn with dark pixel-art edges like an enlarged in-game shop sign. Text ONLY "BARNABY" in small clear capitals at top and "COFFINS CHEAP" in larger hand-lettered black capitals underneath. A small simple pixel-coffin drawing with a few square highlights at bottom is enough. No fake magical efficacy claim, invented crest, skull icon, barcode, ID number, huge brand logo or detailed portrait. This print is replaceable decoration, not a third structural printed part.
+
+Show the open tray in a three-quarter overhead product photograph with TWO ordinary pens lying inside to make the useful purpose obvious. The separate lid rests face-up beside it, art fully visible. One object and its matching lid, no additional boxes or product bundle. Warm-gray tabletop, quiet daylight, natural accessible DIY appearance. Off-product heading "BARNABY'S / COFFIN PENCIL BOX". Off-product short caption "Calvaria's small shop, now on your desk." Tiny footer "CONCEPT - TWO-PART PRINT AND FIT TO BE TESTED". Landscape product concept. Do not show a person, corpse, incense, prayer altar, game scene background or decorative clutter. The meaning and art direction should come clearly from the supplied actual shop, with very simple physical construction.
+
+----------------------------------------
+
+OUTPUT: divergency-solei-lullaby-bookmark-v1.png
+REFERENCE PATHS:
+1. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage2/old room_sakuri.png
+2. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/chars/Poster.png
+3. C:/Users/Quang Huy Nugyen/divergency-reviewer-site/imgs/Stage2/sakuri final_1_phase_3.png
+
+Use case: product-mockup, reference-guided illustration on a simple useful printed object.
+Asset: a tall paper bookmark for Divergency, rooted in Solei's story and Chapter 2 Sakuri.
+Reference 1 supplies Sakuri's ACTUAL environment appearance: deep red old palace wood, muted dark jade, olive stone, amber/bone highlights, restrained fallen red leaves, crisp visible game pixels.
+Reference 2 is the authoritative character model for Solei: the young adult blue-haired woman with short blue hair, mint/teal cropped vest, black crop top, dark trousers, simple confident posture. Preserve her hair, outfit silhouette, age and identity in the new small pixel illustration; do not substitute a generic kimono girl or pink-haired anime heroine.
+Reference 3 supplies the quiet Sakuri peak atmosphere and small islands/branches, secondary only; do not copy its placeholder boss model or flat empty arena.
+
+Story basis: Solei finds her mother's jade wind chime and learns her mother cared for Sakuri. Her mother's lullaby and that gentle sound become the emotional link that lets Solei reach Sakuri. Make the artwork about memory, listening and care. The physical appearance of the family's engraved crest is not established by these references; OMIT any invented family crest or fake script. This bookmark is a merch adaptation of that meaningful prop, not an exact canonical replica of a drawn chime.
+
+ONE standard rectangular bookmark made from simple matte printed heavy card, with gently rounded corners, roughly 5 by 16 cm. One small punched hole at the top has an ordinary muted burgundy cotton tassel and ONE plain jade-green bead on the cord. This is simple print, cut and thread assembly, not a custom metal bookmark, sculptural gem, collectible figurine or complex craft.
+Its printed face is a carefully composed TALL PIXEL-ART illustration. In the lower third show Solei from a small three-quarter BACK view, identifiable blue hair and mint vest, standing quietly by a worn red palace window. Her empty hands rest naturally, with her demon-eye mechanical legs in a relaxed stance; she is a karate kick specialist. In the upper third a modest jade wind chime hangs from the old red timber: three simple jade-colored chime pendants and a small rectangular wind catcher on a bronze-brown cord, all illustrated PIXELS, not physical raised parts. A few red leaves and one broad bamboo shadow frame the composition; center remains quiet dark space. The actual pixel rendering must match the original poster and old-room game reference: square color clusters, hard stepped outlines, short earthy shade ramps, no smooth painted anime gradients, modern vector icons, cute chibi head, emoji, neon or shiny jewels.
+No quote, marketing slogan, specimen number or fictitious runic writing on the bookmark. At the very bottom a tiny unobtrusive "DIVERGENCY" in bone serif capitals is enough.
+
+Presentation: one large realistic overhead product photograph of the SINGLE bookmark lying partly on an open ordinary unbranded book, front artwork fully visible, tassel resting naturally beside it. Warm neutral light, no extra bookmarks, accessories, scenes or people. Include a small off-product heading "SOLEI / LULLABY BOOKMARK" and off-product caption "Her mother's sound. A moment of quiet." Tiny footer "REFERENCE-BASED CONCEPT - SAMPLE REQUIRED". Landscape product composition with enough close detail to judge the pixel-art style. The bookmark and tassel are real paper and cotton; all illustrated jade lights are flat ink, not actual emitted light.
