@@ -10,7 +10,13 @@ test('public reader contains bilingual EN/FR campaign; local reader retains othe
   const { Script } = await import('node:vm');
   const html = buildPage(buildDocs());
   assert.deepEqual([...html.matchAll(/data-doc="([^"]+)"/g)].map(m => m[1]), ['kickstarter']);
-  assert.doesNotMatch(html, /ALL_IMAGE_SLOTS|IMAGE_SLOTS|id="web-edit|data-md-action|src="[^"]*gameplay-editor|Mục lục|Chưa|Tìm mục/);
+  assert.doesNotMatch(html, /ALL_IMAGE_SLOTS|IMAGE_SLOTS|id="web-edit|data-md-action|src="[^"]*gameplay-editor|Mục lục|Chưa|Tìm mục|Mở hoặc thu gọn|campaign-contents/);
+  assert.match(html, /class="progress"/);
+  assert.match(html, /class="doc-stats"/);
+  assert.match(html, /class="toc-panel"/);
+  assert.match(html, /class="toc-tree"/);
+  assert.match(html, /class="toc-filter"/);
+  assert.match(html, /data-toc-expand="true"/);
   assert.match(html, /<html lang="en">/);
   assert.match(html, /data-ks-lang="en"/);
   assert.match(html, /data-ks-lang-btn="en"/);
