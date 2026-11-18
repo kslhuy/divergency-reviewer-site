@@ -20,9 +20,9 @@
   
   
   
-<style>.campaign-contents{align-self:start;position:sticky;top:20px;padding:20px;border:1px solid var(--line,#484039);border-radius:8px}.campaign-contents summary{cursor:pointer;font-weight:bold}.campaign-contents ul{padding-left:18px}.campaign-contents li{margin:10px 0}.campaign-contents a{color:inherit}.doc-pane{display:block}.doc-layout{grid-template-columns:260px minmax(0,1fr)}.hero-top-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.hero-top-row .eyebrow{margin:0}.ks-lang-switcher{display:inline-flex;flex-wrap:wrap;gap:6px;align-items:center}.ks-lang-switcher--compact{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line-soft,#312b25);width:100%}.ks-lang-btn{min-height:34px;padding:5px 12px;border:1px solid var(--line,#4a3f34);border-radius:6px;background:rgba(20,19,18,0.86);color:var(--muted,#bdb2a2);font:inherit;font-size:0.84rem;font-weight:600;cursor:pointer;transition:all 150ms ease}.ks-lang-btn:hover,.ks-lang-btn:focus-visible{color:var(--ink,#f5eee3);border-color:var(--amber,#d8a64d);outline:none}.ks-lang-btn.is-active{background:var(--teal,#6fb8ae);color:#11100f;border-color:var(--teal,#6fb8ae);font-weight:700}body[data-ks-lang="en"] .ks-lang-fr,body:not([data-ks-lang]) .ks-lang-fr{display:none !important}body[data-ks-lang="fr"] .ks-lang-en{display:none !important}@media(max-width:900px){.doc-layout{display:block}.campaign-contents{position:static;margin:16px 0}.doc-intro{display:block}}@media print{.campaign-contents,.ks-lang-switcher{display:none}}</style></head>
+<style>:root{--reader-top:20px;--heading-offset:28px}.doc-pane{display:block}.doc-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:12px 24px;padding:16px 0}.doc-heading{min-width:0}.doc-intro .eyebrow{margin:0 0 5px}.doc-intro h2{font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.2}.doc-intro .doc-summary{margin:8px 0 0;max-width:none;color:var(--muted);font-size:1rem;line-height:1.5}.doc-intro .doc-stats{min-width:0;grid-template-columns:repeat(3,minmax(76px,1fr));gap:6px;margin:0}.doc-intro .doc-stats div{padding:8px 10px;border-radius:5px}.doc-intro .doc-stats dt{font-size:.75rem}.doc-intro .doc-stats dd{margin-top:4px;font-size:1.05rem;white-space:nowrap}.doc-layout{margin-top:22px}.hero-top-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.hero-top-row .eyebrow{margin:0}.hero-top-row .ks-lang-switcher{margin-top:0}body[data-ks-lang="en"] .ks-lang-fr,body:not([data-ks-lang]) .ks-lang-fr{display:none !important}body[data-ks-lang="fr"] .ks-lang-en{display:none !important}@media(max-width:760px){.doc-intro{grid-template-columns:minmax(0,1fr);gap:12px;padding:14px 0}.doc-intro .doc-stats{grid-template-columns:repeat(3,minmax(0,1fr))}}@media print{.toc-panel,.ks-lang-switcher,.progress{display:none !important}.doc-intro{display:block}}</style></head>
 <body data-ks-lang="en">
-  
+  <div class="progress" aria-hidden="true"><span id="read-progress"></span></div>
   <main class="shell">
     <header class="hero">
       <div class="hero-copy">
@@ -55,14 +55,101 @@
           <p class="doc-summary"><span class="ks-lang-en">Game showcase: combat, skill deck &amp; Vesliction, squad synergy, playable fighters, story, and music.</span><span class="ks-lang-fr" lang="fr">Présentation du jeu : combats, deck de compétences &amp; Vesliction, synergie d'escouade, combattants jouables, histoire et musique.</span></p>
           <div class="ks-lang-switcher" role="group" aria-label="Language / Langue"><button type="button" class="ks-lang-btn is-active" data-ks-lang-btn="en" aria-pressed="true">EN · English</button><button type="button" class="ks-lang-btn" data-ks-lang-btn="fr" aria-pressed="false">FR · Français</button></div>
         </div>
-        
+        <dl class="doc-stats" aria-label="Kickstarter Campaign statistics">
+          <div><dt><span class="ks-lang-en">Read</span><span class="ks-lang-fr" lang="fr">Lecture</span></dt><dd>7 min</dd></div>
+          <div><dt>Sections</dt><dd>6</dd></div>
+          <div><dt><span class="ks-lang-en">Tables</span><span class="ks-lang-fr" lang="fr">Tableaux</span></dt><dd>0</dd></div>
+        </dl>
 
       </div>
 
 
 
       <div class="doc-layout">
-        <aside class="campaign-contents" aria-label="Campaign contents"><div class="ks-lang-switcher ks-lang-switcher--compact" role="group" aria-label="Language / Langue"><button type="button" class="ks-lang-btn is-active" data-ks-lang-btn="en" aria-pressed="true">EN</button><button type="button" class="ks-lang-btn" data-ks-lang-btn="fr" aria-pressed="false">FR</button></div><details open=""><summary><span class="ks-lang-en">Contents</span><span class="ks-lang-fr" lang="fr">Sommaire</span></summary><nav aria-label="Campaign sections"><ul><li><a href="#kickstarter-high-velocity-responsive-combat"><span class="ks-lang-en">High-Velocity, Responsive Combat</span><span class="ks-lang-fr" lang="fr">Combats rapides et réactifs</span></a></li><li><a href="#kickstarter-deck-based-combat-attunement-loadouts"><span class="ks-lang-en">Deck-Based Combat Attunement (Loadouts)</span><span class="ks-lang-fr" lang="fr">Équipement tactique par deck de compétences</span></a></li><li><a href="#kickstarter-real-time-tactical-command-squad-synergy"><span class="ks-lang-en">Real-Time Tactical Command (Squad Synergy)</span><span class="ks-lang-fr" lang="fr">Commandement tactique en temps réel (Synergie d'escouade)</span></a></li><li><a href="#kickstarter-playable-fighters"><span class="ks-lang-en">Playable Fighters</span><span class="ks-lang-fr" lang="fr">Combattants jouables</span></a></li><li><a href="#kickstarter-story"><span class="ks-lang-en">Story</span><span class="ks-lang-fr" lang="fr">Histoire</span></a></li><li><a href="#kickstarter-the-sound-of-divergency-meet-our-composer"><span class="ks-lang-en">Music — Acheron (Composer, Sound Designer)</span><span class="ks-lang-fr" lang="fr">Musique — Acheron (Compositeur, Sound Designer)</span></a></li><li><a href="#kickstarter-join-us"><span class="ks-lang-en">Follow &amp; Support Divergency</span><span class="ks-lang-fr" lang="fr">Suivre et soutenir Divergency</span></a></li></ul></nav></details></aside>
+        <aside class="toc-panel" aria-label="Contents: Kickstarter Campaign">
+    <button class="toc-mobile-toggle" type="button" aria-expanded="false" aria-controls="toc-content-kickstarter">
+      <span><span class="ks-lang-en">Contents</span><span class="ks-lang-fr" lang="fr">Sommaire</span></span><span class="toc-current">Kickstarter Campaign</span><span class="toc-mobile-chevron" aria-hidden="true">⌄</span>
+    </button>
+    <div class="toc-content" id="toc-content-kickstarter">
+      <div class="ks-lang-switcher ks-lang-switcher--compact" role="group" aria-label="Language / Langue"><button type="button" class="ks-lang-btn is-active" data-ks-lang-btn="en" aria-pressed="true">EN</button><button type="button" class="ks-lang-btn" data-ks-lang-btn="fr" aria-pressed="false">FR</button></div>
+      <div class="toc-header"><p class="toc-title"><span class="ks-lang-en">Contents</span><span class="ks-lang-fr" lang="fr">Sommaire</span></p><span>11</span></div>
+      <label class="toc-filter-label"><span class="ks-lang-en">Filter</span><span class="ks-lang-fr" lang="fr">Filtrer</span>
+        <input class="toc-filter" type="search" placeholder="Section…" autocomplete="off">
+      </label>
+      <div class="toc-actions">
+        <button type="button" data-toc-expand="true"><span class="ks-lang-en">Expand all</span><span class="ks-lang-fr" lang="fr">Tout déplier</span></button>
+        <button type="button" data-toc-expand="false"><span class="ks-lang-en">Collapse</span><span class="ks-lang-fr" lang="fr">Tout replier</span></button>
+      </div>
+      <nav class="toc-scroll" aria-label="Sections in Kickstarter Campaign"><ol class="toc-tree"><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 0">
+          <button class="toc-branch-toggle" type="button" aria-expanded="true" aria-controls="toc-children-kickstarter-divergency-dark-fantasy-tactical-brawler" aria-label="Toggle section: DIVERGENCY - Waning Aspiration : Dark Fantasy Brutal Combat - Pixel Art"><span aria-hidden="true">›</span></button>
+          <a class="toc-link toc-level-1" href="#kickstarter-divergency-dark-fantasy-tactical-brawler"><span class="ks-lang-en">DIVERGENCY - Waning Aspiration : Dark Fantasy Brutal Combat - Pixel Art</span><span class="ks-lang-fr" lang="fr">DIVERGENCY - Waning Aspiration : Combat brutal Dark Fantasy - Pixel Art</span></a>
+        </div>
+        <ol id="toc-children-kickstarter-divergency-dark-fantasy-tactical-brawler"><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 1">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-3" href="#kickstarter-high-velocity-responsive-combat"><span class="ks-lang-en">High-Velocity, Responsive Combat</span><span class="ks-lang-fr" lang="fr">Combats rapides et réactifs</span></a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 1">
+          <button class="toc-branch-toggle" type="button" aria-expanded="false" aria-controls="toc-children-kickstarter-deck-based-combat-attunement-loadouts" aria-label="Toggle section: Deck-Based Combat Attunement (Loadouts)"><span aria-hidden="true">›</span></button>
+          <a class="toc-link toc-level-3" href="#kickstarter-deck-based-combat-attunement-loadouts"><span class="ks-lang-en">Deck-Based Combat Attunement (Loadouts)</span><span class="ks-lang-fr" lang="fr">Équipement tactique par deck de compétences</span></a>
+        </div>
+        <ol id="toc-children-kickstarter-deck-based-combat-attunement-loadouts" hidden=""><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-4" href="#kickstarter-item-and-vesliction"><span class="ks-lang-en">Divergency's Item and Vesliction</span><span class="ks-lang-fr" lang="fr">Objets et reliques maudites : Vesliction</span></a>
+        </div>
+
+      </li></ol>
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 1">
+          <button class="toc-branch-toggle" type="button" aria-expanded="false" aria-controls="toc-children-kickstarter-real-time-tactical-command-squad-synergy" aria-label="Toggle section: Real-Time Tactical Command (Squad Synergy)"><span aria-hidden="true">›</span></button>
+          <a class="toc-link toc-level-3" href="#kickstarter-real-time-tactical-command-squad-synergy"><span class="ks-lang-en">Real-Time Tactical Command (Squad Synergy)</span><span class="ks-lang-fr" lang="fr">Commandement tactique en temps réel (Synergie d'escouade)</span></a>
+        </div>
+        <ol id="toc-children-kickstarter-real-time-tactical-command-squad-synergy" hidden=""><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 2">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-4" href="#kickstarter-partner-skill-fusion"><span class="ks-lang-en">Partner Skill Fusion: Unleash a New Onslaught!</span><span class="ks-lang-fr" lang="fr">Fusion de compétences entre partenaires : Déchaînez un nouvel assaut !</span></a>
+        </div>
+
+      </li></ol>
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 1">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-2" href="#kickstarter-playable-fighters"><span class="ks-lang-en">Playable Fighters</span><span class="ks-lang-fr" lang="fr">Combattants jouables</span></a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 1">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-2" href="#kickstarter-story"><span class="ks-lang-en">Story</span><span class="ks-lang-fr" lang="fr">Histoire</span></a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 1">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-2" href="#kickstarter-the-sound-of-divergency-meet-our-composer"><span class="ks-lang-en">Music — Acheron (Composer, Sound Designer)</span><span class="ks-lang-fr" lang="fr">Musique — Acheron (Compositeur, Sound Designer)</span></a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 1">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-2" href="#kickstarter-from-our-production-desk"><span class="ks-lang-en">From Our Production Desk: The Story of TriLinkage Studio</span><span class="ks-lang-fr" lang="fr">Dans les coulisses : l'histoire de TriLinkage Studio</span></a>
+        </div>
+
+      </li><li class="toc-item">
+        <div class="toc-row" style="--toc-depth: 1">
+          <span class="toc-leaf-spacer" aria-hidden="true"></span>
+          <a class="toc-link toc-level-2" href="#kickstarter-join-us"><span class="ks-lang-en">Follow &amp; Support Divergency</span><span class="ks-lang-fr" lang="fr">Suivre et soutenir Divergency</span></a>
+        </div>
+
+      </li></ol>
+      </li></ol></nav>
+      <p class="toc-empty" role="status" hidden=""><span class="ks-lang-en">No matching sections.</span><span class="ks-lang-fr" lang="fr">Aucune section trouvée.</span></p>
+    </div>
+  </aside>
         <article class="markdown-body" data-search-root="kickstarter">
           <h1 id="kickstarter-divergency-dark-fantasy-tactical-brawler" tabindex="-1"><a class="heading-link" href="#kickstarter-divergency-dark-fantasy-tactical-brawler" aria-label="Link to section">#</a><span class="ks-lang-en">DIVERGENCY - Waning Aspiration : Dark Fantasy Brutal Combat - Pixel Art</span><span class="ks-lang-fr" lang="fr">DIVERGENCY - Waning Aspiration : Combat brutal Dark Fantasy - Pixel Art</span></h1>
 <p><span class="ks-lang-en"><em>A fast 2.5D pixel-art brawler where every fight is shaped by your fighter, your skill deck, and your squad commands.</em></span><span class="ks-lang-fr" lang="fr"><em>Un brawler nerveux en pixel art 2.5D où chaque combat dépend de votre combattant, de votre deck de compétences et de vos ordres d'escouade.</em></span></p>
@@ -150,10 +237,16 @@
 <p><span class="ks-lang-en">Skills are not static. As fighters level up, skill upgrades can improve damage, cooldown behavior, stamina or energy cost, and secondary effects.</span><span class="ks-lang-fr" lang="fr">Les compétences ne sont pas figées. À mesure que vos combattants progressent, leurs améliorations peuvent renforcer les dégâts, le temps de recharge, le coût en endurance ou en énergie ainsi que les effets secondaires.</span></p>
 
 <h4 id="kickstarter-item-and-vesliction" tabindex="-1"><a class="heading-link" href="#kickstarter-item-and-vesliction" aria-label="Link to section">#</a><span class="ks-lang-en">Divergency's Item and Vesliction</span><span class="ks-lang-fr" lang="fr">Objets et reliques maudites : Vesliction</span></h4>
-<p><span class="ks-lang-en">But in Divergency, power always comes at a price.</span><span class="ks-lang-fr" lang="fr">Mais dans Divergency, le pouvoir a toujours un prix.</span></p>
+<p><span class="ks-lang-en">Every relic in Divergency asks for something back.</span><span class="ks-lang-fr" lang="fr">Dans Divergency, chaque relique réclame quelque chose en retour.</span></p>
+<p><span class="ks-lang-en">Across the world, you'll find <strong>Vesliction</strong>: cursed relics that give you a real edge in a fight, usually with a nasty catch. One mask might crank up your damage as your HP drops, while blocking almost every way to heal.</span><span class="ks-lang-fr" lang="fr">À travers le monde, vous trouverez des <strong>Vesliction</strong> : des reliques maudites qui vous donnent un véritable avantage au combat, mais presque toujours avec un revers brutal. Un masque peut augmenter vos dégâts à mesure que vos PV baissent, tout en bloquant presque tous vos moyens de vous soigner.</span></p>
+<p><span class="ks-lang-en">They aren't just combat gear, either. Tracking down these relics pieces together forgotten lore, hidden caches, and new ways to build your squad.</span><span class="ks-lang-fr" lang="fr">Elles ne servent pas qu'au combat. Retrouver ces reliques permet de reconstituer des récits oubliés, de dénicher des caches secrètes et d'ouvrir de nouvelles façons de construire votre escouade.</span></p>
+<p><span class="ks-lang-en">And if a curse isn't worth the risk? Leave it unequipped. Collecting them still pays off.</span><span class="ks-lang-fr" lang="fr">Et si une malédiction ne vaut pas le risque ? Laissez-la de côté. Les collectionner reste toujours rentable.</span></p>
 
-<p><span class="ks-lang-en">More than just a source of power, Vesliction is also tied to the world's hidden mysteries. Collecting them can reveal forgotten stories, secret treasures, and new sources of power.</span><span class="ks-lang-fr" lang="fr">Bien plus qu'une simple source de puissance, les Vesliction sont liées aux mystères enfouis de l'univers : les collectionner révèle des récits oubliés, des trésors secrets et de nouvelles sources de pouvoir.</span></p>
-<p><span class="ks-lang-en">You don't have to use them. You can equip them, collect them, or uncover their secrets.</span><span class="ks-lang-fr" lang="fr">Rien ne vous oblige à les utiliser : vous pouvez les équiper, les collectionner ou percer leurs secrets.</span></p>
+<figure class="markdown-image">
+  <img src="imgs/campaign-panels/kick/vesliction-items.png" alt="48 hand-drawn Divergency items and Vesliction cursed relics" loading="lazy">
+  <figcaption><span class="ks-lang-en">Vesliction &amp; Item Relics: 48 hand-drawn cursed objects, gear, and consumables</span><span class="ks-lang-fr" lang="fr">Vesliction &amp; Objets : 48 reliques maudites, équipements et consommables dessinés à la main</span></figcaption>
+
+</figure>
 
 <figure class="markdown-image">
   <img src="imgs/campaign-panels/kick/ui-charselect-vesliction.png" alt="Divergency character loadout, skills, and Vesliction cursed objects UI" loading="lazy">
@@ -250,6 +343,31 @@
     🎼 <strong><a href="https://open.spotify.com/artist/3UNHWDZONRg3wz6tvekSGE" target="_blank" rel="noopener noreferrer"><span class="ks-lang-en">Explore Acheron Chen's works on Spotify</span><span class="ks-lang-fr" lang="fr">Découvrir les œuvres d'Acheron Chen sur Spotify</span></a></strong></p>
   </div>
 </div>
+<h2 id="kickstarter-from-our-production-desk" tabindex="-1"><a class="heading-link" href="#kickstarter-from-our-production-desk" aria-label="Link to section">#</a><span class="ks-lang-en">From Our Production Desk: The Story of TriLinkage Studio</span><span class="ks-lang-fr" lang="fr">Dans les coulisses : l'histoire de TriLinkage Studio</span></h2>
+
+<p><span class="ks-lang-en">We started as high school friends. In 2021, years after graduation, we reunited with one goal: stop waiting for the game we wished existed and build it ourselves.</span><span class="ks-lang-fr" lang="fr">Nous avons commencé comme amis de lycée. Des années après le diplôme, en 2021, nous nous sommes retrouvés avec une même conviction : arrêter d'attendre le jeu dont nous rêvions et le créer nous-mêmes.</span></p>
+
+<figure class="markdown-image">
+  <img src="imgs/campaign-panels/kick/setup_work_desk.webp" alt="TriLinkage Studio production desk with laptops and pixel art sprites" loading="lazy">
+  <figcaption><span class="ks-lang-en">Our production desk</span><span class="ks-lang-fr" lang="fr">Notre bureau de production</span></figcaption>
+</figure>
+
+<p><span class="ks-lang-en">Starting with a shoestring setup across distant time zones, we built Divergency through late-night calls, shared screens, and weekend sessions huddled around laptops in a living room—crafting the world day and night, frame by frame.</span><span class="ks-lang-fr" lang="fr">Avec des moyens modestes et à distance, nous avons bâti Divergency au fil d'appels nocturnes, d'écrans partagés et de week-ends autour d'ordinateurs portables dans un salon — façonnant le jeu jour et nuit, image par image.</span></p>
+
+<p><span class="ks-lang-en"><strong>TriLinkage Studio</strong> is powered by a close-knit team of three:</span><span class="ks-lang-fr" lang="fr"><strong>TriLinkage Studio</strong> réunit une équipe soudée de trois personnes :</span></p>
+
+<figure class="markdown-image is-studio-team">
+  <img src="imgs/campaign-panels/kick/team.png" alt="TriLinkage Studio three-person team pixel portraits: K, H, and N" loading="lazy">
+</figure>
+
+<ul>
+<li><span class="ks-lang-en"><strong>Two developers</strong> driving daily production: programming, combat design, sprite animation, and visuals.</span><span class="ks-lang-fr" lang="fr"><strong>Deux créateurs</strong> assurent la production quotidienne : programmation, design des combats, animation des sprites et visuels.</span></li>
+<li><span class="ks-lang-en"><strong>One writer</strong> shaping the narrative: world lore, character arcs, and storytelling.</span><span class="ks-lang-fr" lang="fr"><strong>Un scénariste</strong> façonne le récit : lore du monde, arcs des personnages et écriture.</span></li>
+</ul>
+
+<p><span class="ks-lang-en">Like the classic anime and films we grew up with, we believe true magic comes from connection and enduring patience. That is why we chose the name <strong>TriLinkage</strong>—a reminder that trust, shared purpose, and relentless craft can bridge any gap and make every frame count.</span><span class="ks-lang-fr" lang="fr">À l'image des animés et films classiques qui ont bercé notre jeunesse, nous croyons que la vraie magie naît du lien et de la patience. C'est pourquoi nous avons choisi le nom <strong>TriLinkage</strong> : un rappel que la confiance, un objectif commun et la persévérance permettent de franchir chaque obstacle et de faire compter chaque image.</span></p>
+
+
 <h2 id="kickstarter-join-us" tabindex="-1"><a class="heading-link" href="#kickstarter-join-us" aria-label="Link to section">#</a><span class="ks-lang-en">Follow &amp; Support Divergency</span><span class="ks-lang-fr" lang="fr">Suivre et soutenir Divergency</span></h2>
 
 <figure class="markdown-image is-story-panel">
@@ -260,13 +378,49 @@
 <p><span class="ks-lang-en">Your support helps us finish the full story campaign, sharpen the combat, complete the world beyond Marseille, and bring Divergency's dark fantasy brawler to release.</span><span class="ks-lang-fr" lang="fr">Votre soutien nous aide à achever la campagne narrative complète, à affiner les combats, à déployer le monde au-delà de Marseille et à mener Divergency jusqu'à sa sortie.</span></p>
 <p><span class="ks-lang-en">Back Divergency and help us build a new 2D action game with skill loadouts, ally commands, handcrafted stages, and a story about refusing to sacrifice people for someone else's miracle.</span><span class="ks-lang-fr" lang="fr">Soutenez Divergency et aidez-nous à bâtir un nouveau jeu d'action 2D mêlant decks de compétences, ordres aux alliés, niveaux façonnés à la main et un récit sur le refus de sacrifier des vies pour le miracle d'un autre.</span></p>
 <p><span class="ks-lang-en">Follow and support Divergency:</span><span class="ks-lang-fr" lang="fr">Suivre et soutenir Divergency :</span></p>
-<ul>
-<li><a href="https://space.bilibili.com/3707037181545433">Bilibili</a></li>
-<li><a href="https://www.youtube.com/@TriLinkage-Studio">YouTube</a></li>
-<li><a href="https://x.com/Divergency_TrL">X</a></li>
-<li><a href="https://www.instagram.com/divergency.trilinkage/">Instagram</a></li>
-<li><a href="https://www.tiktok.com/@trilinkage">TikTok</a></li>
-<li><a href="https://www.kickstarter.com/projects/divergency/divergency-dark-story-fantasy-game">Kickstarter</a></li>
+<ul class="ks-social-list" aria-label="Official Divergency platforms">
+  <li>
+    <a class="ks-social-card ks-social--bilibili" href="https://space.bilibili.com/3707037181545433" target="_blank" rel="noopener noreferrer">
+      <span class="ks-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.813 4.653h.854c1.51 0 2.733 1.224 2.733 2.734v10.14c0 1.51-1.223 2.734-2.733 2.734H5.333c-1.51 0-2.733-1.224-2.733-2.734V7.387c0-1.51 1.223-2.734 2.733-2.734h.804L4.316 2.83a.75.75 0 0 1 1.06-1.06l2.36 2.36c.205.205.33.483.35.776l.01.147h7.808l.01-.147a1.08 1.08 0 0 1 .35-.776l2.36-2.36a.75.75 0 0 1 1.06 1.06L17.813 4.653zm-9.313 5.47a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"></path></svg></span>
+      <span class="ks-social-copy"><span class="ks-social-name">Bilibili</span><span class="ks-social-handle" aria-hidden="true">TriLinkage</span></span>
+      <span class="ks-social-arrow" aria-hidden="true">↗</span>
+    </a>
+  </li>
+  <li>
+    <a class="ks-social-card ks-social--youtube" href="https://www.youtube.com/@TriLinkage-Studio" target="_blank" rel="noopener noreferrer">
+      <span class="ks-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg></span>
+      <span class="ks-social-copy"><span class="ks-social-name">YouTube</span><span class="ks-social-handle" aria-hidden="true">@TriLinkage-Studio</span></span>
+      <span class="ks-social-arrow" aria-hidden="true">↗</span>
+    </a>
+  </li>
+  <li>
+    <a class="ks-social-card ks-social--x" href="https://x.com/Divergency_TrL" target="_blank" rel="noopener noreferrer">
+      <span class="ks-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></span>
+      <span class="ks-social-copy"><span class="ks-social-name">X</span><span class="ks-social-handle" aria-hidden="true">@Divergency_TrL</span></span>
+      <span class="ks-social-arrow" aria-hidden="true">↗</span>
+    </a>
+  </li>
+  <li>
+    <a class="ks-social-card ks-social--instagram" href="https://www.instagram.com/divergency.trilinkage/" target="_blank" rel="noopener noreferrer">
+      <span class="ks-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></span>
+      <span class="ks-social-copy"><span class="ks-social-name">Instagram</span><span class="ks-social-handle" aria-hidden="true">@divergency.trilinkage</span></span>
+      <span class="ks-social-arrow" aria-hidden="true">↗</span>
+    </a>
+  </li>
+  <li>
+    <a class="ks-social-card ks-social--tiktok" href="https://www.tiktok.com/@trilinkage" target="_blank" rel="noopener noreferrer">
+      <span class="ks-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg></span>
+      <span class="ks-social-copy"><span class="ks-social-name">TikTok</span><span class="ks-social-handle" aria-hidden="true">@trilinkage</span></span>
+      <span class="ks-social-arrow" aria-hidden="true">↗</span>
+    </a>
+  </li>
+  <li>
+    <a class="ks-social-card ks-social--kickstarter" href="https://www.kickstarter.com/projects/divergency/divergency-dark-story-fantasy-game" target="_blank" rel="noopener noreferrer">
+      <span class="ks-social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.7 12.2l6.8-8.2h-5.4l-4.7 6.1v-6.1H7.8v16h3.6v-5.7l4.9 5.7h5.6l-7.2-7.8z"></path></svg></span>
+      <span class="ks-social-copy"><span class="ks-social-name">Kickstarter</span><span class="ks-social-handle" aria-hidden="true"><span class="ks-lang-en">Campaign page</span><span class="ks-lang-fr" lang="fr">Page de campagne</span></span></span>
+      <span class="ks-social-arrow" aria-hidden="true">↗</span>
+    </a>
+  </li>
 </ul>
 
         </article>
@@ -293,4 +447,298 @@
   
   
 
-<script>(function(){var key='ks-lang';var titleEn="Divergency by TriLinkage | Dark Fantasy Tactical Brawler";var titleFr="Divergency par TriLinkage | Tactical Brawler Dark Fantasy";function read(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='en'||p==='fr')return p;}catch(e){}try{var s=localStorage.getItem(key);if(s==='en'||s==='fr')return s;}catch(e){}return 'en';}function apply(lang,persist){lang=lang==='fr'?'fr':'en';if(document.body)document.body.dataset.ksLang=lang;var pane=document.getElementById('pane-kickstarter');if(pane)pane.dataset.ksLang=lang;document.documentElement.lang=lang;document.title=lang==='fr'?titleFr:titleEn;document.querySelectorAll('[data-ks-lang-btn]').forEach(function(btn){var active=btn.getAttribute('data-ks-lang-btn')===lang;btn.classList.toggle('is-active',active);btn.setAttribute('aria-pressed',active?'true':'false');});if(persist){try{localStorage.setItem(key,lang);}catch(e){}try{var u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u);}catch(e){}}}document.addEventListener('click',function(e){var btn=e.target&&e.target.closest&&e.target.closest('[data-ks-lang-btn]');if(btn)apply(btn.getAttribute('data-ks-lang-btn'),true);});apply(read(),false);})();</script></body></html>
+<script>(function(){
+var key='ks-lang';
+var titleEn="Divergency by TriLinkage | Dark Fantasy Tactical Brawler";
+var titleFr="Divergency par TriLinkage | Tactical Brawler Dark Fantasy";
+var currentLang='en';
+var refreshTocLang=null;
+
+function read(){
+  try{var p=new URLSearchParams(location.search).get('lang');if(p==='en'||p==='fr')return p;}catch(e){}
+  try{var s=localStorage.getItem(key);if(s==='en'||s==='fr')return s;}catch(e){}
+  return 'en';
+}
+
+function apply(lang,persist){
+  lang=lang==='fr'?'fr':'en';
+  currentLang=lang;
+  if(document.body)document.body.dataset.ksLang=lang;
+  var pane=document.getElementById('pane-kickstarter');
+  if(pane)pane.dataset.ksLang=lang;
+  document.documentElement.lang=lang;
+  document.title=lang==='fr'?titleFr:titleEn;
+  document.querySelectorAll('[data-ks-lang-btn]').forEach(function(btn){
+    var active=btn.getAttribute('data-ks-lang-btn')===lang;
+    btn.classList.toggle('is-active',active);
+    btn.setAttribute('aria-pressed',active?'true':'false');
+  });
+  if(refreshTocLang)refreshTocLang();
+  if(persist){
+    try{localStorage.setItem(key,lang);}catch(e){}
+    try{var u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u);}catch(e){}
+  }
+}
+
+document.addEventListener('click',function(e){
+  var btn=e.target&&e.target.closest&&e.target.closest('[data-ks-lang-btn]');
+  if(btn)apply(btn.getAttribute('data-ks-lang-btn'),true);
+});
+
+apply(read(),false);
+
+if(typeof window==='undefined'||typeof document.querySelector!=='function')return;
+
+var progress=document.getElementById('read-progress');
+function updateProgress(){
+  if(!progress)return;
+  var max=document.documentElement.scrollHeight-window.innerHeight;
+  var cur=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
+  progress.style.width=(cur*100).toFixed(2)+'%';
+}
+
+var panel=document.querySelector('#pane-kickstarter .toc-panel');
+if(!panel){
+  window.addEventListener('scroll',updateProgress,{passive:true});
+  window.addEventListener('resize',updateProgress);
+  updateProgress();
+  return;
+}
+
+var compact=window.matchMedia('(max-width: 1040px)');
+var reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+var links=Array.prototype.slice.call(panel.querySelectorAll('.toc-link'));
+var targets=links.map(function(link){return document.getElementById(link.hash.slice(1));});
+var toggle=panel.querySelector('.toc-mobile-toggle');
+var currentEl=panel.querySelector('.toc-current');
+var filterEl=panel.querySelector('.toc-filter');
+var scrollEl=panel.querySelector('.toc-scroll');
+var emptyEl=panel.querySelector('.toc-empty');
+var activeIndex=-1;
+var savedBranches=null;
+var autoBranches=new Set();
+var frame=0;
+var headingOffset=28;
+
+function normalize(value){
+  return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[đĐ]/g,'d').toLowerCase().trim();
+}
+
+function activeLinkText(link){
+  var span=currentLang==='fr'?link.querySelector('.ks-lang-fr'):link.querySelector('.ks-lang-en');
+  return (span||link).textContent||'';
+}
+
+function setBranch(button,expanded){
+  button.setAttribute('aria-expanded',String(expanded));
+  var target=document.getElementById(button.getAttribute('aria-controls'));
+  if(target)target.hidden=!expanded;
+}
+
+function setDrawer(open,returnFocus){
+  panel.classList.toggle('is-open',open);
+  if(toggle){
+    toggle.setAttribute('aria-expanded',String(open));
+    if(returnFocus)toggle.focus({preventScroll:true});
+  }
+}
+
+function measure(){
+  var drawerHeight=compact.matches&&toggle?toggle.offsetHeight:0;
+  headingOffset=20+drawerHeight+16;
+  document.documentElement.style.setProperty('--reader-top','20px');
+  document.documentElement.style.setProperty('--heading-offset',headingOffset+'px');
+  schedule();
+}
+
+function revealLink(link){
+  if(!filterEl||filterEl.value.trim())return;
+  var item=link.closest('.toc-item');
+  var ancestors=new Map();
+  for(var parent=item&&item.parentElement;parent&&panel.contains(parent);parent=parent.parentElement){
+    if(parent.matches('ol[id]')){
+      var btn=parent.parentElement.querySelector(':scope > .toc-row > .toc-branch-toggle');
+      if(btn)ancestors.set(parent.id,btn);
+    }
+  }
+  autoBranches.forEach(function(id){
+    if(!ancestors.has(id)){
+      var button=panel.querySelector('[aria-controls="'+id+'"]');
+      if(button)setBranch(button,false);
+      autoBranches.delete(id);
+    }
+  });
+  ancestors.forEach(function(button,id){
+    if(button.getAttribute('aria-expanded')!=='true'){
+      setBranch(button,true);
+      autoBranches.add(id);
+    }
+  });
+  if(!scrollEl||scrollEl.matches(':hover')||panel.contains(document.activeElement))return;
+  var bounds=scrollEl.getBoundingClientRect();
+  var row=link.getBoundingClientRect();
+  if(bounds.height&&(row.top<bounds.top||row.bottom>bounds.bottom)){
+    scrollEl.scrollTop+=row.top-bounds.top-bounds.height/3;
+  }
+}
+
+function mark(index){
+  if(activeIndex===index||!links[index])return;
+  links.forEach(function(link,pos){
+    if(pos===index)link.setAttribute('aria-current','location');
+    else link.removeAttribute('aria-current');
+  });
+  activeIndex=index;
+  var link=links[index];
+  if(currentEl){
+    currentEl.replaceChildren.apply(currentEl,Array.from(link.childNodes,function(node){return node.cloneNode(true);}));
+    currentEl.title=activeLinkText(link);
+  }
+  revealLink(link);
+}
+
+function update(){
+  frame=0;
+  if(!targets.length)return;
+  var low=0,high=targets.length-1,cur=0;
+  while(low<=high){
+    var mid=Math.floor((low+high)/2);
+    var t=targets[mid];
+    if(t&&t.getBoundingClientRect().top<=headingOffset+8){cur=mid;low=mid+1;}
+    else high=mid-1;
+  }
+  if(window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-3)cur=targets.length-1;
+  mark(cur);
+}
+
+function schedule(){if(!frame)frame=requestAnimationFrame(update);}
+
+function jumpTo(target,focus){
+  if(!target)return;
+  setDrawer(false);
+  measure();
+  requestAnimationFrame(function(){
+    target.scrollIntoView({block:'start',behavior:reducedMotion.matches?'instant':'smooth'});
+    if(focus)target.focus({preventScroll:true});
+    schedule();
+  });
+}
+
+function filterIndex(){
+  if(!filterEl||!scrollEl)return;
+  var query=normalize(filterEl.value);
+  var branches=Array.prototype.slice.call(panel.querySelectorAll('.toc-branch-toggle'));
+  if(query&&!savedBranches){
+    savedBranches=branches.map(function(button){return[button,button.getAttribute('aria-expanded')==='true'];});
+  }
+  function visit(item,parentMatches){
+    var link=item.querySelector(':scope > .toc-row > .toc-link');
+    var matches=parentMatches||(link&&normalize(activeLinkText(link)).includes(query));
+    var children=Array.prototype.slice.call(item.querySelectorAll(':scope > ol > .toc-item'));
+    var visibleChildren=children.map(function(child){return visit(child,matches);}).some(Boolean);
+    var visible=Boolean(matches||visibleChildren);
+    item.hidden=!visible;
+    var btn=item.querySelector(':scope > .toc-row > .toc-branch-toggle');
+    if(query&&btn)setBranch(btn,visibleChildren);
+    return visible;
+  }
+  var anyVisible=Array.prototype.slice.call(scrollEl.querySelectorAll(':scope > ol > .toc-item')).map(function(item){return visit(item,false);}).some(Boolean);
+  if(emptyEl)emptyEl.hidden=anyVisible;
+  panel.querySelectorAll('[data-toc-expand]').forEach(function(button){button.disabled=Boolean(query);});
+  if(!query&&savedBranches){
+    savedBranches.forEach(function(pair){setBranch(pair[0],pair[1]);});
+    savedBranches=null;
+    if(links[activeIndex])revealLink(links[activeIndex]);
+  }
+}
+
+refreshTocLang=function(){
+  if(currentEl&&links[activeIndex])currentEl.title=activeLinkText(links[activeIndex]);
+  if(filterEl&&filterEl.value.trim())filterIndex();
+};
+
+if(toggle){
+  toggle.addEventListener('click',function(){
+    var open=!panel.classList.contains('is-open');
+    setDrawer(open);
+    if(open){
+      if(filterEl)filterEl.focus({preventScroll:true});
+      var selected=links[activeIndex];
+      if(selected&&scrollEl&&(!filterEl||!filterEl.value.trim())){
+        var bounds=scrollEl.getBoundingClientRect();
+        scrollEl.scrollTop+=selected.getBoundingClientRect().top-bounds.top-bounds.height/3;
+      }
+    }
+  });
+}
+
+panel.querySelectorAll('.toc-branch-toggle').forEach(function(button){
+  button.addEventListener('click',function(){
+    autoBranches.delete(button.getAttribute('aria-controls'));
+    setBranch(button,button.getAttribute('aria-expanded')!=='true');
+  });
+});
+
+panel.querySelectorAll('[data-toc-expand]').forEach(function(button){
+  button.addEventListener('click',function(){
+    autoBranches.clear();
+    var expand=button.dataset.tocExpand==='true';
+    panel.querySelectorAll('.toc-branch-toggle').forEach(function(branch){setBranch(branch,expand);});
+  });
+});
+
+links.forEach(function(link,index){
+  link.addEventListener('click',function(event){
+    if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+    event.preventDefault();
+    if(location.hash!==link.hash)history.pushState(null,'',link.hash);
+    mark(index);
+    jumpTo(targets[index],true);
+  });
+});
+
+if(filterEl){
+  filterEl.addEventListener('input',filterIndex);
+  filterEl.addEventListener('keydown',function(event){
+    if(event.key!=='Enter')return;
+    var query=normalize(filterEl.value);
+    var first=links.find(function(link){
+      return normalize(activeLinkText(link)).includes(query)&&!link.closest('.toc-item').hidden&&!link.closest('ol[hidden]');
+    });
+    if(first){event.preventDefault();first.click();}
+  });
+}
+
+panel.addEventListener('keydown',function(event){
+  if(event.key==='Escape'&&compact.matches&&panel.classList.contains('is-open')){
+    event.preventDefault();
+    setDrawer(false,true);
+  }
+});
+
+panel.addEventListener('focusout',function(){
+  requestAnimationFrame(function(){
+    if(compact.matches&&!panel.contains(document.activeElement))setDrawer(false);
+  });
+});
+
+document.addEventListener('click',function(event){
+  if(compact.matches&&!panel.contains(event.target))setDrawer(false);
+});
+
+document.addEventListener('load',schedule,true);
+window.addEventListener('scroll',function(){schedule();updateProgress();},{passive:true});
+window.addEventListener('resize',function(){measure();updateProgress();});
+compact.addEventListener('change',function(){setDrawer(false);measure();});
+if(typeof ResizeObserver!=='undefined'&&toggle)new ResizeObserver(measure).observe(toggle);
+
+if(location.hash&&location.hash.length>1){
+  try{
+    var hashTarget=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if(hashTarget)jumpTo(hashTarget,false);
+  }catch(e){}
+}
+
+measure();
+updateProgress();
+})();</script></body></html>

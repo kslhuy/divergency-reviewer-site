@@ -30,6 +30,8 @@ export function renderToc(doc) {
     (stack.length ? stack.at(-1).children : roots).push(node);
     stack.push(node);
   }
+  const togglePrefix = doc.id === "kickstarter" ? "Toggle section: " : "Mở hoặc thu gọn: ";
+  const emptyNote = doc.id === "kickstarter" ? "No sections." : "Chưa có mục.";
   function renderNodes(nodes, depth = 0) {
     return nodes.map((item) => {
       const expanded = depth === 0;
@@ -37,7 +39,7 @@ export function renderToc(doc) {
       return `<li class="toc-item">
         <div class="toc-row" style="--toc-depth: ${depth}">
           ${item.children.length
-            ? `<button class="toc-branch-toggle" type="button" aria-expanded="${expanded}" aria-controls="${childrenId}" aria-label="Mở hoặc thu gọn: ${escapeAttribute(item.text)}"><span aria-hidden="true">›</span></button>`
+            ? `<button class="toc-branch-toggle" type="button" aria-expanded="${expanded}" aria-controls="${childrenId}" aria-label="${togglePrefix}${escapeAttribute(item.text)}"><span aria-hidden="true">›</span></button>`
             : '<span class="toc-leaf-spacer" aria-hidden="true"></span>'}
           <a class="toc-link toc-level-${item.level}" href="#${item.id}">${item.textFr ? `<span class="ks-lang-en">${escapeHtml(item.text)}</span><span class="ks-lang-fr" lang="fr">${escapeHtml(item.textFr)}</span>` : escapeHtml(item.text)}</a>
         </div>
@@ -45,7 +47,7 @@ export function renderToc(doc) {
       </li>`;
     }).join("");
   }
-  return roots.length ? `<ol class="toc-tree">${renderNodes(roots)}</ol>` : '<p class="empty-note">Chưa có mục.</p>';
+  return roots.length ? `<ol class="toc-tree">${renderNodes(roots)}</ol>` : `<p class="empty-note">${emptyNote}</p>`;
 }
 
 export function renderIndex(doc) {

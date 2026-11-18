@@ -899,6 +899,22 @@ dd {
   margin-inline: auto;
 }
 
+.markdown-image.is-studio-team {
+  max-width: 480px;
+  margin-inline: auto;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.markdown-image.is-studio-team img {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background: transparent;
+}
+
 .markdown-image.is-title-ornament,
 .markdown-image.is-page-divider {
   overflow: visible;
@@ -2641,4 +2657,107 @@ pre code {
   .ks-lang-switcher {
     display: none !important;
   }
+}
+
+/* Kickstarter Follow & Support Platform Cards */
+.markdown-body ul.ks-social-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.markdown-body ul.ks-social-list li {
+  margin: 0;
+}
+
+.ks-social-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(33, 31, 27, 0.86);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 150ms ease, border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.ks-social-card:hover,
+.ks-social-card:focus-visible {
+  border-color: var(--amber);
+  background: rgba(43, 39, 34, 0.96);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.36);
+  outline: none;
+}
+
+.ks-social-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line-soft);
+  border-radius: 7px;
+  background: #141312;
+  color: var(--amber);
+  transition: color 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+
+.ks-social-icon svg {
+  width: 19px;
+  height: 19px;
+  display: block;
+}
+
+.ks-social-card:hover .ks-social-icon,
+.ks-social-card:focus-visible .ks-social-icon {
+  border-color: rgba(216, 166, 77, 0.45);
+  background: rgba(24, 21, 18, 0.98);
+}
+
+.ks-social--bilibili .ks-social-icon { color: #54c7ec; }
+.ks-social--youtube .ks-social-icon { color: #ff6b63; }
+.ks-social--x .ks-social-icon { color: var(--ink); }
+.ks-social--instagram .ks-social-icon { color: #f08ca8; }
+.ks-social--tiktok .ks-social-icon { color: var(--teal); }
+.ks-social--kickstarter .ks-social-icon { color: #7ce39c; }
+
+.ks-social-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.ks-social-name {
+  color: var(--ink);
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.ks-social-handle {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ks-social-arrow {
+  color: var(--soft);
+  font-size: 0.95rem;
+  transition: transform 150ms ease, color 150ms ease;
+}
+
+.ks-social-card:hover .ks-social-arrow,
+.ks-social-card:focus-visible .ks-social-arrow {
+  color: var(--amber);
+  transform: translate(2px, -2px);
 }
