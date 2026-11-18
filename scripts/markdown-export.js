@@ -26,6 +26,11 @@
       if (name === 'br') return '  \n';
       if (name === 'hr') return block('---');
       if (name === 'img') return '![' + escape(attr(node, 'alt')) + '](' + url(attr(node, 'src')) + ')';
+      if (name === 'iframe') {
+        const src = attr(node, 'src');
+        const title = escape(attr(node, 'title') || 'Video');
+        return src ? '[' + title + '](' + url(src) + ')' : '';
+      }
       if (name === 'a') return attr(node, 'href') ? '[' + inner().trim() + '](' + url(attr(node, 'href')) + ')' : inner();
       if (name === 'pre') {
         const value = text(node).replace(/\n$/, '');
